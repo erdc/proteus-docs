@@ -1,0 +1,623 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction &mdash; Proteus 1.7.2 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/tritonBorder.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Documentation" href="apicapi.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#">
+          
+
+          
+            
+            <img src="_static/corps_logo_cross2.svg" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.7.2
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">General</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="apicapi.html">API docs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Tools</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tools/boundary_conditions.html">BoundaryConditions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tools/boundary_conditions.html#usage">Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tools/boundary_conditions.html#import">Import</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tools/spatial_tools.html">SpatialTools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tools/spatial_tools.html#usage">Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tools/spatial_tools.html#import">Import</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools/spatial_tools.html#choosing-the-domain">Choosing the domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools/spatial_tools.html#assembling-the-domain">Assembling the domain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools/spatial_tools.html#boundaryconditions-with-spatialtools">BoundaryConditions with SpatialTools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tools/spatial_tools.html#id1">Usage</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tools/spatial_tools.html#linking-it-to-p-py-files">Linking it to _p.py files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tools/spatial_tools.html#complete-examples">Complete Examples</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tools/spatial_tools.html#d">2D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools/spatial_tools.html#id2">3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools/spatial_tools.html#d-with-stl">3D with STL</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tools/spatial_tools.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tools/spatial_tools.html#base-classes">Base classes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tools/spatial_tools.html#customshape">CustomShape</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tools/spatial_tools.html#rectangle">Rectangle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tools/spatial_tools.html#circle">Circle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tools/spatial_tools.html#cuboid">Cuboid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tools/spatial_tools.html#cylinder">Cylinder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tools/spatial_tools.html#sphere">Sphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tools/spatial_tools.html#shapestl">ShapeSTL</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tools/spatial_tools.html#mprans-specific">mprans specific</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tools/spatial_tools.html#tank2d">Tank2D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tools/spatial_tools.html#tank3d">Tank3D</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tools/spatial_tools.html#tankwithobstacle2d">TankWithObstacle2D</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="tools/two_phase_flow.html">TwoPhaseFlow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/wave_tools.html">WaveTools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tools/wave_tools.html#usage">Usage</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tools/wave_tools.html#import-in-command-line">Import in command line</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools/wave_tools.html#list-of-wave-theories">List of wave theories</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools/wave_tools.html#how-to-use-in-proteus">How to use in Proteus</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools/wave_tools.html#how-to-use-as-stand-alone-tool">How to use as stand-alone tool</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Models</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="models/body_dynamics.html">Body Dynamics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models/body_dynamics.html#implementation">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/body_dynamics.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="models/body_dynamics.html#protchsystem">ProtChSystem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models/body_dynamics.html#protchbody">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models/body_dynamics.html#protchmesh">ProtChMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models/body_dynamics.html#protchmoorings">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models/body_dynamics.html#protchaddedmass">ProtChAddedMass</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="models/body_dynamics.html#id4">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models/body_dynamics.html#id5">ProtChMoorings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models/free_surface.html">Free Surface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models/free_surface.html#vof-ncls">VOF - NCLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/free_surface.html#clsvof">CLSVOF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models/mesh_adaptivity.html">Mesh Adaptivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/mesh_motion.html">Mesh Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/navier_stokes.html">Navier-Stokes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models/navier_stokes.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/navier_stokes.html#two-phase">Two-Phase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/navier_stokes.html#three-phase">Three-Phase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/navier_stokes.html#dealing-with-moving-domains">Dealing with Moving Domains</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="models/navier_stokes.html#moving-ale-mesh">Moving (ALE) Mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models/navier_stokes.html#immersed-boundaries">Immersed Boundaries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models/SWFlows.html">Shallow Water Flows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models/SWFlows.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/SWFlows.html#shallow-water-equations">Shallow Water equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/SWFlows.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/SWFlows.html#running-the-tests">Running the tests</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Proteus</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/erdc/proteus/blob/masterdocs/source/index.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<span id="intro-sec"></span><h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>Proteus is a Python package for rapidly developing computer models and
+numerical methods. It is focused on models of continuum mechanical
+processes described by partial differential equations and on
+discretizations and solvers for computing approximate solutions to
+these equations. Proteus consists of a collection of Python modules
+and scripts. Proteus also uses several C, C++, and Fortran libraries,
+which are either external open source packages or part of Proteus, and
+several open source Python packages.</p>
+<p>The design of Proteus is organized around two goals:</p>
+<ul class="simple">
+<li><p>Make it easy to solve new model equations with existing numerical methods</p></li>
+<li><p>Make it easy to solve existing model equations with new numerical methods</p></li>
+</ul>
+<p>We want to improve the development process for models <em>and</em>
+methods. Proteus is not intended to be an expert system for solving
+partial differential equations. In fact, effective numerical methods
+are often physics-based. Nevertheless many physical models are
+mathematically represented by the same small set of differential
+operators, and effective numerical methods can be developed with minor
+adjustments to existing methods. The problem with much existing
+software is that the physics and numerics are completely intertwined,
+which makes it difficult to extend (and maintain). In Proteus the
+description of the physical model and initial-boundary value problems
+are nearly “method agnostic”.  This approach has been used in the
+developement of a variety of mathematical models and numerical
+methods, both of which are described in more detail below
+(<a class="reference internal" href="#capabilities-sec"><span class="std std-ref">Capabilities</span></a>).</p>
+</div>
+<div class="section" id="obtaining-and-installing-proteus">
+<span id="obtaining-sec"></span><h1>Obtaining and Installing Proteus<a class="headerlink" href="#obtaining-and-installing-proteus" title="Permalink to this headline">¶</a></h1>
+<p>For learning and experimenting there is a <a class="reference external" href="https://cloud.docker.com/u/erdc/repository/docker/erdc/proteus">Docker image</a>.</p>
+<p>Proteus can be installed through conda with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">conda</span> <span class="n">install</span> <span class="n">proteus</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
+</pre></div>
+</div>
+<p>Proteus is available as source from our public <a class="reference external" href="https://github.com/erdc/proteus">GitHub</a> repository.
+For a development installation, the installation of dependencies and the compilation of Proteus from source is done with:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">erdc</span><span class="o">/</span><span class="n">proteus</span>
+<span class="o">%</span> <span class="n">cd</span> <span class="n">proteus</span>
+<span class="o">%</span> <span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">-</span><span class="n">dev</span><span class="o">.</span><span class="n">yml</span>
+<span class="o">%</span> <span class="n">conda</span> <span class="n">activate</span> <span class="n">proteus</span><span class="o">-</span><span class="n">dev</span>
+<span class="o">%</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">v</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
+</pre></div>
+</div>
+<p>Alternatively, if you already have compilers (C,C++, and Fortran!) and Git installed on your system,
+you can install Proteus through hashdist with the following commands:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">erdc</span><span class="o">/</span><span class="n">proteus</span>
+<span class="o">%</span> <span class="n">cd</span> <span class="n">proteus</span>
+<span class="o">%</span> <span class="n">make</span> <span class="n">develop</span>
+<span class="o">%</span> <span class="n">make</span> <span class="n">test</span>
+</pre></div>
+</div>
+<p>More information is available on our <a class="reference external" href="https://github.com/erdc/proteus/wiki">Wiki</a>, and you can ask for help on
+the <a class="reference external" href="https://groups.google.com/forum/#!forum/proteus-dev">Developers’ Mailing List</a>.</p>
+</div>
+<div class="section" id="running">
+<span id="running-sec"></span><h1>Running<a class="headerlink" href="#running" title="Permalink to this headline">¶</a></h1>
+<p>If you have successfully compiled and tested Proteus then you should be able to do:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>% cd $PROTEUS/tests/ci
+% $PROTEUS_PREFIX/bin/parun poisson_3d_p.py poisson_3d_c0p1_n.py
+</pre></div>
+</div>
+<p>The solution will be saved in a file ending in .xmf, which can be
+opened with ParaView or Ensight.</p>
+</div>
+<div class="section" id="capabilities">
+<span id="capabilities-sec"></span><h1>Capabilities<a class="headerlink" href="#capabilities" title="Permalink to this headline">¶</a></h1>
+<p>Test problems and some analytical solutions have been implemented for</p>
+<ul class="simple">
+<li><p>Poisson’s equation</p></li>
+<li><p>The heat equation</p></li>
+<li><p>Linear advection-diffusion-reaction equations</p></li>
+<li><p>Singly degenerate nonlinear advection-diffusion-reaction equations (including various forms of Burger’s equation)</p></li>
+<li><p>Doubly degenerate nonlinear advection-diffusion-reaction equations</p></li>
+<li><p>The eikonal (signed distance) equation</p></li>
+<li><p>The diffusive wave equations for overland flow</p></li>
+<li><p>1D and 2D Shallow Water Equations</p></li>
+<li><p>2D Dispersive Shallow Water Equations</p></li>
+<li><p>Richards’ equation (mass conservative head- and saturation-based)</p></li>
+<li><p>Two-phase flow in porous media with diffuse interface (fully coupled  and IMPES formulations)</p></li>
+<li><p>Two-phase flow in porous media with a sharp interface (level set formulation)</p></li>
+<li><p>Stokes equations</p></li>
+<li><p>Navier-Stokes equations</p></li>
+<li><p>Reynolds-Averged Navier-Stokes equations</p></li>
+<li><p>Two-phase Stokes/Navier-Stokes/RANS flow with a sharp interface (level set/VOF formulation)</p></li>
+<li><p>Linear elasticity</p></li>
+</ul>
+<p>These problems are solved on unstructured simplicial meshes. Simple
+meshes can be generated with tools included with Proteus, and more
+complex meshes can by imported from other mesh generators. The finite
+elements implemented are</p>
+<p>Classical methods with various types of stabilization (entropy viscosity, variational multiscale, and algebraic methods)</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(C_0 P_1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(C_0 P_2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(C_0 Q_1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(C_0 Q_2\)</span></p></li>
+</ul>
+<p>Discontinuous Galerkin methods</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(C_{-1} P_0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(C_{-1} P_1\)</span>  (Lagrange Basis)</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_{-1} P_2\)</span>  (Lagrange Basis)</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_{-1} P_k\)</span>  (Monomial Basis)</p></li>
+</ul>
+<p>Non-conforming and mixed methods</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(P_1\)</span> non-conforming</p></li>
+<li><p><span class="math notranslate nohighlight">\(C_0 P_1 C_0 P_2\)</span> Taylor-Hood</p></li>
+</ul>
+<p>The time integration methods are</p>
+<ul class="simple">
+<li><p>Backward Euler</p></li>
+<li><p>Forward Euler</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Theta\)</span> Methods</p></li>
+<li><p>Strong Stability Preserving Runge-Kutta Methods</p></li>
+<li><p>Adaptive BDF Methods</p></li>
+<li><p>Pseudo-transient continuation</p></li>
+</ul>
+<p>The linear solvers are</p>
+<ul class="simple">
+<li><p>Jacobi</p></li>
+<li><p>Gauss-Seidel</p></li>
+<li><p>Alternating Schwarz</p></li>
+<li><p>Full Multigrid</p></li>
+<li><p>Wrappers to LAPACK, SuperLU, and PETSc</p></li>
+</ul>
+<p>The nonlinear solvers are</p>
+<ul class="simple">
+<li><p>Jacobi</p></li>
+<li><p>Gauss-Seidel</p></li>
+<li><p>Alternating Schwarz</p></li>
+<li><p>Newton’s method</p></li>
+<li><p>Nonlinear Multigrid (Full Approximation Scheme)</p></li>
+<li><p>Fast Marching and Fast Sweeping</p></li>
+</ul>
+<p>Additional tools are included for pre- and post-processings meshes and
+solutions files generated by Proteus and other models, including methods for
+obtaining locally-conservative velocity fields from <span class="math notranslate nohighlight">\(C_0\)</span> finite
+elements.</p>
+</div>
+<div class="section" id="release-policy">
+<span id="release-sec"></span><h1>Release Policy<a class="headerlink" href="#release-policy" title="Permalink to this headline">¶</a></h1>
+<p>The releases are numbered major.minor.revision</p>
+<ul class="simple">
+<li><p>A revision increment indicates a bug fix or extension that shouldn’t break any models working with the same major.minor number.</p></li>
+<li><p>A minor increment introduces significant new functionality but is mostly backward compatible</p></li>
+<li><p>A major increment may require changes to input files and significantly change the underlying Proteus implementation.</p></li>
+</ul>
+<p>These are not hard and fast rules, and there is no time table for releases.</p>
+</div>
+<div class="section" id="references">
+<h1>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference external" href="https://doi.org/10.1016/j.jcp.2019.108917">Robust explicit relaxation technique for solving the Green-Naghdi equations</a> (2019) J.-L. Guermond,
+B. Popov, E. Tovar, C.E. Kees, <em>Journal of Computational Physics</em></p></li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/1903.06919">An Unstructured Finite Element Model for Incompressible Two-Phase
+Flow Based on a Monolithic Conservative Level Set Method</a>
+(2019) M. Quezada de Luna, J. H. Collins, and C.E. Kees.</p></li>
+<li><p>Preconditioners for Two-Phase Incompressible Navier-Stokes
+Flow (2019) N. Bootland, C.E. Kees, A. Wathen,
+A. Bentley <em>SIAM Journal on Scientific Computing</em>, In Press.</p></li>
+<li><p><a class="reference external" href="https://doi.org/10.1080/00221686.2019.1581673">Modeling Sediment Transport in Three-Phase Surface Water Systems</a> (2019)
+C.T. Miller, W.G. Gray, C.E. Kees, I.V. Rybak, B.J. Shepherd,
+<em>Journal of Hydraulic Engineering</em></p></li>
+<li><p><a class="reference external" href="https://doi.org/10.1680/jencm.17.00016">Fast Random Wave Generation in Numerical Tanks</a> (2019) A. Dimakopoulos, T. de
+Lataillade, C.E. Kees, <em>Proceedings of the Institution of Civil
+Engineers - Engineering and Computational Mechanics</em>, 1-29.</p></li>
+<li><p><a class="reference external" href="https://doi.org/10.1016/j.camwa.2019.03.021">A Partition of Unity Approach to Adaptivity and Limiting in
+Continuous Finite Element Methods</a> (2019) D. Kuzmin, M. Quezada
+de Luna, C.E. Kees, <em>Computers and Mathematics with Applications</em>.</p></li>
+<li><p><a class="reference external" href="https://doi.org/10.1061/(ASCE)WW.1943-5460.0000504">Simulating Oscillatory and Sliding Displacements of Caisson
+Breakwaters Using a Coupled Approach</a> (2019) G. Cozzuto,
+A. Dimakopoulos, T. de Lataillade, P.O. Morillas, and C.E. Kees,
+<em>Journal of Waterway, Port, Coastal, and Ocean Engineering</em>.</p></li>
+<li><p><a class="reference external" href="https://doi.org/10.1016/j.jcp.2018.11.044">A Monolithic Conservative Level Set Method with Built-In
+Redistancing</a> (2019) M. Quezada de
+Luna, D. Kuzmin, C.E. Kees, <em>Journal of Computational Physics</em>, 379,
+262-278.</p></li>
+<li><p><a class="reference external" href="https://doi.org/10.1061/(ASCE)WW.1943-5460.0000487">Computational Model for Wave Attenuation by Flexible Vegetation</a> (2018)
+S.A. Mattis, C.E. Kees, M.V. Wei, A. Dimakopoulos, and C.N. Dawson,
+<em>Journal of Waterway, Port, Coastal, and Ocean Engineering</em> 145(1),
+p.04018033.</p></li>
+<li><p><a class="reference external" href="https://doi.org/10.1137/17M1156162">Well-Balanced Second-Order Finite Element Approximation of the
+Shallow Water Equations with Friction</a> (2018) J.L. Guermond, M.Q. de
+Luna, B. Popov, C.E. Kees, and M.W. Farthing <em>SIAM Journal on
+Scientific Computing</em> 40(6), A3873-A3901.</p></li>
+<li><p><a class="reference external" href="https://doi.org/10.1016/j.jcp.2017.10.047">Dual-Scale Galerkin Methods for Darcy Flow</a> (2018) G. Wang, G. Scovazzi, L. Nouveau,
+C.E. Kees, Simone Rossi, O. Colomes, and A. Main (2018) <em>Journal of
+Computational Physics</em> 354, 111-134.</p></li>
+<li><p><a class="reference external" href="https://www.clemson.edu/science/departments/math-stat/documents/technical-reports/TR2017_10_ab.nb.aw.ck.pdf">Implementation details of the level set two-phase Navier-Stokes
+equations in Proteus</a> (2017) A. Bentley, N. Bootland, A. Wathen, C. Kees,
+<em>Technical-Report-TR2017-10-ab.nb.aw.ck</em>.</p></li>
+<li><p><a class="reference external" href="https://doi.org/10.1016/j.cma.2017.01.027">Evaluation of Galerkin and Petrov-Galerkin Model Reduction for
+Finite Element Approximations of the Shallow Water Equations</a> (2017) A. Lozovsky, M. W. Farthing,
+and C.E. Kees, <em>Computational Methods in Applied Mechanics and
+Engineering</em> 318, 537-571.</p></li>
+<li><p><a class="reference external" href="https://doi.org/10.1016/j.cam.2016.01.029">POD-Based Model Reduction for Stabilized Finite Element
+Approximations of Shallow Water Flows</a> (2016) A. Lozovskiy,
+M.W. Farthing, C.E. Kees, E. Gildin <em>Journal of Computational and
+Applied Mathematics</em>, 302, 50-70.</p></li>
+<li><p><a class="reference external" href="https://doi.org/10.1016/j.advwatres.2015.02.014">An Immersed Structure Approach for Fluid-Vegetation Interaction</a> (2015)
+S.A. Mattis, C.N. Dawson, C.E. Kees, M.W. Farthing, <em>Advances in
+Water Resources</em>, 80,1-16.</p></li>
+<li><p><a class="reference external" href="https://doi.org/10.1007/s10596-012-9330-2">Finite Element Methods for Variable Density Flow And Solute
+Transport</a> (2013)
+T.J. Povich, C.N. Dawson, M.W. Farthing, C.E. Kees <em>Computational
+Geosciences</em> 17(3), 529-549.</p></li>
+<li><p><a class="reference external" href="https://doi.org/10.1016/j.advwatres.2012.05.008">Numerical simulation of water resources problems: Models, methods,
+and trends</a> (2013)
+Cass T. Miller, Clint N. Dawson, Matthew W. Farthing, Thomas Y. Hou,
+Jingfang Huang, Christopher E. Kees, C.T. Kelley, and Hans Petter
+Langtangen <em>Advances in Water Resources</em>, 51, 405-437,</p></li>
+<li><p><a class="reference external" href="http://dx.doi.org/10.1016/j.advwatres.2012.01.002">Numerical modeling of drag for flow through vegetated domains and
+porous structures</a> (2012)
+S.A. Mattis, C. N. Dawson, C. E. Kees, and M. W. Farthing, <em>Advances
+in Water Resources</em>, 39, pp44-59</p></li>
+<li><p><a class="reference external" href="http://www.dlr.de/sc/en/Portaldata/15/Resources/dokumente/pyhpc2011/submissions/pyhpc2011_submission_11.pdf">Parallel Computational Methods and Simulation for Coastal and
+Hydraulic Applications Using the Proteus Toolkit</a>
+(2011) C. E. Kees and M. W. Farthing (2011) <em>Supercomputing11:
+Proceedings of the PyHPC11 Workshop</em></p></li>
+<li><p><a class="reference external" href="http://dx.doi.org/10.1016/j.jcp.2011.02.030">A Conservative Level Set Method for Variable-Order Approximations
+and Unstructured Meshes</a> (2011) C.E. Kees,
+I. Akkerman, Y. Bazilevs, and M. W. Farthing <em>Journal of
+Computational Physics</em> 230(12), pp4536–4558</p></li>
+<li><p><a class="reference external" href="http://dx.doi.org/10.1016/j.cma.2008.06.005">Locally Conservative, Stabilized Finite Element Methods For
+Variably Saturated Flow</a> (2008) Kees, C.E.,
+M. W. Farthing, and C. N. Dawson, <em>Computer Methods in Applied
+Mechanics and Engineering</em>, 197, pp4610-4625</p></li>
+<li><p><a class="reference external" href="http://chl.erdc.usace.army.mil/ERDC-CHL-TR-09-12">Locally Conservative, Stabilized Finite Element Methods for a Class
+of Variable Coefficient Navier-Stokes Equations</a> (2009)
+C. E. Kees, M. W. Farthing, and M. T. Fong, <em>ERDC/CHL TR-09-12</em></p></li>
+<li><p><a class="reference external" href="http://chl.erdc.usace.army.mil/ERDC-CHL-TR-09-11">Evaluating Finite Element Methods for the Level Set Equation</a> (2009)
+M. W. Farthing and C. E. Kees, <em>ERDC/CHL TR-09-11</em></p></li>
+<li><p><a class="reference external" href="http://chl.erdc.usace.army.mil/ERDC-CHL-TR-09-10">A Review of Methods for Moving Boundary Problems</a> (2009)
+C. E. Kees, M. W. Farthing, T. C. Lackey, and R. C. Berger,
+<em>ERDC/CHL TR-09-10</em></p></li>
+<li><p><a class="reference external" href="http://chl.erdc.usace.army.mil/library/publications/chetn/pdf/chetn-xiii-2.pdf">Implementation of Discontinuous Galerkin Methods for the Level Set
+Equation on Unstructured Meshes</a>
+(2008) M. W. Farthing and C. E. Kees, <em>ERDC/CHL CHETN-XIII-2</em></p></li>
+</ul>
+</div>
+<div class="section" id="indices-and-tables">
+<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</div>
+<div class="section" id="source-code-documentation">
+<h1>Source Code Documentation<a class="headerlink" href="#source-code-documentation" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound" id="sec-general">
+<p class="caption"><span class="caption-text">General</span><a class="headerlink" href="#sec-general" title="Permalink to this toctree">¶</a></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="apicapi.html">API docs</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound" id="sec-tools">
+<p class="caption"><span class="caption-text">Tools</span><a class="headerlink" href="#sec-tools" title="Permalink to this toctree">¶</a></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tools/boundary_conditions.html">BoundaryConditions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/spatial_tools.html">SpatialTools</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/two_phase_flow.html">TwoPhaseFlow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tools/wave_tools.html">WaveTools</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound" id="sec-models">
+<p class="caption"><span class="caption-text">Models</span><a class="headerlink" href="#sec-models" title="Permalink to this toctree">¶</a></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="models/body_dynamics.html">Body Dynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/free_surface.html">Free Surface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/mesh_adaptivity.html">Mesh Adaptivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/mesh_motion.html">Mesh Motion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/navier_stokes.html">Navier-Stokes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="models/SWFlows.html">Shallow Water Flows</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="apicapi.html" class="btn btn-neutral float-right" title="API Documentation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, The Proteus Team
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    
+
+  <style>
+    /* Sidebar header (and topbar for mobile) */
+   /* .wy-side-nav-search, .wy-nav-top { */
+    .wy-side-nav-search {
+        background: #F0F0F0;
+    }
+   .wy-side-nav-search > div.version {
+       color: rgba(0,0,0,.5);
+   }
+   /* .wy-side-nav-search img { */
+   /* max-width: 200%; */
+   /* } */
+   .wy-side-nav-search>a img.logo {
+       width: 150px;
+       /* width: 200px; */
+   }
+
+
+
+    /* Sidebar */
+   /* .wy-nav-side { */
+   /* background: #ff0000; */
+   /* } */
+  </style>
+
+
+
+</body>
+</html>
