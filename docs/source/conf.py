@@ -16,8 +16,18 @@ import sys
 import os
 # import sphinx_bootstrap_theme
 
-on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
+# The encoding of source files.
+#source_encoding = 'utf-8-sig'
 
+# The master toctree document.
+master_doc = 'index'
+
+# General information about the project.
+project = u'Proteus'
+copyright = u'2020, The Proteus Team'
+
+
+on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 if not on_rtd:
 
     try:
@@ -99,16 +109,6 @@ if not on_rtd:
 
     # The suffix of source filenames.
     source_suffix = '.rst'
-
-    # The encoding of source files.
-    #source_encoding = 'utf-8-sig'
-
-    # The master toctree document.
-    master_doc = 'index'
-
-    # General information about the project.
-    project = u'Proteus'
-    copyright = u'2020, The Proteus Team'
 
     # The version info for the project you're documenting, acts as replacement for
     # |version| and |release|, also used in various other places throughout the
