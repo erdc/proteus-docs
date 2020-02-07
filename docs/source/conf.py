@@ -73,7 +73,7 @@ extensions = [
 #    'sphinx.ext.viewcode',
     'sphinx.ext.linkcode',
     'sphinx.ext.napoleon',
-    'breathe',
+#    'breathe',
 #    'exhale',
 #    'IPython.sphinxext.ipython_console_highlighting',
 #    'IPython.sphinxext.ipython_directive',
