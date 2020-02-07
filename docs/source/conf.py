@@ -295,7 +295,7 @@ u'The Proteus Team', 'manual'),
 #latex_use_parts = False
 
 # Additional stuff for the LaTeX preamble.
-latex_elements['preamble'] = '\input{macros}'
+#latex_elements['preamble'] = '\input{macros}'
 
 # If true, show page references after internal links.
 #latex_show_pagerefs = False
