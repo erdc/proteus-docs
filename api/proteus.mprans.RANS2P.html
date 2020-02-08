@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>proteus.mprans.RANS2P module &mdash; Proteus 1.7.2 documentation</title>
+  <title>proteus.mprans.RANS2P module &mdash; Proteus 1.7.2.dev0 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                1.7.2
+                1.7.2.dev0
               </div>
             
           
@@ -118,6 +118,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d">2D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#id2">3D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d-with-stl">3D with STL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d-with-stl-and-relaxation-zones">3D with STL and Relaxation Zones</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/spatial_tools.html#classes">Classes</a><ul>
@@ -340,7 +341,7 @@
 
 <dl class="class">
 <dt id="proteus.mprans.RANS2P.Coefficients">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.RANS2P.</code><code class="sig-name descname">Coefficients</code><span class="sig-paren">(</span><em class="sig-param">epsFact=1.5, sigma=72.8, rho_0=998.2, nu_0=1.004e-06, rho_1=1.205, nu_1=1.5e-05, g=[0.0, 0.0, -9.8], nd=3, ME_model=0, CLSVOF_model=None, LS_model=None, VF_model=None, KN_model=None, Closure_0_model=None, Closure_1_model=None, epsFact_density=None, stokes=False, sd=True, movingDomain=False, useVF=0.0, useRBLES=0.0, useMetrics=0.0, useConstant_he=False, dragAlpha=0.0, dragBeta=0.0, setParamsFunc=None, dragAlphaTypes=None, dragBetaTypes=None, porosityTypes=None, killNonlinearDrag=False, epsFact_solid=None, eb_adjoint_sigma=1.0, eb_penalty_constant=10.0, forceStrongDirichlet=False, turbulenceClosureModel=0, smagorinskyConstant=0.1, barycenters=None, NONCONSERVATIVE_FORM=1.0, MOMENTUM_SGE=1.0, PRESSURE_SGE=1.0, VELOCITY_SGE=1.0, PRESSURE_PROJECTION_STABILIZATION=0.0, phaseFunction=None, LAG_LES=1.0, use_ball_as_particle=1, ball_center=None, ball_radius=None, ball_velocity=None, ball_angular_velocity=None, ball_center_acceleration=None, ball_angular_acceleration=None, ball_density=None, particle_velocities=None, particle_centroids=None, particle_sdfList=None, particle_velocityList=None, nParticles=0, particle_epsFact=3.0, particle_alpha=1000.0, particle_beta=1000.0, particle_penalty_constant=1000.0, particle_nitsche=1.0, nullSpace='NoNullSpace', useExact=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P.Coefficients" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.RANS2P.</code><code class="sig-name descname">Coefficients</code><span class="sig-paren">(</span><em class="sig-param">epsFact=1.5, sigma=72.8, rho_0=998.2, nu_0=1.004e-06, rho_1=1.205, nu_1=1.5e-05, g=[0.0, 0.0, -9.8], nd=3, ME_model=0, CLSVOF_model=None, LS_model=None, VF_model=None, KN_model=None, Closure_0_model=None, Closure_1_model=None, epsFact_density=None, stokes=False, sd=True, movingDomain=False, useVF=0.0, useRBLES=0.0, useMetrics=0.0, useConstant_he=False, dragAlpha=0.0, dragBeta=0.0, setParamsFunc=None, dragAlphaTypes=None, dragBetaTypes=None, porosityTypes=None, killNonlinearDrag=False, epsFact_solid=None, eb_adjoint_sigma=1.0, eb_penalty_constant=10.0, forceStrongDirichlet=False, turbulenceClosureModel=0, smagorinskyConstant=0.1, barycenters=None, NONCONSERVATIVE_FORM=1.0, MOMENTUM_SGE=1.0, PRESSURE_SGE=1.0, VELOCITY_SGE=1.0, PRESSURE_PROJECTION_STABILIZATION=0.0, phaseFunction=None, LAG_LES=1.0, use_ball_as_particle=1, ball_center=None, ball_radius=None, ball_velocity=None, ball_angular_velocity=None, ball_center_acceleration=None, ball_angular_acceleration=None, ball_density=None, particle_velocities=None, particle_centroids=None, particle_sdfList=None, particle_velocityList=None, nParticles=0, particle_epsFact=3.0, particle_alpha=1000.0, particle_beta=1000.0, particle_penalty_constant=1000.0, particle_nitsche=1.0, nullSpace='NoNullSpace', useExact=False, initialize=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P.Coefficients" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.TransportCoefficients.html#proteus.TransportCoefficients.TC_base" title="proteus.TransportCoefficients.TC_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.TransportCoefficients.TC_base</span></code></a></p>
 <p>The coefficients for two incompresslble fluids governed by the Navier-Stokes equations and separated by a sharp interface represented by a level set function</p>
 <p class="rubric">Notes</p>
@@ -373,6 +374,11 @@ of diffusion tensors may also be provided.</p>
 <dl class="method">
 <dt id="proteus.mprans.RANS2P.Coefficients.TwophaseNavierStokes_ST_LS_SO_3D_Evaluate_sd">
 <code class="sig-name descname">TwophaseNavierStokes_ST_LS_SO_3D_Evaluate_sd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P.Coefficients.TwophaseNavierStokes_ST_LS_SO_3D_Evaluate_sd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="proteus.mprans.RANS2P.Coefficients.initialize">
+<code class="sig-name descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P.Coefficients.initialize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">

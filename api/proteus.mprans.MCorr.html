@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>proteus.mprans.MCorr module &mdash; Proteus 1.7.2 documentation</title>
+  <title>proteus.mprans.MCorr module &mdash; Proteus 1.7.2.dev0 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                1.7.2
+                1.7.2.dev0
               </div>
             
           
@@ -118,6 +118,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d">2D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#id2">3D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d-with-stl">3D with STL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d-with-stl-and-relaxation-zones">3D with STL and Relaxation Zones</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/spatial_tools.html#classes">Classes</a><ul>
@@ -267,7 +268,7 @@
 <span id="proteus-mprans-mcorr-module"></span><h1>proteus.mprans.MCorr module<a class="headerlink" href="#module-proteus.mprans.MCorr" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="proteus.mprans.MCorr.Coefficients">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.MCorr.</code><code class="sig-name descname">Coefficients</code><span class="sig-paren">(</span><em class="sig-param">applyCorrection=True</em>, <em class="sig-param">epsFactHeaviside=0.0</em>, <em class="sig-param">epsFactDirac=1.0</em>, <em class="sig-param">epsFactDiffusion=2.0</em>, <em class="sig-param">LSModel_index=3</em>, <em class="sig-param">V_model=2</em>, <em class="sig-param">me_model=5</em>, <em class="sig-param">VOFModel_index=4</em>, <em class="sig-param">checkMass=True</em>, <em class="sig-param">sd=True</em>, <em class="sig-param">nd=None</em>, <em class="sig-param">applyCorrectionToDOF=True</em>, <em class="sig-param">useMetrics=0.0</em>, <em class="sig-param">useConstantH=False</em>, <em class="sig-param">useQuadraticRegularization=False</em>, <em class="sig-param">edgeBasedStabilizationMethods=False</em>, <em class="sig-param">nullSpace='NoNullSpace'</em>, <em class="sig-param">useExact=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.MCorr.</code><code class="sig-name descname">Coefficients</code><span class="sig-paren">(</span><em class="sig-param">applyCorrection=True</em>, <em class="sig-param">epsFactHeaviside=0.0</em>, <em class="sig-param">epsFactDirac=1.0</em>, <em class="sig-param">epsFactDiffusion=2.0</em>, <em class="sig-param">LSModel_index=3</em>, <em class="sig-param">V_model=2</em>, <em class="sig-param">me_model=5</em>, <em class="sig-param">VOFModel_index=4</em>, <em class="sig-param">checkMass=True</em>, <em class="sig-param">sd=True</em>, <em class="sig-param">nd=None</em>, <em class="sig-param">applyCorrectionToDOF=True</em>, <em class="sig-param">useMetrics=0.0</em>, <em class="sig-param">useConstantH=False</em>, <em class="sig-param">useQuadraticRegularization=False</em>, <em class="sig-param">edgeBasedStabilizationMethods=False</em>, <em class="sig-param">nullSpace='NoNullSpace'</em>, <em class="sig-param">useExact=False</em>, <em class="sig-param">initialize=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.TransportCoefficients.html#proteus.TransportCoefficients.TC_base" title="proteus.TransportCoefficients.TC_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.TransportCoefficients.TC_base</span></code></a></p>
 <p>Set the number of components (equations) of the
 PDE and initialize the dicitionaries describing the form of the
@@ -282,6 +283,11 @@ of diffusion tensors may also be provided.</p>
 <dl class="method">
 <dt id="proteus.mprans.MCorr.Coefficients.levelSetConservationCoefficientsEvaluate_sd">
 <code class="sig-name descname">levelSetConservationCoefficientsEvaluate_sd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.levelSetConservationCoefficientsEvaluate_sd" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="proteus.mprans.MCorr.Coefficients.initialize">
+<code class="sig-name descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.initialize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">

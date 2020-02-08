@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>proteus.mprans.PresInit module &mdash; Proteus 1.7.2 documentation</title>
+  <title>proteus.mprans.PresInit module &mdash; Proteus 1.7.2.dev0 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                1.7.2
+                1.7.2.dev0
               </div>
             
           
@@ -118,6 +118,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d">2D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#id2">3D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d-with-stl">3D with STL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d-with-stl-and-relaxation-zones">3D with STL and Relaxation Zones</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/spatial_tools.html#classes">Classes</a><ul>
@@ -267,7 +268,7 @@
 <span id="proteus-mprans-presinit-module"></span><h1>proteus.mprans.PresInit module<a class="headerlink" href="#module-proteus.mprans.PresInit" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="proteus.mprans.PresInit.Coefficients">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.PresInit.</code><code class="sig-name descname">Coefficients</code><span class="sig-paren">(</span><em class="sig-param">useMetrics=1.0</em>, <em class="sig-param">epsFactHeaviside=3.0</em>, <em class="sig-param">epsFactDirac=3.0</em>, <em class="sig-param">epsFactDiffusion=1.0</em>, <em class="sig-param">nd=2</em>, <em class="sig-param">modelIndex=None</em>, <em class="sig-param">fluidModelIndex=None</em>, <em class="sig-param">pressureModelIndex=None</em>, <em class="sig-param">useRotationalForm=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/PresInit.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.PresInit.Coefficients" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.PresInit.</code><code class="sig-name descname">Coefficients</code><span class="sig-paren">(</span><em class="sig-param">useMetrics=1.0</em>, <em class="sig-param">epsFactHeaviside=3.0</em>, <em class="sig-param">epsFactDirac=3.0</em>, <em class="sig-param">epsFactDiffusion=1.0</em>, <em class="sig-param">nd=2</em>, <em class="sig-param">modelIndex=None</em>, <em class="sig-param">fluidModelIndex=None</em>, <em class="sig-param">pressureModelIndex=None</em>, <em class="sig-param">useRotationalForm=False</em>, <em class="sig-param">initialize=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/PresInit.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.PresInit.Coefficients" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.TransportCoefficients.html#proteus.TransportCoefficients.TC_base" title="proteus.TransportCoefficients.TC_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.TransportCoefficients.TC_base</span></code></a></p>
 <p>The coefficients for pressure solution</p>
 <p>Update is given by</p>
@@ -279,6 +280,11 @@
 <dd class="field-odd"><p><strong>pressureIncrementModelIndex</strong> – The index into the model list</p>
 </dd>
 </dl>
+<dl class="method">
+<dt id="proteus.mprans.PresInit.Coefficients.initialize">
+<code class="sig-name descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/PresInit.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.PresInit.Coefficients.initialize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="method">
 <dt id="proteus.mprans.PresInit.Coefficients.attachModels">
 <code class="sig-name descname">attachModels</code><span class="sig-paren">(</span><em class="sig-param">modelList</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/PresInit.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.PresInit.Coefficients.attachModels" title="Permalink to this definition">¶</a></dt>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>SpatialTools &mdash; Proteus 1.7.2 documentation</title>
+  <title>SpatialTools &mdash; Proteus 1.7.2.dev0 documentation</title>
   
 
   
@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                1.7.2
+                1.7.2.dev0
               </div>
             
           
@@ -120,6 +120,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#d">2D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id2">3D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#d-with-stl">3D with STL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#d-with-stl-and-relaxation-zones">3D with STL and Relaxation Zones</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#classes">Classes</a><ul>
@@ -465,6 +466,73 @@ _p.py file), such as in the file where the geometries are first defined.</p>
 </pre></div>
 </div>
 </div>
+<div class="section" id="d-with-stl-and-relaxation-zones">
+<h3>3D with STL and Relaxation Zones<a class="headerlink" href="#d-with-stl-and-relaxation-zones" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#See complete case in  https://github.com/erdc/air-water-vv/tree/master/3d/STLShape_Zones</span>
+<span class="kn">from</span> <span class="nn">proteus</span> <span class="kn">import</span> <span class="n">Domain</span>
+<span class="kn">from</span> <span class="nn">proteus.mprans</span> <span class="kn">import</span> <span class="n">SpatialTools</span> <span class="k">as</span> <span class="n">st</span>
+<span class="kn">from</span> <span class="nn">proteus.Profiling</span> <span class="kn">import</span> <span class="n">logEvent</span> <span class="k">as</span> <span class="n">log</span>
+
+<span class="n">domain</span> <span class="o">=</span> <span class="n">Domain</span><span class="o">.</span><span class="n">PiecewiseLinearComplexDomain</span><span class="p">()</span>
+
+<span class="n">SG</span><span class="o">=</span><span class="n">st</span><span class="o">.</span><span class="n">ShapeSTL</span><span class="p">(</span><span class="n">domain</span><span class="p">,</span><span class="s1">&#39;NWT.stl&#39;</span><span class="p">)</span>
+<span class="n">log</span><span class="p">(</span><span class="s2">&quot;Boundary Tags are:&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">SG</span><span class="o">.</span><span class="n">boundaryTags</span><span class="p">))</span>
+
+<span class="n">SG</span><span class="o">.</span><span class="n">regions</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">13.</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="p">[</span><span class="o">-</span><span class="mf">3.</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span> <span class="p">[</span><span class="mf">9.</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]]</span>
+<span class="n">SG</span><span class="o">.</span><span class="n">regionFlags</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+
+<span class="c1"># All external boundaries are free-slip for simplicity.</span>
+<span class="n">SG</span><span class="o">.</span><span class="n">BC</span><span class="p">[</span><span class="s1">&#39;Top0&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">setFreeSlip</span><span class="p">()</span>
+<span class="n">SG</span><span class="o">.</span><span class="n">BC</span><span class="p">[</span><span class="s1">&#39;Wall0&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">setFreeSlip</span><span class="p">()</span>
+<span class="n">SG</span><span class="o">.</span><span class="n">BC</span><span class="p">[</span><span class="s1">&#39;Bed0&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">setFreeSlip</span><span class="p">()</span>
+<span class="n">SG</span><span class="o">.</span><span class="n">BC</span><span class="p">[</span><span class="s1">&#39;Concrete0&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">setFreeSlip</span><span class="p">()</span>
+<span class="n">SG</span><span class="o">.</span><span class="n">BC</span><span class="p">[</span><span class="s1">&#39;Top_Gen&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">setFreeSlip</span><span class="p">()</span>
+<span class="n">SG</span><span class="o">.</span><span class="n">BC</span><span class="p">[</span><span class="s1">&#39;Bed_Gen&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">setFreeSlip</span><span class="p">()</span>
+<span class="n">SG</span><span class="o">.</span><span class="n">BC</span><span class="p">[</span><span class="s1">&#39;Wall_Gen&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">setFreeSlip</span><span class="p">()</span>
+<span class="n">SG</span><span class="o">.</span><span class="n">BC</span><span class="p">[</span><span class="s1">&#39;Top_Abs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">setFreeSlip</span><span class="p">()</span>
+<span class="n">SG</span><span class="o">.</span><span class="n">BC</span><span class="p">[</span><span class="s1">&#39;Bed_Abs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">setFreeSlip</span><span class="p">()</span>
+<span class="n">SG</span><span class="o">.</span><span class="n">BC</span><span class="p">[</span><span class="s1">&#39;Wall_Abs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">setFreeSlip</span><span class="p">()</span>
+
+<span class="n">SG</span><span class="o">.</span><span class="n">BC</span><span class="p">[</span><span class="s1">&#39;Inlet0&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">setNonMaterial</span><span class="p">()</span>
+<span class="n">SG</span><span class="o">.</span><span class="n">BC</span><span class="p">[</span><span class="s1">&#39;Outlet0&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">setNonMaterial</span><span class="p">()</span>
+
+<span class="n">SG</span><span class="o">.</span><span class="n">setGenerationZones</span><span class="p">(</span><span class="n">flags</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                      <span class="n">epsFact_solid</span><span class="o">=</span><span class="mf">2.</span><span class="p">,</span>
+                      <span class="n">center</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">13.</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]),</span>
+                      <span class="n">orientation</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]),</span>
+                      <span class="n">waves</span><span class="o">=</span><span class="n">wave</span><span class="p">,</span>
+                      <span class="n">dragAlpha</span><span class="o">=</span><span class="n">dragAlpha</span><span class="p">,</span>
+                      <span class="n">vert_axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                      <span class="n">smoothing</span><span class="o">=</span><span class="n">smoothing</span><span class="p">,</span>
+                      <span class="p">)</span>
+
+<span class="n">SG</span><span class="o">.</span><span class="n">setAbsorptionZones</span><span class="p">(</span><span class="n">flags</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>
+                      <span class="n">epsFact_solid</span><span class="o">=</span><span class="mf">4.</span><span class="p">,</span>
+                      <span class="n">center</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">9.</span><span class="p">,</span> <span class="mf">2.5</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]),</span>
+                      <span class="n">orientation</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">]),</span>
+                      <span class="n">dragAlpha</span><span class="o">=</span><span class="n">dragAlpha</span><span class="p">,</span>
+                      <span class="n">vert_axis</span><span class="o">=</span><span class="mi">1</span>
+                      <span class="p">)</span>
+
+
+<span class="n">SG</span><span class="o">.</span><span class="n">BC</span><span class="p">[</span><span class="s1">&#39;Inlet_Gen&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">setUnsteadyTwoPhaseVelocityInlet</span><span class="p">(</span><span class="n">wave</span><span class="o">=</span><span class="n">wave</span><span class="p">,</span>
+                                                    <span class="n">vert_axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span>
+                                                    <span class="n">smoothing</span><span class="o">=</span><span class="mf">3.</span><span class="o">*</span><span class="n">opts</span><span class="o">.</span><span class="n">he</span><span class="p">,</span>
+                                                    <span class="n">orientation</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="o">-</span><span class="mf">1.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">]),</span>
+                                                    <span class="n">vof_air</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span>
+                                                    <span class="n">vof_water</span><span class="o">=</span><span class="mf">0.</span><span class="p">)</span>
+
+ <span class="n">SG</span><span class="o">.</span><span class="n">BC</span><span class="p">[</span><span class="s1">&#39;Outlet_Abs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">setHydrostaticPressureOutletWithDepth</span><span class="p">(</span><span class="n">seaLevel</span><span class="o">=</span> <span class="n">opts</span><span class="o">.</span><span class="n">mwl</span><span class="p">,</span>
+                                                           <span class="n">rhoUp</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">rho_1</span><span class="p">,</span>
+                                                           <span class="n">rhoDown</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">rho_0</span><span class="p">,</span>
+                                                           <span class="n">g</span><span class="o">=</span><span class="n">opts</span><span class="o">.</span><span class="n">g</span><span class="p">,</span>
+                                                           <span class="n">refLevel</span><span class="o">=</span><span class="n">xTop</span><span class="p">,</span>
+                                                           <span class="n">smoothing</span><span class="o">=</span><span class="n">smoothing</span><span class="p">,</span>
+                                                           <span class="n">orientation</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span><span class="mf">0.</span><span class="p">,</span><span class="mf">0.</span><span class="p">]),</span>
+                                                           <span class="n">vert_axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </div>
 <div class="section" id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
@@ -603,6 +671,7 @@ endsolid
 </div>
 <p>When reading the block stl file, the <code class="docutils literal notranslate"><span class="pre">ShapeSTL</span></code> class will read also the stl blocks and, in addition to vertices and facets, tags for boundaryTags, vertices and facets will be assigned. The names of boundaries are given according to the naming of the blocks. E.g. block0 will form boundary block0 etc.</p>
 <p>The user should be able to mesh a whole domain, as long as the STL files create a watertight domain. A simple example of setting up a 3D domain is given in the beginning of this section and the air-water-vv repository <a class="reference external" href="https://github.com/erdc/air-water-vv/blob/master/3d/STLShape/">https://github.com/erdc/air-water-vv/blob/master/3d/STLShape/</a></p>
+<p>ShapeSTL also provides the capability to incorporate relaxation zones for wave genearation and absorption. The STL file must be generated with this in mind as additional definition of STL blocks is required. Internal blocks to designate the boundary of absorbtion zone and main tank are required. As these create a line intersection of at least three blocks, the user must take care to ensure the vertices are coincident in all three blocks. Each region is tagged, which allows the relaxation zone to be defined. A simple example of setting up a 3D domain with relaxation zones is given in the beginning of this section and the air-water-vv repository <a class="reference external" href="https://github.com/erdc/air-water-vv/blob/master/3d/STLShape_Zones/">https://github.com/erdc/air-water-vv/blob/master/3d/STLShape_Zones/</a></p>
 </div>
 </div>
 <div class="section" id="mprans-specific">

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Introduction &mdash; Proteus 1.7.2 documentation</title>
+  <title>Introduction &mdash; Proteus 1.7.2.dev0 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.7.2
+                1.7.2.dev0
               </div>
             
           
@@ -119,6 +119,7 @@
 <li class="toctree-l3"><a class="reference internal" href="tools/spatial_tools.html#d">2D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tools/spatial_tools.html#id2">3D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tools/spatial_tools.html#d-with-stl">3D with STL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools/spatial_tools.html#d-with-stl-and-relaxation-zones">3D with STL and Relaxation Zones</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tools/spatial_tools.html#classes">Classes</a><ul>
@@ -296,13 +297,16 @@ methods, both of which are described in more detail below
 </div>
 <div class="section" id="obtaining-and-installing-proteus">
 <span id="obtaining-sec"></span><h1>Obtaining and Installing Proteus<a class="headerlink" href="#obtaining-and-installing-proteus" title="Permalink to this headline">¶</a></h1>
-<p>For learning and experimenting there is a <a class="reference external" href="https://cloud.docker.com/u/erdc/repository/docker/erdc/proteus">Docker image</a>.</p>
-<p>Proteus can be installed through conda with:</p>
+<p>For learning and experimenting there is a
+<a class="reference external" href="https://cloud.docker.com/u/erdc/repository/docker/erdc/proteus">Docker image</a>.
+Proteus can be installed through conda with::</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">conda</span> <span class="n">install</span> <span class="n">proteus</span> <span class="o">-</span><span class="n">c</span> <span class="n">conda</span><span class="o">-</span><span class="n">forge</span>
 </pre></div>
 </div>
-<p>Proteus is available as source from our public <a class="reference external" href="https://github.com/erdc/proteus">GitHub</a> repository.
-For a development installation, the installation of dependencies and the compilation of Proteus from source is done with:</p>
+<p>Proteus is available as source from our public
+<a class="reference external" href="https://github.com/erdc/proteus">GitHub</a>
+repository. For a development installation, the installation of
+dependencies and the compilation of Proteus from source is done with::</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">erdc</span><span class="o">/</span><span class="n">proteus</span>
 <span class="o">%</span> <span class="n">cd</span> <span class="n">proteus</span>
 <span class="o">%</span> <span class="n">conda</span> <span class="n">env</span> <span class="n">create</span> <span class="o">-</span><span class="n">f</span> <span class="n">environment</span><span class="o">-</span><span class="n">dev</span><span class="o">.</span><span class="n">yml</span>
@@ -310,8 +314,9 @@ For a development installation, the installation of dependencies and the compila
 <span class="o">%</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">v</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>
 </pre></div>
 </div>
-<p>Alternatively, if you already have compilers (C,C++, and Fortran!) and Git installed on your system,
-you can install Proteus through hashdist with the following commands:</p>
+<p>Alternatively, if you already have compilers (C,C++, and Fortran!)
+installed on your system, you can install Proteus through hashdist
+with the following commands::</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">%</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">erdc</span><span class="o">/</span><span class="n">proteus</span>
 <span class="o">%</span> <span class="n">cd</span> <span class="n">proteus</span>
 <span class="o">%</span> <span class="n">make</span> <span class="n">develop</span>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>proteus.mprans.AddedMass module &mdash; Proteus 1.7.2 documentation</title>
+  <title>proteus.mprans.AddedMass module &mdash; Proteus 1.7.2.dev0 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                1.7.2
+                1.7.2.dev0
               </div>
             
           
@@ -118,6 +118,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d">2D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#id2">3D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d-with-stl">3D with STL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d-with-stl-and-relaxation-zones">3D with STL and Relaxation Zones</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/spatial_tools.html#classes">Classes</a><ul>
@@ -273,7 +274,7 @@
 
 <dl class="class">
 <dt id="proteus.mprans.AddedMass.Coefficients">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.AddedMass.</code><code class="sig-name descname">Coefficients</code><span class="sig-paren">(</span><em class="sig-param">nd=2</em>, <em class="sig-param">V_model=None</em>, <em class="sig-param">barycenters=None</em>, <em class="sig-param">flags_rigidbody=None</em>, <em class="sig-param">solve_rate=0.0</em>, <em class="sig-param">nullSpace='ConstantNullSpace'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/AddedMass.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.AddedMass.Coefficients" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.AddedMass.</code><code class="sig-name descname">Coefficients</code><span class="sig-paren">(</span><em class="sig-param">nd=2</em>, <em class="sig-param">V_model=None</em>, <em class="sig-param">barycenters=None</em>, <em class="sig-param">flags_rigidbody=None</em>, <em class="sig-param">solve_rate=0.0</em>, <em class="sig-param">nullSpace='ConstantNullSpace'</em>, <em class="sig-param">initialize=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/AddedMass.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.AddedMass.Coefficients" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.TransportCoefficients.html#proteus.TransportCoefficients.TC_base" title="proteus.TransportCoefficients.TC_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.TransportCoefficients.TC_base</span></code></a></p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -290,6 +291,11 @@ the array will look like np.array([0,0,1,0,0,0])</p></li>
 </dd>
 </dl>
 <p>TODO</p>
+<dl class="method">
+<dt id="proteus.mprans.AddedMass.Coefficients.initialize">
+<code class="sig-name descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/AddedMass.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.AddedMass.Coefficients.initialize" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
 <dl class="method">
 <dt id="proteus.mprans.AddedMass.Coefficients.attachModels">
 <code class="sig-name descname">attachModels</code><span class="sig-paren">(</span><em class="sig-param">modelList</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/AddedMass.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.AddedMass.Coefficients.attachModels" title="Permalink to this definition">¶</a></dt>

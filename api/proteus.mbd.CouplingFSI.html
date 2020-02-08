@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>proteus.mbd.CouplingFSI module &mdash; Proteus 1.7.2 documentation</title>
+  <title>proteus.mbd.CouplingFSI module &mdash; Proteus 1.7.2.dev0 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                1.7.2
+                1.7.2.dev0
               </div>
             
           
@@ -118,6 +118,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d">2D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#id2">3D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d-with-stl">3D with STL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d-with-stl-and-relaxation-zones">3D with STL and Relaxation Zones</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/spatial_tools.html#classes">Classes</a><ul>
@@ -521,6 +522,143 @@ rank.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>initialized</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="proteus.mbd.CouplingFSI.ProtChSystem.log_bodies_h5">
+<code class="sig-name descname">log_bodies_h5</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mbd/CouplingFSI.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mbd.CouplingFSI.ProtChSystem.log_bodies_h5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs the chrono information into a h5 file at each timestep
+:param self: ProtChSystem being referenced
+:type self: object
+:param l_logging_info: Contains the information to be logged. Structure is [body number, type]</p>
+<blockquote>
+<div><p>with multiple entries being included as a 2d list. Valid types are
+‘position’, ‘rotation’, ‘force’, and ‘torque’.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None. Data is saved to an h5 file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="proteus.mbd.CouplingFSI.ProtChSystem.log_bodies_text">
+<code class="sig-name descname">log_bodies_text</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mbd/CouplingFSI.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mbd.CouplingFSI.ProtChSystem.log_bodies_text" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Logs the chrono information into a text file at each timestep</dt><dd><p>Parameters</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>self: object</dt><dd><p>ProtChSystem being referenced</p>
+</dd>
+<dt>d_time: float</dt><dd><p>Simulation time</p>
+</dd>
+<dt>l_logging_info: list</dt><dd><p>Contains the information to be logged. Structure is [body number, type]
+with multiple entries being included as a 2d list. Valid types are
+‘position’, ‘rotation’, ‘force’, and ‘torque’.</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None. Data is logged to a text file</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="proteus.mbd.CouplingFSI.ProtChSystem.log_chrono_bodies">
+<code class="sig-name descname">log_chrono_bodies</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mbd/CouplingFSI.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mbd.CouplingFSI.ProtChSystem.log_chrono_bodies" title="Permalink to this definition">¶</a></dt>
+<dd><p>object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>log_chrono_bodies</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="proteus.mbd.CouplingFSI.ProtChSystem.log_chrono_format">
+<code class="sig-name descname">log_chrono_format</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mbd/CouplingFSI.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mbd.CouplingFSI.ProtChSystem.log_chrono_format" title="Permalink to this definition">¶</a></dt>
+<dd><p>‘string’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>log_chrono_format</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="proteus.mbd.CouplingFSI.ProtChSystem.log_chrono_springs">
+<code class="sig-name descname">log_chrono_springs</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mbd/CouplingFSI.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mbd.CouplingFSI.ProtChSystem.log_chrono_springs" title="Permalink to this definition">¶</a></dt>
+<dd><p>object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>log_chrono_springs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="proteus.mbd.CouplingFSI.ProtChSystem.log_springs_h5">
+<code class="sig-name descname">log_springs_h5</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mbd/CouplingFSI.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mbd.CouplingFSI.ProtChSystem.log_springs_h5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs chrono spring information to an h5 file
+:param self: ProtChSystem object being referenced.
+:type self: object
+:param l_springs: Spring objects for which the data is being logged
+:type l_springs: list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None. Data is logged to an h5 file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="proteus.mbd.CouplingFSI.ProtChSystem.log_springs_text">
+<code class="sig-name descname">log_springs_text</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mbd/CouplingFSI.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mbd.CouplingFSI.ProtChSystem.log_springs_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs the chrono information into a text file at each timestep
+:param self: ProtChSystem being referenced
+:type self: object
+:param d_time: Current simulation time
+:type d_time: float
+:param l_springs: Spring objects for which data is being stored
+:type l_springs: list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None. Data is saved to a text file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="proteus.mbd.CouplingFSI.ProtChSystem.log_times_h5">
+<code class="sig-name descname">log_times_h5</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mbd/CouplingFSI.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mbd.CouplingFSI.ProtChSystem.log_times_h5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a log of the Proteus timestep within the h5 log file
+:param self: ProtChSystem being referenced
+:type self: object
+:param d_time: Time within the simulation
+:type d_time: float</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None. Data is logged to the disk.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1201,13 +1339,10 @@ proteus.mprans.SpatialTools</p>
 <dl class="attribute">
 <dt id="proteus.mbd.CouplingFSI.ProtChBody.boundaryFlags">
 <code class="sig-name descname">boundaryFlags</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mbd/CouplingFSI.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mbd.CouplingFSI.ProtChBody.boundaryFlags" title="Permalink to this definition">¶</a></dt>
-<dd><p>]’</p>
+<dd><p>numpy.ndarray</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>boundaryFlags</p>
-</dd>
-<dt class="field-even">Type</dt>
-<dd class="field-even"><p>‘int[</p>
 </dd>
 </dl>
 </dd></dl>
