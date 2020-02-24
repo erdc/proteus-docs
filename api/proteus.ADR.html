@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>proteus.ADR module &mdash; Proteus 1.7.2 documentation</title>
+  <title>proteus.ADR module &mdash; Proteus 1.7.3 documentation</title>
   
 
   
@@ -23,11 +23,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                1.7.2
+                1.7.3
               </div>
             
           
@@ -118,6 +118,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d">2D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#id2">3D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d-with-stl">3D with STL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d-with-stl-and-relaxation-zones">3D with STL and Relaxation Zones</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/spatial_tools.html#classes">Classes</a><ul>
@@ -265,7 +266,22 @@
             
   <div class="section" id="module-proteus.ADR">
 <span id="proteus-adr-module"></span><h1>proteus.ADR module<a class="headerlink" href="#module-proteus.ADR" title="Permalink to this headline">¶</a></h1>
-<p>An optimized Advection-Diffusion-Reaction module</p>
+<dl class="class">
+<dt id="proteus.ADR.ADR">
+<em class="property">class </em><code class="sig-prename descclassname">proteus.ADR.</code><code class="sig-name descname">ADR</code><span class="sig-paren">(</span><em class="sig-param">self: proteus.ADR.ADR</em>, <em class="sig-param">arg0: int</em>, <em class="sig-param">arg1: int</em>, <em class="sig-param">arg2: int</em>, <em class="sig-param">arg3: int</em>, <em class="sig-param">arg4: int</em>, <em class="sig-param">arg5: int</em>, <em class="sig-param">arg6: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.ADR" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
+<dl class="method">
+<dt id="proteus.ADR.ADR.calculateJacobian">
+<code class="sig-name descname">calculateJacobian</code><span class="sig-paren">(</span><em class="sig-param">self: proteus.ADR.ADR, arg0: numpy.ndarray[float64], arg1: numpy.ndarray[float64], arg2: numpy.ndarray[float64], arg3: numpy.ndarray[int32], arg4: numpy.ndarray[float64], arg5: numpy.ndarray[float64], arg6: numpy.ndarray[float64], arg7: numpy.ndarray[float64], arg8: numpy.ndarray[float64], arg9: numpy.ndarray[float64], arg10: numpy.ndarray[float64], arg11: float, arg12: float, arg13: float, arg14: float, arg15: numpy.ndarray[float64], arg16: numpy.ndarray[float64], arg17: numpy.ndarray[float64], arg18: numpy.ndarray[float64], arg19: numpy.ndarray[float64], arg20: numpy.ndarray[float64], arg21: numpy.ndarray[float64], arg22: numpy.ndarray[float64], arg23: numpy.ndarray[float64], arg24: int, arg25: numpy.ndarray[int32], arg26: numpy.ndarray[float64], arg27: numpy.ndarray[int32], arg28: numpy.ndarray[int32], arg29: numpy.ndarray[float64], arg30: numpy.ndarray[float64], arg31: numpy.ndarray[float64], arg32: int, arg33: float, arg34: numpy.ndarray[float64], arg35: numpy.ndarray[float64], arg36: numpy.ndarray[int32], arg37: numpy.ndarray[int32], arg38: numpy.ndarray[float64], arg39: int, arg40: numpy.ndarray[int32], arg41: numpy.ndarray[int32], arg42: numpy.ndarray[int32], arg43: numpy.ndarray[float64], arg44: numpy.ndarray[float64], arg45: numpy.ndarray[int32], arg46: numpy.ndarray[float64], arg47: numpy.ndarray[int32], arg48: numpy.ndarray[int32], arg49: numpy.ndarray[float64], arg50: numpy.ndarray[float64], arg51: numpy.ndarray[int32], arg52: numpy.ndarray[float64], arg53: float</em><span class="sig-paren">)</span> &#x2192; None<a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.ADR.calculateJacobian" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="proteus.ADR.ADR.calculateResidual">
+<code class="sig-name descname">calculateResidual</code><span class="sig-paren">(</span><em class="sig-param">self: proteus.ADR.ADR, arg0: numpy.ndarray[float64], arg1: numpy.ndarray[float64], arg2: numpy.ndarray[float64], arg3: numpy.ndarray[int32], arg4: numpy.ndarray[float64], arg5: numpy.ndarray[float64], arg6: numpy.ndarray[float64], arg7: numpy.ndarray[float64], arg8: numpy.ndarray[float64], arg9: numpy.ndarray[float64], arg10: numpy.ndarray[float64], arg11: float, arg12: float, arg13: float, arg14: float, arg15: numpy.ndarray[float64], arg16: numpy.ndarray[float64], arg17: numpy.ndarray[float64], arg18: numpy.ndarray[float64], arg19: numpy.ndarray[float64], arg20: numpy.ndarray[float64], arg21: numpy.ndarray[float64], arg22: numpy.ndarray[float64], arg23: numpy.ndarray[float64], arg24: int, arg25: numpy.ndarray[int32], arg26: numpy.ndarray[float64], arg27: numpy.ndarray[int32], arg28: numpy.ndarray[int32], arg29: numpy.ndarray[float64], arg30: numpy.ndarray[float64], arg31: numpy.ndarray[float64], arg32: int, arg33: float, arg34: numpy.ndarray[float64], arg35: numpy.ndarray[float64], arg36: int, arg37: int, arg38: numpy.ndarray[float64], arg39: int, arg40: numpy.ndarray[int32], arg41: numpy.ndarray[int32], arg42: numpy.ndarray[int32], arg43: numpy.ndarray[float64], arg44: numpy.ndarray[float64], arg45: numpy.ndarray[int32], arg46: numpy.ndarray[float64], arg47: numpy.ndarray[int32], arg48: numpy.ndarray[int32], arg49: numpy.ndarray[float64], arg50: numpy.ndarray[float64], arg51: numpy.ndarray[float64], arg52: float</em><span class="sig-paren">)</span> &#x2192; None<a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.ADR.calculateResidual" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 
 

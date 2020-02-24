@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Body Dynamics &mdash; Proteus 1.7.2 documentation</title>
+  <title>Body Dynamics &mdash; Proteus 1.7.3 documentation</title>
   
 
   
@@ -23,11 +23,11 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                1.7.2
+                1.7.3
               </div>
             
           
@@ -120,6 +120,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d">2D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#id2">3D</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d-with-stl">3D with STL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#d-with-stl-and-relaxation-zones">3D with STL and Relaxation Zones</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tools/spatial_tools.html#classes">Classes</a><ul>
@@ -346,17 +347,19 @@ modulus of the cable/segment.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_mooring</span> <span class="o">=</span> <span class="n">fsi</span><span class="o">.</span><span class="n">ProtChMoorings</span><span class="p">(</span><span class="n">system</span><span class="o">=</span><span class="n">my_system</span><span class="p">,</span>
                                 <span class="n">mesh</span><span class="o">=</span><span class="n">my_mesh</span><span class="p">,</span>
                                 <span class="n">length</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">10.</span><span class="p">]),</span>
-                                <span class="n">nb_elems</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int_32</span><span class="p">),</span>
+                                <span class="n">nb_elems</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">),</span>
                                 <span class="n">d</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.01</span><span class="p">]),</span>
                                 <span class="n">rho</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">300.2</span><span class="p">]),</span>
                                 <span class="n">E</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1e9</span><span class="p">]))</span>
 <span class="c1"># set function to place the nodes along cable (&#39;s&#39; is the position along the 1D cable)</span>
 <span class="n">fpos</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="n">s</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">])</span>  <span class="c1"># position along cable</span>
 <span class="n">ftan</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">s</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">])</span>  <span class="c1"># tangent of cable along cable</span>
-<span class="n">my_mooring</span><span class="o">.</span><span class="n">setNodesPositionFunction</span><span class="p">(</span><span class="n">function_position</span><span class="o">=</span><span class="n">fpos</span><span class="p">,</span>
-                                    <span class="n">function_tangent</span><span class="o">=</span><span class="n">ftan</span><span class="p">)</span>
+<span class="n">my_mooring</span><span class="o">.</span><span class="n">setNodesPositionFunction</span><span class="p">(</span><span class="n">fpos</span><span class="p">,</span> <span class="n">ftan</span><span class="p">)</span>
 <span class="c1"># set the nodes position from the function</span>
 <span class="n">my_mooring</span><span class="o">.</span><span class="n">setNodesPosition</span><span class="p">()</span>
+<span class="c1"># build nodes (automatic with fpos/ftan)</span>
+<span class="c1"># nodes are equally spaced according to the number of elements (nb_elems)</span>
+<span class="n">my_mooring</span><span class="o">.</span><span class="n">buildNodes</span><span class="p">()</span>
 <span class="c1"># add a body as fairlead</span>
 <span class="n">my_mooring</span><span class="o">.</span><span class="n">attachBackNodeToBody</span><span class="p">(</span><span class="n">my_body</span><span class="p">)</span>
 <span class="c1"># fix front node as anchor</span>
