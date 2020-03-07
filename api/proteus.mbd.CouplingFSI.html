@@ -597,12 +597,61 @@ with multiple entries being included as a 2d list. Valid types are
 </dd></dl>
 
 <dl class="attribute">
+<dt id="proteus.mbd.CouplingFSI.ProtChSystem.log_chrono_residuals">
+<code class="sig-name descname">log_chrono_residuals</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mbd/CouplingFSI.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mbd.CouplingFSI.ProtChSystem.log_chrono_residuals" title="Permalink to this definition">¶</a></dt>
+<dd><p>object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>log_chrono_residuals</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
 <dt id="proteus.mbd.CouplingFSI.ProtChSystem.log_chrono_springs">
 <code class="sig-name descname">log_chrono_springs</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mbd/CouplingFSI.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mbd.CouplingFSI.ProtChSystem.log_chrono_springs" title="Permalink to this definition">¶</a></dt>
 <dd><p>object</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>log_chrono_springs</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="proteus.mbd.CouplingFSI.ProtChSystem.log_residuals_h5">
+<code class="sig-name descname">log_residuals_h5</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mbd/CouplingFSI.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mbd.CouplingFSI.ProtChSystem.log_residuals_h5" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs chrono spring information to an h5 file
+:param self: ProtChSystem object being referenced.
+:type self: object
+:param l_linklocks: Link lock objects for which the residual information is desired.
+:type l_linklocks: list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None. Data is logged to an h5 file.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="proteus.mbd.CouplingFSI.ProtChSystem.log_residuals_text">
+<code class="sig-name descname">log_residuals_text</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mbd/CouplingFSI.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mbd.CouplingFSI.ProtChSystem.log_residuals_text" title="Permalink to this definition">¶</a></dt>
+<dd><p>Logs the chrono information into a text file at each timestep
+:param self: ProtChSystem being referenced
+:type self: object
+:param d_time: Current simulation time
+:type d_time: float
+:param l_linklocks: Link lock objects for which the residual information is desired.
+:type l_linklocks: list</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p></p>
+</dd>
+<dt class="field-even">Return type</dt>
+<dd class="field-even"><p>None. Data is saved to a text file.</p>
 </dd>
 </dl>
 </dd></dl>
