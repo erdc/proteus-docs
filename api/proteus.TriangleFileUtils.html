@@ -261,23 +261,23 @@
 <span id="proteus-trianglefileutils-module"></span><h1>proteus.TriangleFileUtils module<a class="headerlink" href="#module-proteus.TriangleFileUtils" title="Permalink to this headline">¶</a></h1>
 <p>A collection of functions for reading and manipulating files so that I
 can try to read and write files in the format that Triangle expects</p>
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.TriangleFileUtils.checkFileExists">
-<code class="sig-prename descclassname">proteus.TriangleFileUtils.</code><code class="sig-name descname">checkFileExists</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TriangleFileUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TriangleFileUtils.checkFileExists" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.TriangleFileUtils.</code><code class="sig-name descname">checkFileExists</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TriangleFileUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TriangleFileUtils.checkFileExists" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.TriangleFileUtils.checkDataRead">
-<code class="sig-prename descclassname">proteus.TriangleFileUtils.</code><code class="sig-name descname">checkDataRead</code><span class="sig-paren">(</span><em class="sig-param">dataArray</em>, <em class="sig-param">notReadVal</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TriangleFileUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TriangleFileUtils.checkDataRead" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.TriangleFileUtils.</code><code class="sig-name descname">checkDataRead</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataArray</span></em>, <em class="sig-param"><span class="n">notReadVal</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TriangleFileUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TriangleFileUtils.checkDataRead" title="Permalink to this definition">¶</a></dt>
 <dd><p>just go through data variable and check to make sure
 no values are equal to a special value to which data
 should have been initialized before it was read</p>
 <p>returns boolean for ok or not</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.TriangleFileUtils.generateDefaultFormatPattern">
-<code class="sig-prename descclassname">proteus.TriangleFileUtils.</code><code class="sig-name descname">generateDefaultFormatPattern</code><span class="sig-paren">(</span><em class="sig-param">recInfo</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TriangleFileUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TriangleFileUtils.generateDefaultFormatPattern" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.TriangleFileUtils.</code><code class="sig-name descname">generateDefaultFormatPattern</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">recInfo</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TriangleFileUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TriangleFileUtils.generateDefaultFormatPattern" title="Permalink to this definition">¶</a></dt>
 <dd><p>generate the initial line format for the Triangle data files
 based on the variable types specified in recInfo</p>
 <dl class="simple">
@@ -288,9 +288,9 @@ based on the variable types specified in recInfo</p>
 is omitted so that the default format doesn’t follow</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.TriangleFileUtils.findInitialFormatLine">
-<code class="sig-prename descclassname">proteus.TriangleFileUtils.</code><code class="sig-name descname">findInitialFormatLine</code><span class="sig-paren">(</span><em class="sig-param">lines</em>, <em class="sig-param">recInfo</em>, <em class="sig-param">formatpattern</em>, <em class="sig-param">commchar='#'</em>, <em class="sig-param">nbase=0</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TriangleFileUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TriangleFileUtils.findInitialFormatLine" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.TriangleFileUtils.</code><code class="sig-name descname">findInitialFormatLine</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lines</span></em>, <em class="sig-param"><span class="n">recInfo</span></em>, <em class="sig-param"><span class="n">formatpattern</span></em>, <em class="sig-param"><span class="n">commchar</span><span class="o">=</span><span class="default_value">'#'</span></em>, <em class="sig-param"><span class="n">nbase</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TriangleFileUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TriangleFileUtils.findInitialFormatLine" title="Permalink to this definition">¶</a></dt>
 <dd><p>find the line for the Triangle data files, specified in
 formatpattern.</p>
 <p>Generate dataInfo dictionary that should specify
@@ -302,9 +302,9 @@ each record should start on a valid entry line record I is in
 entries recStart[I]:recStart[I+1]</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.TriangleFileUtils.readSimpleFormattedDataEntries">
-<code class="sig-prename descclassname">proteus.TriangleFileUtils.</code><code class="sig-name descname">readSimpleFormattedDataEntries</code><span class="sig-paren">(</span><em class="sig-param">lines</em>, <em class="sig-param">recInfo</em>, <em class="sig-param">dataInfo</em>, <em class="sig-param">commchar='#'</em>, <em class="sig-param">nbase=0</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TriangleFileUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TriangleFileUtils.readSimpleFormattedDataEntries" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.TriangleFileUtils.</code><code class="sig-name descname">readSimpleFormattedDataEntries</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lines</span></em>, <em class="sig-param"><span class="n">recInfo</span></em>, <em class="sig-param"><span class="n">dataInfo</span></em>, <em class="sig-param"><span class="n">commchar</span><span class="o">=</span><span class="default_value">'#'</span></em>, <em class="sig-param"><span class="n">nbase</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TriangleFileUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TriangleFileUtils.readSimpleFormattedDataEntries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Try to read some data consisting of records
 stored in lines. The records are described in recInfo.
 The basic thing I need is the possible number of records
@@ -325,9 +325,9 @@ ilast    : index of last line read</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.TriangleFileUtils.readSimpleFormattedDataEntriesLastOptional">
-<code class="sig-prename descclassname">proteus.TriangleFileUtils.</code><code class="sig-name descname">readSimpleFormattedDataEntriesLastOptional</code><span class="sig-paren">(</span><em class="sig-param">lines</em>, <em class="sig-param">recInfo</em>, <em class="sig-param">dataInfo</em>, <em class="sig-param">commchar='#'</em>, <em class="sig-param">nbase=0</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TriangleFileUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TriangleFileUtils.readSimpleFormattedDataEntriesLastOptional" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.TriangleFileUtils.</code><code class="sig-name descname">readSimpleFormattedDataEntriesLastOptional</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lines</span></em>, <em class="sig-param"><span class="n">recInfo</span></em>, <em class="sig-param"><span class="n">dataInfo</span></em>, <em class="sig-param"><span class="n">commchar</span><span class="o">=</span><span class="default_value">'#'</span></em>, <em class="sig-param"><span class="n">nbase</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TriangleFileUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TriangleFileUtils.readSimpleFormattedDataEntriesLastOptional" title="Permalink to this definition">¶</a></dt>
 <dd><p>Try to read some data consisting of records
 stored in lines. The records are described in recInfo.
 The basic thing I need is the possible number of records

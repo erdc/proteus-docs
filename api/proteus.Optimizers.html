@@ -260,20 +260,20 @@
   <div class="section" id="module-proteus.Optimizers">
 <span id="proteus-optimizers-module"></span><h1>proteus.Optimizers module<a class="headerlink" href="#module-proteus.Optimizers" title="Permalink to this headline">¶</a></h1>
 <p>Class hierarchies for working with minimization problems</p>
-<div class="graphviz"><object data="../_images/inheritance-64c8dbc0199b3fc25c6a6dbef67a6a4fce12445a.svg" type="image/svg+xml" class="inheritance graphviz">
+<div class="graphviz"><object data="../_images/inheritance-3dbf49144ef35e0535569a98ed8898cbd36d1ba3.svg" type="image/svg+xml" class="inheritance graphviz">
 <p class="warning">Inheritance diagram of proteus.Optimizers</p></object></div>
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.Optimizers.ObjectiveFunction_base">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.Optimizers.</code><code class="sig-name descname">ObjectiveFunction_base</code><span class="sig-paren">(</span><em class="sig-param">LHS_x</em>, <em class="sig-param">RHS_x</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Optimizers.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Optimizers.ObjectiveFunction_base" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.Optimizers.</code><code class="sig-name descname">ObjectiveFunction_base</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">LHS_x</span></em>, <em class="sig-param"><span class="n">RHS_x</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Optimizers.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Optimizers.ObjectiveFunction_base" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Optimizers.ObjectiveFunction_base.getResidual">
-<code class="sig-name descname">getResidual</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Optimizers.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Optimizers.ObjectiveFunction_base.getResidual" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getResidual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Optimizers.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Optimizers.ObjectiveFunction_base.getResidual" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.Optimizers.MinAlgo_base">
 <em class="property">class </em><code class="sig-prename descclassname">proteus.Optimizers.</code><code class="sig-name descname">MinAlgo_base</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Optimizers.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Optimizers.MinAlgo_base" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
@@ -282,18 +282,18 @@ and can be used to find the min of a 1-D function.</p>
 <p>members:</p>
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.Optimizers.fminbound">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.Optimizers.</code><code class="sig-name descname">fminbound</code><span class="sig-paren">(</span><em class="sig-param">FuncToMinimize</em>, <em class="sig-param">Tol=1e-11</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Optimizers.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Optimizers.fminbound" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.Optimizers.</code><code class="sig-name descname">fminbound</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">FuncToMinimize</span></em>, <em class="sig-param"><span class="n">Tol</span><span class="o">=</span><span class="default_value">1e-11</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Optimizers.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Optimizers.fminbound" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.Optimizers.MinAlgo_base" title="proteus.Optimizers.MinAlgo_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.Optimizers.MinAlgo_base</span></code></a></p>
 <p>This is a function that uses a golden ratio routine for finding
 the minimum of a 1-D function. It returns the pair (xmin,f(xmin))
 when its solver is called. It assumes that you have a bracketed
 already bracketed the minimum between two end points, and provide
 some good initial guess. Note there is also an endpoint hack.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Optimizers.fminbound.solve">
-<code class="sig-name descname">solve</code><span class="sig-paren">(</span><em class="sig-param">Guess_x=0.38196601</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Optimizers.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Optimizers.fminbound.solve" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">solve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Guess_x</span><span class="o">=</span><span class="default_value">0.38196601</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Optimizers.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Optimizers.fminbound.solve" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

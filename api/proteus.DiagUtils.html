@@ -260,16 +260,16 @@
   <div class="section" id="module-proteus.DiagUtils">
 <span id="proteus-diagutils-module"></span><h1>proteus.DiagUtils module<a class="headerlink" href="#module-proteus.DiagUtils" title="Permalink to this headline">¶</a></h1>
 <p>Module for diagnostic utilities</p>
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.DiagUtils.L2errorFEMvsAF">
-<code class="sig-prename descclassname">proteus.DiagUtils.</code><code class="sig-name descname">L2errorFEMvsAF</code><span class="sig-paren">(</span><em class="sig-param">analyticalFunction</em>, <em class="sig-param">quadraturePointArray</em>, <em class="sig-param">quadratureWeightArray</em>, <em class="sig-param">functionValueArray</em>, <em class="sig-param">T=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/DiagUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.DiagUtils.L2errorFEMvsAF" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.DiagUtils.</code><code class="sig-name descname">L2errorFEMvsAF</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">analyticalFunction</span></em>, <em class="sig-param"><span class="n">quadraturePointArray</span></em>, <em class="sig-param"><span class="n">quadratureWeightArray</span></em>, <em class="sig-param"><span class="n">functionValueArray</span></em>, <em class="sig-param"><span class="n">T</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/DiagUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.DiagUtils.L2errorFEMvsAF" title="Permalink to this definition">¶</a></dt>
 <dd><p>supposed to be L2 norm of error in vector quantity
 I think just using dot would cover both scalar and vector case</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.DiagUtils.getQuadraturePhysPointsAndWeights">
-<code class="sig-prename descclassname">proteus.DiagUtils.</code><code class="sig-name descname">getQuadraturePhysPointsAndWeights</code><span class="sig-paren">(</span><em class="sig-param">mesh</em>, <em class="sig-param">femSpace</em>, <em class="sig-param">quadrature</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/DiagUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.DiagUtils.getQuadraturePhysPointsAndWeights" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.DiagUtils.</code><code class="sig-name descname">getQuadraturePhysPointsAndWeights</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mesh</span></em>, <em class="sig-param"><span class="n">femSpace</span></em>, <em class="sig-param"><span class="n">quadrature</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/DiagUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.DiagUtils.getQuadraturePhysPointsAndWeights" title="Permalink to this definition">¶</a></dt>
 <dd><p>for convenience, hide steps for generating quadrature points and
 weights, with Jacobians, on physical mesh based on points and
 weights on reference element</p>
@@ -279,42 +279,42 @@ weights on reference element</p>
 </dl>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.DiagUtils.getFEMvals">
-<code class="sig-prename descclassname">proteus.DiagUtils.</code><code class="sig-name descname">getFEMvals</code><span class="sig-paren">(</span><em class="sig-param">u</em>, <em class="sig-param">xiArray</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/DiagUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.DiagUtils.getFEMvals" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.DiagUtils.</code><code class="sig-name descname">getFEMvals</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">xiArray</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/DiagUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.DiagUtils.getFEMvals" title="Permalink to this definition">¶</a></dt>
 <dd><p>for convenience, hide steps for generating finite element solution
 at physical points corresponding to reference points held in
 xiArray</p>
 <p>returns array that’s nelem x npointloc</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.DiagUtils.testCrRavNodalBasis">
-<code class="sig-prename descclassname">proteus.DiagUtils.</code><code class="sig-name descname">testCrRavNodalBasis</code><span class="sig-paren">(</span><em class="sig-param">nd</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/DiagUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.DiagUtils.testCrRavNodalBasis" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.DiagUtils.</code><code class="sig-name descname">testCrRavNodalBasis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nd</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/DiagUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.DiagUtils.testCrRavNodalBasis" title="Permalink to this definition">¶</a></dt>
 <dd><p>test local Crouzeix-Raviart element space</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.DiagUtils.testQuadNodalBasis">
-<code class="sig-prename descclassname">proteus.DiagUtils.</code><code class="sig-name descname">testQuadNodalBasis</code><span class="sig-paren">(</span><em class="sig-param">nd</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/DiagUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.DiagUtils.testQuadNodalBasis" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.DiagUtils.</code><code class="sig-name descname">testQuadNodalBasis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nd</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/DiagUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.DiagUtils.testQuadNodalBasis" title="Permalink to this definition">¶</a></dt>
 <dd><p>test local P2 nodal finite element space</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.DiagUtils.testEdgeDOFMap">
-<code class="sig-prename descclassname">proteus.DiagUtils.</code><code class="sig-name descname">testEdgeDOFMap</code><span class="sig-paren">(</span><em class="sig-param">mesh</em>, <em class="sig-param">nd</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/DiagUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.DiagUtils.testEdgeDOFMap" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.DiagUtils.</code><code class="sig-name descname">testEdgeDOFMap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mesh</span></em>, <em class="sig-param"><span class="n">nd</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/DiagUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.DiagUtils.testEdgeDOFMap" title="Permalink to this definition">¶</a></dt>
 <dd><p>test edge dof map to see what its doing</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.DiagUtils.testQuadRefMats">
-<code class="sig-prename descclassname">proteus.DiagUtils.</code><code class="sig-name descname">testQuadRefMats</code><span class="sig-paren">(</span><em class="sig-param">nd</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/DiagUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.DiagUtils.testQuadRefMats" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.DiagUtils.</code><code class="sig-name descname">testQuadRefMats</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nd</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/DiagUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.DiagUtils.testQuadRefMats" title="Permalink to this definition">¶</a></dt>
 <dd><p>test quad reference matrices to see what its doing</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.DiagUtils.testQuadDOFMap">
-<code class="sig-prename descclassname">proteus.DiagUtils.</code><code class="sig-name descname">testQuadDOFMap</code><span class="sig-paren">(</span><em class="sig-param">mesh</em>, <em class="sig-param">nd</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/DiagUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.DiagUtils.testQuadDOFMap" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.DiagUtils.</code><code class="sig-name descname">testQuadDOFMap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mesh</span></em>, <em class="sig-param"><span class="n">nd</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/DiagUtils.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.DiagUtils.testQuadDOFMap" title="Permalink to this definition">¶</a></dt>
 <dd><p>test quad dof map to see what its doing</p>
 </dd></dl>
 

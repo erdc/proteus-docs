@@ -259,88 +259,88 @@
             
   <div class="section" id="module-proteus.mprans.MCorr">
 <span id="proteus-mprans-mcorr-module"></span><h1>proteus.mprans.MCorr module<a class="headerlink" href="#module-proteus.mprans.MCorr" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.mprans.MCorr.Coefficients">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.MCorr.</code><code class="sig-name descname">Coefficients</code><span class="sig-paren">(</span><em class="sig-param">applyCorrection=True</em>, <em class="sig-param">epsFactHeaviside=0.0</em>, <em class="sig-param">epsFactDirac=1.0</em>, <em class="sig-param">epsFactDiffusion=2.0</em>, <em class="sig-param">LSModel_index=3</em>, <em class="sig-param">V_model=2</em>, <em class="sig-param">me_model=5</em>, <em class="sig-param">VOFModel_index=4</em>, <em class="sig-param">checkMass=True</em>, <em class="sig-param">sd=True</em>, <em class="sig-param">nd=None</em>, <em class="sig-param">applyCorrectionToDOF=True</em>, <em class="sig-param">useMetrics=0.0</em>, <em class="sig-param">useConstantH=False</em>, <em class="sig-param">useQuadraticRegularization=False</em>, <em class="sig-param">edgeBasedStabilizationMethods=False</em>, <em class="sig-param">nullSpace='NoNullSpace'</em>, <em class="sig-param">useExact=False</em>, <em class="sig-param">initialize=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.MCorr.</code><code class="sig-name descname">Coefficients</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">applyCorrection</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">epsFactHeaviside</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">epsFactDirac</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">epsFactDiffusion</span><span class="o">=</span><span class="default_value">2.0</span></em>, <em class="sig-param"><span class="n">LSModel_index</span><span class="o">=</span><span class="default_value">3</span></em>, <em class="sig-param"><span class="n">V_model</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">me_model</span><span class="o">=</span><span class="default_value">5</span></em>, <em class="sig-param"><span class="n">VOFModel_index</span><span class="o">=</span><span class="default_value">4</span></em>, <em class="sig-param"><span class="n">checkMass</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">sd</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">nd</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">applyCorrectionToDOF</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">useMetrics</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">useConstantH</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">useQuadraticRegularization</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">edgeBasedStabilizationMethods</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">nullSpace</span><span class="o">=</span><span class="default_value">'NoNullSpace'</span></em>, <em class="sig-param"><span class="n">useExact</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">initialize</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.TransportCoefficients.html#proteus.TransportCoefficients.TC_base" title="proteus.TransportCoefficients.TC_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.TransportCoefficients.TC_base</span></code></a></p>
 <p>Set the number of components (equations) of the
 PDE and initialize the dicitionaries describing the form of the
 coefficients. Strings naming each component (used for viewing
 and archiving) and a structure defining the sparsity pattern
 of diffusion tensors may also be provided.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.Coefficients.levelSetConservationCoefficientsEvaluate">
 <code class="sig-name descname">levelSetConservationCoefficientsEvaluate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.levelSetConservationCoefficientsEvaluate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.Coefficients.levelSetConservationCoefficientsEvaluate_sd">
 <code class="sig-name descname">levelSetConservationCoefficientsEvaluate_sd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.levelSetConservationCoefficientsEvaluate_sd" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.Coefficients.initialize">
 <code class="sig-name descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.initialize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.Coefficients.initializeMesh">
-<code class="sig-name descname">initializeMesh</code><span class="sig-paren">(</span><em class="sig-param">mesh</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.initializeMesh" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeMesh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mesh</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.initializeMesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the mesh for any mesh-dependent information.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.Coefficients.attachModels">
-<code class="sig-name descname">attachModels</code><span class="sig-paren">(</span><em class="sig-param">modelList</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.attachModels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">attachModels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">modelList</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.attachModels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to other models in a loosely coupled split operator formulation (e.g. a transport equation for concentration might get velocity from a flow equation)</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.Coefficients.initializeElementQuadrature">
-<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cq</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cq</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the element quadrature storage</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.Coefficients.initializeElementBoundaryQuadrature">
-<code class="sig-name descname">initializeElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cebq</em>, <em class="sig-param">cebq_global</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.initializeElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cebq</span></em>, <em class="sig-param"><span class="n">cebq_global</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.initializeElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the element boundary quadrature storage</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature">
-<code class="sig-name descname">initializeGlobalExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cebqe</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeGlobalExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cebqe</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the exterior element boundary quadrature storage</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.Coefficients.preStep">
-<code class="sig-name descname">preStep</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">firstStep=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.preStep" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">preStep</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">firstStep</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.preStep" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object an opportunity to modify itself before the time step.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.Coefficients.postStep">
-<code class="sig-name descname">postStep</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">firstStep=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.postStep" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postStep</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">firstStep</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.postStep" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object an opportunity to modify itself after the time step.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.Coefficients.postAdaptStep">
 <code class="sig-name descname">postAdaptStep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.postAdaptStep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.Coefficients.evaluate">
-<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">c</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.evaluate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">c</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Coefficients.evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate the coefficients at a given time, t, using the coefficient storage passed in as the dictionary c.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.mprans.MCorr.LevelModel">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.MCorr.</code><code class="sig-name descname">LevelModel</code><span class="sig-paren">(</span><em class="sig-param">uDict</em>, <em class="sig-param">phiDict</em>, <em class="sig-param">testSpaceDict</em>, <em class="sig-param">matType</em>, <em class="sig-param">dofBoundaryConditionsDict</em>, <em class="sig-param">dofBoundaryConditionsSetterDict</em>, <em class="sig-param">coefficients</em>, <em class="sig-param">elementQuadrature</em>, <em class="sig-param">elementBoundaryQuadrature</em>, <em class="sig-param">fluxBoundaryConditionsDict=None</em>, <em class="sig-param">advectiveFluxBoundaryConditionsSetterDict=None</em>, <em class="sig-param">diffusiveFluxBoundaryConditionsSetterDictDict=None</em>, <em class="sig-param">stressTraceBoundaryConditionsSetterDict=None</em>, <em class="sig-param">stabilization=None</em>, <em class="sig-param">shockCapturing=None</em>, <em class="sig-param">conservativeFluxDict=None</em>, <em class="sig-param">numericalFluxType=None</em>, <em class="sig-param">TimeIntegrationClass=None</em>, <em class="sig-param">massLumping=False</em>, <em class="sig-param">reactionLumping=False</em>, <em class="sig-param">options=None</em>, <em class="sig-param">name='defaultName'</em>, <em class="sig-param">reuse_trial_and_test_quadrature=True</em>, <em class="sig-param">sd=True</em>, <em class="sig-param">movingDomain=False</em>, <em class="sig-param">bdyNullSpace=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.MCorr.</code><code class="sig-name descname">LevelModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">uDict</span></em>, <em class="sig-param"><span class="n">phiDict</span></em>, <em class="sig-param"><span class="n">testSpaceDict</span></em>, <em class="sig-param"><span class="n">matType</span></em>, <em class="sig-param"><span class="n">dofBoundaryConditionsDict</span></em>, <em class="sig-param"><span class="n">dofBoundaryConditionsSetterDict</span></em>, <em class="sig-param"><span class="n">coefficients</span></em>, <em class="sig-param"><span class="n">elementQuadrature</span></em>, <em class="sig-param"><span class="n">elementBoundaryQuadrature</span></em>, <em class="sig-param"><span class="n">fluxBoundaryConditionsDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">advectiveFluxBoundaryConditionsSetterDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diffusiveFluxBoundaryConditionsSetterDictDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stressTraceBoundaryConditionsSetterDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stabilization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shockCapturing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">conservativeFluxDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">numericalFluxType</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">TimeIntegrationClass</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">massLumping</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">reactionLumping</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'defaultName'</span></em>, <em class="sig-param"><span class="n">reuse_trial_and_test_quadrature</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">sd</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">movingDomain</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">bdyNullSpace</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.Transport.html#proteus.Transport.OneLevelTransport" title="proteus.Transport.OneLevelTransport"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.Transport.OneLevelTransport</span></code></a></p>
 <p>Allocate storage and initialize some variables.</p>
 <dl class="field-list simple">
@@ -391,64 +391,64 @@ exterior element boundary</p></li>
 <li><p>phi_ip – at the generalized interpolation points required to
 build a nonlinear phi</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="proteus.mprans.MCorr.LevelModel.nCalls">
 <code class="sig-name descname">nCalls</code><em class="property"> = 0</em><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.nCalls" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.FCTStep">
 <code class="sig-name descname">FCTStep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.FCTStep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.calculateCoefficients">
 <code class="sig-name descname">calculateCoefficients</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.calculateCoefficients" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.calculateElementResidual">
 <code class="sig-name descname">calculateElementResidual</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.calculateElementResidual" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate all the element residuals</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.getResidual">
-<code class="sig-name descname">getResidual</code><span class="sig-paren">(</span><em class="sig-param">u</em>, <em class="sig-param">r</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.getResidual" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getResidual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.getResidual" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the element residuals and add in to the global residual</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.getMassMatrix">
 <code class="sig-name descname">getMassMatrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.getMassMatrix" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.getJacobian">
-<code class="sig-name descname">getJacobian</code><span class="sig-paren">(</span><em class="sig-param">jacobian</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.getJacobian" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getJacobian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">jacobian</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.getJacobian" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.elementSolve">
-<code class="sig-name descname">elementSolve</code><span class="sig-paren">(</span><em class="sig-param">u</em>, <em class="sig-param">r</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.elementSolve" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">elementSolve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.elementSolve" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.elementConstantSolve">
-<code class="sig-name descname">elementConstantSolve</code><span class="sig-paren">(</span><em class="sig-param">u</em>, <em class="sig-param">r</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.elementConstantSolve" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">elementConstantSolve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.elementConstantSolve" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.globalConstantRJ">
-<code class="sig-name descname">globalConstantRJ</code><span class="sig-paren">(</span><em class="sig-param">u</em>, <em class="sig-param">r</em>, <em class="sig-param">U</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.globalConstantRJ" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">globalConstantRJ</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">r</span></em>, <em class="sig-param"><span class="n">U</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.globalConstantRJ" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.globalConstantSolve">
-<code class="sig-name descname">globalConstantSolve</code><span class="sig-paren">(</span><em class="sig-param">u</em>, <em class="sig-param">r</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.globalConstantSolve" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">globalConstantSolve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.globalConstantSolve" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.calculateElementQuadrature">
 <code class="sig-name descname">calculateElementQuadrature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.calculateElementQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the physical location and weights of the quadrature rules
@@ -456,7 +456,7 @@ and the shape information at the quadrature points.</p>
 <p>This function should be called only when the mesh changes.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.calculateElementBoundaryQuadrature">
 <code class="sig-name descname">calculateElementBoundaryQuadrature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.calculateElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the physical location and weights of the quadrature rules
@@ -464,7 +464,7 @@ and the shape information at the quadrature points on element boundaries.</p>
 <p>This function should be called only when the mesh changes.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.calculateExteriorElementBoundaryQuadrature">
 <code class="sig-name descname">calculateExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.calculateExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the physical location and weights of the quadrature rules
@@ -472,117 +472,117 @@ and the shape information at the quadrature points on global element boundaries.
 <p>This function should be called only when the mesh changes.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.estimate_mt">
 <code class="sig-name descname">estimate_mt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.estimate_mt" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.calculateAuxiliaryQuantitiesAfterStep">
 <code class="sig-name descname">calculateAuxiliaryQuantitiesAfterStep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.calculateAuxiliaryQuantitiesAfterStep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.calculateMass">
-<code class="sig-name descname">calculateMass</code><span class="sig-paren">(</span><em class="sig-param">q_phi</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.calculateMass" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">calculateMass</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">q_phi</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.calculateMass" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.setMassQuadratureEdgeBasedStabilizationMethods">
 <code class="sig-name descname">setMassQuadratureEdgeBasedStabilizationMethods</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.setMassQuadratureEdgeBasedStabilizationMethods" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.setMassQuadrature">
 <code class="sig-name descname">setMassQuadrature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.setMassQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.calculateSolutionAtQuadrature">
 <code class="sig-name descname">calculateSolutionAtQuadrature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.calculateSolutionAtQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.LevelModel.updateAfterMeshMotion">
 <code class="sig-name descname">updateAfterMeshMotion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.LevelModel.updateAfterMeshMotion" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.mprans.MCorr.DummyNewton">
 <em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.MCorr.</code><code class="sig-name descname">DummyNewton</code><span class="sig-paren">(</span><em class="sig-param">linearSolver</em>, <em class="sig-param">F</em>, <em class="sig-param">J=None</em>, <em class="sig-param">du=None</em>, <em class="sig-param">par_du=None</em>, <em class="sig-param">rtol_r=0.0001</em>, <em class="sig-param">atol_r=1e-16</em>, <em class="sig-param">rtol_du=0.0001</em>, <em class="sig-param">atol_du=1e-16</em>, <em class="sig-param">maxIts=100</em>, <em class="sig-param">norm=&lt;function l2Norm&gt;</em>, <em class="sig-param">convergenceTest='r'</em>, <em class="sig-param">computeRates=True</em>, <em class="sig-param">printInfo=True</em>, <em class="sig-param">fullNewton=True</em>, <em class="sig-param">directSolver=False</em>, <em class="sig-param">EWtol=True</em>, <em class="sig-param">maxLSits=100</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.DummyNewton" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.NonlinearSolvers.html#proteus.NonlinearSolvers.NonlinearSolver" title="proteus.NonlinearSolvers.NonlinearSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.NonlinearSolvers.NonlinearSolver</span></code></a></p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.DummyNewton.info">
 <code class="sig-name descname">info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.DummyNewton.info" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.DummyNewton.solve">
-<code class="sig-name descname">solve</code><span class="sig-paren">(</span><em class="sig-param">u</em>, <em class="sig-param">r=None</em>, <em class="sig-param">b=None</em>, <em class="sig-param">par_u=None</em>, <em class="sig-param">par_r=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.DummyNewton.solve" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">solve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">r</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">b</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">par_u</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">par_r</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.DummyNewton.solve" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.mprans.MCorr.ElementNewton">
 <em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.MCorr.</code><code class="sig-name descname">ElementNewton</code><span class="sig-paren">(</span><em class="sig-param">linearSolver</em>, <em class="sig-param">F</em>, <em class="sig-param">J=None</em>, <em class="sig-param">du=None</em>, <em class="sig-param">par_du=None</em>, <em class="sig-param">rtol_r=0.0001</em>, <em class="sig-param">atol_r=1e-16</em>, <em class="sig-param">rtol_du=0.0001</em>, <em class="sig-param">atol_du=1e-16</em>, <em class="sig-param">maxIts=100</em>, <em class="sig-param">norm=&lt;function l2Norm&gt;</em>, <em class="sig-param">convergenceTest='r'</em>, <em class="sig-param">computeRates=True</em>, <em class="sig-param">printInfo=True</em>, <em class="sig-param">fullNewton=True</em>, <em class="sig-param">directSolver=False</em>, <em class="sig-param">EWtol=True</em>, <em class="sig-param">maxLSits=100</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.ElementNewton" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.NonlinearSolvers.html#proteus.NonlinearSolvers.NonlinearSolver" title="proteus.NonlinearSolvers.NonlinearSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.NonlinearSolvers.NonlinearSolver</span></code></a></p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.ElementNewton.info">
 <code class="sig-name descname">info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.ElementNewton.info" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.ElementNewton.solve">
-<code class="sig-name descname">solve</code><span class="sig-paren">(</span><em class="sig-param">u</em>, <em class="sig-param">r=None</em>, <em class="sig-param">b=None</em>, <em class="sig-param">par_u=None</em>, <em class="sig-param">par_r=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.ElementNewton.solve" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">solve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">r</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">b</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">par_u</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">par_r</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.ElementNewton.solve" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.mprans.MCorr.ElementConstantNewton">
 <em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.MCorr.</code><code class="sig-name descname">ElementConstantNewton</code><span class="sig-paren">(</span><em class="sig-param">linearSolver</em>, <em class="sig-param">F</em>, <em class="sig-param">J=None</em>, <em class="sig-param">du=None</em>, <em class="sig-param">par_du=None</em>, <em class="sig-param">rtol_r=0.0001</em>, <em class="sig-param">atol_r=1e-16</em>, <em class="sig-param">rtol_du=0.0001</em>, <em class="sig-param">atol_du=1e-16</em>, <em class="sig-param">maxIts=100</em>, <em class="sig-param">norm=&lt;function l2Norm&gt;</em>, <em class="sig-param">convergenceTest='r'</em>, <em class="sig-param">computeRates=True</em>, <em class="sig-param">printInfo=True</em>, <em class="sig-param">fullNewton=True</em>, <em class="sig-param">directSolver=False</em>, <em class="sig-param">EWtol=True</em>, <em class="sig-param">maxLSits=100</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.ElementConstantNewton" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.NonlinearSolvers.html#proteus.NonlinearSolvers.NonlinearSolver" title="proteus.NonlinearSolvers.NonlinearSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.NonlinearSolvers.NonlinearSolver</span></code></a></p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.ElementConstantNewton.info">
 <code class="sig-name descname">info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.ElementConstantNewton.info" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.ElementConstantNewton.solve">
-<code class="sig-name descname">solve</code><span class="sig-paren">(</span><em class="sig-param">u</em>, <em class="sig-param">r=None</em>, <em class="sig-param">b=None</em>, <em class="sig-param">par_u=None</em>, <em class="sig-param">par_r=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.ElementConstantNewton.solve" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">solve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">r</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">b</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">par_u</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">par_r</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.ElementConstantNewton.solve" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.mprans.MCorr.GlobalConstantNewton">
 <em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.MCorr.</code><code class="sig-name descname">GlobalConstantNewton</code><span class="sig-paren">(</span><em class="sig-param">linearSolver</em>, <em class="sig-param">F</em>, <em class="sig-param">J=None</em>, <em class="sig-param">du=None</em>, <em class="sig-param">par_du=None</em>, <em class="sig-param">rtol_r=0.0001</em>, <em class="sig-param">atol_r=1e-16</em>, <em class="sig-param">rtol_du=0.0001</em>, <em class="sig-param">atol_du=1e-16</em>, <em class="sig-param">maxIts=100</em>, <em class="sig-param">norm=&lt;function l2Norm&gt;</em>, <em class="sig-param">convergenceTest='r'</em>, <em class="sig-param">computeRates=True</em>, <em class="sig-param">printInfo=True</em>, <em class="sig-param">fullNewton=True</em>, <em class="sig-param">directSolver=False</em>, <em class="sig-param">EWtol=True</em>, <em class="sig-param">maxLSits=100</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.GlobalConstantNewton" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.NonlinearSolvers.html#proteus.NonlinearSolvers.NonlinearSolver" title="proteus.NonlinearSolvers.NonlinearSolver"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.NonlinearSolvers.NonlinearSolver</span></code></a></p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.GlobalConstantNewton.info">
 <code class="sig-name descname">info</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.GlobalConstantNewton.info" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.GlobalConstantNewton.solve">
-<code class="sig-name descname">solve</code><span class="sig-paren">(</span><em class="sig-param">u</em>, <em class="sig-param">r=None</em>, <em class="sig-param">b=None</em>, <em class="sig-param">par_u=None</em>, <em class="sig-param">par_r=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.GlobalConstantNewton.solve" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">solve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">r</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">b</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">par_u</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">par_r</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.GlobalConstantNewton.solve" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.mprans.MCorr.conservationNorm">
-<code class="sig-prename descclassname">proteus.mprans.MCorr.</code><code class="sig-name descname">conservationNorm</code><span class="sig-paren">(</span><em class="sig-param">x</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.conservationNorm" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.mprans.MCorr.</code><code class="sig-name descname">conservationNorm</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.conservationNorm" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.mprans.MCorr.Newton_controller">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.MCorr.</code><code class="sig-name descname">Newton_controller</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">nOptions</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Newton_controller" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.MCorr.</code><code class="sig-name descname">Newton_controller</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">nOptions</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Newton_controller" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.StepControl.html#proteus.StepControl.Newton_controller" title="proteus.StepControl.Newton_controller"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.StepControl.Newton_controller</span></code></a></p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.MCorr.Newton_controller.initializeTimeHistory">
 <code class="sig-name descname">initializeTimeHistory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/MCorr.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.MCorr.Newton_controller.initializeTimeHistory" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>

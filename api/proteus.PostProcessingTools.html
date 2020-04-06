@@ -263,17 +263,17 @@
 <dt>Collect classes and routines for postprocessing solution to get</dt><dd><p>quantities like conservative velocities, higher accuracy, etc</p>
 </dd>
 </dl>
-<div class="graphviz"><object data="../_images/inheritance-4dd1d8f9eb6f90abe92b9788a85f3268e311c5f9.svg" type="image/svg+xml" class="inheritance graphviz">
+<div class="graphviz"><object data="../_images/inheritance-621a3c941338025c314a6ebde96f01d767b6bac0.svg" type="image/svg+xml" class="inheritance graphviz">
 <p class="warning">Inheritance diagram of proteus.PostProcessingTools</p></object></div>
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessingChooser">
-<code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VelocityPostProcessingChooser</code><span class="sig-paren">(</span><em class="sig-param">transport</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingChooser" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VelocityPostProcessingChooser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">transport</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingChooser" title="Permalink to this definition">¶</a></dt>
 <dd><p>pick acceptable velocity postprocessing based on input</p>
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VelocityPostProcessingAlgorithmBase</code><span class="sig-paren">(</span><em class="sig-param">postProcessingType=None, vectorTransport=None, vtComponents=[0]</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VelocityPostProcessingAlgorithmBase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">postProcessingType</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vectorTransport</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vtComponents</span><span class="o">=</span><span class="default_value">[0]</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Base class for velocity post processing algorithms</p>
 <p>Applies same algorithm to all components in vtComponents</p>
@@ -300,51 +300,51 @@ reference the global edge number first.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.computeGeometricInfo">
 <code class="sig-name descname">computeGeometricInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.computeGeometricInfo" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.postprocess">
-<code class="sig-name descname">postprocess</code><span class="sig-paren">(</span><em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.postprocess" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocess</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.postprocess" title="Permalink to this definition">¶</a></dt>
 <dd><p>generate post-processed velocity field for attached VectorTransport
 object and store them in local dictionaries</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.postprocess_component">
-<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.postprocess_component" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.postprocess_component" title="Permalink to this definition">¶</a></dt>
 <dd><p>main functionality
 generate post-processed velocity field component ci</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.evaluateElementVelocityField">
-<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
 <dd><p>evaluate velocity field assuming velocity_dofs already calculated
 for now assumes x shaped like nE x nq x 3</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.removeBoundaryFluxesFromResidual">
-<code class="sig-name descname">removeBoundaryFluxesFromResidual</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">flag_elementBoundaries=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.removeBoundaryFluxesFromResidual" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">removeBoundaryFluxesFromResidual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">flag_elementBoundaries</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.removeBoundaryFluxesFromResidual" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.addBoundaryFluxesBackToResidual">
-<code class="sig-name descname">addBoundaryFluxesBackToResidual</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">flag_elementBoundaries=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.addBoundaryFluxesBackToResidual" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">addBoundaryFluxesBackToResidual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">flag_elementBoundaries</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.addBoundaryFluxesBackToResidual" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.archiveVelocityValues">
-<code class="sig-name descname">archiveVelocityValues</code><span class="sig-paren">(</span><em class="sig-param">archive</em>, <em class="sig-param">t</em>, <em class="sig-param">tCount</em>, <em class="sig-param">initialPhase=False</em>, <em class="sig-param">meshChanged=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.archiveVelocityValues" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">archiveVelocityValues</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">archive</span></em>, <em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">tCount</span></em>, <em class="sig-param"><span class="n">initialPhase</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">meshChanged</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.archiveVelocityValues" title="Permalink to this definition">¶</a></dt>
 <dd><p>write out post processed velocity values as a finite element space</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.getElementwiseFlux">
-<code class="sig-name descname">getElementwiseFlux</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.getElementwiseFlux" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getElementwiseFlux</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase.getElementwiseFlux" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculates elementwise fluxes given the boundary velocities.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -358,9 +358,9 @@ source terms.</p>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.PostProcessingTools.VPP_P1nc_RT0">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_P1nc_RT0</code><span class="sig-paren">(</span><em class="sig-param">vectorTransport=None, vtComponents=[0]</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_P1nc_RT0</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vectorTransport</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vtComponents</span><span class="o">=</span><span class="default_value">[0]</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase" title="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase</span></code></a></p>
 <p>P1-nonconforming velocity postprocessing</p>
 <p>VelocityPostProcessingAlgorithmBase Base Class Constructor</p>
@@ -373,71 +373,71 @@ source terms.</p>
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0potentialFromP1nc">
 <code class="sig-name descname">postProcessRT0potentialFromP1nc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0potentialFromP1nc" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0potentialFromP1nc_sd">
 <code class="sig-name descname">postProcessRT0potentialFromP1nc_sd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0potentialFromP1nc_sd" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0velocityFromP1nc">
 <code class="sig-name descname">postProcessRT0velocityFromP1nc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0velocityFromP1nc" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0velocityFromP1nc_sd">
 <code class="sig-name descname">postProcessRT0velocityFromP1nc_sd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0velocityFromP1nc_sd" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_P1nc_RT0.updateRT0velocityWithAveragedPotentialP1nc">
 <code class="sig-name descname">updateRT0velocityWithAveragedPotentialP1nc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.updateRT0velocityWithAveragedPotentialP1nc" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_P1nc_RT0.updateRT0velocityWithAveragedPotentialP1nc_sd">
 <code class="sig-name descname">updateRT0velocityWithAveragedPotentialP1nc_sd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.updateRT0velocityWithAveragedPotentialP1nc_sd" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_P1nc_RT0.getElementRT0velocityValues">
 <code class="sig-name descname">getElementRT0velocityValues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.getElementRT0velocityValues" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_P1nc_RT0.getElementBoundaryRT0velocityValues">
 <code class="sig-name descname">getElementBoundaryRT0velocityValues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.getElementBoundaryRT0velocityValues" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_P1nc_RT0.getGlobalElementBoundaryRT0velocityValues">
 <code class="sig-name descname">getGlobalElementBoundaryRT0velocityValues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.getGlobalElementBoundaryRT0velocityValues" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_P1nc_RT0.postprocess_component">
-<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.postprocess_component" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.postprocess_component" title="Permalink to this definition">¶</a></dt>
 <dd><p>compute velocity field in RT_0 assuming a potential field in
 <span class="math notranslate nohighlight">\(P^1_{nc}\)</span> has already been solved for</p>
 <p>Uses Chou and Tang approach for now, so averaged pressure is not correct</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_P1nc_RT0.evaluateElementVelocityField">
-<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
 <dd><p>evaluate velocity field assuming velocity_dofs already calculated
 for now assumes x shaped like nE x nq x 3</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.PostProcessingTools.VPP_PWL_RT0">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_PWL_RT0</code><span class="sig-paren">(</span><em class="sig-param">vectorTransport=None, vtComponents=[0], omitFluxBoundaryNodes=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_PWL_RT0</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vectorTransport</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vtComponents</span><span class="o">=</span><span class="default_value">[0]</span></em>, <em class="sig-param"><span class="n">omitFluxBoundaryNodes</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase" title="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase</span></code></a></p>
 <dl>
 <dt>Local Larson-Niklasson method with RT_0 representation for element</dt><dd><p>velocities This is not the correct postprocessing for optimized NS
@@ -464,44 +464,44 @@ are :math:<a href="#id1"><span class="problematic" id="id2">`</span></a>V^i = in
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_RT0.postprocess_component">
-<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0.postprocess_component" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0.postprocess_component" title="Permalink to this definition">¶</a></dt>
 <dd><p>compute mass conservative velocity field following Larson and
 Niklasson assuming a <span class="math notranslate nohighlight">\(P^k C_0\)</span> Galerkin solution has already been
 found</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_RT0.getConservationResidualPWL">
-<code class="sig-name descname">getConservationResidualPWL</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">correctFlux=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0.getConservationResidualPWL" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getConservationResidualPWL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">correctFlux</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0.getConservationResidualPWL" title="Permalink to this definition">¶</a></dt>
 <dd><p>compute conservation resiudal using current guess for element boundary flux</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_RT0.getConservationJacobianPWL">
-<code class="sig-name descname">getConservationJacobianPWL</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0.getConservationJacobianPWL" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getConservationJacobianPWL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0.getConservationJacobianPWL" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build local systems for post-processing solve</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_RT0.evaluateLocalVelocityRepresentation">
-<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
 <dd><p>project to <span class="math notranslate nohighlight">\(RT_0\)</span> velocity from element boundary fluxes</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_RT0.evaluateElementVelocityField">
-<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
 <dd><p>evaluate velocity field assuming velocity_dofs already calculated
 for now assumes x shaped like nE x nq x 3</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.PostProcessingTools.VPP_PWL_RT1">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_PWL_RT1</code><span class="sig-paren">(</span><em class="sig-param">vectorTransport=None, vtComponents=[0], omitFluxBoundaryNodes=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT1" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_PWL_RT1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vectorTransport</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vtComponents</span><span class="o">=</span><span class="default_value">[0]</span></em>, <em class="sig-param"><span class="n">omitFluxBoundaryNodes</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT1" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase" title="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase</span></code></a></p>
 <p>Base class for higher order RT elements.</p>
 <dl class="field-list simple">
@@ -527,43 +527,43 @@ mapping number.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_RT1.postprocess_component">
-<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT1.postprocess_component" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT1.postprocess_component" title="Permalink to this definition">¶</a></dt>
 <dd><p>compute mass conservative velocity field following Larson and Niklasson assuming a P^k C0
 Galerkin solution has already been found</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_RT1.getConservationResidualPWL">
-<code class="sig-name descname">getConservationResidualPWL</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">correctFlux=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT1.getConservationResidualPWL" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getConservationResidualPWL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">correctFlux</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT1.getConservationResidualPWL" title="Permalink to this definition">¶</a></dt>
 <dd><p>compute conservation resiudal using current guess for element boundary flux</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_RT1.getConservationJacobianPWL">
-<code class="sig-name descname">getConservationJacobianPWL</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT1.getConservationJacobianPWL" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getConservationJacobianPWL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT1.getConservationJacobianPWL" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build local systems for post-processing solve</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_RT1.evaluateLocalVelocityRepresentation">
-<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT1.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT1.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
 <dd><p>project to RT_0 velocity from element boundary fluxes</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_RT1.evaluateElementVelocityField">
-<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT1.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT1.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
 <dd><p>evaluate velocity field assuming velocity_dofs already calculated
 for now assumes x shaped like nE x nq x 3</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_PWL_BDM</code><span class="sig-paren">(</span><em class="sig-param">vectorTransport=None, vtComponents=[0]</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_PWL_BDM</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vectorTransport</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vtComponents</span><span class="o">=</span><span class="default_value">[0]</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.PostProcessingTools.VPP_PWL_RT0" title="proteus.PostProcessingTools.VPP_PWL_RT0"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.PostProcessingTools.VPP_PWL_RT0</span></code></a></p>
 <dl>
 <dt>Local Larson-Niklasson method with BDM1 representation for element</dt><dd><p>velocities This is not the correct postprocessing for optimized NS
@@ -592,45 +592,45 @@ ec e_{i%d}</p>
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM.buildLocalBDM1projectionMatrices">
 <code class="sig-name descname">buildLocalBDM1projectionMatrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM.buildLocalBDM1projectionMatrices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM.factorLocalBDM1projectionMatrices">
 <code class="sig-name descname">factorLocalBDM1projectionMatrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM.factorLocalBDM1projectionMatrices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM.solveLocalBDM1projection">
 <code class="sig-name descname">solveLocalBDM1projection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM.solveLocalBDM1projection" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM.getElementBDM1velocityValuesLagrangeRep">
 <code class="sig-name descname">getElementBDM1velocityValuesLagrangeRep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM.getElementBDM1velocityValuesLagrangeRep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM.computeBDM1projectionMatrices">
 <code class="sig-name descname">computeBDM1projectionMatrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM.computeBDM1projectionMatrices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM.computeGeometricInfo">
 <code class="sig-name descname">computeGeometricInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM.computeGeometricInfo" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM.evaluateLocalVelocityRepresentation">
-<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
 <dd><p>project to BDM velocity from element boundary fluxes</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM.evaluateElementVelocityField">
-<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
 <dd><p>evaluate velocity field assuming velocity_dofs already calculated
 for now assumes x shaped like nE x nq x 3
 .. todo:: put python loops in c</p>
@@ -638,9 +638,9 @@ for now assumes x shaped like nE x nq x 3
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_PWL_BDM2</code><span class="sig-paren">(</span><em class="sig-param">vectorTransport=None, vtComponents=[0]</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_PWL_BDM2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vectorTransport</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vtComponents</span><span class="o">=</span><span class="default_value">[0]</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.PostProcessingTools.VPP_PWL_RT0" title="proteus.PostProcessingTools.VPP_PWL_RT0"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.PostProcessingTools.VPP_PWL_RT0</span></code></a></p>
 <p>This class is intended to implement BDM2 elements in proteus</p>
 <p>VelocityPostProcessingAlgorithmBase Base Class Constructor</p>
@@ -653,86 +653,86 @@ for now assumes x shaped like nE x nq x 3
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.buildLocalBDM2projectionMatrices">
 <code class="sig-name descname">buildLocalBDM2projectionMatrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.buildLocalBDM2projectionMatrices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.factorLocalBDM2projectionMatrices">
 <code class="sig-name descname">factorLocalBDM2projectionMatrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.factorLocalBDM2projectionMatrices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.solveLocalBDM2projection">
 <code class="sig-name descname">solveLocalBDM2projection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.solveLocalBDM2projection" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.getElementBDM2velocityValuesLagrangeRep">
 <code class="sig-name descname">getElementBDM2velocityValuesLagrangeRep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.getElementBDM2velocityValuesLagrangeRep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.buildBDM2rhs">
 <code class="sig-name descname">buildBDM2rhs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.buildBDM2rhs" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.setInteriorVelocityValues">
-<code class="sig-name descname">setInteriorVelocityValues</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.setInteriorVelocityValues" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setInteriorVelocityValues</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.setInteriorVelocityValues" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function sets the interior velocity values based on the solution to the vt-problem.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.set_BDM_dimensions">
-<code class="sig-name descname">set_BDM_dimensions</code><span class="sig-paren">(</span><em class="sig-param">degree</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.set_BDM_dimensions" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_BDM_dimensions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">degree</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.set_BDM_dimensions" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate and set the BDM polynomial dimension
 input - degree</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.get_num_sigmaBasisElements">
 <code class="sig-name descname">get_num_sigmaBasisElements</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.get_num_sigmaBasisElements" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.setInteriorTestSpace">
-<code class="sig-name descname">setInteriorTestSpace</code><span class="sig-paren">(</span><em class="sig-param">degree</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.setInteriorTestSpace" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setInteriorTestSpace</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">degree</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.setInteriorTestSpace" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function sets the interior test space corresponding to the dimension
 of the BDM space</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.setEdgeFlags">
 <code class="sig-name descname">setEdgeFlags</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.setEdgeFlags" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function sets the edge flags for the bdm2 loops</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.getInteriorTestGradients">
 <code class="sig-name descname">getInteriorTestGradients</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.getInteriorTestGradients" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate and return the gradient values for polynomials of degree 1</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.sigmaBasisElement">
-<code class="sig-name descname">sigmaBasisElement</code><span class="sig-paren">(</span><em class="sig-param">dim</em>, <em class="sig-param">component</em>, <em class="sig-param">point</em>, <em class="sig-param">i=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.sigmaBasisElement" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sigmaBasisElement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dim</span></em>, <em class="sig-param"><span class="n">component</span></em>, <em class="sig-param"><span class="n">point</span></em>, <em class="sig-param"><span class="n">i</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.sigmaBasisElement" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.getInteriorDivFreeElement">
 <code class="sig-name descname">getInteriorDivFreeElement</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.getInteriorDivFreeElement" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate and return the values of the divergence free interior test function.
 Note - calculating this integral requires the use of the Piola transformation.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.computeBDM2projectionMatrices">
 <code class="sig-name descname">computeBDM2projectionMatrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.computeBDM2projectionMatrices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.flagNeumannBoundaryEdges">
 <code class="sig-name descname">flagNeumannBoundaryEdges</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.flagNeumannBoundaryEdges" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function flags neumann boundaries.</p>
@@ -743,7 +743,7 @@ it returns a dictionary which suggests all edges
 are Dirichlet.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.conservativeVelocityCalculation">
 <code class="sig-name descname">conservativeVelocityCalculation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.conservativeVelocityCalculation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Serial implimentation of LN algorithm.</p>
@@ -751,20 +751,20 @@ are Dirichlet.</p>
 refactor once completed.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.getAverageFlux">
-<code class="sig-name descname">getAverageFlux</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.getAverageFlux" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getAverageFlux</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.getAverageFlux" title="Permalink to this definition">¶</a></dt>
 <dd><p>Helper function to cacluate the average flux along the mesh boundaries.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.computeGeometricInfo">
 <code class="sig-name descname">computeGeometricInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.computeGeometricInfo" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.evaluateLocalVelocityRepresentation">
-<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">velocity_field_set=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">velocity_field_set</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
 <dd><p>This function projects the solution of the vt transport problem into the
 BDM2 space.</p>
 <dl class="field-list simple">
@@ -778,9 +778,9 @@ already defined (this is typically used for testing).</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM2.evaluateElementVelocityField">
-<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM2.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
 <dd><p>evaluate velocity field assuming velocity_dofs already calculated
 for now assumes x shaped like nE x nq x 3
 .. todo:: put python loops in c</p>
@@ -788,9 +788,9 @@ for now assumes x shaped like nE x nq x 3
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.PostProcessingTools.VPP_PWL_RT0_OPT">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_PWL_RT0_OPT</code><span class="sig-paren">(</span><em class="sig-param">vectorTransport=None, vtComponents=[0]</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0_OPT" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_PWL_RT0_OPT</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vectorTransport</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vtComponents</span><span class="o">=</span><span class="default_value">[0]</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0_OPT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.PostProcessingTools.VPP_PWL_RT0" title="proteus.PostProcessingTools.VPP_PWL_RT0"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.PostProcessingTools.VPP_PWL_RT0</span></code></a></p>
 <p>Version of local Larson-Niklasson scheme to use with optimized
 codes Assumes that all exterior boundaries are either flux or weak
@@ -808,38 +808,38 @@ weak dirichlet approximation)</p>
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_RT0_OPT.postprocess_component">
-<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0_OPT.postprocess_component" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0_OPT.postprocess_component" title="Permalink to this definition">¶</a></dt>
 <dd><p>compute mass conservative velocity field following Larson and Niklasson assuming a P^k C0
 Galerkin solution has already been found
 Setup for optimized parallel codes</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_RT0_OPT.getConservationJacobianPWL">
-<code class="sig-name descname">getConservationJacobianPWL</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0_OPT.getConservationJacobianPWL" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getConservationJacobianPWL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0_OPT.getConservationJacobianPWL" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build local systems for post-processing solve</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_RT0_OPT.getConservationResidualPWL">
-<code class="sig-name descname">getConservationResidualPWL</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">correctFlux=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0_OPT.getConservationResidualPWL" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getConservationResidualPWL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">correctFlux</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0_OPT.getConservationResidualPWL" title="Permalink to this definition">¶</a></dt>
 <dd><p>compute conservation resiudal using current guess for element boundary flux</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_RT0_OPT.evaluateElementVelocityField">
-<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0_OPT.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_RT0_OPT.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
 <dd><p>evaluate velocity field assuming velocity_dofs already calculated
 for now assumes x shaped like nE x nq x 3</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM_OPT">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_PWL_BDM_OPT</code><span class="sig-paren">(</span><em class="sig-param">vectorTransport=None, vtComponents=[0]</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM_OPT" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_PWL_BDM_OPT</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vectorTransport</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vtComponents</span><span class="o">=</span><span class="default_value">[0]</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM_OPT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.PostProcessingTools.VPP_PWL_RT0_OPT" title="proteus.PostProcessingTools.VPP_PWL_RT0_OPT"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.PostProcessingTools.VPP_PWL_RT0_OPT</span></code></a></p>
 <dl>
 <dt>Local Larson-Niklasson method with BDM1 representation for element</dt><dd><p>velocities for optimized parallel codes</p>
@@ -866,59 +866,59 @@ ec e_{i/(d+1)}</p>
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM_OPT.buildLocalBDM1projectionMatrices">
 <code class="sig-name descname">buildLocalBDM1projectionMatrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM_OPT.buildLocalBDM1projectionMatrices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM_OPT.factorLocalBDM1projectionMatrices">
 <code class="sig-name descname">factorLocalBDM1projectionMatrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM_OPT.factorLocalBDM1projectionMatrices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM_OPT.solveLocalBDM1projection">
 <code class="sig-name descname">solveLocalBDM1projection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM_OPT.solveLocalBDM1projection" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM_OPT.getElementBDM1velocityValuesLagrangeRep">
 <code class="sig-name descname">getElementBDM1velocityValuesLagrangeRep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM_OPT.getElementBDM1velocityValuesLagrangeRep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM_OPT.computeBDM1projectionMatrices">
 <code class="sig-name descname">computeBDM1projectionMatrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM_OPT.computeBDM1projectionMatrices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM_OPT.updateWeights">
 <code class="sig-name descname">updateWeights</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM_OPT.updateWeights" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM_OPT.computeGeometricInfo">
 <code class="sig-name descname">computeGeometricInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM_OPT.computeGeometricInfo" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM_OPT.evaluateLocalVelocityRepresentation">
-<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM_OPT.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM_OPT.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
 <dd><p>project to BDM velocity from element boundary fluxes</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWL_BDM_OPT.evaluateElementVelocityField">
-<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM_OPT.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWL_BDM_OPT.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
 <dd><p>evaluate velocity field assuming velocity_dofs already calculated
 for now assumes x shaped like nE x nq x 3</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.PostProcessingTools.VPP_PWC_RT0">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_PWC_RT0</code><span class="sig-paren">(</span><em class="sig-param">vectorTransport=None, vtComponents=[0]</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWC_RT0" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_PWC_RT0</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vectorTransport</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vtComponents</span><span class="o">=</span><span class="default_value">[0]</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWC_RT0" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase" title="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase</span></code></a></p>
 <dl>
 <dt>Global piecewise constant Larson-Niklasson method with <span class="math notranslate nohighlight">\(RT_0\)</span></dt><dd><p>representation for element velocities</p>
@@ -947,31 +947,31 @@ int_{e_i}</p>
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWC_RT0.postprocess_component">
-<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWC_RT0.postprocess_component" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWC_RT0.postprocess_component" title="Permalink to this definition">¶</a></dt>
 <dd><p>compute mass conservative velocity field following Larson and
 Niklasson Global piecewise constant correcction</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWC_RT0.evaluateLocalVelocityRepresentation">
-<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWC_RT0.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWC_RT0.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
 <dd><p>project to <span class="math notranslate nohighlight">\(RT_0\)</span> velocity from element boundary fluxes</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_PWC_RT0.evaluateElementVelocityField">
-<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWC_RT0.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_PWC_RT0.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
 <dd><p>evaluate velocity field assuming velocity_dofs already calculated
 for now assumes x shaped like nE x nq x 3</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.PostProcessingTools.VPP_SUN_RT0">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_SUN_RT0</code><span class="sig-paren">(</span><em class="sig-param">vectorTransport=None, vtComponents=[0]</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_SUN_RT0" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_SUN_RT0</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vectorTransport</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vtComponents</span><span class="o">=</span><span class="default_value">[0]</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_SUN_RT0" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase" title="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase</span></code></a></p>
 <dl>
 <dt>Global piecewise constant Sun-Wheeler method with <span class="math notranslate nohighlight">\(RT_0\)</span></dt><dd><p>representation for element velocities</p>
@@ -999,31 +999,31 @@ degrees of freedom are :math:<a href="#id5"><span class="problematic" id="id6">`
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_SUN_RT0.postprocess_component">
-<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_SUN_RT0.postprocess_component" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_SUN_RT0.postprocess_component" title="Permalink to this definition">¶</a></dt>
 <dd><p>compute mass conservative velocity field following Sun and Wheeler
 Global piecewise constant correcction</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_SUN_RT0.evaluateLocalVelocityRepresentation">
-<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_SUN_RT0.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_SUN_RT0.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
 <dd><p>project to <span class="math notranslate nohighlight">\(RT_0\)</span> velocity from element boundary fluxes</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_SUN_RT0.evaluateElementVelocityField">
-<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_SUN_RT0.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_SUN_RT0.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
 <dd><p>evaluate velocity field assuming velocity_dofs already calculated
 for now assumes x shaped like nE x nq x 3</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.PostProcessingTools.VPP_SUN_GS_RT0">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_SUN_GS_RT0</code><span class="sig-paren">(</span><em class="sig-param">vectorTransport=None, vtComponents=[0]</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_SUN_GS_RT0" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_SUN_GS_RT0</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vectorTransport</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vtComponents</span><span class="o">=</span><span class="default_value">[0]</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_SUN_GS_RT0" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase" title="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase</span></code></a></p>
 <dl>
 <dt>Local Sun-Wheeler “Gauss-Seidel” method with <span class="math notranslate nohighlight">\(RT_0\)</span> representation</dt><dd><p>for element velocities</p>
@@ -1051,31 +1051,31 @@ freedom are :math:<a href="#id7"><span class="problematic" id="id8">`</span></a>
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_SUN_GS_RT0.postprocess_component">
-<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_SUN_GS_RT0.postprocess_component" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_SUN_GS_RT0.postprocess_component" title="Permalink to this definition">¶</a></dt>
 <dd><p>compute mass conservative velocity field following Sun and Wheeler
 local Gauss-Seidel</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_SUN_GS_RT0.evaluateLocalVelocityRepresentation">
-<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_SUN_GS_RT0.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_SUN_GS_RT0.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
 <dd><p>project to <span class="math notranslate nohighlight">\(RT_0\)</span> velocity from element boundary fluxes</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_SUN_GS_RT0.evaluateElementVelocityField">
-<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_SUN_GS_RT0.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_SUN_GS_RT0.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
 <dd><p>evaluate velocity field assuming velocity_dofs already calculated
 for now assumes x shaped like nE x nq x 3</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.PostProcessingTools.VPP_DG_RT0">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_DG_RT0</code><span class="sig-paren">(</span><em class="sig-param">vectorTransport=None, vtComponents=[0]</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_RT0" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_DG_RT0</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vectorTransport</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vtComponents</span><span class="o">=</span><span class="default_value">[0]</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_RT0" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase" title="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase</span></code></a></p>
 <p>Post process DG solution velocity by projecting boundary fluxes
 onto local <span class="math notranslate nohighlight">\(RT_0\)</span> space</p>
@@ -1089,29 +1089,29 @@ onto local <span class="math notranslate nohighlight">\(RT_0\)</span> space</p>
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_DG_RT0.postprocess_component">
-<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_RT0.postprocess_component" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_RT0.postprocess_component" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_DG_RT0.evaluateLocalVelocityRepresentation">
-<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_RT0.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_RT0.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
 <dd><p>project to <span class="math notranslate nohighlight">\(RT_0\)</span> velocity from element boundary fluxes</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_DG_RT0.evaluateElementVelocityField">
-<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_RT0.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_RT0.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
 <dd><p>evaluate velocity field assuming velocity_dofs already calculated
 for now assumes x shaped like nE x nq x 3</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.PostProcessingTools.VPP_DG_BDM">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_DG_BDM</code><span class="sig-paren">(</span><em class="sig-param">vectorTransport=None, vtComponents=[0]</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_BDM" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_DG_BDM</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vectorTransport</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vtComponents</span><span class="o">=</span><span class="default_value">[0]</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_BDM" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.PostProcessingTools.VPP_DG_RT0" title="proteus.PostProcessingTools.VPP_DG_RT0"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.PostProcessingTools.VPP_DG_RT0</span></code></a></p>
 <dl>
 <dt>Project DG solution onto BDM1 local representation which is</dt><dd><p><span class="math notranslate nohighlight">\([P^1]^d\)</span> locally with continuous linear fluxes on each face</p>
@@ -1135,54 +1135,54 @@ ec e_{i/(d+1)}</p>
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_DG_BDM.buildLocalBDM1projectionMatrices">
 <code class="sig-name descname">buildLocalBDM1projectionMatrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_BDM.buildLocalBDM1projectionMatrices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_DG_BDM.factorLocalBDM1projectionMatrices">
 <code class="sig-name descname">factorLocalBDM1projectionMatrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_BDM.factorLocalBDM1projectionMatrices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_DG_BDM.solveLocalBDM1projectionFromFlux">
 <code class="sig-name descname">solveLocalBDM1projectionFromFlux</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_BDM.solveLocalBDM1projectionFromFlux" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_DG_BDM.getElementBDM1velocityValuesLagrangeRep">
 <code class="sig-name descname">getElementBDM1velocityValuesLagrangeRep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_BDM.getElementBDM1velocityValuesLagrangeRep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_DG_BDM.computeBDM1projectionMatrices">
 <code class="sig-name descname">computeBDM1projectionMatrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_BDM.computeBDM1projectionMatrices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_DG_BDM.computeGeometricInfo">
 <code class="sig-name descname">computeGeometricInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_BDM.computeGeometricInfo" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_DG_BDM.evaluateLocalVelocityRepresentation">
-<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_BDM.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_BDM.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
 <dd><p>project to BDM velocity from element boundary fluxes</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_DG_BDM.evaluateElementVelocityField">
-<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_BDM.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_DG_BDM.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
 <dd><p>evaluate velocity field assuming velocity_dofs already calculated
 for now assumes x shaped like nE x nq x 3</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.PostProcessingTools.VPP_POINT_EVAL">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_POINT_EVAL</code><span class="sig-paren">(</span><em class="sig-param">vectorTransport=None, vtComponents=[0]</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_POINT_EVAL" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_POINT_EVAL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vectorTransport</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vtComponents</span><span class="o">=</span><span class="default_value">[0]</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_POINT_EVAL" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase" title="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase</span></code></a></p>
 <p>Velocity calculation from just directly evaluating flux formula at intergration points using
 trial solution</p>
@@ -1196,9 +1196,9 @@ trial solution</p>
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_POINT_EVAL.postprocess_component">
-<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_POINT_EVAL.postprocess_component" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_POINT_EVAL.postprocess_component" title="Permalink to this definition">¶</a></dt>
 <dd><dl>
 <dt>compute velocity field by just using point evaluation of trial</dt><dd><p>solution and coefficients</p>
 <div class="math notranslate nohighlight">
@@ -1208,9 +1208,9 @@ trial solution</p>
 <p>ec f_h</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_POINT_EVAL.evaluateElementVelocityField">
-<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_POINT_EVAL.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_POINT_EVAL.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
 <dd><p>evaluate velocity field assuming velocity_dofs already calculated
 for now assumes x shaped like nE x nq x 3</p>
 <dl class="simple">
@@ -1221,9 +1221,9 @@ for now assumes x shaped like nE x nq x 3</p>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.PostProcessingTools.VPP_POINT_EVAL_GWVD">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_POINT_EVAL_GWVD</code><span class="sig-paren">(</span><em class="sig-param">vectorTransport=None, vtComponents=[0]</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_POINT_EVAL_GWVD" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_POINT_EVAL_GWVD</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vectorTransport</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vtComponents</span><span class="o">=</span><span class="default_value">[0]</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_POINT_EVAL_GWVD" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase" title="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase</span></code></a></p>
 <p>Velocity calculation for evaluating coarse grid velocity solution
 at fine grid quadrature points; assumes that the coarse velocity degrees of
@@ -1239,37 +1239,37 @@ freedom from the LDG solution are known</p>
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_POINT_EVAL_GWVD.getElementLDGvelocityValuesLagrangeRep">
 <code class="sig-name descname">getElementLDGvelocityValuesLagrangeRep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_POINT_EVAL_GWVD.getElementLDGvelocityValuesLagrangeRep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_POINT_EVAL_GWVD.postprocess_component">
-<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_POINT_EVAL_GWVD.postprocess_component" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_POINT_EVAL_GWVD.postprocess_component" title="Permalink to this definition">¶</a></dt>
 <dd><p>may need to compute velocity field at the desired velocity dofs if this step is not
 included in the getResidual step of the solution</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_POINT_EVAL_GWVD.evaluateElementVelocityField">
-<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_POINT_EVAL_GWVD.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_POINT_EVAL_GWVD.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
 <dd><p>evaluate velocity field assuming velocity_dofs already calculated
 for now assumes x shaped like nE x nq x 3
 .. todo:: put python loops in c</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_POINT_EVAL_GWVD.archiveVelocityValues">
-<code class="sig-name descname">archiveVelocityValues</code><span class="sig-paren">(</span><em class="sig-param">archive</em>, <em class="sig-param">t</em>, <em class="sig-param">tCount</em>, <em class="sig-param">initialPhase=False</em>, <em class="sig-param">meshChanged=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_POINT_EVAL_GWVD.archiveVelocityValues" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">archiveVelocityValues</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">archive</span></em>, <em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">tCount</span></em>, <em class="sig-param"><span class="n">initialPhase</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">meshChanged</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_POINT_EVAL_GWVD.archiveVelocityValues" title="Permalink to this definition">¶</a></dt>
 <dd><p>write out post processed velocity values as a finite element space</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_LOW_K_IB_PWL_RT0</code><span class="sig-paren">(</span><em class="sig-param">vectorTransport=None, vtComponents=[0], jump_tol=10000.0, min_tol=1e-05</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VPP_LOW_K_IB_PWL_RT0</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vectorTransport</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vtComponents</span><span class="o">=</span><span class="default_value">[0]</span></em>, <em class="sig-param"><span class="n">jump_tol</span><span class="o">=</span><span class="default_value">10000.0</span></em>, <em class="sig-param"><span class="n">min_tol</span><span class="o">=</span><span class="default_value">1e-05</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase" title="proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.PostProcessingTools.VelocityPostProcessingAlgorithmBase</span></code></a></p>
 <p>Local Larson-Niklasson method with RT_0 representation for element
 velocities This version tries to address flux through low
@@ -1286,92 +1286,92 @@ permeability interfaces by manually setting boundaries with a
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.setInteriorFluxBoundaries">
-<code class="sig-name descname">setInteriorFluxBoundaries</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.setInteriorFluxBoundaries" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setInteriorFluxBoundaries</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.setInteriorFluxBoundaries" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag interior flux boundaries</p>
 <p>this version flags boundaries where
 <span class="math notranslate nohighlight">\(|max(|a|_L)-max(|a|_R)|_{ebN} &gt; jump_{tol}\)</span> and
 <span class="math notranslate nohighlight">\(min(max(|a|_L),max(|a|_R)) &lt; min_{tol}\)</span></p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.setInteriorFluxBoundaryValues">
-<code class="sig-name descname">setInteriorFluxBoundaryValues</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">ebq_global_velocity</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.setInteriorFluxBoundaryValues" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setInteriorFluxBoundaryValues</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">ebq_global_velocity</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.setInteriorFluxBoundaryValues" title="Permalink to this definition">¶</a></dt>
 <dd><p>set interior flux boundary values
 this version sets interior flux boundaries to no flux</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.postprocess_component">
-<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.postprocess_component" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocess_component</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.postprocess_component" title="Permalink to this definition">¶</a></dt>
 <dd><p>compute mass conservative velocity field following Larson and Niklasson assuming a <span class="math notranslate nohighlight">\(P^k C_0\)</span>
 Galerkin solution has already been found</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.getConservationResidualPWL">
-<code class="sig-name descname">getConservationResidualPWL</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">correctFlux=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.getConservationResidualPWL" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getConservationResidualPWL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">correctFlux</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.getConservationResidualPWL" title="Permalink to this definition">¶</a></dt>
 <dd><p>compute conservation resiudal using current guess for element boundary flux</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.getConservationJacobianPWL">
-<code class="sig-name descname">getConservationJacobianPWL</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.getConservationJacobianPWL" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getConservationJacobianPWL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.getConservationJacobianPWL" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build local systems for post-processing solve</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.evaluateLocalVelocityRepresentation">
-<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateLocalVelocityRepresentation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.evaluateLocalVelocityRepresentation" title="Permalink to this definition">¶</a></dt>
 <dd><p>project to RT_0 velocity from element boundary fluxes</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.evaluateElementVelocityField">
-<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
 <dd><p>evaluate velocity field assuming velocity_dofs already calculated
 for now assumes x shaped like nE x nq x 3</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.PostProcessingTools.AggregateVelocityPostProcessor">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">AggregateVelocityPostProcessor</code><span class="sig-paren">(</span><em class="sig-param">postProcessingTypes=None</em>, <em class="sig-param">transport=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.AggregateVelocityPostProcessor" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">AggregateVelocityPostProcessor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">postProcessingTypes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">transport</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.AggregateVelocityPostProcessor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>collect different velocity postprocessing algorithms for a (possibly) multicomponent system</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="proteus.PostProcessingTools.AggregateVelocityPostProcessor.vpp_types">
 <code class="sig-name descname">vpp_types</code><em class="property"> = {'dg': &lt;class 'proteus.PostProcessingTools.VPP_DG_RT0'&gt;, 'dg-bdm': &lt;class 'proteus.PostProcessingTools.VPP_DG_BDM'&gt;, 'dg-point-eval': &lt;class 'proteus.PostProcessingTools.VPP_POINT_EVAL'&gt;, 'p1-nc': &lt;class 'proteus.PostProcessingTools.VPP_P1nc_RT0'&gt;, 'point-eval': &lt;class 'proteus.PostProcessingTools.VPP_POINT_EVAL'&gt;, 'point-eval-gwvd': &lt;class 'proteus.PostProcessingTools.VPP_POINT_EVAL_GWVD'&gt;, 'pwc': &lt;class 'proteus.PostProcessingTools.VPP_PWC_RT0'&gt;, 'pwl': &lt;class 'proteus.PostProcessingTools.VPP_PWL_RT0'&gt;, 'pwl-bdm': &lt;class 'proteus.PostProcessingTools.VPP_PWL_BDM'&gt;, 'pwl-bdm-opt': &lt;class 'proteus.PostProcessingTools.VPP_PWL_BDM_OPT'&gt;, 'pwl-bdm2': &lt;class 'proteus.PostProcessingTools.VPP_PWL_BDM2'&gt;, 'pwl-ib-fix-0': &lt;class 'proteus.PostProcessingTools.VPP_LOW_K_IB_PWL_RT0'&gt;, 'pwl-opt': &lt;class 'proteus.PostProcessingTools.VPP_PWL_RT0_OPT'&gt;, 'sun-gs-rt0': &lt;class 'proteus.PostProcessingTools.VPP_SUN_GS_RT0'&gt;, 'sun-rt0': &lt;class 'proteus.PostProcessingTools.VPP_SUN_RT0'&gt;}</em><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.AggregateVelocityPostProcessor.vpp_types" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.AggregateVelocityPostProcessor.postprocess">
-<code class="sig-name descname">postprocess</code><span class="sig-paren">(</span><em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.AggregateVelocityPostProcessor.postprocess" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocess</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.AggregateVelocityPostProcessor.postprocess" title="Permalink to this definition">¶</a></dt>
 <dd><p>main functionality
 generate post-processed velocity field for attached
 VectorTransport object and store them in local dictionaries</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.AggregateVelocityPostProcessor.evaluateElementVelocityField">
-<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.AggregateVelocityPostProcessor.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.AggregateVelocityPostProcessor.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
 <dd><p>evaluate velocity field assuming velocity_dofs already calculated
 for now assumes x shaped like nE x nq x 3</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.AggregateVelocityPostProcessor.archiveVelocityValues">
-<code class="sig-name descname">archiveVelocityValues</code><span class="sig-paren">(</span><em class="sig-param">archive</em>, <em class="sig-param">t</em>, <em class="sig-param">tCount</em>, <em class="sig-param">initialPhase=False</em>, <em class="sig-param">meshChanged=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.AggregateVelocityPostProcessor.archiveVelocityValues" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">archiveVelocityValues</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">archive</span></em>, <em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">tCount</span></em>, <em class="sig-param"><span class="n">initialPhase</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">meshChanged</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.AggregateVelocityPostProcessor.archiveVelocityValues" title="Permalink to this definition">¶</a></dt>
 <dd><p>write out post processed velocity values as a finite element space</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VelocityPostProcessor_Original</code><span class="sig-paren">(</span><em class="sig-param">postProcessingTypes=None, vectorTransport=None, vtComponents=[0], mlMesh=None, thisLevel=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.PostProcessingTools.</code><code class="sig-name descname">VelocityPostProcessor_Original</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">postProcessingTypes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vectorTransport</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vtComponents</span><span class="o">=</span><span class="default_value">[0]</span></em>, <em class="sig-param"><span class="n">mlMesh</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">thisLevel</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>accumulate basic functionality for post-processing velocity vields
 from scalar potentials</p>
@@ -1384,142 +1384,142 @@ pwc (with rt0)
 point-eval
 sun-rt0
 sun-gs-rt0</p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.postProcessRT0potentialFromP1nc">
 <code class="sig-name descname">postProcessRT0potentialFromP1nc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postProcessRT0potentialFromP1nc" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.postProcessRT0potentialFromP1nc_sd">
 <code class="sig-name descname">postProcessRT0potentialFromP1nc_sd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postProcessRT0potentialFromP1nc_sd" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.postProcessRT0velocityFromP1nc">
 <code class="sig-name descname">postProcessRT0velocityFromP1nc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postProcessRT0velocityFromP1nc" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.postProcessRT0velocityFromP1nc_sd">
 <code class="sig-name descname">postProcessRT0velocityFromP1nc_sd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postProcessRT0velocityFromP1nc_sd" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.getElementRT0velocityValues">
 <code class="sig-name descname">getElementRT0velocityValues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.getElementRT0velocityValues" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.getGlobalElementBoundaryRT0velocityValues">
 <code class="sig-name descname">getGlobalElementBoundaryRT0velocityValues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.getGlobalElementBoundaryRT0velocityValues" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.buildLocalBDM1projectionMatrices">
 <code class="sig-name descname">buildLocalBDM1projectionMatrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.buildLocalBDM1projectionMatrices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.factorLocalBDM1projectionMatrices">
 <code class="sig-name descname">factorLocalBDM1projectionMatrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.factorLocalBDM1projectionMatrices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.solveLocalBDM1projection">
 <code class="sig-name descname">solveLocalBDM1projection</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.solveLocalBDM1projection" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.getElementBDM1velocityValuesLagrangeRep">
 <code class="sig-name descname">getElementBDM1velocityValuesLagrangeRep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.getElementBDM1velocityValuesLagrangeRep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.getElementBoundaryRT0velocityValues">
 <code class="sig-name descname">getElementBoundaryRT0velocityValues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.getElementBoundaryRT0velocityValues" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.updateRT0velocityWithAveragedPotentialP1nc">
 <code class="sig-name descname">updateRT0velocityWithAveragedPotentialP1nc</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.updateRT0velocityWithAveragedPotentialP1nc" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.updateRT0velocityWithAveragedPotentialP1nc_sd">
 <code class="sig-name descname">updateRT0velocityWithAveragedPotentialP1nc_sd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.updateRT0velocityWithAveragedPotentialP1nc_sd" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.calculateConservationResidual">
 <code class="sig-name descname">calculateConservationResidual</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.calculateConservationResidual" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.computeBDM1projectionMatrices">
 <code class="sig-name descname">computeBDM1projectionMatrices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.computeBDM1projectionMatrices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.computeGeometricInfo">
 <code class="sig-name descname">computeGeometricInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.computeGeometricInfo" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocess">
-<code class="sig-name descname">postprocess</code><span class="sig-paren">(</span><em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocess" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocess</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocess" title="Permalink to this definition">¶</a></dt>
 <dd><p>generate post-processed velocity field for attached
 VectorTransport object and store them in local dictionaries
 could split this up into postprocess element and postprocess element boundary</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessP1nc">
-<code class="sig-name descname">postprocessP1nc</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessP1nc" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocessP1nc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessP1nc" title="Permalink to this definition">¶</a></dt>
 <dd><p>compute velocity field in RT_0 assuming a potential field in
 P^1_{nc} has already been solved for</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessPWL">
-<code class="sig-name descname">postprocessPWL</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessPWL" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocessPWL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessPWL" title="Permalink to this definition">¶</a></dt>
 <dd><p>compute mass conservative velocity field following swedish way assuming a P^1 C0
 Galerkin solution has already been found
 this is supposed to be the same as getConservationFluxPWL(ci)</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessPWL_opt">
-<code class="sig-name descname">postprocessPWL_opt</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessPWL_opt" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocessPWL_opt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessPWL_opt" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessDG">
-<code class="sig-name descname">postprocessDG</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessDG" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocessDG</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessDG" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.getConservationResidualPWL">
-<code class="sig-name descname">getConservationResidualPWL</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">correctFlux=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.getConservationResidualPWL" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getConservationResidualPWL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">correctFlux</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.getConservationResidualPWL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.getConservationJacobianPWL">
-<code class="sig-name descname">getConservationJacobianPWL</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.getConservationJacobianPWL" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getConservationJacobianPWL</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.getConservationJacobianPWL" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.getConservationResidualPWL_opt">
-<code class="sig-name descname">getConservationResidualPWL_opt</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">correctFlux=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.getConservationResidualPWL_opt" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getConservationResidualPWL_opt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">correctFlux</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.getConservationResidualPWL_opt" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.getConservationJacobianPWL_opt">
-<code class="sig-name descname">getConservationJacobianPWL_opt</code><span class="sig-paren">(</span><em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.getConservationJacobianPWL_opt" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getConservationJacobianPWL_opt</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.getConservationJacobianPWL_opt" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessPointEval">
-<code class="sig-name descname">postprocessPointEval</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessPointEval" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocessPointEval</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessPointEval" title="Permalink to this definition">¶</a></dt>
 <dd><blockquote>
 <div><p>compute velocity field by just using point evaluation of trial solution
 and coefficients</p>
@@ -1529,35 +1529,35 @@ and coefficients</p>
 <p>ec f_h</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessPWC">
-<code class="sig-name descname">postprocessPWC</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessPWC" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocessPWC</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessPWC" title="Permalink to this definition">¶</a></dt>
 <dd><p>try to implement Larson and Niklasson piecewise-constant algorithm</p>
 <p>TODO:</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessSunWheeler">
-<code class="sig-name descname">postprocessSunWheeler</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">verbose=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessSunWheeler" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postprocessSunWheeler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.postprocessSunWheeler" title="Permalink to this definition">¶</a></dt>
 <dd><p>try to implement Sun and Wheeler Gauss-Seidel postprocessing algorithm</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.evaluateElementVelocityField">
-<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param">x</em>, <em class="sig-param">ci</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluateElementVelocityField</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.evaluateElementVelocityField" title="Permalink to this definition">¶</a></dt>
 <dd><p>evaluate velocity field assuming velocity_dofs already calculated
 for now assumes x shaped like nE x nq x 3</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.removeBoundaryFluxesFromResidual">
-<code class="sig-name descname">removeBoundaryFluxesFromResidual</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">flag_elementBoundaries=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.removeBoundaryFluxesFromResidual" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">removeBoundaryFluxesFromResidual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">flag_elementBoundaries</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.removeBoundaryFluxesFromResidual" title="Permalink to this definition">¶</a></dt>
 <dd><p>remove boundary fluxes from element residuals</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.PostProcessingTools.VelocityPostProcessor_Original.addBoundaryFluxesBackToResidual">
-<code class="sig-name descname">addBoundaryFluxesBackToResidual</code><span class="sig-paren">(</span><em class="sig-param">ci</em>, <em class="sig-param">flag_elementBoundaries=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.addBoundaryFluxesBackToResidual" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">addBoundaryFluxesBackToResidual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em>, <em class="sig-param"><span class="n">flag_elementBoundaries</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.PostProcessingTools.VelocityPostProcessor_Original.addBoundaryFluxesBackToResidual" title="Permalink to this definition">¶</a></dt>
 <dd><p>remove boundary fluxes from element residuals</p>
 </dd></dl>
 
