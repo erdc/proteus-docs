@@ -169,8 +169,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id4">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id5">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">ProtChMoorings</a></li>
 </ul>
 </li>
 </ul>
@@ -284,9 +284,10 @@ instance.</p>
 <span class="kn">from</span> <span class="nn">proteus.mbd</span> <span class="kn">import</span> <span class="n">CouplingFSI</span> <span class="k">as</span> <span class="n">fsi</span>
 
 <span class="n">my_system</span> <span class="o">=</span> <span class="n">fsi</span><span class="o">.</span><span class="n">ProtChSystem</span><span class="p">()</span>
-<span class="n">g</span> <span class="o">=</span> <span class="n">pychrono</span><span class="o">.</span><span class="n">ChVectorD</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="o">-</span><span class="mf">9.81</span><span class="p">)</span>
-<span class="n">my_system</span><span class="o">.</span><span class="n">ChSystem</span><span class="o">.</span><span class="n">Set_G_acc</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="o">-</span><span class="mf">9.81</span><span class="p">])</span>
+<span class="n">my_system</span><span class="o">.</span><span class="n">setGravitationalAcceleration</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
 <span class="n">my_system</span><span class="o">.</span><span class="n">setTimeStep</span><span class="p">(</span><span class="mf">0.001</span><span class="p">)</span>  <span class="c1"># the time step for Chrono calculations</span>
+<span class="n">my_chsystem</span> <span class="o">=</span> <span class="n">my_system</span><span class="o">.</span><span class="n">getChronoObject</span><span class="p">()</span>  <span class="c1"># access chrono object</span>
 </pre></div>
 </div>
 <div class="admonition important">
@@ -309,6 +310,7 @@ simulation. This can be done with the passing of the <cite>system</cite> argumen
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_body</span> <span class="o">=</span> <span class="n">fsi</span><span class="o">.</span><span class="n">ProtChBody</span><span class="p">(</span><span class="n">system</span><span class="o">=</span><span class="n">my_system</span><span class="p">)</span>
 <span class="n">my_body</span><span class="o">.</span><span class="n">attachShape</span><span class="p">(</span><span class="n">my_shape</span><span class="p">)</span>  <span class="c1"># sets everything automatically</span>
 <span class="n">my_body</span><span class="o">.</span><span class="n">setRecordValues</span><span class="p">(</span><span class="n">all_values</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># record everything</span>
+<span class="n">my_chbody</span> <span class="o">=</span> <span class="n">my_body</span><span class="o">.</span><span class="n">getChronoObject</span><span class="p">()</span>  <span class="c1"># access chrono object</span>
 </pre></div>
 </div>
 <p>When set up properly and running with a Proteus Navier-Stokes simulation, the
@@ -317,7 +319,8 @@ will be moved accordingly, as well as its boundaries (supposing that a moving
 mesh or immersed boundaries are used).</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>The <cite>ProtChBody.ChBody</cite>  variable is actually using a derived class from the
+<p>The <cite>ProtChBody.ChBody</cite>  variable accessible with
+<cite>ProtChBody.getChronoObject()</cite> is actually using a derived class from the
 base Chrono <cite>ChBody</cite> in order to add the possibility of using an added-mass
 matrix (see <cite>ChBodyAddedMass</cite> in proteus.mbd.ChRigidBody.h).</p>
 </div>
@@ -326,6 +329,7 @@ matrix (see <cite>ChBodyAddedMass</cite> in proteus.mbd.ChRigidBody.h).</p>
 <h3>ProtChMesh<a class="headerlink" href="#protchmesh" title="Permalink to this headline">¶</a></h3>
 <p>This class creates a <cite>ChMesh</cite> that is needed to create moorings.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_mesh</span> <span class="o">=</span> <span class="n">fsi</span><span class="o">.</span><span class="n">ProtChMesh</span><span class="p">(</span><span class="n">system</span><span class="o">=</span><span class="n">my_system</span><span class="p">)</span>
+<span class="n">my_chmesh</span> <span class="o">=</span> <span class="n">my_mesh</span><span class="o">.</span><span class="n">getChronoObject</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -385,14 +389,14 @@ rigid bodies.</p>
 </div>
 <div class="section" id="postprocessing-tools">
 <h2>Postprocessing Tools<a class="headerlink" href="#postprocessing-tools" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id4">
-<h3>ProtChBody<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id3">
+<h3>ProtChBody<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <p>The data related to mooring cables is saved in an csv file, usually
 <code class="docutils literal notranslate"><span class="pre">[my_body.name].csv</span></code>. Additionally, if the added mass model was used, the
 values of the added mass matrix are available in <code class="docutils literal notranslate"><span class="pre">[my_body.name]_Aij_.csv</span></code></p>
 </div>
-<div class="section" id="id5">
-<h3>ProtChMoorings<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id4">
+<h3>ProtChMoorings<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <p>The data related to mooring cables is saved in an hdf5 file, usually
 <code class="docutils literal notranslate"><span class="pre">[my_mooring.name].h5</span></code>, which can be read directly with h5py. Another way to
 read and visualise the data is to use the associated <code class="docutils literal notranslate"><span class="pre">[my_mooring.name].xmf</span></code>.
