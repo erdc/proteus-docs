@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>proteus.Gauges module &mdash; Proteus 1.7.3 documentation</title>
+  <title>proteus.Gauges module &mdash; Proteus 1.7.4 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                1.7.3
+                1.7.4
               </div>
             
           
@@ -167,8 +167,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id5">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChMoorings</a></li>
 </ul>
 </li>
 </ul>
@@ -189,13 +189,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../models/navier_stokes.html#immersed-boundaries">Immersed Boundaries</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/SWFlows.html">Shallow Water Flows</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#shallow-water-equations">Shallow Water equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#running-the-tests">Running the tests</a></li>
 </ul>
 </li>
 </ul>
@@ -268,11 +261,11 @@
 <span id="proteus-gauges-module"></span><h1>proteus.Gauges module<a class="headerlink" href="#module-proteus.Gauges" title="Permalink to this headline">¶</a></h1>
 <p>Auxiliary variable classes for storing solutions at points and
 along lines to mimic gauges in lab and field experiments.</p>
-<div class="graphviz"><object data="../_images/inheritance-58645924222338ac62599cea92be23f85596dd67.svg" type="image/svg+xml" class="inheritance graphviz">
+<div class="graphviz"><object data="../_images/inheritance-d8bbe8e511e84626f881b8031fb13933e2221a4f.svg" type="image/svg+xml" class="inheritance graphviz">
 <p class="warning">Inheritance diagram of proteus.Gauges</p></object></div>
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.Gauges.PointGauges">
-<code class="sig-prename descclassname">proteus.Gauges.</code><code class="sig-name descname">PointGauges</code><span class="sig-paren">(</span><em class="sig-param">gauges</em>, <em class="sig-param">activeTime=None</em>, <em class="sig-param">sampleRate=0</em>, <em class="sig-param">fileName='point_gauges.csv'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.PointGauges" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.Gauges.</code><code class="sig-name descname">PointGauges</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gauges</span></em>, <em class="sig-param"><span class="n">activeTime</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sampleRate</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">fileName</span><span class="o">=</span><span class="default_value">'point_gauges.csv'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.PointGauges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a set of point gauges that will automatically be serialized
 as CSV data to the requested file.</p>
 <dl class="field-list simple">
@@ -300,9 +293,9 @@ samples taken no more frequently than every 0.2 seconds.  Results
 will be saved to: combined_gauge_0_0.5_sample_all.csv.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.Gauges.LineGauges">
-<code class="sig-prename descclassname">proteus.Gauges.</code><code class="sig-name descname">LineGauges</code><span class="sig-paren">(</span><em class="sig-param">gauges</em>, <em class="sig-param">activeTime=None</em>, <em class="sig-param">sampleRate=0</em>, <em class="sig-param">fileName='line_gauges.csv'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.LineGauges" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.Gauges.</code><code class="sig-name descname">LineGauges</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gauges</span></em>, <em class="sig-param"><span class="n">activeTime</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sampleRate</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">fileName</span><span class="o">=</span><span class="default_value">'line_gauges.csv'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.LineGauges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a set of line gauges that will automatically be serialized
 as CSV data to the requested file.  The line gauges will gather
 data at every element on the mesh between the two endpoints on
@@ -319,9 +312,9 @@ in 3-space representation.</p>
 <p>See the Gauges class for an explanation of the other parameters.</p>
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.Gauges.LineIntegralGauges">
-<code class="sig-prename descclassname">proteus.Gauges.</code><code class="sig-name descname">LineIntegralGauges</code><span class="sig-paren">(</span><em class="sig-param">gauges</em>, <em class="sig-param">activeTime=None</em>, <em class="sig-param">sampleRate=0</em>, <em class="sig-param">fileName='line_integral_gauges.csv'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.LineIntegralGauges" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.Gauges.</code><code class="sig-name descname">LineIntegralGauges</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">gauges</span></em>, <em class="sig-param"><span class="n">activeTime</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sampleRate</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">fileName</span><span class="o">=</span><span class="default_value">'line_integral_gauges.csv'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.LineIntegralGauges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a set of line integral gauges that will automatically be
 serialized as CSV data to the requested file.</p>
 <dl class="field-list simple">
@@ -336,9 +329,9 @@ in 3-space representation.</p>
 <p>See the Gauges class for an explanation of the other parameters.</p>
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.Gauges.Gauges">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.Gauges.</code><code class="sig-name descname">Gauges</code><span class="sig-paren">(</span><em class="sig-param">fields</em>, <em class="sig-param">activeTime=None</em>, <em class="sig-param">sampleRate=0</em>, <em class="sig-param">fileName='gauges.csv'</em>, <em class="sig-param">points=None</em>, <em class="sig-param">lines=None</em>, <em class="sig-param">integrate=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.Gauges.</code><code class="sig-name descname">Gauges</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">fields</span></em>, <em class="sig-param"><span class="n">activeTime</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">sampleRate</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">fileName</span><span class="o">=</span><span class="default_value">'gauges.csv'</span></em>, <em class="sig-param"><span class="n">points</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">lines</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">integrate</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.AuxiliaryVariables.html#proteus.AuxiliaryVariables.AV_base" title="proteus.AuxiliaryVariables.AV_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.AuxiliaryVariables.AV_base</span></code></a></p>
 <p>Monitor fields at specific values.</p>
 <p>This class provides a generic point-wise and line-integral monitor
@@ -379,23 +372,23 @@ step.</p></li>
 <p>Data is currently column-formatted, with 10 characters
 allotted to the time field, and 45 characters allotted to each
 point field.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Gauges.Gauges.getLocalNearestNode">
-<code class="sig-name descname">getLocalNearestNode</code><span class="sig-paren">(</span><em class="sig-param">location</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.getLocalNearestNode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getLocalNearestNode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">location</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.getLocalNearestNode" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Gauges.Gauges.getLocalElement">
-<code class="sig-name descname">getLocalElement</code><span class="sig-paren">(</span><em class="sig-param">femSpace</em>, <em class="sig-param">location</em>, <em class="sig-param">node</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.getLocalElement" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getLocalElement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">femSpace</span></em>, <em class="sig-param"><span class="n">location</span></em>, <em class="sig-param"><span class="n">node</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.getLocalElement" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given a location and its nearest node, determine if it is on a
 local element.</p>
 <p>Returns None if location is not on any elements owned by this
 process</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Gauges.Gauges.findNearestNode">
-<code class="sig-name descname">findNearestNode</code><span class="sig-paren">(</span><em class="sig-param">femSpace</em>, <em class="sig-param">location</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.findNearestNode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">findNearestNode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">femSpace</span></em>, <em class="sig-param"><span class="n">location</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.findNearestNode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Given a gauge location, attempts to locate the most suitable
 process for monitoring information about this location, as
 well as the node on the process closest to the location.</p>
@@ -404,14 +397,14 @@ well as the node on the process closest to the location.</p>
 nearest element.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Gauges.Gauges.buildQuantityRow">
-<code class="sig-name descname">buildQuantityRow</code><span class="sig-paren">(</span><em class="sig-param">m</em>, <em class="sig-param">femFun</em>, <em class="sig-param">quantity_id</em>, <em class="sig-param">quantity</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.buildQuantityRow" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">buildQuantityRow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">m</span></em>, <em class="sig-param"><span class="n">femFun</span></em>, <em class="sig-param"><span class="n">quantity_id</span></em>, <em class="sig-param"><span class="n">quantity</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.buildQuantityRow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Builds up contributions to gauge operator from the underlying
 element space</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Gauges.Gauges.initOutputWriter">
 <code class="sig-name descname">initOutputWriter</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.initOutputWriter" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize communication strategy for collective output of gauge
@@ -424,7 +417,7 @@ and saving it to disk.</p>
 (as ordered by globalMeasuredQuantities)</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Gauges.Gauges.buildGaugeComm">
 <code class="sig-name descname">buildGaugeComm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.buildGaugeComm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a communicator composed only of processes that own gauge
@@ -434,13 +427,13 @@ communicator for collecting all gauge data.  This communicator
 contains only processes that will contain gauge data.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Gauges.Gauges.addLineGaugePoints">
-<code class="sig-name descname">addLineGaugePoints</code><span class="sig-paren">(</span><em class="sig-param">line</em>, <em class="sig-param">line_segments</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.addLineGaugePoints" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">addLineGaugePoints</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">line</span></em>, <em class="sig-param"><span class="n">line_segments</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.addLineGaugePoints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Add all gauge points from each line into self.points</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Gauges.Gauges.identifyMeasuredQuantities">
 <code class="sig-name descname">identifyMeasuredQuantities</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.identifyMeasuredQuantities" title="Permalink to this definition">¶</a></dt>
 <dd><p>build measured quantities, a list of fields</p>
@@ -448,59 +441,59 @@ contains only processes that will contain gauge data.</p>
 only local quantities are saved</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Gauges.Gauges.buildPointGaugeOperators">
 <code class="sig-name descname">buildPointGaugeOperators</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.buildPointGaugeOperators" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build the linear algebra operators needed to compute the point gauges.</p>
 <p>The operators are all local since the point gauge measurements are calculated locally.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Gauges.Gauges.pruneDuplicateSegments">
-<code class="sig-name descname">pruneDuplicateSegments</code><span class="sig-paren">(</span><em class="sig-param">endpoints</em>, <em class="sig-param">length_segments</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.pruneDuplicateSegments" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">pruneDuplicateSegments</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">endpoints</span></em>, <em class="sig-param"><span class="n">length_segments</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.pruneDuplicateSegments" title="Permalink to this definition">¶</a></dt>
 <dd><p>prune duplicate segments across processors</p>
 <p>endpoints - a pair of points in 3-space defining the line
 length_segments - a pair of intersections augmented by length</p>
 <p>this could be optimized</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Gauges.Gauges.getMeshIntersections">
-<code class="sig-name descname">getMeshIntersections</code><span class="sig-paren">(</span><em class="sig-param">line</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.getMeshIntersections" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getMeshIntersections</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">line</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.getMeshIntersections" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Gauges.Gauges.buildLineIntegralGaugeOperators">
-<code class="sig-name descname">buildLineIntegralGaugeOperators</code><span class="sig-paren">(</span><em class="sig-param">lines</em>, <em class="sig-param">linesSegments</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.buildLineIntegralGaugeOperators" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">buildLineIntegralGaugeOperators</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">lines</span></em>, <em class="sig-param"><span class="n">linesSegments</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.buildLineIntegralGaugeOperators" title="Permalink to this definition">¶</a></dt>
 <dd><p>Build the linear algebra operators needed to compute the line integral gauges.</p>
 <p>The operators are local to each process, contributions are currently summed in the output functions.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Gauges.Gauges.attachModel">
-<code class="sig-name descname">attachModel</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">ar</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.attachModel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">attachModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">ar</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.attachModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attach this gauge to the given simulation model.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Gauges.Gauges.get_time">
 <code class="sig-name descname">get_time</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.get_time" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the current model time</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Gauges.Gauges.outputHeader">
 <code class="sig-name descname">outputHeader</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.outputHeader" title="Permalink to this definition">¶</a></dt>
 <dd><p>Outputs a single header for a CSV style file to self.file</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Gauges.Gauges.outputRow">
-<code class="sig-name descname">outputRow</code><span class="sig-paren">(</span><em class="sig-param">time</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.outputRow" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">outputRow</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">time</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.outputRow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Outputs a single row of currently calculated gauge data to self.file</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Gauges.Gauges.calculate">
 <code class="sig-name descname">calculate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Gauges.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Gauges.Gauges.calculate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Computes current gauge values, updates open output files</p>

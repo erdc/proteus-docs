@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>proteus.MeshAdaptPUMI.Checkpoint module &mdash; Proteus 1.7.3 documentation</title>
+  <title>proteus.MeshAdaptPUMI.Checkpoint module &mdash; Proteus 1.7.4 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                1.7.3
+                1.7.4
               </div>
             
           
@@ -167,8 +167,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id5">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChMoorings</a></li>
 </ul>
 </li>
 </ul>
@@ -189,13 +189,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../models/navier_stokes.html#immersed-boundaries">Immersed Boundaries</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/SWFlows.html">Shallow Water Flows</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#shallow-water-equations">Shallow Water equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#running-the-tests">Running the tests</a></li>
 </ul>
 </li>
 </ul>
@@ -266,35 +259,35 @@
             
   <div class="section" id="module-proteus.MeshAdaptPUMI.Checkpoint">
 <span id="proteus-meshadaptpumi-checkpoint-module"></span><h1>proteus.MeshAdaptPUMI.Checkpoint module<a class="headerlink" href="#module-proteus.MeshAdaptPUMI.Checkpoint" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.MeshAdaptPUMI.Checkpoint.Checkpointer">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.MeshAdaptPUMI.Checkpoint.</code><code class="sig-name descname">Checkpointer</code><span class="sig-paren">(</span><em class="sig-param">NSobject</em>, <em class="sig-param">frequency=10</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/MeshAdaptPUMI/Checkpoint.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.MeshAdaptPUMI.Checkpoint.Checkpointer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.MeshAdaptPUMI.Checkpoint.</code><code class="sig-name descname">Checkpointer</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">NSobject</span></em>, <em class="sig-param"><span class="n">frequency</span><span class="o">=</span><span class="default_value">10</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/MeshAdaptPUMI/Checkpoint.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.MeshAdaptPUMI.Checkpoint.Checkpointer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>This class is meant to handle the checkpointing process for adapted meshes. Information that’s needed to be loaded into hotstart needs to be output and then read in to be handled for data reconstruction</p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.MeshAdaptPUMI.Checkpoint.Checkpointer.checkpoint">
-<code class="sig-name descname">checkpoint</code><span class="sig-paren">(</span><em class="sig-param">hotStartTime</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/MeshAdaptPUMI/Checkpoint.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.MeshAdaptPUMI.Checkpoint.Checkpointer.checkpoint" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">checkpoint</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hotStartTime</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/MeshAdaptPUMI/Checkpoint.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.MeshAdaptPUMI.Checkpoint.Checkpointer.checkpoint" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.MeshAdaptPUMI.Checkpoint.Checkpointer.transferInfo">
 <code class="sig-name descname">transferInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/MeshAdaptPUMI/Checkpoint.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.MeshAdaptPUMI.Checkpoint.Checkpointer.transferInfo" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.MeshAdaptPUMI.Checkpoint.Checkpointer.saveMesh">
 <code class="sig-name descname">saveMesh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/MeshAdaptPUMI/Checkpoint.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.MeshAdaptPUMI.Checkpoint.Checkpointer.saveMesh" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.MeshAdaptPUMI.Checkpoint.Checkpointer.EncodeModel">
-<code class="sig-name descname">EncodeModel</code><span class="sig-paren">(</span><em class="sig-param">hotStartTime</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/MeshAdaptPUMI/Checkpoint.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.MeshAdaptPUMI.Checkpoint.Checkpointer.EncodeModel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">EncodeModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hotStartTime</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/MeshAdaptPUMI/Checkpoint.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.MeshAdaptPUMI.Checkpoint.Checkpointer.EncodeModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Grab only necessary components from modelListOld so far consistent only with first-order time integrator</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.MeshAdaptPUMI.Checkpoint.Checkpointer.DecodeModel">
-<code class="sig-name descname">DecodeModel</code><span class="sig-paren">(</span><em class="sig-param">filename</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/MeshAdaptPUMI/Checkpoint.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.MeshAdaptPUMI.Checkpoint.Checkpointer.DecodeModel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">DecodeModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/MeshAdaptPUMI/Checkpoint.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.MeshAdaptPUMI.Checkpoint.Checkpointer.DecodeModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>create a modelListOld that can interact with the post-adapt restart capabilities</p>
 </dd></dl>
 

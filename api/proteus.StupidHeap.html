@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>proteus.StupidHeap module &mdash; Proteus 1.7.3 documentation</title>
+  <title>proteus.StupidHeap module &mdash; Proteus 1.7.4 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                1.7.3
+                1.7.4
               </div>
             
           
@@ -167,8 +167,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id5">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChMoorings</a></li>
 </ul>
 </li>
 </ul>
@@ -189,13 +189,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../models/navier_stokes.html#immersed-boundaries">Immersed Boundaries</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/SWFlows.html">Shallow Water Flows</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#shallow-water-equations">Shallow Water equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#running-the-tests">Running the tests</a></li>
 </ul>
 </li>
 </ul>
@@ -267,82 +260,82 @@
   <div class="section" id="module-proteus.StupidHeap">
 <span id="proteus-stupidheap-module"></span><h1>proteus.StupidHeap module<a class="headerlink" href="#module-proteus.StupidHeap" title="Permalink to this headline">¶</a></h1>
 <p>A stupid implementation of a heap for fast marching methods</p>
-<div class="graphviz"><object data="../_images/inheritance-5c3aa8d2e1832894a021551a851f40877bf6aa56.svg" type="image/svg+xml" class="inheritance graphviz">
+<div class="graphviz"><object data="../_images/inheritance-0ff27b59d950468c877a69531f96c8e2c797c0f6.svg" type="image/svg+xml" class="inheritance graphviz">
 <p class="warning">Inheritance diagram of proteus.StupidHeap</p></object></div>
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.StupidHeap.StupidHeap">
 <em class="property">class </em><code class="sig-prename descclassname">proteus.StupidHeap.</code><code class="sig-name descname">StupidHeap</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Min Heap</p>
 <p>heap   = [(key,val), …] such that heap[i][1] &lt;= heap[2*i+1][1], heap[2*i+2][1]
 heapPos= {key:i} heap[heapPos[key]]=val</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="proteus.StupidHeap.StupidHeap.keyIndex">
 <code class="sig-name descname">keyIndex</code><em class="property"> = 0</em><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.keyIndex" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="proteus.StupidHeap.StupidHeap.valIndex">
 <code class="sig-name descname">valIndex</code><em class="property"> = 1</em><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.valIndex" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.StupidHeap.StupidHeap.isempty">
 <code class="sig-name descname">isempty</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.isempty" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.StupidHeap.StupidHeap.insert">
-<code class="sig-name descname">insert</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">val</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.insert" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">insert</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.insert" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.StupidHeap.StupidHeap.insertWithCheckForExistingKey">
-<code class="sig-name descname">insertWithCheckForExistingKey</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">val</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.insertWithCheckForExistingKey" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">insertWithCheckForExistingKey</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">val</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.insertWithCheckForExistingKey" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.StupidHeap.StupidHeap.pop">
-<code class="sig-name descname">pop</code><span class="sig-paren">(</span><em class="sig-param">debugLevel=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.pop" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">pop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">debugLevel</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.pop" title="Permalink to this definition">¶</a></dt>
 <dd><p>return smallest value in heap, maintain heap property</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.StupidHeap.StupidHeap.updateNode">
-<code class="sig-name descname">updateNode</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">newval</em>, <em class="sig-param">debugLevel=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.updateNode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">updateNode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">newval</span></em>, <em class="sig-param"><span class="n">debugLevel</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.updateNode" title="Permalink to this definition">¶</a></dt>
 <dd><p>modify value associated with key and restore heap property
 requires that key exist in heap</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.StupidHeap.StupidHeap.updateNodeWithMin">
-<code class="sig-name descname">updateNodeWithMin</code><span class="sig-paren">(</span><em class="sig-param">key</em>, <em class="sig-param">newval</em>, <em class="sig-param">debugLevel=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.updateNodeWithMin" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">updateNodeWithMin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">key</span></em>, <em class="sig-param"><span class="n">newval</span></em>, <em class="sig-param"><span class="n">debugLevel</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.updateNodeWithMin" title="Permalink to this definition">¶</a></dt>
 <dd><p>modify value associated with key and restore heap property
 requires that key exist in heap</p>
 <p>this version only updates value if new value is less</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.StupidHeap.StupidHeap.upHeap">
-<code class="sig-name descname">upHeap</code><span class="sig-paren">(</span><em class="sig-param">pos</em>, <em class="sig-param">debugLevel=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.upHeap" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">upHeap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">debugLevel</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.upHeap" title="Permalink to this definition">¶</a></dt>
 <dd><p>recursively move node at pos up the heap while it is less than its parent</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.StupidHeap.StupidHeap.downHeap">
-<code class="sig-name descname">downHeap</code><span class="sig-paren">(</span><em class="sig-param">pos</em>, <em class="sig-param">debugLevel=0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.downHeap" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">downHeap</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pos</span></em>, <em class="sig-param"><span class="n">debugLevel</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.downHeap" title="Permalink to this definition">¶</a></dt>
 <dd><p>assume left and right children of pos are heap, but
 left or right child &lt; pos</p>
 <p>promote smaller of children of node at pos, then repeat on its subheap</p>
 <p>then put original value at pos and work back up</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.StupidHeap.StupidHeap.checkHeap">
 <code class="sig-name descname">checkHeap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.checkHeap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.StupidHeap.StupidHeap.printHeap">
 <code class="sig-name descname">printHeap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/StupidHeap.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.StupidHeap.StupidHeap.printHeap" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>

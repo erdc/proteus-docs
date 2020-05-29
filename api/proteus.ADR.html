@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>proteus.ADR module &mdash; Proteus 1.7.3 documentation</title>
+  <title>proteus.ADR module &mdash; Proteus 1.7.4 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                1.7.3
+                1.7.4
               </div>
             
           
@@ -167,8 +167,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id5">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChMoorings</a></li>
 </ul>
 </li>
 </ul>
@@ -189,13 +189,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../models/navier_stokes.html#immersed-boundaries">Immersed Boundaries</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/SWFlows.html">Shallow Water Flows</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#shallow-water-equations">Shallow Water equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#running-the-tests">Running the tests</a></li>
 </ul>
 </li>
 </ul>
@@ -266,18 +259,237 @@
             
   <div class="section" id="module-proteus.ADR">
 <span id="proteus-adr-module"></span><h1>proteus.ADR module<a class="headerlink" href="#module-proteus.ADR" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
-<dt id="proteus.ADR.ADR">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.ADR.</code><code class="sig-name descname">ADR</code><span class="sig-paren">(</span><em class="sig-param">self: proteus.ADR.ADR</em>, <em class="sig-param">arg0: int</em>, <em class="sig-param">arg1: int</em>, <em class="sig-param">arg2: int</em>, <em class="sig-param">arg3: int</em>, <em class="sig-param">arg4: int</em>, <em class="sig-param">arg5: int</em>, <em class="sig-param">arg6: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.ADR" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pybind11_builtins.pybind11_object</span></code></p>
-<dl class="method">
-<dt id="proteus.ADR.ADR.calculateJacobian">
-<code class="sig-name descname">calculateJacobian</code><span class="sig-paren">(</span><em class="sig-param">self: proteus.ADR.ADR, arg0: numpy.ndarray[float64], arg1: numpy.ndarray[float64], arg2: numpy.ndarray[float64], arg3: numpy.ndarray[int32], arg4: numpy.ndarray[float64], arg5: numpy.ndarray[float64], arg6: numpy.ndarray[float64], arg7: numpy.ndarray[float64], arg8: numpy.ndarray[float64], arg9: numpy.ndarray[float64], arg10: numpy.ndarray[float64], arg11: float, arg12: float, arg13: float, arg14: float, arg15: numpy.ndarray[float64], arg16: numpy.ndarray[float64], arg17: numpy.ndarray[float64], arg18: numpy.ndarray[float64], arg19: numpy.ndarray[float64], arg20: numpy.ndarray[float64], arg21: numpy.ndarray[float64], arg22: numpy.ndarray[float64], arg23: numpy.ndarray[float64], arg24: int, arg25: numpy.ndarray[int32], arg26: numpy.ndarray[float64], arg27: numpy.ndarray[int32], arg28: numpy.ndarray[int32], arg29: numpy.ndarray[float64], arg30: numpy.ndarray[float64], arg31: numpy.ndarray[float64], arg32: int, arg33: float, arg34: numpy.ndarray[float64], arg35: numpy.ndarray[float64], arg36: numpy.ndarray[int32], arg37: numpy.ndarray[int32], arg38: numpy.ndarray[float64], arg39: int, arg40: numpy.ndarray[int32], arg41: numpy.ndarray[int32], arg42: numpy.ndarray[int32], arg43: numpy.ndarray[float64], arg44: numpy.ndarray[float64], arg45: numpy.ndarray[int32], arg46: numpy.ndarray[float64], arg47: numpy.ndarray[int32], arg48: numpy.ndarray[int32], arg49: numpy.ndarray[float64], arg50: numpy.ndarray[float64], arg51: numpy.ndarray[int32], arg52: numpy.ndarray[float64], arg53: float</em><span class="sig-paren">)</span> &#x2192; None<a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.ADR.calculateJacobian" title="Permalink to this definition">¶</a></dt>
+<p>An optimized Advection-Diffusion-Reaction module</p>
+<dl class="py class">
+<dt id="proteus.ADR.SubgridError">
+<em class="property">class </em><code class="sig-prename descclassname">proteus.ADR.</code><code class="sig-name descname">SubgridError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coefficients</span></em>, <em class="sig-param"><span class="n">nd</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.SubgridError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="proteus.SubgridError.html#proteus.SubgridError.SGE_base" title="proteus.SubgridError.SGE_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.SubgridError.SGE_base</span></code></a></p>
+<p>SubgridError approximation for ADR equations</p>
+<div class="graphviz"><object data="../_images/inheritance-90f92925b14c20e91ab687d10afc2ccea83de90b.svg" type="image/svg+xml" class="inheritance graphviz">
+<p class="warning">Inheritance diagram of SubgridError</p></object></div>
+<dl class="py method">
+<dt id="proteus.ADR.SubgridError.initializeElementQuadrature">
+<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mesh</span></em>, <em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cq</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.SubgridError.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
-<dt id="proteus.ADR.ADR.calculateResidual">
-<code class="sig-name descname">calculateResidual</code><span class="sig-paren">(</span><em class="sig-param">self: proteus.ADR.ADR, arg0: numpy.ndarray[float64], arg1: numpy.ndarray[float64], arg2: numpy.ndarray[float64], arg3: numpy.ndarray[int32], arg4: numpy.ndarray[float64], arg5: numpy.ndarray[float64], arg6: numpy.ndarray[float64], arg7: numpy.ndarray[float64], arg8: numpy.ndarray[float64], arg9: numpy.ndarray[float64], arg10: numpy.ndarray[float64], arg11: float, arg12: float, arg13: float, arg14: float, arg15: numpy.ndarray[float64], arg16: numpy.ndarray[float64], arg17: numpy.ndarray[float64], arg18: numpy.ndarray[float64], arg19: numpy.ndarray[float64], arg20: numpy.ndarray[float64], arg21: numpy.ndarray[float64], arg22: numpy.ndarray[float64], arg23: numpy.ndarray[float64], arg24: int, arg25: numpy.ndarray[int32], arg26: numpy.ndarray[float64], arg27: numpy.ndarray[int32], arg28: numpy.ndarray[int32], arg29: numpy.ndarray[float64], arg30: numpy.ndarray[float64], arg31: numpy.ndarray[float64], arg32: int, arg33: float, arg34: numpy.ndarray[float64], arg35: numpy.ndarray[float64], arg36: int, arg37: int, arg38: numpy.ndarray[float64], arg39: int, arg40: numpy.ndarray[int32], arg41: numpy.ndarray[int32], arg42: numpy.ndarray[int32], arg43: numpy.ndarray[float64], arg44: numpy.ndarray[float64], arg45: numpy.ndarray[int32], arg46: numpy.ndarray[float64], arg47: numpy.ndarray[int32], arg48: numpy.ndarray[int32], arg49: numpy.ndarray[float64], arg50: numpy.ndarray[float64], arg51: numpy.ndarray[float64], arg52: float</em><span class="sig-paren">)</span> &#x2192; None<a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.ADR.calculateResidual" title="Permalink to this definition">¶</a></dt>
+<dl class="py method">
+<dt id="proteus.ADR.SubgridError.updateSubgridErrorHistory">
+<code class="sig-name descname">updateSubgridErrorHistory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">initializationPhase</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.SubgridError.updateSubgridErrorHistory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="proteus.ADR.SubgridError.calculateSubgridError">
+<code class="sig-name descname">calculateSubgridError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">q</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.SubgridError.calculateSubgridError" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="proteus.ADR.ShockCapturing">
+<em class="property">class </em><code class="sig-prename descclassname">proteus.ADR.</code><code class="sig-name descname">ShockCapturing</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coefficients</span></em>, <em class="sig-param"><span class="n">nd</span></em>, <em class="sig-param"><span class="n">shockCapturingFactor</span><span class="o">=</span><span class="default_value">0.25</span></em>, <em class="sig-param"><span class="n">lag</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">nStepsToDelay</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.ShockCapturing" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="proteus.ShockCapturing.html#proteus.ShockCapturing.ShockCapturing_base" title="proteus.ShockCapturing.ShockCapturing_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.ShockCapturing.ShockCapturing_base</span></code></a></p>
+<p>Residual-based shock capturing for ADR equations</p>
+<div class="graphviz"><object data="../_images/inheritance-2c715c8831acfb1371826d8e13de84e960815f37.svg" type="image/svg+xml" class="inheritance graphviz">
+<p class="warning">Inheritance diagram of ShockCapturing</p></object></div>
+<dl class="py method">
+<dt id="proteus.ADR.ShockCapturing.initializeElementQuadrature">
+<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mesh</span></em>, <em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cq</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.ShockCapturing.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="proteus.ADR.ShockCapturing.updateShockCapturingHistory">
+<code class="sig-name descname">updateShockCapturingHistory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.ShockCapturing.updateShockCapturingHistory" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="proteus.ADR.NumericalFlux_IIPG">
+<em class="property">class </em><code class="sig-prename descclassname">proteus.ADR.</code><code class="sig-name descname">NumericalFlux_IIPG</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vt</span></em>, <em class="sig-param"><span class="n">getPointwiseBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getAdvectiveFluxBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getDiffusiveFluxBoundaryConditions</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.NumericalFlux_IIPG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="proteus.NumericalFlux.html#proteus.NumericalFlux.Advection_DiagonalUpwind_Diffusion_IIPG_exterior" title="proteus.NumericalFlux.Advection_DiagonalUpwind_Diffusion_IIPG_exterior"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.NumericalFlux.Advection_DiagonalUpwind_Diffusion_IIPG_exterior</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="proteus.ADR.NumericalFlux_SIPG">
+<em class="property">class </em><code class="sig-prename descclassname">proteus.ADR.</code><code class="sig-name descname">NumericalFlux_SIPG</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vt</span></em>, <em class="sig-param"><span class="n">getPointwiseBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getAdvectiveFluxBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getDiffusiveFluxBoundaryConditions</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.NumericalFlux_SIPG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="proteus.NumericalFlux.html#proteus.NumericalFlux.Advection_DiagonalUpwind_Diffusion_SIPG_exterior" title="proteus.NumericalFlux.Advection_DiagonalUpwind_Diffusion_SIPG_exterior"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.NumericalFlux.Advection_DiagonalUpwind_Diffusion_SIPG_exterior</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="proteus.ADR.NumericalFlux_NIPG">
+<em class="property">class </em><code class="sig-prename descclassname">proteus.ADR.</code><code class="sig-name descname">NumericalFlux_NIPG</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vt</span></em>, <em class="sig-param"><span class="n">getPointwiseBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getAdvectiveFluxBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getDiffusiveFluxBoundaryConditions</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.NumericalFlux_NIPG" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="proteus.NumericalFlux.html#proteus.NumericalFlux.Advection_DiagonalUpwind_Diffusion_NIPG_exterior" title="proteus.NumericalFlux.Advection_DiagonalUpwind_Diffusion_NIPG_exterior"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.NumericalFlux.Advection_DiagonalUpwind_Diffusion_NIPG_exterior</span></code></a></p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="proteus.ADR.NumericalFlux">
+<code class="sig-prename descclassname">proteus.ADR.</code><code class="sig-name descname">NumericalFlux</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.NumericalFlux" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#proteus.ADR.NumericalFlux_SIPG" title="proteus.ADR.NumericalFlux_SIPG"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.ADR.NumericalFlux_SIPG</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="proteus.ADR.Coefficients">
+<em class="property">class </em><code class="sig-prename descclassname">proteus.ADR.</code><code class="sig-name descname">Coefficients</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">aOfX</span></em>, <em class="sig-param"><span class="n">fOfX</span></em>, <em class="sig-param"><span class="n">velocity</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nc</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">nd</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">l2proj</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">timeVaryingCoefficients</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">forceStrongDirichlet</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">useMetrics</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">sc_uref</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">sc_beta</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">embeddedBoundary</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">embeddedBoundary_penalty</span><span class="o">=</span><span class="default_value">100.0</span></em>, <em class="sig-param"><span class="n">embeddedBoundary_ghost_penalty</span><span class="o">=</span><span class="default_value">0.1</span></em>, <em class="sig-param"><span class="n">embeddedBoundary_sdf</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">embeddedBoundary_u</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.Coefficients" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="proteus.TransportCoefficients.html#proteus.TransportCoefficients.TC_base" title="proteus.TransportCoefficients.TC_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.TransportCoefficients.TC_base</span></code></a></p>
+<p>Coefficients of linear ADR equations</p>
+<div class="graphviz"><object data="../_images/inheritance-a366c85bd504a8a71fd68ed7d65a253463973d05.svg" type="image/svg+xml" class="inheritance graphviz">
+<p class="warning">Inheritance diagram of Coefficients</p></object></div>
+<p>Set the number of components (equations) of the
+PDE and initialize the dicitionaries describing the form of the
+coefficients. Strings naming each component (used for viewing
+and archiving) and a structure defining the sparsity pattern
+of diffusion tensors may also be provided.</p>
+<dl class="py method">
+<dt id="proteus.ADR.Coefficients.L2projectEvaluate">
+<code class="sig-name descname">L2projectEvaluate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.Coefficients.L2projectEvaluate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="proteus.ADR.Coefficients.initializeMesh">
+<code class="sig-name descname">initializeMesh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mesh</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.Coefficients.initializeMesh" title="Permalink to this definition">¶</a></dt>
+<dd><p>Give the TC object access to the mesh for any mesh-dependent information.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="proteus.ADR.Coefficients.initializeElementQuadrature">
+<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cq</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.Coefficients.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Give the TC object access to the element quadrature storage</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="proteus.ADR.Coefficients.initializeElementBoundaryQuadrature">
+<code class="sig-name descname">initializeElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cebq</span></em>, <em class="sig-param"><span class="n">cebq_global</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.Coefficients.initializeElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Give the TC object access to the element boundary quadrature storage</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="proteus.ADR.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature">
+<code class="sig-name descname">initializeGlobalExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cebqe</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Give the TC object access to the exterior element boundary quadrature storage</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="proteus.ADR.Coefficients.evaluate">
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">c</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.Coefficients.evaluate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Evaluate the coefficients at a given time, t, using the coefficient storage passed in as the dictionary c.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="proteus.ADR.LevelModel">
+<em class="property">class </em><code class="sig-prename descclassname">proteus.ADR.</code><code class="sig-name descname">LevelModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">uDict</span></em>, <em class="sig-param"><span class="n">phiDict</span></em>, <em class="sig-param"><span class="n">testSpaceDict</span></em>, <em class="sig-param"><span class="n">matType</span></em>, <em class="sig-param"><span class="n">dofBoundaryConditionsDict</span></em>, <em class="sig-param"><span class="n">dofBoundaryConditionsSetterDict</span></em>, <em class="sig-param"><span class="n">coefficients</span></em>, <em class="sig-param"><span class="n">elementQuadrature</span></em>, <em class="sig-param"><span class="n">elementBoundaryQuadrature</span></em>, <em class="sig-param"><span class="n">fluxBoundaryConditionsDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">advectiveFluxBoundaryConditionsSetterDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diffusiveFluxBoundaryConditionsSetterDictDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stressTraceBoundaryConditionsSetterDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stabilization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shockCapturing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">conservativeFluxDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">numericalFluxType</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">TimeIntegrationClass</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">massLumping</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">reactionLumping</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'defaultName'</span></em>, <em class="sig-param"><span class="n">reuse_trial_and_test_quadrature</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">sd</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">movingDomain</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.LevelModel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="proteus.Transport.html#proteus.Transport.OneLevelTransport" title="proteus.Transport.OneLevelTransport"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.Transport.OneLevelTransport</span></code></a></p>
+<p>Optimized LevelModel for ADR equations</p>
+<div class="graphviz"><object data="../_images/inheritance-90bfc53d8d7570807fd30cba484f803bb472fb93.svg" type="image/svg+xml" class="inheritance graphviz">
+<p class="warning">Inheritance diagram of LevelModel</p></object></div>
+<p>Allocate storage and initialize some variables.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>uDict</strong> (<a class="reference external" href="https://docs.python.org/2/library/stdtypes.html#dict" title="(in Python v2.7)"><em>dict</em></a>) – Dictionary of
+<a class="reference internal" href="proteus.FemTools.html#proteus.FemTools.FiniteElementFunction" title="proteus.FemTools.FiniteElementFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.FemTools.FiniteElementFunction</span></code></a> objects.</p></li>
+<li><p><strong>phiDict</strong> (<a class="reference external" href="https://docs.python.org/2/library/stdtypes.html#dict" title="(in Python v2.7)"><em>dict</em></a>) – Dictionary of
+<a class="reference internal" href="proteus.FemTools.html#proteus.FemTools.FiniteElementFunction" title="proteus.FemTools.FiniteElementFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.FemTools.FiniteElementFunction</span></code></a> objects.</p></li>
+<li><p><strong>testSpaceDict</strong> (<a class="reference external" href="https://docs.python.org/2/library/stdtypes.html#dict" title="(in Python v2.7)"><em>dict</em></a>) – Dictionary of FiniteElementSpace objects</p></li>
+<li><p><strong>dofBoundaryConditionsDict</strong> (<a class="reference external" href="https://docs.python.org/2/library/stdtypes.html#dict" title="(in Python v2.7)"><em>dict</em></a>) – Dictionary of DOFBoundaryConditions objects for the
+Dirichlet conditions.</p></li>
+<li><p><strong>coefficients</strong> (<a class="reference internal" href="proteus.TransportCoefficients.html#proteus.TransportCoefficients.TC_base" title="proteus.TransportCoefficients.TC_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.TransportCoefficients.TC_base</span></code></a>) – Problem’s Transport Coefficients class.</p></li>
+<li><p><strong>elementQuadratureDict</strong> (<a class="reference external" href="https://docs.python.org/2/library/stdtypes.html#dict" title="(in Python v2.7)"><em>dict</em></a>) – Dictionary of dictionaries of quadrature rules for each
+element integral in each component equation.</p></li>
+<li><p><strong>elementBoundaryQuadratureDict</strong> (<a class="reference external" href="https://docs.python.org/2/library/stdtypes.html#dict" title="(in Python v2.7)"><em>dict</em></a>) – Dictionary of dictionaries of quadrature rules for each
+element boundary integral in each component equation</p></li>
+<li><p><strong>stabilization</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – </p></li>
+<li><p><strong>shockCapturing</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – </p></li>
+<li><p><strong>numericalFlux</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – </p></li>
+<li><p><strong>bdyNullSpace</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#bool" title="(in Python v2.7)"><em>bool</em></a>) – Indicates whether the boundary conditions create a global
+null space.</p></li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The constructor sets the input arguments, calculates
+dimensions, and allocates storage. The meanings of variable
+suffixes are</p>
+<ul class="simple">
+<li><p>global          – per physical domain</p></li>
+<li><p>element         – per element</p></li>
+<li><p>elementBoundary – per element boundary</p></li>
+</ul>
+<p>The prefix n means ‘number of’.</p>
+<p>Storage is divided into quantities required at different sets
+of points or geometric entities. Each type of storage has a
+dictionary for all the quantities of that type. The names
+and dimensions of the storage dictionaries are</p>
+<ul class="simple">
+<li><p>e – at element</p></li>
+<li><p>q – at element quadrature, unique to elements</p></li>
+<li><p>ebq – at element boundary quadrature, unique to elements</p></li>
+<li><p>ebq_global – at element boundary quadrature, unique to element
+boundary</p></li>
+<li><p>ebqe – at element boundary quadrature, unique to global,
+exterior element boundary</p></li>
+<li><p>phi_ip – at the generalized interpolation points required to
+build a nonlinear phi</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="proteus.ADR.LevelModel.nCalls">
+<code class="sig-name descname">nCalls</code><em class="property"> = 0</em><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.LevelModel.nCalls" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="proteus.ADR.LevelModel.calculateCoefficients">
+<code class="sig-name descname">calculateCoefficients</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.LevelModel.calculateCoefficients" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="proteus.ADR.LevelModel.getResidual">
+<code class="sig-name descname">getResidual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.LevelModel.getResidual" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the element residuals and add in to the global residual</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="proteus.ADR.LevelModel.getJacobian">
+<code class="sig-name descname">getJacobian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">jacobian</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.LevelModel.getJacobian" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="proteus.ADR.LevelModel.calculateElementQuadrature">
+<code class="sig-name descname">calculateElementQuadrature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.LevelModel.calculateElementQuadrature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the physical location and weights of the quadrature rules
+and the shape information at the quadrature points.</p>
+<p>This function should be called only when the mesh changes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="proteus.ADR.LevelModel.calculateElementBoundaryQuadrature">
+<code class="sig-name descname">calculateElementBoundaryQuadrature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.LevelModel.calculateElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the physical location and weights of the quadrature rules
+and the shape information at the quadrature points on element boundaries.</p>
+<p>This function should be called only when the mesh changes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="proteus.ADR.LevelModel.calculateExteriorElementBoundaryQuadrature">
+<code class="sig-name descname">calculateExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.LevelModel.calculateExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the physical location and weights of the quadrature rules
+and the shape information at the quadrature points on global element boundaries.</p>
+<p>This function should be called only when the mesh changes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="proteus.ADR.LevelModel.estimate_mt">
+<code class="sig-name descname">estimate_mt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.LevelModel.estimate_mt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="proteus.ADR.LevelModel.calculateAuxiliaryQuantitiesAfterStep">
+<code class="sig-name descname">calculateAuxiliaryQuantitiesAfterStep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.LevelModel.calculateAuxiliaryQuantitiesAfterStep" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="proteus.ADR.LevelModel.calculateSolutionAtQuadrature">
+<code class="sig-name descname">calculateSolutionAtQuadrature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/ADR.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.ADR.LevelModel.calculateSolutionAtQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

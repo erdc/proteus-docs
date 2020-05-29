@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_v_o_f3_p_8cpp" kind="file" language="C++">
+    <compoundname>VOF3P.cpp</compoundname>
+    <includes refid="_v_o_f3_p_8h" local="yes">VOF3P.h</includes>
+    <incdepgraph>
+      <node id="2149">
+        <label>valarray</label>
+      </node>
+      <node id="2147">
+        <label>cmath</label>
+      </node>
+      <node id="2157">
+        <label>xtensor/xio.hpp</label>
+      </node>
+      <node id="2154">
+        <label>stdexcept</label>
+      </node>
+      <node id="2155">
+        <label>string</label>
+      </node>
+      <node id="2153">
+        <label>map</label>
+      </node>
+      <node id="2156">
+        <label>xtensor-python/pyarray.hpp</label>
+      </node>
+      <node id="2151">
+        <label>ModelFactory.h</label>
+        <link refid="_model_factory_8h"/>
+        <childnode refid="2148" relation="include">
+        </childnode>
+      </node>
+      <node id="2145">
+        <label>VOF3P.cpp</label>
+        <link refid="_v_o_f3_p_8cpp"/>
+        <childnode refid="2146" relation="include">
+        </childnode>
+      </node>
+      <node id="2152">
+        <label>ArgumentsDict.h</label>
+        <link refid="_arguments_dict_8h"/>
+        <childnode refid="2153" relation="include">
+        </childnode>
+        <childnode refid="2154" relation="include">
+        </childnode>
+        <childnode refid="2155" relation="include">
+        </childnode>
+        <childnode refid="2156" relation="include">
+        </childnode>
+        <childnode refid="2157" relation="include">
+        </childnode>
+      </node>
+      <node id="2146">
+        <label>VOF3P.h</label>
+        <link refid="_v_o_f3_p_8h"/>
+        <childnode refid="2147" relation="include">
+        </childnode>
+        <childnode refid="2148" relation="include">
+        </childnode>
+        <childnode refid="2149" relation="include">
+        </childnode>
+        <childnode refid="2150" relation="include">
+        </childnode>
+        <childnode refid="2151" relation="include">
+        </childnode>
+        <childnode refid="2152" relation="include">
+        </childnode>
+        <childnode refid="2156" relation="include">
+        </childnode>
+      </node>
+      <node id="2148">
+        <label>iostream</label>
+      </node>
+      <node id="2150">
+        <label>CompKernel.h</label>
+        <link refid="_comp_kernel_8h"/>
+        <childnode refid="2147" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacext">xt</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_v_o_f3_p_8cpp_1a17aae50ec30d0ac23ea339b4d09812a6" prot="public" static="no">
+        <name>FORCE_IMPORT_ARRAY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cekees/proteus/proteus/mprans/VOF3P.cpp" line="1" column="9" bodyfile="/home/cekees/proteus/proteus/mprans/VOF3P.cpp" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_v_o_f3_p_8cpp_1a32d1c64cf6e0aa2c605dd466d0a47991" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PYBIND11_MODULE</definition>
+        <argsstring>(cVOF3P, m)</argsstring>
+        <name>PYBIND11_MODULE</name>
+        <param>
+          <type>cVOF3P</type>
+        </param>
+        <param>
+          <type>m</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cekees/proteus/proteus/mprans/VOF3P.cpp" line="20" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/VOF3P.cpp" bodystart="20" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="_v_o_f3_p_8cpp_1a17aae50ec30d0ac23ea339b4d09812a6" refkind="member"><highlight class="preprocessor">#define<sp/>FORCE_IMPORT_ARRAY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_v_o_f3_p_8h" kindref="compound">VOF3P.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">py<sp/>=<sp/>pybind11;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacext" kindref="compound">xt</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__GNUC__)<sp/>&amp;&amp;<sp/>!defined(__clang__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">workaround</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>complex_allocator()</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;int&gt;<sp/>ai;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;double&gt;<sp/>ad;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="_v_o_f3_p_8cpp_1a32d1c64cf6e0aa2c605dd466d0a47991" refkind="member"><highlight class="normal"><ref refid="_v_o_f3_p_8cpp_1a32d1c64cf6e0aa2c605dd466d0a47991" kindref="member">PYBIND11_MODULE</ref>(cVOF3P,<sp/>m)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classproteus_1_1cpp_v_o_f3_p__base" kindref="compound">proteus::cppVOF3P_base</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceproteus_1a0b02db9f7a910f9de800e86346ec9123" kindref="member">proteus::newVOF3P</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>xt::import_numpy();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>py::class_&lt;cppVOF3P_base&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;cppVOF3P_base&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateResidualElementBased&quot;</highlight><highlight class="normal">,<sp/>&amp;cppVOF3P_base::calculateResidualElementBased)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateJacobian&quot;</highlight><highlight class="normal">,<sp/>&amp;cppVOF3P_base::calculateJacobian)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;FCTStep&quot;</highlight><highlight class="normal">,<sp/>&amp;cppVOF3P_base::FCTStep)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateResidualEdgeBased&quot;</highlight><highlight class="normal">,<sp/>&amp;cppVOF3P_base::calculateResidualEdgeBased);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;newVOF3P&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespaceproteus_1a0b02db9f7a910f9de800e86346ec9123" kindref="member">newVOF3P</ref>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/cekees/proteus/proteus/mprans/VOF3P.cpp"/>
+  </compounddef>
+</doxygen>

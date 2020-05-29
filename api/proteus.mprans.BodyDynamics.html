@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>proteus.mprans.BodyDynamics module &mdash; Proteus 1.7.3 documentation</title>
+  <title>proteus.mprans.BodyDynamics module &mdash; Proteus 1.7.4 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                1.7.3
+                1.7.4
               </div>
             
           
@@ -167,8 +167,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id5">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChMoorings</a></li>
 </ul>
 </li>
 </ul>
@@ -189,13 +189,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../models/navier_stokes.html#immersed-boundaries">Immersed Boundaries</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/SWFlows.html">Shallow Water Flows</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#shallow-water-equations">Shallow Water equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#running-the-tests">Running the tests</a></li>
 </ul>
 </li>
 </ul>
@@ -266,9 +259,9 @@
             
   <div class="section" id="module-proteus.mprans.BodyDynamics">
 <span id="proteus-mprans-bodydynamics-module"></span><h1>proteus.mprans.BodyDynamics module<a class="headerlink" href="#module-proteus.mprans.BodyDynamics" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.mprans.BodyDynamics.RigidBody">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.BodyDynamics.</code><code class="sig-name descname">RigidBody</code><span class="sig-paren">(</span><em class="sig-param">shape</em>, <em class="sig-param">cfl_target=0.9</em>, <em class="sig-param">dt_init=0.001</em>, <em class="sig-param">substeps=20</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.BodyDynamics.</code><code class="sig-name descname">RigidBody</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">shape</span></em>, <em class="sig-param"><span class="n">cfl_target</span><span class="o">=</span><span class="default_value">0.9</span></em>, <em class="sig-param"><span class="n">dt_init</span><span class="o">=</span><span class="default_value">0.001</span></em>, <em class="sig-param"><span class="n">substeps</span><span class="o">=</span><span class="default_value">20</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.AuxiliaryVariables.html#proteus.AuxiliaryVariables.AV_base" title="proteus.AuxiliaryVariables.AV_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.AuxiliaryVariables.AV_base</span></code></a>, <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Auxiliary variable used to calculate attributes of an associated shape
 class instance acting as a rigid body. To set a shape as a rigid body, use
@@ -285,26 +278,26 @@ shape.setRigidBody() has been called and after calling assembleDomain().
 <dd class="field-odd"><p><strong>dt_init</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) – first time step of the simulation.</p>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.attachModel">
-<code class="sig-name descname">attachModel</code><span class="sig-paren">(</span><em class="sig-param">model</em>, <em class="sig-param">ar</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.attachModel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">attachModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">ar</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.attachModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Attaches model to auxiliary variable</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.calculate_init">
 <code class="sig-name descname">calculate_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.calculate_init" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function called automatically at the very beginning of the simulation
 by proteus.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.calculate">
 <code class="sig-name descname">calculate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.calculate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function called automatically at each time step by proteus.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.getPressureForces">
 <code class="sig-name descname">getPressureForces</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.getPressureForces" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gives the pressure forces applied on each segments/facets of the rigid
@@ -313,7 +306,7 @@ body
 :rtype: array_like</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.getShearForces">
 <code class="sig-name descname">getShearForces</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.getShearForces" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gives the shear forces applied on each segments/facets of the rigid
@@ -322,7 +315,7 @@ body
 :rtype: array_like</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.getGravityForce">
 <code class="sig-name descname">getGravityForce</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.getGravityForce" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -335,7 +328,7 @@ body
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.getMoments">
 <code class="sig-name descname">getMoments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.getMoments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gives the moments applied on each segments/facets of the rigid body
@@ -343,7 +336,7 @@ body
 :rtype: array_like</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.getTotalMoments">
 <code class="sig-name descname">getTotalMoments</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.getTotalMoments" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gives the total moments applied the rigid body
@@ -351,7 +344,7 @@ body
 :rtype: array_like</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.getTotalForces">
 <code class="sig-name descname">getTotalForces</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.getTotalForces" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gives the total forces applied the rigid body: shear, pressure and
@@ -360,7 +353,7 @@ gravity forces
 :rtype: array_like</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.getAcceleration">
 <code class="sig-name descname">getAcceleration</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.getAcceleration" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -373,24 +366,24 @@ gravity forces
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.getAngularAcceleration">
 <code class="sig-name descname">getAngularAcceleration</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.getAngularAcceleration" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.getDisplacement">
-<code class="sig-name descname">getDisplacement</code><span class="sig-paren">(</span><em class="sig-param">dt</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.getDisplacement" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getDisplacement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dt</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.getDisplacement" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.getAngularDisplacement">
-<code class="sig-name descname">getAngularDisplacement</code><span class="sig-paren">(</span><em class="sig-param">dt</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.getAngularDisplacement" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getAngularDisplacement</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dt</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.getAngularDisplacement" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.setSprings">
-<code class="sig-name descname">setSprings</code><span class="sig-paren">(</span><em class="sig-param">springs</em>, <em class="sig-param">Kx</em>, <em class="sig-param">Ky</em>, <em class="sig-param">Krot</em>, <em class="sig-param">Cx</em>, <em class="sig-param">Cy</em>, <em class="sig-param">Crot</em>, <em class="sig-param">Kz=0.0</em>, <em class="sig-param">Cz=0.0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.setSprings" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setSprings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">springs</span></em>, <em class="sig-param"><span class="n">Kx</span></em>, <em class="sig-param"><span class="n">Ky</span></em>, <em class="sig-param"><span class="n">Krot</span></em>, <em class="sig-param"><span class="n">Cx</span></em>, <em class="sig-param"><span class="n">Cy</span></em>, <em class="sig-param"><span class="n">Crot</span></em>, <em class="sig-param"><span class="n">Kz</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">Cz</span><span class="o">=</span><span class="default_value">0.0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.setSprings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets a system of uniform springs to model soil’s reactions (for moving bodies)
 :param spring: If True, spring module is switched on.
 :type spring: string
@@ -408,9 +401,9 @@ gravity forces
 :type Crot: float</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.setPivot">
-<code class="sig-name descname">setPivot</code><span class="sig-paren">(</span><em class="sig-param">pivot=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.setPivot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setPivot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pivot</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.setPivot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets pivot centre of rotation for the angular calculation</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -419,9 +412,9 @@ gravity forces
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.setNumericalScheme">
-<code class="sig-name descname">setNumericalScheme</code><span class="sig-paren">(</span><em class="sig-param">scheme</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.setNumericalScheme" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setNumericalScheme</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scheme</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.setNumericalScheme" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the numerical scheme used to solve motion.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -431,9 +424,9 @@ If Forward_Euler, forward euler scheme is applied.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.inputMotion">
-<code class="sig-name descname">inputMotion</code><span class="sig-paren">(</span><em class="sig-param">InputMotion=False, pivot=None, At=[0.0, 0.0, 0], Tt=[0.0, 0.0, 0], Ar=[0.0, 0.0, 0], Tr=[0.0, 0.0, 0]</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.inputMotion" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">inputMotion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">InputMotion</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">pivot</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">At</span><span class="o">=</span><span class="default_value">[0.0, 0.0, 0]</span></em>, <em class="sig-param"><span class="n">Tt</span><span class="o">=</span><span class="default_value">[0.0, 0.0, 0]</span></em>, <em class="sig-param"><span class="n">Ar</span><span class="o">=</span><span class="default_value">[0.0, 0.0, 0]</span></em>, <em class="sig-param"><span class="n">Tr</span><span class="o">=</span><span class="default_value">[0.0, 0.0, 0]</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.inputMotion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets motion as an input. It’s imposed rather than calculated.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -449,7 +442,7 @@ If Forward_Euler, forward euler scheme is applied.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.imposeSinusoidalMotion">
 <code class="sig-name descname">imposeSinusoidalMotion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.imposeSinusoidalMotion" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
@@ -458,17 +451,17 @@ If Forward_Euler, forward euler scheme is applied.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.step">
-<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param">dt</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.step" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dt</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.step" title="Permalink to this definition">¶</a></dt>
 <dd><p>Step for rigid body calculations in Python
 :param dt: time step
 :type dt: float</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.setConstraints">
-<code class="sig-name descname">setConstraints</code><span class="sig-paren">(</span><em class="sig-param">free_x</em>, <em class="sig-param">free_r</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.setConstraints" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setConstraints</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">free_x</span></em>, <em class="sig-param"><span class="n">free_r</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.setConstraints" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets constraints on the Shape (for moving bodies)
 :param free_x: Translational constraints.
 :type free_x: array_like
@@ -476,17 +469,17 @@ If Forward_Euler, forward euler scheme is applied.</p>
 :type free_r: array_like</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.setMass">
-<code class="sig-name descname">setMass</code><span class="sig-paren">(</span><em class="sig-param">mass</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.setMass" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setMass</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mass</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.setMass" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set mass of the shape.
 :param mass: mass of the body
 :type mass: float</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.setInertiaTensor">
-<code class="sig-name descname">setInertiaTensor</code><span class="sig-paren">(</span><em class="sig-param">It</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.setInertiaTensor" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setInertiaTensor</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">It</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.setInertiaTensor" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the inertia tensor of the shape
 :param It: Inertia tensor of the body (3x3 array in 3D, float in 2D)
 :type It: array_like, float</p>
@@ -495,9 +488,9 @@ If Forward_Euler, forward euler scheme is applied.</p>
 shape.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.getInertia">
-<code class="sig-name descname">getInertia</code><span class="sig-paren">(</span><em class="sig-param">vec=(0.0</em>, <em class="sig-param">0.0</em>, <em class="sig-param">1.0)</em>, <em class="sig-param">pivot=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.getInertia" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getInertia</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vec</span><span class="o">=</span><span class="default_value">0.0, 0.0, 1.0</span></em>, <em class="sig-param"><span class="n">pivot</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.getInertia" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gives the inertia of the shape from an axis and a pivot
 :param vec: Vector around which the body rotates.
 :type vec: array_like
@@ -521,9 +514,9 @@ rotated when initialised), set the coordinate system accordingly
 before calling this function</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.RigidBody.setRecordValues">
-<code class="sig-name descname">setRecordValues</code><span class="sig-paren">(</span><em class="sig-param">filename=None</em>, <em class="sig-param">all_values=False</em>, <em class="sig-param">pos=False</em>, <em class="sig-param">rot=False</em>, <em class="sig-param">ang_disp=False</em>, <em class="sig-param">F=False</em>, <em class="sig-param">M=False</em>, <em class="sig-param">inertia=False</em>, <em class="sig-param">vel=False</em>, <em class="sig-param">acc=False</em>, <em class="sig-param">ang_vel=False</em>, <em class="sig-param">ang_acc=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.setRecordValues" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setRecordValues</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">all_values</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">pos</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">rot</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">ang_disp</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">F</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">M</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">inertia</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">vel</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">acc</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">ang_vel</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">ang_acc</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.RigidBody.setRecordValues" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the rigid body attributes that are to be recorded in a csv file
 during the simulation.
 :param filename: Name of file, if not set, the file will be named as follows:</p>
@@ -561,28 +554,28 @@ value: list of length 2: [variable name, index within variable]</p>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.mprans.BodyDynamics.CaissonBody">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.BodyDynamics.</code><code class="sig-name descname">CaissonBody</code><span class="sig-paren">(</span><em class="sig-param">shape</em>, <em class="sig-param">substeps</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.BodyDynamics.</code><code class="sig-name descname">CaissonBody</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">shape</span></em>, <em class="sig-param"><span class="n">substeps</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.mprans.BodyDynamics.RigidBody" title="proteus.mprans.BodyDynamics.RigidBody"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.mprans.BodyDynamics.RigidBody</span></code></a></p>
 <p>Sub-class to create a caisson rigid body.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.CaissonBody.calculate_init">
 <code class="sig-name descname">calculate_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.calculate_init" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function called at the very beginning of the simulation by proteus.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.CaissonBody.step">
-<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param">dt</em>, <em class="sig-param">substeps=20</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.step" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dt</span></em>, <em class="sig-param"><span class="n">substeps</span><span class="o">=</span><span class="default_value">20</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.step" title="Permalink to this definition">¶</a></dt>
 <dd><p>Step for rigid body calculations in Python
 :param dt: time step
 :type dt: float</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.CaissonBody.getInertia">
-<code class="sig-name descname">getInertia</code><span class="sig-paren">(</span><em class="sig-param">vec=(0.0</em>, <em class="sig-param">0.0</em>, <em class="sig-param">1.0)</em>, <em class="sig-param">pivot=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.getInertia" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getInertia</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vec</span><span class="o">=</span><span class="default_value">0.0, 0.0, 1.0</span></em>, <em class="sig-param"><span class="n">pivot</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.getInertia" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gives the inertia of the shape from an axis and a pivot
 :param vec: Vector around which the body rotates.
 :type vec: array_like
@@ -606,9 +599,9 @@ rotated when initialised), set the coordinate system accordingly
 before calling this function</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.CaissonBody.setFriction">
-<code class="sig-name descname">setFriction</code><span class="sig-paren">(</span><em class="sig-param">friction</em>, <em class="sig-param">m_static</em>, <em class="sig-param">m_dynamic</em>, <em class="sig-param">tolerance</em>, <em class="sig-param">grainSize</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.setFriction" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setFriction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">friction</span></em>, <em class="sig-param"><span class="n">m_static</span></em>, <em class="sig-param"><span class="n">m_dynamic</span></em>, <em class="sig-param"><span class="n">tolerance</span></em>, <em class="sig-param"><span class="n">grainSize</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.setFriction" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets material properties for sliding and overturning modules
 :param friction: If True, friction module is switched on.
 :type friction: string
@@ -629,17 +622,17 @@ If the rigid body lower point position is higher than this value, it is a floati
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.CaissonBody.setOverturning">
-<code class="sig-name descname">setOverturning</code><span class="sig-paren">(</span><em class="sig-param">overturning</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.setOverturning" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setOverturning</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">overturning</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.setOverturning" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets material properties for sliding and overturning modules
 :param overturning: If True, overturning module is switched on.
 :type overturning: string</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.CaissonBody.setSprings">
-<code class="sig-name descname">setSprings</code><span class="sig-paren">(</span><em class="sig-param">springs</em>, <em class="sig-param">Kx</em>, <em class="sig-param">Ky</em>, <em class="sig-param">Krot</em>, <em class="sig-param">Cx</em>, <em class="sig-param">Cy</em>, <em class="sig-param">Crot</em>, <em class="sig-param">Kz=0.0</em>, <em class="sig-param">Cz=0.0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.setSprings" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setSprings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">springs</span></em>, <em class="sig-param"><span class="n">Kx</span></em>, <em class="sig-param"><span class="n">Ky</span></em>, <em class="sig-param"><span class="n">Krot</span></em>, <em class="sig-param"><span class="n">Cx</span></em>, <em class="sig-param"><span class="n">Cy</span></em>, <em class="sig-param"><span class="n">Crot</span></em>, <em class="sig-param"><span class="n">Kz</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">Cz</span><span class="o">=</span><span class="default_value">0.0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.setSprings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets a system of uniform springs to model soil’s reactions (for moving bodies)
 :param spring: If True, spring module is switched on.
 :type spring: string
@@ -657,9 +650,9 @@ If the rigid body lower point position is higher than this value, it is a floati
 :type Crot: float</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.CaissonBody.setNumericalScheme">
-<code class="sig-name descname">setNumericalScheme</code><span class="sig-paren">(</span><em class="sig-param">scheme</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.setNumericalScheme" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setNumericalScheme</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">scheme</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.setNumericalScheme" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the numerical scheme used to solve motion.
 :param scheme: If Runge_Kutta, runge kutta scheme is applied.</p>
 <blockquote>
@@ -669,25 +662,25 @@ If the rigid body lower point position is higher than this value, it is a floati
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.CaissonBody.friction_module">
-<code class="sig-name descname">friction_module</code><span class="sig-paren">(</span><em class="sig-param">dt</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.friction_module" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">friction_module</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dt</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.friction_module" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate sliding motion modelling frictional force.
 :param dt:
 :type dt: Time step.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.CaissonBody.overturning_module">
-<code class="sig-name descname">overturning_module</code><span class="sig-paren">(</span><em class="sig-param">dt</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.overturning_module" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">overturning_module</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dt</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.overturning_module" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate overturning motion modelling soil foundation reactions.
 :param dt:
 :type dt: Time step.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.CaissonBody.setRecordValues">
-<code class="sig-name descname">setRecordValues</code><span class="sig-paren">(</span><em class="sig-param">filename=None</em>, <em class="sig-param">all_values=False</em>, <em class="sig-param">pos=False</em>, <em class="sig-param">rot=False</em>, <em class="sig-param">ang_disp=False</em>, <em class="sig-param">F=False</em>, <em class="sig-param">M=False</em>, <em class="sig-param">inertia=False</em>, <em class="sig-param">vel=False</em>, <em class="sig-param">acc=False</em>, <em class="sig-param">ang_vel=False</em>, <em class="sig-param">ang_acc=False</em>, <em class="sig-param">elasticPlastic=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.setRecordValues" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setRecordValues</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">all_values</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">pos</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">rot</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">ang_disp</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">F</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">M</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">inertia</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">vel</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">acc</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">ang_vel</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">ang_acc</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">elasticPlastic</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.CaissonBody.setRecordValues" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the rigid body attributes that are to be recorded in a csv file
 during the simulation.
 :param filename: Name of file, if not set, the file will be named as follows:</p>
@@ -725,28 +718,28 @@ value: list of length 2: [variable name, index within variable]</p>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.mprans.BodyDynamics.PaddleBody">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.BodyDynamics.</code><code class="sig-name descname">PaddleBody</code><span class="sig-paren">(</span><em class="sig-param">shape</em>, <em class="sig-param">substeps</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.PaddleBody" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.BodyDynamics.</code><code class="sig-name descname">PaddleBody</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">shape</span></em>, <em class="sig-param"><span class="n">substeps</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.PaddleBody" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.mprans.BodyDynamics.RigidBody" title="proteus.mprans.BodyDynamics.RigidBody"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.mprans.BodyDynamics.RigidBody</span></code></a></p>
 <p>Sub-class to create a PADDLE rigid body.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.PaddleBody.calculate_init">
 <code class="sig-name descname">calculate_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.PaddleBody.calculate_init" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function called at the very beginning of the simulation by proteus.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.PaddleBody.step">
-<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param">dt</em>, <em class="sig-param">substeps=20</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.PaddleBody.step" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dt</span></em>, <em class="sig-param"><span class="n">substeps</span><span class="o">=</span><span class="default_value">20</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.PaddleBody.step" title="Permalink to this definition">¶</a></dt>
 <dd><p>Step for rigid body calculations in Python
 :param dt: time step
 :type dt: float</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.PaddleBody.inputMotion">
-<code class="sig-name descname">inputMotion</code><span class="sig-paren">(</span><em class="sig-param">InputMotion=False, pivot=None, At=[0.0, 0.0, 0], Tt=[0.0, 0.0, 0], Ar=[0.0, 0.0, 0], Tr=[0.0, 0.0, 0], rampStart=0, rampEnd=0, Tend=1000000.0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.PaddleBody.inputMotion" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">inputMotion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">InputMotion</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">pivot</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">At</span><span class="o">=</span><span class="default_value">[0.0, 0.0, 0]</span></em>, <em class="sig-param"><span class="n">Tt</span><span class="o">=</span><span class="default_value">[0.0, 0.0, 0]</span></em>, <em class="sig-param"><span class="n">Ar</span><span class="o">=</span><span class="default_value">[0.0, 0.0, 0]</span></em>, <em class="sig-param"><span class="n">Tr</span><span class="o">=</span><span class="default_value">[0.0, 0.0, 0]</span></em>, <em class="sig-param"><span class="n">rampStart</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">rampEnd</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">Tend</span><span class="o">=</span><span class="default_value">1000000.0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.PaddleBody.inputMotion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets motion as an input. It’s imposed rather than calculated.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -765,9 +758,9 @@ value: list of length 2: [variable name, index within variable]</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.BodyDynamics.PaddleBody.imposeSinusoidalMotion">
-<code class="sig-name descname">imposeSinusoidalMotion</code><span class="sig-paren">(</span><em class="sig-param">tt=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.PaddleBody.imposeSinusoidalMotion" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">imposeSinusoidalMotion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">tt</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.PaddleBody.imposeSinusoidalMotion" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>Motion is imposed rather than calculated.</dt><dd></dd>
 <dt>tt: None or float</dt><dd><p>tt should be None for other than testing purposes. If not None,
@@ -778,19 +771,19 @@ time is externally set.</p>
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.mprans.BodyDynamics.forward_euler">
-<code class="sig-prename descclassname">proteus.mprans.BodyDynamics.</code><code class="sig-name descname">forward_euler</code><span class="sig-paren">(</span><em class="sig-param">p0</em>, <em class="sig-param">v0</em>, <em class="sig-param">a</em>, <em class="sig-param">dt</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.forward_euler" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.mprans.BodyDynamics.</code><code class="sig-name descname">forward_euler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">p0</span></em>, <em class="sig-param"><span class="n">v0</span></em>, <em class="sig-param"><span class="n">a</span></em>, <em class="sig-param"><span class="n">dt</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.forward_euler" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.mprans.BodyDynamics.getEulerAngles">
-<code class="sig-prename descclassname">proteus.mprans.BodyDynamics.</code><code class="sig-name descname">getEulerAngles</code><span class="sig-paren">(</span><em class="sig-param">coord_system</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.getEulerAngles" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.mprans.BodyDynamics.</code><code class="sig-name descname">getEulerAngles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coord_system</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.getEulerAngles" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.mprans.BodyDynamics.runge_kutta">
-<code class="sig-prename descclassname">proteus.mprans.BodyDynamics.</code><code class="sig-name descname">runge_kutta</code><span class="sig-paren">(</span><em class="sig-param">u0</em>, <em class="sig-param">v0</em>, <em class="sig-param">a0</em>, <em class="sig-param">dt</em>, <em class="sig-param">substeps</em>, <em class="sig-param">F</em>, <em class="sig-param">K</em>, <em class="sig-param">C</em>, <em class="sig-param">m</em>, <em class="sig-param">velCheck</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.runge_kutta" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.mprans.BodyDynamics.</code><code class="sig-name descname">runge_kutta</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u0</span></em>, <em class="sig-param"><span class="n">v0</span></em>, <em class="sig-param"><span class="n">a0</span></em>, <em class="sig-param"><span class="n">dt</span></em>, <em class="sig-param"><span class="n">substeps</span></em>, <em class="sig-param"><span class="n">F</span></em>, <em class="sig-param"><span class="n">K</span></em>, <em class="sig-param"><span class="n">C</span></em>, <em class="sig-param"><span class="n">m</span></em>, <em class="sig-param"><span class="n">velCheck</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BodyDynamics.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BodyDynamics.runge_kutta" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function that applies Runge Kutta’s scheme for motion calculation.
 :param u0:
 :type u0: translational or rotational displacement.

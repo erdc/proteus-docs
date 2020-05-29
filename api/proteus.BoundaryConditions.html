@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>proteus.BoundaryConditions module &mdash; Proteus 1.7.3 documentation</title>
+  <title>proteus.BoundaryConditions module &mdash; Proteus 1.7.4 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                1.7.3
+                1.7.4
               </div>
             
           
@@ -167,8 +167,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id5">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChMoorings</a></li>
 </ul>
 </li>
 </ul>
@@ -189,13 +189,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../models/navier_stokes.html#immersed-boundaries">Immersed Boundaries</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/SWFlows.html">Shallow Water Flows</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#shallow-water-equations">Shallow Water equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#running-the-tests">Running the tests</a></li>
 </ul>
 </li>
 </ul>
@@ -266,12 +259,12 @@
             
   <div class="section" id="module-proteus.BoundaryConditions">
 <span id="proteus-boundaryconditions-module"></span><h1>proteus.BoundaryConditions module<a class="headerlink" href="#module-proteus.BoundaryConditions" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.BoundaryConditions.BC_Base">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.BoundaryConditions.</code><code class="sig-name descname">BC_Base</code><span class="sig-paren">(</span><em class="sig-param">shape=None</em>, <em class="sig-param">name=None</em>, <em class="sig-param">b_or=None</em>, <em class="sig-param">b_i=0</em>, <em class="sig-param">nd=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BC_Base" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.BoundaryConditions.</code><code class="sig-name descname">BC_Base</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">shape</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">b_or</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">b_i</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">nd</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BC_Base" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Generic class regrouping boundary conditions</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="proteus.BoundaryConditions.BC_Base.BC_type">
 <code class="sig-name descname">BC_type</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BC_Base.BC_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>str</p>
@@ -282,7 +275,7 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="proteus.BoundaryConditions.BC_Base.Shape">
 <code class="sig-name descname">Shape</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BC_Base.Shape" title="Permalink to this definition">¶</a></dt>
 <dd><p>object</p>
@@ -293,7 +286,7 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="proteus.BoundaryConditions.BC_Base.ct">
 <code class="sig-name descname">ct</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BC_Base.ct" title="Permalink to this definition">¶</a></dt>
 <dd><p>object</p>
@@ -304,9 +297,9 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py method">
 <dt id="proteus.BoundaryConditions.BC_Base.getContext">
-<code class="sig-name descname">getContext</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BC_Base.getContext" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getContext</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">context</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BC_Base.getContext" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets context from proteus.Context or</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -315,7 +308,7 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="proteus.BoundaryConditions.BC_Base.name">
 <code class="sig-name descname">name</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BC_Base.name" title="Permalink to this definition">¶</a></dt>
 <dd><p>str</p>
@@ -326,7 +319,7 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="proteus.BoundaryConditions.BC_Base.nd">
 <code class="sig-name descname">nd</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BC_Base.nd" title="Permalink to this definition">¶</a></dt>
 <dd><p>‘int’</p>
@@ -339,7 +332,7 @@
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.BoundaryConditions.BoundaryCondition">
 <em class="property">class </em><code class="sig-prename descclassname">proteus.BoundaryConditions.</code><code class="sig-name descname">BoundaryCondition</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BoundaryCondition" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
@@ -350,19 +343,19 @@
 no boundary condition</p>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py method">
 <dt id="proteus.BoundaryConditions.BoundaryCondition.init_cython">
-<code class="sig-name descname">init_cython</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BoundaryCondition.init_cython" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">init_cython</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BoundaryCondition.init_cython" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py method">
 <dt id="proteus.BoundaryConditions.BoundaryCondition.resetBC">
-<code class="sig-name descname">resetBC</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BoundaryCondition.resetBC" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">resetBC</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em><span class="sig-paren">)</span> &#x2192; void<a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BoundaryCondition.resetBC" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py method">
 <dt id="proteus.BoundaryConditions.BoundaryCondition.setConstantBC">
-<code class="sig-name descname">setConstantBC</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BoundaryCondition.setConstantBC" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setConstantBC</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BoundaryCondition.setConstantBC" title="Permalink to this definition">¶</a></dt>
 <dd><p>function returning constant BC</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -371,9 +364,9 @@ no boundary condition</p>
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py method">
 <dt id="proteus.BoundaryConditions.BoundaryCondition.setLinearBC">
-<code class="sig-name descname">setLinearBC</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BoundaryCondition.setLinearBC" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setLinearBC</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">a0</span></em>, <em class="sig-param"><span class="n">a</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BoundaryCondition.setLinearBC" title="Permalink to this definition">¶</a></dt>
 <dd><p>function returning value=a0+ax*x+ay*y+az*z</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -385,9 +378,9 @@ no boundary condition</p>
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py method">
 <dt id="proteus.BoundaryConditions.BoundaryCondition.setLinearRamp">
-<code class="sig-name descname">setLinearRamp</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BoundaryCondition.setLinearRamp" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setLinearRamp</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">self</span></em>, <em class="sig-param"><span class="n">t1</span></em>, <em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BoundaryCondition.setLinearRamp" title="Permalink to this definition">¶</a></dt>
 <dd><p>function setting a linear ramp from t=0 to t=t1</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -399,7 +392,7 @@ no boundary condition</p>
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="proteus.BoundaryConditions.BoundaryCondition.uOfXT">
 <code class="sig-name descname">uOfXT</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.BoundaryConditions.BoundaryCondition.uOfXT" title="Permalink to this definition">¶</a></dt>
 <dd><p>object</p>

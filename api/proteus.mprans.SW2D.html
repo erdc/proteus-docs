@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>proteus.mprans.SW2D module &mdash; Proteus 1.7.3 documentation</title>
+  <title>proteus.mprans.SW2D module &mdash; Proteus 1.7.4 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                1.7.3
+                1.7.4
               </div>
             
           
@@ -167,8 +167,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id5">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChMoorings</a></li>
 </ul>
 </li>
 </ul>
@@ -189,13 +189,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../models/navier_stokes.html#immersed-boundaries">Immersed Boundaries</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/SWFlows.html">Shallow Water Flows</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#shallow-water-equations">Shallow Water equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#running-the-tests">Running the tests</a></li>
 </ul>
 </li>
 </ul>
@@ -266,57 +259,57 @@
             
   <div class="section" id="module-proteus.mprans.SW2D">
 <span id="proteus-mprans-sw2d-module"></span><h1>proteus.mprans.SW2D module<a class="headerlink" href="#module-proteus.mprans.SW2D" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.mprans.SW2D.SubgridError">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.SW2D.</code><code class="sig-name descname">SubgridError</code><span class="sig-paren">(</span><em class="sig-param">coefficients</em>, <em class="sig-param">nd</em>, <em class="sig-param">lag=False</em>, <em class="sig-param">nStepsToDelay=0</em>, <em class="sig-param">hFactor=1.0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.SubgridError" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.SW2D.</code><code class="sig-name descname">SubgridError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coefficients</span></em>, <em class="sig-param"><span class="n">nd</span></em>, <em class="sig-param"><span class="n">lag</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">nStepsToDelay</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">hFactor</span><span class="o">=</span><span class="default_value">1.0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.SubgridError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.SubgridError.html#proteus.SubgridError.SGE_base" title="proteus.SubgridError.SGE_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.SubgridError.SGE_base</span></code></a></p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.SubgridError.initializeElementQuadrature">
-<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param">mesh</em>, <em class="sig-param">t</em>, <em class="sig-param">cq</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.SubgridError.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mesh</span></em>, <em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cq</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.SubgridError.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.SubgridError.updateSubgridErrorHistory">
-<code class="sig-name descname">updateSubgridErrorHistory</code><span class="sig-paren">(</span><em class="sig-param">initializationPhase=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.SubgridError.updateSubgridErrorHistory" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">updateSubgridErrorHistory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">initializationPhase</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.SubgridError.updateSubgridErrorHistory" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.SubgridError.calculateSubgridError">
-<code class="sig-name descname">calculateSubgridError</code><span class="sig-paren">(</span><em class="sig-param">q</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.SubgridError.calculateSubgridError" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">calculateSubgridError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">q</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.SubgridError.calculateSubgridError" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.mprans.SW2D.NumericalFlux">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.SW2D.</code><code class="sig-name descname">NumericalFlux</code><span class="sig-paren">(</span><em class="sig-param">vt</em>, <em class="sig-param">getPointwiseBoundaryConditions</em>, <em class="sig-param">getAdvectiveFluxBoundaryConditions</em>, <em class="sig-param">getDiffusiveFluxBoundaryConditions</em>, <em class="sig-param">getPeriodicBoundaryConditions=None</em>, <em class="sig-param">h_eps=1e-08</em>, <em class="sig-param">tol_u=1e-08</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.NumericalFlux" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.SW2D.</code><code class="sig-name descname">NumericalFlux</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vt</span></em>, <em class="sig-param"><span class="n">getPointwiseBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getAdvectiveFluxBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getDiffusiveFluxBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getPeriodicBoundaryConditions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">h_eps</span><span class="o">=</span><span class="default_value">1e-08</span></em>, <em class="sig-param"><span class="n">tol_u</span><span class="o">=</span><span class="default_value">1e-08</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.NumericalFlux" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.NumericalFlux.html#proteus.NumericalFlux.ShallowWater_2D" title="proteus.NumericalFlux.ShallowWater_2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.NumericalFlux.ShallowWater_2D</span></code></a></p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="proteus.mprans.SW2D.NumericalFlux.hasInterior">
 <code class="sig-name descname">hasInterior</code><em class="property"> = False</em><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.NumericalFlux.hasInterior" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.mprans.SW2D.ShockCapturing">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.SW2D.</code><code class="sig-name descname">ShockCapturing</code><span class="sig-paren">(</span><em class="sig-param">coefficients</em>, <em class="sig-param">nd</em>, <em class="sig-param">shockCapturingFactor=0.25</em>, <em class="sig-param">lag=False</em>, <em class="sig-param">nStepsToDelay=3</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.ShockCapturing" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.SW2D.</code><code class="sig-name descname">ShockCapturing</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coefficients</span></em>, <em class="sig-param"><span class="n">nd</span></em>, <em class="sig-param"><span class="n">shockCapturingFactor</span><span class="o">=</span><span class="default_value">0.25</span></em>, <em class="sig-param"><span class="n">lag</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">nStepsToDelay</span><span class="o">=</span><span class="default_value">3</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.ShockCapturing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.ShockCapturing.html#proteus.ShockCapturing.ShockCapturing_base" title="proteus.ShockCapturing.ShockCapturing_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.ShockCapturing.ShockCapturing_base</span></code></a></p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.ShockCapturing.initializeElementQuadrature">
-<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param">mesh</em>, <em class="sig-param">t</em>, <em class="sig-param">cq</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.ShockCapturing.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mesh</span></em>, <em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cq</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.ShockCapturing.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.ShockCapturing.updateShockCapturingHistory">
 <code class="sig-name descname">updateShockCapturingHistory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.ShockCapturing.updateShockCapturingHistory" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.mprans.SW2D.Coefficients">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.SW2D.</code><code class="sig-name descname">Coefficients</code><span class="sig-paren">(</span><em class="sig-param">nu=1.004e-06</em>, <em class="sig-param">g=9.8</em>, <em class="sig-param">nd=2</em>, <em class="sig-param">sd=True</em>, <em class="sig-param">movingDomain=False</em>, <em class="sig-param">useRBLES=0.0</em>, <em class="sig-param">useMetrics=0.0</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.Coefficients" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.SW2D.</code><code class="sig-name descname">Coefficients</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nu</span><span class="o">=</span><span class="default_value">1.004e-06</span></em>, <em class="sig-param"><span class="n">g</span><span class="o">=</span><span class="default_value">9.8</span></em>, <em class="sig-param"><span class="n">nd</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">sd</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">movingDomain</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">useRBLES</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">useMetrics</span><span class="o">=</span><span class="default_value">0.0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.Coefficients" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.TransportCoefficients.html#proteus.TransportCoefficients.TC_base" title="proteus.TransportCoefficients.TC_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.TransportCoefficients.TC_base</span></code></a></p>
 <p>The coefficients for the shallow water equations</p>
 <p>Set the number of components (equations) of the
@@ -324,52 +317,52 @@ PDE and initialize the dicitionaries describing the form of the
 coefficients. Strings naming each component (used for viewing
 and archiving) and a structure defining the sparsity pattern
 of diffusion tensors may also be provided.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.Coefficients.attachModels">
-<code class="sig-name descname">attachModels</code><span class="sig-paren">(</span><em class="sig-param">modelList</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.Coefficients.attachModels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">attachModels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">modelList</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.Coefficients.attachModels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to other models in a loosely coupled split operator formulation (e.g. a transport equation for concentration might get velocity from a flow equation)</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.Coefficients.initializeMesh">
-<code class="sig-name descname">initializeMesh</code><span class="sig-paren">(</span><em class="sig-param">mesh</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.Coefficients.initializeMesh" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeMesh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mesh</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.Coefficients.initializeMesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the mesh for any mesh-dependent information.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.Coefficients.initializeElementQuadrature">
-<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cq</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.Coefficients.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cq</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.Coefficients.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the element quadrature storage</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.Coefficients.initializeElementBoundaryQuadrature">
-<code class="sig-name descname">initializeElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cebq</em>, <em class="sig-param">cebq_global</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.Coefficients.initializeElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cebq</span></em>, <em class="sig-param"><span class="n">cebq_global</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.Coefficients.initializeElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the element boundary quadrature storage</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature">
-<code class="sig-name descname">initializeGlobalExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cebqe</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeGlobalExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cebqe</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the exterior element boundary quadrature storage</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.Coefficients.updateToMovingDomain">
-<code class="sig-name descname">updateToMovingDomain</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">c</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.Coefficients.updateToMovingDomain" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">updateToMovingDomain</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">c</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.Coefficients.updateToMovingDomain" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.Coefficients.evaluate">
-<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">c</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.Coefficients.evaluate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">c</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.Coefficients.evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate the coefficients at a given time, t, using the coefficient storage passed in as the dictionary c.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.mprans.SW2D.LevelModel">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.SW2D.</code><code class="sig-name descname">LevelModel</code><span class="sig-paren">(</span><em class="sig-param">uDict</em>, <em class="sig-param">phiDict</em>, <em class="sig-param">testSpaceDict</em>, <em class="sig-param">matType</em>, <em class="sig-param">dofBoundaryConditionsDict</em>, <em class="sig-param">dofBoundaryConditionsSetterDict</em>, <em class="sig-param">coefficients</em>, <em class="sig-param">elementQuadrature</em>, <em class="sig-param">elementBoundaryQuadrature</em>, <em class="sig-param">fluxBoundaryConditionsDict=None</em>, <em class="sig-param">advectiveFluxBoundaryConditionsSetterDict=None</em>, <em class="sig-param">diffusiveFluxBoundaryConditionsSetterDictDict=None</em>, <em class="sig-param">stressTraceBoundaryConditionsSetterDictDict=None</em>, <em class="sig-param">stabilization=None</em>, <em class="sig-param">shockCapturing=None</em>, <em class="sig-param">conservativeFluxDict=None</em>, <em class="sig-param">numericalFluxType=None</em>, <em class="sig-param">TimeIntegrationClass=None</em>, <em class="sig-param">massLumping=False</em>, <em class="sig-param">reactionLumping=False</em>, <em class="sig-param">options=None</em>, <em class="sig-param">name='SW2D'</em>, <em class="sig-param">reuse_trial_and_test_quadrature=True</em>, <em class="sig-param">sd=True</em>, <em class="sig-param">movingDomain=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.LevelModel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.SW2D.</code><code class="sig-name descname">LevelModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">uDict</span></em>, <em class="sig-param"><span class="n">phiDict</span></em>, <em class="sig-param"><span class="n">testSpaceDict</span></em>, <em class="sig-param"><span class="n">matType</span></em>, <em class="sig-param"><span class="n">dofBoundaryConditionsDict</span></em>, <em class="sig-param"><span class="n">dofBoundaryConditionsSetterDict</span></em>, <em class="sig-param"><span class="n">coefficients</span></em>, <em class="sig-param"><span class="n">elementQuadrature</span></em>, <em class="sig-param"><span class="n">elementBoundaryQuadrature</span></em>, <em class="sig-param"><span class="n">fluxBoundaryConditionsDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">advectiveFluxBoundaryConditionsSetterDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diffusiveFluxBoundaryConditionsSetterDictDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stressTraceBoundaryConditionsSetterDictDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stabilization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shockCapturing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">conservativeFluxDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">numericalFluxType</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">TimeIntegrationClass</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">massLumping</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">reactionLumping</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'SW2D'</span></em>, <em class="sig-param"><span class="n">reuse_trial_and_test_quadrature</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">sd</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">movingDomain</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.LevelModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.Transport.html#proteus.Transport.OneLevelTransport" title="proteus.Transport.OneLevelTransport"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.Transport.OneLevelTransport</span></code></a></p>
 <p>Allocate storage and initialize some variables.</p>
 <dl class="field-list simple">
@@ -420,23 +413,23 @@ exterior element boundary</p></li>
 <li><p>phi_ip – at the generalized interpolation points required to
 build a nonlinear phi</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="proteus.mprans.SW2D.LevelModel.nCalls">
 <code class="sig-name descname">nCalls</code><em class="property"> = 0</em><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.LevelModel.nCalls" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.LevelModel.getResidual">
-<code class="sig-name descname">getResidual</code><span class="sig-paren">(</span><em class="sig-param">u</em>, <em class="sig-param">r</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.LevelModel.getResidual" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getResidual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.LevelModel.getResidual" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the element residuals and add in to the global residual</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.LevelModel.getJacobian">
-<code class="sig-name descname">getJacobian</code><span class="sig-paren">(</span><em class="sig-param">jacobian</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.LevelModel.getJacobian" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getJacobian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">jacobian</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.LevelModel.getJacobian" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.LevelModel.calculateElementQuadrature">
 <code class="sig-name descname">calculateElementQuadrature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.LevelModel.calculateElementQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the physical location and weights of the quadrature rules
@@ -444,7 +437,7 @@ and the shape information at the quadrature points.</p>
 <p>This function should be called only when the mesh changes.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.LevelModel.calculateElementBoundaryQuadrature">
 <code class="sig-name descname">calculateElementBoundaryQuadrature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.LevelModel.calculateElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the physical location and weights of the quadrature rules
@@ -452,7 +445,7 @@ and the shape information at the quadrature points on element boundaries.</p>
 <p>This function should be called only when the mesh changes.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.LevelModel.calculateExteriorElementBoundaryQuadrature">
 <code class="sig-name descname">calculateExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.LevelModel.calculateExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the physical location and weights of the quadrature rules
@@ -460,24 +453,24 @@ and the shape information at the quadrature points on global element boundaries.
 <p>This function should be called only when the mesh changes.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.LevelModel.estimate_mt">
 <code class="sig-name descname">estimate_mt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.LevelModel.estimate_mt" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.LevelModel.calculateSolutionAtQuadrature">
 <code class="sig-name descname">calculateSolutionAtQuadrature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.LevelModel.calculateSolutionAtQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.LevelModel.calculateAuxiliaryQuantitiesAfterStep">
 <code class="sig-name descname">calculateAuxiliaryQuantitiesAfterStep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.LevelModel.calculateAuxiliaryQuantitiesAfterStep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.SW2D.LevelModel.getForce">
-<code class="sig-name descname">getForce</code><span class="sig-paren">(</span><em class="sig-param">cg</em>, <em class="sig-param">forceExtractionFaces</em>, <em class="sig-param">force</em>, <em class="sig-param">moment</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.LevelModel.getForce" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getForce</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cg</span></em>, <em class="sig-param"><span class="n">forceExtractionFaces</span></em>, <em class="sig-param"><span class="n">force</span></em>, <em class="sig-param"><span class="n">moment</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/SW2D.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.SW2D.LevelModel.getForce" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>

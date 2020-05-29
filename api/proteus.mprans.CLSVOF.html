@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>proteus.mprans.CLSVOF module &mdash; Proteus 1.7.3 documentation</title>
+  <title>proteus.mprans.CLSVOF module &mdash; Proteus 1.7.4 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                1.7.3
+                1.7.4
               </div>
             
           
@@ -167,8 +167,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id5">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChMoorings</a></li>
 </ul>
 </li>
 </ul>
@@ -189,13 +189,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../models/navier_stokes.html#immersed-boundaries">Immersed Boundaries</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/SWFlows.html">Shallow Water Flows</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#shallow-water-equations">Shallow Water equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#running-the-tests">Running the tests</a></li>
 </ul>
 </li>
 </ul>
@@ -266,84 +259,84 @@
             
   <div class="section" id="module-proteus.mprans.CLSVOF">
 <span id="proteus-mprans-clsvof-module"></span><h1>proteus.mprans.CLSVOF module<a class="headerlink" href="#module-proteus.mprans.CLSVOF" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.mprans.CLSVOF.NumericalFlux">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.CLSVOF.</code><code class="sig-name descname">NumericalFlux</code><span class="sig-paren">(</span><em class="sig-param">vt</em>, <em class="sig-param">getPointwiseBoundaryConditions</em>, <em class="sig-param">getAdvectiveFluxBoundaryConditions</em>, <em class="sig-param">getDiffusiveFluxBoundaryConditions</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.NumericalFlux" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.CLSVOF.</code><code class="sig-name descname">NumericalFlux</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vt</span></em>, <em class="sig-param"><span class="n">getPointwiseBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getAdvectiveFluxBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getDiffusiveFluxBoundaryConditions</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.NumericalFlux" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.NumericalFlux.html#proteus.NumericalFlux.Advection_DiagonalUpwind_Diffusion_IIPG_exterior" title="proteus.NumericalFlux.Advection_DiagonalUpwind_Diffusion_IIPG_exterior"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.NumericalFlux.Advection_DiagonalUpwind_Diffusion_IIPG_exterior</span></code></a></p>
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.mprans.CLSVOF.Coefficients">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.CLSVOF.</code><code class="sig-name descname">Coefficients</code><span class="sig-paren">(</span><em class="sig-param">LS_model=None</em>, <em class="sig-param">V_model=0</em>, <em class="sig-param">RD_model=None</em>, <em class="sig-param">ME_model=1</em>, <em class="sig-param">VOS_model=None</em>, <em class="sig-param">checkMass=False</em>, <em class="sig-param">epsFact=0.0</em>, <em class="sig-param">useMetrics=0.0</em>, <em class="sig-param">setParamsFunc=None</em>, <em class="sig-param">movingDomain=False</em>, <em class="sig-param">forceStrongConditions=0</em>, <em class="sig-param">outputQuantDOFs=True</em>, <em class="sig-param">computeMetrics=0</em>, <em class="sig-param">doSpinUpStep=False</em>, <em class="sig-param">disc_ICs=False</em>, <em class="sig-param">timeOrder=1</em>, <em class="sig-param">epsFactHeaviside=1.5</em>, <em class="sig-param">epsFactDirac=1.5</em>, <em class="sig-param">epsFactRedist=0.33</em>, <em class="sig-param">lambdaFact=1.0</em>, <em class="sig-param">alpha='inf'</em>, <em class="sig-param">initialize=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.CLSVOF.</code><code class="sig-name descname">Coefficients</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">LS_model</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">V_model</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">RD_model</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ME_model</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">VOS_model</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">checkMass</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">epsFact</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">useMetrics</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">setParamsFunc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">movingDomain</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">forceStrongConditions</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">outputQuantDOFs</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">computeMetrics</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">doSpinUpStep</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">disc_ICs</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">timeOrder</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">epsFactHeaviside</span><span class="o">=</span><span class="default_value">1.5</span></em>, <em class="sig-param"><span class="n">epsFactDirac</span><span class="o">=</span><span class="default_value">1.5</span></em>, <em class="sig-param"><span class="n">epsFactRedist</span><span class="o">=</span><span class="default_value">0.33</span></em>, <em class="sig-param"><span class="n">lambdaFact</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">alpha</span><span class="o">=</span><span class="default_value">'inf'</span></em>, <em class="sig-param"><span class="n">initialize</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.TransportCoefficients.html#proteus.TransportCoefficients.TC_base" title="proteus.TransportCoefficients.TC_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.TransportCoefficients.TC_base</span></code></a></p>
 <p>Set the number of components (equations) of the
 PDE and initialize the dicitionaries describing the form of the
 coefficients. Strings naming each component (used for viewing
 and archiving) and a structure defining the sparsity pattern
 of diffusion tensors may also be provided.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.Coefficients.initialize">
 <code class="sig-name descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.initialize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.Coefficients.initializeMesh">
-<code class="sig-name descname">initializeMesh</code><span class="sig-paren">(</span><em class="sig-param">mesh</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.initializeMesh" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeMesh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mesh</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.initializeMesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the mesh for any mesh-dependent information.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.Coefficients.attachModels">
-<code class="sig-name descname">attachModels</code><span class="sig-paren">(</span><em class="sig-param">modelList</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.attachModels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">attachModels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">modelList</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.attachModels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to other models in a loosely coupled split operator formulation (e.g. a transport equation for concentration might get velocity from a flow equation)</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.Coefficients.initializeElementQuadrature">
-<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cq</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cq</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the element quadrature storage</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.Coefficients.initializeElementBoundaryQuadrature">
-<code class="sig-name descname">initializeElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cebq</em>, <em class="sig-param">cebq_global</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.initializeElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cebq</span></em>, <em class="sig-param"><span class="n">cebq_global</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.initializeElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the element boundary quadrature storage</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature">
-<code class="sig-name descname">initializeGlobalExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cebqe</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeGlobalExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cebqe</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the exterior element boundary quadrature storage</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.Coefficients.preStep">
-<code class="sig-name descname">preStep</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">firstStep=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.preStep" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">preStep</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">firstStep</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.preStep" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object an opportunity to modify itself before the time step.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.Coefficients.postStep">
-<code class="sig-name descname">postStep</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">firstStep=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.postStep" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">postStep</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">firstStep</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.postStep" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object an opportunity to modify itself after the time step.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.Coefficients.updateToMovingDomain">
-<code class="sig-name descname">updateToMovingDomain</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">c</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.updateToMovingDomain" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">updateToMovingDomain</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">c</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.updateToMovingDomain" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.Coefficients.evaluate">
-<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">c</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.evaluate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">c</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.Coefficients.evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate the coefficients at a given time, t, using the coefficient storage passed in as the dictionary c.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.mprans.CLSVOF.LevelModel">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.CLSVOF.</code><code class="sig-name descname">LevelModel</code><span class="sig-paren">(</span><em class="sig-param">uDict</em>, <em class="sig-param">phiDict</em>, <em class="sig-param">testSpaceDict</em>, <em class="sig-param">matType</em>, <em class="sig-param">dofBoundaryConditionsDict</em>, <em class="sig-param">dofBoundaryConditionsSetterDict</em>, <em class="sig-param">coefficients</em>, <em class="sig-param">elementQuadrature</em>, <em class="sig-param">elementBoundaryQuadrature</em>, <em class="sig-param">fluxBoundaryConditionsDict=None</em>, <em class="sig-param">advectiveFluxBoundaryConditionsSetterDict=None</em>, <em class="sig-param">diffusiveFluxBoundaryConditionsSetterDictDict=None</em>, <em class="sig-param">stressTraceBoundaryConditionsSetterDict=None</em>, <em class="sig-param">stabilization=None</em>, <em class="sig-param">shockCapturing=None</em>, <em class="sig-param">conservativeFluxDict=None</em>, <em class="sig-param">numericalFluxType=None</em>, <em class="sig-param">TimeIntegrationClass=None</em>, <em class="sig-param">massLumping=False</em>, <em class="sig-param">reactionLumping=False</em>, <em class="sig-param">options=None</em>, <em class="sig-param">name='defaultName'</em>, <em class="sig-param">reuse_trial_and_test_quadrature=True</em>, <em class="sig-param">sd=True</em>, <em class="sig-param">movingDomain=False</em>, <em class="sig-param">bdyNullSpace=False</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.CLSVOF.</code><code class="sig-name descname">LevelModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">uDict</span></em>, <em class="sig-param"><span class="n">phiDict</span></em>, <em class="sig-param"><span class="n">testSpaceDict</span></em>, <em class="sig-param"><span class="n">matType</span></em>, <em class="sig-param"><span class="n">dofBoundaryConditionsDict</span></em>, <em class="sig-param"><span class="n">dofBoundaryConditionsSetterDict</span></em>, <em class="sig-param"><span class="n">coefficients</span></em>, <em class="sig-param"><span class="n">elementQuadrature</span></em>, <em class="sig-param"><span class="n">elementBoundaryQuadrature</span></em>, <em class="sig-param"><span class="n">fluxBoundaryConditionsDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">advectiveFluxBoundaryConditionsSetterDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diffusiveFluxBoundaryConditionsSetterDictDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stressTraceBoundaryConditionsSetterDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stabilization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shockCapturing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">conservativeFluxDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">numericalFluxType</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">TimeIntegrationClass</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">massLumping</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">reactionLumping</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'defaultName'</span></em>, <em class="sig-param"><span class="n">reuse_trial_and_test_quadrature</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">sd</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">movingDomain</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">bdyNullSpace</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.Transport.html#proteus.Transport.OneLevelTransport" title="proteus.Transport.OneLevelTransport"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.Transport.OneLevelTransport</span></code></a></p>
 <p>Allocate storage and initialize some variables.</p>
 <dl class="field-list simple">
@@ -394,80 +387,80 @@ exterior element boundary</p></li>
 <li><p>phi_ip – at the generalized interpolation points required to
 build a nonlinear phi</p></li>
 </ul>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="proteus.mprans.CLSVOF.LevelModel.nCalls">
 <code class="sig-name descname">nCalls</code><em class="property"> = 0</em><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.nCalls" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.calculateCoefficients">
 <code class="sig-name descname">calculateCoefficients</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.calculateCoefficients" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.assembleSpinUpSystem">
-<code class="sig-name descname">assembleSpinUpSystem</code><span class="sig-paren">(</span><em class="sig-param">residual</em>, <em class="sig-param">jacobian</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.assembleSpinUpSystem" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">assembleSpinUpSystem</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">residual</span></em>, <em class="sig-param"><span class="n">jacobian</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.assembleSpinUpSystem" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.updateVelocityFieldAsFunction">
 <code class="sig-name descname">updateVelocityFieldAsFunction</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.updateVelocityFieldAsFunction" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.runAtEOS">
 <code class="sig-name descname">runAtEOS</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.runAtEOS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.getMetricsAtETS">
 <code class="sig-name descname">getMetricsAtETS</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.getMetricsAtETS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate some metrics at ETS (Every Time Step)</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.getMetricsAtEOS">
-<code class="sig-name descname">getMetricsAtEOS</code><span class="sig-paren">(</span><em class="sig-param">u_exact</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.getMetricsAtEOS" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getMetricsAtEOS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u_exact</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.getMetricsAtEOS" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.calculateElementResidual">
 <code class="sig-name descname">calculateElementResidual</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.calculateElementResidual" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate all the element residuals</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.FCTStep">
-<code class="sig-name descname">FCTStep</code><span class="sig-paren">(</span><em class="sig-param">limited_solution</em>, <em class="sig-param">soln</em>, <em class="sig-param">low_order_solution</em>, <em class="sig-param">high_order_solution</em>, <em class="sig-param">MassMatrix</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.FCTStep" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">FCTStep</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">limited_solution</span></em>, <em class="sig-param"><span class="n">soln</span></em>, <em class="sig-param"><span class="n">low_order_solution</span></em>, <em class="sig-param"><span class="n">high_order_solution</span></em>, <em class="sig-param"><span class="n">MassMatrix</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.FCTStep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.getNormalReconstruction">
-<code class="sig-name descname">getNormalReconstruction</code><span class="sig-paren">(</span><em class="sig-param">weighted_mass_matrix</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.getNormalReconstruction" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getNormalReconstruction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">weighted_mass_matrix</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.getNormalReconstruction" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.getRhsL2Proj">
 <code class="sig-name descname">getRhsL2Proj</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.getRhsL2Proj" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.getLumpedMassMatrix">
 <code class="sig-name descname">getLumpedMassMatrix</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.getLumpedMassMatrix" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.getResidual">
-<code class="sig-name descname">getResidual</code><span class="sig-paren">(</span><em class="sig-param">u</em>, <em class="sig-param">r</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.getResidual" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getResidual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.getResidual" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the element residuals and add in to the global residual</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.getJacobian">
-<code class="sig-name descname">getJacobian</code><span class="sig-paren">(</span><em class="sig-param">jacobian</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.getJacobian" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">getJacobian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">jacobian</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.getJacobian" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.calculateElementQuadrature">
 <code class="sig-name descname">calculateElementQuadrature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.calculateElementQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the physical location and weights of the quadrature rules
@@ -475,7 +468,7 @@ and the shape information at the quadrature points.</p>
 <p>This function should be called only when the mesh changes.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.calculateElementBoundaryQuadrature">
 <code class="sig-name descname">calculateElementBoundaryQuadrature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.calculateElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the physical location and weights of the quadrature rules
@@ -483,7 +476,7 @@ and the shape information at the quadrature points on element boundaries.</p>
 <p>This function should be called only when the mesh changes.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.calculateExteriorElementBoundaryQuadrature">
 <code class="sig-name descname">calculateExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.calculateExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the physical location and weights of the quadrature rules
@@ -491,22 +484,22 @@ and the shape information at the quadrature points on global element boundaries.
 <p>This function should be called only when the mesh changes.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.estimate_mt">
 <code class="sig-name descname">estimate_mt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.estimate_mt" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.calculateSolutionAtQuadrature">
 <code class="sig-name descname">calculateSolutionAtQuadrature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.calculateSolutionAtQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.calculateAuxiliaryQuantitiesAfterStep">
 <code class="sig-name descname">calculateAuxiliaryQuantitiesAfterStep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.calculateAuxiliaryQuantitiesAfterStep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.mprans.CLSVOF.LevelModel.updateAfterMeshMotion">
 <code class="sig-name descname">updateAfterMeshMotion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/CLSVOF.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.CLSVOF.LevelModel.updateAfterMeshMotion" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>

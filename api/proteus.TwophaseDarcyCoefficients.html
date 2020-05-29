@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>proteus.TwophaseDarcyCoefficients module &mdash; Proteus 1.7.3 documentation</title>
+  <title>proteus.TwophaseDarcyCoefficients module &mdash; Proteus 1.7.4 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                1.7.3
+                1.7.4
               </div>
             
           
@@ -167,8 +167,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id5">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChMoorings</a></li>
 </ul>
 </li>
 </ul>
@@ -189,13 +189,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../models/navier_stokes.html#immersed-boundaries">Immersed Boundaries</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/SWFlows.html">Shallow Water Flows</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#shallow-water-equations">Shallow Water equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#running-the-tests">Running the tests</a></li>
 </ul>
 </li>
 </ul>
@@ -267,69 +260,69 @@
   <div class="section" id="module-proteus.TwophaseDarcyCoefficients">
 <span id="proteus-twophasedarcycoefficients-module"></span><h1>proteus.TwophaseDarcyCoefficients module<a class="headerlink" href="#module-proteus.TwophaseDarcyCoefficients" title="Permalink to this headline">¶</a></h1>
 <p>An extension of the TransportCoefficients module for two-phase flow in porous media</p>
-<div class="graphviz"><object data="../_images/inheritance-23354f2f8e8cbe23ca2288c18f4623d79f6c81ab.svg" type="image/svg+xml" class="inheritance graphviz">
+<div class="graphviz"><object data="../_images/inheritance-fd9013b98a17c7b8e6ca919839e3708894abca21.svg" type="image/svg+xml" class="inheritance graphviz">
 <p class="warning">Inheritance diagram of proteus.TwophaseDarcyCoefficients</p></object></div>
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.TwophaseDarcyCoefficients.</code><code class="sig-name descname">TwophaseDarcyFlow_base</code><span class="sig-paren">(</span><em class="sig-param">g=9.8</em>, <em class="sig-param">rhon=1.0</em>, <em class="sig-param">rhow=0.0</em>, <em class="sig-param">mun=1.0</em>, <em class="sig-param">muw=1.0</em>, <em class="sig-param">Ksw=1.0</em>, <em class="sig-param">psk_model='VGM'</em>, <em class="sig-param">vg_alpha=5.0</em>, <em class="sig-param">vg_m=0.75</em>, <em class="sig-param">bc_pd=0.18281535648994515</em>, <em class="sig-param">bc_lambda=0.5</em>, <em class="sig-param">omega=1.0</em>, <em class="sig-param">Sw_max=1.0</em>, <em class="sig-param">Sw_min=0.0</em>, <em class="sig-param">density_w_model='Constant'</em>, <em class="sig-param">density_n_model='Constant'</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.TwophaseDarcyCoefficients.</code><code class="sig-name descname">TwophaseDarcyFlow_base</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">g</span><span class="o">=</span><span class="default_value">9.8</span></em>, <em class="sig-param"><span class="n">rhon</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">rhow</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">mun</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">muw</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">Ksw</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">psk_model</span><span class="o">=</span><span class="default_value">'VGM'</span></em>, <em class="sig-param"><span class="n">vg_alpha</span><span class="o">=</span><span class="default_value">5.0</span></em>, <em class="sig-param"><span class="n">vg_m</span><span class="o">=</span><span class="default_value">0.75</span></em>, <em class="sig-param"><span class="n">bc_pd</span><span class="o">=</span><span class="default_value">0.18281535648994515</span></em>, <em class="sig-param"><span class="n">bc_lambda</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">omega</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">Sw_max</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">Sw_min</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">density_w_model</span><span class="o">=</span><span class="default_value">'Constant'</span></em>, <em class="sig-param"><span class="n">density_n_model</span><span class="o">=</span><span class="default_value">'Constant'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.TransportCoefficients.html#proteus.TransportCoefficients.TC_base" title="proteus.TransportCoefficients.TC_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.TransportCoefficients.TC_base</span></code></a></p>
 <p>Set the number of components (equations) of the
 PDE and initialize the dicitionaries describing the form of the
 coefficients. Strings naming each component (used for viewing
 and archiving) and a structure defining the sparsity pattern
 of diffusion tensors may also be provided.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.setMaterialTypes">
-<code class="sig-name descname">setMaterialTypes</code><span class="sig-paren">(</span><em class="sig-param">Ksw_types=[1.0], omega_types=[0.4], Sw_max_types=[1.0], Sw_min_types=[0.0], bc_lambda_types=None, bc_pd_types=None, vg_alpha_types=None, vg_m_types=None</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.setMaterialTypes" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setMaterialTypes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Ksw_types</span><span class="o">=</span><span class="default_value">[1.0]</span></em>, <em class="sig-param"><span class="n">omega_types</span><span class="o">=</span><span class="default_value">[0.4]</span></em>, <em class="sig-param"><span class="n">Sw_max_types</span><span class="o">=</span><span class="default_value">[1.0]</span></em>, <em class="sig-param"><span class="n">Sw_min_types</span><span class="o">=</span><span class="default_value">[0.0]</span></em>, <em class="sig-param"><span class="n">bc_lambda_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bc_pd_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vg_alpha_types</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vg_m_types</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.setMaterialTypes" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.setMaterialFunction">
-<code class="sig-name descname">setMaterialFunction</code><span class="sig-paren">(</span><em class="sig-param">setParams</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.setMaterialFunction" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">setMaterialFunction</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">setParams</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.setMaterialFunction" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.initializeMesh">
-<code class="sig-name descname">initializeMesh</code><span class="sig-paren">(</span><em class="sig-param">mesh</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.initializeMesh" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeMesh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mesh</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.initializeMesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the mesh for any mesh-dependent information.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.initializeElementQuadrature">
-<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cq</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cq</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the element quadrature storage</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.initializeElementBoundaryQuadrature">
-<code class="sig-name descname">initializeElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cebq</em>, <em class="sig-param">cebq_global</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.initializeElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cebq</span></em>, <em class="sig-param"><span class="n">cebq_global</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.initializeElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the element boundary quadrature storage</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.initializeGlobalExteriorElementBoundaryQuadrature">
-<code class="sig-name descname">initializeGlobalExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cebqe</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.initializeGlobalExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeGlobalExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cebqe</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.initializeGlobalExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the exterior element boundary quadrature storage</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.initializeGeneralizedInterpolationPointQuadrature">
-<code class="sig-name descname">initializeGeneralizedInterpolationPointQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cip</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.initializeGeneralizedInterpolationPointQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeGeneralizedInterpolationPointQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cip</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.initializeGeneralizedInterpolationPointQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the generalized interpolation point storage. These points are used  to project nonlinear potentials (phi).</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_fc">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.TwophaseDarcyCoefficients.</code><code class="sig-name descname">TwophaseDarcy_fc</code><span class="sig-paren">(</span><em class="sig-param">g=9.8</em>, <em class="sig-param">rhon=1.0</em>, <em class="sig-param">rhow=0.0</em>, <em class="sig-param">mun=1.0</em>, <em class="sig-param">muw=1.0</em>, <em class="sig-param">Ksw=1.0</em>, <em class="sig-param">psk_model='VGM'</em>, <em class="sig-param">vg_alpha=5.0</em>, <em class="sig-param">vg_m=0.75</em>, <em class="sig-param">bc_pd=0.18281535648994515</em>, <em class="sig-param">bc_lambda=0.5</em>, <em class="sig-param">omega=1.0</em>, <em class="sig-param">Sw_max=1.0</em>, <em class="sig-param">Sw_min=0.0</em>, <em class="sig-param">density_w_parameters=None</em>, <em class="sig-param">density_n_parameters=None</em>, <em class="sig-param">diagonalHet=False</em>, <em class="sig-param">sparseDiffusionTensors={}</em>, <em class="sig-param">sd=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_fc" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.TwophaseDarcyCoefficients.</code><code class="sig-name descname">TwophaseDarcy_fc</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">g</span><span class="o">=</span><span class="default_value">9.8</span></em>, <em class="sig-param"><span class="n">rhon</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">rhow</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">mun</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">muw</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">Ksw</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">psk_model</span><span class="o">=</span><span class="default_value">'VGM'</span></em>, <em class="sig-param"><span class="n">vg_alpha</span><span class="o">=</span><span class="default_value">5.0</span></em>, <em class="sig-param"><span class="n">vg_m</span><span class="o">=</span><span class="default_value">0.75</span></em>, <em class="sig-param"><span class="n">bc_pd</span><span class="o">=</span><span class="default_value">0.18281535648994515</span></em>, <em class="sig-param"><span class="n">bc_lambda</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">omega</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">Sw_max</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">Sw_min</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">density_w_parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">density_n_parameters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diagonalHet</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">sparseDiffusionTensors</span><span class="o">=</span><span class="default_value">{}</span></em>, <em class="sig-param"><span class="n">sd</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_fc" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base" title="proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base</span></code></a></p>
 <p>Set the number of components (equations) of the
 PDE and initialize the dicitionaries describing the form of the
 coefficients. Strings naming each component (used for viewing
 and archiving) and a structure defining the sparsity pattern
 of diffusion tensors may also be provided.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_fc.twophaseDarcy_fc_sd_het_matType">
 <code class="sig-name descname">twophaseDarcy_fc_sd_het_matType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_fc.twophaseDarcy_fc_sd_het_matType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate the coefficients of the fully coupled formulation of
@@ -337,24 +330,24 @@ of diffusion tensors may also be provided.</p>
 medium, sparse diffusion rep. for het</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_fc.evaluate">
-<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">c</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_fc.evaluate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">c</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_fc.evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate the coefficients at a given time, t, using the coefficient storage passed in as the dictionary c.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.TwophaseDarcyCoefficients.</code><code class="sig-name descname">TwophaseDarcy_split_pressure</code><span class="sig-paren">(</span><em class="sig-param">g=9.8</em>, <em class="sig-param">rhon=1.0</em>, <em class="sig-param">rhow=0.0</em>, <em class="sig-param">mun=1.0</em>, <em class="sig-param">muw=1.0</em>, <em class="sig-param">Ksw=1.0</em>, <em class="sig-param">psk_model='VGM'</em>, <em class="sig-param">vg_alpha=5.0</em>, <em class="sig-param">vg_m=0.75</em>, <em class="sig-param">bc_pd=0.18281535648994515</em>, <em class="sig-param">bc_lambda=0.5</em>, <em class="sig-param">omega=1.0</em>, <em class="sig-param">Sw_max=1.0</em>, <em class="sig-param">Sw_min=0.0</em>, <em class="sig-param">swConstant=0.5</em>, <em class="sig-param">capillaryDiffusionScaling=1.0</em>, <em class="sig-param">nModel=1</em>, <em class="sig-param">diagonalHet=False</em>, <em class="sig-param">sparseDiffusionTensors={}</em>, <em class="sig-param">sd=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.TwophaseDarcyCoefficients.</code><code class="sig-name descname">TwophaseDarcy_split_pressure</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">g</span><span class="o">=</span><span class="default_value">9.8</span></em>, <em class="sig-param"><span class="n">rhon</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">rhow</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">mun</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">muw</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">Ksw</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">psk_model</span><span class="o">=</span><span class="default_value">'VGM'</span></em>, <em class="sig-param"><span class="n">vg_alpha</span><span class="o">=</span><span class="default_value">5.0</span></em>, <em class="sig-param"><span class="n">vg_m</span><span class="o">=</span><span class="default_value">0.75</span></em>, <em class="sig-param"><span class="n">bc_pd</span><span class="o">=</span><span class="default_value">0.18281535648994515</span></em>, <em class="sig-param"><span class="n">bc_lambda</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">omega</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">Sw_max</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">Sw_min</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">swConstant</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">capillaryDiffusionScaling</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">nModel</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">diagonalHet</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">sparseDiffusionTensors</span><span class="o">=</span><span class="default_value">{}</span></em>, <em class="sig-param"><span class="n">sd</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base" title="proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base</span></code></a></p>
 <p>Set the number of components (equations) of the
 PDE and initialize the dicitionaries describing the form of the
 coefficients. Strings naming each component (used for viewing
 and archiving) and a structure defining the sparsity pattern
 of diffusion tensors may also be provided.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.twophaseDarcy_incompressible_split_sd_pressure_het_matType">
 <code class="sig-name descname">twophaseDarcy_incompressible_split_sd_pressure_het_matType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.twophaseDarcy_incompressible_split_sd_pressure_het_matType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate the pressure coefficients</p>
@@ -362,54 +355,54 @@ of diffusion tensors may also be provided.</p>
 Darcy flow for a heterogeneous medium, sparse diffusion rep het</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.attachModels">
-<code class="sig-name descname">attachModels</code><span class="sig-paren">(</span><em class="sig-param">modelList</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.attachModels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">attachModels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">modelList</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.attachModels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to other models in a loosely coupled split operator formulation (e.g. a transport equation for concentration might get velocity from a flow equation)</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.initializeElementQuadrature">
-<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cq</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cq</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the element quadrature storage</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.initializeElementBoundaryQuadrature">
-<code class="sig-name descname">initializeElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cebq</em>, <em class="sig-param">cebq_global</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.initializeElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cebq</span></em>, <em class="sig-param"><span class="n">cebq_global</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.initializeElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the element boundary quadrature storage</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.initializeGlobalExteriorElementBoundaryQuadrature">
-<code class="sig-name descname">initializeGlobalExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cebqe</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.initializeGlobalExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeGlobalExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cebqe</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.initializeGlobalExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the exterior element boundary quadrature storage</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.initializeGeneralizedInterpolationPointQuadrature">
-<code class="sig-name descname">initializeGeneralizedInterpolationPointQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cip</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.initializeGeneralizedInterpolationPointQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeGeneralizedInterpolationPointQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cip</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.initializeGeneralizedInterpolationPointQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the generalized interpolation point storage. These points are used  to project nonlinear potentials (phi).</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.evaluate">
-<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">c</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.evaluate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">c</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_pressure.evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate the coefficients at a given time, t, using the coefficient storage passed in as the dictionary c.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.TwophaseDarcyCoefficients.</code><code class="sig-name descname">TwophaseDarcy_split_saturation</code><span class="sig-paren">(</span><em class="sig-param">g=[9.8], rhon=1.0, rhow=1.0, mun=1.0, muw=1.0, Ksw=1.0, psk_model='VGM', vg_alpha=5.0, vg_m=0.75, bc_pd=0.18281535648994515, bc_lambda=0.5, omega=1.0, Sw_max=1.0, Sw_min=0.0, qScalarConstant=1.0, capillaryDiffusionScaling=1.0, nModel=0, diagonalHet=False, sparseDiffusionTensors={}, sd=True</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.TwophaseDarcyCoefficients.</code><code class="sig-name descname">TwophaseDarcy_split_saturation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">g</span><span class="o">=</span><span class="default_value">[9.8]</span></em>, <em class="sig-param"><span class="n">rhon</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">rhow</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">mun</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">muw</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">Ksw</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">psk_model</span><span class="o">=</span><span class="default_value">'VGM'</span></em>, <em class="sig-param"><span class="n">vg_alpha</span><span class="o">=</span><span class="default_value">5.0</span></em>, <em class="sig-param"><span class="n">vg_m</span><span class="o">=</span><span class="default_value">0.75</span></em>, <em class="sig-param"><span class="n">bc_pd</span><span class="o">=</span><span class="default_value">0.18281535648994515</span></em>, <em class="sig-param"><span class="n">bc_lambda</span><span class="o">=</span><span class="default_value">0.5</span></em>, <em class="sig-param"><span class="n">omega</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">Sw_max</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">Sw_min</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">qScalarConstant</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">capillaryDiffusionScaling</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">nModel</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">diagonalHet</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">sparseDiffusionTensors</span><span class="o">=</span><span class="default_value">{}</span></em>, <em class="sig-param"><span class="n">sd</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base" title="proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base</span></code></a></p>
 <p>Set the number of components (equations) of the
 PDE and initialize the dicitionaries describing the form of the
 coefficients. Strings naming each component (used for viewing
 and archiving) and a structure defining the sparsity pattern
 of diffusion tensors may also be provided.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.twophaseDarcy_incompressible_split_sd_saturation_het_matType">
 <code class="sig-name descname">twophaseDarcy_incompressible_split_sd_saturation_het_matType</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.twophaseDarcy_incompressible_split_sd_saturation_het_matType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate the saturation coefficients</p>
@@ -417,39 +410,39 @@ of diffusion tensors may also be provided.</p>
 Darcy flow for a heterogeneous medium, sparse diffusion rep het</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.attachModels">
-<code class="sig-name descname">attachModels</code><span class="sig-paren">(</span><em class="sig-param">modelList</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.attachModels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">attachModels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">modelList</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.attachModels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to other models in a loosely coupled split operator formulation (e.g. a transport equation for concentration might get velocity from a flow equation)</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.initializeElementQuadrature">
-<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cq</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cq</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the element quadrature storage</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.initializeElementBoundaryQuadrature">
-<code class="sig-name descname">initializeElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cebq</em>, <em class="sig-param">cebq_global</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.initializeElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cebq</span></em>, <em class="sig-param"><span class="n">cebq_global</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.initializeElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the element boundary quadrature storage</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.initializeGlobalExteriorElementBoundaryQuadrature">
-<code class="sig-name descname">initializeGlobalExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cebqe</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.initializeGlobalExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeGlobalExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cebqe</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.initializeGlobalExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the exterior element boundary quadrature storage</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.initializeGeneralizedInterpolationPointQuadrature">
-<code class="sig-name descname">initializeGeneralizedInterpolationPointQuadrature</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">cip</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.initializeGeneralizedInterpolationPointQuadrature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">initializeGeneralizedInterpolationPointQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cip</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.initializeGeneralizedInterpolationPointQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the generalized interpolation point storage. These points are used  to project nonlinear potentials (phi).</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.evaluate">
-<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param">t</em>, <em class="sig-param">c</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.evaluate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">c</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TwophaseDarcyCoefficients.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.TwophaseDarcyCoefficients.TwophaseDarcy_split_saturation.evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate the coefficients at a given time, t, using the coefficient storage passed in as the dictionary c.</p>
 </dd></dl>
 

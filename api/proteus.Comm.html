@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>proteus.Comm module &mdash; Proteus 1.7.3 documentation</title>
+  <title>proteus.Comm module &mdash; Proteus 1.7.4 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                1.7.3
+                1.7.4
               </div>
             
           
@@ -167,8 +167,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id5">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChMoorings</a></li>
 </ul>
 </li>
 </ul>
@@ -189,13 +189,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../models/navier_stokes.html#immersed-boundaries">Immersed Boundaries</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/SWFlows.html">Shallow Water Flows</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#shallow-water-equations">Shallow Water equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/SWFlows.html#running-the-tests">Running the tests</a></li>
 </ul>
 </li>
 </ul>
@@ -267,95 +260,95 @@
   <div class="section" id="module-proteus.Comm">
 <span id="proteus-comm-module"></span><h1>proteus.Comm module<a class="headerlink" href="#module-proteus.Comm" title="Permalink to this headline">¶</a></h1>
 <p>Module for controlling MPI</p>
-<div class="graphviz"><object data="../_images/inheritance-de4d6a554fa81d8f05e0c8b59f01481adca5fe13.svg" type="image/svg+xml" class="inheritance graphviz">
+<div class="graphviz"><object data="../_images/inheritance-377dff34e7b3d365fd855743990af4770b4d8636.svg" type="image/svg+xml" class="inheritance graphviz">
 <p class="warning">Inheritance diagram of proteus.Comm</p></object></div>
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.Comm.init">
 <code class="sig-prename descclassname">proteus.Comm.</code><code class="sig-name descname">init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.init" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.Comm.get">
 <code class="sig-prename descclassname">proteus.Comm.</code><code class="sig-name descname">get</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.get" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="proteus.Comm.Comm">
 <em class="property">class </em><code class="sig-prename descclassname">proteus.Comm.</code><code class="sig-name descname">Comm</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.Comm" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Proteus wrapper around PETSc/MPI communicators</p>
 <p>This is a very simple class that provides compatibility with older Proteus comm objects.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Comm.Comm.isInitialized">
 <code class="sig-name descname">isInitialized</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.Comm.isInitialized" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Comm.Comm.rank">
 <code class="sig-name descname">rank</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.Comm.rank" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return position in this communicator (0-indexed)</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Comm.Comm.size">
 <code class="sig-name descname">size</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.Comm.size" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return number of processes on this communicator</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Comm.Comm.barrier">
 <code class="sig-name descname">barrier</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.Comm.barrier" title="Permalink to this definition">¶</a></dt>
 <dd><p>Block all processes on this communicator until all have called this method</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Comm.Comm.isMaster">
 <code class="sig-name descname">isMaster</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.Comm.isMaster" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return true if this process is the ‘master’ for this communicator</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Comm.Comm.beginSequential">
-<code class="sig-name descname">beginSequential</code><span class="sig-paren">(</span><em class="sig-param">ng=1</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.Comm.beginSequential" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">beginSequential</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ng</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.Comm.beginSequential" title="Permalink to this definition">¶</a></dt>
 <dd><p>Begin a block of code to be completed sequentially by each process</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Comm.Comm.endSequential">
-<code class="sig-name descname">endSequential</code><span class="sig-paren">(</span><em class="sig-param">ng=1</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.Comm.endSequential" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">endSequential</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ng</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.Comm.endSequential" title="Permalink to this definition">¶</a></dt>
 <dd><p>End a block of code to be completed sequentially by each process</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Comm.Comm.globalSum">
-<code class="sig-name descname">globalSum</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.Comm.globalSum" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">globalSum</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.Comm.globalSum" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Comm.Comm.globalMax">
-<code class="sig-name descname">globalMax</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.Comm.globalMax" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">globalMax</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.Comm.globalMax" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="proteus.Comm.Comm.globalMin">
-<code class="sig-name descname">globalMin</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.Comm.globalMin" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">globalMin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.Comm.globalMin" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.Comm.globalSum">
-<code class="sig-prename descclassname">proteus.Comm.</code><code class="sig-name descname">globalSum</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.globalSum" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.Comm.</code><code class="sig-name descname">globalSum</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.globalSum" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.Comm.globalMax">
-<code class="sig-prename descclassname">proteus.Comm.</code><code class="sig-name descname">globalMax</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.globalMax" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.Comm.</code><code class="sig-name descname">globalMax</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.globalMax" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="proteus.Comm.globalMin">
-<code class="sig-prename descclassname">proteus.Comm.</code><code class="sig-name descname">globalMin</code><span class="sig-paren">(</span><em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.globalMin" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">proteus.Comm.</code><code class="sig-name descname">globalMin</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/Comm.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.Comm.globalMin" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
