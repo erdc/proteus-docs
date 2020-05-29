@@ -1035,7 +1035,7 @@ or porous zone)</p>
 <li><p><strong>zone_type</strong> (<em>string</em>) – type of zone, can be set to ‘absorption’, ‘generation’, or ‘porous’</p></li>
 <li><p><strong>center</strong> (<em>array_like</em>) – coordinates of center of the zone</p></li>
 <li><p><strong>orientation</strong> (<em>array_like</em>) – orientation for absorption/generation zones: from boundary to tank</p></li>
-<li><p><strong>epsFact_solid</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) – half the zone length</p></li>
+<li><p><strong>epsFact_porous</strong> (<a class="reference external" href="https://docs.python.org/2/library/functions.html#float" title="(in Python v2.7)"><em>float</em></a>) – half the zone length</p></li>
 <li><p><strong>waves</strong> (<em>Optional</em><em>[</em><em>proteus.WaveTools</em><em>]</em>) – class instance of a wave from proteus.WaveTools (must be set for
 generation zone)</p></li>
 <li><p><strong>shape</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="proteus.SpatialTools.html#proteus.SpatialTools.Shape" title="proteus.SpatialTools.Shape"><em>proteus.SpatialTools.Shape</em></a><em>]</em>) – shape class instance containing region</p></li>
@@ -1108,6 +1108,17 @@ aligned with gravity. If not set, will be 1 in 2D (y), 2 in 3D (z).</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>dragBeta</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="proteus.mprans.BoundaryConditions.RelaxationZone.epsFact_porous">
+<code class="sig-name descname">epsFact_porous</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/BoundaryConditions.pyx"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.BoundaryConditions.RelaxationZone.epsFact_porous" title="Permalink to this definition">¶</a></dt>
+<dd><p>‘double’</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type</dt>
+<dd class="field-odd"><p>epsFact_porous</p>
 </dd>
 </dl>
 </dd></dl>
