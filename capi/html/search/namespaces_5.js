@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['proteus_2506',['proteus',['../namespaceproteus.html',1,'']]]
+  ['detail',['detail',['../namespaceproteus_1_1detail.html',1,'proteus']]],
+  ['proteus',['proteus',['../namespaceproteus.html',1,'']]]
 ];

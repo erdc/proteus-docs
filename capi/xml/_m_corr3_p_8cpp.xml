@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="_m_corr3_p_8cpp" kind="file" language="C++">
+    <compoundname>MCorr3P.cpp</compoundname>
+    <includes refid="_m_corr3_p_8h" local="yes">MCorr3P.h</includes>
+    <incdepgraph>
+      <node id="897">
+        <label>cmath</label>
+      </node>
+      <node id="906">
+        <label>xtensor/xio.hpp</label>
+      </node>
+      <node id="903">
+        <label>stdexcept</label>
+      </node>
+      <node id="904">
+        <label>string</label>
+      </node>
+      <node id="902">
+        <label>map</label>
+      </node>
+      <node id="896">
+        <label>MCorr3P.h</label>
+        <link refid="_m_corr3_p_8h"/>
+        <childnode refid="897" relation="include">
+        </childnode>
+        <childnode refid="898" relation="include">
+        </childnode>
+        <childnode refid="899" relation="include">
+        </childnode>
+        <childnode refid="900" relation="include">
+        </childnode>
+        <childnode refid="901" relation="include">
+        </childnode>
+        <childnode refid="905" relation="include">
+        </childnode>
+      </node>
+      <node id="905">
+        <label>xtensor-python/pyarray.hpp</label>
+      </node>
+      <node id="900">
+        <label>ModelFactory.h</label>
+        <link refid="_model_factory_8h"/>
+        <childnode refid="898" relation="include">
+        </childnode>
+      </node>
+      <node id="901">
+        <label>ArgumentsDict.h</label>
+        <link refid="_arguments_dict_8h"/>
+        <childnode refid="902" relation="include">
+        </childnode>
+        <childnode refid="903" relation="include">
+        </childnode>
+        <childnode refid="904" relation="include">
+        </childnode>
+        <childnode refid="905" relation="include">
+        </childnode>
+        <childnode refid="906" relation="include">
+        </childnode>
+      </node>
+      <node id="895">
+        <label>MCorr3P.cpp</label>
+        <link refid="_m_corr3_p_8cpp"/>
+        <childnode refid="896" relation="include">
+        </childnode>
+      </node>
+      <node id="898">
+        <label>iostream</label>
+      </node>
+      <node id="899">
+        <label>CompKernel.h</label>
+        <link refid="_comp_kernel_8h"/>
+        <childnode refid="897" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespacext">xt</innernamespace>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_m_corr3_p_8cpp_1a17aae50ec30d0ac23ea339b4d09812a6" prot="public" static="no">
+        <name>FORCE_IMPORT_ARRAY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cekees/proteus/proteus/mprans/MCorr3P.cpp" line="1" column="9" bodyfile="/home/cekees/proteus/proteus/mprans/MCorr3P.cpp" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_m_corr3_p_8cpp_1a59a646f63bd740beb3ac60e4885ace15" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PYBIND11_MODULE</definition>
+        <argsstring>(cMCorr3P, m)</argsstring>
+        <name>PYBIND11_MODULE</name>
+        <param>
+          <type>cMCorr3P</type>
+        </param>
+        <param>
+          <type>m</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cekees/proteus/proteus/mprans/MCorr3P.cpp" line="20" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/MCorr3P.cpp" bodystart="20" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="_m_corr3_p_8cpp_1a17aae50ec30d0ac23ea339b4d09812a6" refkind="member"><highlight class="preprocessor">#define<sp/>FORCE_IMPORT_ARRAY</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_m_corr3_p_8h" kindref="compound">MCorr3P.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacext" kindref="compound">xt</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>defined(__GNUC__)<sp/>&amp;&amp;<sp/>!defined(__clang__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">workaround</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">inline</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>complex_allocator()</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;int&gt;<sp/>ai;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::allocator&lt;double&gt;<sp/>ad;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">py<sp/>=<sp/>pybind11;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="_m_corr3_p_8cpp_1a59a646f63bd740beb3ac60e4885ace15" refkind="member"><highlight class="normal"><ref refid="_m_corr3_p_8cpp_1a59a646f63bd740beb3ac60e4885ace15" kindref="member">PYBIND11_MODULE</ref>(cMCorr3P,<sp/>m)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="classproteus_1_1cpp_m_corr3_p__base" kindref="compound">proteus::cppMCorr3P_base</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="namespaceproteus_1a8db4e118bf5dfce60e2106a54bdb62ef" kindref="member">proteus::newMCorr3P</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>xt::import_numpy();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>py::class_&lt;cppMCorr3P_base&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;cppMCorr3P_base&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateResidual&quot;</highlight><highlight class="normal">,<sp/>&amp;cppMCorr3P_base::calculateResidual)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateJacobian&quot;</highlight><highlight class="normal">,<sp/>&amp;cppMCorr3P_base::calculateJacobian)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;elementSolve&quot;</highlight><highlight class="normal">,<sp/>&amp;cppMCorr3P_base::elementSolve)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;elementConstantSolve&quot;</highlight><highlight class="normal">,<sp/>&amp;cppMCorr3P_base::elementConstantSolve)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;globalConstantRJ&quot;</highlight><highlight class="normal">,<sp/>&amp;cppMCorr3P_base::globalConstantRJ)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateMass&quot;</highlight><highlight class="normal">,<sp/>&amp;cppMCorr3P_base::calculateMass)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;setMassQuadrature&quot;</highlight><highlight class="normal">,<sp/>&amp;cppMCorr3P_base::setMassQuadrature)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateStiffnessMatrix&quot;</highlight><highlight class="normal">,<sp/>&amp;cppMCorr3P_base::calculateStiffnessMatrix);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>m.def(</highlight><highlight class="stringliteral">&quot;newMCorr3P&quot;</highlight><highlight class="normal">,<sp/><ref refid="namespaceproteus_1a8db4e118bf5dfce60e2106a54bdb62ef" kindref="member">newMCorr3P</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/cekees/proteus/proteus/mprans/MCorr3P.cpp"/>
+  </compounddef>
+</doxygen>

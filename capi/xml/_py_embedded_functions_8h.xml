@@ -1,43 +1,110 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="_py_embedded_functions_8h" kind="file" language="C++">
     <compoundname>PyEmbeddedFunctions.h</compoundname>
     <includes local="yes">Python.h</includes>
+    <includedby refid="_mesh_adapt_p_u_m_i_8h" local="yes">MeshAdaptPUMI.h</includedby>
     <includedby refid="_r_a_n_s2_p_8h" local="yes">RANS2P.h</includedby>
     <includedby refid="_r_a_n_s2_p2_d_8h" local="yes">RANS2P2D.h</includedby>
     <incdepgraph>
-      <node id="2">
-        <label>Python.h</label>
-      </node>
-      <node id="1">
+      <node id="1490">
         <label>PyEmbeddedFunctions.h</label>
         <link refid="_py_embedded_functions_8h"/>
-        <childnode refid="2" relation="include">
+        <childnode refid="1491" relation="include">
         </childnode>
+      </node>
+      <node id="1491">
+        <label>Python.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="3">
-        <label>RANS2P2D.h</label>
-        <link refid="_r_a_n_s2_p2_d_8h"/>
+      <node id="1501">
+        <label>VMS.cpp</label>
+        <link refid="_v_m_s_8cpp"/>
       </node>
-      <node id="2">
-        <label>RANS2P.h</label>
-        <link refid="_r_a_n_s2_p_8h"/>
+      <node id="1497">
+        <label>MeshConverter.cpp</label>
+        <link refid="_mesh_converter_8cpp"/>
       </node>
-      <node id="1">
+      <node id="1494">
+        <label>cMeshAdaptPUMI.cpp</label>
+        <link refid="c_mesh_adapt_p_u_m_i_8cpp"/>
+      </node>
+      <node id="1503">
+        <label>RANS2P.cpp</label>
+        <link refid="_r_a_n_s2_p_8cpp"/>
+      </node>
+      <node id="1505">
+        <label>RANS2P2D.cpp</label>
+        <link refid="_r_a_n_s2_p2_d_8cpp"/>
+      </node>
+      <node id="1492">
         <label>PyEmbeddedFunctions.h</label>
         <link refid="_py_embedded_functions_8h"/>
-        <childnode refid="2" relation="include">
+        <childnode refid="1493" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="1502" relation="include">
         </childnode>
+        <childnode refid="1504" relation="include">
+        </childnode>
+      </node>
+      <node id="1499">
+        <label>ParallelMeshConverter.cpp</label>
+        <link refid="_parallel_mesh_converter_8cpp"/>
+      </node>
+      <node id="1504">
+        <label>RANS2P2D.h</label>
+        <link refid="_r_a_n_s2_p2_d_8h"/>
+        <childnode refid="1505" relation="include">
+        </childnode>
+      </node>
+      <node id="1502">
+        <label>RANS2P.h</label>
+        <link refid="_r_a_n_s2_p_8h"/>
+        <childnode refid="1503" relation="include">
+        </childnode>
+      </node>
+      <node id="1495">
+        <label>createAnalyticGeometry.cpp</label>
+        <link refid="create_analytic_geometry_8cpp"/>
+      </node>
+      <node id="1498">
+        <label>MeshFields.cpp</label>
+        <link refid="_mesh_fields_8cpp"/>
+      </node>
+      <node id="1493">
+        <label>MeshAdaptPUMI.h</label>
+        <link refid="_mesh_adapt_p_u_m_i_8h"/>
+        <childnode refid="1494" relation="include">
+        </childnode>
+        <childnode refid="1495" relation="include">
+        </childnode>
+        <childnode refid="1496" relation="include">
+        </childnode>
+        <childnode refid="1497" relation="include">
+        </childnode>
+        <childnode refid="1498" relation="include">
+        </childnode>
+        <childnode refid="1499" relation="include">
+        </childnode>
+        <childnode refid="1500" relation="include">
+        </childnode>
+        <childnode refid="1501" relation="include">
+        </childnode>
+      </node>
+      <node id="1496">
+        <label>ErrorResidualMethod.cpp</label>
+        <link refid="_error_residual_method_8cpp"/>
+      </node>
+      <node id="1500">
+        <label>SizeField.cpp</label>
+        <link refid="_size_field_8cpp"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="func">
-      <memberdef kind="function" id="_py_embedded_functions_8h_1a3ddeb1b85023f01e48ff330ed82632b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_py_embedded_functions_8h_1a136df0e82f08ecab6d108f031b13d59d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
-        <definition>int logEvent</definition>
+        <definition>static int logEvent</definition>
         <argsstring>(char *logString, int logLevel)</argsstring>
         <name>logEvent</name>
         <param>
@@ -54,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tridelat/PROTEUS/proteus2/proteus/PyEmbeddedFunctions.h" line="7" column="5" bodyfile="/home/tridelat/PROTEUS/proteus2/proteus/PyEmbeddedFunctions.h" bodystart="7" bodyend="55"/>
+        <location file="/home/cekees/proteus/proteus/PyEmbeddedFunctions.h" line="7" column="1" bodyfile="/home/cekees/proteus/proteus/PyEmbeddedFunctions.h" bodystart="7" bodyend="55"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -68,7 +135,7 @@
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Python.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//This<sp/>function<sp/>accepts<sp/>a<sp/>string<sp/>which<sp/>gets<sp/>passed<sp/>to<sp/>the<sp/>logEvent<sp/>Python<sp/>function<sp/>in<sp/>Profiling</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7" refid="_py_embedded_functions_8h_1a3ddeb1b85023f01e48ff330ed82632b4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_py_embedded_functions_8h_1a3ddeb1b85023f01e48ff330ed82632b4" kindref="member">logEvent</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>logString,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>logLevel)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>logEvent(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>logString,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>logLevel)</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//logString<sp/>is<sp/>the<sp/>desired<sp/>string:<sp/>usually<sp/>set<sp/>with<sp/>sprintf()<sp/>to<sp/>combine<sp/>characters<sp/>with<sp/>numbers</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//logLevel<sp/>means<sp/>the<sp/>same<sp/>as<sp/>with<sp/>the<sp/>python<sp/>function</highlight><highlight class="normal"></highlight></codeline>
@@ -92,12 +159,12 @@
 <codeline lineno="28"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>pValue<sp/>reference<sp/>stolen<sp/>here:</highlight></codeline>
 <codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/><sp/>PyTuple_SetItem(pArgs,<sp/>0,<sp/>pValue);</highlight></codeline>
 <codeline lineno="30"><highlight class="comment"></highlight></codeline>
-<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/>pValue<sp/>=<sp/>PyInt_FromLong(logLevel);</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/>pValue<sp/>=<sp/>PyLong_FromLong(logLevel);</highlight></codeline>
 <codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/>//<sp/>pValue<sp/>reference<sp/>stolen<sp/>here:</highlight></codeline>
 <codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/><sp/>PyTuple_SetItem(pArgs,<sp/>1,<sp/>pValue);</highlight></codeline>
 <codeline lineno="34"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>PyTuple_SetItem(pArgs,<sp/>0,<sp/>PyUnicode_FromString(logString));</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>PyTuple_SetItem(pArgs,<sp/>1,<sp/>PyInt_FromLong(logLevel));</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>PyTuple_SetItem(pArgs,<sp/>1,<sp/>PyLong_FromLong(logLevel));</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>PyObject_CallObject(pFunc,pArgs);</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>Py_DECREF(pFunc);</highlight></codeline>
@@ -120,6 +187,6 @@
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/home/tridelat/PROTEUS/proteus2/proteus/PyEmbeddedFunctions.h"/>
+    <location file="/home/cekees/proteus/proteus/PyEmbeddedFunctions.h"/>
   </compounddef>
 </doxygen>

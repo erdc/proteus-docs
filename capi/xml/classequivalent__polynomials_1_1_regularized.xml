@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
   <compounddef id="classequivalent__polynomials_1_1_regularized" kind="class" language="C++" prot="public">
     <compoundname>equivalent_polynomials::Regularized</compoundname>
-    <includes refid="equivalent__polynomials_8h" local="no">/home/tridelat/PROTEUS/proteus2/proteus/equivalent_polynomials.h</includes>
+    <includes refid="equivalent__polynomials_8h" local="no">/home/cekees/proteus/proteus/equivalent_polynomials.h</includes>
     <templateparamlist>
       <param>
         <type>int</type>
@@ -19,11 +19,16 @@
         <declname>nQ</declname>
         <defname>nQ</defname>
       </param>
+      <param>
+        <type>int</type>
+        <declname>nEBQ</declname>
+        <defname>nEBQ</defname>
+      </param>
     </templateparamlist>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1ab877ab0a2a79d1c89e1693493d2917d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1a9acf22e946711be3e0925c66d1ff70c5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
-        <definition>equivalent_polynomials::Regularized&lt; nSpace, nP, nQ &gt;::Regularized</definition>
+        <definition>equivalent_polynomials::Regularized&lt; nSpace, nP, nQ, nEBQ &gt;::Regularized</definition>
         <argsstring>(bool useExact=false)</argsstring>
         <name>Regularized</name>
         <param>
@@ -37,12 +42,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tridelat/PROTEUS/proteus2/proteus/equivalent_polynomials.h" line="14" column="5" bodyfile="/home/tridelat/PROTEUS/proteus2/proteus/equivalent_polynomials.h" bodystart="14" bodyend="15"/>
+        <location file="/home/cekees/proteus/proteus/equivalent_polynomials.h" line="15" column="1" bodyfile="/home/cekees/proteus/proteus/equivalent_polynomials.h" bodystart="15" bodyend="16"/>
       </memberdef>
-      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1a44ae1c5215481ba6e330053d22621907" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>void</type>
-        <definition>void equivalent_polynomials::Regularized&lt; nSpace, nP, nQ &gt;::calculate</definition>
-        <argsstring>(const double *phi_dof, const double *phi_nodes, const double *xi_r)</argsstring>
+      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1a10af2c18dbad1cd8849ec7a1ae18de48" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int equivalent_polynomials::Regularized&lt; nSpace, nP, nQ, nEBQ &gt;::calculate</definition>
+        <argsstring>(const double *phi_dof, const double *phi_nodes, const double *xi_r, double ma, double mb, bool isBoundary, bool scale)</argsstring>
         <name>calculate</name>
         <param>
           <type>const double *</type>
@@ -56,17 +61,75 @@
           <type>const double *</type>
           <declname>xi_r</declname>
         </param>
+        <param>
+          <type>double</type>
+          <declname>ma</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mb</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isBoundary</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>scale</declname>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tridelat/PROTEUS/proteus2/proteus/equivalent_polynomials.h" line="16" column="17" bodyfile="/home/tridelat/PROTEUS/proteus2/proteus/equivalent_polynomials.h" bodystart="16" bodyend="17"/>
+        <location file="/home/cekees/proteus/proteus/equivalent_polynomials.h" line="17" column="1" bodyfile="/home/cekees/proteus/proteus/equivalent_polynomials.h" bodystart="17" bodyend="18"/>
       </memberdef>
-      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1aabd4f62c46b591c95e7b905352efd878" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1af1d8ac8ef4f8885ac081771f275e6fa2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int equivalent_polynomials::Regularized&lt; nSpace, nP, nQ, nEBQ &gt;::calculate</definition>
+        <argsstring>(const double *phi_dof, const double *phi_nodes, const double *xi_r, bool isBoundary)</argsstring>
+        <name>calculate</name>
+        <param>
+          <type>const double *</type>
+          <declname>phi_dof</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>phi_nodes</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>xi_r</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isBoundary</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cekees/proteus/proteus/equivalent_polynomials.h" line="19" column="1" bodyfile="/home/cekees/proteus/proteus/equivalent_polynomials.h" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1a6e42215133be14e7a4b2945b9a77a989" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double *</type>
+        <definition>double* equivalent_polynomials::Regularized&lt; nSpace, nP, nQ, nEBQ &gt;::get_normal</definition>
+        <argsstring>()</argsstring>
+        <name>get_normal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cekees/proteus/proteus/equivalent_polynomials.h" line="23" column="1" bodyfile="/home/cekees/proteus/proteus/equivalent_polynomials.h" bodystart="23" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1a76ac4c7ebd5d6fabcbd9e905241e07ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void equivalent_polynomials::Regularized&lt; nSpace, nP, nQ &gt;::set_quad</definition>
+        <definition>void equivalent_polynomials::Regularized&lt; nSpace, nP, nQ, nEBQ &gt;::set_quad</definition>
         <argsstring>(unsigned int q)</argsstring>
         <name>set_quad</name>
         <param>
@@ -79,11 +142,28 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tridelat/PROTEUS/proteus2/proteus/equivalent_polynomials.h" line="18" column="17" bodyfile="/home/tridelat/PROTEUS/proteus2/proteus/equivalent_polynomials.h" bodystart="18" bodyend="19"/>
+        <location file="/home/cekees/proteus/proteus/equivalent_polynomials.h" line="27" column="1" bodyfile="/home/cekees/proteus/proteus/equivalent_polynomials.h" bodystart="27" bodyend="28"/>
       </memberdef>
-      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1a6a4c38ee9722407f79c565e10e7a4c0f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1a725f23aaaccff203f5536415a3c6b8ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void equivalent_polynomials::Regularized&lt; nSpace, nP, nQ, nEBQ &gt;::set_boundary_quad</definition>
+        <argsstring>(unsigned int ebq)</argsstring>
+        <name>set_boundary_quad</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>ebq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cekees/proteus/proteus/equivalent_polynomials.h" line="29" column="1" bodyfile="/home/cekees/proteus/proteus/equivalent_polynomials.h" bodystart="29" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1a9bbeda513b35db98bfc62f22cc050268" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
-        <definition>double equivalent_polynomials::Regularized&lt; nSpace, nP, nQ &gt;::H</definition>
+        <definition>double equivalent_polynomials::Regularized&lt; nSpace, nP, nQ, nEBQ &gt;::H</definition>
         <argsstring>(double eps, double phi)</argsstring>
         <name>H</name>
         <param>
@@ -100,11 +180,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tridelat/PROTEUS/proteus2/proteus/equivalent_polynomials.h" line="20" column="19" bodyfile="/home/tridelat/PROTEUS/proteus2/proteus/equivalent_polynomials.h" bodystart="20" bodyend="32"/>
+        <location file="/home/cekees/proteus/proteus/equivalent_polynomials.h" line="31" column="1" bodyfile="/home/cekees/proteus/proteus/equivalent_polynomials.h" bodystart="31" bodyend="43"/>
       </memberdef>
-      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1a17cd58c615647ba1b6dcade3726968cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1afd6d5f68dc769af458489a15f5d21fd4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
-        <definition>double equivalent_polynomials::Regularized&lt; nSpace, nP, nQ &gt;::ImH</definition>
+        <definition>double equivalent_polynomials::Regularized&lt; nSpace, nP, nQ, nEBQ &gt;::ImH</definition>
         <argsstring>(double eps, double phi)</argsstring>
         <name>ImH</name>
         <param>
@@ -121,11 +201,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tridelat/PROTEUS/proteus2/proteus/equivalent_polynomials.h" line="33" column="19" bodyfile="/home/tridelat/PROTEUS/proteus2/proteus/equivalent_polynomials.h" bodystart="33" bodyend="36"/>
+        <location file="/home/cekees/proteus/proteus/equivalent_polynomials.h" line="44" column="1" bodyfile="/home/cekees/proteus/proteus/equivalent_polynomials.h" bodystart="44" bodyend="47"/>
       </memberdef>
-      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1a29aff2a2c27d9e44fd99213731f9c827" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1a3fa03f0c6cbff27ed7a3ec95c87f437a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
-        <definition>double equivalent_polynomials::Regularized&lt; nSpace, nP, nQ &gt;::D</definition>
+        <definition>double equivalent_polynomials::Regularized&lt; nSpace, nP, nQ, nEBQ &gt;::D</definition>
         <argsstring>(double eps, double phi)</argsstring>
         <name>D</name>
         <param>
@@ -142,21 +222,168 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/tridelat/PROTEUS/proteus2/proteus/equivalent_polynomials.h" line="37" column="19" bodyfile="/home/tridelat/PROTEUS/proteus2/proteus/equivalent_polynomials.h" bodystart="37" bodyend="47"/>
+        <location file="/home/cekees/proteus/proteus/equivalent_polynomials.h" line="48" column="1" bodyfile="/home/cekees/proteus/proteus/equivalent_polynomials.h" bodystart="48" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1adfb5230c817fc744507c7364eb6ec64a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Regularized&lt; nSpace, nP, nQ, nEBQ &gt;::VA</definition>
+        <argsstring>(int i)</argsstring>
+        <name>VA</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cekees/proteus/proteus/equivalent_polynomials.h" line="59" column="1" bodyfile="/home/cekees/proteus/proteus/equivalent_polynomials.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1aec401d3bb9638df49b55f97683ec8ae9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Regularized&lt; nSpace, nP, nQ, nEBQ &gt;::VA_x</definition>
+        <argsstring>(int i)</argsstring>
+        <name>VA_x</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cekees/proteus/proteus/equivalent_polynomials.h" line="60" column="1" bodyfile="/home/cekees/proteus/proteus/equivalent_polynomials.h" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1a017a667ff72d5493506a7ae8827478f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Regularized&lt; nSpace, nP, nQ, nEBQ &gt;::VA_y</definition>
+        <argsstring>(int i)</argsstring>
+        <name>VA_y</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cekees/proteus/proteus/equivalent_polynomials.h" line="61" column="1" bodyfile="/home/cekees/proteus/proteus/equivalent_polynomials.h" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1aea0ecf943f495411387f48d24bdeb67a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Regularized&lt; nSpace, nP, nQ, nEBQ &gt;::VA_z</definition>
+        <argsstring>(int i)</argsstring>
+        <name>VA_z</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cekees/proteus/proteus/equivalent_polynomials.h" line="62" column="1" bodyfile="/home/cekees/proteus/proteus/equivalent_polynomials.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1a79c05d088aead51322df36c45bc25007" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Regularized&lt; nSpace, nP, nQ, nEBQ &gt;::VB</definition>
+        <argsstring>(int i)</argsstring>
+        <name>VB</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cekees/proteus/proteus/equivalent_polynomials.h" line="63" column="1" bodyfile="/home/cekees/proteus/proteus/equivalent_polynomials.h" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1ac80c17b808d6d70d63153e8a421c571e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Regularized&lt; nSpace, nP, nQ, nEBQ &gt;::VB_x</definition>
+        <argsstring>(int i)</argsstring>
+        <name>VB_x</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cekees/proteus/proteus/equivalent_polynomials.h" line="64" column="1" bodyfile="/home/cekees/proteus/proteus/equivalent_polynomials.h" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1ac0b643b3b787e52f1f8c0c00675f299c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Regularized&lt; nSpace, nP, nQ, nEBQ &gt;::VB_y</definition>
+        <argsstring>(int i)</argsstring>
+        <name>VB_y</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cekees/proteus/proteus/equivalent_polynomials.h" line="65" column="1" bodyfile="/home/cekees/proteus/proteus/equivalent_polynomials.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classequivalent__polynomials_1_1_regularized_1a0b8afeda61ce98799f8267e1d7f897c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Regularized&lt; nSpace, nP, nQ, nEBQ &gt;::VB_z</definition>
+        <argsstring>(int i)</argsstring>
+        <name>VB_z</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/cekees/proteus/proteus/equivalent_polynomials.h" line="66" column="1" bodyfile="/home/cekees/proteus/proteus/equivalent_polynomials.h" bodystart="66" bodyend="66"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/tridelat/PROTEUS/proteus2/proteus/equivalent_polynomials.h" line="12" column="1" bodyfile="/home/tridelat/PROTEUS/proteus2/proteus/equivalent_polynomials.h" bodystart="11" bodyend="48"/>
+    <location file="/home/cekees/proteus/proteus/equivalent_polynomials.h" line="13" column="1" bodyfile="/home/cekees/proteus/proteus/equivalent_polynomials.h" bodystart="12" bodyend="67"/>
     <listofallmembers>
-      <member refid="classequivalent__polynomials_1_1_regularized_1a44ae1c5215481ba6e330053d22621907" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>calculate</name></member>
-      <member refid="classequivalent__polynomials_1_1_regularized_1a29aff2a2c27d9e44fd99213731f9c827" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>D</name></member>
-      <member refid="classequivalent__polynomials_1_1_regularized_1a6a4c38ee9722407f79c565e10e7a4c0f" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>H</name></member>
-      <member refid="classequivalent__polynomials_1_1_regularized_1a17cd58c615647ba1b6dcade3726968cd" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>ImH</name></member>
-      <member refid="classequivalent__polynomials_1_1_regularized_1ab877ab0a2a79d1c89e1693493d2917d6" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>Regularized</name></member>
-      <member refid="classequivalent__polynomials_1_1_regularized_1aabd4f62c46b591c95e7b905352efd878" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>set_quad</name></member>
+      <member refid="classequivalent__polynomials_1_1_regularized_1a10af2c18dbad1cd8849ec7a1ae18de48" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>calculate</name></member>
+      <member refid="classequivalent__polynomials_1_1_regularized_1af1d8ac8ef4f8885ac081771f275e6fa2" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>calculate</name></member>
+      <member refid="classequivalent__polynomials_1_1_regularized_1a3fa03f0c6cbff27ed7a3ec95c87f437a" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>D</name></member>
+      <member refid="classequivalent__polynomials_1_1_regularized_1a6e42215133be14e7a4b2945b9a77a989" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>get_normal</name></member>
+      <member refid="classequivalent__polynomials_1_1_regularized_1a9bbeda513b35db98bfc62f22cc050268" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>H</name></member>
+      <member refid="classequivalent__polynomials_1_1_regularized_1afd6d5f68dc769af458489a15f5d21fd4" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>ImH</name></member>
+      <member refid="classequivalent__polynomials_1_1_regularized_1a9acf22e946711be3e0925c66d1ff70c5" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>Regularized</name></member>
+      <member refid="classequivalent__polynomials_1_1_regularized_1a725f23aaaccff203f5536415a3c6b8ac" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>set_boundary_quad</name></member>
+      <member refid="classequivalent__polynomials_1_1_regularized_1a76ac4c7ebd5d6fabcbd9e905241e07ef" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>set_quad</name></member>
+      <member refid="classequivalent__polynomials_1_1_regularized_1adfb5230c817fc744507c7364eb6ec64a" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>VA</name></member>
+      <member refid="classequivalent__polynomials_1_1_regularized_1aec401d3bb9638df49b55f97683ec8ae9" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>VA_x</name></member>
+      <member refid="classequivalent__polynomials_1_1_regularized_1a017a667ff72d5493506a7ae8827478f5" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>VA_y</name></member>
+      <member refid="classequivalent__polynomials_1_1_regularized_1aea0ecf943f495411387f48d24bdeb67a" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>VA_z</name></member>
+      <member refid="classequivalent__polynomials_1_1_regularized_1a79c05d088aead51322df36c45bc25007" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>VB</name></member>
+      <member refid="classequivalent__polynomials_1_1_regularized_1ac80c17b808d6d70d63153e8a421c571e" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>VB_x</name></member>
+      <member refid="classequivalent__polynomials_1_1_regularized_1ac0b643b3b787e52f1f8c0c00675f299c" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>VB_y</name></member>
+      <member refid="classequivalent__polynomials_1_1_regularized_1a0b8afeda61ce98799f8267e1d7f897c3" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Regularized</scope><name>VB_z</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>
