@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>proteus.mprans.GN_SW2DCV module &mdash; Proteus 1.7.3.dev0 documentation</title>
+  <title>proteus.mprans.GN_SW2DCV module &mdash; Proteus 1.7.4 documentation</title>
   
 
   
@@ -65,7 +65,7 @@
             
             
               <div class="version">
-                1.7.3.dev0
+                1.7.4
               </div>
             
           
@@ -261,7 +261,7 @@
 <span id="proteus-mprans-gn-sw2dcv-module"></span><h1>proteus.mprans.GN_SW2DCV module<a class="headerlink" href="#module-proteus.mprans.GN_SW2DCV" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
 <dt id="proteus.mprans.GN_SW2DCV.NumericalFlux">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.GN_SW2DCV.</code><code class="sig-name descname">NumericalFlux</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vt</span></em>, <em class="sig-param"><span class="n">getPointwiseBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getAdvectiveFluxBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getDiffusiveFluxBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getPeriodicBoundaryConditions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">h_eps</span><span class="o">=</span><span class="default_value">1e-05</span></em>, <em class="sig-param"><span class="n">tol_u</span><span class="o">=</span><span class="default_value">1e-05</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/GN_SW2DCV.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.GN_SW2DCV.NumericalFlux" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.GN_SW2DCV.</code><code class="sig-name descname">NumericalFlux</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vt</span></em>, <em class="sig-param"><span class="n">getPointwiseBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getAdvectiveFluxBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getDiffusiveFluxBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getPeriodicBoundaryConditions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">h_eps</span><span class="o">=</span><span class="default_value">1e-08</span></em>, <em class="sig-param"><span class="n">tol_u</span><span class="o">=</span><span class="default_value">1e-08</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/GN_SW2DCV.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.GN_SW2DCV.NumericalFlux" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.NumericalFlux.html#proteus.NumericalFlux.ShallowWater_2D" title="proteus.NumericalFlux.ShallowWater_2D"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.NumericalFlux.ShallowWater_2D</span></code></a></p>
 <dl class="py attribute">
 <dt id="proteus.mprans.GN_SW2DCV.NumericalFlux.hasInterior">
@@ -342,7 +342,7 @@ mwf not used right now</p>
 <dt id="proteus.mprans.GN_SW2DCV.Coefficients">
 <em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.GN_SW2DCV.</code><code class="sig-name descname">Coefficients</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">bathymetry</span></em>, <em class="sig-param"><span class="n">nu</span><span class="o">=</span><span class="default_value">1.004e-06</span></em>, <em class="sig-param"><span class="n">g</span><span class="o">=</span><span class="default_value">9.8</span></em>, <em class="sig-param"><span class="n">nd</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">sd</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">movingDomain</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">useRBLES</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">useMetrics</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">modelIndex</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">cE</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">LUMPED_MASS_MATRIX</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">LINEAR_FRICTION</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">mannings</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">forceStrongConditions</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">constrainedDOFs</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/GN_SW2DCV.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.GN_SW2DCV.Coefficients" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.TransportCoefficients.html#proteus.TransportCoefficients.TC_base" title="proteus.TransportCoefficients.TC_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.TransportCoefficients.TC_base</span></code></a></p>
-<p>The coefficients for the shallow water, modified Green-Naghdi equations</p>
+<p>The coefficients for the modified Green-Naghdi equations (dispersive SWEs)</p>
 <p>Set the number of components (equations) of the
 PDE and initialize the dicitionaries describing the form of the
 coefficients. Strings naming each component (used for viewing
