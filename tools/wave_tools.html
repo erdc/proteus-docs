@@ -40,7 +40,7 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Mesh Adaptivity" href="mesh_adaptivity.html" />
+    <link rel="next" title="Multiphase Navier-Stokes" href="../models/navier_stokes.html" />
     <link rel="prev" title="SpatialTools" href="spatial_tools.html" /> 
 </head>
 
@@ -99,13 +99,6 @@
 </ul>
 <p class="caption"><span class="caption-text">Tools</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="boundary_conditions.html">BoundaryConditions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="boundary_conditions.html#usage">Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="boundary_conditions.html#import">Import</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="spatial_tools.html">SpatialTools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="spatial_tools.html#usage">Usage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="spatial_tools.html#import">Import</a></li>
@@ -156,18 +149,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mesh_adaptivity.html">Mesh Adaptivity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mesh_motion.html">Mesh Motion</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Models</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../models/two_phase_flow.html">TwoPhaseFlow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../models/free_surface.html">Free Surface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#vof-ncls">VOF - NCLS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#clsvof">CLSVOF</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/navier_stokes.html">Navier-Stokes</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../models/navier_stokes.html">Multiphase Navier-Stokes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#two-phase">Two-Phase</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#three-phase">Three-Phase</a></li>
@@ -185,7 +170,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#running-the-tests">Running the tests</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../models/body_dynamics.html">Body Dynamics</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../models/free_surface.html">Free Surface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#vof-ncls">VOF - NCLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#clsvof">CLSVOF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../models/body_dynamics.html">Multi-Body Solid Dynamics</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#implementation">Implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#classes">Classes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchsystem">ProtChSystem</a></li>
@@ -196,8 +186,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id5">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChMoorings</a></li>
 </ul>
 </li>
 </ul>
@@ -338,7 +328,7 @@
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tank</span><span class="o">.</span><span class="n">setGenerationZones</span><span class="p">(</span><span class="n">x_n</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">waves</span><span class="o">=</span><span class="n">wave</span><span class="p">,</span> <span class="n">dragAlpha</span><span class="o">=</span><span class="n">dragAlpha</span><span class="p">,</span> <span class="n">smoothing</span> <span class="o">=</span> <span class="n">smoothing</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Guidance for using the <code class="docutils literal notranslate"><span class="pre">setUnsteadyTwoPhaseVelocityInlet</span></code> and <code class="docutils literal notranslate"><span class="pre">setGenerationZones</span></code> functions are given in the <a class="reference internal" href="boundary_conditions.html"><span class="doc">BoundaryConditions</span></a> and <a class="reference internal" href="spatial_tools.html"><span class="doc">Spatial Tools</span></a> sections of the documentation</p>
+<p>Guidance for using the <code class="docutils literal notranslate"><span class="pre">setUnsteadyTwoPhaseVelocityInlet</span></code> and <code class="docutils literal notranslate"><span class="pre">setGenerationZones</span></code> functions are given in the <span class="xref std std-doc">BoundaryConditions</span> and <a class="reference internal" href="spatial_tools.html"><span class="doc">Spatial Tools</span></a> sections of the documentation</p>
 <p>Simple examples of usage within the context of a 2D numerical tank can be found in <a class="reference external" href="https://github.com/erdc/air-water-vv/tree/master/2d/numericalTanks">air-water-vv</a></p>
 </div>
 <div class="section" id="how-to-use-as-stand-alone-tool">
@@ -395,7 +385,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="mesh_adaptivity.html" class="btn btn-neutral float-right" title="Mesh Adaptivity" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../models/navier_stokes.html" class="btn btn-neutral float-right" title="Multiphase Navier-Stokes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="spatial_tools.html" class="btn btn-neutral float-left" title="SpatialTools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

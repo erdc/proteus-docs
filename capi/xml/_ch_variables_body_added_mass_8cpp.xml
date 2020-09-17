@@ -1,22 +1,22 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
   <compounddef id="_ch_variables_body_added_mass_8cpp" kind="file" language="C++">
     <compoundname>ChVariablesBodyAddedMass.cpp</compoundname>
     <includes refid="_ch_variables_body_added_mass_8h" local="yes">ChVariablesBodyAddedMass.h</includes>
     <incdepgraph>
-      <node id="218">
-        <label>ChVariablesBodyAddedMass.cpp</label>
-        <link refid="_ch_variables_body_added_mass_8cpp"/>
-        <childnode refid="219" relation="include">
-        </childnode>
-      </node>
-      <node id="220">
-        <label>chrono/solver/ChVariablesBodyOwnMass.h</label>
-      </node>
-      <node id="219">
+      <node id="2">
         <label>ChVariablesBodyAddedMass.h</label>
         <link refid="_ch_variables_body_added_mass_8h"/>
-        <childnode refid="220" relation="include">
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>chrono/solver/ChVariablesBodyOwnMass.h</label>
+      </node>
+      <node id="1">
+        <label>ChVariablesBodyAddedMass.cpp</label>
+        <link refid="_ch_variables_body_added_mass_8cpp"/>
+        <childnode refid="2" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -168,7 +168,7 @@
 <codeline lineno="140"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>size<sp/>of<sp/>the<sp/>total<sp/>variables&amp;constraints<sp/>in<sp/>the<sp/>system;<sp/>the<sp/>procedure</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="141"><highlight class="normal"></highlight><highlight class="comment">//<sp/>will<sp/>use<sp/>the<sp/>ChVariable<sp/>offset<sp/>(that<sp/>must<sp/>be<sp/>already<sp/>updated)<sp/>as<sp/>index.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="142" refid="classchrono_1_1_ch_variables_body_added_mass_1a008948e89b17ef923e6be4261cf31cf2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classchrono_1_1_ch_variables_body_added_mass_1a008948e89b17ef923e6be4261cf31cf2" kindref="member">ChVariablesBodyAddedMass::DiagonalAdd</ref>(ChVectorRef<sp/>result,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>c_a)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(result.size()<sp/>==<sp/>this-&gt;offset<sp/>+<sp/>Get_ndof());</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(result.size()<sp/>==<sp/>1);</highlight></codeline>
 <codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>Get_ndof();<sp/>i++)<sp/>{</highlight></codeline>
 <codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result(this-&gt;offset<sp/>+<sp/>i)<sp/>+=<sp/>c_a<sp/>*<sp/>Mfullmass(i,<sp/>i);</highlight></codeline>
 <codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -186,6 +186,6 @@
 <codeline lineno="158"><highlight class="normal"></highlight></codeline>
 <codeline lineno="159"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>chrono</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/cekees/proteus/proteus/mbd/ChVariablesBodyAddedMass.cpp"/>
+    <location file="/Users/cekees/proteus/proteus/mbd/ChVariablesBodyAddedMass.cpp"/>
   </compounddef>
 </doxygen>

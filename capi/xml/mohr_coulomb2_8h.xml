@@ -1,23 +1,23 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
   <compounddef id="mohr_coulomb2_8h" kind="file" language="C++">
     <compoundname>mohrCoulomb2.h</compoundname>
     <includedby refid="_elasto_plastic_8h" local="yes">ElastoPlastic.h</includedby>
     <invincdepgraph>
-      <node id="1145">
+      <node id="3">
         <label>cElastoPlastic.cpp</label>
         <link refid="c_elasto_plastic_8cpp"/>
       </node>
-      <node id="1143">
+      <node id="1">
         <label>mohrCoulomb2.h</label>
         <link refid="mohr_coulomb2_8h"/>
-        <childnode refid="1144" relation="include">
+        <childnode refid="2" relation="include">
         </childnode>
       </node>
-      <node id="1144">
+      <node id="2">
         <label>ElastoPlastic.h</label>
         <link refid="_elasto_plastic_8h"/>
-        <childnode refid="1145" relation="include">
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -69,7 +69,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/elastoplastic/mohrCoulomb2.h" line="2" column="1" bodyfile="/home/cekees/proteus/proteus/elastoplastic/mohrCoulomb2.h" bodystart="2" bodyend="174"/>
+        <location file="/Users/cekees/proteus/proteus/elastoplastic/mohrCoulomb2.h" line="2" column="13" bodyfile="/Users/cekees/proteus/proteus/elastoplastic/mohrCoulomb2.h" bodystart="2" bodyend="174"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -199,59 +199,59 @@
 <codeline lineno="120"><highlight class="normal"><sp/><sp/>Dtheta_zx<sp/>=<sp/>Dtheta_arg*(Darg_J_3*DJ_3_zx<sp/>+<sp/>Darg_t*Dt_zx);</highlight></codeline>
 <codeline lineno="121"><highlight class="normal"></highlight></codeline>
 <codeline lineno="122"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//f</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/>f<sp/>=<sp/><sp/>sigma_m*sin(phi)<sp/></highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>+<sp/>sigma_b*(cos_theta/sqrt(3.0)<sp/>-<sp/>(sin_theta*sin(phi))/3.0)<sp/></highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>c*cos(phi);</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><ref refid="_headers_8h_1a760cfab91ff5a05317014c341a24853f" kindref="member">f</ref><sp/>=<sp/><sp/>sigma_m*sin(<ref refid="_headers_8h_1ace0097aceb19d2d05a51f5d244573c4f" kindref="member">phi</ref>)<sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/>+<sp/>sigma_b*(cos_theta/sqrt(3.0)<sp/>-<sp/>(sin_theta*sin(<ref refid="_headers_8h_1ace0097aceb19d2d05a51f5d244573c4f" kindref="member">phi</ref>))/3.0)<sp/></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/><ref refid="_headers_8h_1aa0903c8c48f55ad539ee4e47f2d020ba" kindref="member">c</ref>*cos(<ref refid="_headers_8h_1ace0097aceb19d2d05a51f5d244573c4f" kindref="member">phi</ref>);</highlight></codeline>
 <codeline lineno="126"><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/>Df_sigma_m<sp/>=<sp/>sin(phi);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/>Df_sigma_m<sp/>=<sp/>sin(<ref refid="_headers_8h_1ace0097aceb19d2d05a51f5d244573c4f" kindref="member">phi</ref>);</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/>Df_sigma_b<sp/>=<sp/>(cos_theta/sqrt(3.0)<sp/>-<sp/>(sin_theta*sin(phi))/3.0);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/>Df_sigma_b<sp/>=<sp/>(cos_theta/sqrt(3.0)<sp/>-<sp/>(sin_theta*sin(<ref refid="_headers_8h_1ace0097aceb19d2d05a51f5d244573c4f" kindref="member">phi</ref>))/3.0);</highlight></codeline>
 <codeline lineno="130"><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/>Df_theta<sp/>=<sp/>sigma_b*(-sin_theta/sqrt(3.0)<sp/>-<sp/>(cos_theta*sin(phi))/3.0);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/>Df_theta<sp/>=<sp/>sigma_b*(-sin_theta/sqrt(3.0)<sp/>-<sp/>(cos_theta*sin(<ref refid="_headers_8h_1ace0097aceb19d2d05a51f5d244573c4f" kindref="member">phi</ref>))/3.0);</highlight></codeline>
 <codeline lineno="132"><highlight class="normal"></highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/>df[sXX]<sp/>=<sp/>Df_sigma_m*Dsigma_m_x<sp/>+<sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><ref refid="group__analytical_solutions_1ga31fe0a5e02da8c2ed2761f3aabf86e0d" kindref="member">df</ref>[sXX]<sp/>=<sp/>Df_sigma_m*Dsigma_m_x<sp/>+<sp/></highlight></codeline>
 <codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>Df_sigma_b*Dsigma_b_x<sp/>+<sp/></highlight></codeline>
 <codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>Df_theta*Dtheta_x;</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/>df[sYY]<sp/>=<sp/>Df_sigma_m*Dsigma_m_y<sp/>+<sp/></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><ref refid="group__analytical_solutions_1ga31fe0a5e02da8c2ed2761f3aabf86e0d" kindref="member">df</ref>[sYY]<sp/>=<sp/>Df_sigma_m*Dsigma_m_y<sp/>+<sp/></highlight></codeline>
 <codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>Df_sigma_b*Dsigma_b_y<sp/>+<sp/></highlight></codeline>
 <codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/>Df_theta*Dtheta_y;</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/>df[sZZ]<sp/>=<sp/>Df_sigma_m*Dsigma_m_z<sp/>+<sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><ref refid="group__analytical_solutions_1ga31fe0a5e02da8c2ed2761f3aabf86e0d" kindref="member">df</ref>[sZZ]<sp/>=<sp/>Df_sigma_m*Dsigma_m_z<sp/>+<sp/></highlight></codeline>
 <codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>Df_sigma_b*Dsigma_b_z<sp/>+<sp/></highlight></codeline>
 <codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>Df_theta*Dtheta_z;</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/>df[sXY]<sp/>=<sp/>Df_sigma_b*Dsigma_b_xy<sp/>+<sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><ref refid="group__analytical_solutions_1ga31fe0a5e02da8c2ed2761f3aabf86e0d" kindref="member">df</ref>[sXY]<sp/>=<sp/>Df_sigma_b*Dsigma_b_xy<sp/>+<sp/></highlight></codeline>
 <codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>Df_theta*Dtheta_xy;</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/>df[sYZ]<sp/>=<sp/>Df_sigma_b*Dsigma_b_yz<sp/>+<sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><ref refid="group__analytical_solutions_1ga31fe0a5e02da8c2ed2761f3aabf86e0d" kindref="member">df</ref>[sYZ]<sp/>=<sp/>Df_sigma_b*Dsigma_b_yz<sp/>+<sp/></highlight></codeline>
 <codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>Df_theta*Dtheta_yz;</highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/>df[sZX]<sp/>=<sp/>Df_sigma_b*Dsigma_b_zx<sp/>+<sp/></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><ref refid="group__analytical_solutions_1ga31fe0a5e02da8c2ed2761f3aabf86e0d" kindref="member">df</ref>[sZX]<sp/>=<sp/>Df_sigma_b*Dsigma_b_zx<sp/>+<sp/></highlight></codeline>
 <codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>Df_theta*Dtheta_zx;</highlight></codeline>
 <codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//r</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/>g<sp/>=<sp/><sp/>sigma_m*sin(psi)</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>+<sp/>sigma_b*(cos_theta/sqrt(3.0)<sp/>-<sp/>(sin_theta*sin(psi))/3.0)<sp/></highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>c*cos(psi);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>g<sp/>=<sp/><sp/>sigma_m*sin(<ref refid="_headers_8h_1acf2aa06bc881a993584c334b2b7c6e03" kindref="member">psi</ref>)</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>+<sp/>sigma_b*(cos_theta/sqrt(3.0)<sp/>-<sp/>(sin_theta*sin(<ref refid="_headers_8h_1acf2aa06bc881a993584c334b2b7c6e03" kindref="member">psi</ref>))/3.0)<sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/><ref refid="_headers_8h_1aa0903c8c48f55ad539ee4e47f2d020ba" kindref="member">c</ref>*cos(<ref refid="_headers_8h_1acf2aa06bc881a993584c334b2b7c6e03" kindref="member">psi</ref>);</highlight></codeline>
 <codeline lineno="152"><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><sp/><sp/>Dg_sigma_m<sp/>=<sp/>sin(psi);</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/>Dg_sigma_m<sp/>=<sp/>sin(<ref refid="_headers_8h_1acf2aa06bc881a993584c334b2b7c6e03" kindref="member">psi</ref>);</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/>Dg_sigma_b<sp/>=<sp/>(cos_theta/sqrt(3.0)<sp/>-<sp/>(sin_theta*sin(psi))/3.0);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/>Dg_sigma_b<sp/>=<sp/>(cos_theta/sqrt(3.0)<sp/>-<sp/>(sin_theta*sin(<ref refid="_headers_8h_1acf2aa06bc881a993584c334b2b7c6e03" kindref="member">psi</ref>))/3.0);</highlight></codeline>
 <codeline lineno="156"><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/>Dg_theta<sp/>=<sp/>sigma_b*(-sin_theta/sqrt(3.0)<sp/>-<sp/>(cos_theta*sin(psi))/3.0);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/>Dg_theta<sp/>=<sp/>sigma_b*(-sin_theta/sqrt(3.0)<sp/>-<sp/>(cos_theta*sin(<ref refid="_headers_8h_1acf2aa06bc881a993584c334b2b7c6e03" kindref="member">psi</ref>))/3.0);</highlight></codeline>
 <codeline lineno="158"><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/>r[sXX]<sp/>=<sp/>Dg_sigma_m*Dsigma_m_x<sp/>+<sp/></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><ref refid="_headers_8h_1a51d5468d74b4eccfb8e26ea458562120" kindref="member">r</ref>[sXX]<sp/>=<sp/>Dg_sigma_m*Dsigma_m_x<sp/>+<sp/></highlight></codeline>
 <codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>Dg_sigma_b*Dsigma_b_x<sp/>+<sp/></highlight></codeline>
 <codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>Dg_theta*Dtheta_x;</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"><sp/><sp/>r[sYY]<sp/>=<sp/>Dg_sigma_m*Dsigma_m_y<sp/>+<sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><ref refid="_headers_8h_1a51d5468d74b4eccfb8e26ea458562120" kindref="member">r</ref>[sYY]<sp/>=<sp/>Dg_sigma_m*Dsigma_m_y<sp/>+<sp/></highlight></codeline>
 <codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>Dg_sigma_b*Dsigma_b_y<sp/>+<sp/></highlight></codeline>
 <codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/>Dg_theta*Dtheta_y;</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"><sp/><sp/>r[sZZ]<sp/>=<sp/>Dg_sigma_m*Dsigma_m_z<sp/>+<sp/></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><ref refid="_headers_8h_1a51d5468d74b4eccfb8e26ea458562120" kindref="member">r</ref>[sZZ]<sp/>=<sp/>Dg_sigma_m*Dsigma_m_z<sp/>+<sp/></highlight></codeline>
 <codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>Dg_sigma_b*Dsigma_b_z<sp/>+<sp/></highlight></codeline>
 <codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>Dg_theta*Dtheta_z;</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/>r[sXY]<sp/>=<sp/>Dg_sigma_b*Dsigma_b_xy<sp/>+<sp/></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><ref refid="_headers_8h_1a51d5468d74b4eccfb8e26ea458562120" kindref="member">r</ref>[sXY]<sp/>=<sp/>Dg_sigma_b*Dsigma_b_xy<sp/>+<sp/></highlight></codeline>
 <codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>Dg_theta*Dtheta_xy;</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"><sp/><sp/>r[sYZ]<sp/>=<sp/>Dg_sigma_b*Dsigma_b_yz<sp/>+<sp/></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><ref refid="_headers_8h_1a51d5468d74b4eccfb8e26ea458562120" kindref="member">r</ref>[sYZ]<sp/>=<sp/>Dg_sigma_b*Dsigma_b_yz<sp/>+<sp/></highlight></codeline>
 <codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>Dg_theta*Dtheta_yz;</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/>r[sZX]<sp/>=<sp/>Dg_sigma_b*Dsigma_b_zx<sp/>+<sp/></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><ref refid="_headers_8h_1a51d5468d74b4eccfb8e26ea458562120" kindref="member">r</ref>[sZX]<sp/>=<sp/>Dg_sigma_b*Dsigma_b_zx<sp/>+<sp/></highlight></codeline>
 <codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>Dg_theta*Dtheta_zx;</highlight></codeline>
 <codeline lineno="174"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/cekees/proteus/proteus/elastoplastic/mohrCoulomb2.h"/>
+    <location file="/Users/cekees/proteus/proteus/elastoplastic/mohrCoulomb2.h"/>
   </compounddef>
 </doxygen>

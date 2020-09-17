@@ -1,14 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
   <compounddef id="namespaceproteus" kind="namespace" language="C++">
     <compoundname>proteus</compoundname>
-    <innerclass refid="structproteus_1_1arguments__dict" prot="public">proteus::arguments_dict</innerclass>
-    <innerclass refid="classproteus_1_1c_a_d_r" prot="public">proteus::cADR</innerclass>
-    <innerclass refid="classproteus_1_1c_a_d_r__base" prot="public">proteus::cADR_base</innerclass>
     <innerclass refid="classproteus_1_1_c_l_s_v_o_f" prot="public">proteus::CLSVOF</innerclass>
     <innerclass refid="classproteus_1_1_c_l_s_v_o_f__base" prot="public">proteus::CLSVOF_base</innerclass>
     <innerclass refid="classproteus_1_1cpp_added_mass" prot="public">proteus::cppAddedMass</innerclass>
     <innerclass refid="classproteus_1_1cpp_added_mass__base" prot="public">proteus::cppAddedMass_base</innerclass>
+    <innerclass refid="classproteus_1_1cpp_a_d_r" prot="public">proteus::cppADR</innerclass>
+    <innerclass refid="classproteus_1_1cpp_a_d_r__base" prot="public">proteus::cppADR_base</innerclass>
     <innerclass refid="classproteus_1_1cpp_hsu_sed_stress" prot="public">proteus::cppHsuSedStress</innerclass>
     <innerclass refid="classproteus_1_1cpp_m_corr3_p" prot="public">proteus::cppMCorr3P</innerclass>
     <innerclass refid="classproteus_1_1cpp_m_corr3_p__base" prot="public">proteus::cppMCorr3P_base</innerclass>
@@ -67,14 +66,29 @@
     <innerclass refid="classproteus_1_1_s_w2_d__base" prot="public">proteus::SW2D_base</innerclass>
     <innerclass refid="classproteus_1_1_s_w2_d_c_v" prot="public">proteus::SW2DCV</innerclass>
     <innerclass refid="classproteus_1_1_s_w2_d_c_v__base" prot="public">proteus::SW2DCV_base</innerclass>
-    <innerclass refid="classproteus_1_1throwing__map" prot="public">proteus::throwing_map</innerclass>
     <innerclass refid="classproteus_1_1_v_o_f" prot="public">proteus::VOF</innerclass>
     <innerclass refid="classproteus_1_1_v_o_f__base" prot="public">proteus::VOF_base</innerclass>
-    <innernamespace refid="namespaceproteus_1_1detail">proteus::detail</innernamespace>
       <sectiondef kind="typedef">
-      <memberdef kind="typedef" id="namespaceproteus_1ac61dbf98c43ac13d15c02ba156dc2ef3" prot="public" static="no">
-        <type><ref refid="classequivalent__polynomials_1_1_generalized_functions__mix" kindref="compound">equivalent_polynomials::GeneralizedFunctions_mix</ref>&lt; nSpace, nP, nQ, nEBQ &gt;</type>
-        <definition>using proteus::GeneralizedFunctions = typedef equivalent_polynomials::GeneralizedFunctions_mix&lt;nSpace, nP, nQ, nEBQ&gt;</definition>
+      <memberdef kind="typedef" id="namespaceproteus_1acdff9c5188c64d27db5cdf2669c2a849" prot="public" static="no">
+        <templateparamlist>
+          <param>
+            <type>int</type>
+            <declname>nSpace</declname>
+            <defname>nSpace</defname>
+          </param>
+          <param>
+            <type>int</type>
+            <declname>nP</declname>
+            <defname>nP</defname>
+          </param>
+          <param>
+            <type>int</type>
+            <declname>nQ</declname>
+            <defname>nQ</defname>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classequivalent__polynomials_1_1_generalized_functions__mix" kindref="compound">equivalent_polynomials::GeneralizedFunctions_mix</ref>&lt; nSpace, nP, nQ &gt;</type>
+        <definition>using proteus::GeneralizedFunctions = typedef equivalent_polynomials::GeneralizedFunctions_mix&lt;nSpace, nP, nQ&gt;</definition>
         <argsstring></argsstring>
         <name>GeneralizedFunctions</name>
         <briefdescription>
@@ -83,33 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/ADR.h" line="19" column="1" bodyfile="/home/cekees/proteus/proteus/ADR.h" bodystart="19" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="namespaceproteus_1a0276292088a330fb5c5a665d8863405a" prot="public" static="no">
-        <type><ref refid="classproteus_1_1throwing__map" kindref="compound">throwing_map</ref>&lt; K, xt::pyarray&lt; <ref refid="_headers_8h_1a38fec5c94a02f67ba7bf45025dd3ac80" kindref="member">T</ref> &gt; &gt;</type>
-        <definition>using proteus::pyarray_dict = typedef throwing_map&lt;K, xt::pyarray&lt;T&gt; &gt;</definition>
-        <argsstring></argsstring>
-        <name>pyarray_dict</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/ArgumentsDict.h" line="57" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/ArgumentsDict.h" bodystart="57" bodyend="-1"/>
-      </memberdef>
-      <memberdef kind="typedef" id="namespaceproteus_1a2d7b12db8845f2a6bd4cf99e5a89b46b" prot="public" static="no">
-        <type><ref refid="classproteus_1_1throwing__map" kindref="compound">throwing_map</ref>&lt; K, <ref refid="_headers_8h_1a38fec5c94a02f67ba7bf45025dd3ac80" kindref="member">T</ref> &gt;</type>
-        <definition>using proteus::scalar_dict = typedef throwing_map&lt;K, T&gt;</definition>
-        <argsstring></argsstring>
-        <name>scalar_dict</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/ArgumentsDict.h" line="60" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/ArgumentsDict.h" bodystart="60" bodyend="-1"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/MCorr.h" line="18" column="3" bodyfile="/Users/cekees/proteus/proteus/mprans/MCorr.h" bodystart="18" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespaceproteus_1ad6e60169b6d890f254386e6473efd3e0" prot="public" static="no">
         <type><ref refid="classproteus_1_1cpp_hsu_sed_stress" kindref="compound">cppHsuSedStress</ref>&lt; 2 &gt;</type>
@@ -122,7 +110,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/SedClosure.h" line="948" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/SedClosure.h" bodystart="948" bodyend="-1"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/SedClosure.h" line="948" column="27" bodyfile="/Users/cekees/proteus/proteus/mprans/SedClosure.h" bodystart="948" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -138,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="10" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="10" bodyend="-1"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="10" column="15" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="10" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespaceproteus_1a087966d1d466f44fd8a91d7bfea5a30f" prot="public" static="no" mutable="no">
         <type>const double</type>
@@ -152,7 +140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="11" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="11" bodyend="-1"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="11" column="15" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="11" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespaceproteus_1a5897bef6aca8d414a4ce263649dc5d1e" prot="public" static="no" mutable="no">
         <type>const double</type>
@@ -166,7 +154,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="12" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="12" bodyend="-1"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="12" column="15" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="12" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespaceproteus_1a92894397293a18a81019d7777d637a00" prot="public" static="no" mutable="no">
         <type>const double</type>
@@ -180,7 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="13" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="13" bodyend="-1"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="13" column="15" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="13" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespaceproteus_1a6808718362cc92b6a99a0491639efc07" prot="public" static="no" mutable="no">
         <type>const double</type>
@@ -194,7 +182,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="14" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="14" bodyend="-1"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="14" column="15" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="14" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespaceproteus_1a98cc981b735e706f4c7f8122f6a31a4a" prot="public" static="no" mutable="no">
         <type>const double</type>
@@ -208,7 +196,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="15" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="15" bodyend="-1"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="15" column="15" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="15" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespaceproteus_1ae28bf601cb52fd6f335ba7fcecf2b4b9" prot="public" static="no" mutable="no">
         <type>const double</type>
@@ -222,7 +210,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="16" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="16" bodyend="-1"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="16" column="15" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="16" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespaceproteus_1a563c835bd17f9a4da2c0e8745f51287b" prot="public" static="no" mutable="no">
         <type>const double</type>
@@ -236,13 +224,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="17" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="17" bodyend="-1"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="17" column="15" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="17" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="namespaceproteus_1a8beab52f8c78ed6742c17ac28d5ac5cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type><ref refid="classproteus_1_1c_a_d_r__base" kindref="compound">cADR_base</ref> *</type>
-        <definition>cADR_base* proteus::newADR</definition>
+      <memberdef kind="function" id="namespaceproteus_1a841ddd4b4b50b35fde64c10c5fdd1160" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classproteus_1_1cpp_a_d_r__base" kindref="compound">cppADR_base</ref> *</type>
+        <definition>cppADR_base* proteus::newADR</definition>
         <argsstring>(int nSpaceIn, int nQuadraturePoints_elementIn, int nDOF_mesh_trial_elementIn, int nDOF_trial_elementIn, int nDOF_test_elementIn, int nQuadraturePoints_elementBoundaryIn, int CompKernelFlag)</argsstring>
         <name>newADR</name>
         <param>
@@ -279,7 +267,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/ADR.h" line="1715" column="1" bodyfile="/home/cekees/proteus/proteus/ADR.h" bodystart="1715" bodyend="1739"/>
+        <location file="/Users/cekees/proteus/proteus/ADR.h" line="1405" column="22" bodyfile="/Users/cekees/proteus/proteus/ADR.h" bodystart="1405" bodyend="1429"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a7f339d04c241f3cba0a6f00b4b089078" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_elasto_plastic__base" kindref="compound">ElastoPlastic_base</ref> *</type>
@@ -320,7 +308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/elastoplastic/ElastoPlastic.h" line="1806" column="1" bodyfile="/home/cekees/proteus/proteus/elastoplastic/ElastoPlastic.h" bodystart="1806" bodyend="1821"/>
+        <location file="/Users/cekees/proteus/proteus/elastoplastic/ElastoPlastic.h" line="1927" column="31" bodyfile="/Users/cekees/proteus/proteus/elastoplastic/ElastoPlastic.h" bodystart="1927" bodyend="1942"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a0e6a3981097de3d4170c461bcd2df57f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -389,7 +377,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/MixedModelFactory.h" line="48" column="1" bodyfile="/home/cekees/proteus/proteus/MixedModelFactory.h" bodystart="48" bodyend="286"/>
+        <location file="/Users/cekees/proteus/proteus/MixedModelFactory.h" line="49" column="16" bodyfile="/Users/cekees/proteus/proteus/MixedModelFactory.h" bodystart="49" bodyend="285"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1aa081c1fed534df492023f0a486d093c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -458,7 +446,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/MixedModelFactory.h" line="309" column="1" bodyfile="/home/cekees/proteus/proteus/MixedModelFactory.h" bodystart="309" bodyend="691"/>
+        <location file="/Users/cekees/proteus/proteus/MixedModelFactory.h" line="308" column="16" bodyfile="/Users/cekees/proteus/proteus/MixedModelFactory.h" bodystart="308" bodyend="665"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a02e6dbfb100ade25d7e97bf4ca0f071f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -514,7 +502,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/ModelFactory.h" line="35" column="1" bodyfile="/home/cekees/proteus/proteus/ModelFactory.h" bodystart="35" bodyend="210"/>
+        <location file="/Users/cekees/proteus/proteus/ModelFactory.h" line="474" column="16" bodyfile="/Users/cekees/proteus/proteus/ModelFactory.h" bodystart="474" bodyend="594"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a3da89c692e9a81759aeb9efa7f92cccb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <templateparamlist>
@@ -570,7 +558,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/ModelFactory.h" line="225" column="1" bodyfile="/home/cekees/proteus/proteus/ModelFactory.h" bodystart="225" bodyend="485"/>
+        <location file="/Users/cekees/proteus/proteus/ModelFactory.h" line="609" column="16" bodyfile="/Users/cekees/proteus/proteus/ModelFactory.h" bodystart="609" bodyend="738"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a1e946eaf50f2f25f664f85a47db114a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1cpp_added_mass__base" kindref="compound">cppAddedMass_base</ref> *</type>
@@ -611,54 +599,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/AddedMass.h" line="739" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/AddedMass.h" bodystart="739" bodyend="763"/>
-      </memberdef>
-      <memberdef kind="function" id="namespaceproteus_1a013ffd89544923edb6b027f740508bf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <templateparamlist>
-          <param>
-            <type>class M</type>
-          </param>
-        </templateparamlist>
-        <type>void</type>
-        <definition>void proteus::bind_throwing_map</definition>
-        <argsstring>(py::class_&lt; M &gt; &amp;cl, const std::string &amp;name)</argsstring>
-        <name>bind_throwing_map</name>
-        <param>
-          <type>py::class_&lt; M &gt; &amp;</type>
-          <declname>cl</declname>
-        </param>
-        <param>
-          <type>const std::string &amp;</type>
-          <declname>name</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/ArgumentsDict.cpp" line="55" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/ArgumentsDict.cpp" bodystart="55" bodyend="98"/>
-      </memberdef>
-      <memberdef kind="function" id="namespaceproteus_1af151db3eaea8ccb1c6ca96a34f3eb766" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void proteus::bind_arguments_dict</definition>
-        <argsstring>(py::class_&lt; arguments_dict &gt; &amp;cl, const std::string &amp;name)</argsstring>
-        <name>bind_arguments_dict</name>
-        <param>
-          <type>py::class_&lt; <ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &gt; &amp;</type>
-          <declname>cl</declname>
-        </param>
-        <param>
-          <type>const std::string &amp;</type>
-          <declname>name</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/ArgumentsDict.cpp" line="100" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/ArgumentsDict.cpp" bodystart="100" bodyend="151"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/AddedMass.h" line="699" column="28" bodyfile="/Users/cekees/proteus/proteus/mprans/AddedMass.h" bodystart="699" bodyend="723"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1aa7e29124787db197b0bb3f13861cd5c6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -675,7 +616,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/CLSVOF.h" line="20" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/CLSVOF.h" bodystart="20" bodyend="22"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/CLSVOF.h" line="19" column="17" bodyfile="/Users/cekees/proteus/proteus/mprans/CLSVOF.h" bodystart="19" bodyend="21"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a8fd11358980f636e975acf1926364840" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -692,7 +633,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/CLSVOF.h" line="23" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/CLSVOF.h" bodystart="23" bodyend="25"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/CLSVOF.h" line="22" column="17" bodyfile="/Users/cekees/proteus/proteus/mprans/CLSVOF.h" bodystart="22" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a3984afb3f7ef1bc2c7976c96a830129f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_c_l_s_v_o_f__base" kindref="compound">CLSVOF_base</ref> *</type>
@@ -733,7 +674,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/CLSVOF.h" line="2034" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/CLSVOF.h" bodystart="2034" bodyend="2058"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/CLSVOF.h" line="2323" column="22" bodyfile="/Users/cekees/proteus/proteus/mprans/CLSVOF.h" bodystart="2323" bodyend="2347"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a61dc6a3f669d0044d0ba24eedae12dab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_dissipation__base" kindref="compound">Dissipation_base</ref> *</type>
@@ -842,7 +783,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/Dissipation.h" line="1754" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/Dissipation.h" bodystart="1754" bodyend="1808"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/Dissipation.h" line="1937" column="27" bodyfile="/Users/cekees/proteus/proteus/mprans/Dissipation.h" bodystart="1937" bodyend="1991"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1af3b2edf37b8ac9edc571a05fe02afcf2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_dissipation2_d__base" kindref="compound">Dissipation2D_base</ref> *</type>
@@ -951,7 +892,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/Dissipation2D.h" line="1748" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/Dissipation2D.h" bodystart="1748" bodyend="1802"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/Dissipation2D.h" line="1931" column="29" bodyfile="/Users/cekees/proteus/proteus/mprans/Dissipation2D.h" bodystart="1931" bodyend="1985"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1adc5e96637123993f3be93306da696177" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -984,7 +925,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="26" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="26" bodyend="37"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="24" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="24" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1ab14e2f847e0f10815ee8f083bfae1b0e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1017,7 +958,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="38" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="38" bodyend="49"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="36" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="36" bodyend="47"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a168fa7179bef9c8bff1dc8fbdf4737ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1054,7 +995,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="52" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="52" bodyend="57"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="50" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="50" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1aa7382e6e38581baca5f477ee2d1a4ed4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1091,7 +1032,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="58" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="58" bodyend="62"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="56" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="56" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a5eb23919a33f36a2faf26440020d0a70" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1128,7 +1069,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="63" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="63" bodyend="67"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="61" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="61" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a9db7dbbd169fd6f6b5a8d999bcdf9db1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1165,7 +1106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="68" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="68" bodyend="72"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="66" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="66" bodyend="70"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a1eb3932cf3ec78d9e5e0a63256d5378a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1202,7 +1143,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="73" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="73" bodyend="79"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="71" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="71" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1ac5017200ca551e2c3c646a25c6619391" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1239,7 +1180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="80" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="80" bodyend="86"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="78" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="78" bodyend="84"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1af05ccedae3a5249ffcee18ba28860db4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1264,7 +1205,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="88" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="88" bodyend="91"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="86" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="86" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a17bf106c5df3b1331ed2a18392384813" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1301,7 +1242,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="92" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="92" bodyend="95"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="90" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="90" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1aea851b1d02fbb510e83331beade83dbc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1326,7 +1267,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="96" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="96" bodyend="101"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="94" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="94" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a475fb9d85bb327fe4849011189f20e62" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1355,7 +1296,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="102" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="102" bodyend="105"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="100" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="100" bodyend="103"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1aafdd121958af52516e1f8564c737cbf3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1384,7 +1325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="106" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="106" bodyend="110"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="104" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="104" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a75eb6ad7fbb7f589b2e8a6b836e0bae2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1413,7 +1354,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="111" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="111" bodyend="115"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="109" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="109" bodyend="113"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a24e3549b98c861e0a822612a088a0d82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1454,7 +1395,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="116" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="116" bodyend="121"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="114" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="114" bodyend="119"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a7667307f5ed3630618f22cc94c48d7af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1495,7 +1436,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="122" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="122" bodyend="127"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="120" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="120" bodyend="125"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a2883fc0e26145438f8d6d901e5af539c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1536,7 +1477,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="128" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="128" bodyend="133"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="126" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="126" bodyend="131"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a7330c388dd299f1f57a761407b3f9803" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1577,7 +1518,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="134" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="134" bodyend="144"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="132" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="132" bodyend="142"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1aa4fb5dbd416856817199520f28e815b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -1618,7 +1559,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="145" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="145" bodyend="155"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="143" column="15" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="143" bodyend="153"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1afa880cfc0ac7afc1b91a741c22125bee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_g_n___s_w2_d_c_v__base" kindref="compound">GN_SW2DCV_base</ref> *</type>
@@ -1659,7 +1600,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="2473" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="2473" bodyend="2482"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" line="2706" column="1" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.h" bodystart="2706" bodyend="2715"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a57d557c5bd879004c6e249395a52acc2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_kappa__base" kindref="compound">Kappa_base</ref> *</type>
@@ -1768,7 +1709,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/Kappa.h" line="1802" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/Kappa.h" bodystart="1802" bodyend="1856"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/Kappa.h" line="1979" column="21" bodyfile="/Users/cekees/proteus/proteus/mprans/Kappa.h" bodystart="1979" bodyend="2033"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1ab5650e428082f8f66fe08cccc1c7a988" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_kappa2_d__base" kindref="compound">Kappa2D_base</ref> *</type>
@@ -1877,7 +1818,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/Kappa2D.h" line="1716" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/Kappa2D.h" bodystart="1716" bodyend="1770"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/Kappa2D.h" line="1893" column="23" bodyfile="/Users/cekees/proteus/proteus/mprans/Kappa2D.h" bodystart="1893" bodyend="1947"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a776413a1a9d07a0ac1b6c2ab9ea8c263" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_m_corr__base" kindref="compound">MCorr_base</ref> *</type>
@@ -1918,7 +1859,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/MCorr.h" line="2115" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/MCorr.h" bodystart="2115" bodyend="2139"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/MCorr.h" line="2560" column="21" bodyfile="/Users/cekees/proteus/proteus/mprans/MCorr.h" bodystart="2560" bodyend="2584"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a8db4e118bf5dfce60e2106a54bdb62ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1cpp_m_corr3_p__base" kindref="compound">cppMCorr3P_base</ref> *</type>
@@ -1959,7 +1900,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/MCorr3P.h" line="1741" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/MCorr3P.h" bodystart="1741" bodyend="1765"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/MCorr3P.h" line="2099" column="26" bodyfile="/Users/cekees/proteus/proteus/mprans/MCorr3P.h" bodystart="2099" bodyend="2123"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a4db2da468fc5c0a4666b968d0c113557" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_move_mesh__base" kindref="compound">MoveMesh_base</ref> *</type>
@@ -2000,7 +1941,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/MoveMesh.h" line="1167" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/MoveMesh.h" bodystart="1167" bodyend="1182"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/MoveMesh.h" line="1259" column="24" bodyfile="/Users/cekees/proteus/proteus/mprans/MoveMesh.h" bodystart="1259" bodyend="1274"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1aeb44f198e579804ee0ce66fdf1894407" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_move_mesh2_d__base" kindref="compound">MoveMesh2D_base</ref> *</type>
@@ -2041,7 +1982,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/MoveMesh2D.h" line="949" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/MoveMesh2D.h" bodystart="949" bodyend="964"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/MoveMesh2D.h" line="1041" column="26" bodyfile="/Users/cekees/proteus/proteus/mprans/MoveMesh2D.h" bodystart="1041" bodyend="1056"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a822cdd7bf8d28c184db2e061574598d4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -2066,7 +2007,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/NCLS.h" line="22" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/NCLS.h" bodystart="22" bodyend="24"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/NCLS.h" line="21" column="17" bodyfile="/Users/cekees/proteus/proteus/mprans/NCLS.h" bodystart="21" bodyend="23"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a8ac619fcc14c47b95421861ce0130056" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -2091,7 +2032,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/NCLS.h" line="25" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/NCLS.h" bodystart="25" bodyend="27"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/NCLS.h" line="24" column="17" bodyfile="/Users/cekees/proteus/proteus/mprans/NCLS.h" bodystart="24" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a4f415ebfd64985a017e3c421f304d0b7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -2116,7 +2057,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/NCLS.h" line="29" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/NCLS.h" bodystart="29" bodyend="31"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/NCLS.h" line="28" column="17" bodyfile="/Users/cekees/proteus/proteus/mprans/NCLS.h" bodystart="28" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a0665425b35a21d457d76af9e31ef53a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -2141,7 +2082,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/NCLS.h" line="32" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/NCLS.h" bodystart="32" bodyend="34"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/NCLS.h" line="31" column="17" bodyfile="/Users/cekees/proteus/proteus/mprans/NCLS.h" bodystart="31" bodyend="33"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a09bdb95bef1bacc840ecd8ba0ea4352b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_n_c_l_s__base" kindref="compound">NCLS_base</ref> *</type>
@@ -2182,7 +2123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/NCLS.h" line="2698" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/NCLS.h" bodystart="2698" bodyend="2729"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/NCLS.h" line="3161" column="20" bodyfile="/Users/cekees/proteus/proteus/mprans/NCLS.h" bodystart="3161" bodyend="3192"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a1dd2bde59097bae8b98329e1285ed573" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -2199,7 +2140,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/NCLS3P.h" line="15" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/NCLS3P.h" bodystart="15" bodyend="17"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/NCLS3P.h" line="15" column="17" bodyfile="/Users/cekees/proteus/proteus/mprans/NCLS3P.h" bodystart="15" bodyend="17"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1ad66c0a34b79af982c4319cbdb9dee567" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -2216,7 +2157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/NCLS3P.h" line="18" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/NCLS3P.h" bodystart="18" bodyend="20"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/NCLS3P.h" line="18" column="17" bodyfile="/Users/cekees/proteus/proteus/mprans/NCLS3P.h" bodystart="18" bodyend="20"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a15a8abb6bd5ad082ed2dd1a21ae0dcac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1cpp_n_c_l_s3_p__base" kindref="compound">cppNCLS3P_base</ref> *</type>
@@ -2257,7 +2198,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/NCLS3P.h" line="1330" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/NCLS3P.h" bodystart="1330" bodyend="1361"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/NCLS3P.h" line="1498" column="25" bodyfile="/Users/cekees/proteus/proteus/mprans/NCLS3P.h" bodystart="1498" bodyend="1529"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1aec98c1373c923b8236582f804d4b5eec" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1cpp_pres__base" kindref="compound">cppPres_base</ref> *</type>
@@ -2298,7 +2239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/Pres.h" line="508" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/Pres.h" bodystart="508" bodyend="532"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/Pres.h" line="568" column="23" bodyfile="/Users/cekees/proteus/proteus/mprans/Pres.h" bodystart="568" bodyend="592"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a5ecad3c37b7d28eb18ec6c917ba581c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1cpp_pres_inc__base" kindref="compound">cppPresInc_base</ref> *</type>
@@ -2339,7 +2280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/PresInc.h" line="939" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/PresInc.h" bodystart="939" bodyend="963"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/PresInc.h" line="1043" column="26" bodyfile="/Users/cekees/proteus/proteus/mprans/PresInc.h" bodystart="1043" bodyend="1067"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a42fb55f6fd895a2c5e1c334b3c220ac1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1cpp_pres_init__base" kindref="compound">cppPresInit_base</ref> *</type>
@@ -2380,7 +2321,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/PresInit.h" line="703" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/PresInit.h" bodystart="703" bodyend="727"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/PresInit.h" line="789" column="27" bodyfile="/Users/cekees/proteus/proteus/mprans/PresInit.h" bodystart="789" bodyend="813"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a3fd0de2d97b1eb82abfd5c46ba547f32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_r_a_n_s2_p__base" kindref="compound">RANS2P_base</ref> *</type>
@@ -2429,7 +2370,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/RANS2P.h" line="8408" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/RANS2P.h" bodystart="8408" bodyend="8427"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/RANS2P.h" line="7530" column="22" bodyfile="/Users/cekees/proteus/proteus/mprans/RANS2P.h" bodystart="7530" bodyend="7549"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a48d03847a9028521d72d7628b5b8c295" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_r_a_n_s2_p2_d__base" kindref="compound">RANS2P2D_base</ref> *</type>
@@ -2478,7 +2419,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/RANS2P2D.h" line="7242" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/RANS2P2D.h" bodystart="7242" bodyend="7261"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/RANS2P2D.h" line="6591" column="24" bodyfile="/Users/cekees/proteus/proteus/mprans/RANS2P2D.h" bodystart="6591" bodyend="6610"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a5c543872fc85dcc2d2e086f5c7877694" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_r_a_n_s2_p___i_b__base" kindref="compound">RANS2P_IB_base</ref> *</type>
@@ -2519,7 +2460,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/RANS2P_IB.h" line="5740" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/RANS2P_IB.h" bodystart="5740" bodyend="5755"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/RANS2P_IB.h" line="6274" column="25" bodyfile="/Users/cekees/proteus/proteus/mprans/RANS2P_IB.h" bodystart="6274" bodyend="6289"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a11262ed5248e45135a49999b901acae9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1cpp_r_a_n_s3_p_f__base" kindref="compound">cppRANS3PF_base</ref> *</type>
@@ -2628,7 +2569,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/RANS3PF.h" line="7069" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/RANS3PF.h" bodystart="7069" bodyend="7121"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/RANS3PF.h" line="7542" column="26" bodyfile="/Users/cekees/proteus/proteus/mprans/RANS3PF.h" bodystart="7542" bodyend="7594"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1aa0252dace81bc41f1e2241bf1a0d9a9a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1cpp_r_a_n_s3_p_f2_d__base" kindref="compound">cppRANS3PF2D_base</ref> *</type>
@@ -2737,7 +2678,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/RANS3PF2D.h" line="7241" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/RANS3PF2D.h" bodystart="7241" bodyend="7287"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/RANS3PF2D.h" line="7711" column="28" bodyfile="/Users/cekees/proteus/proteus/mprans/RANS3PF2D.h" bodystart="7711" bodyend="7757"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1ab8a22aa47782a2f8ba6866816ffae45d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1cpp_r_a_n_s3_p_sed__base" kindref="compound">cppRANS3PSed_base</ref> *</type>
@@ -2846,7 +2787,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/RANS3PSed.h" line="4507" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/RANS3PSed.h" bodystart="4507" bodyend="4557"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/RANS3PSed.h" line="4831" column="28" bodyfile="/Users/cekees/proteus/proteus/mprans/RANS3PSed.h" bodystart="4831" bodyend="4881"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a904eb667d42fafae09bb943ce22f5826" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1cpp_r_a_n_s3_p_sed2_d__base" kindref="compound">cppRANS3PSed2D_base</ref> *</type>
@@ -2955,7 +2896,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/RANS3PSed2D.h" line="4487" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/RANS3PSed2D.h" bodystart="4487" bodyend="4539"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/RANS3PSed2D.h" line="4807" column="30" bodyfile="/Users/cekees/proteus/proteus/mprans/RANS3PSed2D.h" bodystart="4807" bodyend="4859"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a0eef98bf1836403f2b6bed8636a866cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_r_d_l_s__base" kindref="compound">RDLS_base</ref> *</type>
@@ -2996,7 +2937,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/RDLS.h" line="1849" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/RDLS.h" bodystart="1849" bodyend="1873"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/RDLS.h" line="2148" column="20" bodyfile="/Users/cekees/proteus/proteus/mprans/RDLS.h" bodystart="2148" bodyend="2172"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a678866e867a5ea5e06c3a4ca43fca6b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_s_w2_d__base" kindref="compound">SW2D_base</ref> *</type>
@@ -3037,73 +2978,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/SW2D.h" line="4013" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/SW2D.h" bodystart="4013" bodyend="4028"/>
-      </memberdef>
-      <memberdef kind="function" id="namespaceproteus_1a51bc0d78c532a8a341af66a2e2fb5895" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>double</type>
-        <definition>double proteus::nu1</definition>
-        <argsstring>(const double &amp;g, const double &amp;hStar, const double &amp;hL, const double &amp;uL, const double &amp;one_over_hL)</argsstring>
-        <name>nu1</name>
-        <param>
-          <type>const double &amp;</type>
-          <declname>g</declname>
-        </param>
-        <param>
-          <type>const double &amp;</type>
-          <declname>hStar</declname>
-        </param>
-        <param>
-          <type>const double &amp;</type>
-          <declname>hL</declname>
-        </param>
-        <param>
-          <type>const double &amp;</type>
-          <declname>uL</declname>
-        </param>
-        <param>
-          <type>const double &amp;</type>
-          <declname>one_over_hL</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/SW2DCV.h" line="76" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/SW2DCV.h" bodystart="76" bodyend="81"/>
-      </memberdef>
-      <memberdef kind="function" id="namespaceproteus_1acbf7b0274d3a40eff8ecced146ce77f7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>double</type>
-        <definition>double proteus::nu3</definition>
-        <argsstring>(const double &amp;g, const double &amp;hStar, const double &amp;hR, const double &amp;uR, const double &amp;one_over_hR)</argsstring>
-        <name>nu3</name>
-        <param>
-          <type>const double &amp;</type>
-          <declname>g</declname>
-        </param>
-        <param>
-          <type>const double &amp;</type>
-          <declname>hStar</declname>
-        </param>
-        <param>
-          <type>const double &amp;</type>
-          <declname>hR</declname>
-        </param>
-        <param>
-          <type>const double &amp;</type>
-          <declname>uR</declname>
-        </param>
-        <param>
-          <type>const double &amp;</type>
-          <declname>one_over_hR</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/SW2DCV.h" line="82" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/SW2DCV.h" bodystart="82" bodyend="87"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/SW2D.h" line="4446" column="20" bodyfile="/Users/cekees/proteus/proteus/mprans/SW2D.h" bodystart="4446" bodyend="4461"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a59cc84282aef464a74b9ff0639e5042d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_s_w2_d_c_v__base" kindref="compound">SW2DCV_base</ref> *</type>
@@ -3144,7 +3019,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/SW2DCV.h" line="2152" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/SW2DCV.h" bodystart="2152" bodyend="2162"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/SW2DCV.h" line="2097" column="20" bodyfile="/Users/cekees/proteus/proteus/mprans/SW2DCV.h" bodystart="2097" bodyend="2107"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a2c7f6c475014e2f499e8120ec89fd1bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_v_o_f__base" kindref="compound">VOF_base</ref> *</type>
@@ -3185,7 +3060,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/VOF.h" line="2022" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/VOF.h" bodystart="2022" bodyend="2046"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/VOF.h" line="2313" column="19" bodyfile="/Users/cekees/proteus/proteus/mprans/VOF.h" bodystart="2313" bodyend="2337"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a0b02db9f7a910f9de800e86346ec9123" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1cpp_v_o_f3_p__base" kindref="compound">cppVOF3P_base</ref> *</type>
@@ -3226,7 +3101,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/VOF3P.h" line="2025" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/VOF3P.h" bodystart="2025" bodyend="2049"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/VOF3P.h" line="2317" column="24" bodyfile="/Users/cekees/proteus/proteus/mprans/VOF3P.h" bodystart="2317" bodyend="2341"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a69cf5aef6d7e8c9a8c0affe3b2c25dea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1cpp_v_o_s3_p__base" kindref="compound">cppVOS3P_base</ref> *</type>
@@ -3267,7 +3142,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/VOS3P.h" line="2466" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/VOS3P.h" bodystart="2466" bodyend="2490"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/VOS3P.h" line="2851" column="24" bodyfile="/Users/cekees/proteus/proteus/mprans/VOS3P.h" bodystart="2851" bodyend="2875"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1add82470d4c0cfc04c1844575a09a3cc6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3292,7 +3167,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/partitioning.cpp" line="6" column="1" bodyfile="/home/cekees/proteus/proteus/partitioning.cpp" bodystart="6" bodyend="537"/>
+        <location file="/Users/cekees/proteus/proteus/partitioning.cpp" line="6" column="5" bodyfile="/Users/cekees/proteus/proteus/partitioning.cpp" bodystart="6" bodyend="537" declfile="/Users/cekees/proteus/proteus/partitioning.h" declline="149" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1ad76a320dedee422e8e0064e7dd9d0912" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3317,7 +3192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/partitioning.cpp" line="539" column="1" bodyfile="/home/cekees/proteus/proteus/partitioning.cpp" bodystart="539" bodyend="1462"/>
+        <location file="/Users/cekees/proteus/proteus/partitioning.cpp" line="539" column="5" bodyfile="/Users/cekees/proteus/proteus/partitioning.cpp" bodystart="539" bodyend="1462" declfile="/Users/cekees/proteus/proteus/partitioning.h" declline="151" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a84bde2e556d60a8bd93bede8bbdfd053" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3350,7 +3225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/partitioning.cpp" line="1464" column="1" bodyfile="/home/cekees/proteus/proteus/partitioning.cpp" bodystart="1464" bodyend="2957"/>
+        <location file="/Users/cekees/proteus/proteus/partitioning.cpp" line="1464" column="5" bodyfile="/Users/cekees/proteus/proteus/partitioning.cpp" bodystart="1464" bodyend="2957" declfile="/Users/cekees/proteus/proteus/partitioning.h" declline="153" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1ac704dbcca07e0565d2a9b74ae01c6e4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3375,7 +3250,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/partitioning.cpp" line="2960" column="1" bodyfile="/home/cekees/proteus/proteus/partitioning.cpp" bodystart="2960" bodyend="3993"/>
+        <location file="/Users/cekees/proteus/proteus/partitioning.cpp" line="2960" column="5" bodyfile="/Users/cekees/proteus/proteus/partitioning.cpp" bodystart="2960" bodyend="3993" declfile="/Users/cekees/proteus/proteus/partitioning.h" declline="155" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a7d697516d1d1a1f9828c3a6f9077a857" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3440,7 +3315,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/partitioning.cpp" line="3995" column="1" bodyfile="/home/cekees/proteus/proteus/partitioning.cpp" bodystart="3995" bodyend="4145"/>
+        <location file="/Users/cekees/proteus/proteus/partitioning.cpp" line="3995" column="5" bodyfile="/Users/cekees/proteus/proteus/partitioning.cpp" bodystart="3995" bodyend="4145" declfile="/Users/cekees/proteus/proteus/partitioning.h" declline="157" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1ae3b0032832415b3d23047133de4f44e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3505,7 +3380,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/partitioning.cpp" line="4147" column="1" bodyfile="/home/cekees/proteus/proteus/partitioning.cpp" bodystart="4147" bodyend="4303"/>
+        <location file="/Users/cekees/proteus/proteus/partitioning.cpp" line="4147" column="5" bodyfile="/Users/cekees/proteus/proteus/partitioning.cpp" bodystart="4147" bodyend="4303" declfile="/Users/cekees/proteus/proteus/partitioning.h" declline="170" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1abd6874e2f56d12ee95a6d1ada134b922" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3570,7 +3445,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/partitioning.cpp" line="4306" column="1" bodyfile="/home/cekees/proteus/proteus/partitioning.cpp" bodystart="4306" bodyend="4583"/>
+        <location file="/Users/cekees/proteus/proteus/partitioning.cpp" line="4306" column="5" bodyfile="/Users/cekees/proteus/proteus/partitioning.cpp" bodystart="4306" bodyend="4583" declfile="/Users/cekees/proteus/proteus/partitioning.h" declline="183" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a99665ca027f2bc715a648c4b7c981dbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3635,7 +3510,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/partitioning.cpp" line="4585" column="1" bodyfile="/home/cekees/proteus/proteus/partitioning.cpp" bodystart="4585" bodyend="4953"/>
+        <location file="/Users/cekees/proteus/proteus/partitioning.cpp" line="4585" column="5" bodyfile="/Users/cekees/proteus/proteus/partitioning.cpp" bodystart="4585" bodyend="4953" declfile="/Users/cekees/proteus/proteus/partitioning.h" declline="196" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1aadf24948dcd2edecf8a923495153c3f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -3692,7 +3567,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/partitioning.cpp" line="4959" column="1" bodyfile="/home/cekees/proteus/proteus/partitioning.cpp" bodystart="4959" bodyend="5008"/>
+        <location file="/Users/cekees/proteus/proteus/partitioning.cpp" line="4959" column="5" bodyfile="/Users/cekees/proteus/proteus/partitioning.cpp" bodystart="4959" bodyend="5008" declfile="/Users/cekees/proteus/proteus/partitioning.h" declline="209" declcolumn="14"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a99cb3ee44f63e8b574ed4188e2db1460" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -3702,10 +3577,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Returns the peak (maximum so far) resident set size (physical memory use) measured in bytes, or zero if the value cannot be determined on this OS. </para>        </detaileddescription>
+<para>Returns the peak (maximum so far) resident set size (physical memory use) measured in bytes, or zero if the value cannot be determined on this OS. </para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/partitioning.h" line="51" column="1" bodyfile="/home/cekees/proteus/proteus/partitioning.h" bodystart="51" bodyend="87"/>
+        <location file="/Users/cekees/proteus/proteus/partitioning.h" line="51" column="17" bodyfile="/Users/cekees/proteus/proteus/partitioning.h" bodystart="51" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a89275774c97322cfeb7ed2d03dc36197" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>size_t</type>
@@ -3715,10 +3591,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
-<para>Returns the current resident set size (physical memory use) measured in bytes, or zero if the value cannot be determined on this OS. </para>        </detaileddescription>
+<para>Returns the current resident set size (physical memory use) measured in bytes, or zero if the value cannot be determined on this OS. </para>
+        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/partitioning.h" line="93" column="1" bodyfile="/home/cekees/proteus/proteus/partitioning.h" bodystart="93" bodyend="128"/>
+        <location file="/Users/cekees/proteus/proteus/partitioning.h" line="93" column="17" bodyfile="/Users/cekees/proteus/proteus/partitioning.h" bodystart="93" bodyend="128"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1afa9f1b379dd528d249097642bacf85b9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -3747,7 +3624,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/partitioning.h" line="130" column="1" bodyfile="/home/cekees/proteus/proteus/partitioning.h" bodystart="130" bodyend="147"/>
+        <location file="/Users/cekees/proteus/proteus/partitioning.h" line="130" column="14" bodyfile="/Users/cekees/proteus/proteus/partitioning.h" bodystart="130" bodyend="147"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1ae047139fa4c89b9f232350e1476ff911" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="classproteus_1_1_richards__base" kindref="compound">Richards_base</ref> *</type>
@@ -3788,7 +3665,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/richards/Richards.h" line="1139" column="1" bodyfile="/home/cekees/proteus/proteus/richards/Richards.h" bodystart="1139" bodyend="1154"/>
+        <location file="/Users/cekees/proteus/proteus/richards/Richards.h" line="1278" column="26" bodyfile="/Users/cekees/proteus/proteus/richards/Richards.h" bodystart="1278" bodyend="1293"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1af4b7697a2b9211bb1a702296514107be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const int</type>
@@ -3804,7 +3681,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="9" column="1"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="9" column="12" declfile="/Users/cekees/proteus/proteus/WaveTools.h" declline="9" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a9f1ef6b3c041c453169aeeb50596a6af" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3833,7 +3710,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="20" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="20" bodyend="44"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="20" column="14" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="20" bodyend="44"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1abd4712d78e326780bb07a5f2864c352d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -3854,7 +3731,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="46" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="46" bodyend="87"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="46" column="16" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="46" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a86d09a6252c985061843e4a0db8c237a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -3897,7 +3774,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="92" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="92" bodyend="99"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="92" column="16" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="92" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1ad64bc33f0990504145ab8050e1e24c19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -3974,7 +3851,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="136" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="136" bodyend="174"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="136" column="14" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="136" bodyend="174"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1af5dc7e525208ddf109d65e0e6cfc5bd5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -4029,7 +3906,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="184" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="184" bodyend="207"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="184" column="16" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="184" bodyend="207"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a6871b5852d120f329927fbf05bc817a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -4119,7 +3996,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="209" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="209" bodyend="248"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="209" column="14" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="209" bodyend="248"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1aaec62b92525eff6067aa6dabae7ea5e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -4165,7 +4042,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="256" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="256" bodyend="274"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="256" column="16" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="256" bodyend="274"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1ab8b4b99d6a7236ae6c29026172cbf0b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -4245,7 +4122,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="276" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="276" bodyend="300"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="276" column="14" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="276" bodyend="300"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a0966dedd1c4b7c752898ea2b154f0dcf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -4324,7 +4201,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="303" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="303" bodyend="328"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="303" column="14" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="303" bodyend="328"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1ae99d54f536a6e4dab95975a65177b5d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -4361,7 +4238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="332" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="332" bodyend="345"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="332" column="13" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="332" bodyend="345"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a2ff294cb24d0fb5910d2077b7517d6e1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -4412,7 +4289,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="348" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="348" bodyend="358"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="348" column="16" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="348" bodyend="358"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a493a59d230a26b58d7ff69ec9dda7b9a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -4496,7 +4373,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="365" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="365" bodyend="377"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="365" column="14" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="365" bodyend="377"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a33b52a50282ac2313f93eecbf9246f5f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -4555,7 +4432,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="380" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="380" bodyend="405"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="380" column="16" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="380" bodyend="405"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a2f7bcf3af62a8f0d822513f6b5c8c3b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double *</type>
@@ -4646,7 +4523,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="409" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="409" bodyend="438"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="409" column="16" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="409" bodyend="438"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1ad29673cc45eaacc052b993f1fed99339" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -4704,7 +4581,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="441" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="441" bodyend="464"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="441" column="16" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="441" bodyend="464"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a94cac08291d32757f8e18db090d6b394" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -4766,7 +4643,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="466" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="466" bodyend="508"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="466" column="16" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="466" bodyend="508"/>
       </memberdef>
       <memberdef kind="function" id="namespaceproteus_1a5e07508f4e335ae785e3068d2925fea4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>double</type>
@@ -4828,13 +4705,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/WaveTools.h" line="510" column="1" bodyfile="/home/cekees/proteus/proteus/WaveTools.h" bodystart="510" bodyend="552"/>
+        <location file="/Users/cekees/proteus/proteus/WaveTools.h" line="510" column="16" bodyfile="/Users/cekees/proteus/proteus/WaveTools.h" bodystart="510" bodyend="552"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/cekees/proteus/proteus/ADR.h" line="17" column="1"/>
+    <location file="/Users/cekees/proteus/proteus/ADR.h" line="11" column="1"/>
   </compounddef>
 </doxygen>

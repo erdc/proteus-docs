@@ -41,7 +41,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="WaveTools" href="wave_tools.html" />
-    <link rel="prev" title="BoundaryConditions" href="boundary_conditions.html" /> 
+    <link rel="prev" title="API Documentation" href="../apicapi.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -99,13 +99,6 @@
 </ul>
 <p class="caption"><span class="caption-text">Tools</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="boundary_conditions.html">BoundaryConditions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="boundary_conditions.html#usage">Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="boundary_conditions.html#import">Import</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">SpatialTools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#import">Import</a></li>
@@ -156,18 +149,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mesh_adaptivity.html">Mesh Adaptivity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mesh_motion.html">Mesh Motion</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Models</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../models/two_phase_flow.html">TwoPhaseFlow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../models/free_surface.html">Free Surface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#vof-ncls">VOF - NCLS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#clsvof">CLSVOF</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/navier_stokes.html">Navier-Stokes</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../models/navier_stokes.html">Multiphase Navier-Stokes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#two-phase">Two-Phase</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#three-phase">Three-Phase</a></li>
@@ -185,7 +170,12 @@
 <li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#running-the-tests">Running the tests</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../models/body_dynamics.html">Body Dynamics</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../models/free_surface.html">Free Surface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#vof-ncls">VOF - NCLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#clsvof">CLSVOF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../models/body_dynamics.html">Multi-Body Solid Dynamics</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#implementation">Implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#classes">Classes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchsystem">ProtChSystem</a></li>
@@ -196,8 +186,8 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id5">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChMoorings</a></li>
 </ul>
 </li>
 </ul>
@@ -272,15 +262,15 @@
   <div class="section" id="spatialtools">
 <span id="spatial-tools"></span><h1>SpatialTools<a class="headerlink" href="#spatialtools" title="Permalink to this headline">¶</a></h1>
 <p>source: <a class="reference internal" href="../api/proteus.SpatialTools.html#module-proteus.SpatialTools" title="proteus.SpatialTools"><code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.SpatialTools</span></code></a> and
-<code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.mprans.SpatialTools</span></code></p>
+<a class="reference internal" href="../api/proteus.mprans.SpatialTools.html#module-proteus.mprans.SpatialTools" title="proteus.mprans.SpatialTools"><code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.mprans.SpatialTools</span></code></a></p>
 <div class="section" id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>Using spatial tools</p>
 <ol class="arabic simple">
-<li><p>Create a domain from <code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.Domain</span></code>.</p></li>
+<li><p>Create a domain from <a class="reference internal" href="../api/proteus.Domain.html#module-proteus.Domain" title="proteus.Domain"><code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.Domain</span></code></a>.</p></li>
 <li><p>Create geometries that will be part of this domain from
-<a class="reference internal" href="../api/proteus.SpatialTools.html#module-proteus.SpatialTools" title="proteus.SpatialTools"><code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.SpatialTools</span></code></a> or <code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.mprans.SpatialTools</span></code>.</p></li>
-<li><p>Assemble domain with <a class="reference internal" href="../api/proteus.SpatialTools.html#proteus.SpatialTools.assembleDomain" title="proteus.SpatialTools.assembleDomain"><code class="xref py py-meth docutils literal notranslate"><span class="pre">proteus.SpatialTools.assembleDomain()</span></code></a> or <code class="xref py py-meth docutils literal notranslate"><span class="pre">proteus.mprans.SpatialTools.assembleDomain()</span></code>.</p></li>
+<a class="reference internal" href="../api/proteus.SpatialTools.html#module-proteus.SpatialTools" title="proteus.SpatialTools"><code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.SpatialTools</span></code></a> or <a class="reference internal" href="../api/proteus.mprans.SpatialTools.html#module-proteus.mprans.SpatialTools" title="proteus.mprans.SpatialTools"><code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.mprans.SpatialTools</span></code></a>.</p></li>
+<li><p>Assemble domain with <a class="reference internal" href="../api/proteus.SpatialTools.html#proteus.SpatialTools.assembleDomain" title="proteus.SpatialTools.assembleDomain"><code class="xref py py-meth docutils literal notranslate"><span class="pre">proteus.SpatialTools.assembleDomain()</span></code></a> or <a class="reference internal" href="../api/proteus.mprans.SpatialTools.html#proteus.mprans.SpatialTools.assembleDomain" title="proteus.mprans.SpatialTools.assembleDomain"><code class="xref py py-meth docutils literal notranslate"><span class="pre">proteus.mprans.SpatialTools.assembleDomain()</span></code></a>.</p></li>
 </ol>
 <div class="section" id="import">
 <h3>Import<a class="headerlink" href="#import" title="Permalink to this headline">¶</a></h3>
@@ -331,8 +321,6 @@ predefined names, e.g. for a <cite>Rectangle</cite> shape instance named <cite>m
 <code class="docutils literal notranslate"><span class="pre">my_rectangle.BC['x-']</span></code> is for accessing the boundary conditions of the left
 segment, <code class="docutils literal notranslate"><span class="pre">'x+'</span></code> for the right, <code class="docutils literal notranslate"><span class="pre">'y+'</span></code> for the top, and <code class="docutils literal notranslate"><span class="pre">'y-'</span></code> for the
 bottom.</p>
-<p>Refer to <a class="reference internal" href="boundary_conditions.html"><span class="doc">BoundaryConditions</span></a> documentation for
-more information about the BoundaryConditions module.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The boundary conditions associated with the geometry do not have to be
@@ -776,7 +764,7 @@ relaxation zones and boundary conditions.</p>
         <a href="wave_tools.html" class="btn btn-neutral float-right" title="WaveTools" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="boundary_conditions.html" class="btn btn-neutral float-left" title="BoundaryConditions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../apicapi.html" class="btn btn-neutral float-left" title="API Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

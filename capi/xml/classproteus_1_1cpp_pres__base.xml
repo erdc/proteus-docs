@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
   <compounddef id="classproteus_1_1cpp_pres__base" kind="class" language="C++" prot="public" abstract="yes">
     <compoundname>proteus::cppPres_base</compoundname>
     <derivedcompoundref refid="classproteus_1_1cpp_pres" prot="public" virt="non-virtual">proteus::cppPres&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;</derivedcompoundref>
-    <includes refid="_pres_8h" local="no">/home/cekees/proteus/proteus/mprans/Pres.h</includes>
+    <includes refid="_pres_8h" local="no">/Users/cekees/proteus/proteus/mprans/Pres.h</includes>
       <sectiondef kind="public-func">
       <memberdef kind="function" id="classproteus_1_1cpp_pres__base_1a371c5ee2f9db92878d7f03b8cd202084" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type></type>
@@ -16,17 +16,157 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/Pres.h" line="17" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/Pres.h" bodystart="17" bodyend="17"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/Pres.h" line="16" column="13" bodyfile="/Users/cekees/proteus/proteus/mprans/Pres.h" bodystart="16" bodyend="16"/>
       </memberdef>
-      <memberdef kind="function" id="classproteus_1_1cpp_pres__base_1ac5c6fe9d8ee54d335b2974fc3043bcf4" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+      <memberdef kind="function" id="classproteus_1_1cpp_pres__base_1ad713f0088b281387baa39212065566ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
         <definition>virtual void proteus::cppPres_base::calculateResidual</definition>
-        <argsstring>(arguments_dict &amp;args)=0</argsstring>
+        <argsstring>(xt::pyarray&lt; double &gt; &amp;mesh_trial_ref, xt::pyarray&lt; double &gt; &amp;mesh_grad_trial_ref, xt::pyarray&lt; double &gt; &amp;mesh_dof, xt::pyarray&lt; int &gt; &amp;mesh_l2g, xt::pyarray&lt; double &gt; &amp;dV_ref, xt::pyarray&lt; double &gt; &amp;u_trial_ref, xt::pyarray&lt; double &gt; &amp;u_grad_trial_ref, xt::pyarray&lt; double &gt; &amp;u_test_ref, xt::pyarray&lt; double &gt; &amp;u_grad_test_ref, xt::pyarray&lt; double &gt; &amp;mesh_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;mesh_grad_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;dS_ref, xt::pyarray&lt; double &gt; &amp;u_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;u_grad_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;u_test_trace_ref, xt::pyarray&lt; double &gt; &amp;u_grad_test_trace_ref, xt::pyarray&lt; double &gt; &amp;normal_ref, xt::pyarray&lt; double &gt; &amp;boundaryJac_ref, int nElements_global, xt::pyarray&lt; int &gt; &amp;u_l2g, xt::pyarray&lt; double &gt; &amp;u_dof, xt::pyarray&lt; double &gt; &amp;q_u, xt::pyarray&lt; double &gt; &amp;q_grad_u, xt::pyarray&lt; double &gt; &amp;q_p_last, xt::pyarray&lt; double &gt; &amp;q_p_inc, xt::pyarray&lt; double &gt; &amp;q_massFlux, xt::pyarray&lt; double &gt; &amp;ebqe_massFlux, xt::pyarray&lt; double &gt; &amp;ebqe_u, xt::pyarray&lt; double &gt; &amp;ebqe_grad_u, int offset_u, int stride_u, xt::pyarray&lt; double &gt; &amp;globalResidual, int nExteriorElementBoundaries_global, xt::pyarray&lt; int &gt; &amp;exteriorElementBoundariesArray, xt::pyarray&lt; int &gt; &amp;elementBoundaryElementsArray, xt::pyarray&lt; int &gt; &amp;elementBoundaryLocalElementBoundariesArray)=0</argsstring>
         <name>calculateResidual</name>
-        <reimplementedby refid="classproteus_1_1cpp_pres_1aa6216384607e5ac5e18343b57aa9b4f0">calculateResidual</reimplementedby>
+        <reimplementedby refid="classproteus_1_1cpp_pres_1a606de9d09f87dc9558a6d61d96b0ceab">calculateResidual</reimplementedby>
         <param>
-          <type><ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
-          <declname>args</declname>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>mesh_trial_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>mesh_grad_trial_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>mesh_dof</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; int &gt; &amp;</type>
+          <declname>mesh_l2g</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>dV_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>u_trial_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>u_grad_trial_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>u_test_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>u_grad_test_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>mesh_trial_trace_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>mesh_grad_trial_trace_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>dS_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>u_trial_trace_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>u_grad_trial_trace_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>u_test_trace_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>u_grad_test_trace_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>normal_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>boundaryJac_ref</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nElements_global</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; int &gt; &amp;</type>
+          <declname>u_l2g</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>u_dof</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>q_u</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>q_grad_u</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>q_p_last</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>q_p_inc</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>q_massFlux</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>ebqe_massFlux</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>ebqe_u</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>ebqe_grad_u</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>offset_u</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>stride_u</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>globalResidual</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nExteriorElementBoundaries_global</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; int &gt; &amp;</type>
+          <declname>exteriorElementBoundariesArray</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; int &gt; &amp;</type>
+          <declname>elementBoundaryElementsArray</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; int &gt; &amp;</type>
+          <declname>elementBoundaryLocalElementBoundariesArray</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -34,17 +174,101 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/Pres.h" line="18" column="1"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/Pres.h" line="17" column="18"/>
       </memberdef>
-      <memberdef kind="function" id="classproteus_1_1cpp_pres__base_1abd9b24367c4315b1a9bdc12071fcb067" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+      <memberdef kind="function" id="classproteus_1_1cpp_pres__base_1ab00a6b95c966059cd7744a5cd1d3ed31" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
         <definition>virtual void proteus::cppPres_base::calculateJacobian</definition>
-        <argsstring>(arguments_dict &amp;args)=0</argsstring>
+        <argsstring>(xt::pyarray&lt; double &gt; &amp;mesh_trial_ref, xt::pyarray&lt; double &gt; &amp;mesh_grad_trial_ref, xt::pyarray&lt; double &gt; &amp;mesh_dof, xt::pyarray&lt; int &gt; &amp;mesh_l2g, xt::pyarray&lt; double &gt; &amp;dV_ref, xt::pyarray&lt; double &gt; &amp;u_trial_ref, xt::pyarray&lt; double &gt; &amp;u_grad_trial_ref, xt::pyarray&lt; double &gt; &amp;u_test_ref, xt::pyarray&lt; double &gt; &amp;u_grad_test_ref, xt::pyarray&lt; double &gt; &amp;mesh_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;mesh_grad_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;dS_ref, xt::pyarray&lt; double &gt; &amp;u_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;u_grad_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;u_test_trace_ref, xt::pyarray&lt; double &gt; &amp;u_grad_test_trace_ref, xt::pyarray&lt; double &gt; &amp;normal_ref, xt::pyarray&lt; double &gt; &amp;boundaryJac_ref, int nElements_global, xt::pyarray&lt; int &gt; &amp;csrRowIndeces_u_u, xt::pyarray&lt; int &gt; &amp;csrColumnOffsets_u_u, xt::pyarray&lt; double &gt; &amp;globalJacobian)=0</argsstring>
         <name>calculateJacobian</name>
-        <reimplementedby refid="classproteus_1_1cpp_pres_1a788d06ea966c58f2afd4c3750123fb1e">calculateJacobian</reimplementedby>
+        <reimplementedby refid="classproteus_1_1cpp_pres_1a41e8ebccc4e273ba494625107997ccb7">calculateJacobian</reimplementedby>
         <param>
-          <type><ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
-          <declname>args</declname>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>mesh_trial_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>mesh_grad_trial_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>mesh_dof</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; int &gt; &amp;</type>
+          <declname>mesh_l2g</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>dV_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>u_trial_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>u_grad_trial_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>u_test_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>u_grad_test_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>mesh_trial_trace_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>mesh_grad_trial_trace_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>dS_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>u_trial_trace_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>u_grad_trial_trace_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>u_test_trace_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>u_grad_test_trace_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>normal_ref</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>boundaryJac_ref</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nElements_global</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; int &gt; &amp;</type>
+          <declname>csrRowIndeces_u_u</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; int &gt; &amp;</type>
+          <declname>csrColumnOffsets_u_u</declname>
+        </param>
+        <param>
+          <type>xt::pyarray&lt; double &gt; &amp;</type>
+          <declname>globalJacobian</declname>
         </param>
         <briefdescription>
         </briefdescription>
@@ -52,7 +276,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/Pres.h" line="19" column="1"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/Pres.h" line="55" column="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -60,21 +284,21 @@
     <detaileddescription>
     </detaileddescription>
     <inheritancegraph>
-      <node id="143">
+      <node id="2">
         <label>proteus::cppPres&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;</label>
         <link refid="classproteus_1_1cpp_pres"/>
-        <childnode refid="142" relation="public-inheritance">
+        <childnode refid="1" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="142">
+      <node id="1">
         <label>proteus::cppPres_base</label>
         <link refid="classproteus_1_1cpp_pres__base"/>
       </node>
     </inheritancegraph>
-    <location file="/home/cekees/proteus/proteus/mprans/Pres.h" line="15" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/Pres.h" bodystart="14" bodyend="20"/>
+    <location file="/Users/cekees/proteus/proteus/mprans/Pres.h" line="13" column="3" bodyfile="/Users/cekees/proteus/proteus/mprans/Pres.h" bodystart="14" bodyend="78"/>
     <listofallmembers>
-      <member refid="classproteus_1_1cpp_pres__base_1abd9b24367c4315b1a9bdc12071fcb067" prot="public" virt="pure-virtual"><scope>proteus::cppPres_base</scope><name>calculateJacobian</name></member>
-      <member refid="classproteus_1_1cpp_pres__base_1ac5c6fe9d8ee54d335b2974fc3043bcf4" prot="public" virt="pure-virtual"><scope>proteus::cppPres_base</scope><name>calculateResidual</name></member>
+      <member refid="classproteus_1_1cpp_pres__base_1ab00a6b95c966059cd7744a5cd1d3ed31" prot="public" virt="pure-virtual"><scope>proteus::cppPres_base</scope><name>calculateJacobian</name></member>
+      <member refid="classproteus_1_1cpp_pres__base_1ad713f0088b281387baa39212065566ff" prot="public" virt="pure-virtual"><scope>proteus::cppPres_base</scope><name>calculateResidual</name></member>
       <member refid="classproteus_1_1cpp_pres__base_1a371c5ee2f9db92878d7f03b8cd202084" prot="public" virt="virtual"><scope>proteus::cppPres_base</scope><name>~cppPres_base</name></member>
     </listofallmembers>
   </compounddef>
