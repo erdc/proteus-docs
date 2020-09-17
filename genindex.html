@@ -1,16 +1,19 @@
 
 
-
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Index &mdash; Proteus 1.7.4 documentation</title>
+  <title>Index &mdash; Proteus 1.7.5 documentation</title>
   
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
 
   
   
@@ -20,7 +23,9 @@
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -28,16 +33,11 @@
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
         <script src="_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="#" />
     <link rel="search" title="Search" href="search.html" /> 
 </head>
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                1.7.4
+                1.7.5
               </div>
             
           
@@ -83,6 +83,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -96,13 +97,6 @@
 </ul>
 <p class="caption"><span class="caption-text">Tools</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="tools/boundary_conditions.html">BoundaryConditions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="tools/boundary_conditions.html#usage">Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tools/boundary_conditions.html#import">Import</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="tools/spatial_tools.html">SpatialTools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tools/spatial_tools.html#usage">Usage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tools/spatial_tools.html#import">Import</a></li>
@@ -143,7 +137,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="tools/two_phase_flow.html">TwoPhaseFlow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tools/wave_tools.html">WaveTools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="tools/wave_tools.html#usage">Usage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="tools/wave_tools.html#import-in-command-line">Import in command line</a></li>
@@ -157,7 +150,30 @@
 </ul>
 <p class="caption"><span class="caption-text">Models</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="models/body_dynamics.html">Body Dynamics</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="models/navier_stokes.html">Multiphase Navier-Stokes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models/navier_stokes.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/navier_stokes.html#two-phase">Two-Phase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/navier_stokes.html#three-phase">Three-Phase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/navier_stokes.html#dealing-with-moving-domains">Dealing with Moving Domains</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="models/navier_stokes.html#moving-ale-mesh">Moving (ALE) Mesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="models/navier_stokes.html#immersed-boundaries">Immersed Boundaries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models/SWFlow.html">Shallow Water Flow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models/SWFlow.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/SWFlow.html#shallow-water-equations">Shallow Water Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/SWFlow.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/SWFlow.html#running-the-tests">Running the tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models/free_surface.html">Free Surface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models/free_surface.html#vof-ncls">VOF - NCLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/free_surface.html#clsvof">CLSVOF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="models/body_dynamics.html">Multi-Body Solid Dynamics</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="models/body_dynamics.html#implementation">Implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="models/body_dynamics.html#classes">Classes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="models/body_dynamics.html#protchsystem">ProtChSystem</a></li>
@@ -174,29 +190,12 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="models/free_surface.html">Free Surface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="models/free_surface.html#vof-ncls">VOF - NCLS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="models/free_surface.html#clsvof">CLSVOF</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="models/mesh_adaptivity.html">Mesh Adaptivity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="models/mesh_motion.html">Mesh Motion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="models/navier_stokes.html">Navier-Stokes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="models/navier_stokes.html#description">Description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="models/navier_stokes.html#two-phase">Two-Phase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="models/navier_stokes.html#three-phase">Three-Phase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="models/navier_stokes.html#dealing-with-moving-domains">Dealing with Moving Domains</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="models/navier_stokes.html#moving-ale-mesh">Moving (ALE) Mesh</a></li>
-<li class="toctree-l3"><a class="reference internal" href="models/navier_stokes.html#immersed-boundaries">Immersed Boundaries</a></li>
-</ul>
-</li>
-</ul>
-</li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -235,7 +234,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Index</li>
     
@@ -353,6 +352,8 @@
 </li>
       <li><a href="api/proteus.EGeometry.html#proteus.EGeometry.adj">adj() (in module proteus.EGeometry)</a>
 </li>
+      <li><a href="api/proteus.ADR.html#proteus.ADR.ADR">ADR (class in proteus.ADR)</a>
+</li>
       <li><a href="api/proteus.SubgridError.html#proteus.SubgridError.Advection_ASGS">Advection_ASGS (class in proteus.SubgridError)</a>
 </li>
       <li><a href="api/proteus.NumericalFlux.html#proteus.NumericalFlux.Advection_Diagonal_average">Advection_Diagonal_average (class in proteus.NumericalFlux)</a>
@@ -401,12 +402,6 @@
 </li>
       <li><a href="api/proteus.PostProcessingTools.html#proteus.PostProcessingTools.AggregateVelocityPostProcessor">AggregateVelocityPostProcessor (class in proteus.PostProcessingTools)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.ai">ai (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.ai">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChBody.Aij">Aij (proteus.mbd.CouplingFSI.ProtChBody attribute)</a>
 </li>
       <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChBody.Aij_factor">Aij_factor (proteus.mbd.CouplingFSI.ProtChBody attribute)</a>
@@ -738,8 +733,6 @@
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.Coefficients.attachModels">(proteus.mprans.RANS3PF.Coefficients method)</a>
 </li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.Coefficients.attachModels">(proteus.mprans.RANS3PSed.Coefficients method)</a>
-</li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.Coefficients.attachModels">(proteus.mprans.RDLS.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.mprans.SW2D.html#proteus.mprans.SW2D.Coefficients.attachModels">(proteus.mprans.SW2D.Coefficients method)</a>
@@ -847,12 +840,6 @@
 </li>
       <li><a href="api/proteus.TimeIntegration.html#proteus.TimeIntegration.BackwardEuler_cfl">BackwardEuler_cfl (class in proteus.TimeIntegration)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.bandFactor">bandFactor (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.bandFactor">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.Comm.html#proteus.Comm.Comm.barrier">barrier() (proteus.Comm.Comm method)</a>
 </li>
       <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChBody.barycenter0">barycenter0 (proteus.mbd.CouplingFSI.ProtChBody attribute)</a>
@@ -862,8 +849,6 @@
       <li><a href="api/proteus.BoundaryConditions.html#proteus.BoundaryConditions.BC_Base">BC_Base (class in proteus.BoundaryConditions)</a>
 </li>
       <li><a href="api/proteus.mprans.BoundaryConditions.html#proteus.mprans.BoundaryConditions.BC_RANS">BC_RANS (class in proteus.mprans.BoundaryConditions)</a>
-</li>
-      <li><a href="api/proteus.BoundaryConditions.html#proteus.BoundaryConditions.BC_Base.BC_type">BC_type (proteus.BoundaryConditions.BC_Base attribute)</a>
 </li>
       <li><a href="api/proteus.TransportCoefficients.html#proteus.TransportCoefficients.BCB_to_VGM_Simple">BCB_to_VGM_Simple() (in module proteus.TransportCoefficients)</a>
 </li>
@@ -931,14 +916,14 @@
       </ul></li>
       <li><a href="api/proteus.MeshTools.html#proteus.MeshTools.Mesh.buildFromCNoArrays">buildFromCNoArrays() (proteus.MeshTools.Mesh method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.MeshTools.html#proteus.MeshTools.QuadrilateralMesh.buildFromSets">buildFromSets() (proteus.MeshTools.QuadrilateralMesh method)</a>
 
       <ul>
         <li><a href="api/proteus.MeshTools.html#proteus.MeshTools.TriangularMesh.buildFromSets">(proteus.MeshTools.TriangularMesh method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.Gauges.html#proteus.Gauges.Gauges.buildGaugeComm">buildGaugeComm() (proteus.Gauges.Gauges method)</a>
 </li>
       <li><a href="api/proteus.MeshTools.html#proteus.MeshTools.TriangularMesh.buildLevelSetMesh">buildLevelSetMesh() (proteus.MeshTools.TriangularMesh method)</a>
@@ -1035,8 +1020,6 @@
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.SolitaryWave.c">c (proteus.WaveTools.SolitaryWave attribute)</a>
-</li>
       <li><a href="api/proteus.FemTools.html#proteus.FemTools.C0_AffineBernsteinOnCube">C0_AffineBernsteinOnCube (class in proteus.FemTools)</a>
 </li>
       <li><a href="api/proteus.FemTools.html#proteus.FemTools.C0_AffineBernsteinOnSimplex">C0_AffineBernsteinOnSimplex (class in proteus.FemTools)</a>
@@ -1143,11 +1126,9 @@
 </li>
       <li><a href="api/proteus.mprans.BoundaryConditions.html#proteus.mprans.BoundaryConditions.RelaxationZone.calculate_vel_python">calculate_vel_python() (proteus.mprans.BoundaryConditions.RelaxationZone method)</a>
 </li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.LevelModel.calculateAuxiliaryQuantitiesAfterStep">calculateAuxiliaryQuantitiesAfterStep() (proteus.ADR.LevelModel method)</a>
+      <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel.calculateAuxiliaryQuantitiesAfterStep">calculateAuxiliaryQuantitiesAfterStep() (proteus.elastoplastic.ElastoPlastic.LevelModel method)</a>
 
       <ul>
-        <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel.calculateAuxiliaryQuantitiesAfterStep">(proteus.elastoplastic.ElastoPlastic.LevelModel method)</a>
-</li>
         <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.LevelModel.calculateAuxiliaryQuantitiesAfterStep">(proteus.mprans.AddedMass.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.CLSVOF.html#proteus.mprans.CLSVOF.LevelModel.calculateAuxiliaryQuantitiesAfterStep">(proteus.mprans.CLSVOF.LevelModel method)</a>
@@ -1180,8 +1161,6 @@
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.LevelModel.calculateAuxiliaryQuantitiesAfterStep">(proteus.mprans.RANS3PF.LevelModel method)</a>
 </li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.LevelModel.calculateAuxiliaryQuantitiesAfterStep">(proteus.mprans.RANS3PSed.LevelModel method)</a>
-</li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.LevelModel.calculateAuxiliaryQuantitiesAfterStep">(proteus.mprans.RDLS.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.SW2D.html#proteus.mprans.SW2D.LevelModel.calculateAuxiliaryQuantitiesAfterStep">(proteus.mprans.SW2D.LevelModel method)</a>
@@ -1201,11 +1180,9 @@
         <li><a href="api/proteus.Transport.html#proteus.Transport.OneLevelTransport.calculateAuxiliaryQuantitiesAfterStep">(proteus.Transport.OneLevelTransport method)</a>
 </li>
       </ul></li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.LevelModel.calculateCoefficients">calculateCoefficients() (proteus.ADR.LevelModel method)</a>
+      <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.LevelModel.calculateCoefficients">calculateCoefficients() (proteus.mprans.AddedMass.LevelModel method)</a>
 
       <ul>
-        <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.LevelModel.calculateCoefficients">(proteus.mprans.AddedMass.LevelModel method)</a>
-</li>
         <li><a href="api/proteus.mprans.CLSVOF.html#proteus.mprans.CLSVOF.LevelModel.calculateCoefficients">(proteus.mprans.CLSVOF.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.Dissipation.html#proteus.mprans.Dissipation.LevelModel.calculateCoefficients">(proteus.mprans.Dissipation.LevelModel method)</a>
@@ -1287,11 +1264,9 @@
       </ul></li>
       <li><a href="api/proteus.Transport.html#proteus.Transport.OneLevelTransport.calculateElementBoundaryJacobian">calculateElementBoundaryJacobian() (proteus.Transport.OneLevelTransport method)</a>
 </li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.LevelModel.calculateElementBoundaryQuadrature">calculateElementBoundaryQuadrature() (proteus.ADR.LevelModel method)</a>
+      <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel.calculateElementBoundaryQuadrature">calculateElementBoundaryQuadrature() (proteus.elastoplastic.ElastoPlastic.LevelModel method)</a>
 
       <ul>
-        <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel.calculateElementBoundaryQuadrature">(proteus.elastoplastic.ElastoPlastic.LevelModel method)</a>
-</li>
         <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.LevelModel.calculateElementBoundaryQuadrature">(proteus.mprans.AddedMass.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.CLSVOF.html#proteus.mprans.CLSVOF.LevelModel.calculateElementBoundaryQuadrature">(proteus.mprans.CLSVOF.LevelModel method)</a>
@@ -1321,8 +1296,6 @@
         <li><a href="api/proteus.mprans.RANS2P.html#proteus.mprans.RANS2P.LevelModel.calculateElementBoundaryQuadrature">(proteus.mprans.RANS2P.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.LevelModel.calculateElementBoundaryQuadrature">(proteus.mprans.RANS3PF.LevelModel method)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.LevelModel.calculateElementBoundaryQuadrature">(proteus.mprans.RANS3PSed.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.LevelModel.calculateElementBoundaryQuadrature">(proteus.mprans.RDLS.LevelModel method)</a>
 </li>
@@ -1389,11 +1362,9 @@
 </li>
       <li><a href="api/proteus.MeshTools.html#proteus.MeshTools.MultilevelMesh.calculateElementParents">calculateElementParents() (proteus.MeshTools.MultilevelMesh method)</a>
 </li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.LevelModel.calculateElementQuadrature">calculateElementQuadrature() (proteus.ADR.LevelModel method)</a>
+      <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel.calculateElementQuadrature">calculateElementQuadrature() (proteus.elastoplastic.ElastoPlastic.LevelModel method)</a>
 
       <ul>
-        <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel.calculateElementQuadrature">(proteus.elastoplastic.ElastoPlastic.LevelModel method)</a>
-</li>
         <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.LevelModel.calculateElementQuadrature">(proteus.mprans.AddedMass.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.CLSVOF.html#proteus.mprans.CLSVOF.LevelModel.calculateElementQuadrature">(proteus.mprans.CLSVOF.LevelModel method)</a>
@@ -1423,8 +1394,6 @@
         <li><a href="api/proteus.mprans.RANS2P.html#proteus.mprans.RANS2P.LevelModel.calculateElementQuadrature">(proteus.mprans.RANS2P.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.LevelModel.calculateElementQuadrature">(proteus.mprans.RANS3PF.LevelModel method)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.LevelModel.calculateElementQuadrature">(proteus.mprans.RANS3PSed.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.LevelModel.calculateElementQuadrature">(proteus.mprans.RDLS.LevelModel method)</a>
 </li>
@@ -1521,11 +1490,9 @@
 </li>
       <li><a href="api/proteus.Transport.html#proteus.Transport.OneLevelTransport.calculateExteriorElementBoundaryJacobian">calculateExteriorElementBoundaryJacobian() (proteus.Transport.OneLevelTransport method)</a>
 </li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.LevelModel.calculateExteriorElementBoundaryQuadrature">calculateExteriorElementBoundaryQuadrature() (proteus.ADR.LevelModel method)</a>
+      <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel.calculateExteriorElementBoundaryQuadrature">calculateExteriorElementBoundaryQuadrature() (proteus.elastoplastic.ElastoPlastic.LevelModel method)</a>
 
       <ul>
-        <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel.calculateExteriorElementBoundaryQuadrature">(proteus.elastoplastic.ElastoPlastic.LevelModel method)</a>
-</li>
         <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.LevelModel.calculateExteriorElementBoundaryQuadrature">(proteus.mprans.AddedMass.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.CLSVOF.html#proteus.mprans.CLSVOF.LevelModel.calculateExteriorElementBoundaryQuadrature">(proteus.mprans.CLSVOF.LevelModel method)</a>
@@ -1555,8 +1522,6 @@
         <li><a href="api/proteus.mprans.RANS2P.html#proteus.mprans.RANS2P.LevelModel.calculateExteriorElementBoundaryQuadrature">(proteus.mprans.RANS2P.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.LevelModel.calculateExteriorElementBoundaryQuadrature">(proteus.mprans.RANS3PF.LevelModel method)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.LevelModel.calculateExteriorElementBoundaryQuadrature">(proteus.mprans.RANS3PSed.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.LevelModel.calculateExteriorElementBoundaryQuadrature">(proteus.mprans.RDLS.LevelModel method)</a>
 </li>
@@ -1735,6 +1700,12 @@
         <li><a href="api/proteus.NumericalFlux.html#proteus.NumericalFlux.Stress_IIPG_exterior.calculateInteriorNumericalFlux">(proteus.NumericalFlux.Stress_IIPG_exterior method)</a>
 </li>
       </ul></li>
+      <li><a href="api/proteus.ADR.html#proteus.ADR.ADR.calculateJacobian">calculateJacobian() (proteus.ADR.ADR method)</a>
+
+      <ul>
+        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.RANS3PSed.calculateJacobian">(proteus.mprans.RANS3PSed.RANS3PSed method)</a>
+</li>
+      </ul></li>
       <li><a href="api/proteus.mprans.MCorr.html#proteus.mprans.MCorr.LevelModel.calculateMass">calculateMass() (proteus.mprans.MCorr.LevelModel method)</a>
 
       <ul>
@@ -1771,8 +1742,14 @@
 </li>
       <li><a href="api/proteus.Transport.html#proteus.Transport.OneLevelTransport.calculateQuadrature">calculateQuadrature() (proteus.Transport.OneLevelTransport method)</a>
 </li>
-      <li><a href="api/proteus.mprans.beamFEM.html#proteus.mprans.beamFEM.FEMTools.calculateResidual">calculateResidual() (proteus.mprans.beamFEM.FEMTools method)</a>
+      <li><a href="api/proteus.ADR.html#proteus.ADR.ADR.calculateResidual">calculateResidual() (proteus.ADR.ADR method)</a>
+
+      <ul>
+        <li><a href="api/proteus.mprans.beamFEM.html#proteus.mprans.beamFEM.FEMTools.calculateResidual">(proteus.mprans.beamFEM.FEMTools method)</a>
 </li>
+        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.RANS3PSed.calculateResidual">(proteus.mprans.RANS3PSed.RANS3PSed method)</a>
+</li>
+      </ul></li>
       <li><a href="api/proteus.NumericalSolution.html#proteus.NumericalSolution.NS_base.calculateSolution">calculateSolution() (proteus.NumericalSolution.NS_base method)</a>
 
       <ul>
@@ -1785,11 +1762,9 @@
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.LevelModel.calculateSolutionAtQuadrature">calculateSolutionAtQuadrature() (proteus.ADR.LevelModel method)</a>
+      <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel.calculateSolutionAtQuadrature">calculateSolutionAtQuadrature() (proteus.elastoplastic.ElastoPlastic.LevelModel method)</a>
 
       <ul>
-        <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel.calculateSolutionAtQuadrature">(proteus.elastoplastic.ElastoPlastic.LevelModel method)</a>
-</li>
         <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.LevelModel.calculateSolutionAtQuadrature">(proteus.mprans.AddedMass.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.CLSVOF.html#proteus.mprans.CLSVOF.LevelModel.calculateSolutionAtQuadrature">(proteus.mprans.CLSVOF.LevelModel method)</a>
@@ -1820,8 +1795,6 @@
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.LevelModel.calculateSolutionAtQuadrature">(proteus.mprans.RANS3PF.LevelModel method)</a>
 </li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.LevelModel.calculateSolutionAtQuadrature">(proteus.mprans.RANS3PSed.LevelModel method)</a>
-</li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.LevelModel.calculateSolutionAtQuadrature">(proteus.mprans.RDLS.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.SW2D.html#proteus.mprans.SW2D.LevelModel.calculateSolutionAtQuadrature">(proteus.mprans.SW2D.LevelModel method)</a>
@@ -1847,11 +1820,9 @@
       </ul></li>
       <li><a href="api/proteus.Transport.html#proteus.Transport.OneLevelTransport.calculateStrongResidualAndAdjoint">calculateStrongResidualAndAdjoint() (proteus.Transport.OneLevelTransport method)</a>
 </li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.SubgridError.calculateSubgridError">calculateSubgridError() (proteus.ADR.SubgridError method)</a>
+      <li><a href="api/proteus.mprans.Dissipation.html#proteus.mprans.Dissipation.SubgridError.calculateSubgridError">calculateSubgridError() (proteus.mprans.Dissipation.SubgridError method)</a>
 
       <ul>
-        <li><a href="api/proteus.mprans.Dissipation.html#proteus.mprans.Dissipation.SubgridError.calculateSubgridError">(proteus.mprans.Dissipation.SubgridError method)</a>
-</li>
         <li><a href="api/proteus.mprans.Kappa.html#proteus.mprans.Kappa.SubgridError.calculateSubgridError">(proteus.mprans.Kappa.SubgridError method)</a>
 </li>
         <li><a href="api/proteus.mprans.NCLS.html#proteus.mprans.NCLS.SubgridError.calculateSubgridError">(proteus.mprans.NCLS.SubgridError method)</a>
@@ -1861,8 +1832,6 @@
         <li><a href="api/proteus.mprans.RANS2P.html#proteus.mprans.RANS2P.SubgridError.calculateSubgridError">(proteus.mprans.RANS2P.SubgridError method)</a>
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.SubgridError.calculateSubgridError">(proteus.mprans.RANS3PF.SubgridError method)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.SubgridError.calculateSubgridError">(proteus.mprans.RANS3PSed.SubgridError method)</a>
 </li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.SubgridError.calculateSubgridError">(proteus.mprans.RDLS.SubgridError method)</a>
 </li>
@@ -1936,6 +1905,8 @@
 </li>
       </ul></li>
       <li><a href="api/proteus.FemTools.html#proteus.FemTools.FiniteElementFunction.calculateValuesAtMeshNodes">calculateValuesAtMeshNodes() (proteus.FemTools.FiniteElementFunction method)</a>
+</li>
+      <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.RANS3PSed.calculateVelocityAverage">calculateVelocityAverage() (proteus.mprans.RANS3PSed.RANS3PSed method)</a>
 </li>
       <li><a href="api/proteus.mprans.BoundaryConditions.html#proteus.mprans.BoundaryConditions.RelaxationZone.center">center (proteus.mprans.BoundaryConditions.RelaxationZone attribute)</a>
 </li>
@@ -2101,11 +2072,9 @@
 </li>
       <li><a href="api/proteus.TimeIntegration.html#proteus.TimeIntegration.CockburnNotesLimiter2d_base">CockburnNotesLimiter2d_base (class in proteus.TimeIntegration)</a>
 </li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.Coefficients">Coefficients (class in proteus.ADR)</a>
+      <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.Coefficients">Coefficients (class in proteus.elastoplastic.ElastoPlastic)</a>
 
       <ul>
-        <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.Coefficients">(class in proteus.elastoplastic.ElastoPlastic)</a>
-</li>
         <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.Coefficients">(class in proteus.mprans.AddedMass)</a>
 </li>
         <li><a href="api/proteus.mprans.CLSVOF.html#proteus.mprans.CLSVOF.Coefficients">(class in proteus.mprans.CLSVOF)</a>
@@ -2139,8 +2108,6 @@
         <li><a href="api/proteus.mprans.RANS2P_IB.html#proteus.mprans.RANS2P_IB.Coefficients">(class in proteus.mprans.RANS2P_IB)</a>
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.Coefficients">(class in proteus.mprans.RANS3PF)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.Coefficients">(class in proteus.mprans.RANS3PSed)</a>
 </li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.Coefficients">(class in proteus.mprans.RDLS)</a>
 </li>
@@ -2523,8 +2490,6 @@
 </li>
       <li><a href="api/proteus.LinearAlgebraTools.html#proteus.LinearAlgebraTools.csr_2_petsc_mpiaij">csr_2_petsc_mpiaij() (in module proteus.LinearAlgebraTools)</a>
 </li>
-      <li><a href="api/proteus.BoundaryConditions.html#proteus.BoundaryConditions.BC_Base.ct">ct (proteus.BoundaryConditions.BC_Base attribute)</a>
-</li>
       <li><a href="api/proteus.Quadrature.html#proteus.Quadrature.CubeGaussQuadrature">CubeGaussQuadrature (class in proteus.Quadrature)</a>
 </li>
       <li><a href="api/proteus.FemTools.html#proteus.FemTools.CubeNodalInterpolationConditions">CubeNodalInterpolationConditions (class in proteus.FemTools)</a>
@@ -2601,24 +2566,8 @@
 </li>
       <li><a href="api/proteus.LinearAlgebraTools.html#proteus.LinearAlgebraTools.dense_numpy_2_petsc4py">dense_numpy_2_petsc4py() (in module proteus.LinearAlgebraTools)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.DirectionalWaves.depth">depth (proteus.WaveTools.DirectionalWaves attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.MultiSpectraRandomWaves.depth">(proteus.WaveTools.MultiSpectraRandomWaves attribute)</a>
-</li>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.depth">(proteus.WaveTools.NewWave attribute)</a>
-</li>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.depth">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.EGeometry.html#proteus.EGeometry.det">det() (in module proteus.EGeometry)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.df">df (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.df">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.FemTools.html#proteus.FemTools.DG_AffineLinearOnSimplexWithNodalBasis">DG_AffineLinearOnSimplexWithNodalBasis (class in proteus.FemTools)</a>
 </li>
       <li><a href="api/proteus.FemTools.html#proteus.FemTools.DG_AffineP0_OnSimplexWithMonomialBasis">DG_AffineP0_OnSimplexWithMonomialBasis (class in proteus.FemTools)</a>
@@ -2663,14 +2612,14 @@
 </li>
       <li><a href="api/proteus.TimeIntegration.html#proteus.TimeIntegration.DGlimiterPkMonomial1d_Sw">DGlimiterPkMonomial1d_Sw (class in proteus.TimeIntegration)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.TimeIntegration.html#proteus.TimeIntegration.DGlimiterPkMonomial2d">DGlimiterPkMonomial2d (class in proteus.TimeIntegration)</a>
 </li>
       <li><a href="api/proteus.NumericalFlux.html#proteus.NumericalFlux.Diffusion_IIPG_exterior">Diffusion_IIPG_exterior (class in proteus.NumericalFlux)</a>
 </li>
       <li><a href="api/proteus.NumericalFlux.html#proteus.NumericalFlux.Diffusion_LDG">Diffusion_LDG (class in proteus.NumericalFlux)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.NumericalFlux.html#proteus.NumericalFlux.Diffusion_SIPG_exterior">Diffusion_SIPG_exterior (class in proteus.NumericalFlux)</a>
 </li>
       <li><a href="api/proteus.default_p.html#proteus.default_p.diffusiveFluxBoundaryConditions">diffusiveFluxBoundaryConditions (in module proteus.default_p)</a>
@@ -2885,8 +2834,6 @@
 </li>
       <li><a href="api/proteus.EGeometry.html#proteus.EGeometry.enorm">enorm() (in module proteus.EGeometry)</a>
 </li>
-      <li><a href="api/proteus.mprans.BoundaryConditions.html#proteus.mprans.BoundaryConditions.RelaxationZone.epsFact_porous">epsFact_porous (proteus.mprans.BoundaryConditions.RelaxationZone attribute)</a>
-</li>
       <li><a href="api/proteus.mprans.BoundaryConditions.html#proteus.mprans.BoundaryConditions.RelaxationZone.epsFact_solid">epsFact_solid (proteus.mprans.BoundaryConditions.RelaxationZone attribute)</a>
 </li>
       <li><a href="api/proteus.StepControl.html#proteus.StepControl.FLCBDF_controller.errorFailure">errorFailure() (proteus.StepControl.FLCBDF_controller method)</a>
@@ -2909,11 +2856,9 @@
 </li>
       <li><a href="api/proteus.SimTools.html#proteus.SimTools.SimulationProcessor.ErrorTypes">ErrorTypes (proteus.SimTools.SimulationProcessor attribute)</a>
 </li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.LevelModel.estimate_mt">estimate_mt() (proteus.ADR.LevelModel method)</a>
+      <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel.estimate_mt">estimate_mt() (proteus.elastoplastic.ElastoPlastic.LevelModel method)</a>
 
       <ul>
-        <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel.estimate_mt">(proteus.elastoplastic.ElastoPlastic.LevelModel method)</a>
-</li>
         <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.LevelModel.estimate_mt">(proteus.mprans.AddedMass.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.CLSVOF.html#proteus.mprans.CLSVOF.LevelModel.estimate_mt">(proteus.mprans.CLSVOF.LevelModel method)</a>
@@ -2944,8 +2889,6 @@
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.LevelModel.estimate_mt">(proteus.mprans.RANS3PF.LevelModel method)</a>
 </li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.LevelModel.estimate_mt">(proteus.mprans.RANS3PSed.LevelModel method)</a>
-</li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.LevelModel.estimate_mt">(proteus.mprans.RDLS.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.SW2D.html#proteus.mprans.SW2D.LevelModel.estimate_mt">(proteus.mprans.SW2D.LevelModel method)</a>
@@ -2965,12 +2908,6 @@
       </ul></li>
       <li><a href="api/proteus.StepControl.html#proteus.StepControl.GustafssonFullNewton_dt_controller.estimateError">estimateError() (proteus.StepControl.GustafssonFullNewton_dt_controller method)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomNLWaves.eta">eta (proteus.WaveTools.RandomNLWaves attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.TimeSeries.eta">(proteus.WaveTools.TimeSeries attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.CombineWaves.eta">eta() (proteus.WaveTools.CombineWaves method)</a>
 
       <ul>
@@ -2993,8 +2930,6 @@
       </ul></li>
       <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomNLWaves.eta_2ndOrder">eta_2ndOrder() (proteus.WaveTools.RandomNLWaves method)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomNLWaves.eta_linear">eta_linear (proteus.WaveTools.RandomNLWaves attribute)</a>
-</li>
       <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomNLWaves.eta_long">eta_long() (proteus.WaveTools.RandomNLWaves method)</a>
 </li>
       <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.eta_mode">eta_mode() (in module proteus.WaveTools)</a>
@@ -3006,6 +2941,10 @@
       <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomNLWaves.eta_short">eta_short() (proteus.WaveTools.RandomNLWaves method)</a>
 </li>
       <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.TimeSeries.etaDirect">etaDirect() (proteus.WaveTools.TimeSeries method)</a>
+</li>
+      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.MonochromaticWaves.etaFenton">etaFenton() (proteus.WaveTools.MonochromaticWaves method)</a>
+</li>
+      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.MonochromaticWaves.etaLinear">etaLinear() (proteus.WaveTools.MonochromaticWaves method)</a>
 </li>
       <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.TimeSeries.etaWindow">etaWindow() (proteus.WaveTools.TimeSeries method)</a>
 </li>
@@ -3023,11 +2962,9 @@
 </li>
       <li><a href="api/proteus.EGeometry.html#proteus.EGeometry.etriple">etriple() (in module proteus.EGeometry)</a>
 </li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.Coefficients.evaluate">evaluate() (proteus.ADR.Coefficients method)</a>
+      <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.Coefficients.evaluate">evaluate() (proteus.elastoplastic.ElastoPlastic.Coefficients method)</a>
 
       <ul>
-        <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.Coefficients.evaluate">(proteus.elastoplastic.ElastoPlastic.Coefficients method)</a>
-</li>
         <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.Coefficients.evaluate">(proteus.mprans.AddedMass.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.mprans.CLSVOF.html#proteus.mprans.CLSVOF.Coefficients.evaluate">(proteus.mprans.CLSVOF.Coefficients method)</a>
@@ -3057,8 +2994,6 @@
         <li><a href="api/proteus.mprans.RANS2P.html#proteus.mprans.RANS2P.Coefficients.evaluate">(proteus.mprans.RANS2P.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.Coefficients.evaluate">(proteus.mprans.RANS3PF.Coefficients method)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.Coefficients.evaluate">(proteus.mprans.RANS3PSed.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.Coefficients.evaluate">(proteus.mprans.RDLS.Coefficients method)</a>
 </li>
@@ -3461,18 +3396,6 @@
       </ul></li>
       <li><a href="api/proteus.SubgridError.html#proteus.SubgridError.FFDarcyFC_ASGS">FFDarcyFC_ASGS (class in proteus.SubgridError)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.fi">fi (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.fi">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.fim">fim (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.fim">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.MeshTools.html#proteus.MeshTools.EdgeMesh.finalize">finalize() (proteus.MeshTools.EdgeMesh method)</a>
 
       <ul>
@@ -3495,10 +3418,10 @@
 </li>
       <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChSystem.findElementContainingCoordsDist">findElementContainingCoordsDist() (proteus.mbd.CouplingFSI.ProtChSystem method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChSystem.findElementContainingCoordsKD">findElementContainingCoordsKD() (proteus.mbd.CouplingFSI.ProtChSystem method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.TriangleFileUtils.html#proteus.TriangleFileUtils.findInitialFormatLine">findInitialFormatLine() (in module proteus.TriangleFileUtils)</a>
 </li>
       <li><a href="api/proteus.Gauges.html#proteus.Gauges.Gauges.findNearestNode">findNearestNode() (proteus.Gauges.Gauges method)</a>
@@ -3561,8 +3484,6 @@
         <li><a href="api/proteus.FemTools.html#proteus.FemTools.QuadraticLagrangeNodalInterpolationConditions.fmod">(proteus.FemTools.QuadraticLagrangeNodalInterpolationConditions method)</a>
 </li>
       </ul></li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.focus">focus (proteus.WaveTools.NewWave attribute)</a>
-</li>
       <li><a href="api/proteus.AnalyticalSolutions.html#proteus.AnalyticalSolutions.NonlinearDAE.fOfUT">fOfUT() (proteus.AnalyticalSolutions.NonlinearDAE method)</a>
 </li>
       <li><a href="api/proteus.mprans.BodyDynamics.html#proteus.mprans.BodyDynamics.forward_euler">forward_euler() (in module proteus.mprans.BodyDynamics)</a>
@@ -3575,12 +3496,6 @@
 </li>
       <li><a href="api/proteus.TimeIntegration.html#proteus.TimeIntegration.ForwardIntegrator">ForwardIntegrator (class in proteus.TimeIntegration)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.fp">fp (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.fp">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.TwoPhaseFlow.utils.Parameters.html#proteus.TwoPhaseFlow.utils.Parameters.FreezableClass">FreezableClass (class in proteus.TwoPhaseFlow.utils.Parameters)</a>
 </li>
       <li><a href="api/proteus.mprans.BodyDynamics.html#proteus.mprans.BodyDynamics.CaissonBody.friction_module">friction_module() (proteus.mprans.BodyDynamics.CaissonBody method)</a>
@@ -3627,18 +3542,6 @@
 <h2 id="G">G</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.g">g (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.g">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.gAbs">gAbs (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.gAbs">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.Archiver.html#proteus.Archiver.AR_base.gatherAndWriteTimes">gatherAndWriteTimes() (proteus.Archiver.AR_base method)</a>
 </li>
       <li><a href="api/proteus.AuxiliaryVariables.html#proteus.AuxiliaryVariables.GatherDOF">GatherDOF (class in proteus.AuxiliaryVariables)</a>
@@ -3923,14 +3826,6 @@
       </ul></li>
       <li><a href="api/proteus.Domain.html#proteus.Domain.D_base.getBoundingBox">getBoundingBox() (proteus.Domain.D_base method)</a>
 </li>
-      <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChBody.getChronoObject">getChronoObject() (proteus.mbd.CouplingFSI.ProtChBody method)</a>
-
-      <ul>
-        <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChMesh.getChronoObject">(proteus.mbd.CouplingFSI.ProtChMesh method)</a>
-</li>
-        <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChSystem.getChronoObject">(proteus.mbd.CouplingFSI.ProtChSystem method)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.mprans.GN_SW2DCV.html#proteus.mprans.GN_SW2DCV.LevelModel.getCMatrices">getCMatrices() (proteus.mprans.GN_SW2DCV.LevelModel method)</a>
 
       <ul>
@@ -4073,8 +3968,6 @@
 </li>
       <li><a href="api/proteus.FemTools.html#proteus.FemTools.FiniteElementFunction.getGradientValuesTrace">getGradientValuesTrace() (proteus.FemTools.FiniteElementFunction method)</a>
 </li>
-      <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChSystem.getGravitationalAcceleration">getGravitationalAcceleration() (proteus.mbd.CouplingFSI.ProtChSystem method)</a>
-</li>
       <li><a href="api/proteus.mprans.BodyDynamics.html#proteus.mprans.BodyDynamics.RigidBody.getGravityForce">getGravityForce() (proteus.mprans.BodyDynamics.RigidBody method)</a>
 </li>
       <li><a href="api/proteus.FemTools.html#proteus.FemTools.FiniteElementFunction.getHessianValues">getHessianValues() (proteus.FemTools.FiniteElementFunction method)</a>
@@ -4089,11 +3982,9 @@
         <li><a href="api/proteus.TransportCoefficients.html#proteus.TransportCoefficients.RedistanceLevelSet.getICDofs">(proteus.TransportCoefficients.RedistanceLevelSet method)</a>
 </li>
       </ul></li>
-      <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChBody.getInertia">getInertia() (proteus.mbd.CouplingFSI.ProtChBody method)</a>
+      <li><a href="api/proteus.mprans.BodyDynamics.html#proteus.mprans.BodyDynamics.CaissonBody.getInertia">getInertia() (proteus.mprans.BodyDynamics.CaissonBody method)</a>
 
       <ul>
-        <li><a href="api/proteus.mprans.BodyDynamics.html#proteus.mprans.BodyDynamics.CaissonBody.getInertia">(proteus.mprans.BodyDynamics.CaissonBody method)</a>
-</li>
         <li><a href="api/proteus.mprans.BodyDynamics.html#proteus.mprans.BodyDynamics.RigidBody.getInertia">(proteus.mprans.BodyDynamics.RigidBody method)</a>
 </li>
       </ul></li>
@@ -4121,13 +4012,9 @@
 </li>
       <li><a href="api/proteus.FemTools.html#proteus.FemTools.AffineMaps.getInverseValuesTrace">getInverseValuesTrace() (proteus.FemTools.AffineMaps method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.LevelModel.getJacobian">getJacobian() (proteus.ADR.LevelModel method)</a>
+      <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel.getJacobian">getJacobian() (proteus.elastoplastic.ElastoPlastic.LevelModel method)</a>
 
       <ul>
-        <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel.getJacobian">(proteus.elastoplastic.ElastoPlastic.LevelModel method)</a>
-</li>
         <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.LevelModel.getJacobian">(proteus.mprans.AddedMass.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.CLSVOF.html#proteus.mprans.CLSVOF.LevelModel.getJacobian">(proteus.mprans.CLSVOF.LevelModel method)</a>
@@ -4160,8 +4047,6 @@
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.LevelModel.getJacobian">(proteus.mprans.RANS3PF.LevelModel method)</a>
 </li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.LevelModel.getJacobian">(proteus.mprans.RANS3PSed.LevelModel method)</a>
-</li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.LevelModel.getJacobian">(proteus.mprans.RDLS.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.SW2D.html#proteus.mprans.SW2D.LevelModel.getJacobian">(proteus.mprans.SW2D.LevelModel method)</a>
@@ -4181,6 +4066,8 @@
         <li><a href="api/proteus.Transport.html#proteus.Transport.OneLevelTransport.getJacobian">(proteus.Transport.OneLevelTransport method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.Transport.html#proteus.Transport.OneLevelTransport.getJacobian_CSR">getJacobian_CSR() (proteus.Transport.OneLevelTransport method)</a>
 </li>
       <li><a href="api/proteus.Transport.html#proteus.Transport.OneLevelTransport.getJacobian_dense">getJacobian_dense() (proteus.Transport.OneLevelTransport method)</a>
@@ -4236,8 +4123,6 @@
 </li>
       </ul></li>
       <li><a href="api/proteus.mprans.CLSVOF.html#proteus.mprans.CLSVOF.LevelModel.getLumpedMassMatrix">getLumpedMassMatrix() (proteus.mprans.CLSVOF.LevelModel method)</a>
-</li>
-      <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChBody.getMass">getMass() (proteus.mbd.CouplingFSI.ProtChBody method)</a>
 </li>
       <li><a href="api/proteus.Transport.html#proteus.Transport.OneLevelTransport.getMassJacobian">getMassJacobian() (proteus.Transport.OneLevelTransport method)</a>
 </li>
@@ -4323,11 +4208,9 @@
 </li>
       <li><a href="api/proteus.mprans.NCLS.html#proteus.mprans.NCLS.LevelModel.getRedistancingResidual">getRedistancingResidual() (proteus.mprans.NCLS.LevelModel method)</a>
 </li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.LevelModel.getResidual">getResidual() (proteus.ADR.LevelModel method)</a>
+      <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel.getResidual">getResidual() (proteus.elastoplastic.ElastoPlastic.LevelModel method)</a>
 
       <ul>
-        <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel.getResidual">(proteus.elastoplastic.ElastoPlastic.LevelModel method)</a>
-</li>
         <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.LevelModel.getResidual">(proteus.mprans.AddedMass.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.CLSVOF.html#proteus.mprans.CLSVOF.LevelModel.getResidual">(proteus.mprans.CLSVOF.LevelModel method)</a>
@@ -4359,8 +4242,6 @@
         <li><a href="api/proteus.mprans.RANS2P_IB.html#proteus.mprans.RANS2P_IB.LevelModel.getResidual">(proteus.mprans.RANS2P_IB.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.LevelModel.getResidual">(proteus.mprans.RANS3PF.LevelModel method)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.LevelModel.getResidual">(proteus.mprans.RANS3PSed.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.LevelModel.getResidual">(proteus.mprans.RDLS.LevelModel method)</a>
 </li>
@@ -4648,8 +4529,6 @@
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.NumericalFlux.hasInterior">(proteus.mprans.RANS3PF.NumericalFlux attribute)</a>
 </li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.NumericalFlux.hasInterior">(proteus.mprans.RANS3PSed.NumericalFlux attribute)</a>
-</li>
         <li><a href="api/proteus.mprans.SW2D.html#proteus.mprans.SW2D.NumericalFlux.hasInterior">(proteus.mprans.SW2D.NumericalFlux attribute)</a>
 </li>
         <li><a href="api/proteus.mprans.SW2DCV.html#proteus.mprans.SW2DCV.NumericalFlux.hasInterior">(proteus.mprans.SW2DCV.NumericalFlux attribute)</a>
@@ -4721,12 +4600,6 @@
 </li>
       <li><a href="api/proteus.MeshAdaptPUMI.AdaptHelper.html#proteus.MeshAdaptPUMI.AdaptHelper.PUMI_helper.hotstartWithPUMI">hotstartWithPUMI() (proteus.MeshAdaptPUMI.AdaptHelper.PUMI_helper method)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.Hs">Hs (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.Hs">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChBody.hx">hx() (proteus.mbd.CouplingFSI.ProtChBody method)</a>
 </li>
       <li><a href="api/proteus.mprans.BoundaryConditions.html#proteus.mprans.BoundaryConditions.BC_RANS.hx_dirichlet">hx_dirichlet (proteus.mprans.BoundaryConditions.BC_RANS attribute)</a>
@@ -4967,11 +4840,9 @@
         <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChSystem.initialized">(proteus.mbd.CouplingFSI.ProtChSystem attribute)</a>
 </li>
       </ul></li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.Coefficients.initializeElementBoundaryQuadrature">initializeElementBoundaryQuadrature() (proteus.ADR.Coefficients method)</a>
+      <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.Coefficients.initializeElementBoundaryQuadrature">initializeElementBoundaryQuadrature() (proteus.mprans.AddedMass.Coefficients method)</a>
 
       <ul>
-        <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.Coefficients.initializeElementBoundaryQuadrature">(proteus.mprans.AddedMass.Coefficients method)</a>
-</li>
         <li><a href="api/proteus.mprans.CLSVOF.html#proteus.mprans.CLSVOF.Coefficients.initializeElementBoundaryQuadrature">(proteus.mprans.CLSVOF.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.mprans.Dissipation.html#proteus.mprans.Dissipation.Coefficients.initializeElementBoundaryQuadrature">(proteus.mprans.Dissipation.Coefficients method)</a>
@@ -4997,8 +4868,6 @@
         <li><a href="api/proteus.mprans.RANS2P.html#proteus.mprans.RANS2P.Coefficients.initializeElementBoundaryQuadrature">(proteus.mprans.RANS2P.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.Coefficients.initializeElementBoundaryQuadrature">(proteus.mprans.RANS3PF.Coefficients method)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.Coefficients.initializeElementBoundaryQuadrature">(proteus.mprans.RANS3PSed.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.Coefficients.initializeElementBoundaryQuadrature">(proteus.mprans.RDLS.Coefficients method)</a>
 </li>
@@ -5107,15 +4976,9 @@
         <li><a href="api/proteus.TwophaseDarcyCoefficients.html#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.initializeElementBoundaryQuadrature">(proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base method)</a>
 </li>
       </ul></li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.Coefficients.initializeElementQuadrature">initializeElementQuadrature() (proteus.ADR.Coefficients method)</a>
+      <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.Coefficients.initializeElementQuadrature">initializeElementQuadrature() (proteus.elastoplastic.ElastoPlastic.Coefficients method)</a>
 
       <ul>
-        <li><a href="api/proteus.ADR.html#proteus.ADR.ShockCapturing.initializeElementQuadrature">(proteus.ADR.ShockCapturing method)</a>
-</li>
-        <li><a href="api/proteus.ADR.html#proteus.ADR.SubgridError.initializeElementQuadrature">(proteus.ADR.SubgridError method)</a>
-</li>
-        <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.Coefficients.initializeElementQuadrature">(proteus.elastoplastic.ElastoPlastic.Coefficients method)</a>
-</li>
         <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.Coefficients.initializeElementQuadrature">(proteus.mprans.AddedMass.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.mprans.CLSVOF.html#proteus.mprans.CLSVOF.Coefficients.initializeElementQuadrature">(proteus.mprans.CLSVOF.Coefficients method)</a>
@@ -5171,12 +5034,6 @@
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.ShockCapturing.initializeElementQuadrature">(proteus.mprans.RANS3PF.ShockCapturing method)</a>
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.SubgridError.initializeElementQuadrature">(proteus.mprans.RANS3PF.SubgridError method)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.Coefficients.initializeElementQuadrature">(proteus.mprans.RANS3PSed.Coefficients method)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.ShockCapturing.initializeElementQuadrature">(proteus.mprans.RANS3PSed.ShockCapturing method)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.SubgridError.initializeElementQuadrature">(proteus.mprans.RANS3PSed.SubgridError method)</a>
 </li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.Coefficients.initializeElementQuadrature">(proteus.mprans.RDLS.Coefficients method)</a>
 </li>
@@ -5395,11 +5252,9 @@
         <li><a href="api/proteus.TwophaseDarcyCoefficients.html#proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base.initializeGeneralizedInterpolationPointQuadrature">(proteus.TwophaseDarcyCoefficients.TwophaseDarcyFlow_base method)</a>
 </li>
       </ul></li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature">initializeGlobalExteriorElementBoundaryQuadrature() (proteus.ADR.Coefficients method)</a>
+      <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature">initializeGlobalExteriorElementBoundaryQuadrature() (proteus.elastoplastic.ElastoPlastic.Coefficients method)</a>
 
       <ul>
-        <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature">(proteus.elastoplastic.ElastoPlastic.Coefficients method)</a>
-</li>
         <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature">(proteus.mprans.AddedMass.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.mprans.CLSVOF.html#proteus.mprans.CLSVOF.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature">(proteus.mprans.CLSVOF.Coefficients method)</a>
@@ -5431,8 +5286,6 @@
         <li><a href="api/proteus.mprans.RANS2P_IB.html#proteus.mprans.RANS2P_IB.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature">(proteus.mprans.RANS2P_IB.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature">(proteus.mprans.RANS3PF.Coefficients method)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature">(proteus.mprans.RANS3PSed.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature">(proteus.mprans.RDLS.Coefficients method)</a>
 </li>
@@ -5549,11 +5402,9 @@
 </li>
       <li><a href="api/proteus.SubsurfaceTransportCoefficients.html#proteus.SubsurfaceTransportCoefficients.BlockHeterogeneousCoefficients.initializeMaterialTypes">initializeMaterialTypes() (proteus.SubsurfaceTransportCoefficients.BlockHeterogeneousCoefficients method)</a>
 </li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.Coefficients.initializeMesh">initializeMesh() (proteus.ADR.Coefficients method)</a>
+      <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.Coefficients.initializeMesh">initializeMesh() (proteus.elastoplastic.ElastoPlastic.Coefficients method)</a>
 
       <ul>
-        <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.Coefficients.initializeMesh">(proteus.elastoplastic.ElastoPlastic.Coefficients method)</a>
-</li>
         <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.Coefficients.initializeMesh">(proteus.mprans.AddedMass.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.mprans.CLSVOF.html#proteus.mprans.CLSVOF.Coefficients.initializeMesh">(proteus.mprans.CLSVOF.Coefficients method)</a>
@@ -5583,8 +5434,6 @@
         <li><a href="api/proteus.mprans.RANS2P_IB.html#proteus.mprans.RANS2P_IB.Coefficients.initializeMesh">(proteus.mprans.RANS2P_IB.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.Coefficients.initializeMesh">(proteus.mprans.RANS3PF.Coefficients method)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.Coefficients.initializeMesh">(proteus.mprans.RANS3PSed.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.Coefficients.initializeMesh">(proteus.mprans.RDLS.Coefficients method)</a>
 </li>
@@ -5851,12 +5700,6 @@
 </li>
       <li><a href="api/proteus.mprans.BoundaryConditions.html#proteus.mprans.BoundaryConditions.kWall.kappaNearWall">kappaNearWall() (proteus.mprans.BoundaryConditions.kWall method)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.kDir">kDir (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.kDir">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.TransportCoefficients.html#proteus.TransportCoefficients.kEpsilon">kEpsilon (class in proteus.TransportCoefficients)</a>
 </li>
       <li><a href="api/proteus.TransportCoefficients.html#proteus.TransportCoefficients.kEpsilon.kEpsilon_2D_Evaluate">kEpsilon_2D_Evaluate() (proteus.TransportCoefficients.kEpsilon method)</a>
@@ -5893,12 +5736,6 @@
       </ul></li>
       <li><a href="api/proteus.StupidHeap.html#proteus.StupidHeap.StupidHeap.keyIndex">keyIndex (proteus.StupidHeap.StupidHeap attribute)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.ki">ki (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.ki">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.LinearSolvers.html#proteus.LinearSolvers.KSP_petsc4py">KSP_petsc4py (class in proteus.LinearSolvers)</a>
 </li>
       <li><a href="api/proteus.LinearSolvers.html#proteus.LinearSolvers.KSP_Preconditioner">KSP_Preconditioner (class in proteus.LinearSolvers)</a>
@@ -5961,12 +5798,8 @@
 </li>
       <li><a href="api/proteus.Norms.html#proteus.Norms.L2normSFEM">L2normSFEM() (in module proteus.Norms)</a>
 </li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.Coefficients.L2projectEvaluate">L2projectEvaluate() (proteus.ADR.Coefficients method)</a>
-
-      <ul>
-        <li><a href="api/proteus.TransportCoefficients.html#proteus.TransportCoefficients.PoissonEquationCoefficients.L2projectEvaluate">(proteus.TransportCoefficients.PoissonEquationCoefficients method)</a>
+      <li><a href="api/proteus.TransportCoefficients.html#proteus.TransportCoefficients.PoissonEquationCoefficients.L2projectEvaluate">L2projectEvaluate() (proteus.TransportCoefficients.PoissonEquationCoefficients method)</a>
 </li>
-      </ul></li>
       <li><a href="api/proteus.default_n.html#proteus.default_n.l_atol_res">l_atol_res (in module proteus.default_n)</a>
 </li>
       <li><a href="api/proteus.FemTools.html#proteus.FemTools.LagrangeCubeFactory">LagrangeCubeFactory() (in module proteus.FemTools)</a>
@@ -5987,11 +5820,9 @@
       </ul></li>
       <li><a href="api/proteus.LatexReport.html#proteus.LatexReport.LatexResultsSummary">LatexResultsSummary (class in proteus.LatexReport)</a>
 </li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.LevelModel">LevelModel (class in proteus.ADR)</a>
+      <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel">LevelModel (class in proteus.elastoplastic.ElastoPlastic)</a>
 
       <ul>
-        <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel">(class in proteus.elastoplastic.ElastoPlastic)</a>
-</li>
         <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.LevelModel">(class in proteus.mprans.AddedMass)</a>
 </li>
         <li><a href="api/proteus.mprans.CLSVOF.html#proteus.mprans.CLSVOF.LevelModel">(class in proteus.mprans.CLSVOF)</a>
@@ -6024,8 +5855,6 @@
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.LevelModel">(class in proteus.mprans.RANS3PF)</a>
 </li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.LevelModel">(class in proteus.mprans.RANS3PSed)</a>
-</li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.LevelModel">(class in proteus.mprans.RDLS)</a>
 </li>
         <li><a href="api/proteus.mprans.SW2D.html#proteus.mprans.SW2D.LevelModel">(class in proteus.mprans.SW2D)</a>
@@ -6053,8 +5882,6 @@
         <li><a href="api/proteus.TransportCoefficients.html#proteus.TransportCoefficients.LevelSetConservation.levelSetConservationCoefficientsEvaluate">(proteus.TransportCoefficients.LevelSetConservation method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.mprans.MCorr.html#proteus.mprans.MCorr.Coefficients.levelSetConservationCoefficientsEvaluate_sd">levelSetConservationCoefficientsEvaluate_sd() (proteus.mprans.MCorr.Coefficients method)</a>
 
       <ul>
@@ -6063,6 +5890,8 @@
         <li><a href="api/proteus.TransportCoefficients.html#proteus.TransportCoefficients.LevelSetConservation.levelSetConservationCoefficientsEvaluate_sd">(proteus.TransportCoefficients.LevelSetConservation method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.TransportCoefficients.html#proteus.TransportCoefficients.LevelSetCurvatureCoefficients">LevelSetCurvatureCoefficients (class in proteus.TransportCoefficients)</a>
 </li>
       <li><a href="api/proteus.TransportCoefficients.html#proteus.TransportCoefficients.LevelSetCurvatureCoefficients.levelSetCurvatureCoefficientsEvaluate">levelSetCurvatureCoefficientsEvaluate() (proteus.TransportCoefficients.LevelSetCurvatureCoefficients method)</a>
@@ -6457,6 +6286,8 @@
 </li>
         <li><a href="api/proteus.MeshAdaptPUMI.Checkpoint.html#module-proteus.MeshAdaptPUMI.Checkpoint">proteus.MeshAdaptPUMI.Checkpoint</a>
 </li>
+        <li><a href="api/proteus.MeshAdaptPUMI.MeshAdapt.html#module-proteus.MeshAdaptPUMI.MeshAdapt">proteus.MeshAdaptPUMI.MeshAdapt</a>
+</li>
         <li><a href="api/proteus.MeshTools.html#module-proteus.MeshTools">proteus.MeshTools</a>
 </li>
         <li><a href="api/proteus.mprans.html#module-proteus.mprans">proteus.mprans</a>
@@ -6474,6 +6305,8 @@
         <li><a href="api/proteus.mprans.CLSVOF.html#module-proteus.mprans.CLSVOF">proteus.mprans.CLSVOF</a>
 </li>
         <li><a href="api/proteus.mprans.cMoveMeshMonitor.html#module-proteus.mprans.cMoveMeshMonitor">proteus.mprans.cMoveMeshMonitor</a>
+</li>
+        <li><a href="api/proteus.mprans.cRANS3PF.html#module-proteus.mprans.cRANS3PF">proteus.mprans.cRANS3PF</a>
 </li>
         <li><a href="api/proteus.mprans.Dissipation.html#module-proteus.mprans.Dissipation">proteus.mprans.Dissipation</a>
 </li>
@@ -6662,41 +6495,15 @@
 </li>
       <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.MultiSpectraRandomWaves">MultiSpectraRandomWaves (class in proteus.WaveTools)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.DirectionalWaves.mwl">mwl (proteus.WaveTools.DirectionalWaves attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.MonochromaticWaves.mwl">(proteus.WaveTools.MonochromaticWaves attribute)</a>
-</li>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.MultiSpectraRandomWaves.mwl">(proteus.WaveTools.MultiSpectraRandomWaves attribute)</a>
-</li>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.mwl">(proteus.WaveTools.NewWave attribute)</a>
-</li>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.mwl">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.SolitaryWave.mwl">(proteus.WaveTools.SolitaryWave attribute)</a>
-</li>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.SteadyCurrent.mwl">(proteus.WaveTools.SteadyCurrent attribute)</a>
-</li>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.TimeSeries.mwl">(proteus.WaveTools.TimeSeries attribute)</a>
-</li>
-      </ul></li>
   </ul></td>
 </tr></table>
 
 <h2 id="N">N</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.N">N (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.N">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.default_p.html#proteus.default_p.name">name (in module proteus.default_p)</a>
 
       <ul>
-        <li><a href="api/proteus.BoundaryConditions.html#proteus.BoundaryConditions.BC_Base.name">(proteus.BoundaryConditions.BC_Base attribute)</a>
-</li>
         <li><a href="api/proteus.FemTools.html#proteus.FemTools.FiniteElementFunction.name">(proteus.FemTools.FiniteElementFunction attribute)</a>
 </li>
         <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChBody.name">(proteus.mbd.CouplingFSI.ProtChBody attribute)</a>
@@ -6746,11 +6553,9 @@
 </li>
       <li><a href="api/proteus.FemTools.html#proteus.FemTools.NC_AffineLinearOnSimplexWithNodalBasis">NC_AffineLinearOnSimplexWithNodalBasis (class in proteus.FemTools)</a>
 </li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.LevelModel.nCalls">nCalls (proteus.ADR.LevelModel attribute)</a>
+      <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel.nCalls">nCalls (proteus.elastoplastic.ElastoPlastic.LevelModel attribute)</a>
 
       <ul>
-        <li><a href="api/proteus.elastoplastic.ElastoPlastic.html#proteus.elastoplastic.ElastoPlastic.LevelModel.nCalls">(proteus.elastoplastic.ElastoPlastic.LevelModel attribute)</a>
-</li>
         <li><a href="api/proteus.mprans.AddedMass.html#proteus.mprans.AddedMass.LevelModel.nCalls">(proteus.mprans.AddedMass.LevelModel attribute)</a>
 </li>
         <li><a href="api/proteus.mprans.CLSVOF.html#proteus.mprans.CLSVOF.LevelModel.nCalls">(proteus.mprans.CLSVOF.LevelModel attribute)</a>
@@ -6780,8 +6585,6 @@
         <li><a href="api/proteus.mprans.RANS2P.html#proteus.mprans.RANS2P.LevelModel.nCalls">(proteus.mprans.RANS2P.LevelModel attribute)</a>
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.LevelModel.nCalls">(proteus.mprans.RANS3PF.LevelModel attribute)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.LevelModel.nCalls">(proteus.mprans.RANS3PSed.LevelModel attribute)</a>
 </li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.LevelModel.nCalls">(proteus.mprans.RDLS.LevelModel attribute)</a>
 </li>
@@ -6813,8 +6616,6 @@
       <li><a href="api/proteus.default_p.html#proteus.default_p.nd">nd (in module proteus.default_p)</a>
 
       <ul>
-        <li><a href="api/proteus.BoundaryConditions.html#proteus.BoundaryConditions.BC_Base.nd">(proteus.BoundaryConditions.BC_Base attribute)</a>
-</li>
         <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChBody.nd">(proteus.mbd.CouplingFSI.ProtChBody attribute)</a>
 </li>
         <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChMoorings.nd">(proteus.mbd.CouplingFSI.ProtChMoorings attribute)</a>
@@ -6979,8 +6780,6 @@
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.NumericalFlux">(class in proteus.mprans.RANS3PF)</a>
 </li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.NumericalFlux">(class in proteus.mprans.RANS3PSed)</a>
-</li>
         <li><a href="api/proteus.mprans.SW2D.html#proteus.mprans.SW2D.NumericalFlux">(class in proteus.mprans.SW2D)</a>
 </li>
         <li><a href="api/proteus.mprans.SW2DCV.html#proteus.mprans.SW2DCV.NumericalFlux">(class in proteus.mprans.SW2DCV)</a>
@@ -6991,15 +6790,7 @@
 </li>
         <li><a href="api/proteus.mprans.VOS3P.html#proteus.mprans.VOS3P.NumericalFlux">(class in proteus.mprans.VOS3P)</a>
 </li>
-        <li><a href="api/proteus.ADR.html#proteus.ADR.NumericalFlux">(in module proteus.ADR)</a>
-</li>
       </ul></li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.NumericalFlux_IIPG">NumericalFlux_IIPG (class in proteus.ADR)</a>
-</li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.NumericalFlux_NIPG">NumericalFlux_NIPG (class in proteus.ADR)</a>
-</li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.NumericalFlux_SIPG">NumericalFlux_SIPG (class in proteus.ADR)</a>
-</li>
       <li><a href="api/proteus.default_n.html#proteus.default_n.numericalFluxType">numericalFluxType (in module proteus.default_n)</a>
 </li>
       <li><a href="api/proteus.defaults.html#proteus.defaults.Numerics_base">Numerics_base (class in proteus.defaults)</a>
@@ -7014,12 +6805,6 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.Optimizers.html#proteus.Optimizers.ObjectiveFunction_base">ObjectiveFunction_base (class in proteus.Optimizers)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.omega">omega (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.omega">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.FemTools.html#proteus.FemTools.ReferenceCube.onElement">onElement() (proteus.FemTools.ReferenceCube method)</a>
 
       <ul>
@@ -7044,10 +6829,10 @@
 </li>
       <li><a href="api/proteus.LinearAlgebraTools.html#proteus.LinearAlgebraTools.OperatorShell">OperatorShell (class in proteus.LinearAlgebraTools)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.Context.html#proteus.Context.Options">Options() (in module proteus.Context)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.NumericalSolution.html#proteus.NumericalSolution.NS_base.opts">opts (proteus.NumericalSolution.NS_base attribute)</a>
 </li>
       <li><a href="api/proteus.mprans.BoundaryConditions.html#proteus.mprans.BoundaryConditions.RelaxationZone.orientation">orientation (proteus.mprans.BoundaryConditions.RelaxationZone attribute)</a>
@@ -7190,12 +6975,6 @@
 </li>
       <li><a href="api/proteus.LinearSolvers.html#proteus.LinearSolvers.petsc_LU">petsc_LU (class in proteus.LinearSolvers)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.phi">phi (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.phi">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.StepControl.html#proteus.StepControl.GustafssonFullNewton_dt_controller.phi">phi() (proteus.StepControl.GustafssonFullNewton_dt_controller method)</a>
 </li>
       <li><a href="api/proteus.mprans.BoundaryConditions.html#proteus.mprans.BoundaryConditions.BC_RANS.phi_dirichlet">phi_dirichlet (proteus.mprans.BoundaryConditions.BC_RANS attribute)</a>
@@ -7435,8 +7214,6 @@
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.Coefficients.postStep">(proteus.mprans.RANS3PF.Coefficients method)</a>
 </li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.Coefficients.postStep">(proteus.mprans.RANS3PSed.Coefficients method)</a>
-</li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.Coefficients.postStep">(proteus.mprans.RDLS.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.mprans.SW2DCV.html#proteus.mprans.SW2DCV.Coefficients.postStep">(proteus.mprans.SW2DCV.Coefficients method)</a>
@@ -7553,8 +7330,6 @@
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.Coefficients.preStep">(proteus.mprans.RANS3PF.Coefficients method)</a>
 </li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.Coefficients.preStep">(proteus.mprans.RANS3PSed.Coefficients method)</a>
-</li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.Coefficients.preStep">(proteus.mprans.RDLS.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.mprans.SW2DCV.html#proteus.mprans.SW2DCV.Coefficients.preStep">(proteus.mprans.SW2DCV.Coefficients method)</a>
@@ -7658,8 +7433,6 @@
 </li>
       <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChMesh">ProtChMesh (class in proteus.mbd.CouplingFSI)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChMoorings">ProtChMoorings (class in proteus.mbd.CouplingFSI)</a>
 </li>
       <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChSystem">ProtChSystem (class in proteus.mbd.CouplingFSI)</a>
@@ -7674,6 +7447,8 @@
         <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChMoorings.ProtChSystem">(proteus.mbd.CouplingFSI.ProtChMoorings attribute)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     proteus
 
@@ -8053,6 +7828,13 @@
 </li>
       </ul></li>
       <li>
+    proteus.MeshAdaptPUMI.MeshAdapt
+
+      <ul>
+        <li><a href="api/proteus.MeshAdaptPUMI.MeshAdapt.html#module-proteus.MeshAdaptPUMI.MeshAdapt">module</a>
+</li>
+      </ul></li>
+      <li>
     proteus.MeshTools
 
       <ul>
@@ -8113,6 +7895,13 @@
 
       <ul>
         <li><a href="api/proteus.mprans.cMoveMeshMonitor.html#module-proteus.mprans.cMoveMeshMonitor">module</a>
+</li>
+      </ul></li>
+      <li>
+    proteus.mprans.cRANS3PF
+
+      <ul>
+        <li><a href="api/proteus.mprans.cRANS3PF.html#module-proteus.mprans.cRANS3PF">module</a>
 </li>
       </ul></li>
       <li>
@@ -8653,6 +8442,8 @@
 </li>
       <li><a href="api/proteus.Comm.html#proteus.Comm.Comm.rank">rank() (proteus.Comm.Comm method)</a>
 </li>
+      <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.RANS3PSed">RANS3PSed (class in proteus.mprans.RANS3PSed)</a>
+</li>
       <li><a href="api/proteus.SubsurfaceTransportCoefficients.html#proteus.SubsurfaceTransportCoefficients.RE_NCP1_OneLevelTransport">RE_NCP1_OneLevelTransport (class in proteus.SubsurfaceTransportCoefficients)</a>
 </li>
       <li><a href="api/proteus.default_n.html#proteus.default_n.reactionLumping">reactionLumping (in module proteus.default_n)</a>
@@ -8849,10 +8640,10 @@
 </li>
       <li><a href="api/proteus.mprans.BoundaryConditions.html#proteus.mprans.BoundaryConditions.BC_RANS.reset">reset() (proteus.mprans.BoundaryConditions.BC_RANS method)</a>
 </li>
-      <li><a href="api/proteus.defaults.html#proteus.defaults.reset_default_n">reset_default_n() (in module proteus.defaults)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/proteus.defaults.html#proteus.defaults.reset_default_n">reset_default_n() (in module proteus.defaults)</a>
+</li>
       <li><a href="api/proteus.defaults.html#proteus.defaults.reset_default_p">reset_default_p() (in module proteus.defaults)</a>
 </li>
       <li><a href="api/proteus.defaults.html#proteus.defaults.reset_default_so">reset_default_so() (in module proteus.defaults)</a>
@@ -9425,8 +9216,6 @@
         <li><a href="api/proteus.mprans.SpatialTools.html#proteus.mprans.SpatialTools.TankWithObstacles2D.setGenerationZones">(proteus.mprans.SpatialTools.TankWithObstacles2D method)</a>
 </li>
       </ul></li>
-      <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChSystem.setGravitationalAcceleration">setGravitationalAcceleration() (proteus.mbd.CouplingFSI.ProtChSystem method)</a>
-</li>
       <li><a href="api/proteus.Archiver.html#proteus.Archiver.XdmfWriter.setGridCollectionAndGridElements">setGridCollectionAndGridElements() (proteus.Archiver.XdmfWriter method)</a>
 </li>
       <li><a href="api/proteus.SpatialTools.html#proteus.SpatialTools.Shape.setHoles">setHoles() (proteus.SpatialTools.Shape method)</a>
@@ -9436,10 +9225,6 @@
       <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChBody.setIBM">setIBM() (proteus.mbd.CouplingFSI.ProtChBody method)</a>
 </li>
       <li><a href="api/proteus.mprans.BodyDynamics.html#proteus.mprans.BodyDynamics.RigidBody.setInertiaTensor">setInertiaTensor() (proteus.mprans.BodyDynamics.RigidBody method)</a>
-</li>
-      <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChBody.setInertiaXX">setInertiaXX() (proteus.mbd.CouplingFSI.ProtChBody method)</a>
-</li>
-      <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChBody.setInertiaXY">setInertiaXY() (proteus.mbd.CouplingFSI.ProtChBody method)</a>
 </li>
       <li><a href="api/proteus.Transport.html#proteus.Transport.OneLevelTransport.setInflowFlux">setInflowFlux() (proteus.Transport.OneLevelTransport method)</a>
 </li>
@@ -9507,12 +9292,8 @@
         <li><a href="api/proteus.NonlinearSolvers.html#proteus.NonlinearSolvers.NewtonNS.setLinearSolverTolerance">(proteus.NonlinearSolvers.NewtonNS method)</a>
 </li>
       </ul></li>
-      <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChBody.setMass">setMass() (proteus.mbd.CouplingFSI.ProtChBody method)</a>
-
-      <ul>
-        <li><a href="api/proteus.mprans.BodyDynamics.html#proteus.mprans.BodyDynamics.RigidBody.setMass">(proteus.mprans.BodyDynamics.RigidBody method)</a>
+      <li><a href="api/proteus.mprans.BodyDynamics.html#proteus.mprans.BodyDynamics.RigidBody.setMass">setMass() (proteus.mprans.BodyDynamics.RigidBody method)</a>
 </li>
-      </ul></li>
       <li><a href="api/proteus.mprans.MCorr.html#proteus.mprans.MCorr.LevelModel.setMassQuadrature">setMassQuadrature() (proteus.mprans.MCorr.LevelModel method)</a>
 
       <ul>
@@ -9603,12 +9384,8 @@
 </li>
       <li><a href="api/proteus.mprans.SpatialTools.html#proteus.mprans.SpatialTools.ShapeRANS.setPorousZones">setPorousZones() (proteus.mprans.SpatialTools.ShapeRANS method)</a>
 </li>
-      <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChBody.setPosition">setPosition() (proteus.mbd.CouplingFSI.ProtChBody method)</a>
-
-      <ul>
-        <li><a href="api/proteus.SpatialTools.html#proteus.SpatialTools.Shape.setPosition">(proteus.SpatialTools.Shape method)</a>
+      <li><a href="api/proteus.SpatialTools.html#proteus.SpatialTools.Shape.setPosition">setPosition() (proteus.SpatialTools.Shape method)</a>
 </li>
-      </ul></li>
       <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChBody.setPrescribedMotion">setPrescribedMotion() (proteus.mbd.CouplingFSI.ProtChBody method)</a>
 </li>
       <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChBody.setPrescribedMotionCustom">setPrescribedMotionCustom() (proteus.mbd.CouplingFSI.ProtChBody method)</a>
@@ -9641,16 +9418,14 @@
       </ul></li>
       <li><a href="api/proteus.mprans.BoundaryConditions.html#proteus.mprans.BoundaryConditions.BC_RANS.setRigidBodyMoveMesh">setRigidBodyMoveMesh() (proteus.mprans.BoundaryConditions.BC_RANS method)</a>
 </li>
-      <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChSystem.setSampleRate">setSampleRate() (proteus.mbd.CouplingFSI.ProtChSystem method)</a>
-</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.mprans.SpatialTools.html#proteus.mprans.SpatialTools.Tank2D.setSponge">setSponge() (proteus.mprans.SpatialTools.Tank2D method)</a>
 
       <ul>
         <li><a href="api/proteus.mprans.SpatialTools.html#proteus.mprans.SpatialTools.Tank3D.setSponge">(proteus.mprans.SpatialTools.Tank3D method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.mprans.BodyDynamics.html#proteus.mprans.BodyDynamics.CaissonBody.setSprings">setSprings() (proteus.mprans.BodyDynamics.CaissonBody method)</a>
 
       <ul>
@@ -9723,8 +9498,6 @@
 </li>
       <li><a href="api/proteus.FemTools.html#proteus.FemTools.FiniteElementFunction.setupParallelCommunication">setupParallelCommunication() (proteus.FemTools.FiniteElementFunction method)</a>
 </li>
-      <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChBody.setVelocity">setVelocity() (proteus.mbd.CouplingFSI.ProtChBody method)</a>
-</li>
       <li><a href="api/proteus.WaveTools.html#id1">setVertDir() (in module proteus.WaveTools)</a>, <a href="api/proteus.WaveTools.html#proteus.WaveTools.setVertDir">[1]</a>
 </li>
       <li><a href="api/proteus.mprans.BoundaryConditions.html#proteus.mprans.BoundaryConditions.BC_RANS.setWallFunction">setWallFunction() (proteus.mprans.BoundaryConditions.BC_RANS method)</a>
@@ -9778,8 +9551,6 @@
       <li><a href="api/proteus.SpatialTools.html#proteus.SpatialTools.Shape">Shape (class in proteus.SpatialTools)</a>
 
       <ul>
-        <li><a href="api/proteus.BoundaryConditions.html#proteus.BoundaryConditions.BC_Base.Shape">(proteus.BoundaryConditions.BC_Base attribute)</a>
-</li>
         <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChBody.Shape">(proteus.mbd.CouplingFSI.ProtChBody attribute)</a>
 </li>
         <li><a href="api/proteus.mprans.BoundaryConditions.html#proteus.mprans.BoundaryConditions.RelaxationZone.Shape">(proteus.mprans.BoundaryConditions.RelaxationZone attribute)</a>
@@ -9789,11 +9560,9 @@
 </li>
       <li><a href="api/proteus.SpatialTools.html#proteus.SpatialTools.ShapeSTL">ShapeSTL (class in proteus.SpatialTools)</a>
 </li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.ShockCapturing">ShockCapturing (class in proteus.ADR)</a>
+      <li><a href="api/proteus.mprans.Dissipation.html#proteus.mprans.Dissipation.ShockCapturing">ShockCapturing (class in proteus.mprans.Dissipation)</a>
 
       <ul>
-        <li><a href="api/proteus.mprans.Dissipation.html#proteus.mprans.Dissipation.ShockCapturing">(class in proteus.mprans.Dissipation)</a>
-</li>
         <li><a href="api/proteus.mprans.Kappa.html#proteus.mprans.Kappa.ShockCapturing">(class in proteus.mprans.Kappa)</a>
 </li>
         <li><a href="api/proteus.mprans.NCLS.html#proteus.mprans.NCLS.ShockCapturing">(class in proteus.mprans.NCLS)</a>
@@ -9803,8 +9572,6 @@
         <li><a href="api/proteus.mprans.RANS2P.html#proteus.mprans.RANS2P.ShockCapturing">(class in proteus.mprans.RANS2P)</a>
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.ShockCapturing">(class in proteus.mprans.RANS3PF)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.ShockCapturing">(class in proteus.mprans.RANS3PSed)</a>
 </li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.ShockCapturing">(class in proteus.mprans.RDLS)</a>
 </li>
@@ -9821,12 +9588,6 @@
 </li>
       <li><a href="api/proteus.ShockCapturing.html#proteus.ShockCapturing.ShockCapturing_base">ShockCapturing_base (class in proteus.ShockCapturing)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.Si_Jm">Si_Jm (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.Si_Jm">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.sigma">sigma() (in module proteus.WaveTools)</a>
 </li>
       <li><a href="api/proteus.PostProcessingTools.html#proteus.PostProcessingTools.VPP_PWL_BDM2.sigmaBasisElement">sigmaBasisElement() (proteus.PostProcessingTools.VPP_PWL_BDM2 method)</a>
@@ -10151,11 +9912,9 @@
 </li>
       <li><a href="api/proteus.mbd.CouplingFSI.html#proteus.mbd.CouplingFSI.ProtChSystem.subcomponents">subcomponents (proteus.mbd.CouplingFSI.ProtChSystem attribute)</a>
 </li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.SubgridError">SubgridError (class in proteus.ADR)</a>
+      <li><a href="api/proteus.mprans.Dissipation.html#proteus.mprans.Dissipation.SubgridError">SubgridError (class in proteus.mprans.Dissipation)</a>
 
       <ul>
-        <li><a href="api/proteus.mprans.Dissipation.html#proteus.mprans.Dissipation.SubgridError">(class in proteus.mprans.Dissipation)</a>
-</li>
         <li><a href="api/proteus.mprans.Kappa.html#proteus.mprans.Kappa.SubgridError">(class in proteus.mprans.Kappa)</a>
 </li>
         <li><a href="api/proteus.mprans.NCLS.html#proteus.mprans.NCLS.SubgridError">(class in proteus.mprans.NCLS)</a>
@@ -10165,8 +9924,6 @@
         <li><a href="api/proteus.mprans.RANS2P.html#proteus.mprans.RANS2P.SubgridError">(class in proteus.mprans.RANS2P)</a>
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.SubgridError">(class in proteus.mprans.RANS3PF)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.SubgridError">(class in proteus.mprans.RANS3PSed)</a>
 </li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.SubgridError">(class in proteus.mprans.RDLS)</a>
 </li>
@@ -10217,12 +9974,6 @@
 </li>
       <li><a href="api/proteus.mprans.BoundaryConditions.html#proteus.mprans.BoundaryConditions.WallFunctions.tangentialVelocity">tangentialVelocity() (proteus.mprans.BoundaryConditions.WallFunctions method)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.tanhF">tanhF (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.tanhF">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.mprans.SpatialTools.html#proteus.mprans.SpatialTools.Tank2D">Tank2D (class in proteus.mprans.SpatialTools)</a>
 </li>
       <li><a href="api/proteus.mprans.SpatialTools.html#proteus.mprans.SpatialTools.Tank3D">Tank3D (class in proteus.mprans.SpatialTools)</a>
@@ -10259,8 +10010,6 @@
 </li>
       <li><a href="api/proteus.MeshTools.html#proteus.MeshTools.tetrahedronVerticesToNormals">tetrahedronVerticesToNormals() (in module proteus.MeshTools)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.tfocus">tfocus (proteus.WaveTools.NewWave attribute)</a>
-</li>
       <li><a href="api/proteus.TransportCoefficients.html#proteus.TransportCoefficients.ThreephaseNavierStokes_ST_LS_SO">ThreephaseNavierStokes_ST_LS_SO (class in proteus.TransportCoefficients)</a>
 </li>
       <li><a href="api/proteus.TransportCoefficients.html#proteus.TransportCoefficients.ThreephaseNavierStokes_ST_LS_SO.ThreephaseNavierStokes_ST_LS_SO_2D_Evaluate">ThreephaseNavierStokes_ST_LS_SO_2D_Evaluate() (proteus.TransportCoefficients.ThreephaseNavierStokes_ST_LS_SO method)</a>
@@ -10289,12 +10038,6 @@
 </li>
       <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.TimeSeries">TimeSeries (class in proteus.WaveTools)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.Tlag">Tlag (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.Tlag">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.tophat">tophat() (in module proteus.WaveTools)</a>
 </li>
       <li><a href="api/proteus.AnalyticalSolutions.html#proteus.AnalyticalSolutions.AS_base.totalFluxOfX">totalFluxOfX() (proteus.AnalyticalSolutions.AS_base method)</a>
@@ -10305,12 +10048,6 @@
       </ul></li>
       <li><a href="api/proteus.AnalyticalSolutions.html#proteus.AnalyticalSolutions.LinearAD_DiracIC.totalFluxOfXT">totalFluxOfXT() (proteus.AnalyticalSolutions.LinearAD_DiracIC method)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.Tp">Tp (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.Tp">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.EGeometry.html#proteus.EGeometry.trans">trans() (in module proteus.EGeometry)</a>
 </li>
       <li><a href="api/proteus.MeshAdaptPUMI.Checkpoint.html#proteus.MeshAdaptPUMI.Checkpoint.Checkpointer.transferInfo">transferInfo() (proteus.MeshAdaptPUMI.Checkpoint.Checkpointer method)</a>
@@ -10345,10 +10082,10 @@
 </li>
       <li><a href="api/proteus.SubsurfaceTransportCoefficients.html#proteus.SubsurfaceTransportCoefficients.TwophaseDarcy_compressible_split_pressure.twophaseDarcy_compressibleN_split_sd_pressure_het_matType">twophaseDarcy_compressibleN_split_sd_pressure_het_matType() (proteus.SubsurfaceTransportCoefficients.TwophaseDarcy_compressible_split_pressure method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.SubsurfaceTransportCoefficients.html#proteus.SubsurfaceTransportCoefficients.TwophaseDarcy_compressible_split_saturation.twophaseDarcy_compressibleN_split_sd_saturation_het_matType">twophaseDarcy_compressibleN_split_sd_saturation_het_matType() (proteus.SubsurfaceTransportCoefficients.TwophaseDarcy_compressible_split_saturation method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.SubsurfaceTransportCoefficients.html#proteus.SubsurfaceTransportCoefficients.TwophaseDarcy_fc">TwophaseDarcy_fc (class in proteus.SubsurfaceTransportCoefficients)</a>
 
       <ul>
@@ -10428,8 +10165,6 @@
       <ul>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.Coefficients.TwophaseNavierStokes_ST_LS_SO_2D_Evaluate">(proteus.mprans.RANS3PF.Coefficients method)</a>
 </li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_2D_Evaluate">(proteus.mprans.RANS3PSed.Coefficients method)</a>
-</li>
         <li><a href="api/proteus.TransportCoefficients.html#proteus.TransportCoefficients.TwophaseNavierStokes_ST_LS_SO.TwophaseNavierStokes_ST_LS_SO_2D_Evaluate">(proteus.TransportCoefficients.TwophaseNavierStokes_ST_LS_SO method)</a>
 </li>
       </ul></li>
@@ -10437,8 +10172,6 @@
 
       <ul>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.Coefficients.TwophaseNavierStokes_ST_LS_SO_2D_Evaluate_sd">(proteus.mprans.RANS3PF.Coefficients method)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_2D_Evaluate_sd">(proteus.mprans.RANS3PSed.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.TransportCoefficients.html#proteus.TransportCoefficients.TwophaseNavierStokes_ST_LS_SO.TwophaseNavierStokes_ST_LS_SO_2D_Evaluate_sd">(proteus.TransportCoefficients.TwophaseNavierStokes_ST_LS_SO method)</a>
 </li>
@@ -10448,8 +10181,6 @@
       <ul>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.Coefficients.TwophaseNavierStokes_ST_LS_SO_3D_Evaluate">(proteus.mprans.RANS3PF.Coefficients method)</a>
 </li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_3D_Evaluate">(proteus.mprans.RANS3PSed.Coefficients method)</a>
-</li>
         <li><a href="api/proteus.TransportCoefficients.html#proteus.TransportCoefficients.TwophaseNavierStokes_ST_LS_SO.TwophaseNavierStokes_ST_LS_SO_3D_Evaluate">(proteus.TransportCoefficients.TwophaseNavierStokes_ST_LS_SO method)</a>
 </li>
       </ul></li>
@@ -10457,8 +10188,6 @@
 
       <ul>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.Coefficients.TwophaseNavierStokes_ST_LS_SO_3D_Evaluate_sd">(proteus.mprans.RANS3PF.Coefficients method)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_3D_Evaluate_sd">(proteus.mprans.RANS3PSed.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.TransportCoefficients.html#proteus.TransportCoefficients.TwophaseNavierStokes_ST_LS_SO.TwophaseNavierStokes_ST_LS_SO_3D_Evaluate_sd">(proteus.TransportCoefficients.TwophaseNavierStokes_ST_LS_SO method)</a>
 </li>
@@ -10493,12 +10222,6 @@
 <h2 id="U">U</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomNLWaves.u">u (proteus.WaveTools.RandomNLWaves attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.TimeSeries.u">(proteus.WaveTools.TimeSeries attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.AnalyticalSolutions.html#proteus.AnalyticalSolutions.PlaneBase.U">U() (proteus.AnalyticalSolutions.PlaneBase method)</a>
 </li>
       <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.CombineWaves.u">u() (proteus.WaveTools.CombineWaves method)</a>
@@ -10532,6 +10255,10 @@
       <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.TimeSeries.uDirect">uDirect() (proteus.WaveTools.TimeSeries method)</a>
 </li>
       <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.Udrift">Udrift() (in module proteus.WaveTools)</a>
+</li>
+      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.MonochromaticWaves.uFenton">uFenton() (proteus.WaveTools.MonochromaticWaves method)</a>
+</li>
+      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.MonochromaticWaves.uLinear">uLinear() (proteus.WaveTools.MonochromaticWaves method)</a>
 </li>
       <li><a href="api/proteus.Archiver.html#proteus.Archiver.ArchiveFlags.UNDEFINED">UNDEFINED (proteus.Archiver.ArchiveFlags attribute)</a>
 </li>
@@ -10603,8 +10330,6 @@
         <li><a href="api/proteus.SimTools.html#proteus.SimTools.zeroVectorFunction.uOfX">(proteus.SimTools.zeroVectorFunction method)</a>
 </li>
       </ul></li>
-      <li><a href="api/proteus.BoundaryConditions.html#proteus.BoundaryConditions.BoundaryCondition.uOfXT">uOfXT (proteus.BoundaryConditions.BoundaryCondition attribute)</a>
-</li>
       <li><a href="api/proteus.AnalyticalSolutions.html#proteus.AnalyticalSolutions.AS_base.uOfXT">uOfXT() (proteus.AnalyticalSolutions.AS_base method)</a>
 
       <ul>
@@ -10663,8 +10388,6 @@
         <li><a href="api/proteus.mprans.RANS2P.html#proteus.mprans.RANS2P.LevelModel.updateAfterMeshMotion">(proteus.mprans.RANS2P.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.LevelModel.updateAfterMeshMotion">(proteus.mprans.RANS3PF.LevelModel method)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.LevelModel.updateAfterMeshMotion">(proteus.mprans.RANS3PSed.LevelModel method)</a>
 </li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.LevelModel.updateAfterMeshMotion">(proteus.mprans.RDLS.LevelModel method)</a>
 </li>
@@ -10833,12 +10556,12 @@
         <li><a href="api/proteus.NumericalFlux.html#proteus.NumericalFlux.Stress_IIPG_exterior.updateInteriorNumericalFluxJacobian">(proteus.NumericalFlux.Stress_IIPG_exterior method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.FemTools.html#proteus.FemTools.ParametricFiniteElementSpace.updateInterpolationPoints">updateInterpolationPoints() (proteus.FemTools.ParametricFiniteElementSpace method)</a>
 </li>
       <li><a href="api/proteus.LinearSolvers.html#proteus.LinearSolvers.SchurOperatorConstructor.updateInvScaledAp">updateInvScaledAp() (proteus.LinearSolvers.SchurOperatorConstructor method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.NonlinearSolvers.html#proteus.NonlinearSolvers.MultilevelNonlinearSolver.updateJacobian">updateJacobian() (proteus.NonlinearSolvers.MultilevelNonlinearSolver method)</a>
 </li>
       <li><a href="api/proteus.mprans.beamFEM.html#proteus.mprans.beamFEM.FEMTools.updateLoads">updateLoads() (proteus.mprans.beamFEM.FEMTools method)</a>
@@ -10877,11 +10600,9 @@
         <li><a href="api/proteus.PostProcessingTools.html#proteus.PostProcessingTools.VPP_P1nc_RT0.updateRT0velocityWithAveragedPotentialP1nc_sd">(proteus.PostProcessingTools.VPP_P1nc_RT0 method)</a>
 </li>
       </ul></li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.ShockCapturing.updateShockCapturingHistory">updateShockCapturingHistory() (proteus.ADR.ShockCapturing method)</a>
+      <li><a href="api/proteus.mprans.Dissipation.html#proteus.mprans.Dissipation.ShockCapturing.updateShockCapturingHistory">updateShockCapturingHistory() (proteus.mprans.Dissipation.ShockCapturing method)</a>
 
       <ul>
-        <li><a href="api/proteus.mprans.Dissipation.html#proteus.mprans.Dissipation.ShockCapturing.updateShockCapturingHistory">(proteus.mprans.Dissipation.ShockCapturing method)</a>
-</li>
         <li><a href="api/proteus.mprans.Kappa.html#proteus.mprans.Kappa.ShockCapturing.updateShockCapturingHistory">(proteus.mprans.Kappa.ShockCapturing method)</a>
 </li>
         <li><a href="api/proteus.mprans.NCLS.html#proteus.mprans.NCLS.ShockCapturing.updateShockCapturingHistory">(proteus.mprans.NCLS.ShockCapturing method)</a>
@@ -10891,8 +10612,6 @@
         <li><a href="api/proteus.mprans.RANS2P.html#proteus.mprans.RANS2P.ShockCapturing.updateShockCapturingHistory">(proteus.mprans.RANS2P.ShockCapturing method)</a>
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.ShockCapturing.updateShockCapturingHistory">(proteus.mprans.RANS3PF.ShockCapturing method)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.ShockCapturing.updateShockCapturingHistory">(proteus.mprans.RANS3PSed.ShockCapturing method)</a>
 </li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.ShockCapturing.updateShockCapturingHistory">(proteus.mprans.RDLS.ShockCapturing method)</a>
 </li>
@@ -10947,11 +10666,9 @@
         <li><a href="api/proteus.TimeIntegration.html#proteus.TimeIntegration.TI_base.updateStage">(proteus.TimeIntegration.TI_base method)</a>
 </li>
       </ul></li>
-      <li><a href="api/proteus.ADR.html#proteus.ADR.SubgridError.updateSubgridErrorHistory">updateSubgridErrorHistory() (proteus.ADR.SubgridError method)</a>
+      <li><a href="api/proteus.mprans.Dissipation.html#proteus.mprans.Dissipation.SubgridError.updateSubgridErrorHistory">updateSubgridErrorHistory() (proteus.mprans.Dissipation.SubgridError method)</a>
 
       <ul>
-        <li><a href="api/proteus.mprans.Dissipation.html#proteus.mprans.Dissipation.SubgridError.updateSubgridErrorHistory">(proteus.mprans.Dissipation.SubgridError method)</a>
-</li>
         <li><a href="api/proteus.mprans.Kappa.html#proteus.mprans.Kappa.SubgridError.updateSubgridErrorHistory">(proteus.mprans.Kappa.SubgridError method)</a>
 </li>
         <li><a href="api/proteus.mprans.NCLS.html#proteus.mprans.NCLS.SubgridError.updateSubgridErrorHistory">(proteus.mprans.NCLS.SubgridError method)</a>
@@ -10961,8 +10678,6 @@
         <li><a href="api/proteus.mprans.RANS2P.html#proteus.mprans.RANS2P.SubgridError.updateSubgridErrorHistory">(proteus.mprans.RANS2P.SubgridError method)</a>
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.SubgridError.updateSubgridErrorHistory">(proteus.mprans.RANS3PF.SubgridError method)</a>
-</li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.SubgridError.updateSubgridErrorHistory">(proteus.mprans.RANS3PSed.SubgridError method)</a>
 </li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.SubgridError.updateSubgridErrorHistory">(proteus.mprans.RDLS.SubgridError method)</a>
 </li>
@@ -11096,8 +10811,6 @@
 </li>
         <li><a href="api/proteus.mprans.RANS3PF.html#proteus.mprans.RANS3PF.Coefficients.updateToMovingDomain">(proteus.mprans.RANS3PF.Coefficients method)</a>
 </li>
-        <li><a href="api/proteus.mprans.RANS3PSed.html#proteus.mprans.RANS3PSed.Coefficients.updateToMovingDomain">(proteus.mprans.RANS3PSed.Coefficients method)</a>
-</li>
         <li><a href="api/proteus.mprans.RDLS.html#proteus.mprans.RDLS.Coefficients.updateToMovingDomain">(proteus.mprans.RDLS.Coefficients method)</a>
 </li>
         <li><a href="api/proteus.mprans.SW2D.html#proteus.mprans.SW2D.Coefficients.updateToMovingDomain">(proteus.mprans.SW2D.Coefficients method)</a>
@@ -11219,12 +10932,6 @@
 </li>
       <li><a href="api/proteus.TimeIntegration.html#proteus.TimeIntegration.VBDF">VBDF (class in proteus.TimeIntegration)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.vDir">vDir (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.vDir">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.LinearAlgebraTools.html#proteus.LinearAlgebraTools.Vec">Vec() (in module proteus.LinearAlgebraTools)</a>
 </li>
       <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.vel_mode">vel_mode() (in module proteus.WaveTools)</a>
@@ -11301,10 +11008,10 @@
 </li>
       <li><a href="api/proteus.Viewers.html#proteus.Viewers.MatlabWriter.viewVector_LagrangeC0P1">viewVector_LagrangeC0P1() (proteus.Viewers.MatlabWriter method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.Viewers.html#proteus.Viewers.MatlabWriter.viewVector_LagrangeC0P2">viewVector_LagrangeC0P2() (proteus.Viewers.MatlabWriter method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.Viewers.html#proteus.Viewers.MatlabWriter.viewVectorAnalyticalFunction">viewVectorAnalyticalFunction() (proteus.Viewers.MatlabWriter method)</a>
 </li>
       <li><a href="api/proteus.Viewers.html#proteus.Viewers.MatlabWriter.viewVectorPointData">viewVectorPointData() (proteus.Viewers.MatlabWriter method)</a>
@@ -11423,20 +11130,6 @@
 </li>
       <li><a href="api/proteus.mprans.BoundaryConditions.html#proteus.mprans.BoundaryConditions.WallFunctions">WallFunctions (class in proteus.mprans.BoundaryConditions)</a>
 </li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.NewWave.waveDir">waveDir (proteus.WaveTools.NewWave attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.waveDir">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-      </ul></li>
-      <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.MonochromaticWaves.wavelength">wavelength (proteus.WaveTools.MonochromaticWaves attribute)</a>
-
-      <ul>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.RandomWaves.wavelength">(proteus.WaveTools.RandomWaves attribute)</a>
-</li>
-        <li><a href="api/proteus.WaveTools.html#proteus.WaveTools.TimeSeries.wavelength">(proteus.WaveTools.TimeSeries attribute)</a>
-</li>
-      </ul></li>
       <li><a href="api/proteus.LinearAlgebraTools.html#proteus.LinearAlgebraTools.wDot">wDot() (in module proteus.LinearAlgebraTools)</a>
 </li>
       <li><a href="api/proteus.default_p.html#proteus.default_p.weakDirichletConditions">weakDirichletConditions (in module proteus.default_p)</a>
@@ -11675,8 +11368,6 @@
         <li><a href="api/proteus.MeshTools.html#proteus.MeshTools.TriangularMesh.writeMeshADH">(proteus.MeshTools.TriangularMesh method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.FemTools.html#proteus.FemTools.C0_AffineLinearOnSimplexWithNodalBasis.writeMeshEnsight">writeMeshEnsight() (proteus.FemTools.C0_AffineLinearOnSimplexWithNodalBasis method)</a>
 
       <ul>
@@ -11709,6 +11400,8 @@
         <li><a href="api/proteus.MeshTools.html#proteus.MeshTools.TriangularMesh.writeMeshEnsight">(proteus.MeshTools.TriangularMesh method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/proteus.FemTools.html#proteus.FemTools.C0_AffineBernsteinOnCube.writeMeshXdmf">writeMeshXdmf() (proteus.FemTools.C0_AffineBernsteinOnCube method)</a>
 
       <ul>
@@ -12002,11 +11695,19 @@
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, The Proteus Team
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -12017,7 +11718,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

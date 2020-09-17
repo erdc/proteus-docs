@@ -1,15 +1,19 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Free Surface &mdash; Proteus 1.7.4 documentation</title>
+  <title>Free Surface &mdash; Proteus 1.7.5 documentation</title>
   
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
 
   
   
@@ -19,7 +23,9 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
@@ -27,20 +33,15 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Mesh Adaptivity" href="mesh_adaptivity.html" />
-    <link rel="prev" title="Body Dynamics" href="body_dynamics.html" /> 
+    <link rel="next" title="Navier-Stokes" href="navier_stokes.html" />
+    <link rel="prev" title="TwoPhaseFlow" href="two_phase_flow.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -67,7 +68,7 @@
             
             
               <div class="version">
-                1.7.4
+                1.7.5
               </div>
             
           
@@ -84,6 +85,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -144,7 +146,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/two_phase_flow.html">TwoPhaseFlow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/wave_tools.html">WaveTools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/wave_tools.html#usage">Usage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tools/wave_tools.html#import-in-command-line">Import in command line</a></li>
@@ -155,33 +156,17 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/mesh_adaptivity.html">Mesh Adaptivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tools/mesh_motion.html">Mesh Motion</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Models</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="body_dynamics.html">Body Dynamics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="body_dynamics.html#implementation">Implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="body_dynamics.html#classes">Classes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchsystem">ProtChSystem</a></li>
-<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchbody">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchmesh">ProtChMesh</a></li>
-<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchmoorings">ProtChMoorings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchaddedmass">ProtChAddedMass</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#id3">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#id4">ProtChMoorings</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="two_phase_flow.html">TwoPhaseFlow</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Free Surface</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#vof-ncls">VOF - NCLS</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#clsvof">CLSVOF</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="mesh_adaptivity.html">Mesh Adaptivity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mesh_motion.html">Mesh Motion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="navier_stokes.html">Navier-Stokes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="navier_stokes.html#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="navier_stokes.html#two-phase">Two-Phase</a></li>
@@ -193,11 +178,36 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="SWFlow.html">Shallow Water Flow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SWFlow.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SWFlow.html#shallow-water-equations">Shallow Water Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SWFlow.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SWFlow.html#running-the-tests">Running the tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="body_dynamics.html">Body Dynamics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="body_dynamics.html#implementation">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="body_dynamics.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchsystem">ProtChSystem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchbody">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchmesh">ProtChMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchmoorings">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchaddedmass">ProtChAddedMass</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#id4">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#id5">ProtChMoorings</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -236,7 +246,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Free Surface</li>
     
@@ -266,16 +276,16 @@
 <h2>VOF - NCLS<a class="headerlink" href="#vof-ncls" title="Permalink to this headline">¶</a></h2>
 <p>In this implementation, the following 4 models must be solved in order:</p>
 <ul class="simple">
-<li><p>Volume of Fluid (VOF): <a class="reference internal" href="../api/proteus.mprans.VOF.html#module-proteus.mprans.VOF" title="proteus.mprans.VOF"><code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.mprans.VOF</span></code></a></p></li>
-<li><p>Non-conservative level set (NCLS): <a class="reference internal" href="../api/proteus.mprans.NCLS.html#module-proteus.mprans.NCLS" title="proteus.mprans.NCLS"><code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.mprans.NCLS</span></code></a></p></li>
-<li><p>Redistancing: <a class="reference internal" href="../api/proteus.mprans.RDLS.html#module-proteus.mprans.RDLS" title="proteus.mprans.RDLS"><code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.mprans.RDLS</span></code></a></p></li>
-<li><p>Mass correction: <a class="reference internal" href="../api/proteus.mprans.MCorr.html#module-proteus.mprans.MCorr" title="proteus.mprans.MCorr"><code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.mprans.MCorr</span></code></a></p></li>
+<li><p>Volume of Fluid (VOF): <code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.mprans.VOF</span></code></p></li>
+<li><p>Non-conservative level set (NCLS): <code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.mprans.NCLS</span></code></p></li>
+<li><p>Redistancing: <code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.mprans.RDLS</span></code></p></li>
+<li><p>Mass correction: <code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.mprans.MCorr</span></code></p></li>
 </ul>
 </div>
 <div class="section" id="clsvof">
 <h2>CLSVOF<a class="headerlink" href="#clsvof" title="Permalink to this headline">¶</a></h2>
 <p>In this implementation, a conservative level set is used and only the following
-model must be solved: <a class="reference internal" href="../api/proteus.mprans.CLSVOF.html#module-proteus.mprans.CLSVOF" title="proteus.mprans.CLSVOF"><code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.mprans.CLSVOF</span></code></a>.</p>
+model must be solved: <code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.mprans.CLSVOF</span></code>.</p>
 </div>
 </div>
 
@@ -287,10 +297,10 @@ model must be solved: <a class="reference internal" href="../api/proteus.mprans.
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="mesh_adaptivity.html" class="btn btn-neutral float-right" title="Mesh Adaptivity" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="navier_stokes.html" class="btn btn-neutral float-right" title="Navier-Stokes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="body_dynamics.html" class="btn btn-neutral float-left" title="Body Dynamics" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="two_phase_flow.html" class="btn btn-neutral float-left" title="TwoPhaseFlow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -299,11 +309,19 @@ model must be solved: <a class="reference internal" href="../api/proteus.mprans.
 
   <div role="contentinfo">
     <p>
+        
         &copy; Copyright 2020, The Proteus Team
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -314,7 +332,6 @@ model must be solved: <a class="reference internal" href="../api/proteus.mprans.
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
