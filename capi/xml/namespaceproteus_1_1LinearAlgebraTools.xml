@@ -1,0 +1,1042 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceproteus_1_1LinearAlgebraTools" kind="namespace" language="Python">
+    <compoundname>proteus::LinearAlgebraTools</compoundname>
+    <innerclass refid="classproteus_1_1LinearAlgebraTools_1_1InvOperatorShell" prot="public">proteus::LinearAlgebraTools::InvOperatorShell</innerclass>
+    <innerclass refid="classproteus_1_1LinearAlgebraTools_1_1LSCInv__shell" prot="public">proteus::LinearAlgebraTools::LSCInv_shell</innerclass>
+    <innerclass refid="classproteus_1_1LinearAlgebraTools_1_1MatrixInvShell" prot="public">proteus::LinearAlgebraTools::MatrixInvShell</innerclass>
+    <innerclass refid="classproteus_1_1LinearAlgebraTools_1_1MatrixShell" prot="public">proteus::LinearAlgebraTools::MatrixShell</innerclass>
+    <innerclass refid="classproteus_1_1LinearAlgebraTools_1_1OperatorShell" prot="public">proteus::LinearAlgebraTools::OperatorShell</innerclass>
+    <innerclass refid="classproteus_1_1LinearAlgebraTools_1_1ParInfo__petsc4py" prot="public">proteus::LinearAlgebraTools::ParInfo_petsc4py</innerclass>
+    <innerclass refid="classproteus_1_1LinearAlgebraTools_1_1ParMat__petsc4py" prot="public">proteus::LinearAlgebraTools::ParMat_petsc4py</innerclass>
+    <innerclass refid="classproteus_1_1LinearAlgebraTools_1_1ParVec__petsc4py" prot="public">proteus::LinearAlgebraTools::ParVec_petsc4py</innerclass>
+    <innerclass refid="classproteus_1_1LinearAlgebraTools_1_1ProductOperatorShell" prot="public">proteus::LinearAlgebraTools::ProductOperatorShell</innerclass>
+    <innerclass refid="classproteus_1_1LinearAlgebraTools_1_1SparseMatShell" prot="public">proteus::LinearAlgebraTools::SparseMatShell</innerclass>
+    <innerclass refid="classproteus_1_1LinearAlgebraTools_1_1SpInv__shell" prot="public">proteus::LinearAlgebraTools::SpInv_shell</innerclass>
+    <innerclass refid="classproteus_1_1LinearAlgebraTools_1_1TwoPhase__PCDInv__shell" prot="public">proteus::LinearAlgebraTools::TwoPhase_PCDInv_shell</innerclass>
+    <innerclass refid="classproteus_1_1LinearAlgebraTools_1_1WeightedNorm" prot="public">proteus::LinearAlgebraTools::WeightedNorm</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceproteus_1_1LinearAlgebraTools_1a86279a524545aa7ed08e5c2ff30d93bc" prot="public" static="no" mutable="no">
+        <type>def</type>
+        <definition>def proteus::LinearAlgebraTools.rmsNorm</definition>
+        <argsstring></argsstring>
+        <name>rmsNorm</name>
+        <initializer>=  <ref refid="namespaceproteus_1_1LinearAlgebraTools_1abeb062edcd56482e3d2d9a9e25d08579" kindref="member">l2NormAvg</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="1565" column="1" bodyfile="LinearAlgebraTools.py" bodystart="1565" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a5d6fc9feee6ad51c959972d94ad522e0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools._petsc_view</definition>
+        <argsstring>(obj, filename)</argsstring>
+        <name>_petsc_view</name>
+        <param>
+          <type>obj</type>
+          <defname>obj</defname>
+        </param>
+        <param>
+          <type>filename</type>
+          <defname>filename</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Saves petsc object to disk using a PETSc binary viewer.
+
+Parameters
+----------
+obj : PETSc obj
+    PETSc4py object to be saved (e.g. vector, matrix, etc)
+filename : str
+    String with PETSc filename
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="30" column="1" bodyfile="LinearAlgebraTools.py" bodystart="30" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1ab0db2665bffc8ecbb039e54e39fbef4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.petsc_load_matrix</definition>
+        <argsstring>(filename)</argsstring>
+        <name>petsc_load_matrix</name>
+        <param>
+          <type>filename</type>
+          <defname>filename</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>This function loads a PETSc matrix from a binary format.
+(Eg. what is saved using the petsc_view function).
+
+Parameters
+----------
+filename : str
+    This is the name of the binary with the file stored.
+
+Returns
+-------
+matrix : petsc4py matrix
+    The matrix that is stored in the binary file.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="47" column="1" bodyfile="LinearAlgebraTools.py" bodystart="47" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a698c7c2453337a5bdbbaa87b6cbcdb45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.petsc_load_vector</definition>
+        <argsstring>(filename)</argsstring>
+        <name>petsc_load_vector</name>
+        <param>
+          <type>filename</type>
+          <defname>filename</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>This function loads a PETSc vector from a binary format.
+(Eg. what is saved using the petsc_view function).
+
+Parameters
+----------
+filename : str
+    This is the name of the binary with the file stored.
+
+Returns
+-------
+matrix : petsc4py vector
+    The matrix that is stored in the binary file.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="69" column="1" bodyfile="LinearAlgebraTools.py" bodystart="69" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a11f0760ef0395e6c182600357c73d2cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.petsc_load_IS</definition>
+        <argsstring>(filename)</argsstring>
+        <name>petsc_load_IS</name>
+        <param>
+          <type>filename</type>
+          <defname>filename</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>This function loads a PETSc index-set from a binary format.
+(Eg. what is saved using the petsc_view function).
+
+Parameters
+----------
+filename : str
+    This is the name of the binary with the file stored.
+
+Returns
+-------
+matrix : petsc4py IS
+    The index-set that is stored in the binary file.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="91" column="1" bodyfile="LinearAlgebraTools.py" bodystart="91" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a98f6c4afa6687e1f5f5cfccb3f41897a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.csr_2_petsc</definition>
+        <argsstring>(size, csr)</argsstring>
+        <name>csr_2_petsc</name>
+        <param>
+          <type>size</type>
+          <defname>size</defname>
+        </param>
+        <param>
+          <type>csr</type>
+          <defname>csr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Create an petsc4py matrix from size and CSR information.
+
+Parameters:
+----------
+size : tuple
+    A 2-tuple with the number of matrix rows and columns.
+csr : tuple
+    A 3-tuple with the sparse matrix csr information.
+
+Returns:
+--------
+matrix : PETSc4py aij matrix
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="113" column="1" bodyfile="LinearAlgebraTools.py" bodystart="113" bodyend="135"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1ab6384b9249a65bbef526c2967777ab84" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools._pythonCSR_2_dense</definition>
+        <argsstring>(rowptr, colptr, data, nr, nc, output=False)</argsstring>
+        <name>_pythonCSR_2_dense</name>
+        <param>
+          <type>rowptr</type>
+          <defname>rowptr</defname>
+        </param>
+        <param>
+          <type>colptr</type>
+          <defname>colptr</defname>
+        </param>
+        <param>
+          <type>data</type>
+          <defname>data</defname>
+        </param>
+        <param>
+          <type>nr</type>
+          <defname>nr</defname>
+        </param>
+        <param>
+          <type>nc</type>
+          <defname>nc</defname>
+        </param>
+        <param>
+          <type>output</type>
+          <defname>output</defname>
+          <defval>False</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Takes python CSR datatypes and makes a dense matrix </verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="136" column="1" bodyfile="LinearAlgebraTools.py" bodystart="136" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1af6a624dad7be9a332b8134fe18836a8a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.superlu_get_rank</definition>
+        <argsstring>(sparse_matrix)</argsstring>
+        <name>superlu_get_rank</name>
+        <param>
+          <type>sparse_matrix</type>
+          <defname>sparse_matrix</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns the rank of a superluWrapper sparse matrix.
+
+Parameters
+----------
+sparse_matrix : :class:`proteus.superluWrappers.SparseMatrix`
+
+Returns
+-------
+matrix_rank : int
+    The rank of the sparse_matrix
+
+Notes
+-----
+This function is a tool for debugging and should only be used
+for small matrices.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="147" column="1" bodyfile="LinearAlgebraTools.py" bodystart="147" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a441fdf75576593a17aef30ae52d1ad47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.petsc4py_get_rank</definition>
+        <argsstring>(sparse_matrix)</argsstring>
+        <name>petsc4py_get_rank</name>
+        <param>
+          <type>sparse_matrix</type>
+          <defname>sparse_matrix</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Returns the rank of a superluWrapper sparse matrix.
+
+Parameters
+----------
+sparse_matrix : :class:`p4pyPETSc.Mat`
+
+Returns
+-------
+matrix_rank : int
+    The rank of the sparse_matrix
+
+Notes
+-----
+This function is a debugging tool and should only be used
+for small matrices.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="167" column="1" bodyfile="LinearAlgebraTools.py" bodystart="167" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a4f8aeac73ef82f2903dcabeef658a1f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.superlu_has_pressure_null_space</definition>
+        <argsstring>(sparse_matrix)</argsstring>
+        <name>superlu_has_pressure_null_space</name>
+        <param>
+          <type>sparse_matrix</type>
+          <defname>sparse_matrix</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Checks whether a superluWrapper sparse matrix has a constant
+pressure null space.
+
+Parameters
+----------
+sparse_matrix : :class:`proteus.superluWrappers.SparseMatrix`
+
+Returns
+-------
+does : bool
+   Boolean variable indicating whether the pressure term
+   creates a null space.
+
+Notes
+-----
+Assumes interwoven dof.
+This function was written mainly for debugging purposes and may be
+slow for large matrices.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="187" column="1" bodyfile="LinearAlgebraTools.py" bodystart="187" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a1de37b41d7f5037b9e013a4069f50825" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.petsc4py_mat_has_pressure_null_space</definition>
+        <argsstring>(A)</argsstring>
+        <name>petsc4py_mat_has_pressure_null_space</name>
+        <param>
+          <type>A</type>
+          <defname>A</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Checks whether a PETSc4Py sparse matrix has a constant
+pressure null space.
+
+Parameters
+----------
+A : :class:`p4pyPETSc.Mat`
+
+Returns
+-------
+does : bool
+   Boolean variable indicating whether the pressure term
+   creates a null space.
+
+Notes
+-----
+Assumes interwoven dof.
+This function was written mainly for debugging purposes and may be
+slow for large matrices.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="211" column="1" bodyfile="LinearAlgebraTools.py" bodystart="211" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1ad66e6e5a0f5a3d45ab717a8ec5a79518" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.superlu_sparse_2_dense</definition>
+        <argsstring>(sparse_matrix, output=False)</argsstring>
+        <name>superlu_sparse_2_dense</name>
+        <param>
+          <type>sparse_matrix</type>
+          <defname>sparse_matrix</defname>
+        </param>
+        <param>
+          <type>output</type>
+          <defname>output</defname>
+          <defval>False</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Converts a sparse superluWrapper into a dense matrix.
+
+Parameters
+----------
+sparse_matrix :
+output : str
+    Out file name to store the matrix.
+
+Returns
+-------
+dense_matrix : numpy array
+    A numpy array storing the dense matrix.
+
+Notes
+-----
+This function should not be used for large matrices.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="243" column="1" bodyfile="LinearAlgebraTools.py" bodystart="243" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a79e7610ba6289e0108227196f121e69e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.petsc4py_sparse_2_dense</definition>
+        <argsstring>(sparse_matrix, output=False)</argsstring>
+        <name>petsc4py_sparse_2_dense</name>
+        <param>
+          <type>sparse_matrix</type>
+          <defname>sparse_matrix</defname>
+        </param>
+        <param>
+          <type>output</type>
+          <defname>output</defname>
+          <defval>False</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Converts a PETSc4Py matrix to a dense numpyarray.
+
+Parameters
+----------
+sparse_matrix : PETSc4py matrix
+output : str
+    Output file name to store the matrix.
+
+Returns
+-------
+dense_matrix : numpy array
+    A numpy array with the dense matrix.
+
+Notes
+-----
+This function is very inefficient for large matrices.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="268" column="1" bodyfile="LinearAlgebraTools.py" bodystart="268" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a2a15cab5f5e2d7f1ae0baf564b117828" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.superlu_2_petsc4py</definition>
+        <argsstring>(sparse_superlu)</argsstring>
+        <name>superlu_2_petsc4py</name>
+        <param>
+          <type>sparse_superlu</type>
+          <defname>sparse_superlu</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Copy a sparse superlu matrix to a sparse petsc4py matrix
+
+Parameters
+----------
+sparse_superlu : :class:`proteus.superluWrappers.SparseMatrix`
+
+Returns
+-------
+sparse_matrix : :class: `p4pyPETSc.Mat`
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="293" column="1" bodyfile="LinearAlgebraTools.py" bodystart="293" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1aa343117c9ace03b092e8c15908133352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.petsc_create_diagonal_inv_matrix</definition>
+        <argsstring>(sparse_petsc)</argsstring>
+        <name>petsc_create_diagonal_inv_matrix</name>
+        <param>
+          <type>sparse_petsc</type>
+          <defname>sparse_petsc</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Create an inverse diagonal petsc4py matrix from input matrix.
+
+Parameters
+----------
+sparse_petsc : :class:`p4pyPETSc.Mat`
+
+Returns
+-------
+sparse_matrix : :class:`p4pyPETSc.Mat`
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="323" column="1" bodyfile="LinearAlgebraTools.py" bodystart="323" bodyend="340"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1aea30dc0c5971d720741a6098b4dfc03e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.dense_numpy_2_petsc4py</definition>
+        <argsstring>(dense_numpy, eps=1.e-12)</argsstring>
+        <name>dense_numpy_2_petsc4py</name>
+        <param>
+          <type>dense_numpy</type>
+          <defname>dense_numpy</defname>
+        </param>
+        <param>
+          <type>eps</type>
+          <defname>eps</defname>
+          <defval>1.e-12</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Create a sparse petsc4py matrix from a dense numpy matrix.
+
+Note - This routine has been built mainly to support testing.
+It would be rare for this routine to be useful for most applications.
+
+Parameters
+----------
+dense_numpy :
+eps : float
+    Tolerance for non-zero values.
+
+Returns
+-------
+sparse_matrix : PETSc4py matrix
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="341" column="1" bodyfile="LinearAlgebraTools.py" bodystart="341" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1ab17f6ef84fcb5d3594a0027b44317623" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.csr_2_petsc_mpiaij</definition>
+        <argsstring>(size, csr)</argsstring>
+        <name>csr_2_petsc_mpiaij</name>
+        <param>
+          <type>size</type>
+          <defname>size</defname>
+        </param>
+        <param>
+          <type>csr</type>
+          <defname>csr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Create an MPIaij petsc4py matrix from size and CSR information.
+
+Parameters:
+----------
+size : tuple
+    Two entires: (num_rows, num_cols)
+csr : tuple
+    (row_idx, col_idx, vals)
+
+Returns:
+--------
+matrix : PETSc4py MPIaij matrix
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="370" column="1" bodyfile="LinearAlgebraTools.py" bodystart="370" bodyend="392"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1aceef8b3e087552921aa8af5bc192ae25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.split_PETSc_Mat</definition>
+        <argsstring>(mat)</argsstring>
+        <name>split_PETSc_Mat</name>
+        <param>
+          <type>mat</type>
+          <defname>mat</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Decompose a PETSc matrix into a symmetric and skew-symmetric
+    matrix
+
+Parameters:
+----------
+mat : :class: `PETSc4py Matrix`
+
+Returns:
+--------
+H : :class: `PETSc4py Matrix`
+    Symmetric (or Hermitian) component of mat
+S : :class: `PETSc4py Matrix`
+    Skew-Symmetric (or skew-Hermitian) component of mat
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="393" column="1" bodyfile="LinearAlgebraTools.py" bodystart="393" bodyend="419"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a9d435081f13773ea83cc7a810ee1aff1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.Vec</definition>
+        <argsstring>(n)</argsstring>
+        <name>Vec</name>
+        <param>
+          <type><ref refid="Headers_8h_1a08a4b8173deed2dbe6993d906ff006cb" kindref="member">n</ref></type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Build a vector of length n (using numpy)
+
+For example::
+
+  &gt;&gt;&gt; Vec(3)
+  array([ 0.,  0.,  0.])</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="723" column="1" bodyfile="LinearAlgebraTools.py" bodystart="723" bodyend="735"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a5d6af2f602552724ddbcea24b486ba59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.Mat</definition>
+        <argsstring>(m, n)</argsstring>
+        <name>Mat</name>
+        <param>
+          <type>m</type>
+          <defname>m</defname>
+        </param>
+        <param>
+          <type><ref refid="Headers_8h_1a08a4b8173deed2dbe6993d906ff006cb" kindref="member">n</ref></type>
+          <defname>n</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Build an m x n matrix (using numpy)
+
+For example::
+
+  &gt;&gt;&gt; Mat(2,3)
+  array([[ 0.,  0.,  0.],
+        [ 0.,  0.,  0.]])</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="736" column="1" bodyfile="LinearAlgebraTools.py" bodystart="736" bodyend="749"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a83d4380d20b040f6fddde5d173bae547" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.SparseMatFromDict</definition>
+        <argsstring>(nr, nc, aDict)</argsstring>
+        <name>SparseMatFromDict</name>
+        <param>
+          <type>nr</type>
+          <defname>nr</defname>
+        </param>
+        <param>
+          <type>nc</type>
+          <defname>nc</defname>
+        </param>
+        <param>
+          <type>aDict</type>
+          <defname>aDict</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Build a nr x nc sparse matrix from a dictionary representation
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="750" column="1" bodyfile="LinearAlgebraTools.py" bodystart="750" bodyend="774"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a42ae20ab68e5e9fc1025868daed76eea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.SparseMat</definition>
+        <argsstring>(nr, nc, nnz, nzval, colind, rowptr)</argsstring>
+        <name>SparseMat</name>
+        <param>
+          <type>nr</type>
+          <defname>nr</defname>
+        </param>
+        <param>
+          <type>nc</type>
+          <defname>nc</defname>
+        </param>
+        <param>
+          <type><ref refid="Richards_8h_1a93d413a62c9fd1342f67727ef7f8c6a1" kindref="member">nnz</ref></type>
+          <defname>nnz</defname>
+        </param>
+        <param>
+          <type>nzval</type>
+          <defname>nzval</defname>
+        </param>
+        <param>
+          <type>colind</type>
+          <defname>colind</defname>
+        </param>
+        <param>
+          <type>rowptr</type>
+          <defname>rowptr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Build a nr x nc sparse matrix from the CSR data structures
+
+Parameters
+----------
+nr : int
+    The number of rows.
+nc : int
+    The number of columns.
+nnz : int
+    The number of non-zero matrix entries.
+nzval : numpy array
+    Array with non-zero matrix entries.
+colind : numpy array of 32bit integers
+    CSR column array.
+rowptr : numpy array of 32bit integers
+    CSR row pointer.
+
+Returns
+-------
+sparse_matrix : :class:`proteus.superluWrappers.SparseMatrix`
+    superlu sparse matrix in CSR format.
+
+Note
+----
+For the superluWrapper, both the colind and rowptr should use
+32-bit integer data types.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="775" column="1" bodyfile="LinearAlgebraTools.py" bodystart="775" bodyend="808"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1ac1afb0b55fcfab08335b538376626391" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.l2Norm</definition>
+        <argsstring>(x)</argsstring>
+        <name>l2Norm</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Compute the parallel :math:`l_2` norm
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="1455" column="1" bodyfile="LinearAlgebraTools.py" bodystart="1455" bodyend="1461"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a96bc58a191481da8a367c7944d200d24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.l1Norm</definition>
+        <argsstring>(x)</argsstring>
+        <name>l1Norm</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Compute the parallel :math:`l_1` norm
+
+The :math:`l_1` norm of a vector :math:`\mathbf{x} \in
+\mathbb{R}^n` is
+
+.. math::
+
+   \| \mathbf{x} \|_{1} = \sum_{i=0} |x_i|
+
+If Python is running in parallel, then the sum is over all
+dimensions on all processors so that the input must not contain
+&quot;ghost&quot; entries.
+
+This implemtation works for a distributed array with no ghost
+components (each component must be on a single processor).
+
+:param x: numpy array of length n
+:return: float
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="1462" column="1" bodyfile="LinearAlgebraTools.py" bodystart="1462" bodyend="1485"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a60cbaecf28d19ca6133658f8cddded78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.lInfNorm</definition>
+        <argsstring>(x)</argsstring>
+        <name>lInfNorm</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Compute the parallel :math:`l_{\infty}` norm
+
+The :math:`l_{\infty}` norm of a vector :math:`\mathbf{x} \in
+\mathbb{R}^n` is
+
+.. math::
+
+   \|x\|_{\infty} = \max_i |x_i|
+
+This implemtation works for a distributed array with no ghost
+components (each component must be on a single processor).
+
+:param x: numpy array of length n
+:return: float
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="1486" column="1" bodyfile="LinearAlgebraTools.py" bodystart="1486" bodyend="1505"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a6d68bb6ef5f31dabc4781f3a332df8c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.wDot</definition>
+        <argsstring>(x, y, h)</argsstring>
+        <name>wDot</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>y</type>
+          <defname>y</defname>
+        </param>
+        <param>
+          <type>h</type>
+          <defname>h</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Compute the parallel weighted dot product of vectors x and y using
+weight vector h.
+
+The weighted dot product is defined for a weight vector
+:math:`\mathbf{h}` as
+
+.. math::
+
+   (\mathbf{x},\mathbf{y})_h = \sum_{i} h_{i} x_{i} y_{i}
+
+All weight vector components should be positive.
+
+:param x,y,h: numpy arrays for vectors and weight
+:return: the weighted dot product
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="1506" column="1" bodyfile="LinearAlgebraTools.py" bodystart="1506" bodyend="1524"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a87214731c08e9b1f941ebfac4003bb6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.wl2Norm</definition>
+        <argsstring>(x, h)</argsstring>
+        <name>wl2Norm</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>h</type>
+          <defname>h</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Compute the parallel weighted l_2 norm with weight h
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="1525" column="1" bodyfile="LinearAlgebraTools.py" bodystart="1525" bodyend="1531"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1abc937b1988f49d8e6443c797bae19838" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.wl1Norm</definition>
+        <argsstring>(x, h)</argsstring>
+        <name>wl1Norm</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>h</type>
+          <defname>h</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Compute the parallel weighted l_1 norm with weight h
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="1532" column="1" bodyfile="LinearAlgebraTools.py" bodystart="1532" bodyend="1538"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1ab5235d2c1d01491bb7c70bfb952a7719" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.wlInfNorm</definition>
+        <argsstring>(x, h)</argsstring>
+        <name>wlInfNorm</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>h</type>
+          <defname>h</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Compute the parallel weighted l_{\infty} norm with weight h
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="1539" column="1" bodyfile="LinearAlgebraTools.py" bodystart="1539" bodyend="1544"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a5c20f6af1ce63ca3d417beadef8faa6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.energyDot</definition>
+        <argsstring>(x, y, A)</argsstring>
+        <name>energyDot</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>y</type>
+          <defname>y</defname>
+        </param>
+        <param>
+          <type>A</type>
+          <defname>A</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Compute the &quot;energy&quot; dot product x^t A y (not parallel)
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="1545" column="1" bodyfile="LinearAlgebraTools.py" bodystart="1545" bodyend="1550"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1adc061564e5b77c6de06499aeac0cd9e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.energyNorm</definition>
+        <argsstring>(x, A)</argsstring>
+        <name>energyNorm</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>A</type>
+          <defname>A</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Compute the &quot;energy&quot; norm x^t A x (not parallel)
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="1551" column="1" bodyfile="LinearAlgebraTools.py" bodystart="1551" bodyend="1556"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1abeb062edcd56482e3d2d9a9e25d08579" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.l2NormAvg</definition>
+        <argsstring>(x)</argsstring>
+        <name>l2NormAvg</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Compute the arithmetic averaged l_2 norm (root mean squared norm)
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="1557" column="1" bodyfile="LinearAlgebraTools.py" bodystart="1557" bodyend="1564"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1LinearAlgebraTools_1a0606e6dd4b455a5589949b915873e31f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.l2Norm_local</definition>
+        <argsstring>(x)</argsstring>
+        <name>l2Norm_local</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Compute the l_2 norm for just local (processor) system  (not parallel)
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="1568" column="1" bodyfile="LinearAlgebraTools.py" bodystart="1568" bodyend="1574"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Tools for n-dimensional linear algebra
+
+Vectors are just numpy arrays, as are dense matrices. Sparse matrices
+are CSR matrices. Parallel vector and matrix are built on top of those
+representations using PETSc.
+
+.. inheritance-diagram:: proteus.LinearAlgebraTools
+   :parts: 1
+</verbatim> </para>
+    </detaileddescription>
+    <location file="LinearAlgebraTools.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

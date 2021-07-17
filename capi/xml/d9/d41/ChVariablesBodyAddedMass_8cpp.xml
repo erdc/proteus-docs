@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d9/d41/ChVariablesBodyAddedMass_8cpp" kind="file" language="C++">
+    <compoundname>ChVariablesBodyAddedMass.cpp</compoundname>
+    <includes refid="dc/d5f/ChVariablesBodyAddedMass_8h" local="yes">ChVariablesBodyAddedMass.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>mbd/ChVariablesBodyAddedMass.cpp</label>
+        <link refid="d9/d41/ChVariablesBodyAddedMass_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>chrono/solver/ChVariablesBodyOwnMass.h</label>
+      </node>
+      <node id="2">
+        <label>ChVariablesBodyAddedMass.h</label>
+        <link refid="dc/d5f/ChVariablesBodyAddedMass_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="d3/dda/namespacechrono">chrono</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>=============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>PROJECT<sp/>CHRONO<sp/>-<sp/>http://projectchrono.org</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2014<sp/>projectchrono.org</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>All<sp/>rights<sp/>reserved.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Use<sp/>of<sp/>this<sp/>source<sp/>code<sp/>is<sp/>governed<sp/>by<sp/>a<sp/>BSD-style<sp/>license<sp/>that<sp/>can<sp/>be<sp/>found</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>in<sp/>the<sp/>LICENSE<sp/>file<sp/>at<sp/>the<sp/>top<sp/>level<sp/>of<sp/>the<sp/>distribution<sp/>and<sp/>at</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>http://projectchrono.org/license-chrono.txt.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>=============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Authors:<sp/>Tristan<sp/>de<sp/>Lataillade</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>=============================================================================</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="dc/d5f/ChVariablesBodyAddedMass_8h" kindref="compound">ChVariablesBodyAddedMass.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="d3/dda/namespacechrono" kindref="compound">chrono</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Register<sp/>into<sp/>the<sp/>object<sp/>factory,<sp/>to<sp/>enable<sp/>run-time<sp/>dynamic<sp/>creation<sp/>and<sp/>persistence</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><ref refid="d3/dda/namespacechrono_1ad01b7bc1e6b241b4cbe8867c58e2698c" kindref="member">CH_FACTORY_REGISTER</ref>(ChVariablesBodyAddedMass)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><ref refid="d0/d40/classchrono_1_1ChVariablesBodyAddedMass_1a07791db4a4259eeca68e676a8655ad1e" kindref="member">ChVariablesBodyAddedMass::ChVariablesBodyAddedMass</ref>()<sp/>:<sp/>ndof(6)<sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>Maddedmass<sp/>=<sp/>ChMatrixDynamic&lt;&gt;(ndof,<sp/>ndof);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>Maddedmass.setIdentity();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>Mmass<sp/>=<sp/>ChMatrixDynamic&lt;&gt;(ndof,<sp/>ndof);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>Mmass.setIdentity();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>Mfullmass<sp/>=<sp/>ChMatrixDynamic&lt;&gt;(ndof,<sp/>ndof);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>Mfullmass.setIdentity();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>inv_Mfullmass<sp/>=<sp/>ChMatrixDynamic&lt;&gt;(ndof,<sp/>ndof);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>inv_Mfullmass.setIdentity();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">ChVariablesBodyAddedMass&amp;<sp/><ref refid="d0/d40/classchrono_1_1ChVariablesBodyAddedMass_1a37b88518295c23812051ee2ec12affe0" kindref="member">ChVariablesBodyAddedMass::operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ChVariablesBodyAddedMass&amp;<sp/>other)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(&amp;other<sp/>==<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>copy<sp/>parent<sp/>class<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>ChVariablesBodyOwnMass::operator=(other);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>copy<sp/>class<sp/>data</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>Mmass<sp/>=<sp/>other.Mmass;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>Maddedmass<sp/>=<sp/>other.Maddedmass;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>Mfullmass<sp/>=<sp/>other.Mfullmass;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>inv_Mfullmass<sp/>=<sp/>other.inv_Mfullmass;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d0/d40/classchrono_1_1ChVariablesBodyAddedMass_1a11ef08e15518f6afa62af74e22d43aa1" kindref="member">ChVariablesBodyAddedMass::SetMfullmass</ref>(ChMatrixDynamic&lt;&gt;&amp;<sp/>Mfullmass_in)<sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(Mfullmass_in.rows()<sp/>==<sp/>Get_ndof());</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(Mfullmass_in.cols()<sp/>==<sp/>Get_ndof());</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/d40/classchrono_1_1ChVariablesBodyAddedMass_1a0eb286374f5cc6f5df385f2068eed414" kindref="member">GetMfullmass</ref>()<sp/>=<sp/>Mfullmass_in;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="d0/d40/classchrono_1_1ChVariablesBodyAddedMass_1a0378440220e2e8e06596b3497dc9589d" kindref="member">GetInvMfullmass</ref>()<sp/>=<sp/>Mfullmass_in.inverse();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>Set<sp/>the<sp/>inertia<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>ChVariablesBodyAddedMass::SetBodyInertia(const<sp/>ChMatrix33&lt;&gt;&amp;<sp/>minertia)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>ChVariablesBodyOwnMass::SetBodyInertia(minertia);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>GetLog()<sp/>&lt;&lt;<sp/>&quot;JUST<sp/>SET<sp/>&quot;<sp/>&lt;&lt;<sp/>ChVariablesBodyOwnMass::GetBodyInertia();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>GetLog()<sp/>&lt;&lt;<sp/>&quot;JUST<sp/>SET<sp/>2<sp/>&quot;<sp/>&lt;&lt;<sp/>GetBodyInertia();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>//<sp/>Set<sp/>the<sp/>mass<sp/>associated<sp/>with<sp/>translation<sp/>of<sp/>body</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>void<sp/>ChVariablesBodyAddedMass::SetBodyMass(const<sp/>double<sp/>mmass)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/><sp/><sp/>ChVariablesBodyOwnMass::SetBodyMass(mmass);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight><highlight class="comment">//<sp/>///<sp/>Set<sp/>the<sp/>inertia<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="comment">//<sp/>void<sp/>ChVariablesBodyAddedMass::SetBodyInertia(const<sp/>ChMatrix33&lt;&gt;&amp;<sp/>minertia)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>ChVariablesBodyOwnMass::SetBodyInertia(minertia);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>///<sp/>Add<sp/>inertia<sp/>to<sp/>mass<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>ChMatrix33&lt;&gt;&amp;<sp/>bodyinertia<sp/>=<sp/>ChVariablesBodyOwnMass::GetBodyInertia();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>3;<sp/>i++)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>for<sp/>(int<sp/>j<sp/>=<sp/>0;<sp/>j<sp/>&lt;<sp/>3;<sp/>j++)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mmass(3<sp/>+<sp/>i,<sp/>3<sp/>+<sp/>j)<sp/>=<sp/>bodyinertia(i,<sp/>j);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>Mfullmass<sp/>=<sp/>Mmass<sp/>+<sp/>Maddedmass;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="comment">//<sp/>///<sp/>Set<sp/>the<sp/>mass<sp/>associated<sp/>with<sp/>translation<sp/>of<sp/>body</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">//<sp/>void<sp/>ChVariablesBodyAddedMass::SetBodyMass(const<sp/>double<sp/>mmass)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>///<sp/>Value<sp/>of<sp/>mass<sp/>as<sp/>double</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>ChVariablesBodyOwnMass::SetBodyMass(mmass);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>///<sp/>Value<sp/>of<sp/>mass<sp/>in<sp/>mass<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>Mmass(0,<sp/>0)<sp/>=<sp/>mmass;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>Mmass(1,<sp/>1)<sp/>=<sp/>mmass;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>Mmass(2,<sp/>2)<sp/>=<sp/>mmass;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>///<sp/>rebuild<sp/>full<sp/>mass<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>Mfullmass<sp/>=<sp/>Mmass<sp/>+<sp/>Maddedmass;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment">//<sp/>///<sp/>Set<sp/>the<sp/>added<sp/>mass<sp/>matrix<sp/>of<sp/>the<sp/>body<sp/>(6x6)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">//<sp/>void<sp/>ChVariablesBodyAddedMass::SetBodyAddedMass(ChMatrixDynamic&lt;&gt;&amp;<sp/>Maddedmass_in)<sp/>{</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>assert(Maddedmass_in.GetRows()<sp/>==<sp/>Get_ndof());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>assert(Maddedmass_in.GetColums()<sp/>==<sp/>Get_ndof());</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>Maddedmass.CopyFromMatrix(Maddedmass_in);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>///<sp/>rebuild<sp/>full<sp/>mass<sp/>matrix</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/>Mfullmass<sp/>=<sp/>Mmass<sp/>+<sp/>Maddedmass;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="comment">//<sp/>}</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Computes<sp/>the<sp/>product<sp/>of<sp/>the<sp/>inverse<sp/>mass<sp/>matrix<sp/>by<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">//<sp/>vector,<sp/>and<sp/>set<sp/>in<sp/>result:<sp/>result<sp/>=<sp/>[invMb]*vect</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d0/d40/classchrono_1_1ChVariablesBodyAddedMass_1a01fa937852701178d63798d1e2371683" kindref="member">ChVariablesBodyAddedMass::Compute_invMb_v</ref>(ChVectorRef<sp/>result,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ChVectorConstRef<sp/>vect)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(vect.size()<sp/>==<sp/>Get_ndof());</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(result.size()<sp/>==<sp/>Get_ndof());</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>=<sp/>inv_Mfullmass<sp/>*<sp/>vect;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Computes<sp/>the<sp/>product<sp/>of<sp/>the<sp/>inverse<sp/>mass<sp/>matrix<sp/>by<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight><highlight class="comment">//<sp/>vector,<sp/>and<sp/>increment<sp/>result:<sp/>result<sp/>+=<sp/>[invMb]*vect</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d0/d40/classchrono_1_1ChVariablesBodyAddedMass_1abea97c2d3e5c17f4025cb02f5b0e9d9f" kindref="member">ChVariablesBodyAddedMass::Compute_inc_invMb_v</ref>(ChVectorRef<sp/>result,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ChVectorConstRef<sp/>vect)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(vect.size()<sp/>==<sp/>Get_ndof());</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(result.size()<sp/>==<sp/>Get_ndof());</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>+=<sp/>inv_Mfullmass<sp/>*<sp/>vect;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Computes<sp/>the<sp/>product<sp/>of<sp/>the<sp/>mass<sp/>matrix<sp/>by<sp/>a</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">//<sp/>vector,<sp/>and<sp/>set<sp/>in<sp/>result:<sp/>result<sp/>=<sp/>[Mb]*vect</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d0/d40/classchrono_1_1ChVariablesBodyAddedMass_1af33ea94a98d7412d4b1bf7ae9c7c9e84" kindref="member">ChVariablesBodyAddedMass::Compute_inc_Mb_v</ref>(ChVectorRef<sp/>result,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ChVectorConstRef<sp/>vect)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(vect.size()<sp/>==<sp/>Get_ndof());</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(result.size()<sp/>==<sp/>Get_ndof());</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>result<sp/>+=<sp/>Mfullmass<sp/>*<sp/>vect;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Computes<sp/>the<sp/>product<sp/>of<sp/>the<sp/>corresponding<sp/>block<sp/>in<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment">//<sp/>system<sp/>matrix<sp/>(ie.<sp/>the<sp/>mass<sp/>matrix)<sp/>by<sp/>&apos;vect&apos;,<sp/>scale<sp/>by<sp/>c_a,<sp/>and<sp/>add<sp/>to<sp/>&apos;result&apos;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NOTE:<sp/>the<sp/>&apos;vect&apos;<sp/>and<sp/>&apos;result&apos;<sp/>vectors<sp/>must<sp/>already<sp/>have</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>size<sp/>of<sp/>the<sp/>total<sp/>variables&amp;constraints<sp/>in<sp/>the<sp/>system;<sp/>the<sp/>procedure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="comment">//<sp/>will<sp/>use<sp/>the<sp/>ChVariable<sp/>offsets<sp/>(that<sp/>must<sp/>be<sp/>already<sp/>updated)<sp/>to<sp/>know<sp/>the</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">//<sp/>indexes<sp/>in<sp/>result<sp/>and<sp/>vect.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d0/d40/classchrono_1_1ChVariablesBodyAddedMass_1a430156dd5bcc737776afcb17a8978d6e" kindref="member">ChVariablesBodyAddedMass::MultiplyAndAdd</ref>(ChVectorRef<sp/>result,</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ChVectorConstRef<sp/>vect,</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>c_a)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>off<sp/>=<sp/>this-&gt;offset;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>result.segment(off,<sp/>6)<sp/>+=<sp/>Mfullmass*vect.segment(off,<sp/>6)*c_a;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Add<sp/>the<sp/>diagonal<sp/>of<sp/>the<sp/>mass<sp/>matrix<sp/>scaled<sp/>by<sp/>c_a<sp/>to<sp/>&apos;result&apos;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="comment">//<sp/>NOTE:<sp/>the<sp/>&apos;result&apos;<sp/>vector<sp/>must<sp/>already<sp/>have<sp/>the<sp/>size<sp/>of<sp/>system<sp/>unknowns,<sp/>ie</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>size<sp/>of<sp/>the<sp/>total<sp/>variables&amp;constraints<sp/>in<sp/>the<sp/>system;<sp/>the<sp/>procedure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight><highlight class="comment">//<sp/>will<sp/>use<sp/>the<sp/>ChVariable<sp/>offset<sp/>(that<sp/>must<sp/>be<sp/>already<sp/>updated)<sp/>as<sp/>index.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d0/d40/classchrono_1_1ChVariablesBodyAddedMass_1a008948e89b17ef923e6be4261cf31cf2" kindref="member">ChVariablesBodyAddedMass::DiagonalAdd</ref>(ChVectorRef<sp/>result,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>c_a)</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>assert(result.size()<sp/>&gt;=<sp/>this-&gt;offset<sp/>+<sp/>Get_ndof());</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>Get_ndof();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>result(this-&gt;offset<sp/>+<sp/>i)<sp/>+=<sp/>c_a<sp/>*<sp/>Mfullmass(i,<sp/>i);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Build<sp/>the<sp/>mass<sp/>matrix<sp/>(for<sp/>these<sp/>variables)<sp/>scaled<sp/>by<sp/>c_a,<sp/>storing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="comment">//<sp/>it<sp/>in<sp/>&apos;storage&apos;<sp/>sparse<sp/>matrix,<sp/>at<sp/>given<sp/>column/row<sp/>offset.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Note,<sp/>most<sp/>iterative<sp/>solvers<sp/>don&apos;t<sp/>need<sp/>to<sp/>know<sp/>mass<sp/>matrix<sp/>explicitly.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Optimized:<sp/>doesn&apos;t<sp/>fill<sp/>unneeded<sp/>elements<sp/>except<sp/>mass<sp/>and<sp/>3x3<sp/>inertia.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="d0/d40/classchrono_1_1ChVariablesBodyAddedMass_1ac9cd65ffe3604642926545ed58a6bade" kindref="member">ChVariablesBodyAddedMass::Build_M</ref>(ChSparseMatrix&amp;<sp/>storage,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>insrow,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>inscol,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>c_a)<sp/>{</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row<sp/>=<sp/>0;<sp/>row<sp/>&lt;<sp/>Get_ndof();<sp/>++row)</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>col<sp/>=<sp/>0;<sp/>col<sp/>&lt;<sp/>Get_ndof();<sp/>++col)</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>storage.SetElement(insrow<sp/>+<sp/>row,<sp/>inscol<sp/>+<sp/>col,<sp/>c_a<sp/>*<sp/>Mfullmass(row,<sp/>col));</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}<sp/><sp/></highlight><highlight class="comment">//<sp/>end<sp/>namespace<sp/>chrono</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="mbd/ChVariablesBodyAddedMass.cpp"/>
+  </compounddef>
+</doxygen>

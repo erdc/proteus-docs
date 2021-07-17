@@ -1,0 +1,895 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d4/d8d/namespacefloating__body" kind="namespace" language="Python">
+    <compoundname>floating_body</compoundname>
+    <innerclass refid="dd/dcf/classfloating__body_1_1P__IC" prot="public">floating_body::P_IC</innerclass>
+    <innerclass refid="d7/db2/classfloating__body_1_1PHI__IC" prot="public">floating_body::PHI_IC</innerclass>
+    <innerclass refid="d2/ded/classfloating__body_1_1U__IC" prot="public">floating_body::U_IC</innerclass>
+    <innerclass refid="d4/d3e/classfloating__body_1_1V__IC" prot="public">floating_body::V_IC</innerclass>
+    <innerclass refid="da/d8e/classfloating__body_1_1VF__IC" prot="public">floating_body::VF_IC</innerclass>
+    <innerclass refid="dc/d05/classfloating__body_1_1W__IC" prot="public">floating_body::W_IC</innerclass>
+    <innerclass refid="d9/d94/classfloating__body_1_1zero" prot="public">floating_body::zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1af413a945022c6bb56d1e847a2f4ff653" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  Context.Options([
+    (&quot;final_time&quot;,10.0,&quot;Final time for simulation&quot;),
+    (&quot;<ref refid="d4/d8d/namespacefloating__body_1a6e98c2a44089c652e5982c2af8ea46e6" kindref="member">dt_output</ref>&quot;,0.1,&quot;Time interval to output solution&quot;),
+    (&quot;<ref refid="d4/d8d/namespacefloating__body_1a0c2ae3a1e4838315ce851ff8c9023435" kindref="member">cfl</ref>&quot;,0.5,&quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="d4/d8d/namespacefloating__body_1a2068059a5ed8bb76119428b7379fb3a9" kindref="member">he</ref>&quot;,0.05,&quot;<ref refid="d4/d8d/namespacefloating__body_1a2068059a5ed8bb76119428b7379fb3a9" kindref="member">he</ref> relative to Length of <ref refid="d4/d8d/namespacefloating__body_1ab737204c9f46b266b29315375f48284a" kindref="member">domain</ref> in x&quot;),
+    ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="12" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1ab8b4d7a6790584ad42dd6a666d459432" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <initializer>=  opts.final_time</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="21" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a09e3a40b7cc6ddc9fb52256d7c193a26" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating_body::dt_init</definition>
+        <argsstring></argsstring>
+        <name>dt_init</name>
+        <initializer>=  0.001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="23" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a0c2ae3a1e4838315ce851ff8c9023435" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating_body::cfl</definition>
+        <argsstring></argsstring>
+        <name>cfl</name>
+        <initializer>=  0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="25" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a2068059a5ed8bb76119428b7379fb3a9" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating_body::he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  0.05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="27" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1ae2cfe52d7e746efe31d0694e66b3d363" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating_body::sampleRate</definition>
+        <argsstring></argsstring>
+        <name>sampleRate</name>
+        <initializer>=  0.05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="29" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1aed5ac8cb3d79a26907e70d0fc13504a6" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool floating_body::movingDomain</definition>
+        <argsstring></argsstring>
+        <name>movingDomain</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="31" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a330b52fc4350b54a11d4e805d6a1aea4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool floating_body::addedMass</definition>
+        <argsstring></argsstring>
+        <name>addedMass</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="33" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1aeec44c387cb93f47683b0f20ffb1f40f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating_body::rho_0</definition>
+        <argsstring></argsstring>
+        <name>rho_0</name>
+        <initializer>=  998.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="37" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a51a0e0315cd79875518cbb3d6b10005d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating_body::nu_0</definition>
+        <argsstring></argsstring>
+        <name>nu_0</name>
+        <initializer>=  1.004e-6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="39" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a87399365305fec1659d1de212240ef7b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating_body::rho_1</definition>
+        <argsstring></argsstring>
+        <name>rho_1</name>
+        <initializer>=  1.205</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="41" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a48fb0f64b8ad86fdc7a5f23fb497e96f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating_body::nu_1</definition>
+        <argsstring></argsstring>
+        <name>nu_1</name>
+        <initializer>=  1.5e-5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="43" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a63f20e9490b880aa8563fbed793daf76" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>=  np.array([0., -9.81, 0.])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="45" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a8a4a800baea8b0ec265899915b4e3be3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool floating_body::fixed</definition>
+        <argsstring></argsstring>
+        <name>fixed</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="48" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a9e5905d6eb5d17a4a121bfd88163fad0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating_body::water_level</definition>
+        <argsstring></argsstring>
+        <name>water_level</name>
+        <initializer>=  0.515</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="51" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a76810d75ba37e97425f0df0147f74069" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating_body::wave_period</definition>
+        <argsstring></argsstring>
+        <name>wave_period</name>
+        <initializer>=  0.87</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="52" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a8d82d4c16c83eb59050a4bb1bb61acc0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating_body::wave_height</definition>
+        <argsstring></argsstring>
+        <name>wave_height</name>
+        <initializer>=  0.05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="53" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a8d040f9dfa96aae71c6f41aeda3163a6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.wave_direction</definition>
+        <argsstring></argsstring>
+        <name>wave_direction</name>
+        <initializer>=  np.array([1., 0., 0.])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="54" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a8a39df0bdb4dee2dfe7b5b0ef646a624" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string floating_body::wave_type</definition>
+        <argsstring></argsstring>
+        <name>wave_type</name>
+        <initializer>=  &apos;Fenton&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="55" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a60270e1f86c6b0f88e78c2108f1833da" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int floating_body::Nf</definition>
+        <argsstring></argsstring>
+        <name>Nf</name>
+        <initializer>=  8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="57" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a1f4c1b3fc21a2320bbd23433d4bdbe46" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.wave</definition>
+        <argsstring></argsstring>
+        <name>wave</name>
+        <initializer>=  wt.MonochromaticWaves(period=<ref refid="d4/d8d/namespacefloating__body_1a76810d75ba37e97425f0df0147f74069" kindref="member">wave_period</ref>,
+                             waveHeight=<ref refid="d4/d8d/namespacefloating__body_1a8d82d4c16c83eb59050a4bb1bb61acc0" kindref="member">wave_height</ref>,
+                             mwl=<ref refid="d4/d8d/namespacefloating__body_1a9e5905d6eb5d17a4a121bfd88163fad0" kindref="member">water_level</ref>,
+                             depth=<ref refid="d4/d8d/namespacefloating__body_1a9e5905d6eb5d17a4a121bfd88163fad0" kindref="member">water_level</ref>,
+                             <ref refid="d4/d8d/namespacefloating__body_1a63f20e9490b880aa8563fbed793daf76" kindref="member">g</ref>=<ref refid="d4/d8d/namespacefloating__body_1a63f20e9490b880aa8563fbed793daf76" kindref="member">g</ref>,
+                             waveDir=<ref refid="d4/d8d/namespacefloating__body_1a8d040f9dfa96aae71c6f41aeda3163a6" kindref="member">wave_direction</ref>,
+                             waveType=<ref refid="d4/d8d/namespacefloating__body_1a8a39df0bdb4dee2dfe7b5b0ef646a624" kindref="member">wave_type</ref>,
+                             <ref refid="d4/d8d/namespacefloating__body_1a60270e1f86c6b0f88e78c2108f1833da" kindref="member">Nf</ref>=8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="58" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a1dc2a1ba3af61114cb41ea9472e5cb9b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.wavelength</definition>
+        <argsstring></argsstring>
+        <name>wavelength</name>
+        <initializer>=  wave.wavelength</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="66" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1ab737204c9f46b266b29315375f48284a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.PlanarStraightLineGraphDomain()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="78" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a6ac48537ff0ba21c50715009d621a17c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.tank</definition>
+        <argsstring></argsstring>
+        <name>tank</name>
+        <initializer>=  st.Tank2D(<ref refid="d4/d8d/namespacefloating__body_1ab737204c9f46b266b29315375f48284a" kindref="member">domain</ref>, dim=(2*<ref refid="d4/d8d/namespacefloating__body_1a1dc2a1ba3af61114cb41ea9472e5cb9b" kindref="member">wavelength</ref>, 2*<ref refid="d4/d8d/namespacefloating__body_1a9e5905d6eb5d17a4a121bfd88163fad0" kindref="member">water_level</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="83" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a1f44cd94bfb17e6ac171dfea69d45df9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.x_n</definition>
+        <argsstring></argsstring>
+        <name>x_n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="88" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a7ba7178c43abd260e8920c2f85663e77" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.x_p</definition>
+        <argsstring></argsstring>
+        <name>x_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="88" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1af981f1c2992cee51ef9db681bd00c776" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.caisson</definition>
+        <argsstring></argsstring>
+        <name>caisson</name>
+        <initializer>=  st.Rectangle(<ref refid="d4/d8d/namespacefloating__body_1ab737204c9f46b266b29315375f48284a" kindref="member">domain</ref>, dim=(0.5, 0.2), <ref refid="d7/daa/group__analyticalSolutions_1gae103bacd0ce284b66771dc3d06420616" kindref="member">coords</ref>=(0., 0.))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="91" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a2a36cb5928547c6f0b93dffab6209c3e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.holes_ind</definition>
+        <argsstring></argsstring>
+        <name>holes_ind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="97" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a2f6fa23f02cc45183733ee0c021609f6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.system</definition>
+        <argsstring></argsstring>
+        <name>system</name>
+        <initializer>=  fsi.ProtChSystem()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="112" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1ac2d558f8a236a533de720b7d57f20dd0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.chsystem</definition>
+        <argsstring></argsstring>
+        <name>chsystem</name>
+        <initializer>=  system.getChronoObject()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="114" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1abf2f954182f60760648d01ea4a3c6b53" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.solver</definition>
+        <argsstring></argsstring>
+        <name>solver</name>
+        <initializer>=  pychrono.ChSolverMINRES()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="122" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1acfd57e687240c922ad8705ca19376a40" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.body</definition>
+        <argsstring></argsstring>
+        <name>body</name>
+        <initializer>=  fsi.ProtChBody(<ref refid="d4/d8d/namespacefloating__body_1a2f6fa23f02cc45183733ee0c021609f6" kindref="member">system</ref>=<ref refid="d4/d8d/namespacefloating__body_1a2f6fa23f02cc45183733ee0c021609f6" kindref="member">system</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="128" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a6144051bf96a9abf637c32a80c110956" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.chbody</definition>
+        <argsstring></argsstring>
+        <name>chbody</name>
+        <initializer>=  body.getChronoObject()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="136" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a7a6846b72b1838bd5a7bcdef86d3c0ca" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.free_x</definition>
+        <argsstring></argsstring>
+        <name>free_x</name>
+        <initializer>=  np.array([0., 1., 0.])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="139" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a24c046ccb85b1e96ccc4597d558d6250" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.free_r</definition>
+        <argsstring></argsstring>
+        <name>free_r</name>
+        <initializer>=  np.array([0., 0., 1.])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="140" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a6b16ddbfa84f07768c7bad3cf3e925dc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.all_values</definition>
+        <argsstring></argsstring>
+        <name>all_values</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="152" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a285bdb9e990cd593aa468cbac4180d36" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating_body::smoothing</definition>
+        <argsstring></argsstring>
+        <name>smoothing</name>
+        <initializer>=  <ref refid="d4/d8d/namespacefloating__body_1a2068059a5ed8bb76119428b7379fb3a9" kindref="member">he</ref>*1.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="186" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1af5439945ab77fdba57caa90c13ccf58f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int floating_body::dragAlpha</definition>
+        <argsstring></argsstring>
+        <name>dragAlpha</name>
+        <initializer>=  5*2*<ref refid="d0/df7/createAnalyticGeometry_8cpp_1a43016d873124d39034edb8cd164794db" kindref="member">np.pi</ref>/<ref refid="d4/d8d/namespacefloating__body_1a76810d75ba37e97425f0df0147f74069" kindref="member">wave_period</ref>/(1.004e-6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="187" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a7ce13296ef21a5e979671dc219e471b3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.vert_axis</definition>
+        <argsstring></argsstring>
+        <name>vert_axis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="190" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a1b6096ba817409c3e02073a1c3e71db1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.waves</definition>
+        <argsstring></argsstring>
+        <name>waves</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="192" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1accda5402956fe7e466deda670d22537a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.nd</definition>
+        <argsstring></argsstring>
+        <name>nd</name>
+        <initializer>=  domain.nd</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="210" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1aca00e08d12450c30a0d769d4a402df5a" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary floating_body::initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;pressure&apos;: <ref refid="dd/dcf/classfloating__body_1_1P__IC" kindref="compound">P_IC</ref>(),
+                     &apos;vel_u&apos;: <ref refid="d2/ded/classfloating__body_1_1U__IC" kindref="compound">U_IC</ref>(),
+                     &apos;vel_v&apos;: <ref refid="d4/d3e/classfloating__body_1_1V__IC" kindref="compound">V_IC</ref>(),
+                     &apos;vel_w&apos;: <ref refid="dc/d05/classfloating__body_1_1W__IC" kindref="compound">W_IC</ref>(),
+                     &apos;vof&apos;: <ref refid="da/d8e/classfloating__body_1_1VF__IC" kindref="compound">VF_IC</ref>(),
+                     &apos;ncls&apos;: <ref refid="d7/db2/classfloating__body_1_1PHI__IC" kindref="compound">PHI_IC</ref>(),
+                     &apos;rdls&apos;: <ref refid="d7/db2/classfloating__body_1_1PHI__IC" kindref="compound">PHI_IC</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="241" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1ad49dcabc9684ed6cc6a7824c28e9dd85" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.genMesh</definition>
+        <argsstring></argsstring>
+        <name>genMesh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="257" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a5e7d177a6147d49f2d5f59a817f0f90a" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string floating_body::mesh_fileprefix</definition>
+        <argsstring></argsstring>
+        <name>mesh_fileprefix</name>
+        <initializer>=  &apos;mesh&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="259" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a9457b3a4ee8edd51912a37f43715e253" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="274" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a076e6c769b9a5dbf0ef4ec5f0376ea48" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.final_time</definition>
+        <argsstring></argsstring>
+        <name>final_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="276" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a6e98c2a44089c652e5982c2af8ea46e6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.dt_output</definition>
+        <argsstring></argsstring>
+        <name>dt_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="277" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a4b1ead48977c1b3eb34ea1149f2cd20d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.useSuperlu</definition>
+        <argsstring></argsstring>
+        <name>useSuperlu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="283" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="283" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a8f6a8dc3c3e2e672ffb88de5a4be418f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.params</definition>
+        <argsstring></argsstring>
+        <name>params</name>
+        <initializer>=  myTpFlowProblem.SystemPhysics</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="287" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="287" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1ae5779ebe7dfeb3acda6e8c07537647b0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <initializer>=  myTpFlowProblem.SystemPhysics.modelDict</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="303" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a5430379334d85811dfacf16110cd6ccc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.NONCONSERVATIVE_FORM</definition>
+        <argsstring></argsstring>
+        <name>NONCONSERVATIVE_FORM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="320" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a4840a0bed9ed758bec943436a26681de" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int floating_body::max_flag</definition>
+        <argsstring></argsstring>
+        <name>max_flag</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="324" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a67724e3e8d619be310765f29930f8f8a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.flags_rigidbody</definition>
+        <argsstring></argsstring>
+        <name>flags_rigidbody</name>
+        <initializer>=  np.zeros(<ref refid="d4/d8d/namespacefloating__body_1a4840a0bed9ed758bec943436a26681de" kindref="member">max_flag</ref>+1, dtype=&apos;int32&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating_body.py" line="328" column="1" bodyfile="tests/proteus_tutorial/2d/floating_body.py" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a21f0823a7a9eea3691bb7d92fb0bdeec" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  TpFlow.OutputStepping(
+    <ref refid="d4/d8d/namespacefloating__body_1a076e6c769b9a5dbf0ef4ec5f0376ea48" kindref="member">final_time</ref>=<ref refid="d4/d8d/namespacefloating__body_1ab8b4d7a6790584ad42dd6a666d459432" kindref="member">T</ref>,
+    <ref refid="d4/d8d/namespacefloating__body_1a09e3a40b7cc6ddc9fb52256d7c193a26" kindref="member">dt_init</ref>=<ref refid="d4/d8d/namespacefloating__body_1a09e3a40b7cc6ddc9fb52256d7c193a26" kindref="member">dt_init</ref>,
+    # <ref refid="d4/d8d/namespacefloating__body_1a0c2ae3a1e4838315ce851ff8c9023435" kindref="member">cfl</ref>=opts.cfl,
+    <ref refid="d4/d8d/namespacefloating__body_1a6e98c2a44089c652e5982c2af8ea46e6" kindref="member">dt_output</ref>=<ref refid="d4/d8d/namespacefloating__body_1ae2cfe52d7e746efe31d0694e66b3d363" kindref="member">sampleRate</ref>,
+    nDTout=None,
+    dt_fixed=None,
+)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/floating_body.py" line="270" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/floating_body.py" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a732d14be9c3b12cacc6a0a0c5bb87fda" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.densityA</definition>
+        <argsstring></argsstring>
+        <name>densityA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/floating_body.py" line="298" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/floating_body.py" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1abd4df941117525dc3a6b5257fe74c761" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.densityB</definition>
+        <argsstring></argsstring>
+        <name>densityB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/floating_body.py" line="299" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/floating_body.py" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a87eb54f08ca8b11e1606c76604b25fb4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.kinematicViscosityA</definition>
+        <argsstring></argsstring>
+        <name>kinematicViscosityA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/floating_body.py" line="300" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/floating_body.py" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a78f31766d0b5a6eb62a013091ce55bb4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.kinematicViscosityB</definition>
+        <argsstring></argsstring>
+        <name>kinematicViscosityB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/floating_body.py" line="301" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/floating_body.py" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a0e6cd47ef93ea3d3e17bf41796cf7fbf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.gravity</definition>
+        <argsstring></argsstring>
+        <name>gravity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/floating_body.py" line="302" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/floating_body.py" bodystart="302" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a28be3845ec43309ea9f41b2e6d34c646" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.surf_tension_coeff</definition>
+        <argsstring></argsstring>
+        <name>surf_tension_coeff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/floating_body.py" line="303" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/floating_body.py" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1ab59af30f2e102696ef1d1666f417a290" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int floating_body.ind</definition>
+        <argsstring></argsstring>
+        <name>ind</name>
+        <initializer>=  -1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/floating_body.py" line="308" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/floating_body.py" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d4/d8d/namespacefloating__body_1a987b69381cdaeac164b6a5cb9efb86ae" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating_body.index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/floating_body.py" line="311" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/floating_body.py" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/proteus_tutorial/2d/floating_body.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

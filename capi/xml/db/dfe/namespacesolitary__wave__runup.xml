@@ -1,0 +1,652 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="db/dfe/namespacesolitary__wave__runup" kind="namespace" language="Python">
+    <compoundname>solitary_wave_runup</compoundname>
+    <innerclass refid="d2/d0a/classsolitary__wave__runup_1_1clsvof__init__cond" prot="public">solitary_wave_runup::clsvof_init_cond</innerclass>
+    <innerclass refid="d0/db5/classsolitary__wave__runup_1_1vel__u" prot="public">solitary_wave_runup::vel_u</innerclass>
+    <innerclass refid="df/d74/classsolitary__wave__runup_1_1vel__v" prot="public">solitary_wave_runup::vel_v</innerclass>
+    <innerclass refid="d4/d79/classsolitary__wave__runup_1_1zero" prot="public">solitary_wave_runup::zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a54978a7debfa3e595c9c374f68e54a3b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>solitary_wave_runup.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  Context.Options([
+    (&quot;final_time&quot;,10.0,&quot;Final time for simulation&quot;),
+    (&quot;dt_output&quot;,0.01,&quot;Time interval to output solution&quot;),
+    (&quot;cfl&quot;,0.25,&quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="db/dfe/namespacesolitary__wave__runup_1aee91ff5cf67f6f1f3b8f8b8f98283969" kindref="member">he</ref>&quot;,0.1,&quot;<ref refid="db/dfe/namespacesolitary__wave__runup_1aee91ff5cf67f6f1f3b8f8b8f98283969" kindref="member">he</ref> relative to Length of <ref refid="db/dfe/namespacesolitary__wave__runup_1a6903a4925bed7921744a2a14f5f49b63" kindref="member">domain</ref> in x&quot;),
+    (&quot;refinement&quot;,3,&quot;level of refinement&quot;),
+    (&quot;<ref refid="db/dfe/namespacesolitary__wave__runup_1ae613a0b5526b721349ad944e795e3510" kindref="member">slope</ref>&quot;,(1/19.85),&quot;Beta, <ref refid="db/dfe/namespacesolitary__wave__runup_1ae613a0b5526b721349ad944e795e3510" kindref="member">slope</ref> of incline (y/x)&quot;),
+    (&quot;slope_length&quot;,50.0,&quot;right extent of <ref refid="db/dfe/namespacesolitary__wave__runup_1a6903a4925bed7921744a2a14f5f49b63" kindref="member">domain</ref> x(m)&quot;),
+    (&quot;<ref refid="db/dfe/namespacesolitary__wave__runup_1a684b723a880b4e740e555b453900e9c6" kindref="member">wl</ref>&quot;,1.0,&quot;water level&quot;),
+    (&quot;waves&quot;,True, &quot;wave on/off&quot;),
+    (&quot;wave_height&quot;, 0.28, &quot;<ref refid="de/d5b/Headers_8h_1a5554d9ddb970ea46ca620bfa405ba2a3" kindref="member">Height</ref> of the waves in <ref refid="de/d5b/Headers_8h_1a7cbe4dbecea8b00e5845e24579f6036d" kindref="member">s</ref>&quot;),
+    (&quot;wave_dir&quot;, (1.,0.,0.), &quot;Direction of the waves (from left boundary)&quot;),
+    (&quot;wave_type&quot;, &apos;solitaryWave&apos;, &quot;type of <ref refid="db/dfe/namespacesolitary__wave__runup_1a3f89f797a370ff6ef41ae4d61fccd287" kindref="member">wave</ref>&quot;),
+    (&quot;fast&quot;, False, &quot;switch for fast cosh calculations in WaveTools&quot;),
+    (&quot;g&quot;, [0, -9.81, 0], &quot;Gravity <ref refid="db/dcc/jf_8h_1ad6a1294cda25bf40114e0b9a56cd0445" kindref="member">vector</ref> in m/<ref refid="de/d5b/Headers_8h_1a7cbe4dbecea8b00e5845e24579f6036d" kindref="member">s</ref>^2&quot;),
+    ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="19" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a38f3bb37c15f1f58530b34310e311d6e" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple solitary_wave_runup.toe</definition>
+        <argsstring></argsstring>
+        <name>toe</name>
+        <initializer>= (-opts.wl/opts.slope)+35</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="36" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a401ecfe4617069d64a24ae6cf69a524f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool solitary_wave_runup.structured</definition>
+        <argsstring></argsstring>
+        <name>structured</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="37" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1ae613a0b5526b721349ad944e795e3510" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>solitary_wave_runup.slope</definition>
+        <argsstring></argsstring>
+        <name>slope</name>
+        <initializer>= opts.slope</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="38" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a867ffb67ea37b54641ccbaab6cbbc5e3" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple solitary_wave_runup.slope_x</definition>
+        <argsstring></argsstring>
+        <name>slope_x</name>
+        <initializer>= opts.slope_length-<ref refid="db/dfe/namespacesolitary__wave__runup_1a38f3bb37c15f1f58530b34310e311d6e" kindref="member">toe</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="39" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a12fcc45c49d40b3766316a07ee4e10ff" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple solitary_wave_runup.slope_y</definition>
+        <argsstring></argsstring>
+        <name>slope_y</name>
+        <initializer>= <ref refid="db/dfe/namespacesolitary__wave__runup_1ae613a0b5526b721349ad944e795e3510" kindref="member">slope</ref>*<ref refid="db/dfe/namespacesolitary__wave__runup_1a867ffb67ea37b54641ccbaab6cbbc5e3" kindref="member">slope_x</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="40" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a5a0bd95b02a1e32dd25c1799412d691f" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple solitary_wave_runup.top</definition>
+        <argsstring></argsstring>
+        <name>top</name>
+        <initializer>= (<ref refid="db/dfe/namespacesolitary__wave__runup_1a12fcc45c49d40b3766316a07ee4e10ff" kindref="member">slope_y</ref>)*1.35</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="41" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1aee91ff5cf67f6f1f3b8f8b8f98283969" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>solitary_wave_runup.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>= opts.he</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="42" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a9029789d95a6de83121cba19bcd4c320" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>solitary_wave_runup.nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <initializer>= None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="43" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a684b723a880b4e740e555b453900e9c6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>solitary_wave_runup.wl</definition>
+        <argsstring></argsstring>
+        <name>wl</name>
+        <initializer>= opts.wl</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="44" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1acb38bd882843c9daf0991585cad24b76" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>solitary_wave_runup.a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <initializer>= opts.wave_height</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="45" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a1321b4078dffe4a74b8aed843de6f1c7" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple solitary_wave_runup.k</definition>
+        <argsstring></argsstring>
+        <name>k</name>
+        <initializer>= ((3*<ref refid="db/dfe/namespacesolitary__wave__runup_1acb38bd882843c9daf0991585cad24b76" kindref="member">a</ref>)/(4*(opts.wl**3)))**0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="47" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a38e9d2124ec69dfbe234bde0e53614ec" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple solitary_wave_runup.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <initializer>= (2/<ref refid="db/dfe/namespacesolitary__wave__runup_1a1321b4078dffe4a74b8aed843de6f1c7" kindref="member">k</ref>)*np.arccosh(0.05**(-0.5))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="48" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a55ed19b72481c3ba0777a629be032cb8" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple solitary_wave_runup.x0</definition>
+        <argsstring></argsstring>
+        <name>x0</name>
+        <initializer>= (-opts.wl/opts.slope)-(<ref refid="db/dfe/namespacesolitary__wave__runup_1a38e9d2124ec69dfbe234bde0e53614ec" kindref="member">L</ref>/2)+35</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="49" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a08a61c4ce938e975932790a42a577365" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>solitary_wave_runup.height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <initializer>=  opts.wave_height</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="52" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a66ff4e06a17078151dea9e04cce10af0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>solitary_wave_runup.mwl</definition>
+        <argsstring></argsstring>
+        <name>mwl</name>
+        <initializer>=  opts.wl</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="53" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a1e8fc20990b5db22b19593bef6ca9557" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>solitary_wave_runup.direction</definition>
+        <argsstring></argsstring>
+        <name>direction</name>
+        <initializer>=  opts.wave_dir</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="54" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a3f89f797a370ff6ef41ae4d61fccd287" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>solitary_wave_runup.wave</definition>
+        <argsstring></argsstring>
+        <name>wave</name>
+        <initializer>=  wt.SolitaryWave(	waveHeight = <ref refid="db/dfe/namespacesolitary__wave__runup_1a08a61c4ce938e975932790a42a577365" kindref="member">height</ref>, 
+				<ref refid="db/dfe/namespacesolitary__wave__runup_1a66ff4e06a17078151dea9e04cce10af0" kindref="member">mwl</ref> = <ref refid="db/dfe/namespacesolitary__wave__runup_1a684b723a880b4e740e555b453900e9c6" kindref="member">wl</ref>, 
+				depth = depth,
+               			g = np.array(opts.g), 
+				waveDir = <ref refid="db/dfe/namespacesolitary__wave__runup_1a1e8fc20990b5db22b19593bef6ca9557" kindref="member">direction</ref>,
+				trans = np.array([<ref refid="db/dfe/namespacesolitary__wave__runup_1a55ed19b72481c3ba0777a629be032cb8" kindref="member">x0</ref>, 0., 0.]),
+                       		fast = opts.fast
+			  )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="55" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a6903a4925bed7921744a2a14f5f49b63" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>solitary_wave_runup.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.PlanarStraightLineGraphDomain()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="67" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a59221ff2fa6d4f2634d9128a0bc714fc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int solitary_wave_runup.nLevels</definition>
+        <argsstring></argsstring>
+        <name>nLevels</name>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="68" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1aeb62f69157ca18177f1e1412094f120f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int solitary_wave_runup.nLayersOfOverlapForParallel</definition>
+        <argsstring></argsstring>
+        <name>nLayersOfOverlapForParallel</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="70" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1aaf3048b84f9384b78a39c00c427e6bb7" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list solitary_wave_runup.boundaries</definition>
+        <argsstring></argsstring>
+        <name>boundaries</name>
+        <initializer>= [&apos;left&apos;,&apos;right&apos;,&apos;bottom&apos;,&apos;<ref refid="db/dfe/namespacesolitary__wave__runup_1ae613a0b5526b721349ad944e795e3510" kindref="member">slope</ref>&apos;,&apos;<ref refid="db/dfe/namespacesolitary__wave__runup_1a5a0bd95b02a1e32dd25c1799412d691f" kindref="member">top</ref>&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="72" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1ab1d27e8cfbd319b7d8a0bb50bab1e49f" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary solitary_wave_runup.boundaryOrientations</definition>
+        <argsstring></argsstring>
+        <name>boundaryOrientations</name>
+        <initializer>=  {&apos;bottom&apos;: np.array([0., -1.,0.]),
+                        &apos;right&apos;: np.array([+1., 0.,0.]),
+                        &apos;<ref refid="db/dfe/namespacesolitary__wave__runup_1a5a0bd95b02a1e32dd25c1799412d691f" kindref="member">top</ref>&apos;: np.array([0., +1.,0.]),
+                        &apos;left&apos;: np.array([-1., 0.,0.]),
+                        &apos;<ref refid="db/dfe/namespacesolitary__wave__runup_1ae613a0b5526b721349ad944e795e3510" kindref="member">slope</ref>&apos;: np.array([-1., 0.,0.]),}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="73" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a19ce83f1b323d7e0cd2c6a59415794d5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>solitary_wave_runup.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>= dict([(key,i+1) for (i,key) in enumerate(<ref refid="db/dfe/namespacesolitary__wave__runup_1aaf3048b84f9384b78a39c00c427e6bb7" kindref="member">boundaries</ref>)])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="79" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a8d98e6318bfc882a7ca6800c5833248d" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list solitary_wave_runup.vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <initializer>= [[0.0,0.0],#0                                                           
+          [<ref refid="db/dfe/namespacesolitary__wave__runup_1a38f3bb37c15f1f58530b34310e311d6e" kindref="member">toe</ref>,0.0],#1                                                                        
+          [opts.slope_length,<ref refid="db/dfe/namespacesolitary__wave__runup_1a12fcc45c49d40b3766316a07ee4e10ff" kindref="member">slope_y</ref>],#2                                    
+          [opts.slope_length,<ref refid="db/dfe/namespacesolitary__wave__runup_1a5a0bd95b02a1e32dd25c1799412d691f" kindref="member">top</ref>],#3  
+          [0.0,<ref refid="db/dfe/namespacesolitary__wave__runup_1a5a0bd95b02a1e32dd25c1799412d691f" kindref="member">top</ref>]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="81" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a78b6bc30004b4876c1c0d6fbd6d45d27" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list solitary_wave_runup.vertexFlags</definition>
+        <argsstring></argsstring>
+        <name>vertexFlags</name>
+        <initializer>= [<ref refid="db/dfe/namespacesolitary__wave__runup_1a19ce83f1b323d7e0cd2c6a59415794d5" kindref="member">boundaryTags</ref>[&apos;left&apos;],
+             <ref refid="db/dfe/namespacesolitary__wave__runup_1a19ce83f1b323d7e0cd2c6a59415794d5" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+             <ref refid="db/dfe/namespacesolitary__wave__runup_1a19ce83f1b323d7e0cd2c6a59415794d5" kindref="member">boundaryTags</ref>[&apos;<ref refid="db/dfe/namespacesolitary__wave__runup_1ae613a0b5526b721349ad944e795e3510" kindref="member">slope</ref>&apos;],
+             <ref refid="db/dfe/namespacesolitary__wave__runup_1a19ce83f1b323d7e0cd2c6a59415794d5" kindref="member">boundaryTags</ref>[&apos;right&apos;],
+             <ref refid="db/dfe/namespacesolitary__wave__runup_1a19ce83f1b323d7e0cd2c6a59415794d5" kindref="member">boundaryTags</ref>[&apos;<ref refid="db/dfe/namespacesolitary__wave__runup_1a5a0bd95b02a1e32dd25c1799412d691f" kindref="member">top</ref>&apos;]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="87" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a7deded3bf82892e53fe40a5873e267d5" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list solitary_wave_runup.segments</definition>
+        <argsstring></argsstring>
+        <name>segments</name>
+        <initializer>= [[0,1],
+          [1,2],
+          [2,3],
+          [3,4],
+          [4,0]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="93" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a45a0e29633c81b311e428bdccf0ee8cf" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list solitary_wave_runup.segmentFlags</definition>
+        <argsstring></argsstring>
+        <name>segmentFlags</name>
+        <initializer>= [<ref refid="db/dfe/namespacesolitary__wave__runup_1a19ce83f1b323d7e0cd2c6a59415794d5" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+              <ref refid="db/dfe/namespacesolitary__wave__runup_1a19ce83f1b323d7e0cd2c6a59415794d5" kindref="member">boundaryTags</ref>[&apos;<ref refid="db/dfe/namespacesolitary__wave__runup_1ae613a0b5526b721349ad944e795e3510" kindref="member">slope</ref>&apos;],
+              <ref refid="db/dfe/namespacesolitary__wave__runup_1a19ce83f1b323d7e0cd2c6a59415794d5" kindref="member">boundaryTags</ref>[&apos;right&apos;],
+              <ref refid="db/dfe/namespacesolitary__wave__runup_1a19ce83f1b323d7e0cd2c6a59415794d5" kindref="member">boundaryTags</ref>[&apos;<ref refid="db/dfe/namespacesolitary__wave__runup_1a5a0bd95b02a1e32dd25c1799412d691f" kindref="member">top</ref>&apos;],
+              <ref refid="db/dfe/namespacesolitary__wave__runup_1a19ce83f1b323d7e0cd2c6a59415794d5" kindref="member">boundaryTags</ref>[&apos;left&apos;]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="99" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a8721cf5fa81d8e16d98143a7191d896b" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list solitary_wave_runup.regions</definition>
+        <argsstring></argsstring>
+        <name>regions</name>
+        <initializer>= [[0.1, 0.01]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="105" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a31e92635b81bbb87d823e7773e1c7691" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list solitary_wave_runup.regionFlags</definition>
+        <argsstring></argsstring>
+        <name>regionFlags</name>
+        <initializer>= [1]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="107" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1afeb710d796bbdb604f2a858e3c5305c0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>solitary_wave_runup.tank</definition>
+        <argsstring></argsstring>
+        <name>tank</name>
+        <initializer>=  st.CustomShape(<ref refid="db/dfe/namespacesolitary__wave__runup_1a6903a4925bed7921744a2a14f5f49b63" kindref="member">domain</ref>, <ref refid="db/dfe/namespacesolitary__wave__runup_1a8d98e6318bfc882a7ca6800c5833248d" kindref="member">vertices</ref>=<ref refid="db/dfe/namespacesolitary__wave__runup_1a8d98e6318bfc882a7ca6800c5833248d" kindref="member">vertices</ref>, <ref refid="db/dfe/namespacesolitary__wave__runup_1a78b6bc30004b4876c1c0d6fbd6d45d27" kindref="member">vertexFlags</ref>=<ref refid="db/dfe/namespacesolitary__wave__runup_1a78b6bc30004b4876c1c0d6fbd6d45d27" kindref="member">vertexFlags</ref>,
+                      <ref refid="db/dfe/namespacesolitary__wave__runup_1a7deded3bf82892e53fe40a5873e267d5" kindref="member">segments</ref>=<ref refid="db/dfe/namespacesolitary__wave__runup_1a7deded3bf82892e53fe40a5873e267d5" kindref="member">segments</ref>, <ref refid="db/dfe/namespacesolitary__wave__runup_1a45a0e29633c81b311e428bdccf0ee8cf" kindref="member">segmentFlags</ref>=<ref refid="db/dfe/namespacesolitary__wave__runup_1a45a0e29633c81b311e428bdccf0ee8cf" kindref="member">segmentFlags</ref>,
+                      <ref refid="db/dfe/namespacesolitary__wave__runup_1a8721cf5fa81d8e16d98143a7191d896b" kindref="member">regions</ref>=<ref refid="db/dfe/namespacesolitary__wave__runup_1a8721cf5fa81d8e16d98143a7191d896b" kindref="member">regions</ref>, <ref refid="db/dfe/namespacesolitary__wave__runup_1a31e92635b81bbb87d823e7773e1c7691" kindref="member">regionFlags</ref>=<ref refid="db/dfe/namespacesolitary__wave__runup_1a31e92635b81bbb87d823e7773e1c7691" kindref="member">regionFlags</ref>,
+                      <ref refid="db/dfe/namespacesolitary__wave__runup_1a19ce83f1b323d7e0cd2c6a59415794d5" kindref="member">boundaryTags</ref>=<ref refid="db/dfe/namespacesolitary__wave__runup_1a19ce83f1b323d7e0cd2c6a59415794d5" kindref="member">boundaryTags</ref>, <ref refid="db/dfe/namespacesolitary__wave__runup_1ab1d27e8cfbd319b7d8a0bb50bab1e49f" kindref="member">boundaryOrientations</ref>=<ref refid="db/dfe/namespacesolitary__wave__runup_1ab1d27e8cfbd319b7d8a0bb50bab1e49f" kindref="member">boundaryOrientations</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="109" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1aeebc71bce0dbb7f1339d59677dea87a9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>solitary_wave_runup.wavec</definition>
+        <argsstring></argsstring>
+        <name>wavec</name>
+        <initializer>=   np.sqrt(9.81 * (depth+opts.wave_height))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="126" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1ac857749e7d89abac80c0741da7548ed6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>solitary_wave_runup.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="161" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a3458e2d6d83b358d66bf88fca3050b35" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>solitary_wave_runup.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  TpFlow.OutputStepping(opts.final_time,dt_output=opts.dt_output)</initializer>
+        <briefdescription>
+<para>***** Create myTwoPhaseFlowProblem ***** # </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="167" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1ad9b0849c70a514ce870321c86cba5b9e" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary solitary_wave_runup.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;pressure&apos;: <ref refid="d4/d79/classsolitary__wave__runup_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;pressure_increment&apos;: <ref refid="d4/d79/classsolitary__wave__runup_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;<ref refid="d0/db5/classsolitary__wave__runup_1_1vel__u" kindref="compound">vel_u</ref>&apos;: <ref refid="d0/db5/classsolitary__wave__runup_1_1vel__u" kindref="compound">vel_u</ref>(),
+                     &apos;<ref refid="df/d74/classsolitary__wave__runup_1_1vel__v" kindref="compound">vel_v</ref>&apos;: <ref refid="df/d74/classsolitary__wave__runup_1_1vel__v" kindref="compound">vel_v</ref>(),
+                     &apos;clsvof&apos;: <ref refid="d2/d0a/classsolitary__wave__runup_1_1clsvof__init__cond" kindref="compound">clsvof_init_cond</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="169" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a4c0cbe1e15722d900cd0db7a898156a7" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary solitary_wave_runup.boundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>boundaryConditions</name>
+        <initializer>=  {
+    # DIRICHLET BCs #
+    &apos;pressure_DBC&apos;: lambda x, flag: domain.bc[flag].p_dirichlet.init_cython(),
+    &apos;pressure_increment_DBC&apos;: lambda x, flag: domain.bc[flag].pInc_dirichlet.init_cython(),
+    &apos;vel_u_DBC&apos;: lambda x, flag: domain.bc[flag].u_dirichlet.init_cython(),
+    &apos;vel_v_DBC&apos;: lambda x, flag: domain.bc[flag].v_dirichlet.init_cython(),
+    &apos;vel_w_DBC&apos;: lambda x, flag: domain.bc[flag].w_dirichlet.init_cython(),
+    &apos;clsvof_DBC&apos;: lambda x, flag: domain.bc[flag].vof_dirichlet.init_cython(),
+    # ADVECTIVE FLUX BCs #
+    &apos;pressure_AFBC&apos;: lambda x, flag: domain.bc[flag].p_advective.init_cython(),
+    &apos;pressure_increment_AFBC&apos;: lambda x, flag: domain.bc[flag].pInc_advective.init_cython(),
+    &apos;vel_u_AFBC&apos;: lambda x, flag: domain.bc[flag].u_advective.init_cython(),
+    &apos;vel_v_AFBC&apos;: lambda x, flag: domain.bc[flag].v_advective.init_cython(),
+    &apos;vel_w_AFBC&apos;: lambda x, flag: domain.bc[flag].w_advective.init_cython(),
+    &apos;clsvof_AFBC&apos;: lambda x, flag: domain.bc[flag].vof_advective.init_cython(),
+    # DIFFUSIVE FLUX BCs #
+    &apos;pressure_increment_DFBC&apos;: lambda x, flag: domain.bc[flag].pInc_diffusive.init_cython(),
+    &apos;vel_u_DFBC&apos;: lambda x, flag: domain.bc[flag].u_diffusive.init_cython(),
+    &apos;vel_v_DFBC&apos;: lambda x, flag: domain.bc[flag].v_diffusive.init_cython(),
+    &apos;vel_w_DFBC&apos;: lambda x, flag: domain.bc[flag].w_diffusive.init_cython(),
+    &apos;clsvof_DFBC&apos;: lambda x, flag: None}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="175" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1aade42b20ef2db798e664a3d74600ebbb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>solitary_wave_runup.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem(ns_model=1,
+                                             nd=2,
+                                             cfl=opts.cfl,
+                                             <ref refid="db/dfe/namespacesolitary__wave__runup_1a3458e2d6d83b358d66bf88fca3050b35" kindref="member">outputStepping</ref>=<ref refid="db/dfe/namespacesolitary__wave__runup_1a3458e2d6d83b358d66bf88fca3050b35" kindref="member">outputStepping</ref>,
+                                             <ref refid="db/dfe/namespacesolitary__wave__runup_1a401ecfe4617069d64a24ae6cf69a524f" kindref="member">structured</ref>=<ref refid="db/dfe/namespacesolitary__wave__runup_1a401ecfe4617069d64a24ae6cf69a524f" kindref="member">structured</ref>,
+                                             <ref refid="db/dfe/namespacesolitary__wave__runup_1aee91ff5cf67f6f1f3b8f8b8f98283969" kindref="member">he</ref>=<ref refid="db/dfe/namespacesolitary__wave__runup_1aee91ff5cf67f6f1f3b8f8b8f98283969" kindref="member">he</ref>,
+                                             <ref refid="db/dfe/namespacesolitary__wave__runup_1a6903a4925bed7921744a2a14f5f49b63" kindref="member">domain</ref>=<ref refid="db/dfe/namespacesolitary__wave__runup_1a6903a4925bed7921744a2a14f5f49b63" kindref="member">domain</ref>,
+                                             <ref refid="db/dfe/namespacesolitary__wave__runup_1ad9b0849c70a514ce870321c86cba5b9e" kindref="member">initialConditions</ref>=<ref refid="db/dfe/namespacesolitary__wave__runup_1ad9b0849c70a514ce870321c86cba5b9e" kindref="member">initialConditions</ref>,
+                                             <ref refid="db/dfe/namespacesolitary__wave__runup_1a4c0cbe1e15722d900cd0db7a898156a7" kindref="member">boundaryConditions</ref>=<ref refid="db/dfe/namespacesolitary__wave__runup_1a4c0cbe1e15722d900cd0db7a898156a7" kindref="member">boundaryConditions</ref>,
+                                             useSuperlu=False)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="197" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/dfe/namespacesolitary__wave__runup_1a302380a14ef0b99535b5913c4002f195" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>solitary_wave_runup.physical_parameters</definition>
+        <argsstring></argsstring>
+        <name>physical_parameters</name>
+        <initializer>=  myTpFlowProblem.physical_parameters</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="207" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="db/dfe/namespacesolitary__wave__runup_1a62484ad2107f97bf1870a4cd12dfb182" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def solitary_wave_runup.weight</definition>
+        <argsstring>(x, t)</argsstring>
+        <name>weight</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="128" column="1" bodyfile="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" bodystart="128" bodyend="133"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Wave_runup
+</verbatim> </para>
+    </detaileddescription>
+    <location file="tests/proteus_tutorial/2d/extras/solitary_wave_runup.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

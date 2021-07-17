@@ -1,45 +1,51 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Navier-Stokes &mdash; Proteus 1.7.4.dev0 documentation</title>
+  <title>Multiphase Navier-Stokes &mdash; Proteus 1.8.0 documentation</title>
   
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
 
   
   
     <link rel="shortcut icon" href="../_static/tritonBorder.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Mesh Motion" href="mesh_motion.html" /> 
+    <link rel="next" title="Shallow Water Flow" href="SWFlow.html" />
+    <link rel="prev" title="WaveTools" href="../tools/wave_tools.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -66,7 +72,7 @@
             
             
               <div class="version">
-                1.7.4.dev0
+                1.8.0
               </div>
             
           
@@ -83,6 +89,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -90,19 +97,12 @@
               
             
             
-              <p class="caption"><span class="caption-text">General</span></p>
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../apicapi.html">API docs</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Tools</span></p>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../tools/boundary_conditions.html">BoundaryConditions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../tools/boundary_conditions.html#usage">Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../tools/boundary_conditions.html#import">Import</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/spatial_tools.html">SpatialTools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/spatial_tools.html#usage">Usage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#import">Import</a></li>
@@ -143,7 +143,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/two_phase_flow.html">TwoPhaseFlow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/wave_tools.html">WaveTools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/wave_tools.html#usage">Usage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tools/wave_tools.html#import-in-command-line">Import in command line</a></li>
@@ -155,33 +154,9 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Models</span></p>
+<p class="caption" role="heading"><span class="caption-text">Models</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="body_dynamics.html">Body Dynamics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="body_dynamics.html#implementation">Implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="body_dynamics.html#classes">Classes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchsystem">ProtChSystem</a></li>
-<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchbody">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchmesh">ProtChMesh</a></li>
-<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchmoorings">ProtChMoorings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchaddedmass">ProtChAddedMass</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#id3">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#id4">ProtChMoorings</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="free_surface.html">Free Surface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="free_surface.html#vof-ncls">VOF - NCLS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="free_surface.html#clsvof">CLSVOF</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="mesh_adaptivity.html">Mesh Adaptivity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="mesh_motion.html">Mesh Motion</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Navier-Stokes</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Multiphase Navier-Stokes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#two-phase">Two-Phase</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#three-phase">Three-Phase</a></li>
@@ -192,11 +167,41 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="SWFlow.html">Shallow Water Flow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="SWFlow.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SWFlow.html#shallow-water-equations">Shallow Water Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SWFlow.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="SWFlow.html#running-the-tests">Running the tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="free_surface.html">Free Surface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="free_surface.html#vof-ncls">VOF - NCLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="free_surface.html#clsvof">CLSVOF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="body_dynamics.html">Multi-Body Solid Dynamics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="body_dynamics.html#implementation">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="body_dynamics.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchsystem">ProtChSystem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchbody">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchmesh">ProtChMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchmoorings">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#protchaddedmass">ProtChAddedMass</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#id2">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="body_dynamics.html#id3">ProtChMoorings</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -231,18 +236,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Navier-Stokes</li>
+      <li>Multiphase Navier-Stokes</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             
               <a href="https://github.com/erdc/proteus/blob/masterdocs/source/models/navier_stokes.rst" class="fa fa-github"> Edit on GitHub</a>
             
@@ -258,8 +265,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="navier-stokes">
-<span id="id1"></span><h1>Navier-Stokes<a class="headerlink" href="#navier-stokes" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="multiphase-navier-stokes">
+<span id="navier-stokes"></span><h1>Multiphase Navier-Stokes<a class="headerlink" href="#multiphase-navier-stokes" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="description">
 <h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
 <p>There are currently 3 implementations of Navier-Stokes equations in proteus:</p>
@@ -303,27 +310,29 @@ source documentation available here: <a class="reference internal" href="../api/
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="mesh_motion.html" class="btn btn-neutral float-left" title="Mesh Motion" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="SWFlow.html" class="btn btn-neutral float-right" title="Shallow Water Flow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../tools/wave_tools.html" class="btn btn-neutral float-left" title="WaveTools" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, The Proteus Team
+        &#169; Copyright 2020, The Proteus Team.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -331,7 +340,6 @@ source documentation available here: <a class="reference internal" href="../api/
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

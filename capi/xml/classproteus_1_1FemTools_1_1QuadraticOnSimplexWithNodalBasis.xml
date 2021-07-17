@@ -1,0 +1,197 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classproteus_1_1FemTools_1_1QuadraticOnSimplexWithNodalBasis" kind="class" language="Python" prot="public">
+    <compoundname>proteus::FemTools::QuadraticOnSimplexWithNodalBasis</compoundname>
+    <basecompoundref refid="classproteus_1_1FemTools_1_1LocalFunctionSpace" prot="public" virt="non-virtual">proteus.FemTools.LocalFunctionSpace</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classproteus_1_1FemTools_1_1QuadraticOnSimplexWithNodalBasis_1a6f6806a4a106926f1626539ab896cfbc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.FemTools.QuadraticOnSimplexWithNodalBasis::referenceElement</definition>
+        <argsstring></argsstring>
+        <name>referenceElement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FemTools.py" line="798" column="1" bodyfile="FemTools.py" bodystart="798" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1FemTools_1_1QuadraticOnSimplexWithNodalBasis_1a513c9f441b6307dd1c9879febe7cf17b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.FemTools.QuadraticOnSimplexWithNodalBasis::gradientList</definition>
+        <argsstring></argsstring>
+        <name>gradientList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FemTools.py" line="801" column="1" bodyfile="FemTools.py" bodystart="801" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1FemTools_1_1QuadraticOnSimplexWithNodalBasis_1af6c6d305cf7e3000da0d990891dc2f1f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.FemTools.QuadraticOnSimplexWithNodalBasis::basisHessians</definition>
+        <argsstring></argsstring>
+        <name>basisHessians</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FemTools.py" line="802" column="1" bodyfile="FemTools.py" bodystart="802" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1FemTools_1_1QuadraticOnSimplexWithNodalBasis_1ab9fae77870f30f62f18d6c6d3dff1f13" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.FemTools.QuadraticOnSimplexWithNodalBasis::nonzeroHessians</definition>
+        <argsstring></argsstring>
+        <name>nonzeroHessians</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FemTools.py" line="803" column="1" bodyfile="FemTools.py" bodystart="803" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classproteus_1_1FemTools_1_1QuadraticOnSimplexWithNodalBasis_1a3ae124a2e5cdad3c029f4814f4ec233b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.FemTools.QuadraticOnSimplexWithNodalBasis.__init__</definition>
+        <argsstring>(self, nd=3)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>nd</type>
+          <defname>nd</defname>
+          <defval>3</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FemTools.py" line="792" column="1" bodyfile="FemTools.py" bodystart="792" bodyend="1012"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Quadratic polynomials on the unit nd-simplex with the nodal basis.
+
+Nodal basis functions on the reference nd-simplex (nd &lt;=3) with
+coordinates xi[0],xi[1],and xi[2]. The basis functions are
+numbered according to
+
+.. math::
+
+\psi &amp;= \lambda_i(2\lambda_i-1)  0&lt;= i&lt;= d
+\psi &amp;= 4\lambda_j\lambda_k       0&lt;= j &lt; k &lt;= d
+
+where :math:`\lambda_i` is the barycentric coordinate associated
+with node i (i.e., it&apos;s 1 at node i and zero elsewhere)
+
+Gradients of shape functions are
+
+.. math::
+
+ \nabla \psi_i &amp;= (4\lambda_i-1)\nabla\lambda_i   0&lt;= i &lt;= d
+ \nabla \psi_i &amp;= 4\lambda_k\nabla\lambda_j + 4\lambda_j\nabla\lambda_k \mbox{for} 0 &lt;= j &lt; k &lt;= d
+
+In 2d we have
+
+.. math::
+
+\psi_i &amp;= \lambda_i(2\lambda_i-1)  0&lt;= i&lt;= 2
+\psi_3 &amp;= 4\lambda_0\lambda_1
+\psi_4 &amp;= 4\lambda_1\lambda_2
+\psi_5 &amp;= 4\lambda_0\lambda_2
+
+
+2d numberings for :math:`\psi`
+
+  2
+  |\
+  | \
+  |  \
+  5   4
+  |    \
+  |     \
+  0---3--1
+
+Note that mesh numbers edges according to the node they are across
+from, so that local dof 3 corresponds to edge 2, local dof 4
+corresponds to edge 0, local dof 5 corresponds to edge 1,
+
+3d should be
+
+.. math::
+
+\psi_i &amp;= \lambda_i(2\lambda_i-1)  0&lt;= i&lt;= 3
+\psi_4 &amp;= 4\lambda_0\lambda_1
+\psi_5 &amp;= 4\lambda_1\lambda_2
+\psi_6 &amp;= 4\lambda_2\lambda_3
+\psi_7 &amp;= 4\lambda_0\lambda_2
+\psi_8 &amp;= 4\lambda_1\lambda_3
+\psi_9 &amp;= 4\lambda_0\lambda_3
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>proteus.FemTools.QuadraticOnSimplexWithNodalBasis</label>
+        <link refid="classproteus_1_1FemTools_1_1QuadraticOnSimplexWithNodalBasis"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>object</label>
+      </node>
+      <node id="2">
+        <label>proteus.FemTools.LocalFunctionSpace</label>
+        <link refid="classproteus_1_1FemTools_1_1LocalFunctionSpace"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>proteus.FemTools.QuadraticOnSimplexWithNodalBasis</label>
+        <link refid="classproteus_1_1FemTools_1_1QuadraticOnSimplexWithNodalBasis"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>object</label>
+      </node>
+      <node id="2">
+        <label>proteus.FemTools.LocalFunctionSpace</label>
+        <link refid="classproteus_1_1FemTools_1_1LocalFunctionSpace"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="FemTools.py" line="732" column="1" bodyfile="FemTools.py" bodystart="732" bodyend="1016"/>
+    <listofallmembers>
+      <member refid="classproteus_1_1FemTools_1_1QuadraticOnSimplexWithNodalBasis_1a3ae124a2e5cdad3c029f4814f4ec233b" prot="public" virt="non-virtual"><scope>proteus::FemTools::QuadraticOnSimplexWithNodalBasis</scope><name>__init__</name></member>
+      <member refid="classproteus_1_1FemTools_1_1LocalFunctionSpace_1ac27bb5062e2e476ffa6648d70b1c33d9" prot="public" virt="non-virtual" ambiguityscope="proteus::FemTools::LocalFunctionSpace."><scope>proteus::FemTools::QuadraticOnSimplexWithNodalBasis</scope><name>__init__</name></member>
+      <member refid="classproteus_1_1FemTools_1_1LocalFunctionSpace_1af19beeb708dd758eb6890b199d0b1d38" prot="public" virt="non-virtual"><scope>proteus::FemTools::QuadraticOnSimplexWithNodalBasis</scope><name>basis</name></member>
+      <member refid="classproteus_1_1FemTools_1_1LocalFunctionSpace_1ab74c47f0b65719f4fa279f601c4d6512" prot="public" virt="non-virtual"><scope>proteus::FemTools::QuadraticOnSimplexWithNodalBasis</scope><name>basisGradients</name></member>
+      <member refid="classproteus_1_1FemTools_1_1LocalFunctionSpace_1aab3043f959c1a0aca1d651c550fb60b2" prot="public" virt="non-virtual"><scope>proteus::FemTools::QuadraticOnSimplexWithNodalBasis</scope><name>basisGradientsTrace</name></member>
+      <member refid="classproteus_1_1FemTools_1_1QuadraticOnSimplexWithNodalBasis_1af6c6d305cf7e3000da0d990891dc2f1f" prot="public" virt="non-virtual"><scope>proteus::FemTools::QuadraticOnSimplexWithNodalBasis</scope><name>basisHessians</name></member>
+      <member refid="classproteus_1_1FemTools_1_1LocalFunctionSpace_1a313fd8ea74e4685c4f19c5b9581ebb38" prot="public" virt="non-virtual"><scope>proteus::FemTools::QuadraticOnSimplexWithNodalBasis</scope><name>basisTrace</name></member>
+      <member refid="classproteus_1_1FemTools_1_1LocalFunctionSpace_1adf96041ee3576eeb7a2018426bb1046a" prot="public" virt="non-virtual"><scope>proteus::FemTools::QuadraticOnSimplexWithNodalBasis</scope><name>defineTraceFunctions</name></member>
+      <member refid="classproteus_1_1FemTools_1_1LocalFunctionSpace_1a9a0c22553fef7255f58e70a3b3c489cd" prot="public" virt="non-virtual"><scope>proteus::FemTools::QuadraticOnSimplexWithNodalBasis</scope><name>dim</name></member>
+      <member refid="classproteus_1_1FemTools_1_1QuadraticOnSimplexWithNodalBasis_1a513c9f441b6307dd1c9879febe7cf17b" prot="public" virt="non-virtual"><scope>proteus::FemTools::QuadraticOnSimplexWithNodalBasis</scope><name>gradientList</name></member>
+      <member refid="classproteus_1_1FemTools_1_1QuadraticOnSimplexWithNodalBasis_1ab9fae77870f30f62f18d6c6d3dff1f13" prot="public" virt="non-virtual"><scope>proteus::FemTools::QuadraticOnSimplexWithNodalBasis</scope><name>nonzeroHessians</name></member>
+      <member refid="classproteus_1_1FemTools_1_1LocalFunctionSpace_1ae0ed819288739c9fa9858f4cac83ebaf" prot="public" virt="non-virtual"><scope>proteus::FemTools::QuadraticOnSimplexWithNodalBasis</scope><name>range_dim</name></member>
+      <member refid="classproteus_1_1FemTools_1_1QuadraticOnSimplexWithNodalBasis_1a6f6806a4a106926f1626539ab896cfbc" prot="public" virt="non-virtual"><scope>proteus::FemTools::QuadraticOnSimplexWithNodalBasis</scope><name>referenceElement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

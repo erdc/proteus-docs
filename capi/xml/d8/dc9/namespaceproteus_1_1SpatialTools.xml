@@ -1,0 +1,348 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d8/dc9/namespaceproteus_1_1SpatialTools" kind="namespace" language="Python">
+    <compoundname>proteus::SpatialTools</compoundname>
+    <innerclass refid="d2/d13/classproteus_1_1SpatialTools_1_1BCContainer" prot="public">proteus::SpatialTools::BCContainer</innerclass>
+    <innerclass refid="d8/d35/classproteus_1_1SpatialTools_1_1Circle" prot="public">proteus::SpatialTools::Circle</innerclass>
+    <innerclass refid="df/dcc/classproteus_1_1SpatialTools_1_1Cuboid" prot="public">proteus::SpatialTools::Cuboid</innerclass>
+    <innerclass refid="db/d28/classproteus_1_1SpatialTools_1_1CustomShape" prot="public">proteus::SpatialTools::CustomShape</innerclass>
+    <innerclass refid="dc/d58/classproteus_1_1SpatialTools_1_1Cylinder" prot="public">proteus::SpatialTools::Cylinder</innerclass>
+    <innerclass refid="d4/d87/classproteus_1_1SpatialTools_1_1Rectangle" prot="public">proteus::SpatialTools::Rectangle</innerclass>
+    <innerclass refid="d1/d6c/classproteus_1_1SpatialTools_1_1Shape" prot="public">proteus::SpatialTools::Shape</innerclass>
+    <innerclass refid="d6/d21/classproteus_1_1SpatialTools_1_1ShapeSTL" prot="public">proteus::SpatialTools::ShapeSTL</innerclass>
+    <innerclass refid="d3/ded/classproteus_1_1SpatialTools_1_1Sphere" prot="public">proteus::SpatialTools::Sphere</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d8/dc9/namespaceproteus_1_1SpatialTools_1ae4f8d61b65dfdc500b682cb0a0eaee05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SpatialTools.getInfoFromSTL</definition>
+        <argsstring>(filename)</argsstring>
+        <name>getInfoFromSTL</name>
+        <param>
+          <type>filename</type>
+          <defname>filename</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Extracts information from STL file and converts it to a Proteus friendly
+format. Duplicate vertices and segments are removed during the process,
+so the shape is ready for meshing.
+
+Parameters
+----------
+filename: name of STL file
+
+Returns
+-------
+vertices: array_like
+    Array of vertices that define STL shape (duplicates removed)
+facets: array_like
+    Array of facets (loops of 3 vertices)
+facetnormals: array_like
+    normal vertors of each facet
+vertexFlags: array_like
+    vertex flags according to boundary ownership
+facetFlags: array_like
+    facet flags according to boundary ownership
+boundaryTags: dictionary
+    Dictionary of boundaries. Has the same number and name as the stl blocks contained
+    in the stl file
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SpatialTools.py" line="1118" column="1" bodyfile="SpatialTools.py" bodystart="1118" bodyend="1189"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dc9/namespaceproteus_1_1SpatialTools_1a721695ac480c80b6e7a61a387d09469e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SpatialTools.unique_rows</definition>
+        <argsstring>(arr)</argsstring>
+        <name>unique_rows</name>
+        <param>
+          <type>arr</type>
+          <defname>arr</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SpatialTools.py" line="1190" column="1" bodyfile="SpatialTools.py" bodystart="1190" bodyend="1199"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dc9/namespaceproteus_1_1SpatialTools_1ab8fb0089f76b6302e922241bcc01477d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SpatialTools.rotation2D</definition>
+        <argsstring>(points, rot, pivot=(0., 0.))</argsstring>
+        <name>rotation2D</name>
+        <param>
+          <type>points</type>
+          <defname>points</defname>
+        </param>
+        <param>
+          <type>rot</type>
+          <defname>rot</defname>
+        </param>
+        <param>
+          <type>pivot</type>
+          <defname>pivot</defname>
+          <defval>(0., 0.)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Rotates a set of points/vertices/vectors around a pivotal point in 2D.
+
+Parameters
+----------
+points: array_like
+    Array of point coordinates to rotate.
+rot: float
+    Angle of rotation.
+pivot: array_like
+    Pivotal point around which the set of points will be rotated.
+
+Returns
+-------
+points_rot: array_like
+    Rotated set of points.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SpatialTools.py" line="1212" column="1" bodyfile="SpatialTools.py" bodystart="1212" bodyend="1258"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dc9/namespaceproteus_1_1SpatialTools_1a2f264ad0cb06a3d3d362a795f3f4f050" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SpatialTools.rotation3D</definition>
+        <argsstring>(points, rot, axis=(0., 0., 1.), pivot=(0., 0., 0.))</argsstring>
+        <name>rotation3D</name>
+        <param>
+          <type>points</type>
+          <defname>points</defname>
+        </param>
+        <param>
+          <type>rot</type>
+          <defname>rot</defname>
+        </param>
+        <param>
+          <type>axis</type>
+          <defname>axis</defname>
+          <defval>(0., 0., 1.)</defval>
+        </param>
+        <param>
+          <type>pivot</type>
+          <defname>pivot</defname>
+          <defval>(0., 0., 0.)</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Rotates a set of points/vertices/vectors around a pivotal point in 3D.
+
+Parameters
+----------
+points: array_like
+    Array of point coordinates to rotate.
+rot: float
+    Angle of rotation.
+axis: array_like
+    Axis of rotation.
+pivot: array_like
+    Pivotal point around which the set of points will be rotated.
+
+Returns
+-------
+points_rot: array_like
+    Rotated set of points.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SpatialTools.py" line="1259" column="1" bodyfile="SpatialTools.py" bodystart="1259" bodyend="1330"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dc9/namespaceproteus_1_1SpatialTools_1af986fc7fcc3ea3b6cbcea9cc241dc9f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SpatialTools.assembleDomain</definition>
+        <argsstring>(domain)</argsstring>
+        <name>assembleDomain</name>
+        <param>
+          <type>domain</type>
+          <defname>domain</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>This function sets up everything needed for the domain, meshing, and
+AuxiliaryVariables calculations (if any).
+It should always be called after defining and manipulating all the shapes
+to be attached to the domain.
+
+Parameters
+----------
+domain: proteus.Domain.D_base
+    Domain class instance that hold all the geometrical informations and
+    boundary conditions of the shape.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SpatialTools.py" line="1331" column="1" bodyfile="SpatialTools.py" bodystart="1331" bodyend="1347"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dc9/namespaceproteus_1_1SpatialTools_1a7887d3924378105ff56e57a5d9158f79" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SpatialTools._assembleGeometry</definition>
+        <argsstring>(domain, BC_class)</argsstring>
+        <name>_assembleGeometry</name>
+        <param>
+          <type>domain</type>
+          <defname>domain</defname>
+        </param>
+        <param>
+          <type>BC_class</type>
+          <defname>BC_class</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Assembles all the geometrical informations of the shapes attached to a
+domain.
+
+Parameters
+----------
+domain: proteus.Domain.D_base
+    Domain class instance that hold all the geometrical informations and
+    boundary conditions of the shape.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SpatialTools.py" line="1348" column="1" bodyfile="SpatialTools.py" bodystart="1348" bodyend="1588"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dc9/namespaceproteus_1_1SpatialTools_1ae1fcdeaa4d6dbf7165a4b7c0382a2f31" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SpatialTools._generateMesh</definition>
+        <argsstring>(domain)</argsstring>
+        <name>_generateMesh</name>
+        <param>
+          <type>domain</type>
+          <defname>domain</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Generates tetgen mesh of domain
+
+Parameters
+----------
+domain: proteus.Domain.D_base
+    Domain class instance that hold all the geometrical informations and
+    boundary conditions of the shape.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SpatialTools.py" line="1589" column="1" bodyfile="SpatialTools.py" bodystart="1589" bodyend="1618"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dc9/namespaceproteus_1_1SpatialTools_1a16940226d0ed9728eb49127dc04df901" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SpatialTools.getGmshPhysicalGroups</definition>
+        <argsstring>(geofile)</argsstring>
+        <name>getGmshPhysicalGroups</name>
+        <param>
+          <type>geofile</type>
+          <defname>geofile</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SpatialTools.py" line="1619" column="1" bodyfile="SpatialTools.py" bodystart="1619" bodyend="1641"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/dc9/namespaceproteus_1_1SpatialTools_1a58a5ffa1c49eccba83653d9cc42408c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SpatialTools.extrude2Dto3D</definition>
+        <argsstring>(extrusion, vertices, segments, facets, regions=None)</argsstring>
+        <name>extrude2Dto3D</name>
+        <param>
+          <type>extrusion</type>
+          <defname>extrusion</defname>
+        </param>
+        <param>
+          <type>vertices</type>
+          <defname>vertices</defname>
+        </param>
+        <param>
+          <type>segments</type>
+          <defname>segments</defname>
+        </param>
+        <param>
+          <type>facets</type>
+          <defname>facets</defname>
+        </param>
+        <param>
+          <type>regions</type>
+          <defname>regions</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Extrude 2D geometry attributes in 3D
+
+Parameters
+----------
+extrusion: array_like
+    value of the extrusion (e.g. [1.4, 0., 0.])
+vertices: array_like
+    list of vertices of the 2D shape
+segments: array_like
+    list of segments of the 2D shape
+facets: array_like
+    list of facets of the 2D shape
+regions: array_like
+    list of regions of the 2D shape
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SpatialTools.py" line="1642" column="1" bodyfile="SpatialTools.py" bodystart="1642" bodyend="1683"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Module creating predifined or custom shapes. Each shape needs a
+Domain as argument (from proteus.Domain). A Domain can contain any
+number of shapes.  Boundary conditions objects are automatically
+created for each facet (3D) or segment (2D) defining the shape.
+
+Classes:
+
+  * Shape: super class, regroups functions common to all shapes
+  * Cuboid: creates a 3D cuboid
+  * Rectangle: creates a 2D rectangle
+  * Custom: creates a custom shape from a given set vertices, facets, etc.
+
+
+Example::
+
+  from proteus import Domain
+  from proteus import SpatialTools as st
+  import numpy as np
+  domain = Domain.PlanarStraightLineGraphDomain()
+  shape1 = st.Rectangle(domain, dim=[0.5, 0.5], coords=[1., 1.])
+  shape2 = st.Rectangle(domain. dim=[0.3, 0.2], coords=[3., 3.])
+  shape2.rotate(np.pi/3.)
+  shape2.BC_dict[&quot;left&quot;].uOfXT = lambda x, t: 0.
+
+  st.assembleDomain(domain)
+
+.. inheritance-diagram:: proteus.SpatialTools
+   :parts: 1</verbatim> </para>
+    </detaileddescription>
+    <location file="SpatialTools.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,3232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classproteus_1_1RANS1P2D" kind="class" language="C++" prot="public">
+    <compoundname>proteus::RANS1P2D</compoundname>
+    <basecompoundref refid="classproteus_1_1RANS1P2D__base" prot="public" virt="non-virtual">proteus::RANS1P2D_base</basecompoundref>
+    <includes refid="RANS1P2D_8h" local="no">RANS1P2D.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class CompKernelType</type>
+      </param>
+      <param>
+        <type>class CompKernelType_v</type>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>nSpace</declname>
+        <defname>nSpace</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>nQuadraturePoints_element</declname>
+        <defname>nQuadraturePoints_element</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>nDOF_mesh_trial_element</declname>
+        <defname>nDOF_mesh_trial_element</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>nDOF_trial_element</declname>
+        <defname>nDOF_trial_element</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>nDOF_test_element</declname>
+        <defname>nDOF_test_element</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>nDOF_v_trial_element</declname>
+        <defname>nDOF_v_trial_element</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>nDOF_v_test_element</declname>
+        <defname>nDOF_v_test_element</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>nQuadraturePoints_elementBoundary</declname>
+        <defname>nQuadraturePoints_elementBoundary</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classproteus_1_1RANS1P2D_1ad1c674e75c885e9aca8119650661b5a5" prot="public" static="no" mutable="no">
+        <type>std::set&lt; int &gt;</type>
+        <definition>std::set&lt;int&gt; proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::ifem_boundaries</definition>
+        <argsstring></argsstring>
+        <name>ifem_boundaries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="309" column="14" bodyfile="mprans/RANS1P2D.h" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1RANS1P2D_1a15a4fb8768056e91bf566c339a7b489a" prot="public" static="no" mutable="no">
+        <type>std::set&lt; int &gt;</type>
+        <definition>std::set&lt;int&gt; proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::ifem_boundary_elements</definition>
+        <argsstring></argsstring>
+        <name>ifem_boundary_elements</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="309" column="30" bodyfile="mprans/RANS1P2D.h" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1RANS1P2D_1a2172956f4a41b85f623c322181ac14ed" prot="public" static="no" mutable="no">
+        <type>std::set&lt; int &gt;</type>
+        <definition>std::set&lt;int&gt; proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::cutfem_boundaries</definition>
+        <argsstring></argsstring>
+        <name>cutfem_boundaries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="310" column="7" bodyfile="mprans/RANS1P2D.h" bodystart="310" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1RANS1P2D_1a66945b0861fca93354a9d3bc2c67624b" prot="public" static="no" mutable="no">
+        <type>std::map&lt; int, int &gt;</type>
+        <definition>std::map&lt;int, int&gt; proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::cutfem_local_boundaries</definition>
+        <argsstring></argsstring>
+        <name>cutfem_local_boundaries</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="311" column="14" bodyfile="mprans/RANS1P2D.h" bodystart="311" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1RANS1P2D_1a02becb5a20bb7c2d811746f6918e4d4c" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::nDOF_test_X_trial_element</definition>
+        <argsstring></argsstring>
+        <name>nDOF_test_X_trial_element</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="313" column="15" bodyfile="mprans/RANS1P2D.h" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1RANS1P2D_1a5c457d0e34d475375f5101953c6d6e40" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::nDOF_test_X_v_trial_element</definition>
+        <argsstring></argsstring>
+        <name>nDOF_test_X_v_trial_element</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="314" column="15" bodyfile="mprans/RANS1P2D.h" bodystart="314" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1RANS1P2D_1ab628048e9a5764fd3a4aa3955977f9f4" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::nDOF_v_test_X_trial_element</definition>
+        <argsstring></argsstring>
+        <name>nDOF_v_test_X_trial_element</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="315" column="15" bodyfile="mprans/RANS1P2D.h" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1RANS1P2D_1a9cd39336bf36434e4e786325ce33fe55" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::nDOF_v_test_X_v_trial_element</definition>
+        <argsstring></argsstring>
+        <name>nDOF_v_test_X_v_trial_element</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="316" column="15" bodyfile="mprans/RANS1P2D.h" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1RANS1P2D_1ac3156c4d17f1d687a979287b644a176d" prot="public" static="no" mutable="no">
+        <type>CompKernelType</type>
+        <definition>CompKernelType proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::ck</definition>
+        <argsstring></argsstring>
+        <name>ck</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="317" column="20" bodyfile="mprans/RANS1P2D.h" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1RANS1P2D_1a499192308024a2cdb56986d055aceec4" prot="public" static="no" mutable="no">
+        <type>CompKernelType_v</type>
+        <definition>CompKernelType_v proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::ck_v</definition>
+        <argsstring></argsstring>
+        <name>ck_v</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="318" column="22" bodyfile="mprans/RANS1P2D.h" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1RANS1P2D_1a059c1d9d28ad025aa202efa2792f2465" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceproteus_1a09a5c13a2cdadf8ef88af93749698626" kindref="member">GeneralizedFunctions</ref>&lt; nSpace, 3, nQuadraturePoints_element, nQuadraturePoints_elementBoundary &gt;</type>
+        <definition>GeneralizedFunctions&lt;nSpace,3,nQuadraturePoints_element,nQuadraturePoints_elementBoundary&gt; proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::gf</definition>
+        <argsstring></argsstring>
+        <name>gf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="319" column="26" bodyfile="mprans/RANS1P2D.h" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1RANS1P2D_1a0b36080feaa1b2adf6be229ef67d21ec" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceproteus_1a09a5c13a2cdadf8ef88af93749698626" kindref="member">GeneralizedFunctions</ref>&lt; nSpace, 3, nQuadraturePoints_element, nQuadraturePoints_elementBoundary &gt;</type>
+        <definition>GeneralizedFunctions&lt;nSpace,3,nQuadraturePoints_element,nQuadraturePoints_elementBoundary&gt; proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::gf_p</definition>
+        <argsstring></argsstring>
+        <name>gf_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="320" column="26" bodyfile="mprans/RANS1P2D.h" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1RANS1P2D_1aab6fb65eeeff50edfb3d80423c161c92" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceproteus_1a09a5c13a2cdadf8ef88af93749698626" kindref="member">GeneralizedFunctions</ref>&lt; nSpace, 3, nQuadraturePoints_element, nQuadraturePoints_elementBoundary &gt;</type>
+        <definition>GeneralizedFunctions&lt;nSpace,3,nQuadraturePoints_element,nQuadraturePoints_elementBoundary&gt; proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::gf_s</definition>
+        <argsstring></argsstring>
+        <name>gf_s</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="321" column="26" bodyfile="mprans/RANS1P2D.h" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1a5f2dd5cea649dd232ad7d1a23c231cff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::RANS1P2D</definition>
+        <argsstring>()</argsstring>
+        <name>RANS1P2D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="322" column="5" bodyfile="mprans/RANS1P2D.h" bodystart="322" bodyend="329"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1afa7e3ff59c86b134d61cfdbd82ea54ac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::evaluateCoefficients</definition>
+        <argsstring>(const double NONCONSERVATIVE_FORM, const double sigma, const double rho, double nu, const double h_e, const double smagorinskyConstant, const int turbulenceClosureModel, const double g[nSpace], const double useVF, const double &amp;vf, const double &amp;phi, const double n[nSpace], const double &amp;kappa, const double porosity, const double phi_solid, const double p_old, const double u_old, const double v_old, const double w_old, const double grad_p_old[nSpace], const double grad_u_old[nSpace], const double grad_v_old[nSpace], const double grad_w_old[nSpace], const double &amp;p, const double grad_p[nSpace], const double grad_u[nSpace], const double grad_v[nSpace], const double grad_w[nSpace], const double &amp;u, const double &amp;v, const double &amp;w, const double LAG_LES, double &amp;eddy_viscosity, double &amp;eddy_viscosity_last, double &amp;mom_u_acc, double &amp;dmom_u_acc_u, double &amp;mom_v_acc, double &amp;dmom_v_acc_v, double &amp;mom_w_acc, double &amp;dmom_w_acc_w, double mass_adv[nSpace], double dmass_adv_u[nSpace], double dmass_adv_v[nSpace], double dmass_adv_w[nSpace], double mom_u_adv[nSpace], double dmom_u_adv_u[nSpace], double dmom_u_adv_v[nSpace], double dmom_u_adv_w[nSpace], double mom_v_adv[nSpace], double dmom_v_adv_u[nSpace], double dmom_v_adv_v[nSpace], double dmom_v_adv_w[nSpace], double mom_w_adv[nSpace], double dmom_w_adv_u[nSpace], double dmom_w_adv_v[nSpace], double dmom_w_adv_w[nSpace], double mom_uu_diff_ten[nSpace], double mom_vv_diff_ten[nSpace], double mom_ww_diff_ten[nSpace], double mom_uv_diff_ten[1], double mom_uw_diff_ten[1], double mom_vu_diff_ten[1], double mom_vw_diff_ten[1], double mom_wu_diff_ten[1], double mom_wv_diff_ten[1], double &amp;mom_u_source, double &amp;mom_v_source, double &amp;mom_w_source, double &amp;mom_u_ham, double dmom_u_ham_grad_p[nSpace], double dmom_u_ham_grad_u[nSpace], double &amp;dmom_u_ham_u, double &amp;dmom_u_ham_v, double &amp;dmom_u_ham_w, double &amp;mom_v_ham, double dmom_v_ham_grad_p[nSpace], double dmom_v_ham_grad_v[nSpace], double &amp;dmom_v_ham_u, double &amp;dmom_v_ham_v, double &amp;dmom_v_ham_w, double &amp;mom_w_ham, double dmom_w_ham_grad_p[nSpace], double dmom_w_ham_grad_w[nSpace], double &amp;dmom_w_ham_u, double &amp;dmom_w_ham_v, double &amp;dmom_w_ham_w, double forcex, double forcey, double forcez)</argsstring>
+        <name>evaluateCoefficients</name>
+        <param>
+          <type>const double</type>
+          <declname>NONCONSERVATIVE_FORM</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>sigma</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rho</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>nu</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>h_e</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>smagorinskyConstant</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>turbulenceClosureModel</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>g</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>useVF</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>vf</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>n</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>kappa</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>porosity</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>phi_solid</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>p_old</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>u_old</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>v_old</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>w_old</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>grad_p_old</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>grad_u_old</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>grad_v_old</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>grad_w_old</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>grad_p</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>grad_u</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>grad_v</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>grad_w</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>LAG_LES</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>eddy_viscosity</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>eddy_viscosity_last</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_u_acc</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_u_acc_u</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_v_acc</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_v_acc_v</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_w_acc</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_w_acc_w</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mass_adv</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmass_adv_u</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmass_adv_v</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmass_adv_w</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_u_adv</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_u_adv_u</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_u_adv_v</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_u_adv_w</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_v_adv</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_v_adv_u</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_v_adv_v</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_v_adv_w</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_w_adv</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_w_adv_u</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_w_adv_v</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_w_adv_w</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_uu_diff_ten</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_vv_diff_ten</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_ww_diff_ten</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_uv_diff_ten</declname>
+          <array>[1]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_uw_diff_ten</declname>
+          <array>[1]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_vu_diff_ten</declname>
+          <array>[1]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_vw_diff_ten</declname>
+          <array>[1]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_wu_diff_ten</declname>
+          <array>[1]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_wv_diff_ten</declname>
+          <array>[1]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_u_source</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_v_source</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_w_source</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_u_ham</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_u_ham_grad_p</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_u_ham_grad_u</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_u_ham_u</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_u_ham_v</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_u_ham_w</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_v_ham</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_v_ham_grad_p</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_v_ham_grad_v</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_v_ham_u</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_v_ham_v</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_v_ham_w</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_w_ham</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_w_ham_grad_p</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_w_ham_grad_w</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_w_ham_u</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_w_ham_v</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_w_ham_w</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>forcex</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>forcey</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>forcez</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="332" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="332" bodyend="618"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1a5762f1457b4eb16207abd1567c20c87f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::get_distance_to_ball</definition>
+        <argsstring>(int n_balls, const double *ball_center, const double *ball_radius, const double x, const double y, const double z, double &amp;distance)</argsstring>
+        <name>get_distance_to_ball</name>
+        <param>
+          <type>int</type>
+          <declname>n_balls</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_center</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_radius</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>distance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="620" column="9" bodyfile="mprans/RANS1P2D.h" bodystart="620" bodyend="637"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1afaa23388b1f7e032266672f422a27257" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::get_distance_to_ith_ball</definition>
+        <argsstring>(int n_balls, const double *ball_center, const double *ball_radius, int I, const double x, const double y, const double z, double &amp;distance)</argsstring>
+        <name>get_distance_to_ith_ball</name>
+        <param>
+          <type>int</type>
+          <declname>n_balls</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_center</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_radius</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>I</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>distance</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="639" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="639" bodyend="647"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1afe0c311066121e23e92f07308fbee251" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::get_normal_to_ith_ball</definition>
+        <argsstring>(int n_balls, const double *ball_center, const double *ball_radius, int I, const double x, const double y, const double z, double &amp;nx, double &amp;ny)</argsstring>
+        <name>get_normal_to_ith_ball</name>
+        <param>
+          <type>int</type>
+          <declname>n_balls</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_center</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_radius</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>I</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>nx</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>ny</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="648" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="648" bodyend="667"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1ac1fab17bc69b4018efe4c16bf1a0a41c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::get_velocity_to_ith_ball</definition>
+        <argsstring>(int n_balls, const double *ball_center, const double *ball_radius, const double *ball_velocity, const double *ball_angular_velocity, int I, const double x, const double y, const double z, double &amp;vx, double &amp;vy)</argsstring>
+        <name>get_velocity_to_ith_ball</name>
+        <param>
+          <type>int</type>
+          <declname>n_balls</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_center</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_radius</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_velocity</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_angular_velocity</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>I</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>vx</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>vy</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="668" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="668" bodyend="676"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1a569a7ddf99e258cd65d91237345bbc79" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::updateFreeSurfaceTerms</definition>
+        <argsstring>(const double NONCONSERVATIVE_FORM, bool element_owned, const double particle_nitsche, const double dV, const int nParticles, const int sd_offset, double *fs_signed_distances, double *fs_signed_distance_normals, double *particle_velocities, double *particle_centroids, const int use_ball_as_particle, const double *ball_center, const double *ball_radius, const double *ball_velocity, const double *ball_angular_velocity, const double *ball_density, const double porosity, const double penalty, const double alpha, const double beta, const double eps_rho, const double eps_mu, const double rho_0, const double nu_0, const double rho_1, const double nu_1, const double useVF, const double vf, const double phi, const double x, const double y, const double z, const double p, const double u, const double v, const double w, const double uStar, const double vStar, const double wStar, const double eps_s, const double grad_u[nSpace], const double grad_v[nSpace], const double grad_w[nSpace], double &amp;mass_source, double dmass_source[nSpace], double &amp;mom_u_source, double &amp;mom_v_source, double &amp;mom_w_source, double dmom_u_source[nSpace], double dmom_v_source[nSpace], double dmom_w_source[nSpace], double mom_u_adv[nSpace], double mom_v_adv[nSpace], double mom_w_adv[nSpace], double dmom_u_adv_u[nSpace], double dmom_v_adv_v[nSpace], double dmom_w_adv_w[nSpace], double &amp;mom_u_ham, double dmom_u_ham_grad_u[nSpace], double dmom_u_ham_grad_v[nSpace], double &amp;dmom_u_ham_u, double &amp;dmom_u_ham_v, double &amp;dmom_u_ham_w, double &amp;mom_v_ham, double dmom_v_ham_grad_u[nSpace], double dmom_v_ham_grad_v[nSpace], double &amp;dmom_v_ham_u, double &amp;dmom_v_ham_v, double &amp;dmom_v_ham_w, double &amp;mom_w_ham, double dmom_w_ham_grad_w[nSpace], double &amp;dmom_w_ham_u, double &amp;dmom_w_ham_v, double &amp;dmom_w_ham_w, double &amp;mass_ham, double &amp;dmass_ham_u, double &amp;dmass_ham_v, double &amp;dmass_ham_w, double *particle_netForces, double *particle_netMoments, double *particle_surfaceArea)</argsstring>
+        <name>updateFreeSurfaceTerms</name>
+        <param>
+          <type>const double</type>
+          <declname>NONCONSERVATIVE_FORM</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>element_owned</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>particle_nitsche</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>dV</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>nParticles</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>sd_offset</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>fs_signed_distances</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>fs_signed_distance_normals</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>particle_velocities</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>particle_centroids</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>use_ball_as_particle</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_center</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_radius</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_velocity</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_angular_velocity</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_density</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>porosity</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>penalty</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>beta</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>eps_rho</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>eps_mu</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rho_0</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>nu_0</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rho_1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>nu_1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>useVF</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>vf</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>uStar</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>vStar</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>wStar</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>eps_s</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>grad_u</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>grad_v</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>grad_w</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mass_source</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmass_source</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_u_source</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_v_source</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_w_source</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_u_source</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_v_source</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_w_source</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_u_adv</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_v_adv</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_w_adv</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_u_adv_u</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_v_adv_v</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_w_adv_w</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_u_ham</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_u_ham_grad_u</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_u_ham_grad_v</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_u_ham_u</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_u_ham_v</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_u_ham_w</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_v_ham</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_v_ham_grad_u</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_v_ham_grad_v</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_v_ham_u</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_v_ham_v</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_v_ham_w</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_w_ham</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_w_ham_grad_w</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_w_ham_u</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_w_ham_v</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_w_ham_w</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mass_ham</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmass_ham_u</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmass_ham_v</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmass_ham_w</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>particle_netForces</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>particle_netMoments</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>particle_surfaceArea</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="677" column="17" bodyfile="mprans/RANS1P2D.h" bodystart="677" bodyend="938"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1a158cb7b6f112524015d067b3080d3d14" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::updateSolidParticleTerms</definition>
+        <argsstring>(int particle_index, const double NONCONSERVATIVE_FORM, bool element_owned, const double particle_nitsche, const double dV, const int nParticles, const int sd_offset, double *particle_signed_distances, double *particle_signed_distance_normals, double *particle_velocities, double *particle_centroids, const int use_ball_as_particle, const double *ball_center, const double *ball_radius, const double *ball_velocity, const double *ball_angular_velocity, const double *ball_density, const double porosity, const double penalty, const double alpha, const double beta, const double eps_rho, const double eps_mu, const double rho_0, const double nu_0, const double rho_1, const double nu_1, const double useVF, const double vf, const double phi, const double x, const double y, const double z, const double p, const double u, const double v, const double w, const double uStar, const double vStar, const double wStar, const double eps_s, const double grad_u[nSpace], const double grad_v[nSpace], const double grad_w[nSpace], double &amp;mass_source, double &amp;mom_u_source, double &amp;mom_v_source, double &amp;mom_w_source, double dmom_u_source[nSpace], double dmom_v_source[nSpace], double dmom_w_source[nSpace], double mom_u_adv[nSpace], double mom_v_adv[nSpace], double mom_w_adv[nSpace], double dmom_u_adv_u[nSpace], double dmom_v_adv_v[nSpace], double dmom_w_adv_w[nSpace], double &amp;mom_u_ham, double dmom_u_ham_grad_u[nSpace], double dmom_u_ham_grad_v[nSpace], double &amp;dmom_u_ham_u, double &amp;dmom_u_ham_v, double &amp;dmom_u_ham_w, double &amp;mom_v_ham, double dmom_v_ham_grad_u[nSpace], double dmom_v_ham_grad_v[nSpace], double &amp;dmom_v_ham_u, double &amp;dmom_v_ham_v, double &amp;dmom_v_ham_w, double &amp;mom_w_ham, double dmom_w_ham_grad_w[nSpace], double &amp;dmom_w_ham_u, double &amp;dmom_w_ham_v, double &amp;dmom_w_ham_w, double &amp;mass_ham, double &amp;dmass_ham_u, double &amp;dmass_ham_v, double &amp;dmass_ham_w, double *particle_netForces, double *particle_netMoments, double *particle_surfaceArea)</argsstring>
+        <name>updateSolidParticleTerms</name>
+        <param>
+          <type>int</type>
+          <declname>particle_index</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>NONCONSERVATIVE_FORM</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>element_owned</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>particle_nitsche</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>dV</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>nParticles</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>sd_offset</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>particle_signed_distances</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>particle_signed_distance_normals</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>particle_velocities</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>particle_centroids</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>use_ball_as_particle</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_center</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_radius</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_velocity</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_angular_velocity</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>ball_density</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>porosity</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>penalty</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>beta</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>eps_rho</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>eps_mu</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rho_0</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>nu_0</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rho_1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>nu_1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>useVF</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>vf</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>z</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>uStar</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>vStar</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>wStar</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>eps_s</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>grad_u</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>grad_v</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>grad_w</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mass_source</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_u_source</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_v_source</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_w_source</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_u_source</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_v_source</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_w_source</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_u_adv</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_v_adv</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_w_adv</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_u_adv_u</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_v_adv_v</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_w_adv_w</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_u_ham</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_u_ham_grad_u</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_u_ham_grad_v</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_u_ham_u</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_u_ham_v</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_u_ham_w</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_v_ham</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_v_ham_grad_u</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_v_ham_grad_v</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_v_ham_u</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_v_ham_v</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_v_ham_w</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_w_ham</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_w_ham_grad_w</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_w_ham_u</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_w_ham_v</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_w_ham_w</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mass_ham</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmass_ham_u</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmass_ham_v</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmass_ham_w</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>particle_netForces</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>particle_netMoments</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>particle_surfaceArea</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="939" column="17" bodyfile="mprans/RANS1P2D.h" bodystart="939" bodyend="1198"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1a409703ec89872c84dc596508c9478d90" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::updateDarcyForchheimerTerms_Ergun</definition>
+        <argsstring>(const double NONCONSERVATIVE_FORM, const double alpha, const double beta, const double eps_rho, const double eps_mu, const double rho_0, const double nu_0, const double rho_1, const double nu_1, const double useVF, const double vf, const double phi, const double u, const double v, const double w, const double uStar, const double vStar, const double wStar, const double eps_porous, const double phi_porous, const double u_porous, const double v_porous, const double w_porous, double &amp;mom_u_source, double &amp;mom_v_source, double &amp;mom_w_source, double dmom_u_source[nSpace], double dmom_v_source[nSpace], double dmom_w_source[nSpace])</argsstring>
+        <name>updateDarcyForchheimerTerms_Ergun</name>
+        <param>
+          <type>const double</type>
+          <declname>NONCONSERVATIVE_FORM</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>alpha</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>beta</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>eps_rho</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>eps_mu</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rho_0</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>nu_0</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rho_1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>nu_1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>useVF</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>vf</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>uStar</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>vStar</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>wStar</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>eps_porous</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>phi_porous</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>u_porous</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>v_porous</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>w_porous</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_u_source</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_v_source</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_w_source</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_u_source</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_v_source</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_w_source</declname>
+          <array>[nSpace]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="1201" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="1201" bodyend="1272"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1a7cb68d1a423e6ae2d1b3ef13b93761be" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::updateTurbulenceClosure</definition>
+        <argsstring>(const double NONCONSERVATIVE_FORM, const int turbulenceClosureModel, const double eps_rho, const double eps_mu, const double rho_0, const double nu_0, const double rho_1, const double nu_1, const double useVF, const double vf, const double phi, const double porosity, const double eddy_visc_coef_0, const double turb_var_0, const double turb_var_1, const double turb_grad_0[nSpace], double &amp;eddy_viscosity, double mom_uu_diff_ten[nSpace], double mom_vv_diff_ten[nSpace], double mom_ww_diff_ten[nSpace], double mom_uv_diff_ten[1], double mom_uw_diff_ten[1], double mom_vu_diff_ten[1], double mom_vw_diff_ten[1], double mom_wu_diff_ten[1], double mom_wv_diff_ten[1], double &amp;mom_u_source, double &amp;mom_v_source, double &amp;mom_w_source)</argsstring>
+        <name>updateTurbulenceClosure</name>
+        <param>
+          <type>const double</type>
+          <declname>NONCONSERVATIVE_FORM</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>turbulenceClosureModel</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>eps_rho</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>eps_mu</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rho_0</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>nu_0</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rho_1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>nu_1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>useVF</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>vf</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>porosity</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>eddy_visc_coef_0</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>turb_var_0</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>turb_var_1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>turb_grad_0</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>eddy_viscosity</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_uu_diff_ten</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_vv_diff_ten</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_ww_diff_ten</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_uv_diff_ten</declname>
+          <array>[1]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_uw_diff_ten</declname>
+          <array>[1]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_vu_diff_ten</declname>
+          <array>[1]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_vw_diff_ten</declname>
+          <array>[1]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_wu_diff_ten</declname>
+          <array>[1]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_wv_diff_ten</declname>
+          <array>[1]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_u_source</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_v_source</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_w_source</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="1275" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="1275" bodyend="1367"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1ab8a8e292bddbd53613248ed37935a1e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::calculateSubgridError_tau</definition>
+        <argsstring>(const double &amp;hFactor, const double &amp;elementDiameter, const double &amp;dmt, const double &amp;dm, const double df[nSpace], const double &amp;a, const double &amp;pfac, double &amp;tau_v, double &amp;tau_p, double &amp;cfl)</argsstring>
+        <name>calculateSubgridError_tau</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>hFactor</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>elementDiameter</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dmt</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dm</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>pfac</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>tau_v</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>tau_p</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>cfl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="1370" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="1370" bodyend="1393"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1a967730661cf033cf5059921a0e992742" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::calculateSubgridError_tau</definition>
+        <argsstring>(const double &amp;Ct_sge, const double &amp;Cd_sge, const double G[nSpace *nSpace], const double &amp;G_dd_G, const double &amp;tr_G, const double &amp;A0, const double Ai[nSpace], const double &amp;Kij, const double &amp;pfac, double &amp;tau_v, double &amp;tau_p, double &amp;q_cfl)</argsstring>
+        <name>calculateSubgridError_tau</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>Ct_sge</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>Cd_sge</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>G</declname>
+          <array>[nSpace *nSpace]</array>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>G_dd_G</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>tr_G</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>A0</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>Ai</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>Kij</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>pfac</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>tau_v</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>tau_p</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>q_cfl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="1396" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="1396" bodyend="1415"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1a773d95b6f8e69810762e1e0d49b06bd6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::calculateSubgridError_tauRes</definition>
+        <argsstring>(const double &amp;tau_p, const double &amp;tau_v, const double &amp;pdeResidualP, const double &amp;pdeResidualU, const double &amp;pdeResidualV, const double &amp;pdeResidualW, double &amp;subgridErrorP, double &amp;subgridErrorU, double &amp;subgridErrorV, double &amp;subgridErrorW)</argsstring>
+        <name>calculateSubgridError_tauRes</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>tau_p</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>tau_v</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>pdeResidualP</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>pdeResidualU</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>pdeResidualV</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>pdeResidualW</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>subgridErrorP</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>subgridErrorU</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>subgridErrorV</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>subgridErrorW</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="1418" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="1418" bodyend="1434"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1a9af8bb0b0bd9a6a28054cbc46ca50489" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::calculateSubgridErrorDerivatives_tauRes</definition>
+        <argsstring>(const double &amp;tau_p, const double &amp;tau_v, const double dpdeResidualP_du[nDOF_v_trial_element], const double dpdeResidualP_dv[nDOF_v_trial_element], const double dpdeResidualP_dw[nDOF_v_trial_element], const double dpdeResidualU_dp[nDOF_trial_element], const double dpdeResidualU_du[nDOF_v_trial_element], const double dpdeResidualV_dp[nDOF_trial_element], const double dpdeResidualV_dv[nDOF_v_trial_element], const double dpdeResidualW_dp[nDOF_trial_element], const double dpdeResidualW_dw[nDOF_v_trial_element], double dsubgridErrorP_du[nDOF_v_trial_element], double dsubgridErrorP_dv[nDOF_v_trial_element], double dsubgridErrorP_dw[nDOF_v_trial_element], double dsubgridErrorU_dp[nDOF_trial_element], double dsubgridErrorU_du[nDOF_v_trial_element], double dsubgridErrorV_dp[nDOF_trial_element], double dsubgridErrorV_dv[nDOF_v_trial_element], double dsubgridErrorW_dp[nDOF_trial_element], double dsubgridErrorW_dw[nDOF_v_trial_element])</argsstring>
+        <name>calculateSubgridErrorDerivatives_tauRes</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>tau_p</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>tau_v</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>dpdeResidualP_du</declname>
+          <array>[nDOF_v_trial_element]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>dpdeResidualP_dv</declname>
+          <array>[nDOF_v_trial_element]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>dpdeResidualP_dw</declname>
+          <array>[nDOF_v_trial_element]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>dpdeResidualU_dp</declname>
+          <array>[nDOF_trial_element]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>dpdeResidualU_du</declname>
+          <array>[nDOF_v_trial_element]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>dpdeResidualV_dp</declname>
+          <array>[nDOF_trial_element]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>dpdeResidualV_dv</declname>
+          <array>[nDOF_v_trial_element]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>dpdeResidualW_dp</declname>
+          <array>[nDOF_trial_element]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>dpdeResidualW_dw</declname>
+          <array>[nDOF_v_trial_element]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dsubgridErrorP_du</declname>
+          <array>[nDOF_v_trial_element]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dsubgridErrorP_dv</declname>
+          <array>[nDOF_v_trial_element]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dsubgridErrorP_dw</declname>
+          <array>[nDOF_v_trial_element]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dsubgridErrorU_dp</declname>
+          <array>[nDOF_trial_element]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dsubgridErrorU_du</declname>
+          <array>[nDOF_v_trial_element]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dsubgridErrorV_dp</declname>
+          <array>[nDOF_trial_element]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dsubgridErrorV_dv</declname>
+          <array>[nDOF_v_trial_element]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dsubgridErrorW_dp</declname>
+          <array>[nDOF_trial_element]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dsubgridErrorW_dw</declname>
+          <array>[nDOF_v_trial_element]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="1437" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="1437" bodyend="1477"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1ac6f7b497f4b0bc696b00e4f69c3b23f8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::exteriorNumericalAdvectiveFlux</definition>
+        <argsstring>(const double NONCONSERVATIVE_FORM, const int &amp;isDOFBoundary_p, const int &amp;isDOFBoundary_u, const int &amp;isDOFBoundary_v, const int &amp;isDOFBoundary_w, const int &amp;isFluxBoundary_p, const int &amp;isFluxBoundary_u, const int &amp;isFluxBoundary_v, const int &amp;isFluxBoundary_w, const double &amp;oneByRho, const double &amp;bc_oneByRho, const double n[nSpace], const double &amp;bc_p, const double &amp;bc_u, const double &amp;bc_v, const double bc_f_mass[nSpace], const double bc_f_umom[nSpace], const double bc_f_vmom[nSpace], const double bc_f_wmom[nSpace], const double &amp;bc_flux_mass, const double &amp;bc_flux_umom, const double &amp;bc_flux_vmom, const double &amp;bc_flux_wmom, const double &amp;p, const double &amp;u, const double &amp;v, const double f_mass[nSpace], const double f_umom[nSpace], const double f_vmom[nSpace], const double f_wmom[nSpace], const double df_mass_du[nSpace], const double df_mass_dv[nSpace], const double df_mass_dw[nSpace], const double df_umom_dp[nSpace], const double dham_grad[nSpace], const double df_umom_du[nSpace], const double df_umom_dv[nSpace], const double df_umom_dw[nSpace], const double df_vmom_dp[nSpace], const double df_vmom_du[nSpace], const double df_vmom_dv[nSpace], const double df_vmom_dw[nSpace], const double df_wmom_dp[nSpace], const double df_wmom_du[nSpace], const double df_wmom_dv[nSpace], const double df_wmom_dw[nSpace], double &amp;flux_mass, double &amp;flux_umom, double &amp;flux_vmom, double &amp;flux_wmom, double *velocity)</argsstring>
+        <name>exteriorNumericalAdvectiveFlux</name>
+        <param>
+          <type>const double</type>
+          <declname>NONCONSERVATIVE_FORM</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isDOFBoundary_p</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isDOFBoundary_u</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isDOFBoundary_v</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isDOFBoundary_w</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isFluxBoundary_p</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isFluxBoundary_u</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isFluxBoundary_v</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isFluxBoundary_w</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>oneByRho</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>bc_oneByRho</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>n</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>bc_p</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>bc_u</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>bc_v</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>bc_f_mass</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>bc_f_umom</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>bc_f_vmom</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>bc_f_wmom</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>bc_flux_mass</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>bc_flux_umom</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>bc_flux_vmom</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>bc_flux_wmom</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>f_mass</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>f_umom</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>f_vmom</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>f_wmom</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_mass_du</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_mass_dv</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_mass_dw</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_umom_dp</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>dham_grad</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_umom_du</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_umom_dv</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_umom_dw</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_vmom_dp</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_vmom_du</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_vmom_dv</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_vmom_dw</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_wmom_dp</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_wmom_du</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_wmom_dv</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_wmom_dw</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>flux_mass</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>flux_umom</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>flux_vmom</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>flux_wmom</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>velocity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="1480" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="1480" bodyend="1648"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1a5f0a9f44842f4aa84dfb5de75a3169e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::exteriorNumericalAdvectiveFluxDerivatives</definition>
+        <argsstring>(const double NONCONSERVATIVE_FORM, const int &amp;isDOFBoundary_p, const int &amp;isDOFBoundary_u, const int &amp;isDOFBoundary_v, const int &amp;isDOFBoundary_w, const int &amp;isFluxBoundary_p, const int &amp;isFluxBoundary_u, const int &amp;isFluxBoundary_v, const int &amp;isFluxBoundary_w, const double &amp;oneByRho, const double n[nSpace], const double &amp;bc_p, const double &amp;bc_u, const double &amp;bc_v, const double bc_f_mass[nSpace], const double bc_f_umom[nSpace], const double bc_f_vmom[nSpace], const double bc_f_wmom[nSpace], const double &amp;bc_flux_mass, const double &amp;bc_flux_umom, const double &amp;bc_flux_vmom, const double &amp;bc_flux_wmom, const double &amp;p, const double &amp;u, const double &amp;v, const double &amp;dmom_u_acc_u, const double f_mass[nSpace], const double f_umom[nSpace], const double f_vmom[nSpace], const double f_wmom[nSpace], const double df_mass_du[nSpace], const double df_mass_dv[nSpace], const double df_mass_dw[nSpace], const double df_umom_dp[nSpace], const double dham_grad[nSpace], const double df_umom_du[nSpace], const double df_umom_dv[nSpace], const double df_umom_dw[nSpace], const double df_vmom_dp[nSpace], const double df_vmom_du[nSpace], const double df_vmom_dv[nSpace], const double df_vmom_dw[nSpace], const double df_wmom_dp[nSpace], const double df_wmom_du[nSpace], const double df_wmom_dv[nSpace], const double df_wmom_dw[nSpace], double &amp;dflux_mass_du, double &amp;dflux_mass_dv, double &amp;dflux_mass_dw, double &amp;dflux_umom_dp, double &amp;dflux_umom_du, double &amp;dflux_umom_dv, double &amp;dflux_umom_dw, double &amp;dflux_vmom_dp, double &amp;dflux_vmom_du, double &amp;dflux_vmom_dv, double &amp;dflux_vmom_dw, double &amp;dflux_wmom_dp, double &amp;dflux_wmom_du, double &amp;dflux_wmom_dv, double &amp;dflux_wmom_dw)</argsstring>
+        <name>exteriorNumericalAdvectiveFluxDerivatives</name>
+        <param>
+          <type>const double</type>
+          <declname>NONCONSERVATIVE_FORM</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isDOFBoundary_p</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isDOFBoundary_u</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isDOFBoundary_v</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isDOFBoundary_w</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isFluxBoundary_p</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isFluxBoundary_u</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isFluxBoundary_v</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isFluxBoundary_w</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>oneByRho</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>n</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>bc_p</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>bc_u</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>bc_v</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>bc_f_mass</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>bc_f_umom</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>bc_f_vmom</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>bc_f_wmom</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>bc_flux_mass</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>bc_flux_umom</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>bc_flux_vmom</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>bc_flux_wmom</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dmom_u_acc_u</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>f_mass</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>f_umom</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>f_vmom</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>f_wmom</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_mass_du</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_mass_dv</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_mass_dw</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_umom_dp</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>dham_grad</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_umom_du</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_umom_dv</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_umom_dw</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_vmom_dp</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_vmom_du</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_vmom_dv</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_vmom_dw</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_wmom_dp</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_wmom_du</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_wmom_dv</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df_wmom_dw</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dflux_mass_du</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dflux_mass_dv</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dflux_mass_dw</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dflux_umom_dp</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dflux_umom_du</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dflux_umom_dv</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dflux_umom_dw</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dflux_vmom_dp</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dflux_vmom_du</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dflux_vmom_dv</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dflux_vmom_dw</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dflux_wmom_dp</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dflux_wmom_du</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dflux_wmom_dv</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dflux_wmom_dw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="1651" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="1651" bodyend="1853"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1afe5508f3b9768a1a7888d5d3da9c66ee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::exteriorNumericalDiffusiveFlux</definition>
+        <argsstring>(const double &amp;eps, const double &amp;phi, int *rowptr, int *colind, const int &amp;isDOFBoundary, const int &amp;isFluxBoundary, const double n[nSpace], double *bc_a, const double &amp;bc_u, const double &amp;bc_flux, double *a, const double grad_potential[nSpace], const double &amp;u, const double &amp;penalty, double &amp;flux)</argsstring>
+        <name>exteriorNumericalDiffusiveFlux</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>eps</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>rowptr</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>colind</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isDOFBoundary</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isFluxBoundary</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>n</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>bc_a</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>bc_u</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>bc_flux</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>grad_potential</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>penalty</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>flux</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="1856" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="1856" bodyend="1902"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1aad07dd5065d0a6f207cd39c7936bbd9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::ExteriorNumericalDiffusiveFluxJacobian</definition>
+        <argsstring>(const double &amp;eps, const double &amp;phi, int *rowptr, int *colind, const int &amp;isDOFBoundary, const int &amp;isFluxBoundary, const double n[nSpace], double *a, const double &amp;v, const double grad_v[nSpace], const double &amp;penalty)</argsstring>
+        <name>ExteriorNumericalDiffusiveFluxJacobian</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>eps</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>rowptr</declname>
+        </param>
+        <param>
+          <type>int *</type>
+          <declname>colind</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isDOFBoundary</declname>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>isFluxBoundary</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>n</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>grad_v</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>penalty</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="1906" column="12" bodyfile="mprans/RANS1P2D.h" bodystart="1906" bodyend="1937"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1a36040fb6430cf81edf2dff1d8f98ceb5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::calculateResidual</definition>
+        <argsstring>(arguments_dict &amp;args)</argsstring>
+        <name>calculateResidual</name>
+        <reimplements refid="classproteus_1_1RANS1P2D__base_1a549642a39bf8cdaea4d18b256b105b2e">calculateResidual</reimplements>
+        <param>
+          <type><ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="1939" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="1939" bodyend="4629"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1a179ef0856ed02a0061273359d7cfe822" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::calculateJacobian</definition>
+        <argsstring>(arguments_dict &amp;args)</argsstring>
+        <name>calculateJacobian</name>
+        <reimplements refid="classproteus_1_1RANS1P2D__base_1a575c73087911b03ed89a9ecdf8aeeb69">calculateJacobian</reimplements>
+        <param>
+          <type><ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="4631" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="4631" bodyend="7186"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1acc96078cd240773e2f43fe231fa5da08" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::calculateVelocityAverage</definition>
+        <argsstring>(arguments_dict &amp;args)</argsstring>
+        <name>calculateVelocityAverage</name>
+        <reimplements refid="classproteus_1_1RANS1P2D__base_1a4dd976647e6ee62459c816f84b985bf8">calculateVelocityAverage</reimplements>
+        <param>
+          <type><ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="7188" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="7188" bodyend="7350"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1a586037224c2b0b2f494d8143b412703a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::evaluateTPAdvectionCoefficients</definition>
+        <argsstring>(const double eps_rho, const double rho_0, const double rho_1, const double useVF, const double &amp;vf, const double &amp;phi, const double &amp;u, const double &amp;v, double dmass_adv_p[nSpace], double dmom_u_adv_u[nSpace], double dmom_v_adv_v[nSpace])</argsstring>
+        <name>evaluateTPAdvectionCoefficients</name>
+        <param>
+          <type>const double</type>
+          <declname>eps_rho</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rho_0</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rho_1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>useVF</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>vf</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmass_adv_p</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_u_adv_u</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dmom_v_adv_v</declname>
+          <array>[nSpace]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="7353" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="7353" bodyend="7380"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1ac897a888f1975f3235d4bfd0db69c886" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::evaluateTPInvViscosityMassCoefficients</definition>
+        <argsstring>(const int use_numerical_viscosity, const double numerical_viscosity, const double eps_rho, const double eps_mu, const double rho_0, double nu_0, const double rho_1, double nu_1, const double useVF, const double &amp;vf, const double &amp;phi, const double &amp;p, const double &amp;u, const double &amp;v, double &amp;mom_p_acc, double &amp;dmom_p_acc_p, double &amp;mom_u_acc, double &amp;dmom_u_acc_u, double &amp;mom_v_acc, double &amp;dmom_v_acc_v)</argsstring>
+        <name>evaluateTPInvViscosityMassCoefficients</name>
+        <param>
+          <type>const int</type>
+          <declname>use_numerical_viscosity</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>numerical_viscosity</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>eps_rho</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>eps_mu</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rho_0</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>nu_0</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rho_1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>nu_1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>useVF</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>vf</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_p_acc</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_p_acc_p</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_u_acc</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_u_acc_u</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_v_acc</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_v_acc_v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="7382" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="7382" bodyend="7425"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1a30d3c521af8044961836927bb92083bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::evaluateTPDensityMassCoefficients</definition>
+        <argsstring>(const double eps_rho, const double rho_0, const double rho_1, const double useVF, const double &amp;vf, const double &amp;phi, const double &amp;p, const double &amp;u, const double &amp;v, double &amp;mom_p_acc, double &amp;dmom_p_acc_p, double &amp;mom_u_acc, double &amp;dmom_u_acc_u, double &amp;mom_v_acc, double &amp;dmom_v_acc_v)</argsstring>
+        <name>evaluateTPDensityMassCoefficients</name>
+        <param>
+          <type>const double</type>
+          <declname>eps_rho</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rho_0</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rho_1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>useVF</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>vf</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>v</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_p_acc</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_p_acc_p</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_u_acc</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_u_acc_u</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>mom_v_acc</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dmom_v_acc_v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="7427" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="7427" bodyend="7458"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1ac4bd3ee70f403e7424be9eea240f15fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::evaluateTPInvDensityLaplaceCoefficients</definition>
+        <argsstring>(const double eps_rho, const double rho_0, const double rho_1, const double useVF, const double &amp;vf, const double &amp;phi, double mom_p_diff_ten[nSpace], double mom_u_diff_ten[nSpace], double mom_v_diff_ten[nSpace])</argsstring>
+        <name>evaluateTPInvDensityLaplaceCoefficients</name>
+        <param>
+          <type>const double</type>
+          <declname>eps_rho</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rho_0</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>rho_1</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>useVF</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>vf</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_p_diff_ten</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_u_diff_ten</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mom_v_diff_ten</declname>
+          <array>[nSpace]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="7460" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="7460" bodyend="7486"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1af6a2b7466967b76aead280504332beb7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::getTwoPhaseAdvectionOperator</definition>
+        <argsstring>(arguments_dict &amp;args)</argsstring>
+        <name>getTwoPhaseAdvectionOperator</name>
+        <reimplements refid="classproteus_1_1RANS1P2D__base_1abd6742ee51c95ae604847203c6e7db37">getTwoPhaseAdvectionOperator</reimplements>
+        <param>
+          <type><ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="7488" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="7488" bodyend="7643"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1a082ab6f6a5c1f49809e7a2cdb6f370e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::getTwoPhaseInvScaledLaplaceOperator</definition>
+        <argsstring>(arguments_dict &amp;args)</argsstring>
+        <name>getTwoPhaseInvScaledLaplaceOperator</name>
+        <reimplements refid="classproteus_1_1RANS1P2D__base_1a0482d699b77dd33e2b1c874347016f43">getTwoPhaseInvScaledLaplaceOperator</reimplements>
+        <param>
+          <type><ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="7645" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="7645" bodyend="7828"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1RANS1P2D_1a4f511d8d2d16694c14fac547d40f739d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;::getTwoPhaseScaledMassOperator</definition>
+        <argsstring>(arguments_dict &amp;args)</argsstring>
+        <name>getTwoPhaseScaledMassOperator</name>
+        <reimplements refid="classproteus_1_1RANS1P2D__base_1ab63d2a20f9956b29a0339fa185bea4d4">getTwoPhaseScaledMassOperator</reimplements>
+        <param>
+          <type><ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/RANS1P2D.h" line="7830" column="10" bodyfile="mprans/RANS1P2D.h" bodystart="7830" bodyend="8026"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>proteus::RANS1P2D_base</label>
+        <link refid="classproteus_1_1RANS1P2D__base"/>
+      </node>
+      <node id="1">
+        <label>proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;</label>
+        <link refid="classproteus_1_1RANS1P2D"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>proteus::RANS1P2D_base</label>
+        <link refid="classproteus_1_1RANS1P2D__base"/>
+      </node>
+      <node id="1">
+        <label>proteus::RANS1P2D&lt; CompKernelType, CompKernelType_v, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nDOF_v_trial_element, nDOF_v_test_element, nQuadraturePoints_elementBoundary &gt;</label>
+        <link refid="classproteus_1_1RANS1P2D"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>gf_s</edgelabel>
+          <edgelabel>gf_p</edgelabel>
+          <edgelabel>gf</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>equivalent_polynomials::GeneralizedFunctions_mix&lt; nSpace, 3, nQuadraturePoints_element, nQuadraturePoints_elementBoundary &gt;</label>
+        <link refid="classequivalent__polynomials_1_1GeneralizedFunctions__mix"/>
+      </node>
+    </collaborationgraph>
+    <location file="mprans/RANS1P2D.h" line="307" column="1" bodyfile="mprans/RANS1P2D.h" bodystart="306" bodyend="8028"/>
+    <listofallmembers>
+      <member refid="classproteus_1_1RANS1P2D_1a179ef0856ed02a0061273359d7cfe822" prot="public" virt="virtual"><scope>proteus::RANS1P2D</scope><name>calculateJacobian</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a36040fb6430cf81edf2dff1d8f98ceb5" prot="public" virt="virtual"><scope>proteus::RANS1P2D</scope><name>calculateResidual</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1ab8a8e292bddbd53613248ed37935a1e4" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>calculateSubgridError_tau</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a967730661cf033cf5059921a0e992742" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>calculateSubgridError_tau</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a773d95b6f8e69810762e1e0d49b06bd6" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>calculateSubgridError_tauRes</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a9af8bb0b0bd9a6a28054cbc46ca50489" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>calculateSubgridErrorDerivatives_tauRes</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1acc96078cd240773e2f43fe231fa5da08" prot="public" virt="virtual"><scope>proteus::RANS1P2D</scope><name>calculateVelocityAverage</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1ac3156c4d17f1d687a979287b644a176d" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>ck</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a499192308024a2cdb56986d055aceec4" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>ck_v</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a2172956f4a41b85f623c322181ac14ed" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>cutfem_boundaries</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a66945b0861fca93354a9d3bc2c67624b" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>cutfem_local_boundaries</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1afa7e3ff59c86b134d61cfdbd82ea54ac" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>evaluateCoefficients</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a586037224c2b0b2f494d8143b412703a" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>evaluateTPAdvectionCoefficients</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a30d3c521af8044961836927bb92083bc" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>evaluateTPDensityMassCoefficients</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1ac4bd3ee70f403e7424be9eea240f15fa" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>evaluateTPInvDensityLaplaceCoefficients</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1ac897a888f1975f3235d4bfd0db69c886" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>evaluateTPInvViscosityMassCoefficients</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1ac6f7b497f4b0bc696b00e4f69c3b23f8" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>exteriorNumericalAdvectiveFlux</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a5f0a9f44842f4aa84dfb5de75a3169e4" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>exteriorNumericalAdvectiveFluxDerivatives</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1afe5508f3b9768a1a7888d5d3da9c66ee" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>exteriorNumericalDiffusiveFlux</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1aad07dd5065d0a6f207cd39c7936bbd9c" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>ExteriorNumericalDiffusiveFluxJacobian</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a5762f1457b4eb16207abd1567c20c87f" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>get_distance_to_ball</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1afaa23388b1f7e032266672f422a27257" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>get_distance_to_ith_ball</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1afe0c311066121e23e92f07308fbee251" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>get_normal_to_ith_ball</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1ac1fab17bc69b4018efe4c16bf1a0a41c" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>get_velocity_to_ith_ball</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1af6a2b7466967b76aead280504332beb7" prot="public" virt="virtual"><scope>proteus::RANS1P2D</scope><name>getTwoPhaseAdvectionOperator</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a082ab6f6a5c1f49809e7a2cdb6f370e5" prot="public" virt="virtual"><scope>proteus::RANS1P2D</scope><name>getTwoPhaseInvScaledLaplaceOperator</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a4f511d8d2d16694c14fac547d40f739d" prot="public" virt="virtual"><scope>proteus::RANS1P2D</scope><name>getTwoPhaseScaledMassOperator</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a059c1d9d28ad025aa202efa2792f2465" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>gf</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a0b36080feaa1b2adf6be229ef67d21ec" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>gf_p</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1aab6fb65eeeff50edfb3d80423c161c92" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>gf_s</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1ad1c674e75c885e9aca8119650661b5a5" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>ifem_boundaries</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a15a4fb8768056e91bf566c339a7b489a" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>ifem_boundary_elements</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a02becb5a20bb7c2d811746f6918e4d4c" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>nDOF_test_X_trial_element</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a5c457d0e34d475375f5101953c6d6e40" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>nDOF_test_X_v_trial_element</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1ab628048e9a5764fd3a4aa3955977f9f4" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>nDOF_v_test_X_trial_element</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a9cd39336bf36434e4e786325ce33fe55" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>nDOF_v_test_X_v_trial_element</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a5f2dd5cea649dd232ad7d1a23c231cff" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>RANS1P2D</name></member>
+      <member refid="classproteus_1_1RANS1P2D__base_1adfa64066071a0185430e3b6b8b87d7d5" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>step6DOF</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a409703ec89872c84dc596508c9478d90" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>updateDarcyForchheimerTerms_Ergun</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a569a7ddf99e258cd65d91237345bbc79" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>updateFreeSurfaceTerms</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a158cb7b6f112524015d067b3080d3d14" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>updateSolidParticleTerms</name></member>
+      <member refid="classproteus_1_1RANS1P2D_1a7cb68d1a423e6ae2d1b3ef13b93761be" prot="public" virt="non-virtual"><scope>proteus::RANS1P2D</scope><name>updateTurbulenceClosure</name></member>
+      <member refid="classproteus_1_1RANS1P2D__base_1a57640257662d4082939510d4a9e1063b" prot="public" virt="virtual"><scope>proteus::RANS1P2D</scope><name>~RANS1P2D_base</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

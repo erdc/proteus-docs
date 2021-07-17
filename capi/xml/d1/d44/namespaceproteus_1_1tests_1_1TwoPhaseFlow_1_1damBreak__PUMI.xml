@@ -1,0 +1,680 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI" kind="namespace" language="Python">
+    <compoundname>proteus::tests::TwoPhaseFlow::damBreak_PUMI</compoundname>
+    <innerclass refid="dd/d5c/classproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1_1clsvof__init__cond" prot="public">proteus::tests::TwoPhaseFlow::damBreak_PUMI::clsvof_init_cond</innerclass>
+    <innerclass refid="d3/dc9/classproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1_1zero" prot="public">proteus::tests::TwoPhaseFlow::damBreak_PUMI::zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a96bfaa32bdff396aa39d8516d1685a13" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  <ref refid="d0/d93/namespaceproteus_1_1Context_1a461242d050aceb1e84d9426074c67004" kindref="member">Context.Options</ref>([
+    (&quot;final_time&quot;,3.0,&quot;Final time for simulation&quot;),
+    (&quot;<ref refid="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a9e470ea0d30a5f2edfa7a231a04d1cd2" kindref="member">dt_output</ref>&quot;,0.01,&quot;Time interval to output solution&quot;),
+    (&quot;<ref refid="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a31fd8d0b37ba3c692f602c4c51499012" kindref="member">cfl</ref>&quot;,0.25,&quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a5a00240e570f1c8a74b01fdde35e44b2" kindref="member">he</ref>&quot;,0.01,&quot;<ref refid="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a5a00240e570f1c8a74b01fdde35e44b2" kindref="member">he</ref> relative to Length of <ref refid="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a9fd801bfd3ede42a74bba08076ef38c2" kindref="member">domain</ref> in x&quot;),
+    (&quot;<ref refid="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1acb2d8d700e9dff96f60a64b8a5855424" kindref="member">refinement</ref>&quot;,3,&quot;level of <ref refid="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1acb2d8d700e9dff96f60a64b8a5855424" kindref="member">refinement</ref>&quot;),
+    (&quot;<ref refid="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a0969bd5864637c096a884ba0e01152c8" kindref="member">adapt</ref>&quot;,0,&quot;will <ref refid="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a0969bd5864637c096a884ba0e01152c8" kindref="member">adapt</ref>?&quot;)
+    ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="18" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a218fb082ad68bba662e611ce97495e09" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.height_gauges1</definition>
+        <argsstring></argsstring>
+        <name>height_gauges1</name>
+        <initializer>=  LineGauges(gauges=(((&quot;phi&quot;,),
+                                        (((2.724, 0.0, 0.0),
+                                          (2.724, 1.8, 0.0)), # We consider this one in our paper
+                                         ((2.228, 0.0, 0.0),
+                                          (2.228, 1.8, 0.0)), # We consider this one in our paper
+                                         ((1.732, 0.0, 0.0),
+                                          (1.732, 1.8, 0.0)),
+                                         ((0.582, 0.0, 0.0),
+	                                  (0.582, 1.8, 0.0)))),),
+                                        fileName=&quot;height1.csv&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="30" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a9cede1cf0e804dbd2604b18cddedb59e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.height_gauges2</definition>
+        <argsstring></argsstring>
+        <name>height_gauges2</name>
+        <initializer>=  LineGauges(gauges=(((&quot;phi&quot;,),
+                                     (((0.0, 0.0, 0.0),
+                                       (0.0, 0.0, -0.01)),
+                                      ((0.0, 0.0, 0.0),
+                                        (3.22, 0.0, 0.0)))),),
+                            fileName=&quot;height2.csv&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="41" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1aa0587bfd8e67afcc7f63b9c3ce84754a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.pressure_gauges</definition>
+        <argsstring></argsstring>
+        <name>pressure_gauges</name>
+        <initializer>=  PointGauges(gauges=(((&apos;p&apos;,),
+                                      ((3.22, 0.16, 0.0), #P1
+                                       (3.22, 0.584, 0.0), #P3
+                                       (3.22, 0.12, 0.0))),), # This is the one considered in our paper
+                                       fileName=&quot;pressure.csv&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="48" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1aee917f36e54bede96957990a6786aa79" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::TwoPhaseFlow::damBreak_PUMI.tank_dim</definition>
+        <argsstring></argsstring>
+        <name>tank_dim</name>
+        <initializer>=  (3.22,1.8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="58" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1acb2d8d700e9dff96f60a64b8a5855424" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.refinement</definition>
+        <argsstring></argsstring>
+        <name>refinement</name>
+        <initializer>=  opts.refinement</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="59" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a43020a578562c0526beb6374b7f41ac1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::TwoPhaseFlow::damBreak_PUMI.structured</definition>
+        <argsstring></argsstring>
+        <name>structured</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="60" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1ae2afd9cd6aae93475641868446eb9d6e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::TwoPhaseFlow::damBreak_PUMI.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <initializer>=  5*(2**<ref refid="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1acb2d8d700e9dff96f60a64b8a5855424" kindref="member">refinement</ref>)+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="62" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1acddb186271525c0cfc0e832d42dbd9bc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::TwoPhaseFlow::damBreak_PUMI::nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <initializer>=  2*(nnx-1)+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="63" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a9fd801bfd3ede42a74bba08076ef38c2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  <ref refid="de/d03/classproteus_1_1Domain_1_1RectangularDomain" kindref="compound">Domain.RectangularDomain</ref>(<ref refid="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1aee917f36e54bede96957990a6786aa79" kindref="member">tank_dim</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="64" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1af869537d43144c744df61b4ef47947e8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>=  domain.boundaryTags</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="65" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1af0a9c4ce3bb44ad19031a72a9c31b827" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::TwoPhaseFlow::damBreak_PUMI.triangleFlag</definition>
+        <argsstring></argsstring>
+        <name>triangleFlag</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="66" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a5a00240e570f1c8a74b01fdde35e44b2" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::TwoPhaseFlow::damBreak_PUMI::he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  <ref refid="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1aee917f36e54bede96957990a6786aa79" kindref="member">tank_dim</ref>[0]*opts.he</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="71" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a8a3ff94f141183ff9e53029402b013b0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.parallelPartitioningType</definition>
+        <argsstring></argsstring>
+        <name>parallelPartitioningType</name>
+        <initializer>=  <ref refid="d2/d08/classproteus_1_1MeshTools_1_1MeshParallelPartitioningTypes_1a8a7d63518dea790d5d6f6db052600c53" kindref="member">MeshTools.MeshParallelPartitioningTypes.element</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="76" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a718f23b372c73b71f8b63c9501587b2f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.modelDict</definition>
+        <argsstring></argsstring>
+        <name>modelDict</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="79" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a350cf6245c9bcb3f7749ecef54e2ecb1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.sizeInputs</definition>
+        <argsstring></argsstring>
+        <name>sizeInputs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="80" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a0969bd5864637c096a884ba0e01152c8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.adapt</definition>
+        <argsstring></argsstring>
+        <name>adapt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="81" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1abc9bac10e3ce66bdc565f6b54854424d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.hmax</definition>
+        <argsstring></argsstring>
+        <name>hmax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="82" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a99516349f37dee898ddae09cef504375" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.hmin</definition>
+        <argsstring></argsstring>
+        <name>hmin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="83" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1aefc5f0190808937991a6c358df79f973" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.hphi</definition>
+        <argsstring></argsstring>
+        <name>hphi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="84" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a24a2a9f1d26f2289b81d8caef9599d98" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.numAdaptSteps</definition>
+        <argsstring></argsstring>
+        <name>numAdaptSteps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="85" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a54be7633e4353bfab4a5b712855f27f9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.numIterations</definition>
+        <argsstring></argsstring>
+        <name>numIterations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="86" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a53beab0175fd3372e017b7e061f1164a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.targetError</definition>
+        <argsstring></argsstring>
+        <name>targetError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="87" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a23cd149ca6761e23967e37887eeb8ec0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.gradingFactor</definition>
+        <argsstring></argsstring>
+        <name>gradingFactor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="88" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a973301c0363ecf885456797081c020a4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.logging</definition>
+        <argsstring></argsstring>
+        <name>logging</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="89" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1adf457e05f612db31f5b0dfbb17d26485" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.tank</definition>
+        <argsstring></argsstring>
+        <name>tank</name>
+        <initializer>=  <ref refid="d2/d8a/classproteus_1_1mprans_1_1SpatialTools_1_1Tank2D" kindref="compound">Tank2D</ref>(<ref refid="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a9fd801bfd3ede42a74bba08076ef38c2" kindref="member">domain</ref>, <ref refid="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1aee917f36e54bede96957990a6786aa79" kindref="member">tank_dim</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="94" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a5af9cc2ca1d8cf51274428aa4430fd83" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="105" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1adada7a1c25683e2eca27ecb5670b019e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.polyfile</definition>
+        <argsstring></argsstring>
+        <name>polyfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="106" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1aec851e6c75ef8e1b25b83e539c466dae" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.genMesh</definition>
+        <argsstring></argsstring>
+        <name>genMesh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="107" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a910c961f01f6c64311e90305f049b42e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::TwoPhaseFlow::damBreak_PUMI.waterLine_y</definition>
+        <argsstring></argsstring>
+        <name>waterLine_y</name>
+        <initializer>=  0.6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="118" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a69188a8d5fe9df9954b2639965bcbcb5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::TwoPhaseFlow::damBreak_PUMI.waterLine_x</definition>
+        <argsstring></argsstring>
+        <name>waterLine_x</name>
+        <initializer>=  1.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="119" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1afe85bd566262de1165a8b57e049ef561" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::TwoPhaseFlow::damBreak_PUMI.boundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>boundaryConditions</name>
+        <initializer>=  {
+    # DIRICHLET BCs #
+    &apos;pressure_DBC&apos;: lambda x, flag: domain.bc[flag].p_dirichlet.init_cython(),
+    &apos;pressure_increment_DBC&apos;: lambda x, flag: domain.bc[flag].pInc_dirichlet.init_cython(),
+    &apos;vel_u_DBC&apos;: lambda x, flag: domain.bc[flag].u_dirichlet.init_cython(),
+    &apos;vel_v_DBC&apos;: lambda x, flag: domain.bc[flag].v_dirichlet.init_cython(),
+    &apos;vel_w_DBC&apos;: lambda x, flag: domain.bc[flag].w_dirichlet.init_cython(),
+    &apos;clsvof_DBC&apos;: lambda x, flag: domain.bc[flag].vof_dirichlet.init_cython(),
+    # ADVECTIVE FLUX BCs #
+    &apos;pressure_AFBC&apos;: lambda x, flag: domain.bc[flag].p_advective.init_cython(),
+    &apos;pressure_increment_AFBC&apos;: lambda x, flag: domain.bc[flag].pInc_advective.init_cython(),
+    &apos;vel_u_AFBC&apos;: lambda x, flag: domain.bc[flag].u_advective.init_cython(),
+    &apos;vel_v_AFBC&apos;: lambda x, flag: domain.bc[flag].v_advective.init_cython(),
+    &apos;vel_w_AFBC&apos;: lambda x, flag: domain.bc[flag].w_advective.init_cython(),
+    &apos;clsvof_AFBC&apos;: lambda x, flag: domain.bc[flag].vof_advective.init_cython(),
+    # DIFFUSIVE FLUX BCs #
+    &apos;pressure_increment_DFBC&apos;: lambda x, flag: domain.bc[flag].pInc_diffusive.init_cython(),
+    &apos;vel_u_DFBC&apos;: lambda x, flag: domain.bc[flag].u_diffusive.init_cython(),
+    &apos;vel_v_DFBC&apos;: lambda x, flag: domain.bc[flag].v_diffusive.init_cython(),
+    &apos;vel_w_DFBC&apos;: lambda x, flag: domain.bc[flag].w_diffusive.init_cython(),
+    &apos;clsvof_DFBC&apos;: lambda x, flag: None}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="132" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1adeb9f7759bc51aa3a163a81cc30ecbcc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="155" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a75994e50a1237b32edfa1d4515755ef2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.final_time</definition>
+        <argsstring></argsstring>
+        <name>final_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="158" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a9e470ea0d30a5f2edfa7a231a04d1cd2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.dt_output</definition>
+        <argsstring></argsstring>
+        <name>dt_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="159" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a844a6acd20b815e382f2044e6151a91f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.systemStepExact</definition>
+        <argsstring></argsstring>
+        <name>systemStepExact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="160" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1aecd94ff150c557d64c8b7430b16d1a4f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.flowModel</definition>
+        <argsstring></argsstring>
+        <name>flowModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="163" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1ad62e96ed0ee90a6d58ca83b3470dbf27" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.interfaceModel</definition>
+        <argsstring></argsstring>
+        <name>interfaceModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="163" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a31fd8d0b37ba3c692f602c4c51499012" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.cfl</definition>
+        <argsstring></argsstring>
+        <name>cfl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="173" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a454d0c2978368443aea1384c49c62077" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.useSuperlu</definition>
+        <argsstring></argsstring>
+        <name>useSuperlu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="174" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a3e7b11efffa40f7f83a17cc3128f63d6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="176" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1abe4e621f4b7f2981787b12e7cca44656" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <initializer>=  myTpFlowProblem.SystemPhysics.modelDict</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="177" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a28c4ac9fce63e2fbfdfd856aeac2a355" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.disc_ICs</definition>
+        <argsstring></argsstring>
+        <name>disc_ICs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="178" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1a16b84a2b82e9717e2dd39f2bcc29f4cc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.auxiliaryVariables</definition>
+        <argsstring></argsstring>
+        <name>auxiliaryVariables</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="179" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1aa178ee98c05dd2459d275e8e5b6e0363" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>shockCapturingFactor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="181" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d1/d44/namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1damBreak__PUMI_1ad70d184227abe8a297c5b44828c7a4bf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::damBreak_PUMI.conservativeFlux</definition>
+        <argsstring></argsstring>
+        <name>conservativeFlux</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="185" column="1" bodyfile="tests/TwoPhaseFlow/damBreak_PUMI.py" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>dambreak 2-D
+</verbatim> </para>
+    </detaileddescription>
+    <location file="tests/TwoPhaseFlow/damBreak_PUMI.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="deim__utils_8py" kind="file" language="Python">
+    <compoundname>deim_utils.py</compoundname>
+    <innernamespace refid="namespaceproteus_1_1deim__utils">proteus::deim_utils</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="namespaceproteus_1_1deim__utils" refkind="compound"><highlight class="comment">#!/usr/bin/env<sp/>python</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="3"><highlight class="stringliteral">utility<sp/>module<sp/>for<sp/>generating<sp/>deim<sp/>interpolants</highlight></codeline>
+<codeline lineno="4"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>__future__<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>division</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>builtins<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>range</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>past.utils<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>old_div</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>numpy<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>np</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproteus_1_1deim__utils_1a86047d40d8d20e3cc56c3641096289da" kindref="member">read_from_hdf5</ref>(hdfFile,label,dof_map=None):</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="12"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Just<sp/>grab<sp/>the<sp/>array<sp/>stored<sp/>in<sp/>the<sp/>node<sp/>with<sp/>label<sp/>label<sp/>and<sp/>return<sp/>it</highlight></codeline>
+<codeline lineno="13"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>If<sp/>dof_map<sp/>is<sp/>not<sp/>none,<sp/>use<sp/>this<sp/>to<sp/>map<sp/>values<sp/>in<sp/>the<sp/>array</highlight></codeline>
+<codeline lineno="14"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>If<sp/>dof_map<sp/>is<sp/>not<sp/>none,<sp/>this<sp/>determines<sp/>shape<sp/>of<sp/>the<sp/>output<sp/>array</highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">assert</highlight><highlight class="normal"><sp/>hdfFile<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;requires<sp/>hdf5<sp/>for<sp/>heavy<sp/>data&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>vals<sp/>=<sp/>hdfFile.get_node(label).read()</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>dof_map<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dof<sp/>=<sp/>vals[dof_map]</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dof<sp/>=<sp/>vals</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>dof</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproteus_1_1deim__utils_1a549229b1daa318923bfc1a6d2b186569" kindref="member">read_snapshots</ref>(archive,nsnap,val_name):</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>assumes<sp/>nsnap<sp/>values<sp/>of<sp/>array<sp/>in<sp/>val_name<sp/>are<sp/>stored<sp/>in<sp/>h5file<sp/>as</highlight></codeline>
+<codeline lineno="28"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>/val_name&apos;i&apos;<sp/>for<sp/>i=0,nspap-1</highlight></codeline>
+<codeline lineno="29"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="30"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>loads<sp/>these<sp/>into<sp/>a<sp/>matrix<sp/>and<sp/>returns</highlight></codeline>
+<codeline lineno="31"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>label_base=</highlight><highlight class="stringliteral">&quot;/%s%d&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>u<sp/>=<sp/><ref refid="namespaceproteus_1_1deim__utils_1a86047d40d8d20e3cc56c3641096289da" kindref="member">read_from_hdf5</ref>(archive.hdfFile,label_base<sp/>%<sp/>(val_name,0))</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>S<sp/>=<sp/>np.reshape(u,(u.shape[0],1))</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>i<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(1,nsnap):</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>label=label_base<sp/>%<sp/>(val_name,i)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u<sp/>=<sp/><ref refid="namespaceproteus_1_1deim__utils_1a86047d40d8d20e3cc56c3641096289da" kindref="member">read_from_hdf5</ref>(archive.hdfFile,label)</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u<sp/>=<sp/>np.reshape(u,(u.shape[0],1))</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>S<sp/>=<sp/>np.append(S,u,axis=1)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>S</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproteus_1_1deim__utils_1a69efa7dcd46387443f67352f013eeb5f" kindref="member">generate_svd_decomposition</ref>(archive,nsnap,val_name,outbase):</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="46"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>assumes<sp/>nsnap<sp/>values<sp/>of<sp/>array<sp/>in<sp/>val_name<sp/>are<sp/>stored<sp/>in<sp/>h5file<sp/>as</highlight></codeline>
+<codeline lineno="47"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>/val_name&apos;i&apos;<sp/>for<sp/>i=0,nspap-1</highlight></codeline>
+<codeline lineno="48"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="49"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>loads<sp/>these<sp/>into<sp/>a<sp/>matrix,<sp/>performs<sp/>an<sp/>SVD,<sp/>and<sp/>stores<sp/>the<sp/>output<sp/>in<sp/>outbase_SVD_basis,<sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>outbase_singular_values<sp/>in<sp/>numpy&apos;s<sp/>binary<sp/>format</highlight></codeline>
+<codeline lineno="51"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="52"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>returns<sp/>U,s,V<sp/>svd<sp/>decomposition<sp/>of<sp/>snapshots</highlight></codeline>
+<codeline lineno="53"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>S<sp/>=<sp/><ref refid="namespaceproteus_1_1deim__utils_1a549229b1daa318923bfc1a6d2b186569" kindref="member">read_snapshots</ref>(archive,nsnap,val_name)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>U,<sp/>s,<sp/>V=<sp/>np.linalg.svd(S,full_matrices=</highlight><highlight class="keyword">False</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>np.savetxt(outbase+</highlight><highlight class="stringliteral">&apos;_SVD_basis&apos;</highlight><highlight class="normal">,U,delimiter=</highlight><highlight class="stringliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>np.savetxt(outbase+</highlight><highlight class="stringliteral">&apos;_SVD_singular_values&apos;</highlight><highlight class="normal">,s,delimiter=</highlight><highlight class="stringliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>U,s,V</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproteus_1_1deim__utils_1a7a0062d7f3aeadfd10b6bba909174a9a" kindref="member">calculate_deim_indices</ref>(Uin):</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="65"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>input:<sp/>Uin<sp/>n<sp/>x<sp/>m<sp/>array<sp/>of<sp/>basis<sp/>vectors<sp/>for<sp/>nonlinear<sp/>function<sp/>snapshots</highlight></codeline>
+<codeline lineno="66"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>output:<sp/>rho,<sp/>m<sp/>vector<sp/>of<sp/>indices<sp/>\rho_i<sp/>for<sp/>extracting<sp/>$\vec<sp/>F$<sp/>values</highlight></codeline>
+<codeline lineno="67"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="68"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>n,m=Uin.shape</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>rind<sp/>=<sp/>np.argmax(np.absolute(Uin[:,0]))</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>U=np.array(Uin[:,0])</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>rho=np.array([rind],</highlight><highlight class="stringliteral">&apos;i&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#Pt<sp/>=<sp/>np.zeros((1,n),&apos;d&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#P[0,rind]=1.0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>j<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>range(1,m):</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>u<sp/>=<sp/>Uin[:,j]<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Up=U[rho]</highlight><highlight class="comment">#Up=<sp/>np.dot(Pt,U)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>up=u[rho]</highlight><highlight class="comment">#up=<sp/>np.dot(Pt,u)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>j==1:</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c=old_div(up,Up)</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r=u-U*c</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c<sp/>=np.linalg.solve(Up,up)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>r=u-np.dot(U,c)<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rind=np.argmax(np.absolute(r))</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rho_new<sp/>=<sp/>np.zeros(j+1,</highlight><highlight class="stringliteral">&apos;i&apos;</highlight><highlight class="normal">);<sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rho_new[:-1]=rho;<sp/>rho_new[-1]=rind;<sp/>rho<sp/>=<sp/>rho_new</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>U_new=np.zeros((n,j+1),</highlight><highlight class="stringliteral">&apos;d&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>U_new[:,:-1]=U.reshape(n,j);<sp/>U_new[:,-1]=u</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>U=U_new</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rho</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproteus_1_1deim__utils_1a2089e1daec8ceb5690383f39a0a8b585" kindref="member">deim_alg</ref>(Uin,m):</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>&quot;&quot;&quot;dem_alg</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Basic<sp/>procedure:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>*<sp/>given<sp/>:math:`m`,<sp/>dimension<sp/>for<sp/>:math:`F`<sp/>reduced<sp/>basis<sp/>:math:`\mathbf{U}_m`</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>*<sp/>call<sp/>DEIM<sp/>algorithm<sp/>to<sp/>determine<sp/>:math:`\vec<sp/>\rho`.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>*<sp/>build<sp/>:math:`\mathbf{P}`<sp/>from<sp/>:math:`\rho`<sp/>as<sp/>:math:`\mathbf{P}<sp/>=<sp/>[\vec<sp/>e_{\rho_1},\vec<sp/>e_{\rho_2},\dots,\vec<sp/>e_{\rho_m}]`</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>*<sp/>invert<sp/>:math:`\mathbf{P}^T\mathbf{U}_m`</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>*<sp/>return<sp/>:math:`\rho`<sp/>and<sp/>:math:`\mathbf{P}_F=\mathbf{U}_m(\mathbf{P}^T\mathbf{U}_m)^{-1}`</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">assert</highlight><highlight class="normal"><sp/>m<sp/>&lt;=<sp/>Uin.shape[1]</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>Um<sp/>=<sp/>Uin[:,0:m]</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>rho<sp/>=<sp/><ref refid="namespaceproteus_1_1deim__utils_1a7a0062d7f3aeadfd10b6bba909174a9a" kindref="member">calculate_deim_indices</ref>(Um)</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>PtUm<sp/>=<sp/>Um[rho]</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">assert</highlight><highlight class="normal"><sp/>PtUm.shape<sp/>==<sp/>(m,m)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>PtUmInv<sp/>=<sp/>np.linalg.inv(PtUm)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>PF=<sp/>np.dot(Um,PtUmInv)</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rho,PF</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproteus_1_1deim__utils_1a813967aba90a8a39d8af90cde718f8c1" kindref="member">visualize_zslice</ref>(variable,nnx,nny,iz,x=None,y=None,name=None):</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="117"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>convenience<sp/>function<sp/>for<sp/>plotting<sp/>a<sp/>slice</highlight></codeline>
+<codeline lineno="118"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>istart<sp/>=<sp/>nnx*nny*iz</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>iend<sp/><sp/><sp/>=<sp/>nnx*nny*(iz+1)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>v_slice=<sp/>variable[istart:iend]</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>v_slice=<sp/>v_slice.reshape(nnx,nny)</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>x<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x<sp/>=<sp/>np.outer(np.arange(nnx),np.arange(nnx))</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>y<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>y<sp/>=<sp/>np.outer(np.arange(nny),np.arange(nny))</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">assert</highlight><highlight class="normal"><sp/>x.shape<sp/>==<sp/>v_slice.shape</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">assert</highlight><highlight class="normal"><sp/>y.shape<sp/>==<sp/>v_slice.shape</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>matplotlib.pyplot<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>plt</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>mpl_toolkits.mplot3d<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Axes3D</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>matplotlib<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>cm</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>matplotlib.ticker<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>LinearLocator,<sp/>FormatStrFormatter</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>fig<sp/>=<sp/>plt.figure()</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>ax<sp/>=<sp/>fig.gca(projection=</highlight><highlight class="stringliteral">&apos;3d&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>surf=ax.plot_surface(x,y,v_slice,rstride=1,cstride=1,cmap=cm.coolwarm,linewidth=0,antialiased=</highlight><highlight class="keyword">False</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.xlabel(</highlight><highlight class="stringliteral">&apos;x&apos;</highlight><highlight class="normal">);<sp/>plt.ylabel(</highlight><highlight class="stringliteral">&apos;y&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>name<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>name<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;deim_slice_z={0}.png&apos;</highlight><highlight class="normal">.format(iz)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>plt.savefig(name)</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>surf</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceproteus_1_1deim__utils_1ab408934caa9abd203b64a8e2776682a6" kindref="member">extract_sub_matrix_csr</ref>(rho,rowptr,colind,nnzval):</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="147"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>manually<sp/>extract<sp/>the<sp/>rows<sp/>in<sp/>the<sp/>deim<sp/>index<sp/>vector<sp/>rho<sp/>from<sp/>a<sp/>csr<sp/>matrix<sp/>representation<sp/></highlight></codeline>
+<codeline lineno="148"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>returns<sp/>a<sp/>csr<sp/>representation<sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>m<sp/>=<sp/>len(rho)</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>rowptr_sub<sp/>=<sp/>np.zeros(m+1,</highlight><highlight class="stringliteral">&apos;i&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>nnz_sub<sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>k,I<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>enumerate(rho):</highlight><highlight class="comment">#count<sp/>number<sp/>of<sp/>nonzero<sp/>entries</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>diff<sp/>=<sp/>rowptr[I+1]-rowptr[I]</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rowptr_sub[k+1]=rowptr_sub[k]+diff</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nnz_sub<sp/>+=<sp/>diff</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>colind_sub<sp/>=<sp/>np.zeros(nnz_sub,</highlight><highlight class="stringliteral">&apos;i&apos;</highlight><highlight class="normal">);<sp/>nzval_sub=np.zeros(nnz_sub,</highlight><highlight class="stringliteral">&apos;d&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>k,KK<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>enumerate(rho):</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>m,MM<sp/></highlight><highlight class="keywordflow">in</highlight><highlight class="normal"><sp/>enumerate(range(rowptr[KK],rowptr[KK+1])):</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>colind_sub[rowptr_sub[k]+m]=colind[MM]</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nzval_sub[rowptr_sub[k]+m]=nnzval[MM]</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rowptr_sub,colind_sub,nzval_sub</highlight></codeline>
+    </programlisting>
+    <location file="deim_utils.py"/>
+  </compounddef>
+</doxygen>

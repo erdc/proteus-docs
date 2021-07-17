@@ -1,42 +1,47 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>proteus.SWFlow.SWFlowProblem module &mdash; Proteus 1.7.4.dev0 documentation</title>
+  <title>proteus.SWFlow.SWFlowProblem module &mdash; Proteus 1.8.0 documentation</title>
   
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
 
   
   
     <link rel="shortcut icon" href="../_static/tritonBorder.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
@@ -65,7 +70,7 @@
             
             
               <div class="version">
-                1.7.4.dev0
+                1.8.0
               </div>
             
           
@@ -82,6 +87,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -89,19 +95,12 @@
               
             
             
-              <p class="caption"><span class="caption-text">General</span></p>
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../apicapi.html">API docs</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Tools</span></p>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../tools/boundary_conditions.html">BoundaryConditions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../tools/boundary_conditions.html#usage">Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../tools/boundary_conditions.html#import">Import</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/spatial_tools.html">SpatialTools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/spatial_tools.html#usage">Usage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#import">Import</a></li>
@@ -142,7 +141,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/two_phase_flow.html">TwoPhaseFlow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/wave_tools.html">WaveTools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/wave_tools.html#usage">Usage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tools/wave_tools.html#import-in-command-line">Import in command line</a></li>
@@ -154,33 +152,9 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Models</span></p>
+<p class="caption" role="heading"><span class="caption-text">Models</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../models/body_dynamics.html">Body Dynamics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#implementation">Implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#classes">Classes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchsystem">ProtChSystem</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchbody">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmesh">ProtChMesh</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmoorings">ProtChMoorings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchaddedmass">ProtChAddedMass</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChMoorings</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/free_surface.html">Free Surface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#vof-ncls">VOF - NCLS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#clsvof">CLSVOF</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/mesh_adaptivity.html">Mesh Adaptivity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../models/mesh_motion.html">Mesh Motion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../models/navier_stokes.html">Navier-Stokes</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../models/navier_stokes.html">Multiphase Navier-Stokes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#two-phase">Two-Phase</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#three-phase">Three-Phase</a></li>
@@ -191,11 +165,41 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../models/SWFlow.html">Shallow Water Flow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#shallow-water-equations">Shallow Water Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#running-the-tests">Running the tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../models/free_surface.html">Free Surface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#vof-ncls">VOF - NCLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#clsvof">CLSVOF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../models/body_dynamics.html">Multi-Body Solid Dynamics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#implementation">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchsystem">ProtChSystem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchbody">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmesh">ProtChMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmoorings">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchaddedmass">ProtChAddedMass</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id2">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChMoorings</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -230,18 +234,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>proteus.SWFlow.SWFlowProblem module</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             
               <a href="https://github.com/erdc/proteus/blob/masterdocs/source/api/proteus.SWFlow.SWFlowProblem.rst" class="fa fa-github"> Edit on GitHub</a>
             
@@ -260,42 +266,42 @@
   <div class="section" id="module-proteus.SWFlow.SWFlowProblem">
 <span id="proteus-swflow-swflowproblem-module"></span><h1>proteus.SWFlow.SWFlowProblem module<a class="headerlink" href="#module-proteus.SWFlow.SWFlowProblem" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="proteus.SWFlow.SWFlowProblem.SWFlowProblem">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.SWFlow.SWFlowProblem.</code><code class="sig-name descname">SWFlowProblem</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sw_model</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">cfl</span><span class="o">=</span><span class="default_value">0.33</span></em>, <em class="sig-param"><span class="n">outputStepping</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">structured</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">he</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nnx</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nny</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">domain</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">AdH_file</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">bathymetry</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">triangleFlag</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="n">initialConditions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">boundaryConditions</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">reflectingBCs</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">useSuperlu</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">analyticalSolution</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">auxiliaryVariables</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/SWFlow/SWFlowProblem.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.SWFlow.SWFlowProblem.SWFlowProblem" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.SWFlow.SWFlowProblem.SWFlowProblem">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.SWFlow.SWFlowProblem.</span></span><span class="sig-name descname"><span class="pre">SWFlowProblem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sw_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cfl</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.33</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputStepping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">structured</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">he</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nnx</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nny</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">AdH_file</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bathymetry</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">triangleFlag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initialConditions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundaryConditions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reflectingBCs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useSuperlu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">analyticalSolution</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">auxiliaryVariables</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">genMesh</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/SWFlow/SWFlowProblem.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.SWFlow.SWFlowProblem.SWFlowProblem" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Constructor for structured meshes</p>
 <dl class="py method">
-<dt id="proteus.SWFlow.SWFlowProblem.SWFlowProblem.assert_initialConditions">
-<code class="sig-name descname">assert_initialConditions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sw_model</span></em>, <em class="sig-param"><span class="n">initialConditions</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/SWFlow/SWFlowProblem.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.SWFlow.SWFlowProblem.SWFlowProblem.assert_initialConditions" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.SWFlow.SWFlowProblem.SWFlowProblem.assert_initialConditions">
+<span class="sig-name descname"><span class="pre">assert_initialConditions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sw_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">initialConditions</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/SWFlow/SWFlowProblem.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.SWFlow.SWFlowProblem.SWFlowProblem.assert_initialConditions" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.SWFlow.SWFlowProblem.SWFlowProblem.assert_boundaryConditions">
-<code class="sig-name descname">assert_boundaryConditions</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">sw_model</span></em>, <em class="sig-param"><span class="n">boundaryConditions</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/SWFlow/SWFlowProblem.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.SWFlow.SWFlowProblem.SWFlowProblem.assert_boundaryConditions" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.SWFlow.SWFlowProblem.SWFlowProblem.assert_boundaryConditions">
+<span class="sig-name descname"><span class="pre">assert_boundaryConditions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sw_model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundaryConditions</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/SWFlow/SWFlowProblem.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.SWFlow.SWFlowProblem.SWFlowProblem.assert_boundaryConditions" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="proteus.SWFlow.SWFlowProblem.OutputStepping">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.SWFlow.SWFlowProblem.</code><code class="sig-name descname">OutputStepping</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">final_time</span></em>, <em class="sig-param"><span class="n">dt_init</span><span class="o">=</span><span class="default_value">0.001</span></em>, <em class="sig-param"><span class="n">dt_output</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">nDTout</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/SWFlow/SWFlowProblem.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.SWFlow.SWFlowProblem.OutputStepping" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.SWFlow.SWFlowProblem.OutputStepping">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.SWFlow.SWFlowProblem.</span></span><span class="sig-name descname"><span class="pre">OutputStepping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">final_time</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt_init</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt_output</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nDTout</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/SWFlow/SWFlowProblem.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.SWFlow.SWFlowProblem.OutputStepping" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>OutputStepping handles how often the solution is outputted.</p>
 <dl class="py method">
-<dt id="proteus.SWFlow.SWFlowProblem.OutputStepping.getOutputStepping">
-<code class="sig-name descname">getOutputStepping</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/SWFlow/SWFlowProblem.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.SWFlow.SWFlowProblem.OutputStepping.getOutputStepping" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.SWFlow.SWFlowProblem.OutputStepping.getOutputStepping">
+<span class="sig-name descname"><span class="pre">getOutputStepping</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/SWFlow/SWFlowProblem.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.SWFlow.SWFlowProblem.OutputStepping.getOutputStepping" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="proteus.SWFlow.SWFlowProblem.FESpace">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.SWFlow.SWFlowProblem.</code><code class="sig-name descname">FESpace</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/SWFlow/SWFlowProblem.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.SWFlow.SWFlowProblem.FESpace" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.SWFlow.SWFlowProblem.FESpace">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.SWFlow.SWFlowProblem.</span></span><span class="sig-name descname"><span class="pre">FESpace</span></span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/SWFlow/SWFlowProblem.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.SWFlow.SWFlowProblem.FESpace" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Create FE Spaces.</p>
 <dl class="py method">
-<dt id="proteus.SWFlow.SWFlowProblem.FESpace.getFESpace">
-<code class="sig-name descname">getFESpace</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/SWFlow/SWFlowProblem.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.SWFlow.SWFlowProblem.FESpace.getFESpace" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.SWFlow.SWFlowProblem.FESpace.getFESpace">
+<span class="sig-name descname"><span class="pre">getFESpace</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/SWFlow/SWFlowProblem.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.SWFlow.SWFlowProblem.FESpace.getFESpace" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -307,20 +313,25 @@
            
           </div>
           <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, The Proteus Team
+        &#169; Copyright 2020, The Proteus Team.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -328,7 +339,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

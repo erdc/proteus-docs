@@ -1,0 +1,1820 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct" kind="namespace" language="Python">
+    <compoundname>proteus::tests::periodic::duct</compoundname>
+    <innerclass refid="d3/dfb/classproteus_1_1tests_1_1periodic_1_1duct_1_1pRot" prot="public">proteus::tests::periodic::duct::pRot</innerclass>
+    <innerclass refid="d7/dd1/classproteus_1_1tests_1_1periodic_1_1duct_1_1uRot" prot="public">proteus::tests::periodic::duct::uRot</innerclass>
+    <innerclass refid="d4/dab/classproteus_1_1tests_1_1periodic_1_1duct_1_1vRot" prot="public">proteus::tests::periodic::duct::vRot</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a01233c64574cff51df21b053ac06835a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  <ref refid="d0/d93/namespaceproteus_1_1Context_1a461242d050aceb1e84d9426074c67004" kindref="member">Context.Options</ref>([
+    (&quot;nd&quot;, 2, &quot;Number of space dimensions&quot;),
+    (&quot;grid&quot;, True, &quot;Use a regular grid&quot;),
+    (&quot;triangles&quot;, True, &quot;Use triangular or tetrahedral elements&quot;),
+    (&quot;spaceOrder&quot;, 1, &quot;Use (bi-)linear or (bi-)quadratic spaces&quot;),
+    (&quot;useTaylorHood&quot;, False, &quot;Use Taylor-Hood element&quot;),
+    (&quot;<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a2877738e26871330dba473d65a1b9c93" kindref="member">timeOrder</ref>&quot;, 1, &quot;Use bdf1 or bdf2&quot;),
+    (&quot;periodic&quot;, False, &quot;Use periodic boundary conditions&quot;),
+    (&quot;weak&quot;, True, &quot;Use weak boundary conditions&quot;),
+    (&quot;coord&quot;, False, &quot;Use coordinates for setting boundary conditions&quot;),
+    (&quot;Re&quot;, 1.0, &quot;Reynolds <ref refid="de/d5b/Headers_8h_1a75dde92eec1297f87deda0fe215773cf" kindref="member">number</ref> for non-periodic problem&quot;),
+    #(&quot;<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a0fce4a8cc2fa118c8b5d7373b04f0ed5" kindref="member">nnx</ref>&quot;, 21, &quot;Number of grid nodes in x-direction&quot;),
+    (&quot;<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a0fce4a8cc2fa118c8b5d7373b04f0ed5" kindref="member">nnx</ref>&quot;, 11, &quot;Number of grid nodes in x-direction&quot;),
+    (&quot;pc_type&quot;, &apos;LU&apos;, &quot;Specify preconditioner type&quot;),
+    (&quot;A_block_AMG&quot;, False, &quot;Specify whether a block-AMG should be used to solve A-block&quot;)])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="20" column="1" bodyfile="tests/periodic/duct.py" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a371fa855f282a7ec01c64cff624477f3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <initializer>=  <ref refid="dc/dfd/classproteus_1_1defaults_1_1Physics__base" kindref="compound">Physics_base</ref>(<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1aad5dabba132467124a8eed16d3653855" kindref="member">nd</ref> = opts.nd,
+                 <ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a1900cc6400e9b4edccfd80bd548b028e" kindref="member">name</ref>=&quot;duct_physics&quot;)</initializer>
+        <briefdescription>
+<para>Physics#. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="39" column="1" bodyfile="tests/periodic/duct.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a124301c4e7a79867b03acfb22eee3337" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="42" column="1" bodyfile="tests/periodic/duct.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ad7eddaa4572dd910c7adc009bf6ae852" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="45" column="1" bodyfile="tests/periodic/duct.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a78ef1971fbb009504454e24fa07f46d4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>=  p.domain.boundaryTags</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="46" column="1" bodyfile="tests/periodic/duct.py" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a1940373c3c4a58cafff43ad62ebc56ee" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::periodic::duct.nu</definition>
+        <argsstring></argsstring>
+        <name>nu</name>
+        <initializer>=  1.004e-6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="55" column="1" bodyfile="tests/periodic/duct.py" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ad071070e55507e2b61a36a35a34cf244" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>proteus::tests::periodic::duct.rho</definition>
+        <argsstring></argsstring>
+        <name>rho</name>
+        <initializer>=  998.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="56" column="1" bodyfile="tests/periodic/duct.py" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1adeb5f239dc19e3a04299edd5403faa5f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <initializer>=  <ref refid="de/d5b/Headers_8h_1a499d78bdc2c754c7a4cf8d39ed245e9f" kindref="member">p.L</ref>[2]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="59" column="1" bodyfile="tests/periodic/duct.py" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a88fa61bcf4290578b99f1001c84e1e7f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::periodic::duct::umax</definition>
+        <argsstring></argsstring>
+        <name>umax</name>
+        <initializer>=  opts.Re*<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a1940373c3c4a58cafff43ad62ebc56ee" kindref="member">nu</ref>/<ref refid="de/d5b/Headers_8h_1a499d78bdc2c754c7a4cf8d39ed245e9f" kindref="member">p.L</ref>[2]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="60" column="1" bodyfile="tests/periodic/duct.py" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1aa9d240b7b7dc9f4e2c475a508653a5d0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="64" column="1" bodyfile="tests/periodic/duct.py" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a5d70c5699c69fa5fda003652c7bfda5b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::periodic::duct.mu</definition>
+        <argsstring></argsstring>
+        <name>mu</name>
+        <initializer>=  <ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a1940373c3c4a58cafff43ad62ebc56ee" kindref="member">nu</ref>*<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ad071070e55507e2b61a36a35a34cf244" kindref="member">rho</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="65" column="1" bodyfile="tests/periodic/duct.py" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ad26575d89742ec3aeabf34ec8351b726" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::periodic::duct.G</definition>
+        <argsstring></argsstring>
+        <name>G</name>
+        <initializer>=  (<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a88fa61bcf4290578b99f1001c84e1e7f" kindref="member">umax</ref>*8.0*<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a5d70c5699c69fa5fda003652c7bfda5b" kindref="member">mu</ref>)/(<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1adeb5f239dc19e3a04299edd5403faa5f" kindref="member">h</ref>**2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="66" column="1" bodyfile="tests/periodic/duct.py" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ae164c0e997eae0dfdc1da5d092d641b0" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::periodic::duct::gravity</definition>
+        <argsstring></argsstring>
+        <name>gravity</name>
+        <initializer>=  [<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ad26575d89742ec3aeabf34ec8351b726" kindref="member">G</ref>/<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ad071070e55507e2b61a36a35a34cf244" kindref="member">rho</ref>, 0., 0.]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="69" column="1" bodyfile="tests/periodic/duct.py" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a5ec35b74a8e605f435825be6467fd88c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.LevelModelType</definition>
+        <argsstring></argsstring>
+        <name>LevelModelType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="73" column="1" bodyfile="tests/periodic/duct.py" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a782819712aa1a5822a1276cd97361ec6" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string proteus::tests::periodic::duct::nullSpace</definition>
+        <argsstring></argsstring>
+        <name>nullSpace</name>
+        <initializer>= &quot;NavierStokesConstantPressure&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="76" column="1" bodyfile="tests/periodic/duct.py" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a3529e8553d4ec6336a59cbfb1b6f7218" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::periodic::duct.eps</definition>
+        <argsstring></argsstring>
+        <name>eps</name>
+        <initializer>= 1.0e-8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="82" column="1" bodyfile="tests/periodic/duct.py" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a2df860328be40b5f1f3d77280e1115a5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.periodicDirichletConditions</definition>
+        <argsstring></argsstring>
+        <name>periodicDirichletConditions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="102" column="1" bodyfile="tests/periodic/duct.py" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a42855ec19ceb02121f2e89a2ae2bb400" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.pSol2</definition>
+        <argsstring></argsstring>
+        <name>pSol2</name>
+        <initializer>=  <ref refid="dd/d47/classproteus_1_1AnalyticalSolutions_1_1PlanePoiseuilleFlow__p" kindref="compound">AnalyticalSolutions.PlanePoiseuilleFlow_p</ref>(plateSeperation=<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1adeb5f239dc19e3a04299edd5403faa5f" kindref="member">h</ref>,
+                                                 <ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a5d70c5699c69fa5fda003652c7bfda5b" kindref="member">mu</ref> = <ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a5d70c5699c69fa5fda003652c7bfda5b" kindref="member">mu</ref>,
+                                                 grad_p = -<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ad26575d89742ec3aeabf34ec8351b726" kindref="member">G</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="107" column="1" bodyfile="tests/periodic/duct.py" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a2bb49093b79f2c25baa0c2ab69d0f8ab" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.uSol2</definition>
+        <argsstring></argsstring>
+        <name>uSol2</name>
+        <initializer>=  <ref refid="df/d92/classproteus_1_1AnalyticalSolutions_1_1PlanePoiseuilleFlow__u" kindref="compound">AnalyticalSolutions.PlanePoiseuilleFlow_u</ref>(plateSeperation=<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1adeb5f239dc19e3a04299edd5403faa5f" kindref="member">h</ref>,
+                                                 <ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a5d70c5699c69fa5fda003652c7bfda5b" kindref="member">mu</ref> = <ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a5d70c5699c69fa5fda003652c7bfda5b" kindref="member">mu</ref>,
+                                                 grad_p = -<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ad26575d89742ec3aeabf34ec8351b726" kindref="member">G</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="110" column="1" bodyfile="tests/periodic/duct.py" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a6a385ec2438b516afe5d2dfa0b3eea04" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.vSol2</definition>
+        <argsstring></argsstring>
+        <name>vSol2</name>
+        <initializer>=  <ref refid="d9/df6/classproteus_1_1AnalyticalSolutions_1_1PlanePoiseuilleFlow__v" kindref="compound">AnalyticalSolutions.PlanePoiseuilleFlow_v</ref>(plateSeperation=<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1adeb5f239dc19e3a04299edd5403faa5f" kindref="member">h</ref>,
+                                                 <ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a5d70c5699c69fa5fda003652c7bfda5b" kindref="member">mu</ref> = <ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a5d70c5699c69fa5fda003652c7bfda5b" kindref="member">mu</ref>,
+                                                 grad_p = -<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ad26575d89742ec3aeabf34ec8351b726" kindref="member">G</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="113" column="1" bodyfile="tests/periodic/duct.py" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a44eaf0597c4dd8c606f867320145df51" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.pSol</definition>
+        <argsstring></argsstring>
+        <name>pSol</name>
+        <initializer>=  <ref refid="d3/dfb/classproteus_1_1tests_1_1periodic_1_1duct_1_1pRot" kindref="compound">pRot</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="143" column="1" bodyfile="tests/periodic/duct.py" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a01bc39e46f913b4b70cf7dc84cf4d1a6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.uSol</definition>
+        <argsstring></argsstring>
+        <name>uSol</name>
+        <initializer>=  <ref refid="d7/dd1/classproteus_1_1tests_1_1periodic_1_1duct_1_1uRot" kindref="compound">uRot</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="144" column="1" bodyfile="tests/periodic/duct.py" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ae894262f04530db022e324f515cb45f5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.vSol</definition>
+        <argsstring></argsstring>
+        <name>vSol</name>
+        <initializer>=  <ref refid="d4/dab/classproteus_1_1tests_1_1periodic_1_1duct_1_1vRot" kindref="compound">vRot</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="145" column="1" bodyfile="tests/periodic/duct.py" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a646066c40c8900d84b5470259e9c0eb6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.analyticalSolution</definition>
+        <argsstring></argsstring>
+        <name>analyticalSolution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="148" column="1" bodyfile="tests/periodic/duct.py" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a634b5e543907d4250d64d51f32cfdb0a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  p.analyticalSolution</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="152" column="1" bodyfile="tests/periodic/duct.py" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a2505d4a4014d8b38b608d0e50cf14250" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.coefficients</definition>
+        <argsstring></argsstring>
+        <name>coefficients</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="154" column="1" bodyfile="tests/periodic/duct.py" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a7c5a8e210118a4489a9fb4eb9fe3495a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.epsFact</definition>
+        <argsstring></argsstring>
+        <name>epsFact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="154" column="1" bodyfile="tests/periodic/duct.py" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a645480271d12d7cc8e635c0ab0d885e6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.sigma</definition>
+        <argsstring></argsstring>
+        <name>sigma</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="155" column="1" bodyfile="tests/periodic/duct.py" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a01bf57621a5f324eba2abfff921924cd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.rho_0</definition>
+        <argsstring></argsstring>
+        <name>rho_0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="156" column="1" bodyfile="tests/periodic/duct.py" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a19a206e49ed9dc497c25992a028b22c6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.nu_0</definition>
+        <argsstring></argsstring>
+        <name>nu_0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="156" column="1" bodyfile="tests/periodic/duct.py" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ae5af8fa8f0ad294689515afc7d4f4086" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.rho_1</definition>
+        <argsstring></argsstring>
+        <name>rho_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="157" column="1" bodyfile="tests/periodic/duct.py" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ae2f95d7c988e0d3d5eb4db24d6ceb0f5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.nu_1</definition>
+        <argsstring></argsstring>
+        <name>nu_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="157" column="1" bodyfile="tests/periodic/duct.py" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a33737a53ee744823269efa750ef94bae" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="158" column="1" bodyfile="tests/periodic/duct.py" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1aad5dabba132467124a8eed16d3653855" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.nd</definition>
+        <argsstring></argsstring>
+        <name>nd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="159" column="1" bodyfile="tests/periodic/duct.py" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a4b2d0aebdff6bf5bb935f36ffc1cfbda" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.ME_model</definition>
+        <argsstring></argsstring>
+        <name>ME_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="160" column="1" bodyfile="tests/periodic/duct.py" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a70044829c3924c9fad1556efcf8326b7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.VF_model</definition>
+        <argsstring></argsstring>
+        <name>VF_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="161" column="1" bodyfile="tests/periodic/duct.py" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a9f79870b52387b9b1df753181b7291fb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.LS_model</definition>
+        <argsstring></argsstring>
+        <name>LS_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="162" column="1" bodyfile="tests/periodic/duct.py" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a06db54bb883ddf9100a1072bad334947" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.Closure_0_model</definition>
+        <argsstring></argsstring>
+        <name>Closure_0_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="163" column="1" bodyfile="tests/periodic/duct.py" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ae93657f8a5289eadcbb2a1f107c0d6dd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.Closure_1_model</definition>
+        <argsstring></argsstring>
+        <name>Closure_1_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="164" column="1" bodyfile="tests/periodic/duct.py" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1afe0ca138c5165be414217323de533d7c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.epsFact_density</definition>
+        <argsstring></argsstring>
+        <name>epsFact_density</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="165" column="1" bodyfile="tests/periodic/duct.py" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ac0e79da89c18ab1f341120c743484f22" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.stokes</definition>
+        <argsstring></argsstring>
+        <name>stokes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="166" column="1" bodyfile="tests/periodic/duct.py" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a15d00f78500fa650b37c1ba491ec1f01" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.useVF</definition>
+        <argsstring></argsstring>
+        <name>useVF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="167" column="1" bodyfile="tests/periodic/duct.py" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ab5973c74b216160128ab954533439afe" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.useRBLES</definition>
+        <argsstring></argsstring>
+        <name>useRBLES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="168" column="1" bodyfile="tests/periodic/duct.py" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a72ef7fdfbcbaf603ea707de711a1d721" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.useMetrics</definition>
+        <argsstring></argsstring>
+        <name>useMetrics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="169" column="1" bodyfile="tests/periodic/duct.py" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a923b6f91a0fb24b83455c72127dac3c5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.eb_adjoint_sigma</definition>
+        <argsstring></argsstring>
+        <name>eb_adjoint_sigma</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="170" column="1" bodyfile="tests/periodic/duct.py" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a1f3a34d1c4be7f7f0bd290b0d8a12fb2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.eb_penalty_constant</definition>
+        <argsstring></argsstring>
+        <name>eb_penalty_constant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="171" column="1" bodyfile="tests/periodic/duct.py" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a0b508f4001fc281d2c355b586e67ddd2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.forceStrongDirichlet</definition>
+        <argsstring></argsstring>
+        <name>forceStrongDirichlet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="172" column="1" bodyfile="tests/periodic/duct.py" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a5a4028f415901149cc13316bea98d967" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.turbulenceClosureModel</definition>
+        <argsstring></argsstring>
+        <name>turbulenceClosureModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="173" column="1" bodyfile="tests/periodic/duct.py" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a645d1e3359cc0978729dd2da5a86a27b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.NONCONSERVATIVE_FORM</definition>
+        <argsstring></argsstring>
+        <name>NONCONSERVATIVE_FORM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="174" column="1" bodyfile="tests/periodic/duct.py" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ae4c20d22428d7f095e66c5a74156f0c9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.MOMENTUM_SGE</definition>
+        <argsstring></argsstring>
+        <name>MOMENTUM_SGE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="175" column="1" bodyfile="tests/periodic/duct.py" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1aef57a06981527bee47705628603aa7e4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.PRESSURE_SGE</definition>
+        <argsstring></argsstring>
+        <name>PRESSURE_SGE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="176" column="1" bodyfile="tests/periodic/duct.py" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a7fcae27758a092fe3a514cf27311ccba" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.VELOCITY_SGE</definition>
+        <argsstring></argsstring>
+        <name>VELOCITY_SGE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="177" column="1" bodyfile="tests/periodic/duct.py" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ad55bd8ee5e9532f926df5675caccdf8e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::periodic::duct.nsave</definition>
+        <argsstring></argsstring>
+        <name>nsave</name>
+        <initializer>= 25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="181" column="1" bodyfile="tests/periodic/duct.py" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1af18ec5e062cbbf5ec44faa21e3836231" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::periodic::duct.dt_init</definition>
+        <argsstring></argsstring>
+        <name>dt_init</name>
+        <initializer>=  1.0e-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="182" column="1" bodyfile="tests/periodic/duct.py" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1afd14202037a3b157ded26bc7a2fbdd55" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::periodic::duct.DT</definition>
+        <argsstring></argsstring>
+        <name>DT</name>
+        <initializer>=  (<ref refid="de/d5b/Headers_8h_1a38fec5c94a02f67ba7bf45025dd3ac80" kindref="member">p.T</ref>-<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1af18ec5e062cbbf5ec44faa21e3836231" kindref="member">dt_init</ref>)/float(<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ad55bd8ee5e9532f926df5675caccdf8e" kindref="member">nsave</ref>-1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="183" column="1" bodyfile="tests/periodic/duct.py" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ac582194727c0b45635b1f307329fbc04" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.tnList</definition>
+        <argsstring></argsstring>
+        <name>tnList</name>
+        <initializer>=  p.tnList</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="184" column="1" bodyfile="tests/periodic/duct.py" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1abbc849fb1052375d6f85b73fd8e54844" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.dirichletConditions</definition>
+        <argsstring></argsstring>
+        <name>dirichletConditions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="226" column="1" bodyfile="tests/periodic/duct.py" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a2703a98d951156a4ffa4e8aebe876477" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.advectiveFluxBoundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>advectiveFluxBoundaryConditions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="257" column="1" bodyfile="tests/periodic/duct.py" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ac7647a23b3b5453351b1e5223732d1d0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.diffusiveFluxBoundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>diffusiveFluxBoundaryConditions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="270" column="1" bodyfile="tests/periodic/duct.py" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1abd57731c57f1a479f905bb80f5d0947c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <initializer>=  <ref refid="d7/dc9/classproteus_1_1defaults_1_1Numerics__base" kindref="compound">Numerics_base</ref>()</initializer>
+        <briefdescription>
+<para>Numerics#. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="448" column="1" bodyfile="tests/periodic/duct.py" bodystart="448" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1acd0e401486cd268a479c98a9329660ab" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.runCFL</definition>
+        <argsstring></argsstring>
+        <name>runCFL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="451" column="1" bodyfile="tests/periodic/duct.py" bodystart="451" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ac5c5bdd7176026e08908c4593dbe930a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.timeIntegration</definition>
+        <argsstring></argsstring>
+        <name>timeIntegration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="453" column="1" bodyfile="tests/periodic/duct.py" bodystart="453" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a2877738e26871330dba473d65a1b9c93" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.timeOrder</definition>
+        <argsstring></argsstring>
+        <name>timeOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="454" column="1" bodyfile="tests/periodic/duct.py" bodystart="454" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a3f4bfba7701490dbd8002156a16e6613" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.stepController</definition>
+        <argsstring></argsstring>
+        <name>stepController</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="461" column="1" bodyfile="tests/periodic/duct.py" bodystart="461" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a4ad137993e5000ca4d32a08f63705c7a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.systemStepExact</definition>
+        <argsstring></argsstring>
+        <name>systemStepExact</name>
+        <initializer>= n.systemStepExact</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="462" column="1" bodyfile="tests/periodic/duct.py" bodystart="462" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1af79e982c8eda32b6279f05e099ad769f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.femSpaces</definition>
+        <argsstring></argsstring>
+        <name>femSpaces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="467" column="1" bodyfile="tests/periodic/duct.py" bodystart="467" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ab3e98bba625341567be9981e883ce8c9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.elementQuadrature</definition>
+        <argsstring></argsstring>
+        <name>elementQuadrature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="472" column="1" bodyfile="tests/periodic/duct.py" bodystart="472" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a77737addfc9d9f49e6d46ec7f7e27f35" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.elementBoundaryQuadrature</definition>
+        <argsstring></argsstring>
+        <name>elementBoundaryQuadrature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="473" column="1" bodyfile="tests/periodic/duct.py" bodystart="473" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a32a598716a9197c2d59c455f4cfba54e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.hex</definition>
+        <argsstring></argsstring>
+        <name>hex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="488" column="1" bodyfile="tests/periodic/duct.py" bodystart="488" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ad96252560bc72ae9cbb95a99141d9b33" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.quad</definition>
+        <argsstring></argsstring>
+        <name>quad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="491" column="1" bodyfile="tests/periodic/duct.py" bodystart="491" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a0fce4a8cc2fa118c8b5d7373b04f0ed5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="524" column="1" bodyfile="tests/periodic/duct.py" bodystart="524" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a27c24ab53f96870b00a2daa48ef817e4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="525" column="1" bodyfile="tests/periodic/duct.py" bodystart="525" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a6cb7b4d51b1307854e7d1a5f59eb1d84" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.nnz</definition>
+        <argsstring></argsstring>
+        <name>nnz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="527" column="1" bodyfile="tests/periodic/duct.py" bodystart="527" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a2ef355cd2d35362b8fba32342e7b39b8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  <ref refid="de/d5b/Headers_8h_1a499d78bdc2c754c7a4cf8d39ed245e9f" kindref="member">p.L</ref>[0]/float(n.nnx-1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="535" column="1" bodyfile="tests/periodic/duct.py" bodystart="535" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a6ca0d5d0cc94d0bb5adfa80c89b57e18" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="537" column="1" bodyfile="tests/periodic/duct.py" bodystart="537" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a09fca19012587fc62b7c0205463c2af2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.triangleFlag</definition>
+        <argsstring></argsstring>
+        <name>triangleFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="539" column="1" bodyfile="tests/periodic/duct.py" bodystart="539" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ad6e8187e5677cd5a9c636028f294f033" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.numericalFluxType</definition>
+        <argsstring></argsstring>
+        <name>numericalFluxType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="542" column="1" bodyfile="tests/periodic/duct.py" bodystart="542" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1aef64a4bde1d7001068c38e0fe05b26fe" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.parallelPeriodic</definition>
+        <argsstring></argsstring>
+        <name>parallelPeriodic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="546" column="1" bodyfile="tests/periodic/duct.py" bodystart="546" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a4ae6676c8d6214f6bdb5cdd703e8a70c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.subgridError</definition>
+        <argsstring></argsstring>
+        <name>subgridError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="548" column="1" bodyfile="tests/periodic/duct.py" bodystart="548" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a0dd24f48ad6a343e3b4033a733570be1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.lag</definition>
+        <argsstring></argsstring>
+        <name>lag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="550" column="1" bodyfile="tests/periodic/duct.py" bodystart="550" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a6ba66db0fe788fd026b9f0691f1c6b1a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.hFactor</definition>
+        <argsstring></argsstring>
+        <name>hFactor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="551" column="1" bodyfile="tests/periodic/duct.py" bodystart="551" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1aad499e8602b6f30643a1f6a87c71afd9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>shockCapturing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="553" column="1" bodyfile="tests/periodic/duct.py" bodystart="553" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a659c2081ad2b9d49e813ffb2c0557734" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>shockCapturingFactor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="555" column="1" bodyfile="tests/periodic/duct.py" bodystart="555" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1aee9d43ed17af049886ecc65bb55cda6c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.multilevelNonlinearSolver</definition>
+        <argsstring></argsstring>
+        <name>multilevelNonlinearSolver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="558" column="1" bodyfile="tests/periodic/duct.py" bodystart="558" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ae2993c0aadac9635672eb7f007d26a7f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.levelNonlinearSolver</definition>
+        <argsstring></argsstring>
+        <name>levelNonlinearSolver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="560" column="1" bodyfile="tests/periodic/duct.py" bodystart="560" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a47b53ebfa564ec47d39dd8651b078acf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.fullNewtonFlag</definition>
+        <argsstring></argsstring>
+        <name>fullNewtonFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="562" column="1" bodyfile="tests/periodic/duct.py" bodystart="562" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a0073446d2ec7e191400fb2e3134348bf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.maxNonlinearIts</definition>
+        <argsstring></argsstring>
+        <name>maxNonlinearIts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="563" column="1" bodyfile="tests/periodic/duct.py" bodystart="563" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a4b0211413ee1ca7f421eae985ad8e368" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.maxLineSearches</definition>
+        <argsstring></argsstring>
+        <name>maxLineSearches</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="564" column="1" bodyfile="tests/periodic/duct.py" bodystart="564" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ac6df378d5f45e3687492738de7dd8326" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.tolFac</definition>
+        <argsstring></argsstring>
+        <name>tolFac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="566" column="1" bodyfile="tests/periodic/duct.py" bodystart="566" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a732fc015b75593ccbe4ffe75d04767c2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>nl_atol_res</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="568" column="1" bodyfile="tests/periodic/duct.py" bodystart="568" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ac815af0de8d460cf138952297cb983a8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.matrix</definition>
+        <argsstring></argsstring>
+        <name>matrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="570" column="1" bodyfile="tests/periodic/duct.py" bodystart="570" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a77de838c3ef25c2db93061e47916c553" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.multilevelLinearSolver</definition>
+        <argsstring></argsstring>
+        <name>multilevelLinearSolver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="572" column="1" bodyfile="tests/periodic/duct.py" bodystart="572" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a870f264c90604f93608a785a72d35c39" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.levelLinearSolver</definition>
+        <argsstring></argsstring>
+        <name>levelLinearSolver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="573" column="1" bodyfile="tests/periodic/duct.py" bodystart="573" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a559c1d4f807307510f72940babd4a60e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.linearSmoother</definition>
+        <argsstring></argsstring>
+        <name>linearSmoother</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="578" column="1" bodyfile="tests/periodic/duct.py" bodystart="578" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a97bd7761f78530820c84968ebfbcb8e7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.linearSmootherOptions</definition>
+        <argsstring></argsstring>
+        <name>linearSmootherOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="582" column="1" bodyfile="tests/periodic/duct.py" bodystart="582" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a07984a6689655ef4814335389d8cf12c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.linear_solver_options_prefix</definition>
+        <argsstring></argsstring>
+        <name>linear_solver_options_prefix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="596" column="1" bodyfile="tests/periodic/duct.py" bodystart="596" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1afb1ebdf2f7f0f90e61f7830d7a2b29ea" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.linTolFac</definition>
+        <argsstring></argsstring>
+        <name>linTolFac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="598" column="1" bodyfile="tests/periodic/duct.py" bodystart="598" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a145677ca9d11c49e5a160a666d2286e0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.l_atol_res</definition>
+        <argsstring></argsstring>
+        <name>l_atol_res</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="599" column="1" bodyfile="tests/periodic/duct.py" bodystart="599" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1afa0f0a0d727e3922bcec692919cbaad8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.conservativeFlux</definition>
+        <argsstring></argsstring>
+        <name>conservativeFlux</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="601" column="1" bodyfile="tests/periodic/duct.py" bodystart="601" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a20c6e042e2e0fac999e597cf18182a9c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.parallelPartitioningType</definition>
+        <argsstring></argsstring>
+        <name>parallelPartitioningType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="604" column="1" bodyfile="tests/periodic/duct.py" bodystart="604" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a254ece65cff59370bc912567cfd9d9d9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.nLayersOfOverlapForParallel</definition>
+        <argsstring></argsstring>
+        <name>nLayersOfOverlapForParallel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="607" column="1" bodyfile="tests/periodic/duct.py" bodystart="607" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a514edab25f525ae0a5c6afdf8ff7319a" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::periodic::duct.pnList</definition>
+        <argsstring></argsstring>
+        <name>pnList</name>
+        <initializer>= [(<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a371fa855f282a7ec01c64cff624477f3" kindref="member">p</ref>,<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1abd57731c57f1a479f905bb80f5d0947c" kindref="member">n</ref>)]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="615" column="1" bodyfile="tests/periodic/duct.py" bodystart="615" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a5921b8d21adb7f2e5fdd925ab1f6e57c" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string proteus::tests::periodic::duct::mesh_name</definition>
+        <argsstring></argsstring>
+        <name>mesh_name</name>
+        <initializer>=  &quot;pg&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="617" column="1" bodyfile="tests/periodic/duct.py" bodystart="617" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ab156780a179bd9c6f713b587b5de5b4b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.genMesh</definition>
+        <argsstring></argsstring>
+        <name>genMesh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="618" column="1" bodyfile="tests/periodic/duct.py" bodystart="618" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ac33844838fd5ace119e53014a4aad797" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::duct.polyfile</definition>
+        <argsstring></argsstring>
+        <name>polyfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="619" column="1" bodyfile="tests/periodic/duct.py" bodystart="619" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a407f606aaf23cca7bfcd37d65f8e884f" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string proteus::tests::periodic::duct::space_name</definition>
+        <argsstring></argsstring>
+        <name>space_name</name>
+        <initializer>= &quot;p{0}&quot;.format(opts.spaceOrder)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="626" column="1" bodyfile="tests/periodic/duct.py" bodystart="626" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a1900cc6400e9b4edccfd80bd548b028e" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string proteus::tests::periodic::duct.name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <initializer>=  &quot;duct{0}t{1}{2}d{3}<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a2ef355cd2d35362b8fba32342e7b39b8" kindref="member">he</ref>{4}&quot;.format(<ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a407f606aaf23cca7bfcd37d65f8e884f" kindref="member">space_name</ref>,
+                                        opts.timeOrder,
+                                        opts.nd,
+                                        <ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a5921b8d21adb7f2e5fdd925ab1f6e57c" kindref="member">mesh_name</ref>,
+                                        <ref refid="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a2ef355cd2d35362b8fba32342e7b39b8" kindref="member">he</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="633" column="1" bodyfile="tests/periodic/duct.py" bodystart="633" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1add0e18b35f9af96bf368d8f274097102" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::duct::getPDBC</definition>
+        <argsstring>(x, tag)</argsstring>
+        <name>getPDBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>tag</type>
+          <defname>tag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="85" column="1" bodyfile="tests/periodic/duct.py" bodystart="85" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a294436736ceb16025903c5f5cf353291" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::duct::onLeft</definition>
+        <argsstring>(x)</argsstring>
+        <name>onLeft</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="188" column="1" bodyfile="tests/periodic/duct.py" bodystart="188" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a0ad81dbab09888ad02095402052764c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::duct::onRight</definition>
+        <argsstring>(x)</argsstring>
+        <name>onRight</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="190" column="1" bodyfile="tests/periodic/duct.py" bodystart="190" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a3ca926b40dd0bc58299728c097df2907" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.periodic.duct.onFront</definition>
+        <argsstring>(x)</argsstring>
+        <name>onFront</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="192" column="1" bodyfile="tests/periodic/duct.py" bodystart="192" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a50e9b90f6e49baaf01d41fef8a8193dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.periodic.duct.onBack</definition>
+        <argsstring>(x)</argsstring>
+        <name>onBack</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="194" column="1" bodyfile="tests/periodic/duct.py" bodystart="194" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a3b4257d4eaba1c42cf48d25e3c4cebcd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::duct::onBottom</definition>
+        <argsstring>(x)</argsstring>
+        <name>onBottom</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="196" column="1" bodyfile="tests/periodic/duct.py" bodystart="196" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a7ad4aa4748ca7e6ccd64603c1fbd25c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::duct::onTop</definition>
+        <argsstring>(x)</argsstring>
+        <name>onTop</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="198" column="1" bodyfile="tests/periodic/duct.py" bodystart="198" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a067c1c111a0615ec30eaec4897dbbd21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::duct::getDBC_pressure_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDBC_pressure_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="211" column="1" bodyfile="tests/periodic/duct.py" bodystart="211" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a1949982072929a92c789e5fe0da739ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::duct::getDBC_u_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDBC_u_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="214" column="1" bodyfile="tests/periodic/duct.py" bodystart="214" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a74e4733d475e0201afb5270aba48ed79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::duct::getDBC_v_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDBC_v_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="218" column="1" bodyfile="tests/periodic/duct.py" bodystart="218" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1aeb90a925a77353412770b51a2b6ba8cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::duct::getDBC_w_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDBC_w_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="222" column="1" bodyfile="tests/periodic/duct.py" bodystart="222" bodyend="225"/>
+      </memberdef>
+      <memberdef kind="function" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a22ce6ead42375f1dfbdd17e97e64d496" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::duct::getAFBC_p_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getAFBC_p_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="233" column="1" bodyfile="tests/periodic/duct.py" bodystart="233" bodyend="238"/>
+      </memberdef>
+      <memberdef kind="function" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1af49fa89288133ff61e37ebf6b99f3b39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::duct::getAFBC_u_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getAFBC_u_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="239" column="1" bodyfile="tests/periodic/duct.py" bodystart="239" bodyend="244"/>
+      </memberdef>
+      <memberdef kind="function" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a0c1d41df17875e040ad8765439b261c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::duct::getAFBC_v_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getAFBC_v_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="245" column="1" bodyfile="tests/periodic/duct.py" bodystart="245" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1ae1f513547aa9102868a3ca77c55e932f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::duct::getAFBC_w_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getAFBC_w_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="251" column="1" bodyfile="tests/periodic/duct.py" bodystart="251" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a6f329e6fef04731d97a6423189dba00f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::duct::getDFBC_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDFBC_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="264" column="1" bodyfile="tests/periodic/duct.py" bodystart="264" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a965e088031c980c0f149ceec92041b44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.periodic.duct.getDFBC_u_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDFBC_u_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="338" column="1" bodyfile="tests/periodic/duct.py" bodystart="338" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="da/ded/namespaceproteus_1_1tests_1_1periodic_1_1duct_1a467d025a7bfb9b3e13b0caa399b338a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.periodic.duct.getDFBC_vw_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDFBC_vw_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/duct.py" line="345" column="1" bodyfile="tests/periodic/duct.py" bodystart="345" bodyend="349"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/periodic/duct.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

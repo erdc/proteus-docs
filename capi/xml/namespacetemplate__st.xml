@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacetemplate__st" kind="namespace" language="Python">
+    <compoundname>template_st</compoundname>
+    <innerclass refid="classtemplate__st_1_1clsvof__init__cond" prot="public">template_st::clsvof_init_cond</innerclass>
+    <innerclass refid="classtemplate__st_1_1PHI__IC" prot="public">template_st::PHI_IC</innerclass>
+    <innerclass refid="classtemplate__st_1_1VF__IC" prot="public">template_st::VF_IC</innerclass>
+    <innerclass refid="classtemplate__st_1_1zero" prot="public">template_st::zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacetemplate__st_1a676e652bb3ad17d5c45e36e3ffbf8a2b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template_st.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  Context.Options([
+    (&quot;final_time&quot;,3.0,&quot;Final time for simulation&quot;),
+    (&quot;dt_output&quot;,0.01,&quot;Time interval to output solution&quot;),
+    (&quot;cfl&quot;,0.25,&quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="namespacetemplate__st_1ab9ecb91a93cd5be7e4819cee4f59ea74" kindref="member">he</ref>&quot;,0.01,&quot;<ref refid="namespacetemplate__st_1ab9ecb91a93cd5be7e4819cee4f59ea74" kindref="member">he</ref> relative to Length of <ref refid="namespacetemplate__st_1a6198aac3bb23325ee2125828d328c5a9" kindref="member">domain</ref> in x&quot;),
+    (&quot;<ref refid="namespacetemplate__st_1a2b66fbcff589b987182db435a60e6fd4" kindref="member">refinement</ref>&quot;,3,&quot;level of <ref refid="namespacetemplate__st_1a2b66fbcff589b987182db435a60e6fd4" kindref="member">refinement</ref>&quot;)
+    ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="17" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1a72c23fcb814c08f15deb18d79186c71f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template_st.height_gauges1</definition>
+        <argsstring></argsstring>
+        <name>height_gauges1</name>
+        <initializer>=  LineGauges(gauges=(((&quot;phi&quot;,),
+                                        (((2.724, 0.0, 0.0),
+                                          (2.724, 1.8, 0.0)),
+                                         ((2.228, 0.0, 0.0),
+                                          (2.228, 1.8, 0.0)),
+                                         ((1.732, 0.0, 0.0),
+                                          (1.732, 1.8, 0.0)),
+                                         ((0.582, 0.0, 0.0),
+	                                  (0.582, 1.8, 0.0)))),),
+                                        fileName=&quot;height1.csv&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="29" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1a70c0e1731e667ad4b8c369848e140c0d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template_st.height_gauges2</definition>
+        <argsstring></argsstring>
+        <name>height_gauges2</name>
+        <initializer>=  LineGauges(gauges=(((&quot;phi&quot;,),
+                                     (((0.0, 0.0, 0.0),
+                                       (0.0, 0.0, -0.01)),
+                                      ((0.0, 0.0, 0.0),
+                                        (3.22, 0.0, 0.0)))),),
+                            fileName=&quot;height2.csv&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="40" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1aec267c5eb326a121f2165b335fa5f2f8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template_st.pressure_gauges</definition>
+        <argsstring></argsstring>
+        <name>pressure_gauges</name>
+        <initializer>=  PointGauges(gauges=(((&apos;p&apos;,),
+                                      ((3.22, 0.16, 0.0),                                                                
+                                       (3.22, 0.584, 0.0),                                                               
+                                       (3.22, 0.12, 0.0))),),
+                                       fileName=&quot;pressure.csv&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="47" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1aa88943dc77ca389915b49ba6ee7c0809" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple template_st.tank_dim</definition>
+        <argsstring></argsstring>
+        <name>tank_dim</name>
+        <initializer>=  (3.22,1.8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="57" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1a2b66fbcff589b987182db435a60e6fd4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template_st.refinement</definition>
+        <argsstring></argsstring>
+        <name>refinement</name>
+        <initializer>=  opts.refinement</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="58" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1a8f6e1581d35eb9ffc77b4a76d9e50274" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool template_st.structured</definition>
+        <argsstring></argsstring>
+        <name>structured</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="59" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1a02d99ead847ffeacc67874eb94980391" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int template_st.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <initializer>=  5*(2**<ref refid="namespacetemplate__st_1a2b66fbcff589b987182db435a60e6fd4" kindref="member">refinement</ref>)+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="61" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1a885cceff3dec3a9dd62a530a9ae3392a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int template_st::nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <initializer>=  2*(nnx-1)+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="62" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1a6198aac3bb23325ee2125828d328c5a9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template_st.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.RectangularDomain(<ref refid="namespacetemplate__st_1aa88943dc77ca389915b49ba6ee7c0809" kindref="member">tank_dim</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="63" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1ab7c733db0eb8254d00e970c20d3024cf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template_st.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>=  domain.boundaryTags</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="64" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1a43566040c4af10d87022630d7c301a09" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int template_st.triangleFlag</definition>
+        <argsstring></argsstring>
+        <name>triangleFlag</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="65" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1a3e71b33f4ceff9156f8e4d41a62a17db" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template_st.tank</definition>
+        <argsstring></argsstring>
+        <name>tank</name>
+        <initializer>=  <ref refid="classproteus_1_1mprans_1_1SpatialTools_1_1Tank2D" kindref="compound">Tank2D</ref>(<ref refid="namespacetemplate__st_1a6198aac3bb23325ee2125828d328c5a9" kindref="member">domain</ref>, <ref refid="namespacetemplate__st_1aa88943dc77ca389915b49ba6ee7c0809" kindref="member">tank_dim</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="71" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1ab9ecb91a93cd5be7e4819cee4f59ea74" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>template_st.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  <ref refid="namespacetemplate__st_1aa88943dc77ca389915b49ba6ee7c0809" kindref="member">tank_dim</ref>[0]*opts.he</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="79" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1a148a4755f7f03ccebf882eb33c3febb2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template_st.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="82" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1a76bf0cfae3d3b1b80949fa6c514773a7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float template_st.waterLine_y</definition>
+        <argsstring></argsstring>
+        <name>waterLine_y</name>
+        <initializer>=  0.6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="91" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1a0675eb09f7c7051ea34db92b202e011f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float template_st.waterLine_x</definition>
+        <argsstring></argsstring>
+        <name>waterLine_x</name>
+        <initializer>=  1.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="92" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1a1551dd4f42f5fdf974e7435d2511c5dc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template_st.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  TpFlow.OutputStepping(opts.final_time,dt_output=opts.dt_output)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="130" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1a38c79c0a0d9f4f10c6a4145c832b90c3" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary template_st.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;pressure&apos;: <ref refid="classtemplate__st_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vel_u&apos;: <ref refid="classtemplate__st_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vel_v&apos;: <ref refid="classtemplate__st_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vof&apos;: <ref refid="classtemplate__st_1_1VF__IC" kindref="compound">VF_IC</ref>(),
+                     &apos;ncls&apos;: <ref refid="classtemplate__st_1_1PHI__IC" kindref="compound">PHI_IC</ref>(),
+                     &apos;rdls&apos;: <ref refid="classtemplate__st_1_1PHI__IC" kindref="compound">PHI_IC</ref>(),
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="131" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1a9be62327dfdb5a07c1adc77faafa2c79" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary template_st.auxVariables</definition>
+        <argsstring></argsstring>
+        <name>auxVariables</name>
+        <initializer>= {&apos;vof&apos;: [<ref refid="namespacetemplate__st_1a72c23fcb814c08f15deb18d79186c71f" kindref="member">height_gauges1</ref>, <ref refid="namespacetemplate__st_1a70c0e1731e667ad4b8c369848e140c0d" kindref="member">height_gauges2</ref>],
+              &apos;pressure&apos;: [<ref refid="namespacetemplate__st_1aec267c5eb326a121f2165b335fa5f2f8" kindref="member">pressure_gauges</ref>]}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="139" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1ad60c9b5deaafb89444c58a2407687f24" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template_st.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem(ns_model=0,
+                                             ls_model=0,
+                                             nd=2,
+                                             cfl=opts.cfl,
+                                             <ref refid="namespacetemplate__st_1a1551dd4f42f5fdf974e7435d2511c5dc" kindref="member">outputStepping</ref>=<ref refid="namespacetemplate__st_1a1551dd4f42f5fdf974e7435d2511c5dc" kindref="member">outputStepping</ref>,
+                                             <ref refid="namespacetemplate__st_1a8f6e1581d35eb9ffc77b4a76d9e50274" kindref="member">structured</ref>=<ref refid="namespacetemplate__st_1a8f6e1581d35eb9ffc77b4a76d9e50274" kindref="member">structured</ref>,
+                                             <ref refid="namespacetemplate__st_1ab9ecb91a93cd5be7e4819cee4f59ea74" kindref="member">he</ref>=<ref refid="namespacetemplate__st_1ab9ecb91a93cd5be7e4819cee4f59ea74" kindref="member">he</ref>,
+                                             <ref refid="namespacetemplate__st_1a6198aac3bb23325ee2125828d328c5a9" kindref="member">domain</ref>=<ref refid="namespacetemplate__st_1a6198aac3bb23325ee2125828d328c5a9" kindref="member">domain</ref>,
+                                             <ref refid="namespacetemplate__st_1a38c79c0a0d9f4f10c6a4145c832b90c3" kindref="member">initialConditions</ref>=<ref refid="namespacetemplate__st_1a38c79c0a0d9f4f10c6a4145c832b90c3" kindref="member">initialConditions</ref>,
+                                             <ref refid="namespacetemplate__st_1a9be62327dfdb5a07c1adc77faafa2c79" kindref="member">auxVariables</ref>=<ref refid="namespacetemplate__st_1a9be62327dfdb5a07c1adc77faafa2c79" kindref="member">auxVariables</ref>,
+                                             useSuperlu=False)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="142" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate__st_1af1ce0ea7db451de239b2bba098b01255" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template_st.physical_parameters</definition>
+        <argsstring></argsstring>
+        <name>physical_parameters</name>
+        <initializer>=  myTpFlowProblem.physical_parameters</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="153" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template_st.py" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>dambreak 2-D
+</verbatim> </para>
+    </detaileddescription>
+    <location file="tests/proteus_tutorial/2d/extras/template_st.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

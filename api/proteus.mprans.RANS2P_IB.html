@@ -1,42 +1,47 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>proteus.mprans.RANS2P_IB module &mdash; Proteus 1.7.4.dev0 documentation</title>
+  <title>proteus.mprans.RANS2P_IB module &mdash; Proteus 1.8.0 documentation</title>
   
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
 
   
   
     <link rel="shortcut icon" href="../_static/tritonBorder.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
@@ -65,7 +70,7 @@
             
             
               <div class="version">
-                1.7.4.dev0
+                1.8.0
               </div>
             
           
@@ -82,6 +87,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -89,19 +95,12 @@
               
             
             
-              <p class="caption"><span class="caption-text">General</span></p>
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../apicapi.html">API docs</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Tools</span></p>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../tools/boundary_conditions.html">BoundaryConditions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../tools/boundary_conditions.html#usage">Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../tools/boundary_conditions.html#import">Import</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/spatial_tools.html">SpatialTools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/spatial_tools.html#usage">Usage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#import">Import</a></li>
@@ -142,7 +141,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/two_phase_flow.html">TwoPhaseFlow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/wave_tools.html">WaveTools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/wave_tools.html#usage">Usage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tools/wave_tools.html#import-in-command-line">Import in command line</a></li>
@@ -154,33 +152,9 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Models</span></p>
+<p class="caption" role="heading"><span class="caption-text">Models</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../models/body_dynamics.html">Body Dynamics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#implementation">Implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#classes">Classes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchsystem">ProtChSystem</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchbody">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmesh">ProtChMesh</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmoorings">ProtChMoorings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchaddedmass">ProtChAddedMass</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChMoorings</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/free_surface.html">Free Surface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#vof-ncls">VOF - NCLS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#clsvof">CLSVOF</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/mesh_adaptivity.html">Mesh Adaptivity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../models/mesh_motion.html">Mesh Motion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../models/navier_stokes.html">Navier-Stokes</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../models/navier_stokes.html">Multiphase Navier-Stokes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#two-phase">Two-Phase</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#three-phase">Three-Phase</a></li>
@@ -191,11 +165,41 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../models/SWFlow.html">Shallow Water Flow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#shallow-water-equations">Shallow Water Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#running-the-tests">Running the tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../models/free_surface.html">Free Surface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#vof-ncls">VOF - NCLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#clsvof">CLSVOF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../models/body_dynamics.html">Multi-Body Solid Dynamics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#implementation">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchsystem">ProtChSystem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchbody">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmesh">ProtChMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmoorings">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchaddedmass">ProtChAddedMass</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id2">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChMoorings</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -230,18 +234,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>proteus.mprans.RANS2P_IB module</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             
               <a href="https://github.com/erdc/proteus/blob/masterdocs/source/api/proteus.mprans.RANS2P_IB.rst" class="fa fa-github"> Edit on GitHub</a>
             
@@ -260,8 +266,8 @@
   <div class="section" id="module-proteus.mprans.RANS2P_IB">
 <span id="proteus-mprans-rans2p-ib-module"></span><h1>proteus.mprans.RANS2P_IB module<a class="headerlink" href="#module-proteus.mprans.RANS2P_IB" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="proteus.mprans.RANS2P_IB.Coefficients">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.RANS2P_IB.</code><code class="sig-name descname">Coefficients</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">epsFact</span><span class="o">=</span><span class="default_value">1.5</span></em>, <em class="sig-param"><span class="n">sigma</span><span class="o">=</span><span class="default_value">72.8</span></em>, <em class="sig-param"><span class="n">rho_0</span><span class="o">=</span><span class="default_value">998.2</span></em>, <em class="sig-param"><span class="n">nu_0</span><span class="o">=</span><span class="default_value">1.004e-06</span></em>, <em class="sig-param"><span class="n">rho_1</span><span class="o">=</span><span class="default_value">1.205</span></em>, <em class="sig-param"><span class="n">nu_1</span><span class="o">=</span><span class="default_value">1.5e-05</span></em>, <em class="sig-param"><span class="n">g</span><span class="o">=</span><span class="default_value">[0.0, 0.0, - 9.8]</span></em>, <em class="sig-param"><span class="n">nd</span><span class="o">=</span><span class="default_value">3</span></em>, <em class="sig-param"><span class="n">LS_model</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">VF_model</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">KN_model</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">Closure_0_model</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">Closure_1_model</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">epsFact_density</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stokes</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">sd</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">movingDomain</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">useVF</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">useRBLES</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">useMetrics</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">useConstant_he</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">dragAlpha</span><span class="o">=</span><span class="default_value">0.01</span></em>, <em class="sig-param"><span class="n">dragBeta</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">setParamsFunc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dragAlphaTypes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dragBetaTypes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">porosityTypes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">killNonlinearDrag</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">epsFact_source</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">epsFact_solid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eb_adjoint_sigma</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">eb_penalty_constant</span><span class="o">=</span><span class="default_value">10.0</span></em>, <em class="sig-param"><span class="n">forceStrongDirichlet</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">turbulenceClosureModel</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">smagorinskyConstant</span><span class="o">=</span><span class="default_value">0.1</span></em>, <em class="sig-param"><span class="n">barycenters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">beamLocation</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">beamLength</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">beamRadius</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">EI</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">GJ</span><span class="o">=</span><span class="default_value">[]</span></em>, <em class="sig-param"><span class="n">nBeamElements</span><span class="o">=</span><span class="default_value">4</span></em>, <em class="sig-param"><span class="n">beam_quadOrder</span><span class="o">=</span><span class="default_value">3</span></em>, <em class="sig-param"><span class="n">beamFilename</span><span class="o">=</span><span class="default_value">'Beams'</span></em>, <em class="sig-param"><span class="n">beam_useSparse</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">beam_Cd</span><span class="o">=</span><span class="default_value">1.2</span></em>, <em class="sig-param"><span class="n">beam_nlTol</span><span class="o">=</span><span class="default_value">1e-05</span></em>, <em class="sig-param"><span class="n">beamRigid</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS2P_IB.Coefficients">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.mprans.RANS2P_IB.</span></span><span class="sig-name descname"><span class="pre">Coefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">epsFact</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">72.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho_0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">998.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu_0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.004e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho_1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.205</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu_1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0.0,</span> <span class="pre">0.0,</span> <span class="pre">-</span> <span class="pre">9.8]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LS_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VF_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">KN_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Closure_0_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Closure_1_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsFact_density</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stokes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">movingDomain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useVF</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useRBLES</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useMetrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useConstant_he</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dragAlpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dragBeta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setParamsFunc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dragAlphaTypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dragBetaTypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">porosityTypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">killNonlinearDrag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsFact_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsFact_solid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eb_adjoint_sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eb_penalty_constant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forceStrongDirichlet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">turbulenceClosureModel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smagorinskyConstant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">barycenters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beamLocation</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beamLength</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beamRadius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">EI</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">GJ</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nBeamElements</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beam_quadOrder</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beamFilename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Beams'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beam_useSparse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beam_Cd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beam_nlTol</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beamRigid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.mprans.RANS2P.html#proteus.mprans.RANS2P.Coefficients" title="proteus.mprans.RANS2P.Coefficients"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.mprans.RANS2P.Coefficients</span></code></a></p>
 <p>Set the number of components (equations) of the
 PDE and initialize the dicitionaries describing the form of the
@@ -269,60 +275,60 @@ coefficients. Strings naming each component (used for viewing
 and archiving) and a structure defining the sparsity pattern
 of diffusion tensors may also be provided.</p>
 <dl class="py method">
-<dt id="proteus.mprans.RANS2P_IB.Coefficients.attachModels">
-<code class="sig-name descname">attachModels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">modelList</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients.attachModels" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS2P_IB.Coefficients.attachModels">
+<span class="sig-name descname"><span class="pre">attachModels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modelList</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients.attachModels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to other models in a loosely coupled split operator formulation (e.g. a transport equation for concentration might get velocity from a flow equation)</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS2P_IB.Coefficients.initializeElementQuadrature">
-<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cq</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS2P_IB.Coefficients.initializeElementQuadrature">
+<span class="sig-name descname"><span class="pre">initializeElementQuadrature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cq</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the element quadrature storage</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS2P_IB.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature">
-<code class="sig-name descname">initializeGlobalExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cebqe</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS2P_IB.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature">
+<span class="sig-name descname"><span class="pre">initializeGlobalExteriorElementBoundaryQuadrature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cebqe</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the exterior element boundary quadrature storage</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS2P_IB.Coefficients.initializeMesh">
-<code class="sig-name descname">initializeMesh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mesh</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients.initializeMesh" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS2P_IB.Coefficients.initializeMesh">
+<span class="sig-name descname"><span class="pre">initializeMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients.initializeMesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the mesh for any mesh-dependent information.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS2P_IB.Coefficients.postStep">
-<code class="sig-name descname">postStep</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">firstStep</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients.postStep" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS2P_IB.Coefficients.postStep">
+<span class="sig-name descname"><span class="pre">postStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">firstStep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients.postStep" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object an opportunity to modify itself after the time step.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS2P_IB.Coefficients.delta_h">
-<code class="sig-name descname">delta_h</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients.delta_h" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS2P_IB.Coefficients.delta_h">
+<span class="sig-name descname"><span class="pre">delta_h</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients.delta_h" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS2P_IB.Coefficients.updateBeamLoad">
-<code class="sig-name descname">updateBeamLoad</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients.updateBeamLoad" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS2P_IB.Coefficients.updateBeamLoad">
+<span class="sig-name descname"><span class="pre">updateBeamLoad</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients.updateBeamLoad" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS2P_IB.Coefficients.updateBeams">
-<code class="sig-name descname">updateBeams</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients.updateBeams" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS2P_IB.Coefficients.updateBeams">
+<span class="sig-name descname"><span class="pre">updateBeams</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients.updateBeams" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS2P_IB.Coefficients.initializeBeams">
-<code class="sig-name descname">initializeBeams</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients.initializeBeams" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS2P_IB.Coefficients.initializeBeams">
+<span class="sig-name descname"><span class="pre">initializeBeams</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.Coefficients.initializeBeams" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="proteus.mprans.RANS2P_IB.LevelModel">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.RANS2P_IB.</code><code class="sig-name descname">LevelModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">uDict</span></em>, <em class="sig-param"><span class="n">phiDict</span></em>, <em class="sig-param"><span class="n">testSpaceDict</span></em>, <em class="sig-param"><span class="n">matType</span></em>, <em class="sig-param"><span class="n">dofBoundaryConditionsDict</span></em>, <em class="sig-param"><span class="n">dofBoundaryConditionsSetterDict</span></em>, <em class="sig-param"><span class="n">coefficients</span></em>, <em class="sig-param"><span class="n">elementQuadrature</span></em>, <em class="sig-param"><span class="n">elementBoundaryQuadrature</span></em>, <em class="sig-param"><span class="n">fluxBoundaryConditionsDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">advectiveFluxBoundaryConditionsSetterDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diffusiveFluxBoundaryConditionsSetterDictDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stressTraceBoundaryConditionsSetterDictDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stabilization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shockCapturing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">conservativeFluxDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">numericalFluxType</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">TimeIntegrationClass</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">massLumping</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">reactionLumping</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'RANS2P'</span></em>, <em class="sig-param"><span class="n">reuse_trial_and_test_quadrature</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">sd</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">movingDomain</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.LevelModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS2P_IB.LevelModel">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.mprans.RANS2P_IB.</span></span><span class="sig-name descname"><span class="pre">LevelModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uDict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phiDict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">testSpaceDict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dofBoundaryConditionsDict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dofBoundaryConditionsSetterDict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coefficients</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementQuadrature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementBoundaryQuadrature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluxBoundaryConditionsDict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">advectiveFluxBoundaryConditionsSetterDict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diffusiveFluxBoundaryConditionsSetterDictDict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stressTraceBoundaryConditionsSetterDictDict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stabilization</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shockCapturing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conservativeFluxDict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numericalFluxType</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TimeIntegrationClass</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">massLumping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reactionLumping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'RANS2P'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reuse_trial_and_test_quadrature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">movingDomain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.LevelModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.mprans.RANS2P.html#proteus.mprans.RANS2P.LevelModel" title="proteus.mprans.RANS2P.LevelModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.mprans.RANS2P.LevelModel</span></code></a></p>
 <p>Allocate storage and initialize some variables.</p>
 <dl class="field-list simple">
@@ -374,24 +380,24 @@ exterior element boundary</p></li>
 build a nonlinear phi</p></li>
 </ul>
 <dl class="py method">
-<dt id="proteus.mprans.RANS2P_IB.LevelModel.getResidual">
-<code class="sig-name descname">getResidual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.LevelModel.getResidual" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS2P_IB.LevelModel.getResidual">
+<span class="sig-name descname"><span class="pre">getResidual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.LevelModel.getResidual" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the element residuals and add in to the global residual</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS2P_IB.LevelModel.getJacobian">
-<code class="sig-name descname">getJacobian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">jacobian</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.LevelModel.getJacobian" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS2P_IB.LevelModel.getJacobian">
+<span class="sig-name descname"><span class="pre">getJacobian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jacobian</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.LevelModel.getJacobian" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS2P_IB.LevelModel.calculateAuxiliaryQuantitiesAfterStep">
-<code class="sig-name descname">calculateAuxiliaryQuantitiesAfterStep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.LevelModel.calculateAuxiliaryQuantitiesAfterStep" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS2P_IB.LevelModel.calculateAuxiliaryQuantitiesAfterStep">
+<span class="sig-name descname"><span class="pre">calculateAuxiliaryQuantitiesAfterStep</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.LevelModel.calculateAuxiliaryQuantitiesAfterStep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS2P_IB.LevelModel.beamStep">
-<code class="sig-name descname">beamStep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.LevelModel.beamStep" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS2P_IB.LevelModel.beamStep">
+<span class="sig-name descname"><span class="pre">beamStep</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS2P_IB.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS2P_IB.LevelModel.beamStep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -403,20 +409,25 @@ build a nonlinear phi</p></li>
            
           </div>
           <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, The Proteus Team
+        &#169; Copyright 2020, The Proteus Team.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -424,7 +435,6 @@ build a nonlinear phi</p></li>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

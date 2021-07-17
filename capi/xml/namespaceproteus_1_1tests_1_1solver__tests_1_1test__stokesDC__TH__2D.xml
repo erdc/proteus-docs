@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__stokesDC__TH__2D" kind="namespace" language="Python">
+    <compoundname>proteus::tests::solver_tests::test_stokesDC_TH_2D</compoundname>
+    <innerclass refid="classproteus_1_1tests_1_1solver__tests_1_1test__stokesDC__TH__2D_1_1TestStokes" prot="public">proteus::tests::solver_tests::test_stokesDC_TH_2D::TestStokes</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__stokesDC__TH__2D_1aaa2dbdd687f476321991ccabb6f7bf9d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::solver_tests::test_stokesDC_TH_2D.import_modules</definition>
+        <argsstring></argsstring>
+        <name>import_modules</name>
+        <initializer>=  os.path.join(os.path.dirname(os.path.realpath(__file__)),&apos;import_modules&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_stokesDC_TH_2D.py" line="19" column="1" bodyfile="tests/solver_tests/test_stokesDC_TH_2D.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__stokesDC__TH__2D_1a9399f4fc83f1dc04b7fd08cafbbd8a09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_stokesDC_TH_2D.create_petsc_vecs</definition>
+        <argsstring>(matrix_A)</argsstring>
+        <name>create_petsc_vecs</name>
+        <param>
+          <type>matrix_A</type>
+          <defname>matrix_A</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates a right-hand-side and solution PETSc vector for
+testing ksp solves.
+
+Parameters
+----------
+matrix_A: :class:`PETSc.Mat`
+    Global matrix object
+
+Returns
+-------
+vec_lst: tuple
+    This is a list of :class:`pypyPETSc.Vec` where the first is
+    a vector of ones (usually to act as a RHS-vector) while the
+    second vector is a vector of zeros (usually to act as a
+    storage vector for the solution).
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_stokesDC_TH_2D.py" line="22" column="1" bodyfile="tests/solver_tests/test_stokesDC_TH_2D.py" bodystart="22" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__stokesDC__TH__2D_1ae9f3b720d84dfce9fe0869cd83bd0929" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_stokesDC_TH_2D.initialize_schur_ksp_obj</definition>
+        <argsstring>(matrix_A, schur_approx)</argsstring>
+        <name>initialize_schur_ksp_obj</name>
+        <param>
+          <type>matrix_A</type>
+          <defname>matrix_A</defname>
+        </param>
+        <param>
+          <type>schur_approx</type>
+          <defname>schur_approx</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates a right-hand-side and solution PETSc4Py vector for
+testing ksp solves.
+
+Parameters
+----------
+matrix_A: :class:`PETSc.Mat`
+    Global matrix object.
+schur_approx: :class:`LS.SchurPrecon`
+
+Returns
+-------
+ksp_obj: :class:`PETSc.KSP`
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_stokesDC_TH_2D.py" line="148" column="1" bodyfile="tests/solver_tests/test_stokesDC_TH_2D.py" bodystart="148" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__stokesDC__TH__2D_1a34cde9f83838e459427de5609040decf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_stokesDC_TH_2D.load_nse_cavity_matrix</definition>
+        <argsstring>(request)</argsstring>
+        <name>load_nse_cavity_matrix</name>
+        <param>
+          <type>request</type>
+          <defname>request</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Loads a Navier-Stokes matrix drawn from the MPRANS module. </verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_stokesDC_TH_2D.py" line="177" column="1" bodyfile="tests/solver_tests/test_stokesDC_TH_2D.py" bodystart="177" bodyend="182"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__stokesDC__TH__2D_1a730197cfa1ca676b44de1a88931eee8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_stokesDC_TH_2D.initialize_petsc_options</definition>
+        <argsstring>(request)</argsstring>
+        <name>initialize_petsc_options</name>
+        <param>
+          <type>request</type>
+          <defname>request</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initializes schur complement petsc options. </verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_stokesDC_TH_2D.py" line="183" column="1" bodyfile="tests/solver_tests/test_stokesDC_TH_2D.py" bodystart="183" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__stokesDC__TH__2D_1a428b6ee3b7bdcd91f3cc91833a3a25c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_stokesDC_TH_2D.test_Schur_Sp_solve_global_null_space</definition>
+        <argsstring>(load_nse_cavity_matrix, initialize_petsc_options)</argsstring>
+        <name>test_Schur_Sp_solve_global_null_space</name>
+        <param>
+          <type><ref refid="namespaceproteus_1_1tests_1_1solver__tests_1_1test__stokesDC__TH__2D_1a34cde9f83838e459427de5609040decf" kindref="member">load_nse_cavity_matrix</ref></type>
+          <defname>load_nse_cavity_matrix</defname>
+        </param>
+        <param>
+          <type><ref refid="namespaceproteus_1_1tests_1_1solver__tests_1_1test__stokesDC__TH__2D_1a730197cfa1ca676b44de1a88931eee8b" kindref="member">initialize_petsc_options</ref></type>
+          <defname>initialize_petsc_options</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Tests a KSP solve using the Sp Schur complement approximation.
+For this test, the global matrix has a null space because the
+boundary conditions are pure Dirichlet. </verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_stokesDC_TH_2D.py" line="201" column="1" bodyfile="tests/solver_tests/test_stokesDC_TH_2D.py" bodystart="201" bodyend="223"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Test modules for Driven Cavity Stokes preconditioners. </verbatim> </para>
+    </detaileddescription>
+    <location file="tests/solver_tests/test_stokesDC_TH_2D.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

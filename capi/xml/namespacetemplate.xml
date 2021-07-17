@@ -1,0 +1,1149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacetemplate" kind="namespace" language="Python">
+    <compoundname>template</compoundname>
+    <innerclass refid="classtemplate_1_1clsvof__init__cond" prot="public">template::clsvof_init_cond</innerclass>
+    <innerclass refid="classtemplate_1_1PHI__IC" prot="public">template::PHI_IC</innerclass>
+    <innerclass refid="classtemplate_1_1vel__u" prot="public">template::vel_u</innerclass>
+    <innerclass refid="classtemplate_1_1vel__v" prot="public">template::vel_v</innerclass>
+    <innerclass refid="classtemplate_1_1VF__IC" prot="public">template::VF_IC</innerclass>
+    <innerclass refid="classtemplate_1_1zero" prot="public">template::zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacetemplate_1a148ea10609cfa17597e8e2334b5c4549" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  Context.Options([
+    (&quot;final_time&quot;,3.0,&quot;Final time for simulation&quot;),
+    (&quot;dt_output&quot;,0.01,&quot;Time interval to output solution&quot;),
+    (&quot;cfl&quot;,0.25,&quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="namespacetemplate_1aa4f1484b30fcea8ff1d244bf5fc5b3f1" kindref="member">he</ref>&quot;,0.01,&quot;<ref refid="namespacetemplate_1aa4f1484b30fcea8ff1d244bf5fc5b3f1" kindref="member">he</ref> relative to Length of <ref refid="namespacetemplate_1a2fc77bf5eef21250fb7fa94c959b07db" kindref="member">domain</ref> in x&quot;),
+    (&quot;refinement&quot;,3,&quot;level of refinement&quot;)
+    ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="17" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1ae9b50d2593ebb14a3e5e598c3ba87c5b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.height_gauges1</definition>
+        <argsstring></argsstring>
+        <name>height_gauges1</name>
+        <initializer>=  LineGauges(gauges=(((&quot;phi&quot;,),
+                                        (((2.724, 0.0, 0.0),
+                                          (2.724, 1.8, 0.0)),
+                                         ((2.228, 0.0, 0.0),
+                                          (2.228, 1.8, 0.0)),
+                                         ((1.732, 0.0, 0.0),
+                                          (1.732, 1.8, 0.0)),
+                                         ((0.582, 0.0, 0.0),
+                                          (0.582, 1.8, 0.0)))),),
+                                        fileName=&quot;height1.csv&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="29" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1abc5b1b0aaf6a55f1e87e3528c1c5b149" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.height_gauges2</definition>
+        <argsstring></argsstring>
+        <name>height_gauges2</name>
+        <initializer>=  LineGauges(gauges=(((&quot;phi&quot;,),
+                                     (((0.0, 0.0, 0.0),
+                                       (0.0, 0.0, -0.01)),
+                                      ((0.0, 0.0, 0.0),
+                                        (3.22, 0.0, 0.0)))),),
+                            fileName=&quot;height2.csv&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="40" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1aa2f81779b16236a42f0b8d4436aeb9f8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.pressure_gauges</definition>
+        <argsstring></argsstring>
+        <name>pressure_gauges</name>
+        <initializer>=  PointGauges(gauges=(((&apos;p&apos;,),
+                                      ((3.22, 0.16, 0.0), #P1                                                               
+                                       (3.22, 0.584, 0.0), #P3                                                               
+                                       (3.22, 0.12, 0.0))),),
+                                       fileName=&quot;pressure.csv&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="47" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1ab2b92868d00b795e45488978ddc5314c" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list template::boundaries</definition>
+        <argsstring></argsstring>
+        <name>boundaries</name>
+        <initializer>= [&apos;inflow&apos;,&apos;outflow&apos;,&apos;bottom&apos;,&apos;<ref refid="namespacetemplate_1a6cd0dfa5177d6f2099ef0811deca128c" kindref="member">top</ref>&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="57" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a564990bf88262e38e6233b51cbde987b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>= dict([(key,i+1) for (i,key) in enumerate(<ref refid="namespacetemplate_1ab2b92868d00b795e45488978ddc5314c" kindref="member">boundaries</ref>)])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="58" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1aab8ba8afb9794b228d2807428819e809" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list template::vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <initializer>= [[0.0,0.0],#0                                                
+          [3.22,0.],#1                                          
+          [3.22,1.8],#2
+          [0., 1.8]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="60" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1ac0eafc849386dfd83ef27ee99b8daea6" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list template::vertexFlags</definition>
+        <argsstring></argsstring>
+        <name>vertexFlags</name>
+        <initializer>= [<ref refid="namespacetemplate_1a564990bf88262e38e6233b51cbde987b" kindref="member">boundaryTags</ref>[&apos;inflow&apos;],
+             <ref refid="namespacetemplate_1a564990bf88262e38e6233b51cbde987b" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+             <ref refid="namespacetemplate_1a564990bf88262e38e6233b51cbde987b" kindref="member">boundaryTags</ref>[&apos;outflow&apos;],
+             <ref refid="namespacetemplate_1a564990bf88262e38e6233b51cbde987b" kindref="member">boundaryTags</ref>[&apos;<ref refid="namespacetemplate_1a6cd0dfa5177d6f2099ef0811deca128c" kindref="member">top</ref>&apos;]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="66" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1aa9397a5e3125797e5d2bd4e1bbab7a48" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list template::segments</definition>
+        <argsstring></argsstring>
+        <name>segments</name>
+        <initializer>= [[0,1],
+          [1,2],
+          [2,3],
+          [3,0]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="71" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a580fe6849cc3d1509d197c1c5230d4a9" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list template::segmentFlags</definition>
+        <argsstring></argsstring>
+        <name>segmentFlags</name>
+        <initializer>= [<ref refid="namespacetemplate_1a564990bf88262e38e6233b51cbde987b" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+              <ref refid="namespacetemplate_1a564990bf88262e38e6233b51cbde987b" kindref="member">boundaryTags</ref>[&apos;outflow&apos;],
+              <ref refid="namespacetemplate_1a564990bf88262e38e6233b51cbde987b" kindref="member">boundaryTags</ref>[&apos;<ref refid="namespacetemplate_1a6cd0dfa5177d6f2099ef0811deca128c" kindref="member">top</ref>&apos;],
+              <ref refid="namespacetemplate_1a564990bf88262e38e6233b51cbde987b" kindref="member">boundaryTags</ref>[&apos;inflow&apos;]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="78" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a90a75a15eeea3007c0108acad85a54b1" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple template.regx</definition>
+        <argsstring></argsstring>
+        <name>regx</name>
+        <initializer>= (<ref refid="namespacetemplate_1aab8ba8afb9794b228d2807428819e809" kindref="member">vertices</ref>[1][0]+<ref refid="namespacetemplate_1aab8ba8afb9794b228d2807428819e809" kindref="member">vertices</ref>[0][0])/2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="84" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1aabbaa73863f5bfb8232a4d27e5f78d15" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple template.regy</definition>
+        <argsstring></argsstring>
+        <name>regy</name>
+        <initializer>= (<ref refid="namespacetemplate_1aab8ba8afb9794b228d2807428819e809" kindref="member">vertices</ref>[-1][1]+<ref refid="namespacetemplate_1aab8ba8afb9794b228d2807428819e809" kindref="member">vertices</ref>[0][1])/2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="85" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1ab87be72c4faf953db06461afae7d667f" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list template::regions</definition>
+        <argsstring></argsstring>
+        <name>regions</name>
+        <initializer>= [[<ref refid="namespacetemplate_1a90a75a15eeea3007c0108acad85a54b1" kindref="member">regx</ref>, <ref refid="namespacetemplate_1aabbaa73863f5bfb8232a4d27e5f78d15" kindref="member">regy</ref>]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="86" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a97b0d4f5868a1a0a59a4074f94a89458" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list template::regionFlags</definition>
+        <argsstring></argsstring>
+        <name>regionFlags</name>
+        <initializer>= [1]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="87" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a2fc77bf5eef21250fb7fa94c959b07db" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.PlanarStraightLineGraphDomain(<ref refid="namespacetemplate_1aab8ba8afb9794b228d2807428819e809" kindref="member">vertices</ref>=<ref refid="namespacetemplate_1aab8ba8afb9794b228d2807428819e809" kindref="member">vertices</ref>,
+                                              <ref refid="namespacetemplate_1ac0eafc849386dfd83ef27ee99b8daea6" kindref="member">vertexFlags</ref>=<ref refid="namespacetemplate_1ac0eafc849386dfd83ef27ee99b8daea6" kindref="member">vertexFlags</ref>,
+                                              <ref refid="namespacetemplate_1aa9397a5e3125797e5d2bd4e1bbab7a48" kindref="member">segments</ref>=<ref refid="namespacetemplate_1aa9397a5e3125797e5d2bd4e1bbab7a48" kindref="member">segments</ref>,
+                                              <ref refid="namespacetemplate_1a580fe6849cc3d1509d197c1c5230d4a9" kindref="member">segmentFlags</ref>=<ref refid="namespacetemplate_1a580fe6849cc3d1509d197c1c5230d4a9" kindref="member">segmentFlags</ref>,
+                                              <ref refid="namespacetemplate_1ab87be72c4faf953db06461afae7d667f" kindref="member">regions</ref> = <ref refid="namespacetemplate_1ab87be72c4faf953db06461afae7d667f" kindref="member">regions</ref>,
+                                              <ref refid="namespacetemplate_1a97b0d4f5868a1a0a59a4074f94a89458" kindref="member">regionFlags</ref> = <ref refid="namespacetemplate_1a97b0d4f5868a1a0a59a4074f94a89458" kindref="member">regionFlags</ref>,)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="89" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1aa4f1484b30fcea8ff1d244bf5fc5b3f1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  opts.he</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="98" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a243d8edb9694e2c931538a44da95c97c" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>template.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <initializer>=  &quot;VApq30Dena%8.8<ref refid="group__analyticalSolutions_1ga5f01b1fc0e3cb358aa6411861cedc62c" kindref="member">f</ref>&quot; % ((he**2)/2.0,)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="106" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a72058a237455c539563e7602fa3ceeca" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float template.waterLine_y</definition>
+        <argsstring></argsstring>
+        <name>waterLine_y</name>
+        <initializer>=  0.6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="119" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1ab1389af56b3e032f078a754d16e2f5f3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float template.waterLine_x</definition>
+        <argsstring></argsstring>
+        <name>waterLine_x</name>
+        <initializer>=  1.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="120" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a6c1e2ea7ab7bb08134406ee9b1faaf5a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  TpFlow.OutputStepping(opts.final_time,dt_output=opts.dt_output)</initializer>
+        <briefdescription>
+<para>***** Create myTwoPhaseFlowProblem ***** # </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="234" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="234" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1aeac4b7cbb5265940825eb8e40459f9fe" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary template::initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;pressure&apos;: <ref refid="classtemplate_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;pressure_increment&apos;: <ref refid="classtemplate_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;<ref refid="classtemplate_1_1vel__u" kindref="compound">vel_u</ref>&apos;: <ref refid="classtemplate_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;<ref refid="classtemplate_1_1vel__v" kindref="compound">vel_v</ref>&apos;: <ref refid="classtemplate_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vof&apos;: <ref refid="classtemplate_1_1VF__IC" kindref="compound">VF_IC</ref>(),
+                     &apos;ncls&apos;: <ref refid="classtemplate_1_1PHI__IC" kindref="compound">PHI_IC</ref>(),
+                     &apos;rdls&apos;: <ref refid="classtemplate_1_1PHI__IC" kindref="compound">PHI_IC</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="235" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a9b44b45ab4c17ba75d29b3cc10582ec9" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary template::boundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>boundaryConditions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="243" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a8156c046bf40eab1a10f067a07e9c16a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem(ns_model=0,
+                                             ls_model=0,
+                                             nd=2,
+                                             cfl=opts.cfl,
+                                             <ref refid="namespacetemplate_1a6c1e2ea7ab7bb08134406ee9b1faaf5a" kindref="member">outputStepping</ref>=<ref refid="namespacetemplate_1a6c1e2ea7ab7bb08134406ee9b1faaf5a" kindref="member">outputStepping</ref>,
+                                             <ref refid="namespacetemplate_1aa4f1484b30fcea8ff1d244bf5fc5b3f1" kindref="member">he</ref>=<ref refid="namespacetemplate_1aa4f1484b30fcea8ff1d244bf5fc5b3f1" kindref="member">he</ref>,
+#                                             <ref refid="namespacetemplate_1acb410d798dd8771c264f3054d5fbf278" kindref="member">nnx</ref>=<ref refid="namespacetemplate_1acb410d798dd8771c264f3054d5fbf278" kindref="member">nnx</ref>,
+#                                             nny=nny,
+#                                             <ref refid="Richards_8h_1a93d413a62c9fd1342f67727ef7f8c6a1" kindref="member">nnz</ref>=None,
+                                             <ref refid="namespacetemplate_1a2fc77bf5eef21250fb7fa94c959b07db" kindref="member">domain</ref>=<ref refid="namespacetemplate_1a2fc77bf5eef21250fb7fa94c959b07db" kindref="member">domain</ref>,
+                                             <ref refid="namespacetemplate_1aeac4b7cbb5265940825eb8e40459f9fe" kindref="member">initialConditions</ref>=<ref refid="namespacetemplate_1aeac4b7cbb5265940825eb8e40459f9fe" kindref="member">initialConditions</ref>,
+                                             <ref refid="namespacetemplate_1a9b44b45ab4c17ba75d29b3cc10582ec9" kindref="member">boundaryConditions</ref>=<ref refid="namespacetemplate_1a9b44b45ab4c17ba75d29b3cc10582ec9" kindref="member">boundaryConditions</ref>,
+#                                             auxVariables=auxVariables,
+                                             useSuperlu=False)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="278" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1aad7f8db4c9f8fb38526ec3dcf5498c5b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.physical_parameters</definition>
+        <argsstring></argsstring>
+        <name>physical_parameters</name>
+        <initializer>=  myTpFlowProblem.physical_parameters</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="292" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a9ba065c3273ac99756acbc59933e7cc5" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple template.toe</definition>
+        <argsstring></argsstring>
+        <name>toe</name>
+        <initializer>= (-opts.wl/opts.slope)+35</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="39" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1adad63649cd27c30be5386596622952ae" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool template.structured</definition>
+        <argsstring></argsstring>
+        <name>structured</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="40" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a2223774984bb38a88e3f7e3be062ccec" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.slope</definition>
+        <argsstring></argsstring>
+        <name>slope</name>
+        <initializer>= opts.slope</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="41" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a0e2fe85caff006789a96a4af167009b4" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple template.slope_x</definition>
+        <argsstring></argsstring>
+        <name>slope_x</name>
+        <initializer>= opts.slope_length-<ref refid="namespacetemplate_1a9ba065c3273ac99756acbc59933e7cc5" kindref="member">toe</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="42" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a397292bca1efc91897d6c071d6a41f72" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple template.slope_y</definition>
+        <argsstring></argsstring>
+        <name>slope_y</name>
+        <initializer>= <ref refid="namespacetemplate_1a2223774984bb38a88e3f7e3be062ccec" kindref="member">slope</ref>*<ref refid="namespacetemplate_1a0e2fe85caff006789a96a4af167009b4" kindref="member">slope_x</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="43" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a6cd0dfa5177d6f2099ef0811deca128c" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple template.top</definition>
+        <argsstring></argsstring>
+        <name>top</name>
+        <initializer>= (<ref refid="namespacetemplate_1a397292bca1efc91897d6c071d6a41f72" kindref="member">slope_y</ref>)*1.35</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="44" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1acb410d798dd8771c264f3054d5fbf278" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <initializer>= None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="47" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a2d7a450e01164d44e3584fc670951b77" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.wl</definition>
+        <argsstring></argsstring>
+        <name>wl</name>
+        <initializer>= opts.wl</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="48" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a408d9d481172f2a1e60ff9c7f2c62c5f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <initializer>= opts.wave_height</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="49" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1ad934a325be5ff1d60311af308abcb921" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple template.k</definition>
+        <argsstring></argsstring>
+        <name>k</name>
+        <initializer>= ((3*<ref refid="namespacetemplate_1a408d9d481172f2a1e60ff9c7f2c62c5f" kindref="member">a</ref>)/(4*(opts.wl**3)))**0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="51" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1aeb982d770aa068cca145eb144e97659d" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple template.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <initializer>= (2/<ref refid="namespacetemplate_1ad934a325be5ff1d60311af308abcb921" kindref="member">k</ref>)*np.arccosh(0.05**(-0.5))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="52" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1adb86ebb71fb023bf0f97998c55f3fc1a" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple template.x0</definition>
+        <argsstring></argsstring>
+        <name>x0</name>
+        <initializer>= (-opts.wl/opts.slope)-(<ref refid="namespacetemplate_1aeb982d770aa068cca145eb144e97659d" kindref="member">L</ref>/2)+35</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="53" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a2e93af266790e2a5e1dd1f1fbfd4a39a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <initializer>=  opts.wave_height</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="56" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1ad4259151eb01065c64af1afe3305a99d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.mwl</definition>
+        <argsstring></argsstring>
+        <name>mwl</name>
+        <initializer>=  opts.wl</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="57" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a49230c8c7e3c8bd87d746713d98850c5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.direction</definition>
+        <argsstring></argsstring>
+        <name>direction</name>
+        <initializer>=  opts.wave_dir</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="58" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a862d89b9441b33bf31da6ac007cb5daa" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.wave</definition>
+        <argsstring></argsstring>
+        <name>wave</name>
+        <initializer>=  wt.SolitaryWave(	waveHeight = <ref refid="namespacetemplate_1a2e93af266790e2a5e1dd1f1fbfd4a39a" kindref="member">height</ref>, 
+				<ref refid="namespacetemplate_1ad4259151eb01065c64af1afe3305a99d" kindref="member">mwl</ref> = <ref refid="namespacetemplate_1a2d7a450e01164d44e3584fc670951b77" kindref="member">wl</ref>, 
+				depth = depth,
+               			g = np.array(opts.g), 
+				waveDir = <ref refid="namespacetemplate_1a49230c8c7e3c8bd87d746713d98850c5" kindref="member">direction</ref>,
+				trans = np.array([<ref refid="namespacetemplate_1adb86ebb71fb023bf0f97998c55f3fc1a" kindref="member">x0</ref>, 0., 0.]),
+                       		fast = opts.fast
+			  )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="59" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a7def2c288e62fdd1db4cfad52f233918" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int template.nLevels</definition>
+        <argsstring></argsstring>
+        <name>nLevels</name>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="75" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1abb0644b9ddbb7472371bb3eb41a3421d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int template.nLayersOfOverlapForParallel</definition>
+        <argsstring></argsstring>
+        <name>nLayersOfOverlapForParallel</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="78" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1af6a400f4f2de37197fb62a7540d402c5" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary template.boundaryOrientations</definition>
+        <argsstring></argsstring>
+        <name>boundaryOrientations</name>
+        <initializer>=  {&apos;bottom&apos;: np.array([0., -1.,0.]),
+                        &apos;right&apos;: np.array([+1., 0.,0.]),
+                        &apos;<ref refid="namespacetemplate_1a6cd0dfa5177d6f2099ef0811deca128c" kindref="member">top</ref>&apos;: np.array([0., +1.,0.]),
+                        &apos;left&apos;: np.array([-1., 0.,0.]),
+                        &apos;<ref refid="namespacetemplate_1a2223774984bb38a88e3f7e3be062ccec" kindref="member">slope</ref>&apos;: np.array([-1., 0.,0.]),}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="81" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1a8e9557bb026f231e6fadc414fe9f22f2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.tank</definition>
+        <argsstring></argsstring>
+        <name>tank</name>
+        <initializer>=  st.CustomShape(<ref refid="namespacetemplate_1a2fc77bf5eef21250fb7fa94c959b07db" kindref="member">domain</ref>, <ref refid="namespacetemplate_1aab8ba8afb9794b228d2807428819e809" kindref="member">vertices</ref>=<ref refid="namespacetemplate_1aab8ba8afb9794b228d2807428819e809" kindref="member">vertices</ref>, <ref refid="namespacetemplate_1ac0eafc849386dfd83ef27ee99b8daea6" kindref="member">vertexFlags</ref>=<ref refid="namespacetemplate_1ac0eafc849386dfd83ef27ee99b8daea6" kindref="member">vertexFlags</ref>,
+                      <ref refid="namespacetemplate_1aa9397a5e3125797e5d2bd4e1bbab7a48" kindref="member">segments</ref>=<ref refid="namespacetemplate_1aa9397a5e3125797e5d2bd4e1bbab7a48" kindref="member">segments</ref>, <ref refid="namespacetemplate_1a580fe6849cc3d1509d197c1c5230d4a9" kindref="member">segmentFlags</ref>=<ref refid="namespacetemplate_1a580fe6849cc3d1509d197c1c5230d4a9" kindref="member">segmentFlags</ref>,
+                      <ref refid="namespacetemplate_1ab87be72c4faf953db06461afae7d667f" kindref="member">regions</ref>=<ref refid="namespacetemplate_1ab87be72c4faf953db06461afae7d667f" kindref="member">regions</ref>, <ref refid="namespacetemplate_1a97b0d4f5868a1a0a59a4074f94a89458" kindref="member">regionFlags</ref>=<ref refid="namespacetemplate_1a97b0d4f5868a1a0a59a4074f94a89458" kindref="member">regionFlags</ref>,
+                      <ref refid="namespacetemplate_1a564990bf88262e38e6233b51cbde987b" kindref="member">boundaryTags</ref>=<ref refid="namespacetemplate_1a564990bf88262e38e6233b51cbde987b" kindref="member">boundaryTags</ref>, <ref refid="namespacetemplate_1af6a400f4f2de37197fb62a7540d402c5" kindref="member">boundaryOrientations</ref>=<ref refid="namespacetemplate_1af6a400f4f2de37197fb62a7540d402c5" kindref="member">boundaryOrientations</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="118" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetemplate_1ace59661055aa0c270d0b7e0db070e8f3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>template.wavec</definition>
+        <argsstring></argsstring>
+        <name>wavec</name>
+        <initializer>=   np.sqrt(9.81 * (depth+opts.wave_height))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="149" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacetemplate_1a80f8b8e7692d8b1ebb0df41f731fdf33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.vel_u_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_u_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="151" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="151" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1abb9ecd09f8a5b98f3849d20de71d7d2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.vel_v_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_v_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="153" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="153" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1a4d495f9971fd268af541fbd5703388e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.vel_w_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_w_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="155" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="155" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1a95536e1f9dc3e0cbc04cf56dd972387d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.pressure_increment_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_increment_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="158" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="158" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1a09daf56b6af7256bd95b8d733588872e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.pressure_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="162" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="162" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1a2da9decf22e03b36dc832a2e955b358c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.clsvof_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>clsvof_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="166" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="166" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1a2acf64ed5acadfca7298fb08c4f6c952" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.vof_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vof_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="170" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="170" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1a55e552a54dfcc6060a67a8b36f396a89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.ncls_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>ncls_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="174" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="174" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1ac995d75591dd70f819517e2dabf13b87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.rdls_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>rdls_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="177" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="177" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1abb2617e23a0372e40e694939a3601ab4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.vel_u_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_u_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="182" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="182" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1ac00826ea42ad507ba0df77dde41eccd2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.vel_v_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_v_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="188" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="188" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1a27250efe1635d18e7e1dced2dfeabb52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.vel_w_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_w_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="194" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="194" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1a379e7f32f154ae17534fbbc01879e806" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.pressure_increment_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_increment_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="200" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="200" bodyend="203"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1a1a4df4f63ddaff87c521b4d112b79ad1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.pressure_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="204" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="204" bodyend="207"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1a392b0cbf7b09659a45c7bdf7c2bf81bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.clsvof_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>clsvof_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="208" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="208" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1a14fa5d0826d2f723069d769c8e176352" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.vof_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vof_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="214" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="214" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1afefdedadeee5c8773c1d76bf9c13c3bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.ncls_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>ncls_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="220" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="220" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1a6892b64f7c1fa968db3043fa1419c9d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.rdls_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>rdls_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="223" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="223" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1a24f2e59be52f461674984027862de6c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.pressure_increment_DFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_increment_DFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/template.py" line="227" column="1" bodyfile="tests/proteus_tutorial/2d/extras/template.py" bodystart="227" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetemplate_1a5f5a2f38879237ae45821e2ec864e8fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def template.weight</definition>
+        <argsstring>(x, t)</argsstring>
+        <name>weight</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/template.py" line="150" column="1" bodyfile="tests/proteus_tutorial/template.py" bodystart="150" bodyend="157"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>dambreak 2-D
+</verbatim></para>
+<para><verbatim>Wave_runup
+</verbatim> </para>
+    </detaileddescription>
+    <location file="tests/proteus_tutorial/2d/extras/template.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

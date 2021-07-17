@@ -1,42 +1,47 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>proteus.AuxiliaryVariables module &mdash; Proteus 1.7.4.dev0 documentation</title>
+  <title>proteus.AuxiliaryVariables module &mdash; Proteus 1.8.0 documentation</title>
   
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
 
   
   
     <link rel="shortcut icon" href="../_static/tritonBorder.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
@@ -65,7 +70,7 @@
             
             
               <div class="version">
-                1.7.4.dev0
+                1.8.0
               </div>
             
           
@@ -82,6 +87,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -89,19 +95,12 @@
               
             
             
-              <p class="caption"><span class="caption-text">General</span></p>
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../apicapi.html">API docs</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Tools</span></p>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../tools/boundary_conditions.html">BoundaryConditions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../tools/boundary_conditions.html#usage">Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../tools/boundary_conditions.html#import">Import</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/spatial_tools.html">SpatialTools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/spatial_tools.html#usage">Usage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#import">Import</a></li>
@@ -142,7 +141,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/two_phase_flow.html">TwoPhaseFlow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/wave_tools.html">WaveTools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/wave_tools.html#usage">Usage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tools/wave_tools.html#import-in-command-line">Import in command line</a></li>
@@ -154,33 +152,9 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Models</span></p>
+<p class="caption" role="heading"><span class="caption-text">Models</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../models/body_dynamics.html">Body Dynamics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#implementation">Implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#classes">Classes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchsystem">ProtChSystem</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchbody">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmesh">ProtChMesh</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmoorings">ProtChMoorings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchaddedmass">ProtChAddedMass</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChMoorings</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/free_surface.html">Free Surface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#vof-ncls">VOF - NCLS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#clsvof">CLSVOF</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/mesh_adaptivity.html">Mesh Adaptivity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../models/mesh_motion.html">Mesh Motion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../models/navier_stokes.html">Navier-Stokes</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../models/navier_stokes.html">Multiphase Navier-Stokes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#two-phase">Two-Phase</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#three-phase">Three-Phase</a></li>
@@ -191,11 +165,41 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../models/SWFlow.html">Shallow Water Flow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#shallow-water-equations">Shallow Water Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#running-the-tests">Running the tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../models/free_surface.html">Free Surface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#vof-ncls">VOF - NCLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#clsvof">CLSVOF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../models/body_dynamics.html">Multi-Body Solid Dynamics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#implementation">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchsystem">ProtChSystem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchbody">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmesh">ProtChMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmoorings">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchaddedmass">ProtChAddedMass</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id2">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChMoorings</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -230,18 +234,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>proteus.AuxiliaryVariables module</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             
               <a href="https://github.com/erdc/proteus/blob/masterdocs/source/api/proteus.AuxiliaryVariables.rst" class="fa fa-github"> Edit on GitHub</a>
             
@@ -263,247 +269,247 @@
 <div class="graphviz"><object data="../_images/inheritance-c933162d1291d573d7cc8022d35c0cd6b1f1eba9.svg" type="image/svg+xml" class="inheritance graphviz">
 <p class="warning">Inheritance diagram of proteus.AuxiliaryVariables</p></object></div>
 <dl class="py class">
-<dt id="proteus.AuxiliaryVariables.AV_base">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.AuxiliaryVariables.</code><code class="sig-name descname">AV_base</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.AV_base" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.AV_base">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.AuxiliaryVariables.</span></span><span class="sig-name descname"><span class="pre">AV_base</span></span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.AV_base" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/2/library/functions.html#object" title="(in Python v2.7)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.AV_base.attachModel">
-<code class="sig-name descname">attachModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">ar</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.AV_base.attachModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.AV_base.attachModel">
+<span class="sig-name descname"><span class="pre">attachModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.AV_base.attachModel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.AV_base.attachAuxiliaryVariables">
-<code class="sig-name descname">attachAuxiliaryVariables</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">avDict</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.AV_base.attachAuxiliaryVariables" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.AV_base.attachAuxiliaryVariables">
+<span class="sig-name descname"><span class="pre">attachAuxiliaryVariables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">avDict</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.AV_base.attachAuxiliaryVariables" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.AV_base.writeScalarXdmf">
-<code class="sig-name descname">writeScalarXdmf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.AV_base.writeScalarXdmf" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.AV_base.writeScalarXdmf">
+<span class="sig-name descname"><span class="pre">writeScalarXdmf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.AV_base.writeScalarXdmf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.AV_base.calculate_init">
-<code class="sig-name descname">calculate_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.AV_base.calculate_init" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.AV_base.calculate_init">
+<span class="sig-name descname"><span class="pre">calculate_init</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.AV_base.calculate_init" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.AV_base.calculate">
-<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.AV_base.calculate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.AV_base.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.AV_base.calculate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="proteus.AuxiliaryVariables.GatherDOF">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.AuxiliaryVariables.</code><code class="sig-name descname">GatherDOF</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.GatherDOF" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.GatherDOF">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.AuxiliaryVariables.</span></span><span class="sig-name descname"><span class="pre">GatherDOF</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.GatherDOF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.AuxiliaryVariables.AV_base" title="proteus.AuxiliaryVariables.AV_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.AuxiliaryVariables.AV_base</span></code></a></p>
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.GatherDOF.calculate">
-<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.GatherDOF.calculate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.GatherDOF.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.GatherDOF.calculate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="proteus.AuxiliaryVariables.BoundaryForce">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.AuxiliaryVariables.</code><code class="sig-name descname">BoundaryForce</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">D</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">Ubar</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">rho</span><span class="o">=</span><span class="default_value">1.0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.BoundaryForce" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.BoundaryForce">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.AuxiliaryVariables.</span></span><span class="sig-name descname"><span class="pre">BoundaryForce</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">D</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ubar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.BoundaryForce" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.AuxiliaryVariables.AV_base" title="proteus.AuxiliaryVariables.AV_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.AuxiliaryVariables.AV_base</span></code></a></p>
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.BoundaryForce.attachModel">
-<code class="sig-name descname">attachModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">ar</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.BoundaryForce.attachModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.BoundaryForce.attachModel">
+<span class="sig-name descname"><span class="pre">attachModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.BoundaryForce.attachModel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.BoundaryForce.calculate">
-<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.BoundaryForce.calculate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.BoundaryForce.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.BoundaryForce.calculate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="proteus.AuxiliaryVariables.PressureProfile">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.AuxiliaryVariables.</code><code class="sig-name descname">PressureProfile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">flag</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">center</span><span class="o">=</span><span class="default_value">0.0, 0.0</span></em>, <em class="sig-param"><span class="n">radius</span><span class="o">=</span><span class="default_value">1.0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PressureProfile" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.PressureProfile">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.AuxiliaryVariables.</span></span><span class="sig-name descname"><span class="pre">PressureProfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">center</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">(0.0,</span> <span class="pre">0.0)</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">radius</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PressureProfile" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.AuxiliaryVariables.AV_base" title="proteus.AuxiliaryVariables.AV_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.AuxiliaryVariables.AV_base</span></code></a></p>
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.PressureProfile.attachModel">
-<code class="sig-name descname">attachModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">ar</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PressureProfile.attachModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.PressureProfile.attachModel">
+<span class="sig-name descname"><span class="pre">attachModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PressureProfile.attachModel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.PressureProfile.calculate">
-<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PressureProfile.calculate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.PressureProfile.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PressureProfile.calculate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="proteus.AuxiliaryVariables.RecirculationLength">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.AuxiliaryVariables.</code><code class="sig-name descname">RecirculationLength</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">rcStartX</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.RecirculationLength" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.RecirculationLength">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.AuxiliaryVariables.</span></span><span class="sig-name descname"><span class="pre">RecirculationLength</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rcStartX</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.RecirculationLength" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.AuxiliaryVariables.AV_base" title="proteus.AuxiliaryVariables.AV_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.AuxiliaryVariables.AV_base</span></code></a></p>
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.RecirculationLength.attachModel">
-<code class="sig-name descname">attachModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">ar</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.RecirculationLength.attachModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.RecirculationLength.attachModel">
+<span class="sig-name descname"><span class="pre">attachModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.RecirculationLength.attachModel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.RecirculationLength.calculate">
-<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.RecirculationLength.calculate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.RecirculationLength.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.RecirculationLength.calculate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="proteus.AuxiliaryVariables.VelocityAverage">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.AuxiliaryVariables.</code><code class="sig-name descname">VelocityAverage</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.VelocityAverage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.VelocityAverage">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.AuxiliaryVariables.</span></span><span class="sig-name descname"><span class="pre">VelocityAverage</span></span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.VelocityAverage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.AuxiliaryVariables.AV_base" title="proteus.AuxiliaryVariables.AV_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.AuxiliaryVariables.AV_base</span></code></a></p>
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.VelocityAverage.attachModel">
-<code class="sig-name descname">attachModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">ar</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.VelocityAverage.attachModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.VelocityAverage.attachModel">
+<span class="sig-name descname"><span class="pre">attachModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.VelocityAverage.attachModel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.VelocityAverage.calculate">
-<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.VelocityAverage.calculate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.VelocityAverage.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.VelocityAverage.calculate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="proteus.AuxiliaryVariables.BoundaryPressure">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.AuxiliaryVariables.</code><code class="sig-name descname">BoundaryPressure</code><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.BoundaryPressure" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.BoundaryPressure">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.AuxiliaryVariables.</span></span><span class="sig-name descname"><span class="pre">BoundaryPressure</span></span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.BoundaryPressure" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.AuxiliaryVariables.AV_base" title="proteus.AuxiliaryVariables.AV_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.AuxiliaryVariables.AV_base</span></code></a></p>
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.BoundaryPressure.attachModel">
-<code class="sig-name descname">attachModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">ar</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.BoundaryPressure.attachModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.BoundaryPressure.attachModel">
+<span class="sig-name descname"><span class="pre">attachModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.BoundaryPressure.attachModel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.BoundaryPressure.calculate">
-<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.BoundaryPressure.calculate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.BoundaryPressure.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.BoundaryPressure.calculate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="proteus.AuxiliaryVariables.ConservationHistoryMC">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.AuxiliaryVariables.</code><code class="sig-name descname">ConservationHistoryMC</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.ConservationHistoryMC" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.ConservationHistoryMC">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.AuxiliaryVariables.</span></span><span class="sig-name descname"><span class="pre">ConservationHistoryMC</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.ConservationHistoryMC" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.AuxiliaryVariables.AV_base" title="proteus.AuxiliaryVariables.AV_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.AuxiliaryVariables.AV_base</span></code></a></p>
 <p>A simple class for storing the time history of things related conservation in conservative level set methods</p>
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.ConservationHistoryMC.attachModel">
-<code class="sig-name descname">attachModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">ar</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.ConservationHistoryMC.attachModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.ConservationHistoryMC.attachModel">
+<span class="sig-name descname"><span class="pre">attachModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.ConservationHistoryMC.attachModel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.ConservationHistoryMC.calculate">
-<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.ConservationHistoryMC.calculate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.ConservationHistoryMC.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.ConservationHistoryMC.calculate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="proteus.AuxiliaryVariables.ConservationHistoryLS">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.AuxiliaryVariables.</code><code class="sig-name descname">ConservationHistoryLS</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.ConservationHistoryLS" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.ConservationHistoryLS">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.AuxiliaryVariables.</span></span><span class="sig-name descname"><span class="pre">ConservationHistoryLS</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.ConservationHistoryLS" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.AuxiliaryVariables.AV_base" title="proteus.AuxiliaryVariables.AV_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.AuxiliaryVariables.AV_base</span></code></a></p>
 <p>A simple class for storing the time history of things related conservation in non-conservative level set methods</p>
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.ConservationHistoryLS.attachModel">
-<code class="sig-name descname">attachModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">ar</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.ConservationHistoryLS.attachModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.ConservationHistoryLS.attachModel">
+<span class="sig-name descname"><span class="pre">attachModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.ConservationHistoryLS.attachModel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.ConservationHistoryLS.calculate">
-<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.ConservationHistoryLS.calculate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.ConservationHistoryLS.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.ConservationHistoryLS.calculate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="proteus.AuxiliaryVariables.VelocityNormOverRegion">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.AuxiliaryVariables.</code><code class="sig-name descname">VelocityNormOverRegion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">regionIdList</span><span class="o">=</span><span class="default_value">[1]</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.VelocityNormOverRegion" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.VelocityNormOverRegion">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.AuxiliaryVariables.</span></span><span class="sig-name descname"><span class="pre">VelocityNormOverRegion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regionIdList</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[1]</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.VelocityNormOverRegion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.AuxiliaryVariables.AV_base" title="proteus.AuxiliaryVariables.AV_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.AuxiliaryVariables.AV_base</span></code></a></p>
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.VelocityNormOverRegion.attachModel">
-<code class="sig-name descname">attachModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">ar</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.VelocityNormOverRegion.attachModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.VelocityNormOverRegion.attachModel">
+<span class="sig-name descname"><span class="pre">attachModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.VelocityNormOverRegion.attachModel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.VelocityNormOverRegion.calculate">
-<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.VelocityNormOverRegion.calculate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.VelocityNormOverRegion.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.VelocityNormOverRegion.calculate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="proteus.AuxiliaryVariables.MassOverRegion">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.AuxiliaryVariables.</code><code class="sig-name descname">MassOverRegion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">regionIdList</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">ci</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.MassOverRegion" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.MassOverRegion">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.AuxiliaryVariables.</span></span><span class="sig-name descname"><span class="pre">MassOverRegion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regionIdList</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ci</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.MassOverRegion" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.AuxiliaryVariables.AV_base" title="proteus.AuxiliaryVariables.AV_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.AuxiliaryVariables.AV_base</span></code></a></p>
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.MassOverRegion.attachModel">
-<code class="sig-name descname">attachModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">ar</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.MassOverRegion.attachModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.MassOverRegion.attachModel">
+<span class="sig-name descname"><span class="pre">attachModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.MassOverRegion.attachModel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.MassOverRegion.calculate">
-<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.MassOverRegion.calculate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.MassOverRegion.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.MassOverRegion.calculate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="proteus.AuxiliaryVariables.PT123velocityGenerator">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.AuxiliaryVariables.</code><code class="sig-name descname">PT123velocityGenerator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filebase</span></em>, <em class="sig-param"><span class="n">tnList</span></em>, <em class="sig-param"><span class="n">ci</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.PT123velocityGenerator">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.AuxiliaryVariables.</span></span><span class="sig-name descname"><span class="pre">PT123velocityGenerator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filebase</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tnList</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ci</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.AuxiliaryVariables.AV_base" title="proteus.AuxiliaryVariables.AV_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.AuxiliaryVariables.AV_base</span></code></a></p>
 <p>write out the velocity field from a model for PT123 to use in tracking as a
 standalone application</p>
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.PT123velocityGenerator.getElementRT0velocityValues">
-<code class="sig-name descname">getElementRT0velocityValues</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.getElementRT0velocityValues" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.PT123velocityGenerator.getElementRT0velocityValues">
+<span class="sig-name descname"><span class="pre">getElementRT0velocityValues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.getElementRT0velocityValues" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.PT123velocityGenerator.attachModel">
-<code class="sig-name descname">attachModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">model</span></em>, <em class="sig-param"><span class="n">ar</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.attachModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.PT123velocityGenerator.attachModel">
+<span class="sig-name descname"><span class="pre">attachModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ar</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.attachModel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.PT123velocityGenerator.checkFileClose">
-<code class="sig-name descname">checkFileClose</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filetoclose</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.checkFileClose" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.PT123velocityGenerator.checkFileClose">
+<span class="sig-name descname"><span class="pre">checkFileClose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filetoclose</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.checkFileClose" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123inputMesh">
-<code class="sig-name descname">writePT123inputMesh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">nd</span></em>, <em class="sig-param"><span class="n">mesh</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123inputMesh" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123inputMesh">
+<span class="sig-name descname"><span class="pre">writePT123inputMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123inputMesh" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123nodalVelocity">
-<code class="sig-name descname">writePT123nodalVelocity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">components</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123nodalVelocity" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123nodalVelocity">
+<span class="sig-name descname"><span class="pre">writePT123nodalVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">components</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123nodalVelocity" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123elementVelocity">
-<code class="sig-name descname">writePT123elementVelocity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">components</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123elementVelocity" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123elementVelocity">
+<span class="sig-name descname"><span class="pre">writePT123elementVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">components</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123elementVelocity" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123MixedVelocityAsElementVelocity">
-<code class="sig-name descname">writePT123MixedVelocityAsElementVelocity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">ci</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123MixedVelocityAsElementVelocity" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123MixedVelocityAsElementVelocity">
+<span class="sig-name descname"><span class="pre">writePT123MixedVelocityAsElementVelocity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ci</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123MixedVelocityAsElementVelocity" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123elementPorosity">
-<code class="sig-name descname">writePT123elementPorosity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">1.0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123elementPorosity" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123elementPorosity">
+<span class="sig-name descname"><span class="pre">writePT123elementPorosity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123elementPorosity" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123nodalPorosity">
-<code class="sig-name descname">writePT123nodalPorosity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="o">=</span><span class="default_value">1.0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123nodalPorosity" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123nodalPorosity">
+<span class="sig-name descname"><span class="pre">writePT123nodalPorosity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.writePT123nodalPorosity" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.AuxiliaryVariables.PT123velocityGenerator.calculate">
-<code class="sig-name descname">calculate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.calculate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.AuxiliaryVariables.PT123velocityGenerator.calculate">
+<span class="sig-name descname"><span class="pre">calculate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/AuxiliaryVariables.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.AuxiliaryVariables.PT123velocityGenerator.calculate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -515,20 +521,25 @@ standalone application</p>
            
           </div>
           <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, The Proteus Team
+        &#169; Copyright 2020, The Proteus Team.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -536,7 +547,6 @@ standalone application</p>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

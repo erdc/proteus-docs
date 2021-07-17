@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="de/d58/classproteus_1_1LinearSolvers_1_1petsc__ASM" kind="class" language="Python" prot="public">
+    <compoundname>proteus::LinearSolvers::petsc_ASM</compoundname>
+    <basecompoundref refid="d7/da9/classproteus_1_1LinearSolvers_1_1KSP__Preconditioner" prot="public" virt="non-virtual">proteus.LinearSolvers.KSP_Preconditioner</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="de/d58/classproteus_1_1LinearSolvers_1_1petsc__ASM_1ad7ed257b6302b884b70e6abd26f53516" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.LinearSolvers.petsc_ASM::PCType</definition>
+        <argsstring></argsstring>
+        <name>PCType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearSolvers.py" line="1247" column="1" bodyfile="LinearSolvers.py" bodystart="1247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d58/classproteus_1_1LinearSolvers_1_1petsc__ASM_1a0769eccb35daf31d802509f915f8e3be" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.LinearSolvers.petsc_ASM::L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearSolvers.py" line="1248" column="1" bodyfile="LinearSolvers.py" bodystart="1248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d58/classproteus_1_1LinearSolvers_1_1petsc__ASM_1ae3033033aae0b660584bd1a36790d1f6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.LinearSolvers.petsc_ASM::pc</definition>
+        <argsstring></argsstring>
+        <name>pc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearSolvers.py" line="1256" column="1" bodyfile="LinearSolvers.py" bodystart="1256" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="de/d58/classproteus_1_1LinearSolvers_1_1petsc__ASM_1a120ad877fef9438fa09005cf81bea040" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearSolvers.petsc_ASM.__init__</definition>
+        <argsstring>(self, L, prefix=None)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="de/d58/classproteus_1_1LinearSolvers_1_1petsc__ASM_1a0769eccb35daf31d802509f915f8e3be" kindref="member">L</ref></type>
+          <defname>L</defname>
+        </param>
+        <param>
+          <type>prefix</type>
+          <defname>prefix</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initializes the ASMpreconditioner for use with PETSc.
+
+Parameters
+----------
+L : the global system matrix.
+prefix : str
+    Prefix handle for PETSc options.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearSolvers.py" line="1237" column="1" bodyfile="LinearSolvers.py" bodystart="1237" bodyend="1253"/>
+      </memberdef>
+      <memberdef kind="function" id="de/d58/classproteus_1_1LinearSolvers_1_1petsc__ASM_1a09c4f68329a875b1fdc18be7a686359e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearSolvers.petsc_ASM.setUp</definition>
+        <argsstring>(self, global_ksp=None, newton_its=None)</argsstring>
+        <name>setUp</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>global_ksp</type>
+          <defname>global_ksp</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>newton_its</type>
+          <defname>newton_its</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearSolvers.py" line="1261" column="1" bodyfile="LinearSolvers.py" bodystart="1261" bodyend="1265"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="de/d58/classproteus_1_1LinearSolvers_1_1petsc__ASM_1a5b54297483723b2995c5be8ec435f0f8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearSolvers.petsc_ASM._initializePC</definition>
+        <argsstring>(self, prefix=None)</argsstring>
+        <name>_initializePC</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>prefix</type>
+          <defname>prefix</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Create the pc object. </verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearSolvers.py" line="1254" column="1" bodyfile="LinearSolvers.py" bodystart="1254" bodyend="1260"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>ASM PETSc preconditioner class.
+
+This class provides an ASM preconditioners for PETSc4py KSP
+objects.
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>proteus.LinearSolvers.petsc_ASM</label>
+        <link refid="de/d58/classproteus_1_1LinearSolvers_1_1petsc__ASM"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>proteus.LinearSolvers.KSP_Preconditioner</label>
+        <link refid="d7/da9/classproteus_1_1LinearSolvers_1_1KSP__Preconditioner"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>object</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>proteus.LinearSolvers.petsc_ASM</label>
+        <link refid="de/d58/classproteus_1_1LinearSolvers_1_1petsc__ASM"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>proteus.LinearSolvers.KSP_Preconditioner</label>
+        <link refid="d7/da9/classproteus_1_1LinearSolvers_1_1KSP__Preconditioner"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>object</label>
+      </node>
+    </collaborationgraph>
+    <location file="LinearSolvers.py" line="1231" column="1" bodyfile="LinearSolvers.py" bodystart="1231" bodyend="1266"/>
+    <listofallmembers>
+      <member refid="de/d58/classproteus_1_1LinearSolvers_1_1petsc__ASM_1a120ad877fef9438fa09005cf81bea040" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::petsc_ASM</scope><name>__init__</name></member>
+      <member refid="d7/da9/classproteus_1_1LinearSolvers_1_1KSP__Preconditioner_1ad768d6400f91883d35c4d9daa32061a6" prot="public" virt="non-virtual" ambiguityscope="proteus::LinearSolvers::KSP_Preconditioner."><scope>proteus::LinearSolvers::petsc_ASM</scope><name>__init__</name></member>
+      <member refid="de/d58/classproteus_1_1LinearSolvers_1_1petsc__ASM_1a5b54297483723b2995c5be8ec435f0f8" prot="private" virt="non-virtual"><scope>proteus::LinearSolvers::petsc_ASM</scope><name>_initializePC</name></member>
+      <member refid="de/d58/classproteus_1_1LinearSolvers_1_1petsc__ASM_1a0769eccb35daf31d802509f915f8e3be" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::petsc_ASM</scope><name>L</name></member>
+      <member refid="de/d58/classproteus_1_1LinearSolvers_1_1petsc__ASM_1ae3033033aae0b660584bd1a36790d1f6" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::petsc_ASM</scope><name>pc</name></member>
+      <member refid="de/d58/classproteus_1_1LinearSolvers_1_1petsc__ASM_1ad7ed257b6302b884b70e6abd26f53516" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::petsc_ASM</scope><name>PCType</name></member>
+      <member refid="d7/da9/classproteus_1_1LinearSolvers_1_1KSP__Preconditioner_1afc996de0d847d5445818c46b64b12f61" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::petsc_ASM</scope><name>setup</name></member>
+      <member refid="de/d58/classproteus_1_1LinearSolvers_1_1petsc__ASM_1a09c4f68329a875b1fdc18be7a686359e" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::petsc_ASM</scope><name>setUp</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

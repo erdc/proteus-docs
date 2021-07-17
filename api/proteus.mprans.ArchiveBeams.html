@@ -1,42 +1,47 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>proteus.mprans.ArchiveBeams module &mdash; Proteus 1.7.4.dev0 documentation</title>
+  <title>proteus.mprans.ArchiveBeams module &mdash; Proteus 1.8.0 documentation</title>
   
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
 
   
   
     <link rel="shortcut icon" href="../_static/tritonBorder.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
@@ -65,7 +70,7 @@
             
             
               <div class="version">
-                1.7.4.dev0
+                1.8.0
               </div>
             
           
@@ -82,6 +87,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -89,19 +95,12 @@
               
             
             
-              <p class="caption"><span class="caption-text">General</span></p>
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../apicapi.html">API docs</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Tools</span></p>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../tools/boundary_conditions.html">BoundaryConditions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../tools/boundary_conditions.html#usage">Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../tools/boundary_conditions.html#import">Import</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/spatial_tools.html">SpatialTools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/spatial_tools.html#usage">Usage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#import">Import</a></li>
@@ -142,7 +141,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/two_phase_flow.html">TwoPhaseFlow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/wave_tools.html">WaveTools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/wave_tools.html#usage">Usage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tools/wave_tools.html#import-in-command-line">Import in command line</a></li>
@@ -154,33 +152,9 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Models</span></p>
+<p class="caption" role="heading"><span class="caption-text">Models</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../models/body_dynamics.html">Body Dynamics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#implementation">Implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#classes">Classes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchsystem">ProtChSystem</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchbody">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmesh">ProtChMesh</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmoorings">ProtChMoorings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchaddedmass">ProtChAddedMass</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChMoorings</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/free_surface.html">Free Surface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#vof-ncls">VOF - NCLS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#clsvof">CLSVOF</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/mesh_adaptivity.html">Mesh Adaptivity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../models/mesh_motion.html">Mesh Motion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../models/navier_stokes.html">Navier-Stokes</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../models/navier_stokes.html">Multiphase Navier-Stokes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#two-phase">Two-Phase</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#three-phase">Three-Phase</a></li>
@@ -191,11 +165,41 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../models/SWFlow.html">Shallow Water Flow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#shallow-water-equations">Shallow Water Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#running-the-tests">Running the tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../models/free_surface.html">Free Surface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#vof-ncls">VOF - NCLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#clsvof">CLSVOF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../models/body_dynamics.html">Multi-Body Solid Dynamics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#implementation">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchsystem">ProtChSystem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchbody">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmesh">ProtChMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmoorings">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchaddedmass">ProtChAddedMass</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id2">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChMoorings</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -230,18 +234,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>proteus.mprans.ArchiveBeams module</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             
               <a href="https://github.com/erdc/proteus/blob/masterdocs/source/api/proteus.mprans.ArchiveBeams.rst" class="fa fa-github"> Edit on GitHub</a>
             
@@ -260,23 +266,23 @@
   <div class="section" id="module-proteus.mprans.ArchiveBeams">
 <span id="proteus-mprans-archivebeams-module"></span><h1>proteus.mprans.ArchiveBeams module<a class="headerlink" href="#module-proteus.mprans.ArchiveBeams" title="Permalink to this headline">¶</a></h1>
 <dl class="py function">
-<dt id="proteus.mprans.ArchiveBeams.InitializeXdmf">
-<code class="sig-prename descclassname">proteus.mprans.ArchiveBeams.</code><code class="sig-name descname">InitializeXdmf</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">'beam'</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/ArchiveBeams.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.ArchiveBeams.InitializeXdmf" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.ArchiveBeams.InitializeXdmf">
+<span class="sig-prename descclassname"><span class="pre">proteus.mprans.ArchiveBeams.</span></span><span class="sig-name descname"><span class="pre">InitializeXdmf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'beam'</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/ArchiveBeams.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.ArchiveBeams.InitializeXdmf" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="proteus.mprans.ArchiveBeams.AddTimestep">
-<code class="sig-prename descclassname">proteus.mprans.ArchiveBeams.</code><code class="sig-name descname">AddTimestep</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Beam_x</span></em>, <em class="sig-param"><span class="n">Beam_y</span></em>, <em class="sig-param"><span class="n">Beam_z</span></em>, <em class="sig-param"><span class="n">nBeams</span></em>, <em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">'beam'</span></em>, <em class="sig-param"><span class="n">t</span><span class="o">=</span><span class="default_value">0.0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/ArchiveBeams.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.ArchiveBeams.AddTimestep" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.ArchiveBeams.AddTimestep">
+<span class="sig-prename descclassname"><span class="pre">proteus.mprans.ArchiveBeams.</span></span><span class="sig-name descname"><span class="pre">AddTimestep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Beam_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Beam_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Beam_z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nBeams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'beam'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/ArchiveBeams.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.ArchiveBeams.AddTimestep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="proteus.mprans.ArchiveBeams.Archive_parallel">
-<code class="sig-prename descclassname">proteus.mprans.ArchiveBeams.</code><code class="sig-name descname">Archive_parallel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Beam_x</span></em>, <em class="sig-param"><span class="n">Beam_y</span></em>, <em class="sig-param"><span class="n">Beam_z</span></em>, <em class="sig-param"><span class="n">nBeams</span></em>, <em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">'beam'</span></em>, <em class="sig-param"><span class="n">tList</span><span class="o">=</span><span class="default_value">[0.0]</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/ArchiveBeams.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.ArchiveBeams.Archive_parallel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.ArchiveBeams.Archive_parallel">
+<span class="sig-prename descclassname"><span class="pre">proteus.mprans.ArchiveBeams.</span></span><span class="sig-name descname"><span class="pre">Archive_parallel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Beam_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Beam_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Beam_z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nBeams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'beam'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tList</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0.0]</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/ArchiveBeams.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.ArchiveBeams.Archive_parallel" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt id="proteus.mprans.ArchiveBeams.Archive_time_step">
-<code class="sig-prename descclassname">proteus.mprans.ArchiveBeams.</code><code class="sig-name descname">Archive_time_step</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">Beam_x</span></em>, <em class="sig-param"><span class="n">Beam_y</span></em>, <em class="sig-param"><span class="n">Beam_z</span></em>, <em class="sig-param"><span class="n">nBeams</span></em>, <em class="sig-param"><span class="n">filename</span><span class="o">=</span><span class="default_value">'beam'</span></em>, <em class="sig-param"><span class="n">t</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">tStep</span><span class="o">=</span><span class="default_value">0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/ArchiveBeams.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.ArchiveBeams.Archive_time_step" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.ArchiveBeams.Archive_time_step">
+<span class="sig-prename descclassname"><span class="pre">proteus.mprans.ArchiveBeams.</span></span><span class="sig-name descname"><span class="pre">Archive_time_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Beam_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Beam_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Beam_z</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nBeams</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'beam'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tStep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/ArchiveBeams.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.ArchiveBeams.Archive_time_step" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </div>
@@ -286,20 +292,25 @@
            
           </div>
           <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, The Proteus Team
+        &#169; Copyright 2020, The Proteus Team.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -307,7 +318,6 @@
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

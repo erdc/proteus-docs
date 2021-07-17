@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="class_exponential_density" kind="class" language="C++" prot="public">
     <compoundname>ExponentialDensity</compoundname>
     <basecompoundref refid="class_linear_density" prot="public" virt="non-virtual">LinearDensity</basecompoundref>
@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/densityRelations.h" line="87" column="1" bodyfile="/home/cekees/proteus/proteus/densityRelations.h" bodystart="87" bodyend="89"/>
+        <location file="/home/cekees/proteus/proteus/densityRelations.h" line="87" column="10" bodyfile="/home/cekees/proteus/proteus/densityRelations.h" bodystart="87" bodyend="89"/>
       </memberdef>
       <memberdef kind="function" id="class_exponential_density_1a48e13ef87e12d1edc36c5166ffeadcf1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -37,88 +37,96 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/densityRelations.h" line="90" column="1" bodyfile="/home/cekees/proteus/proteus/densityRelations.h" bodystart="90" bodyend="94"/>
+        <location file="/home/cekees/proteus/proteus/densityRelations.h" line="90" column="15" bodyfile="/home/cekees/proteus/proteus/densityRelations.h" bodystart="90" bodyend="94"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>The density of an exponentially compressible fluid.</para><para><parameterlist kind="param"><parameteritem>
+<para>The density of an exponentially compressible fluid.</para>
+<para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername direction="in">psi</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The pressure head (not used) </para></parameterdescription>
+<para>The pressure head (not used) </para>
+</parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername direction="in">rwork[0]</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The reference density, <formula id="92">$ \rho_0 $</formula> </para></parameterdescription>
+<para>The reference density, <formula id="90">$ \rho_0 $</formula> </para>
+</parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername direction="in">rwork[1]</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The reference pressure head, <formula id="93">$ \psi_0 $</formula> </para></parameterdescription>
+<para>The reference pressure head, <formula id="91">$ \psi_0 $</formula> </para>
+</parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername direction="in">rwork[2]</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The compressibility <formula id="94">$ \beta $</formula> </para></parameterdescription>
+<para>The compressibility <formula id="92">$ \beta $</formula> </para>
+</parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername direction="out">rho</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The density </para></parameterdescription>
+<para>The density </para>
+</parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
 <parametername direction="out">drho</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The derivative of density with respect to pressure head</para></parameterdescription>
+<para>The derivative of density with respect to pressure head</para>
+</parameterdescription>
 </parameteritem>
 </parameterlist>
-This is a trivial function but it demonstrates the density relation interface. <formula id="96">\[ \rho &amp;= \rho_0 e^{\beta_f \psi} \]</formula> </para>    </detaileddescription>
+This is a trivial function but it demonstrates the density relation interface. <formula id="94">\[ \rho &amp;= \rho_0 e^{\beta_f \psi} \]</formula> </para>
+    </detaileddescription>
     <inheritancegraph>
-      <node id="277">
+      <node id="2">
         <label>LinearDensity</label>
         <link refid="class_linear_density"/>
-        <childnode refid="278" relation="public-inheritance">
+        <childnode refid="3" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="276">
+      <node id="1">
         <label>ExponentialDensity</label>
         <link refid="class_exponential_density"/>
-        <childnode refid="277" relation="public-inheritance">
+        <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="278">
+      <node id="3">
         <label>DensityRelation</label>
         <link refid="class_density_relation"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
-      <node id="280">
+      <node id="2">
         <label>LinearDensity</label>
         <link refid="class_linear_density"/>
-        <childnode refid="281" relation="public-inheritance">
+        <childnode refid="3" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="279">
+      <node id="1">
         <label>ExponentialDensity</label>
         <link refid="class_exponential_density"/>
-        <childnode refid="280" relation="public-inheritance">
+        <childnode refid="2" relation="public-inheritance">
         </childnode>
       </node>
-      <node id="281">
+      <node id="3">
         <label>DensityRelation</label>
         <link refid="class_density_relation"/>
       </node>

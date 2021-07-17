@@ -1,0 +1,531 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave" kind="namespace" language="Python">
+    <compoundname>proteus::tests::SWFlow::runup_solitaryWave</compoundname>
+    <innerclass refid="d5/d07/classproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1_1heta__at__t0" prot="public">proteus::tests::SWFlow::runup_solitaryWave::heta_at_t0</innerclass>
+    <innerclass refid="d5/df8/classproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1_1hw__at__t0" prot="public">proteus::tests::SWFlow::runup_solitaryWave::hw_at_t0</innerclass>
+    <innerclass refid="de/dd6/classproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1_1water__height__at__t0" prot="public">proteus::tests::SWFlow::runup_solitaryWave::water_height_at_t0</innerclass>
+    <innerclass refid="d1/d0b/classproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1_1x__mom__at__t0" prot="public">proteus::tests::SWFlow::runup_solitaryWave::x_mom_at_t0</innerclass>
+    <innerclass refid="d7/d8c/classproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1_1y__mom__at__t0" prot="public">proteus::tests::SWFlow::runup_solitaryWave::y_mom_at_t0</innerclass>
+    <innerclass refid="d2/dbc/classproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1_1Zero" prot="public">proteus::tests::SWFlow::runup_solitaryWave::Zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a0acc80f5370bd90bf0e28c162dae4029" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::runup_solitaryWave.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  <ref refid="d0/d93/namespaceproteus_1_1Context_1a461242d050aceb1e84d9426074c67004" kindref="member">Context.Options</ref>([
+    (&apos;sw_model&apos;, 1, &quot;sw_model = {0,1} for {SWEs, Disperisve SWEs}&quot;),
+    (&quot;final_time&quot;, 30.0, &quot;Final time for simulation&quot;),
+    (&quot;dt_output&quot;, 0.1, &quot;Time interval to output solution&quot;),
+    (&quot;cfl&quot;, 0.25, &quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a2709535557cffd5337bea39eda7f479f" kindref="member">refinement</ref>&quot;, 4, &quot;Refinement level&quot;),
+    (&quot;reflecting_BCs&quot;, False, &quot;Use reflecting BCs for all boundaries&quot;),
+    (&quot;structured&quot;, True, &quot;Structured or unstructured mesh&quot;),
+    (&quot;<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a73ac4fd909c9a2f0f4b3fb378cc1a7ef" kindref="member">he</ref>&quot;, 0.5, &quot;<ref refid="da/d29/structMesh" kindref="compound">Mesh</ref> size for unstructured mesh&quot;),
+    (&quot;mannings&quot;, 0.016, &quot;Mannings roughness coefficient&quot;)
+])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="23" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a57ec138ae4dbd74268227446eb9f3fc6" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::runup_solitaryWave.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <initializer>=  (50.0, 1.0)</initializer>
+        <briefdescription>
+<para>DOMAIN AND MESH #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="38" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a2709535557cffd5337bea39eda7f479f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::runup_solitaryWave.refinement</definition>
+        <argsstring></argsstring>
+        <name>refinement</name>
+        <initializer>=  opts.refinement</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="39" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a1388efdc4aafecbde4b4e8825e4daa5e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::runup_solitaryWave.rectangle</definition>
+        <argsstring></argsstring>
+        <name>rectangle</name>
+        <initializer>=  <ref refid="de/d03/classproteus_1_1Domain_1_1RectangularDomain" kindref="compound">RectangularDomain</ref>(<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a57ec138ae4dbd74268227446eb9f3fc6" kindref="member">L</ref>=<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a57ec138ae4dbd74268227446eb9f3fc6" kindref="member">L</ref>, x=[-35.0, 0, 0])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="40" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1af38e58c02f2856b352fde1b80dad7678" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::SWFlow::runup_solitaryWave.nnx0</definition>
+        <argsstring></argsstring>
+        <name>nnx0</name>
+        <initializer>=  6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="43" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a702ec8a3f0cc7d2b23e03a4ab96da3ac" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>proteus::tests::SWFlow::runup_solitaryWave.nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <initializer>=  (<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1af38e58c02f2856b352fde1b80dad7678" kindref="member">nnx0</ref> - 1) * (2**<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a2709535557cffd5337bea39eda7f479f" kindref="member">refinement</ref>) + 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="44" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a6e381a143367183f450cad87ca5f0404" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>proteus::tests::SWFlow::runup_solitaryWave.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <initializer>=  old_div((<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a702ec8a3f0cc7d2b23e03a4ab96da3ac" kindref="member">nnx</ref> - 1), 20) + 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="45" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a73ac4fd909c9a2f0f4b3fb378cc1a7ef" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::runup_solitaryWave.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  old_div(<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a57ec138ae4dbd74268227446eb9f3fc6" kindref="member">L</ref>[0], float(<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a702ec8a3f0cc7d2b23e03a4ab96da3ac" kindref="member">nnx</ref> - 1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="46" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1abe01b22e8aed34c3be6b2db11a388584" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::runup_solitaryWave.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a1388efdc4aafecbde4b4e8825e4daa5e" kindref="member">rectangle</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="48" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a2c416d4e66fb8e92334318781f0d3b90" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::runup_solitaryWave.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="52" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a1881a4330336806f2241ecfa1f07a1eb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::runup_solitaryWave.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>=  9.81</initializer>
+        <briefdescription>
+<para>CONSTANTS NEEDED FOR SETUP #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="59" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1ad94b81b59fe2180239a4efc754900b00" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::runup_solitaryWave.h0</definition>
+        <argsstring></argsstring>
+        <name>h0</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="60" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1aca8a5057e2886ca8480f3a58e7298eff" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::runup_solitaryWave.a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <initializer>=  0.28</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="61" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a81115c7c5f42de14c2a7b9818106db5c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::runup_solitaryWave.slope</definition>
+        <argsstring></argsstring>
+        <name>slope</name>
+        <initializer>=  1.0 / 19.85</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="62" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1ae4384b97942129a9071d4ab874893e09" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::runup_solitaryWave.k_wavenumber</definition>
+        <argsstring></argsstring>
+        <name>k_wavenumber</name>
+        <initializer>=  np.sqrt(3.0 * <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1aca8a5057e2886ca8480f3a58e7298eff" kindref="member">a</ref> / (4.0 * <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1ad94b81b59fe2180239a4efc754900b00" kindref="member">h0</ref>**3))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="63" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a8b033a9002623b4a20c23defd189c558" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::runup_solitaryWave.z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <initializer>=  np.sqrt(3.0 * <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1aca8a5057e2886ca8480f3a58e7298eff" kindref="member">a</ref> * <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1ad94b81b59fe2180239a4efc754900b00" kindref="member">h0</ref>) / (2.0 * <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1ad94b81b59fe2180239a4efc754900b00" kindref="member">h0</ref> * np.sqrt(<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1ad94b81b59fe2180239a4efc754900b00" kindref="member">h0</ref> * (1.0 + <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1aca8a5057e2886ca8480f3a58e7298eff" kindref="member">a</ref>)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="64" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a2707f13115e16cfb426660a1124137c0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::runup_solitaryWave.L_wave</definition>
+        <argsstring></argsstring>
+        <name>L_wave</name>
+        <initializer>=  2.0 / <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1ae4384b97942129a9071d4ab874893e09" kindref="member">k_wavenumber</ref> * np.arccosh(np.sqrt(20.0))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="65" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a29c47a13ab0deed08a54322ef948d351" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::runup_solitaryWave.c</definition>
+        <argsstring></argsstring>
+        <name>c</name>
+        <initializer>=  np.sqrt(<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a1881a4330336806f2241ecfa1f07a1eb" kindref="member">g</ref> * (1.0 + <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1aca8a5057e2886ca8480f3a58e7298eff" kindref="member">a</ref>) * <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1ad94b81b59fe2180239a4efc754900b00" kindref="member">h0</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="66" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1adb076ad90438c39e5c7d61236fb43fbb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::runup_solitaryWave.x0</definition>
+        <argsstring></argsstring>
+        <name>x0</name>
+        <initializer>=  - <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1ad94b81b59fe2180239a4efc754900b00" kindref="member">h0</ref> / <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a81115c7c5f42de14c2a7b9818106db5c" kindref="member">slope</ref> - <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a2707f13115e16cfb426660a1124137c0" kindref="member">L_wave</ref> / 2.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="67" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1ab4626a5a3959b493497cb213dd0624e8" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::runup_solitaryWave.X_coords</definition>
+        <argsstring></argsstring>
+        <name>X_coords</name>
+        <initializer>=  (-35.0, 15.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="138" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1acd92bc151a368be516e06118cc19112c" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::runup_solitaryWave.Y_coords</definition>
+        <argsstring></argsstring>
+        <name>Y_coords</name>
+        <initializer>=  (0.0, 1.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="139" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1aea4f0a5b34b7ee045308f766273348ee" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::runup_solitaryWave.T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <initializer>=  opts.final_time</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="160" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1ad1180cf49dc83aabb15ef3a3e13722d1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::runup_solitaryWave.Tstar</definition>
+        <argsstring></argsstring>
+        <name>Tstar</name>
+        <initializer>=  <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1aea4f0a5b34b7ee045308f766273348ee" kindref="member">T</ref> * np.sqrt(<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1ad94b81b59fe2180239a4efc754900b00" kindref="member">h0</ref> / <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a1881a4330336806f2241ecfa1f07a1eb" kindref="member">g</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="161" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1aa51b415c6616e8634b186a8cc4fe21f0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::runup_solitaryWave.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  SWFlowProblem.OutputStepping(
+    <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1ad1180cf49dc83aabb15ef3a3e13722d1" kindref="member">Tstar</ref>, dt_output=opts.dt_output)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="162" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1adf16ac94f5f72c28371b6852534550dc" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::runup_solitaryWave.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;water_height&apos;: <ref refid="de/dd6/classproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1_1water__height__at__t0" kindref="compound">water_height_at_t0</ref>(),
+                     &apos;x_mom&apos;: <ref refid="d1/d0b/classproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1_1x__mom__at__t0" kindref="compound">x_mom_at_t0</ref>(),
+                     &apos;y_mom&apos;: <ref refid="d7/d8c/classproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1_1y__mom__at__t0" kindref="compound">y_mom_at_t0</ref>(),
+                     &apos;h_times_eta&apos;: <ref refid="d5/d07/classproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1_1heta__at__t0" kindref="compound">heta_at_t0</ref>(),
+                     &apos;h_times_w&apos;: <ref refid="d5/df8/classproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1_1hw__at__t0" kindref="compound">hw_at_t0</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="164" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a6d47a5794c8dd376682b7c9eae72c6b0" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::runup_solitaryWave.boundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>boundaryConditions</name>
+        <initializer>=  {&apos;water_height&apos;: lambda x, flag: None,
+                      &apos;x_mom&apos;: <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a46d65504f311cf44e8a474f2ef6d152b" kindref="member">x_mom_DBC</ref>,
+                      &apos;y_mom&apos;: <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1ac156371e71981c9230328e71546ff199" kindref="member">y_mom_DBC</ref>,
+                      &apos;h_times_eta&apos;: lambda x, flag: None,
+                      &apos;h_times_w&apos;: lambda x, flag: None}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="169" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a251b67232d1cdf7a3ff7152a343e79a2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::runup_solitaryWave.mySWFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>mySWFlowProblem</name>
+        <initializer>=  SWFlowProblem.SWFlowProblem(sw_model=opts.sw_model,
+                                              cfl=opts.cfl,
+                                              <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1aa51b415c6616e8634b186a8cc4fe21f0" kindref="member">outputStepping</ref>=<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1aa51b415c6616e8634b186a8cc4fe21f0" kindref="member">outputStepping</ref>,
+                                              structured=opts.structured,
+                                              <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a73ac4fd909c9a2f0f4b3fb378cc1a7ef" kindref="member">he</ref>=<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a73ac4fd909c9a2f0f4b3fb378cc1a7ef" kindref="member">he</ref>,
+                                              <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a702ec8a3f0cc7d2b23e03a4ab96da3ac" kindref="member">nnx</ref>=<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a702ec8a3f0cc7d2b23e03a4ab96da3ac" kindref="member">nnx</ref>,
+                                              <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a6e381a143367183f450cad87ca5f0404" kindref="member">nny</ref>=<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a6e381a143367183f450cad87ca5f0404" kindref="member">nny</ref>,
+                                              <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1abe01b22e8aed34c3be6b2db11a388584" kindref="member">domain</ref>=<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1abe01b22e8aed34c3be6b2db11a388584" kindref="member">domain</ref>,
+                                              <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1adf16ac94f5f72c28371b6852534550dc" kindref="member">initialConditions</ref>=<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1adf16ac94f5f72c28371b6852534550dc" kindref="member">initialConditions</ref>,
+                                              <ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a6d47a5794c8dd376682b7c9eae72c6b0" kindref="member">boundaryConditions</ref>=<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a6d47a5794c8dd376682b7c9eae72c6b0" kindref="member">boundaryConditions</ref>,
+                                              bathymetry=<ref refid="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a6430dad10a0ff5b593d6c182757d4784" kindref="member">bathymetry_function</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="175" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a7b89710bbb165e76fb46b2fea987945d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.runup_solitaryWave.solitary_wave</definition>
+        <argsstring>(x, t)</argsstring>
+        <name>solitary_wave</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+<para>Functions defined here #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="72" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="72" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a6430dad10a0ff5b593d6c182757d4784" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.runup_solitaryWave.bathymetry_function</definition>
+        <argsstring>(X)</argsstring>
+        <name>bathymetry_function</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="77" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="77" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1a46d65504f311cf44e8a474f2ef6d152b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::SWFlow::runup_solitaryWave::x_mom_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>x_mom_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="141" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="141" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="function" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1ac156371e71981c9230328e71546ff199" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.runup_solitaryWave.y_mom_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>y_mom_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="144" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="144" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="df/de0/namespaceproteus_1_1tests_1_1SWFlow_1_1runup__solitaryWave_1ae9394626be38f6e842a77184724cf652" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.runup_solitaryWave.water_height_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>water_height_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/runup_solitaryWave.py" line="149" column="1" bodyfile="tests/SWFlow/runup_solitaryWave.py" bodystart="149" bodyend="151"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/SWFlow/runup_solitaryWave.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

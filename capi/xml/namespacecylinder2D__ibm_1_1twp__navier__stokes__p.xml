@@ -1,0 +1,331 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacecylinder2D__ibm_1_1twp__navier__stokes__p" kind="namespace" language="Python">
+    <compoundname>cylinder2D_ibm::twp_navier_stokes_p</compoundname>
+    <innerclass refid="classcylinder2D__ibm_1_1twp__navier__stokes__p_1_1init__p" prot="public">cylinder2D_ibm::twp_navier_stokes_p::init_p</innerclass>
+    <innerclass refid="classcylinder2D__ibm_1_1twp__navier__stokes__p_1_1init__u" prot="public">cylinder2D_ibm::twp_navier_stokes_p::init_u</innerclass>
+    <innerclass refid="classcylinder2D__ibm_1_1twp__navier__stokes__p_1_1init__v" prot="public">cylinder2D_ibm::twp_navier_stokes_p::init_v</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1ad2e560e9d4bac70520348ee3e4e3c730" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string cylinder2D_ibm::twp_navier_stokes_p.name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <initializer>=  &quot;momentum&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" line="6" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1ae4482a130a9a5a1b7cc8d492d641bc0d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::twp_navier_stokes_p.bcsTimeDependent</definition>
+        <argsstring></argsstring>
+        <name>bcsTimeDependent</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" line="8" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1ace31c4149408fcbcfd10553653b640e5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::twp_navier_stokes_p.LevelModelType</definition>
+        <argsstring></argsstring>
+        <name>LevelModelType</name>
+        <initializer>=  RANS2P.LevelModel</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" line="10" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1a2e65a88e7a21486242cc9b7ab12a9c39" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::twp_navier_stokes_p.coefficients</definition>
+        <argsstring></argsstring>
+        <name>coefficients</name>
+        <initializer>=  RANS2P.Coefficients(epsFact=epsFact_viscosity,
+                                   <ref refid="VMS_8cpp_1ae5f5d9edb66645eab31a7c8389493ce7" kindref="member">rho_0</ref>=<ref refid="VMS_8cpp_1ae5f5d9edb66645eab31a7c8389493ce7" kindref="member">rho_0</ref>,
+                                   <ref refid="VMS_8cpp_1a383b07af68441ce2b4adaaf8d8cc9d90" kindref="member">nu_0</ref>=<ref refid="VMS_8cpp_1a383b07af68441ce2b4adaaf8d8cc9d90" kindref="member">nu_0</ref>,
+                                   <ref refid="VMS_8cpp_1a751e53c9d8dfaf696b11b86e0c1b42e9" kindref="member">rho_1</ref>=<ref refid="VMS_8cpp_1a751e53c9d8dfaf696b11b86e0c1b42e9" kindref="member">rho_1</ref>,
+                                   <ref refid="VMS_8cpp_1ae5896ebfee35f22242123e4ae82c81d9" kindref="member">nu_1</ref>=<ref refid="VMS_8cpp_1ae5896ebfee35f22242123e4ae82c81d9" kindref="member">nu_1</ref>,
+                                   g=g,
+                                   nd=nd,
+                                   LS_model=None,
+                                   epsFact_density=epsFact_density,
+                                   stokes=False,#useStokes,
+                                   forceStrongDirichlet=ct.forceStrongDirichlet,
+                                   eb_adjoint_sigma=1.0,
+                                   eb_penalty_constant=100.0,
+                                   useRBLES=0.0,
+                                   useMetrics=1.0,
+                                   use_ball_as_particle=use_ball_as_particle,
+                                   ball_center=ball_center,
+                                   ball_radius=ball_radius,
+                                   ball_velocity=ball_velocity,
+                                   ball_angular_velocity=ball_angular_velocity,
+                                   nParticles = nParticles,
+                                   particle_epsFact=1.5,
+                                   particle_alpha=1000.0,
+                                   particle_beta=1000.0,
+                                   particle_penalty_constant=100.0,
+                                   NONCONSERVATIVE_FORM = ct.nonconservative)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" line="12" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1a9b5271b58893a2f66f28942826a94232" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary cylinder2D_ibm::twp_navier_stokes_p.dirichletConditions</definition>
+        <argsstring></argsstring>
+        <name>dirichletConditions</name>
+        <initializer>=  {0:<ref refid="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1ac7e130ebf72810e3444727cf6d8ea782" kindref="member">getDBC_p</ref>,
+                       1:<ref refid="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1aed8b98cf3b1c034ef2792cf1cc965c62" kindref="member">getDBC_u</ref>,
+                       2:<ref refid="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1a345f287fbacdaf903d566445a3c0eb4f" kindref="member">getDBC_v</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" line="71" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1ae59a5ae5f95f24ea821f9a8ef88480f3" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary cylinder2D_ibm::twp_navier_stokes_p.advectiveFluxBoundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>advectiveFluxBoundaryConditions</name>
+        <initializer>=   {0:<ref refid="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1ac3d2b075bbde59eb96c1306cdb61ee6c" kindref="member">getAFBC_p</ref>,
+                                    1:<ref refid="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1a99b14e4403180f3a70935a659a273ffa" kindref="member">getAFBC_u</ref>,
+                                    2:<ref refid="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1a24228fb55f145927312096e4f2def18b" kindref="member">getAFBC_v</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" line="115" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1aa1ca318baf34532f29086341c4758a48" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary cylinder2D_ibm::twp_navier_stokes_p.diffusiveFluxBoundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>diffusiveFluxBoundaryConditions</name>
+        <initializer>=  {0:{},
+                                   1:{1:<ref refid="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1a51b5aa3740f998b24d718ca68fc6f5cd" kindref="member">getDFBC_u</ref>},
+                                   2:{2:<ref refid="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1a3967bb74e2ab3a99c87cbf5802c55bd9" kindref="member">getDFBC_v</ref>}}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" line="119" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1acb05696a3c9d9654dc27359613d43ec3" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary cylinder2D_ibm::twp_navier_stokes_p.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {0:<ref refid="classcylinder2D__ibm_1_1twp__navier__stokes__p_1_1init__p" kindref="compound">init_p</ref>(),
+                     1:<ref refid="classcylinder2D__ibm_1_1twp__navier__stokes__p_1_1init__u" kindref="compound">init_u</ref>(),
+                     2:<ref refid="classcylinder2D__ibm_1_1twp__navier__stokes__p_1_1init__v" kindref="compound">init_v</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" line="137" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1ac7e130ebf72810e3444727cf6d8ea782" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cylinder2D_ibm.twp_navier_stokes_p.getDBC_p</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDBC_p</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" line="45" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" bodystart="45" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1aed8b98cf3b1c034ef2792cf1cc965c62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cylinder2D_ibm.twp_navier_stokes_p.getDBC_u</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDBC_u</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" line="51" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" bodystart="51" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1a345f287fbacdaf903d566445a3c0eb4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cylinder2D_ibm.twp_navier_stokes_p.getDBC_v</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDBC_v</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" line="62" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" bodystart="62" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1ac3d2b075bbde59eb96c1306cdb61ee6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cylinder2D_ibm.twp_navier_stokes_p.getAFBC_p</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getAFBC_p</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" line="75" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" bodystart="75" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1a99b14e4403180f3a70935a659a273ffa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cylinder2D_ibm.twp_navier_stokes_p.getAFBC_u</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getAFBC_u</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" line="83" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" bodystart="83" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1a24228fb55f145927312096e4f2def18b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cylinder2D_ibm.twp_navier_stokes_p.getAFBC_v</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getAFBC_v</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" line="91" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" bodystart="91" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1a51b5aa3740f998b24d718ca68fc6f5cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cylinder2D_ibm.twp_navier_stokes_p.getDFBC_u</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDFBC_u</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" line="99" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" bodystart="99" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecylinder2D__ibm_1_1twp__navier__stokes__p_1a3967bb74e2ab3a99c87cbf5802c55bd9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cylinder2D_ibm.twp_navier_stokes_p.getDFBC_v</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDFBC_v</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" line="107" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" bodystart="107" bodyend="114"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/twp_navier_stokes_p.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,537 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island" kind="namespace" language="Python">
+    <compoundname>proteus::tests::SWFlow::conical_island</compoundname>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1conical__island_1_1heta__at__t0" prot="public">proteus::tests::SWFlow::conical_island::heta_at_t0</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1conical__island_1_1hw__at__t0" prot="public">proteus::tests::SWFlow::conical_island::hw_at_t0</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1conical__island_1_1water__height__at__t0" prot="public">proteus::tests::SWFlow::conical_island::water_height_at_t0</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1conical__island_1_1x__mom__at__t0" prot="public">proteus::tests::SWFlow::conical_island::x_mom_at_t0</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1conical__island_1_1y__mom__at__t0" prot="public">proteus::tests::SWFlow::conical_island::y_mom_at_t0</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1conical__island_1_1Zero" prot="public">proteus::tests::SWFlow::conical_island::Zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a537b27acf24c7b4f8ddbb96c48a45676" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::conical_island.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  <ref refid="namespaceproteus_1_1Context_1a461242d050aceb1e84d9426074c67004" kindref="member">Context.Options</ref>([
+    (&apos;sw_model&apos;, 1, &quot;sw_model = {0,1} for {SWEs,DSWEs}&quot;),
+    (&quot;final_time&quot;, 10.0, &quot;Final time for simulation&quot;),
+    (&quot;dt_output&quot;, 0.1, &quot;Time interval to output solution&quot;),
+    (&quot;cfl&quot;, 0.25, &quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a85f7ee5897883e6474695d45c7d7618e" kindref="member">refinement</ref>&quot;, 4, &quot;Refinement level&quot;),
+    (&quot;structured&quot;, True, &quot;Structured or unstructured mesh&quot;),
+    (&quot;<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a3e23a1a88d0b545f87918a5d79542ba2" kindref="member">he</ref>&quot;, 0.5, &quot;<ref refid="structMesh" kindref="compound">Mesh</ref> size for unstructured mesh&quot;),
+    (&quot;reflecting_BCs&quot;, False, &quot;Use reflecting BCs for all boundaries&quot;),
+    (&quot;want_gauges&quot;, False, &quot;Output for water <ref refid="Headers_8h_1a4dbff2664c02385f0a9a62cc755b7b3c" kindref="member">height</ref> point gauge&quot;),
+    (&quot;which_case&quot;, 0, &quot;which_case = {0,1} for {case_C, case_B}&quot;)
+])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="26" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1af8bebc76230b0c101c28f9b31ba20add" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::conical_island.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <initializer>=  (25.0, 30.0)</initializer>
+        <briefdescription>
+<para>DOMAIN AND MESH #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="42" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a85f7ee5897883e6474695d45c7d7618e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::conical_island.refinement</definition>
+        <argsstring></argsstring>
+        <name>refinement</name>
+        <initializer>=  opts.refinement</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="43" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a053a29af4af3b1851aa50eca1eaa07c2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::conical_island.rectangle</definition>
+        <argsstring></argsstring>
+        <name>rectangle</name>
+        <initializer>=  <ref refid="classproteus_1_1Domain_1_1RectangularDomain" kindref="compound">RectangularDomain</ref>(<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1af8bebc76230b0c101c28f9b31ba20add" kindref="member">L</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1af8bebc76230b0c101c28f9b31ba20add" kindref="member">L</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="44" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a155188e74c77841b23d10652835269bd" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::SWFlow::conical_island.nnx0</definition>
+        <argsstring></argsstring>
+        <name>nnx0</name>
+        <initializer>=  6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="47" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1ad317993caa94b99e9da6dada6b12d657" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>proteus::tests::SWFlow::conical_island.nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <initializer>=  (<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a155188e74c77841b23d10652835269bd" kindref="member">nnx0</ref> - 1) * (2**<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a85f7ee5897883e6474695d45c7d7618e" kindref="member">refinement</ref>) + 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="48" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a34401ee63eb02921db1aacfcede1ec15" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>proteus::tests::SWFlow::conical_island.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <initializer>=  old_div((<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1ad317993caa94b99e9da6dada6b12d657" kindref="member">nnx</ref> - 1), 2) + 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="49" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a3e23a1a88d0b545f87918a5d79542ba2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::conical_island.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  old_div(<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1af8bebc76230b0c101c28f9b31ba20add" kindref="member">L</ref>[0], float(<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1ad317993caa94b99e9da6dada6b12d657" kindref="member">nnx</ref> - 1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="50" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1aa42c334401f3891cdb5308cfa3e30eb9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::conical_island.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a053a29af4af3b1851aa50eca1eaa07c2" kindref="member">rectangle</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="52" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1aa18a810c4cf21c566a06810528321337" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::conical_island.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="56" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a73b4ef506c1db9575d24aa0f41262252" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::conical_island.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>=  9.81</initializer>
+        <briefdescription>
+<para>CONSTANTS NEEDED FOR SETUP #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="63" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a5d92c38e02aba103be23e2963122ef92" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::conical_island.h0</definition>
+        <argsstring></argsstring>
+        <name>h0</name>
+        <initializer>=  0.32</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="66" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a9c3c53c7c2327f5d2c263b314e7ce478" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::conical_island::alpha</definition>
+        <argsstring></argsstring>
+        <name>alpha</name>
+        <initializer>=  0.181 * <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a5d92c38e02aba103be23e2963122ef92" kindref="member">h0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="67" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a32a4c74c7aa3ae9866c76dea10f6b4b0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::conical_island::xs</definition>
+        <argsstring></argsstring>
+        <name>xs</name>
+        <initializer>=  7.56023</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="68" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1ad02d3e16ced20f182a78f73854c3e569" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::conical_island.r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <initializer>=  np.sqrt(old_div(3. * <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a9c3c53c7c2327f5d2c263b314e7ce478" kindref="member">alpha</ref>, (4. * <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a5d92c38e02aba103be23e2963122ef92" kindref="member">h0</ref>**2 * (<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a5d92c38e02aba103be23e2963122ef92" kindref="member">h0</ref> + <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a9c3c53c7c2327f5d2c263b314e7ce478" kindref="member">alpha</ref>))))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="73" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1ac055d95534edb43d2fb5155f88314678" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::conical_island.c</definition>
+        <argsstring></argsstring>
+        <name>c</name>
+        <initializer>=  np.sqrt(<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a73b4ef506c1db9575d24aa0f41262252" kindref="member">g</ref> * (<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a5d92c38e02aba103be23e2963122ef92" kindref="member">h0</ref> + <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a9c3c53c7c2327f5d2c263b314e7ce478" kindref="member">alpha</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="74" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a75ad892c06da53ccf0a7a9596794aebb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::conical_island.htop</definition>
+        <argsstring></argsstring>
+        <name>htop</name>
+        <initializer>=  0.625</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="77" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a6c646b199cbe135d8974814fa2eb9a34" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::conical_island.rcone</definition>
+        <argsstring></argsstring>
+        <name>rcone</name>
+        <initializer>=  3.6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="78" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1aad1000a145bf0c4102e10f7f4a1fcef6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::conical_island.scone</definition>
+        <argsstring></argsstring>
+        <name>scone</name>
+        <initializer>=  4.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="79" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1aa3466b8f2c7a30fd18baf66a0d7ba8ab" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::conical_island.hcone</definition>
+        <argsstring></argsstring>
+        <name>hcone</name>
+        <initializer>=  0.9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="80" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a7188091cdd89e09427bb1f1a924489f2" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::conical_island.X_coords</definition>
+        <argsstring></argsstring>
+        <name>X_coords</name>
+        <initializer>=  (0.0, <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1af8bebc76230b0c101c28f9b31ba20add" kindref="member">L</ref>[0])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="154" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1af178dccdb9e09d044583dc06b8d8cbc5" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::conical_island.Y_coords</definition>
+        <argsstring></argsstring>
+        <name>Y_coords</name>
+        <initializer>=  (0.0, <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1af8bebc76230b0c101c28f9b31ba20add" kindref="member">L</ref>[1])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="155" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a5d7f2e83666565b094788db33bdd423b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::conical_island.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  SWFlowProblem.OutputStepping(
+    opts.final_time, dt_output=opts.dt_output)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="171" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a7afa3deae2e9673e1c5faf3cd18c0bff" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::conical_island.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;water_height&apos;: <ref refid="classproteus_1_1tests_1_1SWFlow_1_1conical__island_1_1water__height__at__t0" kindref="compound">water_height_at_t0</ref>(),
+                     &apos;x_mom&apos;: <ref refid="classproteus_1_1tests_1_1SWFlow_1_1conical__island_1_1x__mom__at__t0" kindref="compound">x_mom_at_t0</ref>(),
+                     &apos;y_mom&apos;: <ref refid="classproteus_1_1tests_1_1SWFlow_1_1conical__island_1_1y__mom__at__t0" kindref="compound">y_mom_at_t0</ref>(),
+                     &apos;h_times_eta&apos;: <ref refid="classproteus_1_1tests_1_1SWFlow_1_1conical__island_1_1heta__at__t0" kindref="compound">heta_at_t0</ref>(),
+                     &apos;h_times_w&apos;: <ref refid="classproteus_1_1tests_1_1SWFlow_1_1conical__island_1_1hw__at__t0" kindref="compound">hw_at_t0</ref>(),
+                     &apos;h_times_beta&apos;: <ref refid="classproteus_1_1tests_1_1SWFlow_1_1conical__island_1_1Zero" kindref="compound">Zero</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="173" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1add8505490de6ad666e07399c5207b31e" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::conical_island.boundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>boundaryConditions</name>
+        <initializer>=  {&apos;water_height&apos;: lambda x, flag: None,
+                      &apos;x_mom&apos;: <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a0c58bba11fce774e8ef8da9bec6e7e77" kindref="member">x_mom_DBC</ref>,
+                      &apos;y_mom&apos;: <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1ad7f527b56646b127203725eeb4b25264" kindref="member">y_mom_DBC</ref>,
+                      &apos;h_times_eta&apos;: lambda x, flag: None,
+                      &apos;h_times_w&apos;: lambda x, flag: None,
+                      &apos;h_times_beta&apos;: <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a0c58bba11fce774e8ef8da9bec6e7e77" kindref="member">x_mom_DBC</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="179" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a64f55c431cb62da1a8a61a084d5b4b6f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::conical_island.heightPointGauges</definition>
+        <argsstring></argsstring>
+        <name>heightPointGauges</name>
+        <initializer>=  PointGauges(gauges=(((&apos;h&apos;,), ((<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a32a4c74c7aa3ae9866c76dea10f6b4b0" kindref="member">xs</ref>, 16.05, 0),
+                                                 (<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a32a4c74c7aa3ae9866c76dea10f6b4b0" kindref="member">xs</ref>, 14.55, 0),
+                                                 (<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a32a4c74c7aa3ae9866c76dea10f6b4b0" kindref="member">xs</ref>, 13.05, 0),
+                                                 (<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a32a4c74c7aa3ae9866c76dea10f6b4b0" kindref="member">xs</ref>, 11.55, 0),
+                                                 (9.36, 13.80, 0),
+                                                 (10.36, 13.80, 0),
+                                                 (12.96, 11.22, 0),
+                                                 (15.56, 13.80, 0))),),
+                                activeTime=(0.01, opts.final_time),
+                                fileName=&apos;island_wave_gauges.csv&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="188" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a0926f1b149e2e176f1508244ac25d0c7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::conical_island.mySWFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>mySWFlowProblem</name>
+        <initializer>=  SWFlowProblem.SWFlowProblem(sw_model=opts.sw_model,
+                                              cfl=opts.cfl,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a5d7f2e83666565b094788db33bdd423b" kindref="member">outputStepping</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a5d7f2e83666565b094788db33bdd423b" kindref="member">outputStepping</ref>,
+                                              structured=opts.structured,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a3e23a1a88d0b545f87918a5d79542ba2" kindref="member">he</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a3e23a1a88d0b545f87918a5d79542ba2" kindref="member">he</ref>,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1ad317993caa94b99e9da6dada6b12d657" kindref="member">nnx</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1ad317993caa94b99e9da6dada6b12d657" kindref="member">nnx</ref>,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a34401ee63eb02921db1aacfcede1ec15" kindref="member">nny</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a34401ee63eb02921db1aacfcede1ec15" kindref="member">nny</ref>,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1aa42c334401f3891cdb5308cfa3e30eb9" kindref="member">domain</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1aa42c334401f3891cdb5308cfa3e30eb9" kindref="member">domain</ref>,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a7afa3deae2e9673e1c5faf3cd18c0bff" kindref="member">initialConditions</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a7afa3deae2e9673e1c5faf3cd18c0bff" kindref="member">initialConditions</ref>,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1add8505490de6ad666e07399c5207b31e" kindref="member">boundaryConditions</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1add8505490de6ad666e07399c5207b31e" kindref="member">boundaryConditions</ref>,
+                                              reflectingBCs=opts.reflecting_BCs,
+                                              bathymetry=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1af2b144f8fdbe1d32d19c2c89da695a75" kindref="member">bathymetry_function</ref>,
+                                              analyticalSolution=None)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="201" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a01eef292d8ed6e76bff559ace48392b9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::conical_island.auxiliaryVariables</definition>
+        <argsstring></argsstring>
+        <name>auxiliaryVariables</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="217" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a163d953501f51f86f38697e42949de9d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.conical_island.solitary_wave</definition>
+        <argsstring>(x, t)</argsstring>
+        <name>solitary_wave</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+<para>Some functions defined here #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="86" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="86" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1af2b144f8fdbe1d32d19c2c89da695a75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.conical_island.bathymetry_function</definition>
+        <argsstring>(X)</argsstring>
+        <name>bathymetry_function</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="91" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="91" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1a0c58bba11fce774e8ef8da9bec6e7e77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.conical_island.x_mom_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>x_mom_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="158" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="158" bodyend="162"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1SWFlow_1_1conical__island_1ad7f527b56646b127203725eeb4b25264" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.conical_island.y_mom_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>y_mom_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/conical_island.py" line="163" column="1" bodyfile="tests/SWFlow/conical_island.py" bodystart="163" bodyend="170"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/SWFlow/conical_island.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

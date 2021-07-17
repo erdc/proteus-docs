@@ -1,0 +1,349 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacemd__trans__c0p1__n" kind="namespace" language="Python">
+    <compoundname>md_trans_c0p1_n</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1ad297562bc8e922094d29900eafc82e6d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_trans_c0p1_n.timeIntegration</definition>
+        <argsstring></argsstring>
+        <name>timeIntegration</name>
+        <initializer>=  <ref refid="classproteus_1_1TimeIntegration_1_1BackwardEuler__cfl" kindref="compound">BackwardEuler_cfl</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="5" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1ab265d290ab4144a24d6f655d205203c7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float md_trans_c0p1_n.DT</definition>
+        <argsstring></argsstring>
+        <name>DT</name>
+        <initializer>=  0.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="6" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1a9088dd57b9dd987e0c80a26a34d6d3c2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float md_trans_c0p1_n.runCFL</definition>
+        <argsstring></argsstring>
+        <name>runCFL</name>
+        <initializer>=  0.3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="7" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1a766674f01063e3600dcae52cf48df900" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary md_trans_c0p1_n.femSpaces</definition>
+        <argsstring></argsstring>
+        <name>femSpaces</name>
+        <initializer>=  {0:<ref refid="classproteus_1_1FemTools_1_1C0__AffineLinearOnSimplexWithNodalBasis" kindref="compound">C0_AffineLinearOnSimplexWithNodalBasis</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="8" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1a751b6db5b42936fe0ceb3c1188378bb0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_trans_c0p1_n.elementQuadrature</definition>
+        <argsstring></argsstring>
+        <name>elementQuadrature</name>
+        <initializer>=  <ref refid="classproteus_1_1Quadrature_1_1SimplexGaussQuadrature" kindref="compound">SimplexGaussQuadrature</ref>(nd,gw_quad_order)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="10" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1ae0659b6e241032167ed1002f55fd507e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_trans_c0p1_n.elementBoundaryQuadrature</definition>
+        <argsstring></argsstring>
+        <name>elementBoundaryQuadrature</name>
+        <initializer>=  <ref refid="classproteus_1_1Quadrature_1_1SimplexGaussQuadrature" kindref="compound">SimplexGaussQuadrature</ref>(nd-1,gw_quad_order)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="11" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1aef39e1dc7879c315b1e2911e4a777eaa" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool md_trans_c0p1_n.massLumping</definition>
+        <argsstring></argsstring>
+        <name>massLumping</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="14" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1a7a905126f08e5b38088e8834d6fb7005" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_trans_c0p1_n.subgridError</definition>
+        <argsstring></argsstring>
+        <name>subgridError</name>
+        <initializer>=  <ref refid="classproteus_1_1SubgridError_1_1AdvectionDiffusionReaction__ASGS" kindref="compound">AdvectionDiffusionReaction_ASGS</ref>(coefficients,nd,lag=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="16" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1a14d0b0668a207e218985f874bcef3c03" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_trans_c0p1_n.shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>shockCapturing</name>
+        <initializer>=  <ref refid="classproteus_1_1ShockCapturing_1_1ResGradQuad__SC" kindref="compound">ResGradQuad_SC</ref>(coefficients,nd,shockCapturingFactor=0.1,lag=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="18" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1abbae9918cac11dc0ab7a3111bf5b7ad3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_trans_c0p1_n.multilevelNonlinearSolver</definition>
+        <argsstring></argsstring>
+        <name>multilevelNonlinearSolver</name>
+        <initializer>=  <ref refid="classproteus_1_1NonlinearSolvers_1_1Newton" kindref="compound">Newton</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="20" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1a622f09e01b820c5882ecf1b0f665cacc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_trans_c0p1_n.levelNonlinearSolver</definition>
+        <argsstring></argsstring>
+        <name>levelNonlinearSolver</name>
+        <initializer>=  <ref refid="classproteus_1_1NonlinearSolvers_1_1Newton" kindref="compound">Newton</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="22" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1a576e149a55fbd76cc73388befa7268b5" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool md_trans_c0p1_n.fullNewtonFlag</definition>
+        <argsstring></argsstring>
+        <name>fullNewtonFlag</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="23" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1a0df639717d958bec11af2b01c5c00730" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float md_trans_c0p1_n.tolFac</definition>
+        <argsstring></argsstring>
+        <name>tolFac</name>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="25" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1a81d0de73c2e168fd0595d59c5bbb8bb7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float md_trans_c0p1_n.nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>nl_atol_res</name>
+        <initializer>=  1.0e-6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="27" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1a9bcc4281774660e00b3374c3453ea2a9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_trans_c0p1_n.matrix</definition>
+        <argsstring></argsstring>
+        <name>matrix</name>
+        <initializer>=  SparseMatrix</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="29" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1af5a8d3c77b46fedb4db470160fdb67d4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int md_trans_c0p1_n.maxNonlinearIts</definition>
+        <argsstring></argsstring>
+        <name>maxNonlinearIts</name>
+        <initializer>=  15</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="30" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1ad148b0b255020c71eacb835a93baaa96" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_trans_c0p1_n.multilevelLinearSolver</definition>
+        <argsstring></argsstring>
+        <name>multilevelLinearSolver</name>
+        <initializer>=  <ref refid="classproteus_1_1LinearSolvers_1_1KSP__petsc4py" kindref="compound">KSP_petsc4py</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="34" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1acef1103daa56f5a18d8b92df9ef32e4a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_trans_c0p1_n.levelLinearSolver</definition>
+        <argsstring></argsstring>
+        <name>levelLinearSolver</name>
+        <initializer>=  <ref refid="classproteus_1_1LinearSolvers_1_1KSP__petsc4py" kindref="compound">KSP_petsc4py</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="35" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1aca00ee609f02f4fa4de5570c373bfb54" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_trans_c0p1_n.numericalFluxType</definition>
+        <argsstring></argsstring>
+        <name>numericalFluxType</name>
+        <initializer>=  <ref refid="classproteus_1_1NumericalFlux_1_1Advection__DiagonalUpwind__Diffusion__IIPG__exterior" kindref="compound">Advection_DiagonalUpwind_Diffusion_IIPG_exterior</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="37" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1a7eb504f07240db0963ee84879a576f36" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string md_trans_c0p1_n.linear_solver_options_prefix</definition>
+        <argsstring></argsstring>
+        <name>linear_solver_options_prefix</name>
+        <initializer>=  &apos;trans_&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="41" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1ae7e31775bd19e481a8a1142cdbdee032" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_trans_c0p1_n.linearSmoother</definition>
+        <argsstring></argsstring>
+        <name>linearSmoother</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="42" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1aa4519ce60950b0c16ac7c6306ed76be4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_trans_c0p1_n.smoother</definition>
+        <argsstring></argsstring>
+        <name>smoother</name>
+        <initializer>=  <ref refid="classproteus_1_1LinearSolvers_1_1Jacobi" kindref="compound">Jacobi</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="46" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1a2fe967de3a7206737c6e877a6babf492" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float md_trans_c0p1_n.linTolFac</definition>
+        <argsstring></argsstring>
+        <name>linTolFac</name>
+        <initializer>=  1.0e-10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="48" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__trans__c0p1__n_1a7390f3191f8287335380faa9b7c9a289" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_trans_c0p1_n.conservativeFlux</definition>
+        <argsstring></argsstring>
+        <name>conservativeFlux</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="50" column="1" bodyfile="tests/MiscibleDisplacement/md_trans_c0p1_n.py" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/MiscibleDisplacement/md_trans_c0p1_n.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

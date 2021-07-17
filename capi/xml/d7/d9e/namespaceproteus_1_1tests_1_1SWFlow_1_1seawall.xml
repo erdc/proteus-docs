@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall" kind="namespace" language="Python">
+    <compoundname>proteus::tests::SWFlow::seawall</compoundname>
+    <innerclass refid="df/d44/classproteus_1_1tests_1_1SWFlow_1_1seawall_1_1heta__at__t0" prot="public">proteus::tests::SWFlow::seawall::heta_at_t0</innerclass>
+    <innerclass refid="dd/d32/classproteus_1_1tests_1_1SWFlow_1_1seawall_1_1hw__at__t0" prot="public">proteus::tests::SWFlow::seawall::hw_at_t0</innerclass>
+    <innerclass refid="dd/d8c/classproteus_1_1tests_1_1SWFlow_1_1seawall_1_1water__height__at__t0" prot="public">proteus::tests::SWFlow::seawall::water_height_at_t0</innerclass>
+    <innerclass refid="da/d37/classproteus_1_1tests_1_1SWFlow_1_1seawall_1_1x__mom__at__t0" prot="public">proteus::tests::SWFlow::seawall::x_mom_at_t0</innerclass>
+    <innerclass refid="d5/d66/classproteus_1_1tests_1_1SWFlow_1_1seawall_1_1Zero" prot="public">proteus::tests::SWFlow::seawall::Zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1abf78c07de68ad16359b318a1708c87c1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::seawall.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  <ref refid="d0/d93/namespaceproteus_1_1Context_1a461242d050aceb1e84d9426074c67004" kindref="member">Context.Options</ref>([
+    (&apos;sw_model&apos;, 1, &quot;sw_model = {0,1} for {SWEs,DSWEs}&quot;),
+    (&quot;final_time&quot;, 12.0, &quot;Final time for simulation&quot;),
+    (&quot;dt_output&quot;, 0.1, &quot;Time interval to output solution&quot;),
+    (&quot;cfl&quot;, 0.25, &quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a49960c77801d9afd7e7ba11354fdc327" kindref="member">refinement</ref>&quot;, 4, &quot;Refinement level&quot;),
+    (&quot;reflecting_BCs&quot;,False,&quot;Use reflecting BCs&quot;),
+    (&quot;structured&quot;, True, &quot;Structured or unstructured mesh&quot;),
+    (&quot;<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a8feac01c2410ab7ed31289c3acffdbd5" kindref="member">he</ref>&quot;, 0.5, &quot;<ref refid="da/d29/structMesh" kindref="compound">Mesh</ref> size for unstructured mesh&quot;),
+    (&quot;mannings&quot;, 0.012, &quot;Mannings roughness coefficient&quot;)
+])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="20" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1ad9f891ffc4e7a1dd0616405c2d622dda" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::seawall.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <initializer>=  (15.0, 2.0)</initializer>
+        <briefdescription>
+<para>DOMAIN AND MESH #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="35" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a49960c77801d9afd7e7ba11354fdc327" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::seawall.refinement</definition>
+        <argsstring></argsstring>
+        <name>refinement</name>
+        <initializer>=  opts.refinement</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="36" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a1ce4a12b07a09a7b5004e8ddb70179a7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::seawall.rectangle</definition>
+        <argsstring></argsstring>
+        <name>rectangle</name>
+        <initializer>=  <ref refid="de/d03/classproteus_1_1Domain_1_1RectangularDomain" kindref="compound">RectangularDomain</ref>(<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1ad9f891ffc4e7a1dd0616405c2d622dda" kindref="member">L</ref>=<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1ad9f891ffc4e7a1dd0616405c2d622dda" kindref="member">L</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="37" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a0d52b624b9383c241dd467570a93921c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::SWFlow::seawall.nnx0</definition>
+        <argsstring></argsstring>
+        <name>nnx0</name>
+        <initializer>=  6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="40" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a62f2fb4c01c453d8a450b63aa7479b1a" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>proteus::tests::SWFlow::seawall.nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <initializer>=  (<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a0d52b624b9383c241dd467570a93921c" kindref="member">nnx0</ref> - 1) * (2**<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a49960c77801d9afd7e7ba11354fdc327" kindref="member">refinement</ref>) + 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="41" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1aff46d64a7f31f1885db636f90879c5a3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>proteus::tests::SWFlow::seawall.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <initializer>=  old_div((<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a62f2fb4c01c453d8a450b63aa7479b1a" kindref="member">nnx</ref> - 1), 10) + 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="42" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a8feac01c2410ab7ed31289c3acffdbd5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::seawall.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  old_div(<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1ad9f891ffc4e7a1dd0616405c2d622dda" kindref="member">L</ref>[0], float(<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a62f2fb4c01c453d8a450b63aa7479b1a" kindref="member">nnx</ref> - 1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="43" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a76d5f8aca6c030c36580349be254861a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::seawall.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  <ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a1ce4a12b07a09a7b5004e8ddb70179a7" kindref="member">rectangle</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="45" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1acf7d28d7f37dd1e8e8484a37c8cdb32e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::seawall.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="49" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a6c2f01f82b8edfd946f63f12d7c55268" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::seawall.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>=  9.81</initializer>
+        <briefdescription>
+<para>CONSTANTS NEEDED FOR SETUP #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="56" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1ae3b3a8b3c257a0d2ac85423ce62a1155" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::seawall.h0</definition>
+        <argsstring></argsstring>
+        <name>h0</name>
+        <initializer>=  0.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="57" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a5ac750a33481727553361180efe040b3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::seawall.a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <initializer>=  0.35</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="58" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1af2f42d7c26e35da44fee1aef0cfab26d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::seawall.k_wavenumber</definition>
+        <argsstring></argsstring>
+        <name>k_wavenumber</name>
+        <initializer>=  np.sqrt(3.0 * <ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a5ac750a33481727553361180efe040b3" kindref="member">a</ref> / (4.0 * <ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1ae3b3a8b3c257a0d2ac85423ce62a1155" kindref="member">h0</ref>**3))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="59" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1aa651c0c50b9a084664348ff1d4683982" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::seawall.z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <initializer>=  np.sqrt(3.0 * <ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a5ac750a33481727553361180efe040b3" kindref="member">a</ref> * <ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1ae3b3a8b3c257a0d2ac85423ce62a1155" kindref="member">h0</ref>) / (2.0 * <ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1ae3b3a8b3c257a0d2ac85423ce62a1155" kindref="member">h0</ref> * np.sqrt(<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1ae3b3a8b3c257a0d2ac85423ce62a1155" kindref="member">h0</ref> * (1.0 + <ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a5ac750a33481727553361180efe040b3" kindref="member">a</ref>)))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="60" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a0daa99677a2d8a2b2a15f522fced8e70" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::seawall.c</definition>
+        <argsstring></argsstring>
+        <name>c</name>
+        <initializer>=  np.sqrt(<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a6c2f01f82b8edfd946f63f12d7c55268" kindref="member">g</ref> * (1.0 + <ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a5ac750a33481727553361180efe040b3" kindref="member">a</ref>) * <ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1ae3b3a8b3c257a0d2ac85423ce62a1155" kindref="member">h0</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="61" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1afa683de1f71a11b2b8d35acdb6464945" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::seawall.x0</definition>
+        <argsstring></argsstring>
+        <name>x0</name>
+        <initializer>=  5.9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="62" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a38aaee3105d496a27feb16b47b9d9e5e" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::seawall.X_coords</definition>
+        <argsstring></argsstring>
+        <name>X_coords</name>
+        <initializer>=  (0.0, 15.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="138" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1af214540d0c6cfd89faf20bd0c4279c44" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::seawall.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  SWFlowProblem.OutputStepping(
+    opts.final_time, dt_output=opts.dt_output)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="147" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a3338d07735670da25d54c23c36e3eba1" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::seawall.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;water_height&apos;: <ref refid="dd/d8c/classproteus_1_1tests_1_1SWFlow_1_1seawall_1_1water__height__at__t0" kindref="compound">water_height_at_t0</ref>(),
+                     &apos;x_mom&apos;: <ref refid="da/d37/classproteus_1_1tests_1_1SWFlow_1_1seawall_1_1x__mom__at__t0" kindref="compound">x_mom_at_t0</ref>(),
+                     &apos;y_mom&apos;: <ref refid="d5/d66/classproteus_1_1tests_1_1SWFlow_1_1seawall_1_1Zero" kindref="compound">Zero</ref>(),
+                     &apos;h_times_eta&apos;: <ref refid="df/d44/classproteus_1_1tests_1_1SWFlow_1_1seawall_1_1heta__at__t0" kindref="compound">heta_at_t0</ref>(),
+                     &apos;h_times_w&apos;: <ref refid="dd/d32/classproteus_1_1tests_1_1SWFlow_1_1seawall_1_1hw__at__t0" kindref="compound">hw_at_t0</ref>(),
+                     &apos;h_times_beta&apos;: <ref refid="d5/d66/classproteus_1_1tests_1_1SWFlow_1_1seawall_1_1Zero" kindref="compound">Zero</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="149" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1af00fa51b9dd49438be8e0f4e15abbebf" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::seawall.boundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>boundaryConditions</name>
+        <initializer>=  {&apos;water_height&apos;: lambda x, flag: None,
+                      &apos;x_mom&apos;: <ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a7b7dfdad23d6c56fc3c38b71cd18d088" kindref="member">x_mom_DBC</ref>,
+                      &apos;y_mom&apos;: lambda x, flag: lambda x, t: 0.0,
+                      &apos;h_times_eta&apos;: lambda x, flag: None,
+                      &apos;h_times_w&apos;: lambda x, flag: None,
+                      &apos;h_times_beta&apos;: <ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a7b7dfdad23d6c56fc3c38b71cd18d088" kindref="member">x_mom_DBC</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="155" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a2907fadc7c582e1099f2c0cb6b89073d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::seawall.mySWFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>mySWFlowProblem</name>
+        <initializer>=  SWFlowProblem.SWFlowProblem(sw_model=opts.sw_model,
+                                              cfl=opts.cfl,
+                                              <ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1af214540d0c6cfd89faf20bd0c4279c44" kindref="member">outputStepping</ref>=<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1af214540d0c6cfd89faf20bd0c4279c44" kindref="member">outputStepping</ref>,
+                                              structured=opts.structured,
+                                              <ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a8feac01c2410ab7ed31289c3acffdbd5" kindref="member">he</ref>=<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a8feac01c2410ab7ed31289c3acffdbd5" kindref="member">he</ref>,
+                                              <ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a62f2fb4c01c453d8a450b63aa7479b1a" kindref="member">nnx</ref>=<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a62f2fb4c01c453d8a450b63aa7479b1a" kindref="member">nnx</ref>,
+                                              <ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1aff46d64a7f31f1885db636f90879c5a3" kindref="member">nny</ref>=<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1aff46d64a7f31f1885db636f90879c5a3" kindref="member">nny</ref>,
+                                              <ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a76d5f8aca6c030c36580349be254861a" kindref="member">domain</ref>=<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a76d5f8aca6c030c36580349be254861a" kindref="member">domain</ref>,
+                                              <ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a3338d07735670da25d54c23c36e3eba1" kindref="member">initialConditions</ref>=<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a3338d07735670da25d54c23c36e3eba1" kindref="member">initialConditions</ref>,
+                                              <ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1af00fa51b9dd49438be8e0f4e15abbebf" kindref="member">boundaryConditions</ref>=<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1af00fa51b9dd49438be8e0f4e15abbebf" kindref="member">boundaryConditions</ref>,
+                                              reflectingBCs=opts.reflecting_BCs,
+                                              bathymetry=<ref refid="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a31d4fd9e3ec823f155908c720be22c6f" kindref="member">bathymetry_function</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="161" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a2dcfe31852730db60381469b004d7cd8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.seawall.solitary_wave</definition>
+        <argsstring>(x, t)</argsstring>
+        <name>solitary_wave</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+<para>Functions defined here #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="70" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="70" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a31d4fd9e3ec823f155908c720be22c6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.seawall.bathymetry_function</definition>
+        <argsstring>(X)</argsstring>
+        <name>bathymetry_function</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="75" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="75" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d9e/namespaceproteus_1_1tests_1_1SWFlow_1_1seawall_1a7b7dfdad23d6c56fc3c38b71cd18d088" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.seawall.x_mom_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>x_mom_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/seawall.py" line="140" column="1" bodyfile="tests/SWFlow/seawall.py" bodystart="140" bodyend="146"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/SWFlow/seawall.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

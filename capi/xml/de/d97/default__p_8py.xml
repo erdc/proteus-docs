@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="de/d97/default__p_8py" kind="file" language="Python">
+    <compoundname>default_p.py</compoundname>
+    <innernamespace refid="d8/d70/namespaceproteus_1_1default__p">proteus::default_p</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="d8/d70/namespaceproteus_1_1default__p" refkind="compound"><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="2"><highlight class="stringliteral">The<sp/>default<sp/>values<sp/>for<sp/>problem<sp/>definition<sp/>modules</highlight></codeline>
+<codeline lineno="3"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>__future__<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>absolute_import</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keywordflow">try</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>importlib<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>reload</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordflow">except</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">pass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>.MeshTools<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>.FemTools<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>.TransportCoefficients<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>.Transport<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">name<sp/>=<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;The<sp/>name<sp/>of<sp/>the<sp/>model</highlight></codeline>
+<codeline lineno="17"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="18"><highlight class="stringliteral">:type:<sp/>None<sp/>or<sp/>string</highlight></codeline>
+<codeline lineno="19"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">nd<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;The<sp/>number<sp/>of<sp/>spatial<sp/>dimensions<sp/>of<sp/>the<sp/>model<sp/>domain&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">domain<sp/>=<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;The<sp/>domain<sp/>object</highlight></codeline>
+<codeline lineno="26"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral">:type:<sp/>None<sp/>or<sp/>proteus.Domain.D_base</highlight></codeline>
+<codeline lineno="28"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">movingDomain=</highlight><highlight class="keyword">False</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;Boolean<sp/>to<sp/>indicate<sp/>moving<sp/>domain&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">polyfile<sp/>=<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;The<sp/>filename<sp/>of<sp/>a<sp/>polyfile<sp/>giving<sp/>the<sp/>domain&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">meshfile<sp/>=<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;The<sp/>filename<sp/>of<sp/>a<sp/>mesh<sp/>giving<sp/>the<sp/>mesh/domain&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">genMesh<sp/>=<sp/></highlight><highlight class="keyword">True</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;Boolean<sp/>to<sp/>trigger<sp/>mesh<sp/>generation&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">L=(1.0,1.0,1.0)</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;Tuple<sp/>of<sp/>dimensions<sp/>for<sp/>simple<sp/>box<sp/>shaped<sp/>domain&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">x0=(0.0,<sp/>0.0,<sp/>0.0)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;Tuple<sp/>of<sp/>coordinates<sp/>for<sp/>corner<sp/>of<sp/>simple<sp/>box<sp/>shaped<sp/>domain&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal">analyticalSolution<sp/>=<sp/>{}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;Dictionary<sp/>of<sp/>analytical<sp/>solutions<sp/>for<sp/>each<sp/>component</highlight></codeline>
+<codeline lineno="50"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="51"><highlight class="stringliteral">Each<sp/>element<sp/>should<sp/>be<sp/>an<sp/>object<sp/>of<sp/>type<sp/>:class:`proteus.AnalyticalSolutions.AS_base`&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal">coefficients<sp/>=<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;Transport<sp/>coefficients<sp/>object</highlight></codeline>
+<codeline lineno="55"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="56"><highlight class="stringliteral">The<sp/>object<sp/>should<sp/>be<sp/>of<sp/>type<sp/>:class:`proteus.TransportCoefficients.TC_base`&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">dirichletConditions<sp/>=<sp/>{}</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;Dictionary<sp/>of<sp/>Dirichlet<sp/>conditions<sp/>for<sp/>each<sp/>component&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">boundaryCreatesNullSpace<sp/>=<sp/></highlight><highlight class="keyword">False</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;Indicates<sp/>Dirichlet<sp/>boundary<sp/>conditions<sp/>create<sp/>global<sp/>null<sp/>space.<sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal">periodicDirichletConditions<sp/>=<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;Dictionary<sp/>of<sp/>periodic<sp/>boundary<sp/>conditions<sp/>for<sp/>each<sp/>component&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal">fluxBoundaryConditions<sp/>=<sp/>{}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="stringliteral">r&quot;&quot;&quot;Dictionary<sp/>of<sp/>flux<sp/>boundary<sp/>condition<sp/>flags<sp/>for<sp/>each<sp/>component<sp/>(&apos;outFlow&apos;,&apos;noFlow&apos;,&apos;setFlow&apos;,&apos;mixedFlow&apos;)&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">advectiveFluxBoundaryConditions<sp/>=<sp/><sp/>{}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;Dictionary<sp/>of<sp/>advective<sp/>flux<sp/>boundary<sp/>conditions<sp/>setter<sp/>functions&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal">diffusiveFluxBoundaryConditions<sp/>=<sp/>{}</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;Dictionary<sp/>of<sp/>diffusive<sp/>flux<sp/>boundary<sp/>conditions<sp/>setter<sp/>functions&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">stressFluxBoundaryConditions<sp/>=<sp/>{}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;Dictionary<sp/>of<sp/>stress<sp/>tensor<sp/>flux<sp/>boundary<sp/>conditions<sp/>setter<sp/>functions&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal">initialConditions<sp/>=<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;Dictionary<sp/>of<sp/>initial<sp/>condition<sp/>function<sp/>objects&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">weakDirichletConditions<sp/>=<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;Dictionary<sp/>of<sp/>weak<sp/>Dirichlet<sp/>constraint<sp/>setters&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal">dummyInitialConditions<sp/>=<sp/></highlight><highlight class="keyword">False</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">#mwf<sp/>temporary<sp/>hack<sp/>for<sp/>RD<sp/>level<sp/>sets</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">#what<sp/>to<sp/>do<sp/>after<sp/>each<sp/>coupling<sp/>step?</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="d8/d70/namespaceproteus_1_1default__p_1aeb812cb5130e24c831193438a0ad572e" kindref="member">finalizeStepDummy</ref>(c):</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">pass</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">finalizeStep<sp/>=<sp/>finalizeStepDummy</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal">T=1.0</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;End<sp/>of<sp/>time<sp/>interval&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">sd<sp/>=<sp/></highlight><highlight class="keyword">True</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;Use<sp/>sparse<sp/>representation<sp/>of<sp/>diffusion<sp/>tensors&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">LevelModelType<sp/>=<sp/>OneLevelTransport</highlight></codeline>
+    </programlisting>
+    <location file="default_p.py"/>
+  </compounddef>
+</doxygen>

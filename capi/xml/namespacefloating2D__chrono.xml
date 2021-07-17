@@ -1,0 +1,701 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacefloating2D__chrono" kind="namespace" language="Python">
+    <compoundname>floating2D_chrono</compoundname>
+    <innerclass refid="classfloating2D__chrono_1_1AtRest" prot="public">floating2D_chrono::AtRest</innerclass>
+    <innerclass refid="classfloating2D__chrono_1_1LS__IC" prot="public">floating2D_chrono::LS_IC</innerclass>
+    <innerclass refid="classfloating2D__chrono_1_1P__IC" prot="public">floating2D_chrono::P_IC</innerclass>
+    <innerclass refid="classfloating2D__chrono_1_1VOF__IC" prot="public">floating2D_chrono::VOF_IC</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1abe49fbd8270f0878857b07d9af7744e4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="21" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a822109629f3563c995ad0a0bc6347a8d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.PlanarStraightLineGraphDomain()</initializer>
+        <briefdescription>
+<para>Fluid Domain ###################. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="73" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a18847bd21927d7a2f8a005d083e7962c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.wave</definition>
+        <argsstring></argsstring>
+        <name>wave</name>
+        <initializer>=  wt.MonochromaticWaves(period=<ref refid="Headers_8h_1a38fec5c94a02f67ba7bf45025dd3ac80" kindref="member">opts.T</ref>,
+                            waveHeight=opts.wave_height,
+                            mwl=opts.water_level,
+                            depth=opts.depth,
+                            g=opts.g,
+                            waveDir=opts.waveDir,
+			    waveType=opts.waveType, 
+			    autoFenton=<ref refid="namespacefloating2D__chrono_1a277f5b014a4e935ee771a979df2e9922" kindref="member">True</ref>, 
+			    Nf=opts.Nf)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="76" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a5361dd23286e50aebeb541a76794c24e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.wave_length</definition>
+        <argsstring></argsstring>
+        <name>wave_length</name>
+        <initializer>= wave.wavelength</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="86" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a2b1117ad08c7d4553060263261874e60" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.tank</definition>
+        <argsstring></argsstring>
+        <name>tank</name>
+        <initializer>=  st.Tank2D(<ref refid="namespacefloating2D__chrono_1a822109629f3563c995ad0a0bc6347a8d" kindref="member">domain</ref>, opts.tank_dim)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="89" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1ad1100d50b14d2303827bff5aef3cf5d9" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating2D_chrono.xc1</definition>
+        <argsstring></argsstring>
+        <name>xc1</name>
+        <initializer>=  opts.center[0]-0.5*opts.dim[0]</initializer>
+        <briefdescription>
+<para>Body Domain ###################. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="94" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1ad8dd4f94d73d879545f3934d99f03264" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating2D_chrono.yc1</definition>
+        <argsstring></argsstring>
+        <name>yc1</name>
+        <initializer>=  opts.center[1]-0.5*opts.dim[1]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="95" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a8fcc7a37a5a6a9e5bdde8cb46d252ab7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating2D_chrono.xc2</definition>
+        <argsstring></argsstring>
+        <name>xc2</name>
+        <initializer>=  <ref refid="namespacefloating2D__chrono_1ad1100d50b14d2303827bff5aef3cf5d9" kindref="member">xc1</ref>+opts.dim[0]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="96" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a6143dcda5aabdb1ddeb23d42777c469c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating2D_chrono.yc2</definition>
+        <argsstring></argsstring>
+        <name>yc2</name>
+        <initializer>=  <ref refid="namespacefloating2D__chrono_1ad8dd4f94d73d879545f3934d99f03264" kindref="member">yc1</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="97" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1ad92099ad723f9f96947cad02db1a4955" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating2D_chrono.xc3</definition>
+        <argsstring></argsstring>
+        <name>xc3</name>
+        <initializer>=  <ref refid="namespacefloating2D__chrono_1a8fcc7a37a5a6a9e5bdde8cb46d252ab7" kindref="member">xc2</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="98" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a25bbf1ef10213f180a498869e2f7c342" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating2D_chrono.yc3</definition>
+        <argsstring></argsstring>
+        <name>yc3</name>
+        <initializer>=  <ref refid="namespacefloating2D__chrono_1a6143dcda5aabdb1ddeb23d42777c469c" kindref="member">yc2</ref>+opts.dim[1]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="99" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a7f37dd6438cddd67cd5fb8b690e9bafb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating2D_chrono.xc4</definition>
+        <argsstring></argsstring>
+        <name>xc4</name>
+        <initializer>=  <ref refid="namespacefloating2D__chrono_1ad1100d50b14d2303827bff5aef3cf5d9" kindref="member">xc1</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="100" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a6d461ba4d8d3d847f784a38a476360c6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floating2D_chrono.yc4</definition>
+        <argsstring></argsstring>
+        <name>yc4</name>
+        <initializer>=  <ref refid="namespacefloating2D__chrono_1a25bbf1ef10213f180a498869e2f7c342" kindref="member">yc3</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="101" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a4c777f05c01c55959fdcaf187a2bb6cb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.inertia</definition>
+        <argsstring></argsstring>
+        <name>inertia</name>
+        <initializer>=  opts.caisson_inertia/opts.width</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="106" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1accbb65a5355a16fc8db0fa3eb7345ea1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.caisson</definition>
+        <argsstring></argsstring>
+        <name>caisson</name>
+        <initializer>=  st.Rectangle(<ref refid="namespacefloating2D__chrono_1a822109629f3563c995ad0a0bc6347a8d" kindref="member">domain</ref>, dim=opts.dim, <ref refid="group__analyticalSolutions_1gae103bacd0ce284b66771dc3d06420616" kindref="member">coords</ref>=opts.center)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="107" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a4a631881e8329d39591a89121388a985" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.holes_ind</definition>
+        <argsstring></argsstring>
+        <name>holes_ind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="109" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a34eeabe823660399a68cd77887e9b1b8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.system</definition>
+        <argsstring></argsstring>
+        <name>system</name>
+        <initializer>=  ProtChSystem()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="110" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a06332aba602b4feb983e710411f5884a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.body</definition>
+        <argsstring></argsstring>
+        <name>body</name>
+        <initializer>=  ProtChBody(<ref refid="namespacefloating2D__chrono_1a34eeabe823660399a68cd77887e9b1b8" kindref="member">system</ref>=<ref refid="namespacefloating2D__chrono_1a34eeabe823660399a68cd77887e9b1b8" kindref="member">system</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="113" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1aca32b7e1b32eaf984763f2153254ad2b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <initializer>=  pych.ChVectorD(opts.center[0], opts.center[1],0.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="116" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a5c9f678754ead2a8092041ccd1b23567" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.free_x</definition>
+        <argsstring></argsstring>
+        <name>free_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="123" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a626b8eca70eb107c0dd78505b0e023fe" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.free_r</definition>
+        <argsstring></argsstring>
+        <name>free_r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="123" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1ae1044a89a0404975ab71de7ad7e61ff2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.all_values</definition>
+        <argsstring></argsstring>
+        <name>all_values</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="124" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a1ec6051ce310d83582e0a424b99fffc0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.ecH</definition>
+        <argsstring></argsstring>
+        <name>ecH</name>
+        <initializer>= opts.ecH</initializer>
+        <briefdescription>
+<para>Boundary Conditions ###################. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="135" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1afcbfb6ff154c4cb7f4943a75a9c64cc7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.smoothing</definition>
+        <argsstring></argsstring>
+        <name>smoothing</name>
+        <initializer>= opts.ecH*opts.he</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="136" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1acf370d43dec49baa2d90051dca352150" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary floating2D_chrono.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>=  {&apos;y-&apos; : 1,
+                &apos;x+&apos; : 2,
+                &apos;y+&apos; : 3,
+                &apos;x-&apos; : 5,
+                &apos;sponge&apos; : 5,
+                &apos;porousLayer&apos; : 6,
+                &apos;moving_porousLayer&apos; : 7,
+               }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="138" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a8cbd8c386c8890fb1c4d8248f9b878b8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.vert_axis</definition>
+        <argsstring></argsstring>
+        <name>vert_axis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="147" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a35845e0a4aea472bd3800f4f4668cd6b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>floating2D_chrono.dragAlpha</definition>
+        <argsstring></argsstring>
+        <name>dragAlpha</name>
+        <initializer>=  5*(2*<ref refid="createAnalyticGeometry_8cpp_1a43016d873124d39034edb8cd164794db" kindref="member">np.pi</ref>/<ref refid="Headers_8h_1a38fec5c94a02f67ba7bf45025dd3ac80" kindref="member">opts.T</ref>)/1e-6</initializer>
+        <briefdescription>
+<para>Generation &amp; Absorption Zone ###################. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="161" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a80e8579c61623ee8d0e0d311867c757a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.x_n</definition>
+        <argsstring></argsstring>
+        <name>x_n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="162" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a6bdcb0db6bbe433ba16b56e65d92f875" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.x_p</definition>
+        <argsstring></argsstring>
+        <name>x_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="162" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a277f5b014a4e935ee771a979df2e9922" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.True</definition>
+        <argsstring></argsstring>
+        <name>True</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="163" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a9e82cbbdd8c67e559e850e83fb2cdf54" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.waves</definition>
+        <argsstring></argsstring>
+        <name>waves</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="163" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a549fd272b05a4b73f03a1442e5c414ae" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary floating2D_chrono.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;pressure&apos;: <ref refid="classfloating2D__chrono_1_1P__IC" kindref="compound">P_IC</ref>(),
+                     &apos;vel_u&apos;: <ref refid="classfloating2D__chrono_1_1AtRest" kindref="compound">AtRest</ref>(),
+                     &apos;vel_v&apos;: <ref refid="classfloating2D__chrono_1_1AtRest" kindref="compound">AtRest</ref>(),
+                     &apos;vel_w&apos;: <ref refid="classfloating2D__chrono_1_1AtRest" kindref="compound">AtRest</ref>(),
+                     &apos;vof&apos;: <ref refid="classfloating2D__chrono_1_1VOF__IC" kindref="compound">VOF_IC</ref>(),
+                     &apos;ncls&apos;: <ref refid="classfloating2D__chrono_1_1LS__IC" kindref="compound">LS_IC</ref>(),
+                     &apos;rdls&apos;: <ref refid="classfloating2D__chrono_1_1LS__IC" kindref="compound">LS_IC</ref>(),}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="193" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a54c15c38580b78748af01adfad4a0e61" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.dt_output</definition>
+        <argsstring></argsstring>
+        <name>dt_output</name>
+        <initializer>=  <ref refid="Headers_8h_1a38fec5c94a02f67ba7bf45025dd3ac80" kindref="member">opts.T</ref>/opts.Np</initializer>
+        <briefdescription>
+<para>Time step controls ###################. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="202" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a2aa7fcbfbff114067524ccbce3178f56" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  TpFlow.OutputStepping(final_time=opts.duration,
+                                       dt_init=opts.dt_init,
+                                       <ref refid="namespacefloating2D__chrono_1a54c15c38580b78748af01adfad4a0e61" kindref="member">dt_output</ref>=<ref refid="namespacefloating2D__chrono_1a54c15c38580b78748af01adfad4a0e61" kindref="member">dt_output</ref>,
+                                       nDTout=None,
+                                       dt_fixed=None)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="203" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a5f74e654006d69827ed412c841bd5ae0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem(ns_model=0,
+                                             ls_model=0,
+                                             nd=domain.nd,
+                                             cfl=opts.cfl,
+                                             <ref refid="namespacefloating2D__chrono_1a2aa7fcbfbff114067524ccbce3178f56" kindref="member">outputStepping</ref>=<ref refid="namespacefloating2D__chrono_1a2aa7fcbfbff114067524ccbce3178f56" kindref="member">outputStepping</ref>,
+                                             <ref refid="namespacefloating2D__chrono_1ab2b4df3e7795ea9dd168a1764a466c12" kindref="member">he</ref>=opts.he,
+                                             <ref refid="namespacefloating2D__chrono_1a822109629f3563c995ad0a0bc6347a8d" kindref="member">domain</ref>=<ref refid="namespacefloating2D__chrono_1a822109629f3563c995ad0a0bc6347a8d" kindref="member">domain</ref>,
+                                             <ref refid="namespacefloating2D__chrono_1a549fd272b05a4b73f03a1442e5c414ae" kindref="member">initialConditions</ref>=<ref refid="namespacefloating2D__chrono_1a549fd272b05a4b73f03a1442e5c414ae" kindref="member">initialConditions</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="209" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1adadeb5997f72f64aab48ce7db9a6dc44" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.params</definition>
+        <argsstring></argsstring>
+        <name>params</name>
+        <initializer>=  myTpFlowProblem.Parameters</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="220" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a70f33cbd0a5aa7147a79eb97eab11f49" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.useSuperLu</definition>
+        <argsstring></argsstring>
+        <name>useSuperLu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="221" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1aec614000a59393fc3c38ce8e358d6d98" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.surf_tension_coeff</definition>
+        <argsstring></argsstring>
+        <name>surf_tension_coeff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="222" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1aeb81ae18aa3fead29db924654a0b9b98" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <initializer>=  params.Models</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="225" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a75ef157dcc995a06bcd2bb85272d8f96" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.epsFact</definition>
+        <argsstring></argsstring>
+        <name>epsFact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="226" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1ac9d7ca258112edb65a3cec11a36bd1f8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="228" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="228" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1ab2b4df3e7795ea9dd168a1764a466c12" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="235" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1abe3d0f2514c644f8a6bde427fa2e72a5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.movingDomain</definition>
+        <argsstring></argsstring>
+        <name>movingDomain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="239" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a444544335219836435d5fa12dc3b58dc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.max_flag</definition>
+        <argsstring></argsstring>
+        <name>max_flag</name>
+        <initializer>=  <ref refid="jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(domain.vertexFlags+domain.segmentFlags+domain.facetFlags)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="244" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a4da92567d15187138826977f1333b7c2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.flags_rigidbody</definition>
+        <argsstring></argsstring>
+        <name>flags_rigidbody</name>
+        <initializer>=  np.zeros(<ref refid="namespacefloating2D__chrono_1a444544335219836435d5fa12dc3b58dc" kindref="member">max_flag</ref>+1, dtype=&apos;int32&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="245" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacefloating2D__chrono_1a65e427790f78f4a6c4141cb403bda3b6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floating2D_chrono.solve_rate</definition>
+        <argsstring></argsstring>
+        <name>solve_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="250" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="250" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacefloating2D__chrono_1ac3f7a12e4a44a184835bde20fd70b327" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def floating2D_chrono.signedDistance</definition>
+        <argsstring>(x)</argsstring>
+        <name>signedDistance</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+<para>Initial Conditions ###################. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="171" column="1" bodyfile="tests/proteus_tutorial/2d/floating2D_chrono.py" bodystart="171" bodyend="173"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/proteus_tutorial/2d/floating2D_chrono.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

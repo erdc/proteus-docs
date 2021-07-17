@@ -1,0 +1,263 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceproteus_1_1NonlinearSolvers" kind="namespace" language="Python">
+    <compoundname>proteus::NonlinearSolvers</compoundname>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1AddedMassNewton" prot="public">proteus::NonlinearSolvers::AddedMassNewton</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1CLSVOFNewton" prot="public">proteus::NonlinearSolvers::CLSVOFNewton</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1ExplicitConsistentMassMatrixForVOF" prot="public">proteus::NonlinearSolvers::ExplicitConsistentMassMatrixForVOF</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1ExplicitConsistentMassMatrixShallowWaterEquationsSolver" prot="public">proteus::NonlinearSolvers::ExplicitConsistentMassMatrixShallowWaterEquationsSolver</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1ExplicitConsistentMassMatrixWithRedistancing" prot="public">proteus::NonlinearSolvers::ExplicitConsistentMassMatrixWithRedistancing</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1ExplicitLumpedMassMatrix" prot="public">proteus::NonlinearSolvers::ExplicitLumpedMassMatrix</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1ExplicitLumpedMassMatrixShallowWaterEquationsSolver" prot="public">proteus::NonlinearSolvers::ExplicitLumpedMassMatrixShallowWaterEquationsSolver</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1FAS" prot="public">proteus::NonlinearSolvers::FAS</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1FasTwoLevel" prot="public">proteus::NonlinearSolvers::FasTwoLevel</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1MoveMeshMonitorNewton" prot="public">proteus::NonlinearSolvers::MoveMeshMonitorNewton</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1MultilevelNonlinearSolver" prot="public">proteus::NonlinearSolvers::MultilevelNonlinearSolver</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1Newton" prot="public">proteus::NonlinearSolvers::Newton</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1NewtonNS" prot="public">proteus::NonlinearSolvers::NewtonNS</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1NewtonWithL2ProjectionForMassCorrection" prot="public">proteus::NonlinearSolvers::NewtonWithL2ProjectionForMassCorrection</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1NLGaussSeidel" prot="public">proteus::NonlinearSolvers::NLGaussSeidel</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1NLJacobi" prot="public">proteus::NonlinearSolvers::NLJacobi</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1NLNI" prot="public">proteus::NonlinearSolvers::NLNI</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1NLStarILU" prot="public">proteus::NonlinearSolvers::NLStarILU</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1NonlinearEquation" prot="public">proteus::NonlinearSolvers::NonlinearEquation</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1NonlinearSolver" prot="public">proteus::NonlinearSolvers::NonlinearSolver</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1PicardNewton" prot="public">proteus::NonlinearSolvers::PicardNewton</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1POD__DEIM__Newton" prot="public">proteus::NonlinearSolvers::POD_DEIM_Newton</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1POD__Newton" prot="public">proteus::NonlinearSolvers::POD_Newton</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1SSPRKNewton" prot="public">proteus::NonlinearSolvers::SSPRKNewton</innerclass>
+    <innerclass refid="classproteus_1_1NonlinearSolvers_1_1TwoStageNewton" prot="public">proteus::NonlinearSolvers::TwoStageNewton</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceproteus_1_1NonlinearSolvers_1a2bb2fa9609f51131463573ce6816ce58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.NonlinearSolvers.multilevelNonlinearSolverChooser</definition>
+        <argsstring>(nonlinearOperatorList, jacobianList, par_jacobianList, duList=None, par_duList=None, relativeToleranceList=None, absoluteTolerance=1.0e-8, multilevelNonlinearSolverType=NLNI, computeSolverRates=False, printSolverInfo=False, linearSolverList=None, linearDirectSolverFlag=False, solverFullNewtonFlag=True, maxSolverIts=500, solverConvergenceTest=&apos;r&apos;, levelNonlinearSolverType=Newton, levelSolverFullNewtonFlag=True, levelSolverConvergenceTest=&apos;r&apos;, computeLevelSolverRates=False, printLevelSolverInfo=False, relaxationFactor=None, connectionListList=None, smootherType=&apos;Jacobi&apos;, prolong_bcList=None, restrict_bcList=None, restrict_bcSumList=None, prolongList=None, restrictList=None, restrictionRowSumList=None, preSmooths=3, postSmooths=3, cycles=3, smootherConvergenceTest=&apos;its&apos;, computeSmootherRates=False, printSmootherInfo=False, smootherFullNewtonFlag=True, computeCoarseSolverRates=False, printCoarseSolverInfo=False, EWtol=True, maxLSits=100, parallelUsesFullOverlap=True, nonlinearSolverNorm=l2Norm)</argsstring>
+        <name>multilevelNonlinearSolverChooser</name>
+        <param>
+          <type>nonlinearOperatorList</type>
+          <defname>nonlinearOperatorList</defname>
+        </param>
+        <param>
+          <type>jacobianList</type>
+          <defname>jacobianList</defname>
+        </param>
+        <param>
+          <type>par_jacobianList</type>
+          <defname>par_jacobianList</defname>
+        </param>
+        <param>
+          <type>duList</type>
+          <defname>duList</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>par_duList</type>
+          <defname>par_duList</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>relativeToleranceList</type>
+          <defname>relativeToleranceList</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>absoluteTolerance</type>
+          <defname>absoluteTolerance</defname>
+          <defval>1.0e-8</defval>
+        </param>
+        <param>
+          <type>multilevelNonlinearSolverType</type>
+          <defname>multilevelNonlinearSolverType</defname>
+          <defval><ref refid="classproteus_1_1NonlinearSolvers_1_1NLNI" kindref="compound">NLNI</ref></defval>
+        </param>
+        <param>
+          <type>computeSolverRates</type>
+          <defname>computeSolverRates</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>printSolverInfo</type>
+          <defname>printSolverInfo</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>linearSolverList</type>
+          <defname>linearSolverList</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>linearDirectSolverFlag</type>
+          <defname>linearDirectSolverFlag</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>solverFullNewtonFlag</type>
+          <defname>solverFullNewtonFlag</defname>
+          <defval>True</defval>
+        </param>
+        <param>
+          <type>maxSolverIts</type>
+          <defname>maxSolverIts</defname>
+          <defval>500</defval>
+        </param>
+        <param>
+          <type>solverConvergenceTest</type>
+          <defname>solverConvergenceTest</defname>
+          <defval>&apos;<ref refid="Headers_8h_1a51d5468d74b4eccfb8e26ea458562120" kindref="member">r</ref>&apos;</defval>
+        </param>
+        <param>
+          <type>levelNonlinearSolverType</type>
+          <defname>levelNonlinearSolverType</defname>
+          <defval><ref refid="classproteus_1_1NonlinearSolvers_1_1Newton" kindref="compound">Newton</ref></defval>
+        </param>
+        <param>
+          <type>levelSolverFullNewtonFlag</type>
+          <defname>levelSolverFullNewtonFlag</defname>
+          <defval>True</defval>
+        </param>
+        <param>
+          <type>levelSolverConvergenceTest</type>
+          <defname>levelSolverConvergenceTest</defname>
+          <defval>&apos;<ref refid="Headers_8h_1a51d5468d74b4eccfb8e26ea458562120" kindref="member">r</ref>&apos;</defval>
+        </param>
+        <param>
+          <type>computeLevelSolverRates</type>
+          <defname>computeLevelSolverRates</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>printLevelSolverInfo</type>
+          <defname>printLevelSolverInfo</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>relaxationFactor</type>
+          <defname>relaxationFactor</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>connectionListList</type>
+          <defname>connectionListList</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>smootherType</type>
+          <defname>smootherType</defname>
+          <defval>&apos;Jacobi&apos;</defval>
+        </param>
+        <param>
+          <type>prolong_bcList</type>
+          <defname>prolong_bcList</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>restrict_bcList</type>
+          <defname>restrict_bcList</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>restrict_bcSumList</type>
+          <defname>restrict_bcSumList</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>prolongList</type>
+          <defname>prolongList</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>restrictList</type>
+          <defname>restrictList</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>restrictionRowSumList</type>
+          <defname>restrictionRowSumList</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>preSmooths</type>
+          <defname>preSmooths</defname>
+          <defval>3</defval>
+        </param>
+        <param>
+          <type>postSmooths</type>
+          <defname>postSmooths</defname>
+          <defval>3</defval>
+        </param>
+        <param>
+          <type>cycles</type>
+          <defname>cycles</defname>
+          <defval>3</defval>
+        </param>
+        <param>
+          <type>smootherConvergenceTest</type>
+          <defname>smootherConvergenceTest</defname>
+          <defval>&apos;its&apos;</defval>
+        </param>
+        <param>
+          <type>computeSmootherRates</type>
+          <defname>computeSmootherRates</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>printSmootherInfo</type>
+          <defname>printSmootherInfo</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>smootherFullNewtonFlag</type>
+          <defname>smootherFullNewtonFlag</defname>
+          <defval>True</defval>
+        </param>
+        <param>
+          <type>computeCoarseSolverRates</type>
+          <defname>computeCoarseSolverRates</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>printCoarseSolverInfo</type>
+          <defname>printCoarseSolverInfo</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>EWtol</type>
+          <defname>EWtol</defname>
+          <defval>True</defval>
+        </param>
+        <param>
+          <type>maxLSits</type>
+          <defname>maxLSits</defname>
+          <defval>100</defval>
+        </param>
+        <param>
+          <type>parallelUsesFullOverlap</type>
+          <defname>parallelUsesFullOverlap</defname>
+          <defval>True</defval>
+        </param>
+        <param>
+          <type>nonlinearSolverNorm</type>
+          <defname>nonlinearSolverNorm</defname>
+          <defval>l2Norm</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="NonlinearSolvers.py" line="3191" column="1" bodyfile="NonlinearSolvers.py" bodystart="3191" bodyend="3628"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>A hierarchy of classes for nonlinear algebraic system solvers.
+
+.. inheritance-diagram:: proteus.NonlinearSolvers
+   :parts: 1
+</verbatim> </para>
+    </detaileddescription>
+    <location file="NonlinearSolvers.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

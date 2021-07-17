@@ -1,0 +1,2030 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacecylinder2D__ibm_1_1cylinder" kind="namespace" language="Python">
+    <compoundname>cylinder2D_ibm::cylinder</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a0dcd493418f41eff09bd2fc719a93a33" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.ct</definition>
+        <argsstring></argsstring>
+        <name>ct</name>
+        <initializer>=  Context.Options([
+    (&quot;T&quot;, 4.0, &quot;Time interval [0, <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a75a30eebda7e3129bb3a0d6490e398c5" kindref="member">T</ref>]&quot;),
+    (&quot;<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a89a39fcdc26fdd7e72af744314c6a72c" kindref="member">he</ref>&quot;,0.05, &quot;maximum size of edges&quot;),
+    (&quot;onlySaveFinalSolution&quot;,False,&quot;Only save the final solution&quot;),
+    (&quot;<ref refid="namespacecylinder2D__ibm_1_1cylinder_1ae81a74630ee21a7cf3915f8f8a79d174" kindref="member">parallel</ref>&quot;,False,&quot;Use <ref refid="namespacecylinder2D__ibm_1_1cylinder_1ae81a74630ee21a7cf3915f8f8a79d174" kindref="member">parallel</ref> or not&quot;),
+    (&quot;<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a601ec34a6b74dff21307e6d1a359df19" kindref="member">dt_fixed</ref>&quot;,0.005,&quot;fixed time step&quot;),
+    ##################################
+    (&quot;<ref refid="classproteus_1_1NumericalFlux_1_1StrongDirichlet" kindref="compound">StrongDirichlet</ref>&quot;,     False,&quot;weak or strong&quot;),
+    (&quot;use_sbm&quot;,             0,&quot;use sbm instead of imb&quot;),
+    (&quot;<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a57a837f4ad8807b752f37e5015dab7da" kindref="member">spaceOrder</ref>&quot;,          1,&quot;FE space for velocity&quot;),
+    (&quot;timeOrder&quot;,           1,&quot;1=be or 2=vbdf&quot;),#both works, but 2 gives better cd-cl
+    (&quot;use_supg&quot;,            1.,&quot;Use supg or not&quot;),
+    (&quot;nonconservative&quot;,     1.,&quot;0=conservative&quot;),
+    (&quot;forceStrongDirichlet&quot;,False,&quot;strong or weak&quot;),
+    ##################################
+    (&quot;<ref refid="namespacecylinder2D__ibm_1_1cylinder_1afab45f85f46ae70e90399da73eafbd7b" kindref="member">use_ball_as_particle</ref>&quot;,1,&quot;1 or 0 == use ball or particle&quot;),
+    (&quot;isHotStart&quot;,False,&quot;Use hotStart or not&quot;),
+    (&quot;use_regions&quot;,False,&quot;Use refinement <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a9f9fd7dfc87dc3c88e772dec00025b0b" kindref="member">regions</ref>&quot;),
+    (&quot;<ref refid="namespacecylinder2D__ibm_1_1cylinder_1ac22bcd42f7b25d76895636766246b330" kindref="member">usePUMI</ref>&quot;,False,&quot;&quot;),
+    (&quot;genMesh&quot;,False,&quot;&quot;)
+], mutable=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="10" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1af5936242c7cf3378c78780eb376b359f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.use_supg</definition>
+        <argsstring></argsstring>
+        <name>use_supg</name>
+        <initializer>=  ct.use_supg</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="36" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a1e04ff9b4db923afd67fab4b7a49e00d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.USE_SBM</definition>
+        <argsstring></argsstring>
+        <name>USE_SBM</name>
+        <initializer>= ct.use_sbm</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="40" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a1770afa4b8ef94814fab651c4b22ec9b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder.sedimentDynamics</definition>
+        <argsstring></argsstring>
+        <name>sedimentDynamics</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="45" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a367b73aea0b6b390c9b37228de2b4df0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.genMesh</definition>
+        <argsstring></argsstring>
+        <name>genMesh</name>
+        <initializer>=  ct.genMesh</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="46" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ac22bcd42f7b25d76895636766246b330" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.usePUMI</definition>
+        <argsstring></argsstring>
+        <name>usePUMI</name>
+        <initializer>=  ct.usePUMI</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="47" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a2458fcc5b2a9cee297b8d188da4a77df" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder.movingDomain</definition>
+        <argsstring></argsstring>
+        <name>movingDomain</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="48" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ab91d20d8886fc6a570e05d0d7b8d17c8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder.applyRedistancing</definition>
+        <argsstring></argsstring>
+        <name>applyRedistancing</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="49" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a36e70d213ec34c68df181a2841f4c3d0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder.useOldPETSc</definition>
+        <argsstring></argsstring>
+        <name>useOldPETSc</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="50" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1aa388541a9a9d2a99de2ecaf88619bf93" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder::useSuperlu</definition>
+        <argsstring></argsstring>
+        <name>useSuperlu</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="51" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ae81a74630ee21a7cf3915f8f8a79d174" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.parallel</definition>
+        <argsstring></argsstring>
+        <name>parallel</name>
+        <initializer>=  ct.parallel</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="54" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a1379bd53e0e7cbfa408e58a3e5b190a8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder::usePETSc</definition>
+        <argsstring></argsstring>
+        <name>usePETSc</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="56" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a2df656674b1ccaf10208ee3f2c165b96" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.parallelPartitioningType</definition>
+        <argsstring></argsstring>
+        <name>parallelPartitioningType</name>
+        <initializer>=  MeshParallelPartitioningTypes.node</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="60" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1aa0c59f8c6109bce1c1997e86efc997b7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cylinder2D_ibm::cylinder::nLayersOfOverlapForParallel</definition>
+        <argsstring></argsstring>
+        <name>nLayersOfOverlapForParallel</name>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="61" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a069308d2900342288da5d8af4ab48b14" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string cylinder2D_ibm::cylinder::timeDiscretization</definition>
+        <argsstring></argsstring>
+        <name>timeDiscretization</name>
+        <initializer>=  &apos;vbdf&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="64" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a57a837f4ad8807b752f37e5015dab7da" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.spaceOrder</definition>
+        <argsstring></argsstring>
+        <name>spaceOrder</name>
+        <initializer>=  ct.spaceOrder</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="68" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a931448c5f6013150a782b5d6ba3a8861" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cylinder2D_ibm::cylinder.pspaceOrder</definition>
+        <argsstring></argsstring>
+        <name>pspaceOrder</name>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="69" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a21ebb27143744bb748dc9590578113c5" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder.useHex</definition>
+        <argsstring></argsstring>
+        <name>useHex</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="70" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a1e526e2c4a8a1b38a075180045f7355d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.useRBLES</definition>
+        <argsstring></argsstring>
+        <name>useRBLES</name>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="71" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a5456ec5cc6df12fa9c45daf919f0da91" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.useMetrics</definition>
+        <argsstring></argsstring>
+        <name>useMetrics</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="72" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a229392a135bcb3c9177aefe4a38936b8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder.applyCorrection</definition>
+        <argsstring></argsstring>
+        <name>applyCorrection</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="73" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1abf0649f39786e58cfcc5219268a1322b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.useVF</definition>
+        <argsstring></argsstring>
+        <name>useVF</name>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="74" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ac50990e07235f33bf397658c428811fa" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder.useOnlyVF</definition>
+        <argsstring></argsstring>
+        <name>useOnlyVF</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="75" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a8c58fc022317cfe530a50f2e71e7868a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cylinder2D_ibm::cylinder.useRANS</definition>
+        <argsstring></argsstring>
+        <name>useRANS</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="76" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a9a16a62c4a0f356304d6e4abaf94ef72" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder.openTop</definition>
+        <argsstring></argsstring>
+        <name>openTop</name>
+        <initializer>= True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="79" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1aa58a1f02596f16b98483ef2cfa1d30df" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.fl_H</definition>
+        <argsstring></argsstring>
+        <name>fl_H</name>
+        <initializer>=  0.41</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="80" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1adb2e2f04f4b5d2fbcf13063c5cd25937" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.weak_bc_penalty_constant</definition>
+        <argsstring></argsstring>
+        <name>weak_bc_penalty_constant</name>
+        <initializer>=  100.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="95" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a1c40125b66ad064eaa063caa55593ecb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cylinder2D_ibm::cylinder.nLevels</definition>
+        <argsstring></argsstring>
+        <name>nLevels</name>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="96" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1aac7fafe2a4f738bd9b96ec909a48fdf8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cylinder2D_ibm::cylinder.nd</definition>
+        <argsstring></argsstring>
+        <name>nd</name>
+        <initializer>=  2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="105" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a0fc870df254e00661e1eb3f39c6fa5cb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder::hFactor</definition>
+        <argsstring></argsstring>
+        <name>hFactor</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="108" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a4f25ca09538343d052898d0f860854cc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.basis</definition>
+        <argsstring></argsstring>
+        <name>basis</name>
+        <initializer>=  <ref refid="classproteus_1_1FemTools_1_1C0__AffineLinearOnCubeWithNodalBasis" kindref="compound">C0_AffineLinearOnCubeWithNodalBasis</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="110" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a4e9f3b435ceeee6068385724f222a9ed" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.elementQuadrature</definition>
+        <argsstring></argsstring>
+        <name>elementQuadrature</name>
+        <initializer>=  <ref refid="classproteus_1_1Quadrature_1_1CubeGaussQuadrature" kindref="compound">CubeGaussQuadrature</ref>(<ref refid="namespacecylinder2D__ibm_1_1cylinder_1aac7fafe2a4f738bd9b96ec909a48fdf8" kindref="member">nd</ref>, 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="111" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ad59c13ae5312065fb1ef74d7a84223d7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.elementBoundaryQuadrature</definition>
+        <argsstring></argsstring>
+        <name>elementBoundaryQuadrature</name>
+        <initializer>=  <ref refid="classproteus_1_1Quadrature_1_1CubeGaussQuadrature" kindref="compound">CubeGaussQuadrature</ref>(<ref refid="namespacecylinder2D__ibm_1_1cylinder_1aac7fafe2a4f738bd9b96ec909a48fdf8" kindref="member">nd</ref> - 1, 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="112" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a56501ddf9147ebb543ce5b53bcce0618" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.pbasis</definition>
+        <argsstring></argsstring>
+        <name>pbasis</name>
+        <initializer>=  <ref refid="classproteus_1_1FemTools_1_1C0__AffineLinearOnCubeWithNodalBasis" kindref="compound">C0_AffineLinearOnCubeWithNodalBasis</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="130" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a27782c6596a206834afb8ef14e5a2f51" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple cylinder2D_ibm::cylinder.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <initializer>=  (2.2, 0.41)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="143" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a89a39fcdc26fdd7e72af744314c6a72c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  ct.he</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="144" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ac803abc9301a50b25b100879b0522d77" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder.structured</definition>
+        <argsstring></argsstring>
+        <name>structured</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="146" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1aa186384e1781c41ab3c5f7cff24a6c01" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <initializer>=  ceil(<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a27782c6596a206834afb8ef14e5a2f51" kindref="member">L</ref>[0]/ct.he)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="149" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a1738846676c78dd8e426873cfa526e2e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <initializer>=  ceil(<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a27782c6596a206834afb8ef14e5a2f51" kindref="member">L</ref>[1]/ct.he)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="150" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1aa09d888dd8c71182c51f58582a63207e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder.hex</definition>
+        <argsstring></argsstring>
+        <name>hex</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="151" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a69dc9f571fe53a7714ca85815651d171" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.RectangularDomain(<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a27782c6596a206834afb8ef14e5a2f51" kindref="member">L</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="152" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a5fa4ffd4ecd9daf88f19c9f2e9dbaafc" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list cylinder2D_ibm::cylinder.boundaries</definition>
+        <argsstring></argsstring>
+        <name>boundaries</name>
+        <initializer>=  [&apos;bottom&apos;, &apos;right&apos;, &apos;top&apos;, &apos;left&apos;, &apos;front&apos;, &apos;back&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="154" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a2f81e5e84a4eb614a2029b7db7849083" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>=  dict([(key, i + 1) for (i, key) in enumerate(<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a5fa4ffd4ecd9daf88f19c9f2e9dbaafc" kindref="member">boundaries</ref>)])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="155" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a9ad108b81696a27e4e2de7781fc15352" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>cylinder2D_ibm::cylinder.modelDict</definition>
+        <argsstring></argsstring>
+        <name>modelDict</name>
+        <initializer>=  {&apos;flow&apos;:0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="168" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1aa8abb6cb5fdbe984ccd162cc97b55912" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.sizeInputs</definition>
+        <argsstring></argsstring>
+        <name>sizeInputs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="170" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a223337e141fc67ef0755df5ba3442edc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.hmax</definition>
+        <argsstring></argsstring>
+        <name>hmax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="171" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ac2deae2555701c2bad4fa9629ca91ee7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.adapt</definition>
+        <argsstring></argsstring>
+        <name>adapt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="172" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1aadf1c8779f1bb4e0cfe0bba25d74c59e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.hmin</definition>
+        <argsstring></argsstring>
+        <name>hmin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="174" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1aaea4379fa874edcc112ccc41dbfe82a4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.hphi</definition>
+        <argsstring></argsstring>
+        <name>hphi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="175" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1abb2298adab9bcd07e539de3fe8264a34" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.numAdaptSteps</definition>
+        <argsstring></argsstring>
+        <name>numAdaptSteps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="176" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ada3dc98a289c8f689038d0b7276fa296" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.numIterations</definition>
+        <argsstring></argsstring>
+        <name>numIterations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="177" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a0f70db2b57f9046d5536535a007a150d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.targetError</definition>
+        <argsstring></argsstring>
+        <name>targetError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="178" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a695ffd08f4712d351c9fc8434efd44e8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.gradingFactor</definition>
+        <argsstring></argsstring>
+        <name>gradingFactor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="179" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1aaa314183a4fcd638bb0b6f4dc98edf45" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.logging</definition>
+        <argsstring></argsstring>
+        <name>logging</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="180" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a3df4da3d8d5745da138a65aefb35591f" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list cylinder2D_ibm::cylinder::vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <initializer>=  [[0.0, 0.0],  #0
+                        [<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a27782c6596a206834afb8ef14e5a2f51" kindref="member">L</ref>[0], 0.0],  #1
+                        [<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a27782c6596a206834afb8ef14e5a2f51" kindref="member">L</ref>[0], <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a27782c6596a206834afb8ef14e5a2f51" kindref="member">L</ref>[1]],  #2
+                        [0.0, <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a27782c6596a206834afb8ef14e5a2f51" kindref="member">L</ref>[1]],  #3
+                        [0.2-0.16,<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a27782c6596a206834afb8ef14e5a2f51" kindref="member">L</ref>[1]*0.2],
+                        [0.2-0.16,<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a27782c6596a206834afb8ef14e5a2f51" kindref="member">L</ref>[1]*0.8],
+                        [0.2+0.3,<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a27782c6596a206834afb8ef14e5a2f51" kindref="member">L</ref>[1]*0.8],
+                        [0.2+0.3,<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a27782c6596a206834afb8ef14e5a2f51" kindref="member">L</ref>[1]*0.2],
+                        # the following are set for refining the mesh
+                        [0.2-0.06,0.2-0.06],
+                        [0.2-0.06,0.2+0.06],
+                        [0.2+0.06,0.2+0.06],
+                        [0.2+0.06,0.2-0.06]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="185" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a5ff8b05446ace90664e7f44571ff950c" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list cylinder2D_ibm::cylinder::vertexFlags</definition>
+        <argsstring></argsstring>
+        <name>vertexFlags</name>
+        <initializer>=  [<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a2f81e5e84a4eb614a2029b7db7849083" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+                           <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a2f81e5e84a4eb614a2029b7db7849083" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+                           <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a2f81e5e84a4eb614a2029b7db7849083" kindref="member">boundaryTags</ref>[&apos;top&apos;],
+                           <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a2f81e5e84a4eb614a2029b7db7849083" kindref="member">boundaryTags</ref>[&apos;top&apos;],
+                           # the interior <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a3df4da3d8d5745da138a65aefb35591f" kindref="member">vertices</ref> should be flaged to 0
+                           0, 0, 0, 0,
+                           0, 0, 0, 0 ]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="201" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1aed7f6f546110e967c501880c21434dd8" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list cylinder2D_ibm::cylinder::segments</definition>
+        <argsstring></argsstring>
+        <name>segments</name>
+        <initializer>=  [[0, 1],
+                        [1, 2],
+                        [2, 3],
+                        [3, 0],
+                        #Interior segments
+                        [4, 5],
+                        [5, 6],
+                        [6, 7],
+                        [7,4],
+                        [8,9],
+                        [9,10],
+                        [10,11],
+                        [11,8]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="209" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1aa6f1b9aa317b7670a4a7357703bcc068" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list cylinder2D_ibm::cylinder::segmentFlags</definition>
+        <argsstring></argsstring>
+        <name>segmentFlags</name>
+        <initializer>=  [<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a2f81e5e84a4eb614a2029b7db7849083" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+                            <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a2f81e5e84a4eb614a2029b7db7849083" kindref="member">boundaryTags</ref>[&apos;right&apos;],
+                            <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a2f81e5e84a4eb614a2029b7db7849083" kindref="member">boundaryTags</ref>[&apos;top&apos;],
+                            <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a2f81e5e84a4eb614a2029b7db7849083" kindref="member">boundaryTags</ref>[&apos;left&apos;],
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="222" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a9f9fd7dfc87dc3c88e772dec00025b0b" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list cylinder2D_ibm::cylinder::regions</definition>
+        <argsstring></argsstring>
+        <name>regions</name>
+        <initializer>=  [[0.95*<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a27782c6596a206834afb8ef14e5a2f51" kindref="member">L</ref>[0], 0.2],[0.2-0.15,0.2],[0.2,0.2]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="235" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a1dba6061dea88b6db291dbcbe08809e0" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list cylinder2D_ibm::cylinder::regionFlags</definition>
+        <argsstring></argsstring>
+        <name>regionFlags</name>
+        <initializer>=  [1,2,3]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="236" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a4c7c5cf4e67432abbd243658abddb55c" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list cylinder2D_ibm::cylinder::regionConstraints</definition>
+        <argsstring></argsstring>
+        <name>regionConstraints</name>
+        <initializer>= [0.5*<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a89a39fcdc26fdd7e72af744314c6a72c" kindref="member">he</ref>**2,0.5*(old_div(<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a89a39fcdc26fdd7e72af744314c6a72c" kindref="member">he</ref>,2.0))**2,0.5*(old_div(<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a89a39fcdc26fdd7e72af744314c6a72c" kindref="member">he</ref>,6.0))**2]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="237" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="237" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a282e984e05010a74492d452e79eab07e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="279" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a69ce2a797ab1aed12a8241641341a4d6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.AdaptManager</definition>
+        <argsstring></argsstring>
+        <name>AdaptManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="285" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a75a30eebda7e3129bb3a0d6490e398c5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <initializer>= ct.T</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="290" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a601ec34a6b74dff21307e6d1a359df19" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.dt_fixed</definition>
+        <argsstring></argsstring>
+        <name>dt_fixed</name>
+        <initializer>=  ct.dt_fixed</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="291" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a1895bc98666f1caf33e23374a0fc05dc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.dt_init</definition>
+        <argsstring></argsstring>
+        <name>dt_init</name>
+        <initializer>=  ct.dt_fixed</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="292" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ae494031a34a790efa02509bbff5b2334" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.runCFL</definition>
+        <argsstring></argsstring>
+        <name>runCFL</name>
+        <initializer>= 0.33</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="295" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a1eadecc42e20ff28f6d085b2d32ac1ee" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.nDTout</definition>
+        <argsstring></argsstring>
+        <name>nDTout</name>
+        <initializer>=  int(round(<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a75a30eebda7e3129bb3a0d6490e398c5" kindref="member">T</ref>/<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a601ec34a6b74dff21307e6d1a359df19" kindref="member">dt_fixed</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="296" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a28cfdd242c8587c594c2bb015fc27fc6" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list cylinder2D_ibm::cylinder::tnList</definition>
+        <argsstring></argsstring>
+        <name>tnList</name>
+        <initializer>=  [0.0,<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a1895bc98666f1caf33e23374a0fc05dc" kindref="member">dt_init</ref>]+[i*<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a601ec34a6b74dff21307e6d1a359df19" kindref="member">dt_fixed</ref> for i in range(1,<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a1eadecc42e20ff28f6d085b2d32ac1ee" kindref="member">nDTout</ref>+1)]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="298" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ad4fc8c3039bcd772af3e4afd07806aaa" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.ns_forceStrongDirichlet</definition>
+        <argsstring></argsstring>
+        <name>ns_forceStrongDirichlet</name>
+        <initializer>=  ct.StrongDirichlet</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="307" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ac17e318f37f474ccd8b25bd5041c9c89" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder.ns_sed_forceStrongDirichlet</definition>
+        <argsstring></argsstring>
+        <name>ns_sed_forceStrongDirichlet</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="313" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="313" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1afebac71fbb08bbc3e5967e06ffdd806a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder::ns_shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>ns_shockCapturingFactor</name>
+        <initializer>=  0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="315" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a67df44a3cf6222cfa6e2b0830c9865c4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder::ns_lag_shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>ns_lag_shockCapturing</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="316" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ae4fe579e78993a598259b904b80513be" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder::ns_lag_subgridError</definition>
+        <argsstring></argsstring>
+        <name>ns_lag_subgridError</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="317" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a2960f102329196d678407d26b004f78b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder::ls_shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>ls_shockCapturingFactor</name>
+        <initializer>=  0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="318" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1afab0c21a1b5f9c931fab28f1c5c2d503" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder::ls_lag_shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>ls_lag_shockCapturing</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="319" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ab53097e3e2a4d979fe797f7899495f3f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder::ls_sc_uref</definition>
+        <argsstring></argsstring>
+        <name>ls_sc_uref</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="320" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a7b61e1597686a85d1c95b5e3205eacc8" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder::ls_sc_beta</definition>
+        <argsstring></argsstring>
+        <name>ls_sc_beta</name>
+        <initializer>=  1.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="321" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a385a7a0342b0ec0b6e36a75bb4206c46" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder::vof_shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>vof_shockCapturingFactor</name>
+        <initializer>=  0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="322" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="322" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a7ae887167e477428c2bd6ea6c1dced01" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder::vof_lag_shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>vof_lag_shockCapturing</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="323" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ad48efda4638aa06df73a7883d0c992c9" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder::vof_sc_uref</definition>
+        <argsstring></argsstring>
+        <name>vof_sc_uref</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="324" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a1756354d5de6e2e9a002fa10256ccbfe" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder::vof_sc_beta</definition>
+        <argsstring></argsstring>
+        <name>vof_sc_beta</name>
+        <initializer>=  1.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="325" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="325" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ae9444c73a67e9226661e0543dd9d1a71" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder::rd_shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>rd_shockCapturingFactor</name>
+        <initializer>=  0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="326" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a01387287fb59f596aefbc4f31ac79db3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder::rd_lag_shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>rd_lag_shockCapturing</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="327" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="327" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1aa3b60dc38181168846bc05fa0721eaa5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder::epsFact_density</definition>
+        <argsstring></argsstring>
+        <name>epsFact_density</name>
+        <initializer>=  1.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="328" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ac52a58863f7c17713fd1557d43c673ab" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>cylinder2D_ibm::cylinder.epsFact_viscosity</definition>
+        <argsstring></argsstring>
+        <name>epsFact_viscosity</name>
+        <initializer>=  <ref refid="namespacecylinder2D__ibm_1_1cylinder_1aa3b60dc38181168846bc05fa0721eaa5" kindref="member">epsFact_density</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="329" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="329" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a600774be4845eae734b56db07eab841d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder::epsFact_redistance</definition>
+        <argsstring></argsstring>
+        <name>epsFact_redistance</name>
+        <initializer>=  0.33</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="330" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a2e9f2734b3b54a49aac1e66130e751a3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder::epsFact_consrv_diffusion</definition>
+        <argsstring></argsstring>
+        <name>epsFact_consrv_diffusion</name>
+        <initializer>=  10.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="331" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="331" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ab3f4951230729225f88f6fc497497c22" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder::redist_Newton</definition>
+        <argsstring></argsstring>
+        <name>redist_Newton</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="332" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="332" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a45804b6c4ec5759b6e643732033d3d9b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder::kappa_shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>kappa_shockCapturingFactor</name>
+        <initializer>=  0.25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="333" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="333" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ae366ae53450bed7df9c5b6b2a19169e0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder::kappa_lag_shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>kappa_lag_shockCapturing</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="334" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="334" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a1fd6bb23d8e83a7cbe36847a5cb45f42" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder::kappa_sc_uref</definition>
+        <argsstring></argsstring>
+        <name>kappa_sc_uref</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="335" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="335" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a76b33f0ea0bc4da940a10730452a63a4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder::kappa_sc_beta</definition>
+        <argsstring></argsstring>
+        <name>kappa_sc_beta</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="336" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1af6e736ddbc38e08eeb3a54fb2d270b38" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder::dissipation_shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>dissipation_shockCapturingFactor</name>
+        <initializer>=  0.25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="337" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a4797a71054ca7e9d4e9b79966789ea5e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder::dissipation_lag_shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>dissipation_lag_shockCapturing</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="338" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1aaefc4f95781ca6b3fe2b17dc7feae2e6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder::dissipation_sc_uref</definition>
+        <argsstring></argsstring>
+        <name>dissipation_sc_uref</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="339" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="339" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1aafe21cacfe021fc53b9f7ea8e8a896f2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder::dissipation_sc_beta</definition>
+        <argsstring></argsstring>
+        <name>dissipation_sc_beta</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="340" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a8f404e6a4d4bb1a3fe49af77059b9488" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.ns_sed_shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>ns_sed_shockCapturingFactor</name>
+        <initializer>=  0.9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="345" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="345" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ae2c127266e3b4cef8dae749c925a1db5" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder.ns_sed_lag_shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>ns_sed_lag_shockCapturing</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="346" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="346" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a93c44b42209ad8326d2e8fdad176492a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder.ns_sed_lag_subgridError</definition>
+        <argsstring></argsstring>
+        <name>ns_sed_lag_subgridError</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="347" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a0214e32914dab2151e36f9012a817157" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.vos_shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>vos_shockCapturingFactor</name>
+        <initializer>=  0.9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="356" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="356" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a98ab2fa76f0ddf92907e65de7770bd1e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool cylinder2D_ibm::cylinder.vos_lag_shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>vos_lag_shockCapturing</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="357" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="357" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1afd7537c7e2fb7de8f0dcdfeae25e0808" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.vos_sc_uref</definition>
+        <argsstring></argsstring>
+        <name>vos_sc_uref</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="358" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="358" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a9603752ded3927d9d2eafcfeeb5f80c3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.vos_sc_beta</definition>
+        <argsstring></argsstring>
+        <name>vos_sc_beta</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="359" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="359" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1abb26dc02da7a6859e0c694e2de7d3351" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.ns_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>ns_nl_atol_res</name>
+        <initializer>=  <ref refid="jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a89a39fcdc26fdd7e72af744314c6a72c" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="377" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="377" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a170a1526458f1abb3602e830850b0153" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.ns_sed_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>ns_sed_nl_atol_res</name>
+        <initializer>=  <ref refid="jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a89a39fcdc26fdd7e72af744314c6a72c" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="378" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="378" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a13312f45c0edcac2572512f466207303" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.vof_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>vof_nl_atol_res</name>
+        <initializer>=  <ref refid="jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a89a39fcdc26fdd7e72af744314c6a72c" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="379" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="379" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a55a57f584f7e4c0fe95841483e1e9227" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.vos_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>vos_nl_atol_res</name>
+        <initializer>=  <ref refid="jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a89a39fcdc26fdd7e72af744314c6a72c" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="380" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="380" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ae5546f06bd724398d90d5575c3f24e2b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.ls_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>ls_nl_atol_res</name>
+        <initializer>=  <ref refid="jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a89a39fcdc26fdd7e72af744314c6a72c" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="381" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="381" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a762ce8e355746f52386af35e38a8e70b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.rd_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>rd_nl_atol_res</name>
+        <initializer>=  <ref refid="jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.05 * <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a89a39fcdc26fdd7e72af744314c6a72c" kindref="member">he</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="382" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="382" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a9645d9fc7b8af4d2ec51f010ea038895" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.mcorr_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>mcorr_nl_atol_res</name>
+        <initializer>=  <ref refid="jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a89a39fcdc26fdd7e72af744314c6a72c" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="383" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="383" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a4991caa1befa65ff15072eb7d6468032" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.kappa_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>kappa_nl_atol_res</name>
+        <initializer>=  <ref refid="jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a89a39fcdc26fdd7e72af744314c6a72c" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="384" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="384" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1adf6a0e8d11c730a8c20f8f01af004344" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.dissipation_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>dissipation_nl_atol_res</name>
+        <initializer>=  <ref refid="jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a89a39fcdc26fdd7e72af744314c6a72c" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="385" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a81799ba9afaf9d540ef500610adc8f3e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.phi_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>phi_nl_atol_res</name>
+        <initializer>=  <ref refid="jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a89a39fcdc26fdd7e72af744314c6a72c" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="386" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="386" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a115227b933812691853788f41ec97ed2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.pressure_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>pressure_nl_atol_res</name>
+        <initializer>=  <ref refid="jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a89a39fcdc26fdd7e72af744314c6a72c" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="387" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="387" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a1914b83da94246c6521b362629e7401f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cylinder2D_ibm::cylinder::ns_closure</definition>
+        <argsstring></argsstring>
+        <name>ns_closure</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="392" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="392" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a549af611b61baa9ce5ec735cdb1842b9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cylinder2D_ibm::cylinder.ns_sed_closure</definition>
+        <argsstring></argsstring>
+        <name>ns_sed_closure</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="393" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="393" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a11641aa77b46e24918b077847138cec0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.rho_0</definition>
+        <argsstring></argsstring>
+        <name>rho_0</name>
+        <initializer>=  1.0e0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="401" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="401" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a2baca679c4ec055a79402083919a7aea" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.nu_0</definition>
+        <argsstring></argsstring>
+        <name>nu_0</name>
+        <initializer>=  1.0e-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="402" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="402" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ae33fce53682e8178b2c51f8db8846474" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.rho_1</definition>
+        <argsstring></argsstring>
+        <name>rho_1</name>
+        <initializer>=  <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a11641aa77b46e24918b077847138cec0" kindref="member">rho_0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="405" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="405" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a611885bfe88815e66bc822cdac2c8c0f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.nu_1</definition>
+        <argsstring></argsstring>
+        <name>nu_1</name>
+        <initializer>=  <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a2baca679c4ec055a79402083919a7aea" kindref="member">nu_0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="406" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ac0889960227ec02edfa67f2732da6435" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.rho_s</definition>
+        <argsstring></argsstring>
+        <name>rho_s</name>
+        <initializer>=  <ref refid="namespacecylinder2D__ibm_1_1cylinder_1a11641aa77b46e24918b077847138cec0" kindref="member">rho_0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="410" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ad5a97101dd8fa5f32e22a40356d06afc" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.nu_s</definition>
+        <argsstring></argsstring>
+        <name>nu_s</name>
+        <initializer>=  10000.0*<ref refid="namespacecylinder2D__ibm_1_1cylinder_1a2baca679c4ec055a79402083919a7aea" kindref="member">nu_0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="411" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="411" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ac6c5dc43448932d30e30f9ab64d52e75" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.dragAlpha</definition>
+        <argsstring></argsstring>
+        <name>dragAlpha</name>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="412" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a8367e58653fa1f985a76e81d7bad7cdd" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.sigma_01</definition>
+        <argsstring></argsstring>
+        <name>sigma_01</name>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="415" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="415" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a7762cffecbef70e034c9fe33947ab31b" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list cylinder2D_ibm::cylinder.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>=  [0.0, 0.0]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="418" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="418" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ae5177ae219e00a950c4f3f9b783126bb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.waterLine_x</definition>
+        <argsstring></argsstring>
+        <name>waterLine_x</name>
+        <initializer>=  0.75</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="421" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="421" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1aef7e58bd2a26ba7e00d39de50660c16e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.waterLine_z</definition>
+        <argsstring></argsstring>
+        <name>waterLine_z</name>
+        <initializer>=  1.6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="422" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a0f218fd19e70bef625dd4ec4381e1183" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float cylinder2D_ibm::cylinder.U</definition>
+        <argsstring></argsstring>
+        <name>U</name>
+        <initializer>=  1.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="426" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="426" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1afab45f85f46ae70e90399da73eafbd7b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.use_ball_as_particle</definition>
+        <argsstring></argsstring>
+        <name>use_ball_as_particle</name>
+        <initializer>=  ct.use_ball_as_particle</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="453" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="453" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ad1addbf4ddf2829cb5077f74b6f4557d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int cylinder2D_ibm::cylinder.nParticles</definition>
+        <argsstring></argsstring>
+        <name>nParticles</name>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="454" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="454" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a6cecec4d08a283bfcdee91291caada08" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.ball_center</definition>
+        <argsstring></argsstring>
+        <name>ball_center</name>
+        <initializer>=  np.array([[0.2,0.2,0.0],])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="455" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="455" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1ac2e31f613a554073257ee4e589797f8d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.ball_radius</definition>
+        <argsstring></argsstring>
+        <name>ball_radius</name>
+        <initializer>=  np.array([0.05,])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="456" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="456" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a063ae49ce60dedf5e077b8096f0eb62a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.ball_velocity</definition>
+        <argsstring></argsstring>
+        <name>ball_velocity</name>
+        <initializer>=  np.array([[0.0,0.0,0.0],])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="457" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="457" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacecylinder2D__ibm_1_1cylinder_1a29a5addc43cbe86b0e7f1d2b2db8df9d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>cylinder2D_ibm::cylinder.ball_angular_velocity</definition>
+        <argsstring></argsstring>
+        <name>ball_angular_velocity</name>
+        <initializer>=  np.array([[0.0,0.0,0.0],])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="458" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="458" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacecylinder2D__ibm_1_1cylinder_1ad66c8246643d18013a68d294b56bb657" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cylinder2D_ibm.cylinder.velRamp</definition>
+        <argsstring>(t)</argsstring>
+        <name>velRamp</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="427" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="427" bodyend="436"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecylinder2D__ibm_1_1cylinder_1a8070ef7158ffc32d56bacca247671821" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cylinder2D_ibm.cylinder.signedDistance</definition>
+        <argsstring>(x)</argsstring>
+        <name>signedDistance</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="437" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="437" bodyend="439"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecylinder2D__ibm_1_1cylinder_1a42b0d7b4d392ccf591e3fda8d82506d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cylinder2D_ibm.cylinder.particle_sdf</definition>
+        <argsstring>(t, x)</argsstring>
+        <name>particle_sdf</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="440" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="440" bodyend="446"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacecylinder2D__ibm_1_1cylinder_1ac15d4f92cfa8cb641ac11e0acdd80b3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def cylinder2D_ibm.cylinder.particle_vel</definition>
+        <argsstring>(t, x)</argsstring>
+        <name>particle_vel</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="447" column="1" bodyfile="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" bodystart="447" bodyend="452"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/MeshAdaptPUMI/Sizefields/cylinder2D_ibm/cylinder.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

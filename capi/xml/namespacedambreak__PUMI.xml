@@ -1,0 +1,407 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacedambreak__PUMI" kind="namespace" language="Python">
+    <compoundname>dambreak_PUMI</compoundname>
+    <innerclass refid="classdambreak__PUMI_1_1PHI__IC" prot="public">dambreak_PUMI::PHI_IC</innerclass>
+    <innerclass refid="classdambreak__PUMI_1_1VF__IC" prot="public">dambreak_PUMI::VF_IC</innerclass>
+    <innerclass refid="classdambreak__PUMI_1_1zero" prot="public">dambreak_PUMI::zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1a95b4a24bba7bfabe3e02016c7ca3cace" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  Context.Options([
+    (&quot;final_time&quot;,2.0,&quot;Final time for simulation&quot;),
+    (&quot;dt_output&quot;,0.01,&quot;Time interval to output solution&quot;),
+    (&quot;cfl&quot;,0.9,&quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="namespacedambreak__PUMI_1ac0c8c32d2a179461b890b0cca2acc477" kindref="member">he</ref>&quot;,0.08,&quot;<ref refid="namespacedambreak__PUMI_1ac0c8c32d2a179461b890b0cca2acc477" kindref="member">he</ref> relative to Length of <ref refid="namespacedambreak__PUMI_1a9ec64864e2769c94465da32ceba275fa" kindref="member">domain</ref> in x&quot;),
+    (&quot;x_tank&quot;,3.22,&quot;extent of <ref refid="namespacedambreak__PUMI_1a9ec64864e2769c94465da32ceba275fa" kindref="member">domain</ref> in x&quot;),
+    (&quot;y_tank&quot;,1.8,&quot;extent of <ref refid="namespacedambreak__PUMI_1a9ec64864e2769c94465da32ceba275fa" kindref="member">domain</ref> in y&quot;)
+    ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="15" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1ab7e8cbee08ff420766c8aad252e52ff2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float dambreak_PUMI::waterLine_y</definition>
+        <argsstring></argsstring>
+        <name>waterLine_y</name>
+        <initializer>=  0.6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="25" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1a96d83d0a3ce2252ce89c807220e536c7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float dambreak_PUMI::waterLine_x</definition>
+        <argsstring></argsstring>
+        <name>waterLine_x</name>
+        <initializer>=  1.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="26" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1a0969b98fe6f054ca9a587c19f86badb0" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple dambreak_PUMI.tank_dim</definition>
+        <argsstring></argsstring>
+        <name>tank_dim</name>
+        <initializer>=  (opts.x_tank,opts.y_tank)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="32" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1a2bb01225d601622a3a7b4f7ca249af55" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dambreak_PUMI.structured</definition>
+        <argsstring></argsstring>
+        <name>structured</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="34" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1ac0c8c32d2a179461b890b0cca2acc477" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  opts.he</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="35" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1a9ec64864e2769c94465da32ceba275fa" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.PUMIDomain(dim=2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="38" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1aafbe7ccc41fff452543e642b613f053c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.parallelPartitioningType</definition>
+        <argsstring></argsstring>
+        <name>parallelPartitioningType</name>
+        <initializer>=  MeshTools.MeshParallelPartitioningTypes.element</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="46" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1a68b2792b8a9042511e1143a0dc0f81f3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.modelDict</definition>
+        <argsstring></argsstring>
+        <name>modelDict</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="50" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1adce9541d2605fae0b7673f333d27743a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.sizeInputs</definition>
+        <argsstring></argsstring>
+        <name>sizeInputs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="53" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1a6d05214b713ca7ca18efa6b717f3b875" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.adapt</definition>
+        <argsstring></argsstring>
+        <name>adapt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="56" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1ad6943f5d930350401bbdfcdcb587ee22" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.hmax</definition>
+        <argsstring></argsstring>
+        <name>hmax</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="59" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1af1906ed9cd9d76d3250970dca2298413" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.hmin</definition>
+        <argsstring></argsstring>
+        <name>hmin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="60" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1a3c0145bde378c70566b3cb017d75992a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.hphi</definition>
+        <argsstring></argsstring>
+        <name>hphi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="63" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1a11b571329668b52b5e36188dea945f60" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.numAdaptSteps</definition>
+        <argsstring></argsstring>
+        <name>numAdaptSteps</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="66" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1a7296674e7290e5b4fa90f14cc1a61e1a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.targetError</definition>
+        <argsstring></argsstring>
+        <name>targetError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="69" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1abff4a0eb1fb008dcb68bedb34efc4542" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.gradingFactor</definition>
+        <argsstring></argsstring>
+        <name>gradingFactor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="72" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1a151bfdd38f6a37ed4fa9992fcc040682" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.numIterations</definition>
+        <argsstring></argsstring>
+        <name>numIterations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="75" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1a0f1ea9ad521ac4e502be0b512fb52252" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.logging</definition>
+        <argsstring></argsstring>
+        <name>logging</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="78" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1a2cf70d6f8eb85f1f212a7b0ccb77ddea" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.tank</definition>
+        <argsstring></argsstring>
+        <name>tank</name>
+        <initializer>=  <ref refid="classproteus_1_1mprans_1_1SpatialTools_1_1Tank2D" kindref="compound">Tank2D</ref>(<ref refid="namespacedambreak__PUMI_1a9ec64864e2769c94465da32ceba275fa" kindref="member">domain</ref>, <ref refid="namespacedambreak__PUMI_1a0969b98fe6f054ca9a587c19f86badb0" kindref="member">tank_dim</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="81" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1a2a2f13593460cd8f78fa2cd35b9ca4b1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dambreak_PUMI.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <initializer>=  int(<ref refid="namespacedambreak__PUMI_1a0969b98fe6f054ca9a587c19f86badb0" kindref="member">tank_dim</ref>[1]/opts.he)+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="135" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1a6e05cbf0b12ad528e2599944b73dedf5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dambreak_PUMI.nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <initializer>=  int(<ref refid="namespacedambreak__PUMI_1a0969b98fe6f054ca9a587c19f86badb0" kindref="member">tank_dim</ref>[0]/opts.he)+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="136" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1aa40cbf191596fead85d12c96dc668052" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="140" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1a85c14bbc69e52c48667fc738438ca6ae" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  TpFlow.OutputStepping(opts.final_time,dt_output=opts.dt_output,dt_init=0.0001)</initializer>
+        <briefdescription>
+<para>***** Create myTwoPhaseFlowProblem ***** # </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="145" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1aae18bd8c6a43559ab60b641aa8aea7f9" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary dambreak_PUMI.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;pressure&apos;: <ref refid="classdambreak__PUMI_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;pressure_increment&apos;: <ref refid="classdambreak__PUMI_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vel_u&apos;: <ref refid="classdambreak__PUMI_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vel_v&apos;: <ref refid="classdambreak__PUMI_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vof&apos;:  <ref refid="classdambreak__PUMI_1_1VF__IC" kindref="compound">VF_IC</ref>(),
+                     &apos;ncls&apos;: <ref refid="classdambreak__PUMI_1_1PHI__IC" kindref="compound">PHI_IC</ref>(),
+                     &apos;rdls&apos;: <ref refid="classdambreak__PUMI_1_1PHI__IC" kindref="compound">PHI_IC</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="146" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1ae8df0cbe11d6dbb6ee0951726cd05637" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem(ns_model=0,
+                                             ls_model=0,
+                                             nd=2,
+                                             cfl=opts.cfl,
+                                             <ref refid="namespacedambreak__PUMI_1a85c14bbc69e52c48667fc738438ca6ae" kindref="member">outputStepping</ref>=<ref refid="namespacedambreak__PUMI_1a85c14bbc69e52c48667fc738438ca6ae" kindref="member">outputStepping</ref>,
+                                             <ref refid="namespacedambreak__PUMI_1a2bb01225d601622a3a7b4f7ca249af55" kindref="member">structured</ref>=<ref refid="namespacedambreak__PUMI_1a2bb01225d601622a3a7b4f7ca249af55" kindref="member">structured</ref>,
+                                             <ref refid="namespacedambreak__PUMI_1ac0c8c32d2a179461b890b0cca2acc477" kindref="member">he</ref>=opts.he,
+                                             <ref refid="namespacedambreak__PUMI_1a6e05cbf0b12ad528e2599944b73dedf5" kindref="member">nnx</ref>=<ref refid="namespacedambreak__PUMI_1a6e05cbf0b12ad528e2599944b73dedf5" kindref="member">nnx</ref>,
+                                             <ref refid="namespacedambreak__PUMI_1a2a2f13593460cd8f78fa2cd35b9ca4b1" kindref="member">nny</ref>=<ref refid="namespacedambreak__PUMI_1a2a2f13593460cd8f78fa2cd35b9ca4b1" kindref="member">nny</ref>,
+                                             <ref refid="namespacedambreak__PUMI_1a9ec64864e2769c94465da32ceba275fa" kindref="member">domain</ref>=<ref refid="namespacedambreak__PUMI_1a9ec64864e2769c94465da32ceba275fa" kindref="member">domain</ref>,
+                                             <ref refid="namespacedambreak__PUMI_1aae18bd8c6a43559ab60b641aa8aea7f9" kindref="member">initialConditions</ref>=<ref refid="namespacedambreak__PUMI_1aae18bd8c6a43559ab60b641aa8aea7f9" kindref="member">initialConditions</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="154" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacedambreak__PUMI_1abee1e36fdba35f7875c4f6e69bdd3977" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak_PUMI.conservativeFlux</definition>
+        <argsstring></argsstring>
+        <name>conservativeFlux</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="166" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>dambreak 2-D
+</verbatim> </para>
+    </detaileddescription>
+    <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak_PUMI.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

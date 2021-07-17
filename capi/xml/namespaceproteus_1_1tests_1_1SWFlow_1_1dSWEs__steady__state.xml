@@ -1,0 +1,474 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state" kind="namespace" language="Python">
+    <compoundname>proteus::tests::SWFlow::dSWEs_steady_state</compoundname>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1_1hbeta__at__t0" prot="public">proteus::tests::SWFlow::dSWEs_steady_state::hbeta_at_t0</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1_1heta__at__t0" prot="public">proteus::tests::SWFlow::dSWEs_steady_state::heta_at_t0</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1_1hw__at__t0" prot="public">proteus::tests::SWFlow::dSWEs_steady_state::hw_at_t0</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1_1water__height__at__t0" prot="public">proteus::tests::SWFlow::dSWEs_steady_state::water_height_at_t0</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1_1x__mom__at__t0" prot="public">proteus::tests::SWFlow::dSWEs_steady_state::x_mom_at_t0</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1_1x__mom__exact" prot="public">proteus::tests::SWFlow::dSWEs_steady_state::x_mom_exact</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1_1y__mom__at__t0" prot="public">proteus::tests::SWFlow::dSWEs_steady_state::y_mom_at_t0</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a17d3b37b922295f5afcf63ba266c4f92" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::dSWEs_steady_state.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  <ref refid="namespaceproteus_1_1Context_1a461242d050aceb1e84d9426074c67004" kindref="member">Context.Options</ref>([
+    (&apos;sw_model&apos;, 1, &quot;sw_model = {0,1} for {SWEs,DSWEs}&quot;),
+    (&quot;final_time&quot;, 40, &quot;Final time for simulation&quot;),
+    (&quot;dt_output&quot;, 0.1, &quot;Time interval to output solution&quot;),
+    (&quot;cfl&quot;, 0.25, &quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a2a006d51ccba7e64331720835118bcb4" kindref="member">refinement</ref>&quot;, 4, &quot;Refinement level&quot;)
+])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="26" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a536d465b9ad826248850bb9c13db2764" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::dSWEs_steady_state.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <initializer>=  (20.0, 1.0)</initializer>
+        <briefdescription>
+<para>DOMAIN AND MESH #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="37" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a2a006d51ccba7e64331720835118bcb4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::dSWEs_steady_state.refinement</definition>
+        <argsstring></argsstring>
+        <name>refinement</name>
+        <initializer>=  opts.refinement</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="38" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a4aab7ff33e58447660f879498ee41100" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::dSWEs_steady_state.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  <ref refid="classproteus_1_1Domain_1_1RectangularDomain" kindref="compound">RectangularDomain</ref>(<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a536d465b9ad826248850bb9c13db2764" kindref="member">L</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a536d465b9ad826248850bb9c13db2764" kindref="member">L</ref>, x=[-10.0, 0, 0])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="39" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a685729089ff53ff9ab1b973f246f9ad7" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::SWFlow::dSWEs_steady_state.nnx0</definition>
+        <argsstring></argsstring>
+        <name>nnx0</name>
+        <initializer>=  6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="42" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a71e2cd0a09a8e7558c1819b370e2bfae" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::dSWEs_steady_state.nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <initializer>=  (<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a685729089ff53ff9ab1b973f246f9ad7" kindref="member">nnx0</ref> - 1) * (2**<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a2a006d51ccba7e64331720835118bcb4" kindref="member">refinement</ref>) + 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="43" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a3d448c479c9d80525c545b64488097c1" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::SWFlow::dSWEs_steady_state.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <initializer>=  old_div((<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a71e2cd0a09a8e7558c1819b370e2bfae" kindref="member">nnx</ref> - 1), 10) + 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="44" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1ae087e3ca0cee216feb09acb5066b8766" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::dSWEs_steady_state.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  old_div(<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a536d465b9ad826248850bb9c13db2764" kindref="member">L</ref>[0], float(<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a71e2cd0a09a8e7558c1819b370e2bfae" kindref="member">nnx</ref> - 1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="45" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a0886ffec6ca7be44d33e52d996c8f4c9" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string proteus::tests::SWFlow::dSWEs_steady_state.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <initializer>=  &quot;pAq30Dena%<ref refid="namespaceproteus_1af05ccedae3a5249ffcee18ba28860db4" kindref="member">f</ref>&quot; % (0.5 * he**2,)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="46" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1ac8794f4b51c0778b3661822d4a9bf2d8" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::dSWEs_steady_state.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>=  9.81</initializer>
+        <briefdescription>
+<para>CONSTANTS NEEDED FOR SETUP #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="51" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1aff57182379d30387fff4a653980aeb92" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::dSWEs_steady_state.h0</definition>
+        <argsstring></argsstring>
+        <name>h0</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="52" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1ac224b730fd8ece3e92c2e9571b2857a2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::dSWEs_steady_state.a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <initializer>=  0.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="53" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a51dfbed9aa69872ecf4c1c4c0c6f02f6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::dSWEs_steady_state.q</definition>
+        <argsstring></argsstring>
+        <name>q</name>
+        <initializer>=  np.sqrt(<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1ac8794f4b51c0778b3661822d4a9bf2d8" kindref="member">g</ref> * <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1aff57182379d30387fff4a653980aeb92" kindref="member">h0</ref>**3 * (1.0 + <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1ac224b730fd8ece3e92c2e9571b2857a2" kindref="member">a</ref>) / 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="54" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1ad923421c729a5b80f088dc707cbe6c73" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::dSWEs_steady_state.r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <initializer>=  1.0/<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1aff57182379d30387fff4a653980aeb92" kindref="member">h0</ref> * np.sqrt(3.0 * <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1ac224b730fd8ece3e92c2e9571b2857a2" kindref="member">a</ref> / (1.0 + <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1ac224b730fd8ece3e92c2e9571b2857a2" kindref="member">a</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="55" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a1ae2dc59db56f548eddbe4fa28084116" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::SWFlow::dSWEs_steady_state.x0</definition>
+        <argsstring></argsstring>
+        <name>x0</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="56" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a9b527421eccfd928c06e6167d9b8260a" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::dSWEs_steady_state.X_coords</definition>
+        <argsstring></argsstring>
+        <name>X_coords</name>
+        <initializer>=  (-10.0, 10.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="126" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1ae36e5768d8de5ee92edf62b8c2af79f7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::dSWEs_steady_state.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  SWFlowProblem.OutputStepping(opts.final_time, dt_output=opts.dt_output)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="158" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a3cb09392b201146421a1f43c891db773" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::dSWEs_steady_state.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;water_height&apos;: <ref refid="classproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1_1water__height__at__t0" kindref="compound">water_height_at_t0</ref>(),
+                     &apos;x_mom&apos;: <ref refid="classproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1_1x__mom__at__t0" kindref="compound">x_mom_at_t0</ref>(),
+                     &apos;y_mom&apos;: <ref refid="classproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1_1y__mom__at__t0" kindref="compound">y_mom_at_t0</ref>(),
+                     &apos;h_times_eta&apos;: <ref refid="classproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1_1heta__at__t0" kindref="compound">heta_at_t0</ref>(),
+                     &apos;h_times_w&apos;: <ref refid="classproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1_1hw__at__t0" kindref="compound">hw_at_t0</ref>(),
+                     &apos;h_times_beta&apos;: <ref refid="classproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1_1hbeta__at__t0" kindref="compound">hbeta_at_t0</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="159" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1abdc3339c6c840561da0f260fb2416c0d" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::dSWEs_steady_state.boundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>boundaryConditions</name>
+        <initializer>=  {&apos;water_height&apos;: <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1ab3586093529b066cbf15c2e29ab85867" kindref="member">water_height_DBC</ref>,
+                      &apos;x_mom&apos;: <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a008abdf770ba529899688fcd8906a2a4" kindref="member">x_mom_DBC</ref>,
+                      &apos;y_mom&apos;: lambda x, flag: lambda x, t: 0.0,
+                      &apos;h_times_eta&apos;: <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a1d82604096fb54d4b469f14c0e7d1308" kindref="member">heta_DBC</ref>,
+                      &apos;h_times_w&apos;: <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a8029ca06c515bb42fe07d340b6d1f293" kindref="member">hw_DBC</ref>,
+                      &apos;h_times_beta&apos;: <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1ab45eced21505f63998341c7e83937dd6" kindref="member">hbeta_DBC</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="165" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1abf458cd8d841fdf12e2999c444480b1e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::dSWEs_steady_state.mySWFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>mySWFlowProblem</name>
+        <initializer>=  SWFlowProblem.SWFlowProblem(sw_model=opts.sw_model,
+                                              cfl=opts.cfl,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1ae36e5768d8de5ee92edf62b8c2af79f7" kindref="member">outputStepping</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1ae36e5768d8de5ee92edf62b8c2af79f7" kindref="member">outputStepping</ref>,
+                                              structured=True,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1ae087e3ca0cee216feb09acb5066b8766" kindref="member">he</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1ae087e3ca0cee216feb09acb5066b8766" kindref="member">he</ref>,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a71e2cd0a09a8e7558c1819b370e2bfae" kindref="member">nnx</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a71e2cd0a09a8e7558c1819b370e2bfae" kindref="member">nnx</ref>,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a3d448c479c9d80525c545b64488097c1" kindref="member">nny</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a3d448c479c9d80525c545b64488097c1" kindref="member">nny</ref>,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a4aab7ff33e58447660f879498ee41100" kindref="member">domain</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a4aab7ff33e58447660f879498ee41100" kindref="member">domain</ref>,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a3cb09392b201146421a1f43c891db773" kindref="member">initialConditions</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a3cb09392b201146421a1f43c891db773" kindref="member">initialConditions</ref>,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1abdc3339c6c840561da0f260fb2416c0d" kindref="member">boundaryConditions</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1abdc3339c6c840561da0f260fb2416c0d" kindref="member">boundaryConditions</ref>,
+                                              bathymetry=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a82977cde1bc39d7ac9b5e9e7f36b4f8e" kindref="member">bathymetry_function</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="171" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a3f9f8689722602fb43d7618e16331a5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.dSWEs_steady_state.solitary_wave</definition>
+        <argsstring>(x, t)</argsstring>
+        <name>solitary_wave</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+<para>Functions defined here #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="61" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="61" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a82977cde1bc39d7ac9b5e9e7f36b4f8e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.dSWEs_steady_state.bathymetry_function</definition>
+        <argsstring>(X)</argsstring>
+        <name>bathymetry_function</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="66" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="66" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1ab3586093529b066cbf15c2e29ab85867" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.dSWEs_steady_state.water_height_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>water_height_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="129" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="129" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a008abdf770ba529899688fcd8906a2a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.dSWEs_steady_state.x_mom_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>x_mom_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="139" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="139" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a1d82604096fb54d4b469f14c0e7d1308" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.dSWEs_steady_state.heta_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>heta_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="143" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="143" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1a8029ca06c515bb42fe07d340b6d1f293" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.dSWEs_steady_state.hw_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>hw_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="147" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="147" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1SWFlow_1_1dSWEs__steady__state_1ab45eced21505f63998341c7e83937dd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.dSWEs_steady_state.hbeta_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>hbeta_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/dSWEs_steady_state.py" line="151" column="1" bodyfile="tests/SWFlow/dSWEs_steady_state.py" bodystart="151" bodyend="157"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/SWFlow/dSWEs_steady_state.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

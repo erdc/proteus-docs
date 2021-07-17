@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d0/ddd/namespacecheck__error__heat" kind="namespace" language="Python">
+    <compoundname>check_error_heat</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d0/ddd/namespacecheck__error__heat_1a150e37857ad273f086d8254534317e0d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float check_error_heat.T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/POD/check_error_heat.py" line="9" column="1" bodyfile="tests/POD/check_error_heat.py" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/ddd/namespacecheck__error__heat_1a973dfc9ae7c733849cc6300aaed8c63a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int check_error_heat.nDTout</definition>
+        <argsstring></argsstring>
+        <name>nDTout</name>
+        <initializer>=  100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/POD/check_error_heat.py" line="10" column="1" bodyfile="tests/POD/check_error_heat.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/ddd/namespacecheck__error__heat_1a9aa51d4eef08a52c5dea646c5abd4e5c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>check_error_heat.DT</definition>
+        <argsstring></argsstring>
+        <name>DT</name>
+        <initializer>=  old_div(<ref refid="d0/ddd/namespacecheck__error__heat_1a150e37857ad273f086d8254534317e0d" kindref="member">T</ref>,float(<ref refid="d0/ddd/namespacecheck__error__heat_1a973dfc9ae7c733849cc6300aaed8c63a" kindref="member">nDTout</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/POD/check_error_heat.py" line="11" column="1" bodyfile="tests/POD/check_error_heat.py" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/ddd/namespacecheck__error__heat_1a8b6b6fb4a04cc1398cc5eaddb7ae3e25" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>check_error_heat.archive</definition>
+        <argsstring></argsstring>
+        <name>archive</name>
+        <initializer>=  Archiver.XdmfArchive(&quot;.&quot;,&quot;heat_3d&quot;,readOnly=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/POD/check_error_heat.py" line="19" column="1" bodyfile="tests/POD/check_error_heat.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/ddd/namespacecheck__error__heat_1a7c2bc8793bf2079dd96e0cd7cfbc889d" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string check_error_heat::label</definition>
+        <argsstring></argsstring>
+        <name>label</name>
+        <initializer>= &quot;/%s%d&quot; % (&apos;nodesSpatial_Domain&apos;,0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/POD/check_error_heat.py" line="21" column="1" bodyfile="tests/POD/check_error_heat.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/ddd/namespacecheck__error__heat_1acb087498bb011361d0dc66c2af772610" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>check_error_heat.coord</definition>
+        <argsstring></argsstring>
+        <name>coord</name>
+        <initializer>=  read_from_hdf5(archive.hdfFile,<ref refid="d0/ddd/namespacecheck__error__heat_1a7c2bc8793bf2079dd96e0cd7cfbc889d" kindref="member">label</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/POD/check_error_heat.py" line="23" column="1" bodyfile="tests/POD/check_error_heat.py" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/ddd/namespacecheck__error__heat_1a8fb8d1903eb03d27ce603f822a1b703b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>check_error_heat.u</definition>
+        <argsstring></argsstring>
+        <name>u</name>
+        <initializer>=  read_from_hdf5(archive.hdfFile,&apos;/u0&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/POD/check_error_heat.py" line="26" column="1" bodyfile="tests/POD/check_error_heat.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/ddd/namespacecheck__error__heat_1a9de94eb58bbbec437c6249853805aa5c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>def check_error_heat::uex_vals</definition>
+        <argsstring></argsstring>
+        <name>uex_vals</name>
+        <initializer>=  np.zeros(u.shape,&apos;d&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/POD/check_error_heat.py" line="27" column="1" bodyfile="tests/POD/check_error_heat.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/ddd/namespacecheck__error__heat_1af37f37496e10d48c495f2e64f3f42030" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>check_error_heat.time_level_to_read</definition>
+        <argsstring></argsstring>
+        <name>time_level_to_read</name>
+        <initializer>= i</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/POD/check_error_heat.py" line="30" column="1" bodyfile="tests/POD/check_error_heat.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/ddd/namespacecheck__error__heat_1ab4a322983e096e5bf906b8b63a452e7e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>check_error_heat.err</definition>
+        <argsstring></argsstring>
+        <name>err</name>
+        <initializer>=  <ref refid="d0/ddd/namespacecheck__error__heat_1a8fb8d1903eb03d27ce603f822a1b703b" kindref="member">u</ref>-<ref refid="d0/ddd/namespacecheck__error__heat_1a9de94eb58bbbec437c6249853805aa5c" kindref="member">uex_vals</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/POD/check_error_heat.py" line="35" column="1" bodyfile="tests/POD/check_error_heat.py" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/ddd/namespacecheck__error__heat_1aaf67f0515cace6d56c1401f499a05d8e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>check_error_heat.L2approx</definition>
+        <argsstring></argsstring>
+        <name>L2approx</name>
+        <initializer>=  np.sqrt(<ref refid="de/d5b/Headers_8h_1a4236a05d5d04839f0af91439cb8820b8" kindref="member">err.sum</ref>())</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/POD/check_error_heat.py" line="38" column="1" bodyfile="tests/POD/check_error_heat.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d0/ddd/namespacecheck__error__heat_1a78ebeb0e1bc4f7816ad0affada1bca02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def check_error_heat.uex0</definition>
+        <argsstring>(x, t)</argsstring>
+        <name>uex0</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Exact solution
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/POD/check_error_heat.py" line="13" column="1" bodyfile="tests/POD/check_error_heat.py" bodystart="13" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/POD/check_error_heat.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

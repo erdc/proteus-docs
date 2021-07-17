@@ -1,0 +1,841 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d7/d48/namespaceovertopping" kind="namespace" language="Python">
+    <compoundname>overtopping</compoundname>
+    <innerclass refid="dd/d75/classovertopping_1_1AtRest" prot="public">overtopping::AtRest</innerclass>
+    <innerclass refid="dc/d16/classovertopping_1_1LS__IC" prot="public">overtopping::LS_IC</innerclass>
+    <innerclass refid="da/d90/classovertopping_1_1P__IC" prot="public">overtopping::P_IC</innerclass>
+    <innerclass refid="dc/d87/classovertopping_1_1VOF__IC" prot="public">overtopping::VOF_IC</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1abbd985eeaf7b6cf676000900e966fefe" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="16" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a69329b5c88273d50ba38e2cc19dfb441" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.PlanarStraightLineGraphDomain()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="71" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a1c2cd8b7ef82cbb728b779f3802202a9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int overtopping.phi</definition>
+        <argsstring></argsstring>
+        <name>phi</name>
+        <initializer>=  2*<ref refid="d0/df7/createAnalyticGeometry_8cpp_1a43016d873124d39034edb8cd164794db" kindref="member">np.pi</ref>*np.random.rand(opts.N)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="78" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a3069d924a7c310a6c168dbc71d714080" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float overtopping.Tend</definition>
+        <argsstring></argsstring>
+        <name>Tend</name>
+        <initializer>= opts.Ntotalwaves*opts.Tp/1.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="79" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a11edaf5cb18dc0140327586475d7442c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.wave</definition>
+        <argsstring></argsstring>
+        <name>wave</name>
+        <initializer>=  wt.RandomWavesFast(Tstart=opts.Tstart,
+                              <ref refid="d7/d48/namespaceovertopping_1a3069d924a7c310a6c168dbc71d714080" kindref="member">Tend</ref>=<ref refid="d7/d48/namespaceovertopping_1a3069d924a7c310a6c168dbc71d714080" kindref="member">Tend</ref>,
+                              x0=opts.x0,
+                              Tp=opts.Tp,
+                              Hs=opts.Hs,
+                              mwl=opts.mwl,
+                              depth=opts.depth,
+                              waveDir=opts.waveDir,
+                              g=opts.g,
+                              N=opts.N,
+                              bandFactor=opts.bandFactor,
+                              spectName=opts.spectName,
+                              spectral_params=opts.spectral_params,
+                              <ref refid="d7/d48/namespaceovertopping_1a1c2cd8b7ef82cbb728b779f3802202a9" kindref="member">phi</ref>=<ref refid="d7/d48/namespaceovertopping_1a1c2cd8b7ef82cbb728b779f3802202a9" kindref="member">phi</ref>,
+                              Lgen=opts.Lgen,
+                              Nwaves=opts.Nwaves,
+                              Nfreq=opts.Nfreq,
+                              checkAcc=True,
+                              fast=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="80" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a76b6504938b772e2ce27a71389f1446f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float overtopping::Duration</definition>
+        <argsstring></argsstring>
+        <name>Duration</name>
+        <initializer>= <ref refid="d7/d48/namespaceovertopping_1a3069d924a7c310a6c168dbc71d714080" kindref="member">Tend</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="100" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.wave_length</definition>
+        <argsstring></argsstring>
+        <name>wave_length</name>
+        <initializer>= wave.wavelength</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="101" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a05187fe234e10aaa60ee14606187be64" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple overtopping.tank_dim</definition>
+        <argsstring></argsstring>
+        <name>tank_dim</name>
+        <initializer>=  (3*<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>+opts.structureCrestLevel*opts.structure_slope+opts.deposit_width,opts.tank_height)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="122" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a08613c9d15ca84941629b947943e800b" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary overtopping.boundaryOrientations</definition>
+        <argsstring></argsstring>
+        <name>boundaryOrientations</name>
+        <initializer>=  {&apos;y-&apos;: np.array([0., -1.,0.]),
+                        &apos;x+&apos;: np.array([+1., 0.,0.]),
+                        &apos;y+&apos;: np.array([0., +1.,0.]),
+                        &apos;x-&apos;: np.array([-1., 0.,0.]),
+                        &apos;sponge&apos;: None,
+                        &apos;porousLayer&apos;: None,
+                       }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="125" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1ab9ae2357054fab87506f3beff070b348" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary overtopping.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>=  {&apos;y-&apos; : 1,
+                &apos;x+&apos; : 2,
+                &apos;y+&apos; : 3,
+                &apos;x-&apos; : 4,
+                &apos;sponge&apos; : 5,
+               }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="133" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1adb3d4dccda1636a5b9ebe4ea3e7c6b17" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list overtopping.vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <initializer>= [[0.0,0.0], #0
+            [<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>,0],#1
+            [<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>,-opts.tank_depth],#2
+            [3*<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>+2*opts.tube+opts.structureCrestLevel*opts.structure_slope+1,-opts.tank_depth], #3
+            [3*<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>+2*opts.tube+opts.structureCrestLevel*opts.structure_slope+1,0.0], #4 
+            [3*<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>+2*opts.tube+opts.structureCrestLevel*opts.structure_slope+1+opts.Lback,0.0], #5
+            [3*<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>+2*opts.tube+opts.structureCrestLevel*opts.structure_slope+1+opts.Lback,opts.tank_height], #6
+            [3*<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>+2*opts.tube+opts.structureCrestLevel*opts.structure_slope+1,opts.tank_height],#7 
+            [<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>,opts.tank_height], #8
+            [0.0,opts.tank_height], #9
+            [-<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>,opts.tank_height], #10
+            [-<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>,0.], #11
+            ]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="142" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a3e020a5cd18bd3d707a15927853e9c87" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.vertexFlags</definition>
+        <argsstring></argsstring>
+        <name>vertexFlags</name>
+        <initializer>= np.array([1, #0 
+                        1, #1 lower boundary abs zone generation outlet
+                        1, #2
+                        1, #3
+                        1, #4 lower boundary abs zone behind <ref refid="d7/d48/namespaceovertopping_1a0611502fc02e705c48006ea078cac7a2" kindref="member">obstacle</ref>
+                        1, #5 wall right boundary
+                        3, #6 wall right boundary
+                        3, #7 upper boundary abs zone behind <ref refid="d7/d48/namespaceovertopping_1a0611502fc02e705c48006ea078cac7a2" kindref="member">obstacle</ref>
+                        3, #8 upper boundary abs zone generation outlet
+                        3, #9
+                        4, #10 upper boundary abs zone generation inlet
+                        4, #11 lower boundary abs zone generation inlet 
+                        ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="158" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a9d673074933305ad648390186987d8d3" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list overtopping.segments</definition>
+        <argsstring></argsstring>
+        <name>segments</name>
+        <initializer>= [[0,1],
+          [1,2],
+          [2,3],
+          [3,4],
+          [4,5],
+          [5,6],
+          [6,7],
+          [7,8],
+          [8,9],
+          [9,10],
+          [10,11],
+          [11,0],
+          [0,9],
+          [4,7],
+              ]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="172" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a06a988e020cf14b239734d975da819f6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.segmentFlags</definition>
+        <argsstring></argsstring>
+        <name>segmentFlags</name>
+        <initializer>= np.array([ 1, #[0,1] 
+                        1, #[1,2] pipe <ref refid="d7/d48/namespaceovertopping_1a51d345f1dec02bfff4fbc6ea24f7fad3" kindref="member">left</ref> side
+                        1, #[2,3] <ref refid="d7/d48/namespaceovertopping_1ab50f875e2c90bd61fbfdca75fc0f7bff" kindref="member">tank</ref> floor
+                        1, #[3,4] pipe right side
+                        1, #[4,5] 
+                        2, #[5,6] wall after <ref refid="d7/d48/namespaceovertopping_1a0611502fc02e705c48006ea078cac7a2" kindref="member">obstacle</ref> /right boundary
+                        3, #[6,7] atm
+                        3, #[7,8] atm
+                        3, #[8,9] atm
+                        3, #[9,10] atm
+                        4, #[10,11]generation inlet
+                        1, #[11,0] 
+                        5, #[0,9] sponge
+                        5, #[4,7] sponge after <ref refid="d7/d48/namespaceovertopping_1a0611502fc02e705c48006ea078cac7a2" kindref="member">obstacle</ref>
+                      ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="188" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a6073ddb84b924d61c442cfa7053756aa" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list overtopping.regions</definition>
+        <argsstring></argsstring>
+        <name>regions</name>
+        <initializer>= [[5,0.3],[-0.5*<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>,0.3],[3*<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>+0.2+1+opts.structureCrestLevel*opts.structure_slope+2,0.4]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="206" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a82481f2f1dfddb8f2243ccb5213c5894" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.regionFlags</definition>
+        <argsstring></argsstring>
+        <name>regionFlags</name>
+        <initializer>= np.array([1,2,3])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="207" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1ab50f875e2c90bd61fbfdca75fc0f7bff" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.tank</definition>
+        <argsstring></argsstring>
+        <name>tank</name>
+        <initializer>=  st.CustomShape(<ref refid="d7/d48/namespaceovertopping_1a69329b5c88273d50ba38e2cc19dfb441" kindref="member">domain</ref>, <ref refid="d7/d48/namespaceovertopping_1adb3d4dccda1636a5b9ebe4ea3e7c6b17" kindref="member">vertices</ref>=<ref refid="d7/d48/namespaceovertopping_1adb3d4dccda1636a5b9ebe4ea3e7c6b17" kindref="member">vertices</ref>, <ref refid="d7/d48/namespaceovertopping_1a3e020a5cd18bd3d707a15927853e9c87" kindref="member">vertexFlags</ref>=<ref refid="d7/d48/namespaceovertopping_1a3e020a5cd18bd3d707a15927853e9c87" kindref="member">vertexFlags</ref>,
+                      <ref refid="d7/d48/namespaceovertopping_1a9d673074933305ad648390186987d8d3" kindref="member">segments</ref>=<ref refid="d7/d48/namespaceovertopping_1a9d673074933305ad648390186987d8d3" kindref="member">segments</ref>, <ref refid="d7/d48/namespaceovertopping_1a06a988e020cf14b239734d975da819f6" kindref="member">segmentFlags</ref>=<ref refid="d7/d48/namespaceovertopping_1a06a988e020cf14b239734d975da819f6" kindref="member">segmentFlags</ref>,
+                      <ref refid="d7/d48/namespaceovertopping_1a6073ddb84b924d61c442cfa7053756aa" kindref="member">regions</ref>=<ref refid="d7/d48/namespaceovertopping_1a6073ddb84b924d61c442cfa7053756aa" kindref="member">regions</ref>, <ref refid="d7/d48/namespaceovertopping_1a82481f2f1dfddb8f2243ccb5213c5894" kindref="member">regionFlags</ref>=<ref refid="d7/d48/namespaceovertopping_1a82481f2f1dfddb8f2243ccb5213c5894" kindref="member">regionFlags</ref>,
+                      <ref refid="d7/d48/namespaceovertopping_1ab9ae2357054fab87506f3beff070b348" kindref="member">boundaryTags</ref>=<ref refid="d7/d48/namespaceovertopping_1ab9ae2357054fab87506f3beff070b348" kindref="member">boundaryTags</ref>, <ref refid="d7/d48/namespaceovertopping_1a08613c9d15ca84941629b947943e800b" kindref="member">boundaryOrientations</ref>=<ref refid="d7/d48/namespaceovertopping_1a08613c9d15ca84941629b947943e800b" kindref="member">boundaryOrientations</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="209" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a5f6a815979f6d301497a67f1e478fa67" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary overtopping.obs_boundaryOrientations</definition>
+        <argsstring></argsstring>
+        <name>obs_boundaryOrientations</name>
+        <initializer>=  {&apos;<ref refid="d7/d48/namespaceovertopping_1a0611502fc02e705c48006ea078cac7a2" kindref="member">obstacle</ref>&apos;: None}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="216" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="216" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1aaa3a04fda8b6051b4293c517231c611a" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary overtopping.obs_boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>obs_boundaryTags</name>
+        <initializer>=  {&apos;<ref refid="d7/d48/namespaceovertopping_1a0611502fc02e705c48006ea078cac7a2" kindref="member">obstacle</ref>&apos; : 1,}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="218" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a07f0be3ce7c7ef35692ca4bdcffc5379" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list overtopping.obs_vertices</definition>
+        <argsstring></argsstring>
+        <name>obs_vertices</name>
+        <initializer>= [
+            [<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>+opts.tube,0],#0
+            [<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>+opts.tube,-opts.obs_depth],#1
+            [3*<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>+opts.tube+opts.structureCrestLevel*opts.structure_slope+1,-opts.obs_depth],#2
+            [3*<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>+opts.tube+opts.structureCrestLevel*opts.structure_slope+1,0.],#3
+            [3*<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>+opts.tube+opts.structureCrestLevel*opts.structure_slope,0.],#4
+            [3*<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>+opts.tube+opts.structureCrestLevel*opts.structure_slope,opts.structureCrestLevel],#5
+            [3*<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>+opts.tube,0],#6
+            ]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="220" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a80ecad737568b2b0eab46ab6eb186f72" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.obs_vertexFlags</definition>
+        <argsstring></argsstring>
+        <name>obs_vertexFlags</name>
+        <initializer>= np.array([1, #11 
+                        1, #12
+                        1, #13
+                        1, #14
+                        1, #15
+                        1, #16
+                        1, #17
+                        ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="230" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1ae8b49fa83b11932712a322510b77cfa7" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list overtopping.obs_segments</definition>
+        <argsstring></argsstring>
+        <name>obs_segments</name>
+        <initializer>= [[0,1],
+              [1,2],
+              [2,3],
+              [3,4],
+              [4,5],
+              [5,6],
+              [6,0],
+              ]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="239" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a452d0f48a9b52bb2b6b5bbef48ea9f9a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.obs_segmentFlags</definition>
+        <argsstring></argsstring>
+        <name>obs_segmentFlags</name>
+        <initializer>= np.array([ 1, #[11,12] 
+                            1, #[12,13] 
+                            1, #[13,14]
+                            1, #[14,15]
+                            1, #[15,16]
+                            1, #[16,17]
+                            1, #[17,11]
+                            ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="248" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a37c3eca6bc75eccb8e4bb0b4c30fb858" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list overtopping.obs_regions</definition>
+        <argsstring></argsstring>
+        <name>obs_regions</name>
+        <initializer>= [[2*<ref refid="d7/d48/namespaceovertopping_1a01a8868df20a6de07faf7e6568156a44" kindref="member">wave_length</ref>, -0.2]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="257" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a48894ccc23a1082e7d7b57d4a6ff8db3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.obs_regionFlags</definition>
+        <argsstring></argsstring>
+        <name>obs_regionFlags</name>
+        <initializer>= np.array([1])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="258" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a0611502fc02e705c48006ea078cac7a2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.obstacle</definition>
+        <argsstring></argsstring>
+        <name>obstacle</name>
+        <initializer>=  st.CustomShape(<ref refid="d7/d48/namespaceovertopping_1a69329b5c88273d50ba38e2cc19dfb441" kindref="member">domain</ref>, <ref refid="d7/d48/namespaceovertopping_1adb3d4dccda1636a5b9ebe4ea3e7c6b17" kindref="member">vertices</ref>=<ref refid="d7/d48/namespaceovertopping_1a07f0be3ce7c7ef35692ca4bdcffc5379" kindref="member">obs_vertices</ref>, <ref refid="d7/d48/namespaceovertopping_1a3e020a5cd18bd3d707a15927853e9c87" kindref="member">vertexFlags</ref>=<ref refid="d7/d48/namespaceovertopping_1a80ecad737568b2b0eab46ab6eb186f72" kindref="member">obs_vertexFlags</ref>,
+                      <ref refid="d7/d48/namespaceovertopping_1a9d673074933305ad648390186987d8d3" kindref="member">segments</ref>=<ref refid="d7/d48/namespaceovertopping_1ae8b49fa83b11932712a322510b77cfa7" kindref="member">obs_segments</ref>, <ref refid="d7/d48/namespaceovertopping_1a06a988e020cf14b239734d975da819f6" kindref="member">segmentFlags</ref>=<ref refid="d7/d48/namespaceovertopping_1a452d0f48a9b52bb2b6b5bbef48ea9f9a" kindref="member">obs_segmentFlags</ref>,
+                      <ref refid="d7/d48/namespaceovertopping_1a6073ddb84b924d61c442cfa7053756aa" kindref="member">regions</ref>=<ref refid="d7/d48/namespaceovertopping_1a37c3eca6bc75eccb8e4bb0b4c30fb858" kindref="member">obs_regions</ref>, <ref refid="d7/d48/namespaceovertopping_1a82481f2f1dfddb8f2243ccb5213c5894" kindref="member">regionFlags</ref>=<ref refid="d7/d48/namespaceovertopping_1a48894ccc23a1082e7d7b57d4a6ff8db3" kindref="member">obs_regionFlags</ref>,
+                      <ref refid="d7/d48/namespaceovertopping_1ab9ae2357054fab87506f3beff070b348" kindref="member">boundaryTags</ref>=<ref refid="d7/d48/namespaceovertopping_1aaa3a04fda8b6051b4293c517231c611a" kindref="member">obs_boundaryTags</ref>, 
+                      <ref refid="d7/d48/namespaceovertopping_1a08613c9d15ca84941629b947943e800b" kindref="member">boundaryOrientations</ref>=<ref refid="d7/d48/namespaceovertopping_1a5f6a815979f6d301497a67f1e478fa67" kindref="member">obs_boundaryOrientations</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="260" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a6e44e7b41163b75660313d20e27ff6a0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>= opts.tank_sponge[0]/opts.refinement_level</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="269" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="269" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1ab0d7490480d5cd1635375ea0406abb38" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.ecH</definition>
+        <argsstring></argsstring>
+        <name>ecH</name>
+        <initializer>= opts.ecH</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="270" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="270" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a507077288608dbb5ed612d06513fde6b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.smoothing</definition>
+        <argsstring></argsstring>
+        <name>smoothing</name>
+        <initializer>= <ref refid="d7/d48/namespaceovertopping_1ab0d7490480d5cd1635375ea0406abb38" kindref="member">ecH</ref>*<ref refid="d7/d48/namespaceovertopping_1a6e44e7b41163b75660313d20e27ff6a0" kindref="member">he</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="271" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="271" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a10e0bc0f8603aef759cb6b5988bb31a3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.vert_axis</definition>
+        <argsstring></argsstring>
+        <name>vert_axis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="277" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="277" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a52a8792123e8278700bfc629f670f990" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>overtopping.dragAlpha</definition>
+        <argsstring></argsstring>
+        <name>dragAlpha</name>
+        <initializer>=  5*(2*<ref refid="d0/df7/createAnalyticGeometry_8cpp_1a43016d873124d39034edb8cd164794db" kindref="member">np.pi</ref>/opts.Tp)/1e-6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="285" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a51d345f1dec02bfff4fbc6ea24f7fad3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool overtopping.left</definition>
+        <argsstring></argsstring>
+        <name>left</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="286" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1af951036f42778b915c6cbeed7c646c74" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="288" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a86d9a7010eb4e939ed4d31029b1cdbf3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.epsFact_solid</definition>
+        <argsstring></argsstring>
+        <name>epsFact_solid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="289" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="289" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1aba9fadb7a8286b74d154a06c02bfedcf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.center</definition>
+        <argsstring></argsstring>
+        <name>center</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="290" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a2c533d225157ea31bcb969b60d91b2ba" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.orientation</definition>
+        <argsstring></argsstring>
+        <name>orientation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="291" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a7588ebe333a7857e9cc6cd0118e87542" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.waves</definition>
+        <argsstring></argsstring>
+        <name>waves</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="292" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1ab46c3370ce2689fbc7ff53a57c6c7d10" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary overtopping::initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;pressure&apos;: <ref refid="da/d90/classovertopping_1_1P__IC" kindref="compound">P_IC</ref>(),
+                     &apos;vel_u&apos;: <ref refid="dd/d75/classovertopping_1_1AtRest" kindref="compound">AtRest</ref>(),
+                     &apos;vel_v&apos;: <ref refid="dd/d75/classovertopping_1_1AtRest" kindref="compound">AtRest</ref>(),
+                     &apos;vel_w&apos;: <ref refid="dd/d75/classovertopping_1_1AtRest" kindref="compound">AtRest</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="321" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a480501d6469d5315c05d14d301940808" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.dt_output</definition>
+        <argsstring></argsstring>
+        <name>dt_output</name>
+        <initializer>=  opts.Tp/opts.Np</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="342" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="342" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a97bc69663599c932d75ac0f206beebb0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  TpFlow.OutputStepping(final_time=<ref refid="d7/d48/namespaceovertopping_1a76b6504938b772e2ce27a71389f1446f" kindref="member">Duration</ref>,
+                                       dt_init=opts.dt_init,
+                                       <ref refid="d7/d48/namespaceovertopping_1a480501d6469d5315c05d14d301940808" kindref="member">dt_output</ref>=<ref refid="d7/d48/namespaceovertopping_1a480501d6469d5315c05d14d301940808" kindref="member">dt_output</ref>,
+                                       nDTout=None,
+                                       dt_fixed=None)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="344" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a29fdc18e5d5fd665d9ef09eb7ebb539c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem(ns_model=0,
+                                             ls_model=0,
+                                             nd=domain.nd,
+                                             cfl=opts.cfl,
+                                             <ref refid="d7/d48/namespaceovertopping_1a97bc69663599c932d75ac0f206beebb0" kindref="member">outputStepping</ref>=<ref refid="d7/d48/namespaceovertopping_1a97bc69663599c932d75ac0f206beebb0" kindref="member">outputStepping</ref>,
+                                             <ref refid="d7/d48/namespaceovertopping_1a6e44e7b41163b75660313d20e27ff6a0" kindref="member">he</ref>=<ref refid="d7/d48/namespaceovertopping_1a6e44e7b41163b75660313d20e27ff6a0" kindref="member">he</ref>,
+                                             <ref refid="d7/d48/namespaceovertopping_1a69329b5c88273d50ba38e2cc19dfb441" kindref="member">domain</ref>=<ref refid="d7/d48/namespaceovertopping_1a69329b5c88273d50ba38e2cc19dfb441" kindref="member">domain</ref>,
+                                             <ref refid="d7/d48/namespaceovertopping_1ab46c3370ce2689fbc7ff53a57c6c7d10" kindref="member">initialConditions</ref>=<ref refid="d7/d48/namespaceovertopping_1ab46c3370ce2689fbc7ff53a57c6c7d10" kindref="member">initialConditions</ref>,
+                                             )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="350" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a4f3453c612d3112482392f48b3957b78" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.params</definition>
+        <argsstring></argsstring>
+        <name>params</name>
+        <initializer>=  myTpFlowProblem.Parameters</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="360" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="360" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a54016c48ba5f539ba832dcd4d2112bfd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.useSuperLu</definition>
+        <argsstring></argsstring>
+        <name>useSuperLu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="362" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="362" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a5e975f9f090e957cc97ec1f41ca8a9c5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.surf_tension_coeff</definition>
+        <argsstring></argsstring>
+        <name>surf_tension_coeff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="363" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="363" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a09ec125342703a39f58febe1542cb356" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <initializer>=  params.Models</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="366" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a5713d95627d40d266c8e50639d2f1198" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.epsFact</definition>
+        <argsstring></argsstring>
+        <name>epsFact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="367" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="367" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a3b0ac284abce309ff4aebc03cfaf4e5e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="368" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="368" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a79af9b118571e0a356cf88810ac8ea27" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.maxLineSearches</definition>
+        <argsstring></argsstring>
+        <name>maxLineSearches</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="373" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="373" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d48/namespaceovertopping_1a5456da676316162b845805c3c669a2e4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>overtopping.maxNonlinearIts</definition>
+        <argsstring></argsstring>
+        <name>maxNonlinearIts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="374" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="374" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d7/d48/namespaceovertopping_1a34b90f4c6c432b6fd5bcc2322060f60e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def overtopping.signedDistance</definition>
+        <argsstring>(x)</argsstring>
+        <name>signedDistance</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="306" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" bodystart="306" bodyend="308"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/overtopping.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

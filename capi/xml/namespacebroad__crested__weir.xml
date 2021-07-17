@@ -1,0 +1,592 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacebroad__crested__weir" kind="namespace" language="Python">
+    <compoundname>broad_crested_weir</compoundname>
+    <innerclass refid="classbroad__crested__weir_1_1clsvof__init__cond" prot="public">broad_crested_weir::clsvof_init_cond</innerclass>
+    <innerclass refid="classbroad__crested__weir_1_1PHI__IC" prot="public">broad_crested_weir::PHI_IC</innerclass>
+    <innerclass refid="classbroad__crested__weir_1_1VF__IC" prot="public">broad_crested_weir::VF_IC</innerclass>
+    <innerclass refid="classbroad__crested__weir_1_1zero" prot="public">broad_crested_weir::zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a6e2643983b4517276fd51191cab8d0b0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  Context.Options([
+    (&quot;final_time&quot;,3.0,&quot;Final time for simulation&quot;),
+    (&quot;<ref refid="namespacebroad__crested__weir_1afa759a2af760dac6f7b60f825e1047d6" kindref="member">dt_output</ref>&quot;,0.01,&quot;Time interval to output solution&quot;),
+    (&quot;<ref refid="namespacebroad__crested__weir_1a46d602d7d254a550836f45bb8d907586" kindref="member">cfl</ref>&quot;,0.9,&quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="namespacebroad__crested__weir_1af4d492ce600d551168a5f0e0bd1ad88d" kindref="member">he</ref>&quot;,0.075,&quot;Maximum element edge length&quot;),
+    (&quot;inflow_vel&quot;,0.139,&quot;inflow velocity for left boundary&quot;),
+    ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="17" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a86dfec75dceaeb87ed6261d533bb87a2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float broad_crested_weir::waterLine_y</definition>
+        <argsstring></argsstring>
+        <name>waterLine_y</name>
+        <initializer>=  0.54</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="25" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a67720f85a8e27376d00d9e224e87a41f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float broad_crested_weir::waterLine_x</definition>
+        <argsstring></argsstring>
+        <name>waterLine_x</name>
+        <initializer>=  1.45</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="26" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a623d78431ad2b7022064ae9a40170e34" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float broad_crested_weir::outflow_level</definition>
+        <argsstring></argsstring>
+        <name>outflow_level</name>
+        <initializer>= 0.04</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="27" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1adf79b11ed316773778898d9093820ee7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float broad_crested_weir::rho_0</definition>
+        <argsstring></argsstring>
+        <name>rho_0</name>
+        <initializer>=  998.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="29" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a5e1cafdcb93d4282a55176d0346904e7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float broad_crested_weir::nu_0</definition>
+        <argsstring></argsstring>
+        <name>nu_0</name>
+        <initializer>=  1.004e-6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="30" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a2e2b8ad05d735d29b3a60bd48f58f483" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float broad_crested_weir::rho_1</definition>
+        <argsstring></argsstring>
+        <name>rho_1</name>
+        <initializer>=  1.205</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="33" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1ab9452795cf63138a30c4cb0ce04564d5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float broad_crested_weir::nu_1</definition>
+        <argsstring></argsstring>
+        <name>nu_1</name>
+        <initializer>=  1.500e-5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="34" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a9f62756f29bb091ccde2bd3a549ff50b" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list broad_crested_weir::g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>=  [0., -9.81, 0.]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="36" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1ac1cb5d04e0d63c57bcf5c959ad6f38af" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.PlanarStraightLineGraphDomain()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="45" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a9eabb7105f29abf302ed1159c1ce3d7c" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary broad_crested_weir::boundaryOrientations</definition>
+        <argsstring></argsstring>
+        <name>boundaryOrientations</name>
+        <initializer>=  {&apos;y-&apos;: np.array([0., -1.,0.]),
+                        &apos;x+&apos;: np.array([+1., 0.,0.]),
+                        &apos;y+&apos;: np.array([0., +1.,0.]),
+                        &apos;x-&apos;: np.array([-1., 0.,0.]),
+                        &apos;airvent&apos;: np.array([-1., 0.,0.]),
+                           }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="48" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a349a07abe26edf5f55f5866a2d6ae7cd" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary broad_crested_weir::boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>=  {&apos;y-&apos; : 1,
+                &apos;x+&apos; : 2,
+                &apos;y+&apos; : 3,
+                &apos;x-&apos; : 4,
+                &apos;airvent&apos;:5,
+               }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="54" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a4abd31dedd417a5cc91bcc92a49e8f55" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float broad_crested_weir::top</definition>
+        <argsstring></argsstring>
+        <name>top</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="61" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a25c9144e04c557c29d304181c3dc900f" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list broad_crested_weir::vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <initializer>= [[0.0, 0.0],#0
+          [1.0, 0.0],#1
+          [1.0, 0.401], #2
+          [1.5, 0.401],#3
+          [1.5, 0.35],#4 airvent
+          [1.5, 0.25],#5 airvent
+          [1.5, 0.0 ],#6
+          [2.5,  0.0 ],#7
+          [2.5,  <ref refid="namespacebroad__crested__weir_1a4abd31dedd417a5cc91bcc92a49e8f55" kindref="member">top</ref> ],#8
+          [0.0,  <ref refid="namespacebroad__crested__weir_1a4abd31dedd417a5cc91bcc92a49e8f55" kindref="member">top</ref> ],#9
+]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="62" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a1c91c92be801b4bb2b7281e2ddf7958f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.vertexFlags</definition>
+        <argsstring></argsstring>
+        <name>vertexFlags</name>
+        <initializer>= np.array([1, 1, 1, 1,
+                      1, 1,
+                      1, 1,
+                      3, 3,])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="74" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a3ea4d86962918e8f964b2814e84e0466" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list broad_crested_weir::segments</definition>
+        <argsstring></argsstring>
+        <name>segments</name>
+        <initializer>= [[0,1],#0
+          [1,2],#1
+          [2,3],#2
+          [3,4],#3
+          [4,5],#4 airvent
+          [5,6],#5
+          [6,7],#6
+          [7,8],#7
+          [8,9],#8
+          [9,0],#9
+             ]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="79" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a30961213c965d570aa5c9afcabcc9530" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.segmentFlags</definition>
+        <argsstring></argsstring>
+        <name>segmentFlags</name>
+        <initializer>= np.array([1, 1, 1, 1,
+                       5,
+                       1, 1,
+                       2,
+                       3,
+                       4,
+                          ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="91" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a886fba25856f76812dbf1ed292cdee83" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list broad_crested_weir::regions</definition>
+        <argsstring></argsstring>
+        <name>regions</name>
+        <initializer>=  [ [ 0.1 , 0.1] ]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="99" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a6ea8bebcf37baa1e3694d36e720a7a19" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.regionFlags</definition>
+        <argsstring></argsstring>
+        <name>regionFlags</name>
+        <initializer>= np.array([1])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="101" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a5721d3d6ddcff7915fdda11db1ffdf72" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.tank</definition>
+        <argsstring></argsstring>
+        <name>tank</name>
+        <initializer>=  st.CustomShape(<ref refid="namespacebroad__crested__weir_1ac1cb5d04e0d63c57bcf5c959ad6f38af" kindref="member">domain</ref>, <ref refid="namespacebroad__crested__weir_1a25c9144e04c557c29d304181c3dc900f" kindref="member">vertices</ref>=<ref refid="namespacebroad__crested__weir_1a25c9144e04c557c29d304181c3dc900f" kindref="member">vertices</ref>, <ref refid="namespacebroad__crested__weir_1a1c91c92be801b4bb2b7281e2ddf7958f" kindref="member">vertexFlags</ref>=<ref refid="namespacebroad__crested__weir_1a1c91c92be801b4bb2b7281e2ddf7958f" kindref="member">vertexFlags</ref>,
+                      <ref refid="namespacebroad__crested__weir_1a3ea4d86962918e8f964b2814e84e0466" kindref="member">segments</ref>=<ref refid="namespacebroad__crested__weir_1a3ea4d86962918e8f964b2814e84e0466" kindref="member">segments</ref>, <ref refid="namespacebroad__crested__weir_1a30961213c965d570aa5c9afcabcc9530" kindref="member">segmentFlags</ref>=<ref refid="namespacebroad__crested__weir_1a30961213c965d570aa5c9afcabcc9530" kindref="member">segmentFlags</ref>,
+                      <ref refid="namespacebroad__crested__weir_1a886fba25856f76812dbf1ed292cdee83" kindref="member">regions</ref>=<ref refid="namespacebroad__crested__weir_1a886fba25856f76812dbf1ed292cdee83" kindref="member">regions</ref>, <ref refid="namespacebroad__crested__weir_1a6ea8bebcf37baa1e3694d36e720a7a19" kindref="member">regionFlags</ref>=<ref refid="namespacebroad__crested__weir_1a6ea8bebcf37baa1e3694d36e720a7a19" kindref="member">regionFlags</ref>,
+                      <ref refid="namespacebroad__crested__weir_1a349a07abe26edf5f55f5866a2d6ae7cd" kindref="member">boundaryTags</ref>=<ref refid="namespacebroad__crested__weir_1a349a07abe26edf5f55f5866a2d6ae7cd" kindref="member">boundaryTags</ref>, <ref refid="namespacebroad__crested__weir_1a9eabb7105f29abf302ed1159c1ce3d7c" kindref="member">boundaryOrientations</ref>=<ref refid="namespacebroad__crested__weir_1a9eabb7105f29abf302ed1159c1ce3d7c" kindref="member">boundaryOrientations</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="104" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1ae775f8e5cb5c247f8868e53aa82e22b2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.U</definition>
+        <argsstring></argsstring>
+        <name>U</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="113" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a1f86683c7f8ef3532b72797bfc6f010d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.waterLevel</definition>
+        <argsstring></argsstring>
+        <name>waterLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="114" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a85a226ee2a5c92197e551e2ee818c918" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.smoothing</definition>
+        <argsstring></argsstring>
+        <name>smoothing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="115" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a8461287bd021944fd5ba1ed141ec1737" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.seaLevel</definition>
+        <argsstring></argsstring>
+        <name>seaLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="117" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a99046459b42742d592ec776a1c2c7453" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.rhoUp</definition>
+        <argsstring></argsstring>
+        <name>rhoUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="118" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a74de4b38b19bca322ff3f100d60f410c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.rhoDown</definition>
+        <argsstring></argsstring>
+        <name>rhoDown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="119" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a4b17134982c982bed0d6fff1b02cff8f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.refLevel</definition>
+        <argsstring></argsstring>
+        <name>refLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="121" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a6ed904629eff270efc3df55633eaf976" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.uOfXT</definition>
+        <argsstring></argsstring>
+        <name>uOfXT</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="126" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1af4d492ce600d551168a5f0e0bd1ad88d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="133" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1afa922e87209110ebf226faf2abaa3883" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="135" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1aaed7498b5a679b9c26e12718d87b702a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="184" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1ad384adb7ce984fa30cb9ad2ea38c2010" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.final_time</definition>
+        <argsstring></argsstring>
+        <name>final_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="185" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1afa759a2af760dac6f7b60f825e1047d6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.dt_output</definition>
+        <argsstring></argsstring>
+        <name>dt_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="186" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a46d602d7d254a550836f45bb8d907586" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.cfl</definition>
+        <argsstring></argsstring>
+        <name>cfl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="189" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a28a871ceecc28653be722b7bd017b605" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.useSuperlu</definition>
+        <argsstring></argsstring>
+        <name>useSuperlu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="190" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a3e84ca32a16add3b57470618b9a12fc9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <initializer>=  myTpFlowProblem.SystemPhysics.modelDict</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="195" column="1" bodyfile="tests/proteus_tutorial/2d/broad_crested_weir.py" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a162b1641c88e4792d4c1153f692d7172" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>broad_crested_weir.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  TpFlow.OutputStepping(opts.final_time,<ref refid="namespacebroad__crested__weir_1afa759a2af760dac6f7b60f825e1047d6" kindref="member">dt_output</ref>=opts.dt_output)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/broad_crested_weir.py" line="184" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/broad_crested_weir.py" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebroad__crested__weir_1a3656db7fd660130478a62d44aad1bd26" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary broad_crested_weir.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;pressure&apos;: <ref refid="classbroad__crested__weir_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;pressure_increment&apos;: <ref refid="classbroad__crested__weir_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vel_u&apos;: <ref refid="classbroad__crested__weir_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vel_v&apos;: <ref refid="classbroad__crested__weir_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vof&apos;: <ref refid="classbroad__crested__weir_1_1VF__IC" kindref="compound">VF_IC</ref>(),
+                     &apos;ncls&apos;: <ref refid="classbroad__crested__weir_1_1PHI__IC" kindref="compound">PHI_IC</ref>(),
+                     &apos;rdls&apos;: <ref refid="classbroad__crested__weir_1_1PHI__IC" kindref="compound">PHI_IC</ref>(),
+                     &apos;clsvof&apos;: <ref refid="classbroad__crested__weir_1_1clsvof__init__cond" kindref="compound">clsvof_init_cond</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/broad_crested_weir.py" line="185" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/broad_crested_weir.py" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>broad crested weir 2-D
+</verbatim> </para>
+    </detaileddescription>
+    <location file="tests/proteus_tutorial/2d/broad_crested_weir.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

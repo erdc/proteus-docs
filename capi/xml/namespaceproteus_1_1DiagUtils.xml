@@ -1,0 +1,289 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceproteus_1_1DiagUtils" kind="namespace" language="Python">
+    <compoundname>proteus::DiagUtils</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceproteus_1_1DiagUtils_1ab1e802ce1e7c805b592b2c8723e1d8a0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::DiagUtils.Ident1</definition>
+        <argsstring></argsstring>
+        <name>Ident1</name>
+        <initializer>=  numpy.ones((1,1),&apos;d&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DiagUtils.py" line="111" column="1" bodyfile="DiagUtils.py" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1DiagUtils_1a83bad97f4c2cb8a33a824c926d0164ca" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::DiagUtils.Ident2</definition>
+        <argsstring></argsstring>
+        <name>Ident2</name>
+        <initializer>=  numpy.zeros((2,2),&apos;d&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DiagUtils.py" line="113" column="1" bodyfile="DiagUtils.py" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1DiagUtils_1a1697a35baed72a7c34ddb6c37cd63e33" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::DiagUtils.Ident3</definition>
+        <argsstring></argsstring>
+        <name>Ident3</name>
+        <initializer>=  numpy.zeros((3,3),&apos;d&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DiagUtils.py" line="117" column="1" bodyfile="DiagUtils.py" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceproteus_1_1DiagUtils_1a591dd13264dd666d4b4de551c11904d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.DiagUtils.L2errorFEMvsAF</definition>
+        <argsstring>(analyticalFunction, quadraturePointArray, quadratureWeightArray, functionValueArray, T=None)</argsstring>
+        <name>L2errorFEMvsAF</name>
+        <param>
+          <type>analyticalFunction</type>
+          <defname>analyticalFunction</defname>
+        </param>
+        <param>
+          <type>quadraturePointArray</type>
+          <defname>quadraturePointArray</defname>
+        </param>
+        <param>
+          <type>quadratureWeightArray</type>
+          <defname>quadratureWeightArray</defname>
+        </param>
+        <param>
+          <type>functionValueArray</type>
+          <defname>functionValueArray</defname>
+        </param>
+        <param>
+          <type><ref refid="Headers_8h_1a38fec5c94a02f67ba7bf45025dd3ac80" kindref="member">T</ref></type>
+          <defname>T</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>supposed to be L2 norm of error in vector quantity
+I think just using dot would cover both scalar and vector case
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DiagUtils.py" line="22" column="1" bodyfile="DiagUtils.py" bodystart="22" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1DiagUtils_1a283be29bc94de3c684c46e52000f7730" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.DiagUtils.getQuadraturePhysPointsAndWeights</definition>
+        <argsstring>(mesh, femSpace, quadrature, verbose=0)</argsstring>
+        <name>getQuadraturePhysPointsAndWeights</name>
+        <param>
+          <type>mesh</type>
+          <defname>mesh</defname>
+        </param>
+        <param>
+          <type>femSpace</type>
+          <defname>femSpace</defname>
+        </param>
+        <param>
+          <type>quadrature</type>
+          <defname>quadrature</defname>
+        </param>
+        <param>
+          <type>verbose</type>
+          <defname>verbose</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>for convenience, hide steps for generating quadrature points and
+weights, with Jacobians, on physical mesh based on points and
+weights on reference element
+
+returns points array that&apos;s nelem x nquadloc x 3
+        weight array that&apos;s nelem x nquadloc
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DiagUtils.py" line="38" column="1" bodyfile="DiagUtils.py" bodystart="38" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1DiagUtils_1ab914eba8eb3d8a0597d83c3c9594ca88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.DiagUtils.getFEMvals</definition>
+        <argsstring>(u, xiArray, verbose=0)</argsstring>
+        <name>getFEMvals</name>
+        <param>
+          <type><ref refid="Headers_8h_1a81073496b3df485c6b59c5823819310b" kindref="member">u</ref></type>
+          <defname>u</defname>
+        </param>
+        <param>
+          <type>xiArray</type>
+          <defname>xiArray</defname>
+        </param>
+        <param>
+          <type>verbose</type>
+          <defname>verbose</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>for convenience, hide steps for generating finite element solution
+at physical points corresponding to reference points held in
+xiArray
+
+returns array that&apos;s nelem x npointloc
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DiagUtils.py" line="74" column="1" bodyfile="DiagUtils.py" bodystart="74" bodyend="110"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1DiagUtils_1ae8db45dfd0c1532939771fe73600a135" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.DiagUtils.testCrRavNodalBasis</definition>
+        <argsstring>(nd, verbose=0)</argsstring>
+        <name>testCrRavNodalBasis</name>
+        <param>
+          <type>nd</type>
+          <defname>nd</defname>
+        </param>
+        <param>
+          <type>verbose</type>
+          <defname>verbose</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>test local Crouzeix-Raviart element space</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DiagUtils.py" line="129" column="1" bodyfile="DiagUtils.py" bodystart="129" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1DiagUtils_1abec4501fc05a2edc5b7cc8cffaee0e58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.DiagUtils.testQuadNodalBasis</definition>
+        <argsstring>(nd, verbose=0)</argsstring>
+        <name>testQuadNodalBasis</name>
+        <param>
+          <type>nd</type>
+          <defname>nd</defname>
+        </param>
+        <param>
+          <type>verbose</type>
+          <defname>verbose</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>test local P2 nodal finite element space</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DiagUtils.py" line="198" column="1" bodyfile="DiagUtils.py" bodystart="198" bodyend="271"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1DiagUtils_1a0f745df9dd52db21cc5c29ffcde34af7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.DiagUtils.testEdgeDOFMap</definition>
+        <argsstring>(mesh, nd)</argsstring>
+        <name>testEdgeDOFMap</name>
+        <param>
+          <type>mesh</type>
+          <defname>mesh</defname>
+        </param>
+        <param>
+          <type>nd</type>
+          <defname>nd</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>test edge dof map to see what its doing
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DiagUtils.py" line="272" column="1" bodyfile="DiagUtils.py" bodystart="272" bodyend="316"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1DiagUtils_1a785fc9fd5940348aaadba4edb8113d0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.DiagUtils.testQuadRefMats</definition>
+        <argsstring>(nd, verbose=0)</argsstring>
+        <name>testQuadRefMats</name>
+        <param>
+          <type>nd</type>
+          <defname>nd</defname>
+        </param>
+        <param>
+          <type>verbose</type>
+          <defname>verbose</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>test quad reference matrices to see what its doing
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DiagUtils.py" line="317" column="1" bodyfile="DiagUtils.py" bodystart="317" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1DiagUtils_1a360f1258c7284bcd6405389506c9e968" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.DiagUtils.testQuadDOFMap</definition>
+        <argsstring>(mesh, nd, verbose=0)</argsstring>
+        <name>testQuadDOFMap</name>
+        <param>
+          <type>mesh</type>
+          <defname>mesh</defname>
+        </param>
+        <param>
+          <type>nd</type>
+          <defname>nd</defname>
+        </param>
+        <param>
+          <type>verbose</type>
+          <defname>verbose</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>test quad dof map to see what its doing
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="DiagUtils.py" line="347" column="1" bodyfile="DiagUtils.py" bodystart="347" bodyend="395"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Module for diagnostic utilities
+
+.. inheritance-diagram:: proteus.DiagUtils
+   :parts: 1
+</verbatim> </para>
+    </detaileddescription>
+    <location file="DiagUtils.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

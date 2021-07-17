@@ -1,0 +1,199 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classproteus_1_1FemTools_1_1BernsteinOnSimplex" kind="class" language="Python" prot="public">
+    <compoundname>proteus::FemTools::BernsteinOnSimplex</compoundname>
+    <basecompoundref refid="classproteus_1_1FemTools_1_1LocalFunctionSpace" prot="public" virt="non-virtual">proteus.FemTools.LocalFunctionSpace</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classproteus_1_1FemTools_1_1BernsteinOnSimplex_1a8e77ae784023efae077d035e1c604809" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.FemTools.BernsteinOnSimplex::referenceElement</definition>
+        <argsstring></argsstring>
+        <name>referenceElement</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FemTools.py" line="1084" column="1" bodyfile="FemTools.py" bodystart="1084" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1FemTools_1_1BernsteinOnSimplex_1a392cdaaaa045247ab0eb0525401d4a83" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.FemTools.BernsteinOnSimplex::gradientList</definition>
+        <argsstring></argsstring>
+        <name>gradientList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FemTools.py" line="1087" column="1" bodyfile="FemTools.py" bodystart="1087" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1FemTools_1_1BernsteinOnSimplex_1aaba9361ed9c734a73c209ea58c40e5c3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.FemTools.BernsteinOnSimplex::basisHessians</definition>
+        <argsstring></argsstring>
+        <name>basisHessians</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FemTools.py" line="1088" column="1" bodyfile="FemTools.py" bodystart="1088" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1FemTools_1_1BernsteinOnSimplex_1a9a23046b20751c566b3a33d338fdb3dd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.FemTools.BernsteinOnSimplex::nonzeroHessians</definition>
+        <argsstring></argsstring>
+        <name>nonzeroHessians</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FemTools.py" line="1089" column="1" bodyfile="FemTools.py" bodystart="1089" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classproteus_1_1FemTools_1_1BernsteinOnSimplex_1a4e43a703b5b3c4981ab28ebc5ab43a18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.FemTools.BernsteinOnSimplex.__init__</definition>
+        <argsstring>(self, nd=3)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>nd</type>
+          <defname>nd</defname>
+          <defval>3</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FemTools.py" line="1078" column="1" bodyfile="FemTools.py" bodystart="1078" bodyend="1248"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Quadratic Bernstein polynomials on the unit nd-simplex.
+
+The basis functions are numbered according to
+
+.. math::
+
+\psi &amp;= \lambda_i^2               0&lt;= i&lt;= d
+\psi &amp;= 2\lambda_j\lambda_k       0&lt;= j &lt; k &lt;= d
+
+where :math:`\lambda_i` is the barycentric coordinate associated
+with node i (i.e., it&apos;s 1 at node i and zero elsewhere). 
+These can be generalized to:
+
+\psi &amp;= p!/(i!j!k!)\lambda_0^i\lambda_1^j\lambda_2^k, 0&lt;=i,j,k&lt;=order, i+j+k=order
+
+Gradients of shape functions are
+
+.. math::
+
+ \nabla \psi_i &amp;= 2\lambda_i\nabla\lambda_i   0&lt;= i &lt;= d
+ \nabla \psi_i &amp;= 2\lambda_k\nabla\lambda_j + 2\lambda_j\nabla\lambda_k \mbox{for} 0 &lt;= j &lt; k &lt;= d
+
+which again can be generalized via the general formula above.
+
+In 2d we have
+
+.. math::
+
+\psi_i &amp;= \lambda_i^2  0&lt;= i&lt;= 2
+\psi_3 &amp;= 2\lambda_0\lambda_1
+\psi_4 &amp;= 2\lambda_1\lambda_2
+\psi_5 &amp;= 2\lambda_0\lambda_2
+
+2d numberings for :math:`\psi`
+
+  2
+  |\
+  | \
+  |  \
+  5   4
+  |    \
+  |     \
+  0---3--1
+
+Note that mesh numbers edges according to the node they are across
+from, so that local dof 3 corresponds to edge 2, local dof 4
+corresponds to edge 0, local dof 5 corresponds to edge 1,
+
+3d should be
+
+.. math::
+
+\psi_i &amp;= \lambda_i^2  0&lt;= i&lt;= 3
+\psi_4 &amp;= 2\lambda_0\lambda_1
+\psi_5 &amp;= 2\lambda_1\lambda_2
+\psi_6 &amp;= 2\lambda_2\lambda_3
+\psi_7 &amp;= 2\lambda_0\lambda_2
+\psi_8 &amp;= 2\lambda_1\lambda_3
+\psi_9 &amp;= 2\lambda_0\lambda_3
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>object</label>
+      </node>
+      <node id="2">
+        <label>proteus.FemTools.LocalFunctionSpace</label>
+        <link refid="classproteus_1_1FemTools_1_1LocalFunctionSpace"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>proteus.FemTools.BernsteinOnSimplex</label>
+        <link refid="classproteus_1_1FemTools_1_1BernsteinOnSimplex"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>object</label>
+      </node>
+      <node id="2">
+        <label>proteus.FemTools.LocalFunctionSpace</label>
+        <link refid="classproteus_1_1FemTools_1_1LocalFunctionSpace"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>proteus.FemTools.BernsteinOnSimplex</label>
+        <link refid="classproteus_1_1FemTools_1_1BernsteinOnSimplex"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="FemTools.py" line="1016" column="1" bodyfile="FemTools.py" bodystart="1016" bodyend="1249"/>
+    <listofallmembers>
+      <member refid="classproteus_1_1FemTools_1_1BernsteinOnSimplex_1a4e43a703b5b3c4981ab28ebc5ab43a18" prot="public" virt="non-virtual"><scope>proteus::FemTools::BernsteinOnSimplex</scope><name>__init__</name></member>
+      <member refid="classproteus_1_1FemTools_1_1LocalFunctionSpace_1ac27bb5062e2e476ffa6648d70b1c33d9" prot="public" virt="non-virtual" ambiguityscope="proteus::FemTools::LocalFunctionSpace."><scope>proteus::FemTools::BernsteinOnSimplex</scope><name>__init__</name></member>
+      <member refid="classproteus_1_1FemTools_1_1LocalFunctionSpace_1af19beeb708dd758eb6890b199d0b1d38" prot="public" virt="non-virtual"><scope>proteus::FemTools::BernsteinOnSimplex</scope><name>basis</name></member>
+      <member refid="classproteus_1_1FemTools_1_1LocalFunctionSpace_1ab74c47f0b65719f4fa279f601c4d6512" prot="public" virt="non-virtual"><scope>proteus::FemTools::BernsteinOnSimplex</scope><name>basisGradients</name></member>
+      <member refid="classproteus_1_1FemTools_1_1LocalFunctionSpace_1aab3043f959c1a0aca1d651c550fb60b2" prot="public" virt="non-virtual"><scope>proteus::FemTools::BernsteinOnSimplex</scope><name>basisGradientsTrace</name></member>
+      <member refid="classproteus_1_1FemTools_1_1BernsteinOnSimplex_1aaba9361ed9c734a73c209ea58c40e5c3" prot="public" virt="non-virtual"><scope>proteus::FemTools::BernsteinOnSimplex</scope><name>basisHessians</name></member>
+      <member refid="classproteus_1_1FemTools_1_1LocalFunctionSpace_1a313fd8ea74e4685c4f19c5b9581ebb38" prot="public" virt="non-virtual"><scope>proteus::FemTools::BernsteinOnSimplex</scope><name>basisTrace</name></member>
+      <member refid="classproteus_1_1FemTools_1_1LocalFunctionSpace_1adf96041ee3576eeb7a2018426bb1046a" prot="public" virt="non-virtual"><scope>proteus::FemTools::BernsteinOnSimplex</scope><name>defineTraceFunctions</name></member>
+      <member refid="classproteus_1_1FemTools_1_1LocalFunctionSpace_1a9a0c22553fef7255f58e70a3b3c489cd" prot="public" virt="non-virtual"><scope>proteus::FemTools::BernsteinOnSimplex</scope><name>dim</name></member>
+      <member refid="classproteus_1_1FemTools_1_1BernsteinOnSimplex_1a392cdaaaa045247ab0eb0525401d4a83" prot="public" virt="non-virtual"><scope>proteus::FemTools::BernsteinOnSimplex</scope><name>gradientList</name></member>
+      <member refid="classproteus_1_1FemTools_1_1BernsteinOnSimplex_1a9a23046b20751c566b3a33d338fdb3dd" prot="public" virt="non-virtual"><scope>proteus::FemTools::BernsteinOnSimplex</scope><name>nonzeroHessians</name></member>
+      <member refid="classproteus_1_1FemTools_1_1LocalFunctionSpace_1ae0ed819288739c9fa9858f4cac83ebaf" prot="public" virt="non-virtual"><scope>proteus::FemTools::BernsteinOnSimplex</scope><name>range_dim</name></member>
+      <member refid="classproteus_1_1FemTools_1_1BernsteinOnSimplex_1a8e77ae784023efae077d035e1c604809" prot="public" virt="non-virtual"><scope>proteus::FemTools::BernsteinOnSimplex</scope><name>referenceElement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

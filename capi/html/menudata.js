@@ -1,3 +1,25 @@
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this file.
+
+Copyright (C) 1997-2019 by Dimitri van Heesch
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of version 2 of the GNU General Public License as published by
+the Free Software Foundation
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along
+with this program; if not, write to the Free Software Foundation, Inc.,
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+
+@licend  The above is the entire license notice
+for the JavaScript code in this file
+*/
 var menudata={children:[
 {text:"Main Page",url:"index.html"},
 {text:"Modules",url:"modules.html"},
@@ -5,7 +27,7 @@ var menudata={children:[
 {text:"Namespace List",url:"namespaces.html"},
 {text:"Namespace Members",url:"namespacemembers.html",children:[
 {text:"All",url:"namespacemembers.html",children:[
-{text:"_",url:"namespacemembers.html#index__"},
+{text:"_",url:"namespacemembers.html#index__5F"},
 {text:"b",url:"namespacemembers.html#index_b"},
 {text:"c",url:"namespacemembers.html#index_c"},
 {text:"d",url:"namespacemembers.html#index_d"},
@@ -24,7 +46,7 @@ var menudata={children:[
 {text:"y",url:"namespacemembers.html#index_y"},
 {text:"z",url:"namespacemembers.html#index_z"}]},
 {text:"Functions",url:"namespacemembers_func.html",children:[
-{text:"_",url:"namespacemembers_func.html#index__"},
+{text:"_",url:"namespacemembers_func.html#index__5F"},
 {text:"b",url:"namespacemembers_func.html#index_b"},
 {text:"c",url:"namespacemembers_func.html#index_c"},
 {text:"d",url:"namespacemembers_func.html#index_d"},
@@ -66,6 +88,7 @@ var menudata={children:[
 {text:"n",url:"functions_n.html#index_n"},
 {text:"o",url:"functions_o.html#index_o"},
 {text:"p",url:"functions_p.html#index_p"},
+{text:"q",url:"functions_q.html#index_q"},
 {text:"r",url:"functions_r.html#index_r"},
 {text:"s",url:"functions_s.html#index_s"},
 {text:"t",url:"functions_t.html#index_t"},
@@ -75,7 +98,7 @@ var menudata={children:[
 {text:"x",url:"functions_x.html#index_x"},
 {text:"y",url:"functions_y.html#index_y"},
 {text:"z",url:"functions_z.html#index_z"},
-{text:"~",url:"functions_0x7e.html#index_0x7e"}]},
+{text:"~",url:"functions_~.html#index__7E"}]},
 {text:"Functions",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
 {text:"b",url:"functions_func_b.html#index_b"},
@@ -100,7 +123,7 @@ var menudata={children:[
 {text:"v",url:"functions_func_v.html#index_v"},
 {text:"w",url:"functions_func_w.html#index_w"},
 {text:"x",url:"functions_func_x.html#index_x"},
-{text:"~",url:"functions_func_0x7e.html#index_0x7e"}]},
+{text:"~",url:"functions_func_~.html#index__7E"}]},
 {text:"Variables",url:"functions_vars.html",children:[
 {text:"a",url:"functions_vars.html#index_a"},
 {text:"b",url:"functions_vars_b.html#index_b"},
@@ -117,6 +140,7 @@ var menudata={children:[
 {text:"n",url:"functions_vars_n.html#index_n"},
 {text:"o",url:"functions_vars_o.html#index_o"},
 {text:"p",url:"functions_vars_p.html#index_p"},
+{text:"q",url:"functions_vars_q.html#index_q"},
 {text:"r",url:"functions_vars_r.html#index_r"},
 {text:"s",url:"functions_vars_s.html#index_s"},
 {text:"t",url:"functions_vars_t.html#index_t"},
@@ -131,7 +155,7 @@ var menudata={children:[
 {text:"File List",url:"files.html"},
 {text:"File Members",url:"globals.html",children:[
 {text:"All",url:"globals.html",children:[
-{text:"_",url:"globals.html#index__"},
+{text:"_",url:"globals.html#index__5F"},
 {text:"a",url:"globals_a.html#index_a"},
 {text:"b",url:"globals_b.html#index_b"},
 {text:"c",url:"globals_c.html#index_c"},
@@ -207,7 +231,7 @@ var menudata={children:[
 {text:"y",url:"globals_vars.html#index_y"},
 {text:"z",url:"globals_vars.html#index_z"}]},
 {text:"Macros",url:"globals_defs.html",children:[
-{text:"_",url:"globals_defs.html#index__"},
+{text:"_",url:"globals_defs.html#index__5F"},
 {text:"a",url:"globals_defs.html#index_a"},
 {text:"c",url:"globals_defs.html#index_c"},
 {text:"d",url:"globals_defs.html#index_d"},

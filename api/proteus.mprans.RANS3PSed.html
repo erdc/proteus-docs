@@ -1,42 +1,47 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>proteus.mprans.RANS3PSed module &mdash; Proteus 1.7.4.dev0 documentation</title>
+  <title>proteus.mprans.RANS3PSed module &mdash; Proteus 1.8.0 documentation</title>
   
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
 
   
   
     <link rel="shortcut icon" href="../_static/tritonBorder.ico"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
 </head>
@@ -65,7 +70,7 @@
             
             
               <div class="version">
-                1.7.4.dev0
+                1.8.0
               </div>
             
           
@@ -82,6 +87,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -89,19 +95,12 @@
               
             
             
-              <p class="caption"><span class="caption-text">General</span></p>
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../apicapi.html">API docs</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Tools</span></p>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../tools/boundary_conditions.html">BoundaryConditions</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../tools/boundary_conditions.html#usage">Usage</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../tools/boundary_conditions.html#import">Import</a></li>
-</ul>
-</li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/spatial_tools.html">SpatialTools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/spatial_tools.html#usage">Usage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tools/spatial_tools.html#import">Import</a></li>
@@ -142,7 +141,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../tools/two_phase_flow.html">TwoPhaseFlow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tools/wave_tools.html">WaveTools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/wave_tools.html#usage">Usage</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tools/wave_tools.html#import-in-command-line">Import in command line</a></li>
@@ -154,33 +152,9 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Models</span></p>
+<p class="caption" role="heading"><span class="caption-text">Models</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../models/body_dynamics.html">Body Dynamics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#implementation">Implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#classes">Classes</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchsystem">ProtChSystem</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchbody">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmesh">ProtChMesh</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmoorings">ProtChMoorings</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchaddedmass">ProtChAddedMass</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id4">ProtChMoorings</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/free_surface.html">Free Surface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#vof-ncls">VOF - NCLS</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#clsvof">CLSVOF</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../models/mesh_adaptivity.html">Mesh Adaptivity</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../models/mesh_motion.html">Mesh Motion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../models/navier_stokes.html">Navier-Stokes</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../models/navier_stokes.html">Multiphase Navier-Stokes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#two-phase">Two-Phase</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#three-phase">Three-Phase</a></li>
@@ -191,11 +165,41 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../models/SWFlow.html">Shallow Water Flow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#shallow-water-equations">Shallow Water Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#modified-green-naghdi-equations">Modified Green-Naghdi equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/SWFlow.html#running-the-tests">Running the tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../models/free_surface.html">Free Surface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#vof-ncls">VOF - NCLS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/free_surface.html#clsvof">CLSVOF</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../models/body_dynamics.html">Multi-Body Solid Dynamics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#implementation">Implementation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#classes">Classes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchsystem">ProtChSystem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchbody">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmesh">ProtChMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchmoorings">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#protchaddedmass">ProtChAddedMass</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../models/body_dynamics.html#postprocessing-tools">Postprocessing Tools</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id2">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../models/body_dynamics.html#id3">ProtChMoorings</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -230,18 +234,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html">Docs</a> &raquo;</li>
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>proteus.mprans.RANS3PSed module</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             
               <a href="https://github.com/erdc/proteus/blob/masterdocs/source/api/proteus.mprans.RANS3PSed.rst" class="fa fa-github"> Edit on GitHub</a>
             
@@ -260,56 +266,56 @@
   <div class="section" id="module-proteus.mprans.RANS3PSed">
 <span id="proteus-mprans-rans3psed-module"></span><h1>proteus.mprans.RANS3PSed module<a class="headerlink" href="#module-proteus.mprans.RANS3PSed" title="Permalink to this headline">¶</a></h1>
 <dl class="py class">
-<dt id="proteus.mprans.RANS3PSed.SubgridError">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.RANS3PSed.</code><code class="sig-name descname">SubgridError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coefficients</span></em>, <em class="sig-param"><span class="n">nd</span></em>, <em class="sig-param"><span class="n">lag</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">nStepsToDelay</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">hFactor</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">noPressureStabilization</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.SubgridError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.SubgridError">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.mprans.RANS3PSed.</span></span><span class="sig-name descname"><span class="pre">SubgridError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coefficients</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nStepsToDelay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">hFactor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">noPressureStabilization</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.SubgridError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.SubgridError.html#proteus.SubgridError.SGE_base" title="proteus.SubgridError.SGE_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.SubgridError.SGE_base</span></code></a></p>
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.SubgridError.initializeElementQuadrature">
-<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mesh</span></em>, <em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cq</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.SubgridError.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.SubgridError.initializeElementQuadrature">
+<span class="sig-name descname"><span class="pre">initializeElementQuadrature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cq</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.SubgridError.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.SubgridError.updateSubgridErrorHistory">
-<code class="sig-name descname">updateSubgridErrorHistory</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">initializationPhase</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.SubgridError.updateSubgridErrorHistory" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.SubgridError.updateSubgridErrorHistory">
+<span class="sig-name descname"><span class="pre">updateSubgridErrorHistory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initializationPhase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.SubgridError.updateSubgridErrorHistory" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.SubgridError.calculateSubgridError">
-<code class="sig-name descname">calculateSubgridError</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">q</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.SubgridError.calculateSubgridError" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.SubgridError.calculateSubgridError">
+<span class="sig-name descname"><span class="pre">calculateSubgridError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.SubgridError.calculateSubgridError" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="proteus.mprans.RANS3PSed.NumericalFlux">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.RANS3PSed.</code><code class="sig-name descname">NumericalFlux</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">vt</span></em>, <em class="sig-param"><span class="n">getPointwiseBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getAdvectiveFluxBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getDiffusiveFluxBoundaryConditions</span></em>, <em class="sig-param"><span class="n">getPeriodicBoundaryConditions</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.NumericalFlux" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.NumericalFlux">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.mprans.RANS3PSed.</span></span><span class="sig-name descname"><span class="pre">NumericalFlux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">getPointwiseBoundaryConditions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">getAdvectiveFluxBoundaryConditions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">getDiffusiveFluxBoundaryConditions</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">getPeriodicBoundaryConditions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.NumericalFlux" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.NumericalFlux.html#proteus.NumericalFlux.NavierStokes_Advection_DiagonalUpwind_Diffusion_SIPG_exterior" title="proteus.NumericalFlux.NavierStokes_Advection_DiagonalUpwind_Diffusion_SIPG_exterior"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.NumericalFlux.NavierStokes_Advection_DiagonalUpwind_Diffusion_SIPG_exterior</span></code></a></p>
 <dl class="py attribute">
-<dt id="proteus.mprans.RANS3PSed.NumericalFlux.hasInterior">
-<code class="sig-name descname">hasInterior</code><em class="property"> = False</em><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.NumericalFlux.hasInterior" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.NumericalFlux.hasInterior">
+<span class="sig-name descname"><span class="pre">hasInterior</span></span><em class="property"> <span class="pre">=</span> <span class="pre">False</span></em><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.NumericalFlux.hasInterior" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="proteus.mprans.RANS3PSed.ShockCapturing">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.RANS3PSed.</code><code class="sig-name descname">ShockCapturing</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coefficients</span></em>, <em class="sig-param"><span class="n">nd</span></em>, <em class="sig-param"><span class="n">shockCapturingFactor</span><span class="o">=</span><span class="default_value">0.25</span></em>, <em class="sig-param"><span class="n">lag</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">nStepsToDelay</span><span class="o">=</span><span class="default_value">3</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.ShockCapturing" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.ShockCapturing">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.mprans.RANS3PSed.</span></span><span class="sig-name descname"><span class="pre">ShockCapturing</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">coefficients</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shockCapturingFactor</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nStepsToDelay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.ShockCapturing" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.ShockCapturing.html#proteus.ShockCapturing.ShockCapturing_base" title="proteus.ShockCapturing.ShockCapturing_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.ShockCapturing.ShockCapturing_base</span></code></a></p>
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.ShockCapturing.initializeElementQuadrature">
-<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mesh</span></em>, <em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cq</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.ShockCapturing.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.ShockCapturing.initializeElementQuadrature">
+<span class="sig-name descname"><span class="pre">initializeElementQuadrature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cq</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.ShockCapturing.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.ShockCapturing.updateShockCapturingHistory">
-<code class="sig-name descname">updateShockCapturingHistory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.ShockCapturing.updateShockCapturingHistory" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.ShockCapturing.updateShockCapturingHistory">
+<span class="sig-name descname"><span class="pre">updateShockCapturingHistory</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.ShockCapturing.updateShockCapturingHistory" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="proteus.mprans.RANS3PSed.Coefficients">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.RANS3PSed.</code><code class="sig-name descname">Coefficients</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">epsFact</span><span class="o">=</span><span class="default_value">1.5</span></em>, <em class="sig-param"><span class="n">sigma</span><span class="o">=</span><span class="default_value">72.8</span></em>, <em class="sig-param"><span class="n">rho_0</span><span class="o">=</span><span class="default_value">998.2</span></em>, <em class="sig-param"><span class="n">nu_0</span><span class="o">=</span><span class="default_value">1.004e-06</span></em>, <em class="sig-param"><span class="n">rho_1</span><span class="o">=</span><span class="default_value">1.205</span></em>, <em class="sig-param"><span class="n">nu_1</span><span class="o">=</span><span class="default_value">1.5e-05</span></em>, <em class="sig-param"><span class="n">rho_s</span><span class="o">=</span><span class="default_value">2600.0</span></em>, <em class="sig-param"><span class="n">g</span><span class="o">=</span><span class="default_value">[0.0, 0.0, - 9.8]</span></em>, <em class="sig-param"><span class="n">nd</span><span class="o">=</span><span class="default_value">3</span></em>, <em class="sig-param"><span class="n">ME_model</span><span class="o">=</span><span class="default_value">5</span></em>, <em class="sig-param"><span class="n">PRESSURE_model</span><span class="o">=</span><span class="default_value">7</span></em>, <em class="sig-param"><span class="n">FLUID_model</span><span class="o">=</span><span class="default_value">6</span></em>, <em class="sig-param"><span class="n">VOS_model</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">CLSVOF_model</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">LS_model</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">VOF_model</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">KN_model</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">Closure_0_model</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">Closure_1_model</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">epsFact_density</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stokes</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">sd</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">movingDomain</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">useVF</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">useRBLES</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">useMetrics</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">useConstant_he</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">dragAlpha</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">dragBeta</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">setParamsFunc</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dragAlphaTypes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">dragBetaTypes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">vosTypes</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">killNonlinearDrag</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">epsFact_source</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">epsFact_solid</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">eb_adjoint_sigma</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">eb_penalty_constant</span><span class="o">=</span><span class="default_value">10.0</span></em>, <em class="sig-param"><span class="n">forceStrongDirichlet</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">turbulenceClosureModel</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">smagorinskyConstant</span><span class="o">=</span><span class="default_value">0.1</span></em>, <em class="sig-param"><span class="n">barycenters</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">PSTAB</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">aDarcy</span><span class="o">=</span><span class="default_value">150.0</span></em>, <em class="sig-param"><span class="n">betaForch</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">grain</span><span class="o">=</span><span class="default_value">0.0102</span></em>, <em class="sig-param"><span class="n">packFraction</span><span class="o">=</span><span class="default_value">0.2</span></em>, <em class="sig-param"><span class="n">packMargin</span><span class="o">=</span><span class="default_value">0.01</span></em>, <em class="sig-param"><span class="n">maxFraction</span><span class="o">=</span><span class="default_value">0.635</span></em>, <em class="sig-param"><span class="n">frFraction</span><span class="o">=</span><span class="default_value">0.57</span></em>, <em class="sig-param"><span class="n">sigmaC</span><span class="o">=</span><span class="default_value">1.1</span></em>, <em class="sig-param"><span class="n">C3e</span><span class="o">=</span><span class="default_value">1.2</span></em>, <em class="sig-param"><span class="n">C4e</span><span class="o">=</span><span class="default_value">1.0</span></em>, <em class="sig-param"><span class="n">eR</span><span class="o">=</span><span class="default_value">0.8</span></em>, <em class="sig-param"><span class="n">fContact</span><span class="o">=</span><span class="default_value">0.02</span></em>, <em class="sig-param"><span class="n">mContact</span><span class="o">=</span><span class="default_value">2.0</span></em>, <em class="sig-param"><span class="n">nContact</span><span class="o">=</span><span class="default_value">5.0</span></em>, <em class="sig-param"><span class="n">angFriction</span><span class="o">=</span><span class="default_value">0.5235987755982988</span></em>, <em class="sig-param"><span class="n">vos_function</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">staticSediment</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">vos_limiter</span><span class="o">=</span><span class="default_value">0.05</span></em>, <em class="sig-param"><span class="n">mu_fr_limiter</span><span class="o">=</span><span class="default_value">1.0</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.Coefficients">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.mprans.RANS3PSed.</span></span><span class="sig-name descname"><span class="pre">Coefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">epsFact</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">72.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho_0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">998.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu_0</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.004e-06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho_1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.205</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nu_1</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.5e-05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho_s</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2600.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[0.0,</span> <span class="pre">0.0,</span> <span class="pre">-</span> <span class="pre">9.8]</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ME_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PRESSURE_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">7</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FLUID_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">6</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VOS_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CLSVOF_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LS_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VOF_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">KN_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Closure_0_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Closure_1_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsFact_density</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stokes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">movingDomain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useVF</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useRBLES</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useMetrics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">useConstant_he</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dragAlpha</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dragBeta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">setParamsFunc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dragAlphaTypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dragBetaTypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vosTypes</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">killNonlinearDrag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsFact_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">epsFact_solid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eb_adjoint_sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eb_penalty_constant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forceStrongDirichlet</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">turbulenceClosureModel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smagorinskyConstant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">barycenters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PSTAB</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aDarcy</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">150.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">betaForch</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0102</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">packFraction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">packMargin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maxFraction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.635</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frFraction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.57</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sigmaC</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C3e</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">C4e</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.8</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fContact</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.02</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mContact</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nContact</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">angFriction</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5235987755982988</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vos_function</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">staticSediment</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vos_limiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mu_fr_limiter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.TransportCoefficients.html#proteus.TransportCoefficients.TC_base" title="proteus.TransportCoefficients.TC_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.TransportCoefficients.TC_base</span></code></a></p>
 <p>The coefficients for two incompresslble fluids governed by the Navier-Stokes equations and separated by a sharp interface represented by a level set function</p>
 <p>Set the number of components (equations) of the
@@ -318,83 +324,83 @@ coefficients. Strings naming each component (used for viewing
 and archiving) and a structure defining the sparsity pattern
 of diffusion tensors may also be provided.</p>
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_2D_Evaluate">
-<code class="sig-name descname">TwophaseNavierStokes_ST_LS_SO_2D_Evaluate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_2D_Evaluate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_2D_Evaluate">
+<span class="sig-name descname"><span class="pre">TwophaseNavierStokes_ST_LS_SO_2D_Evaluate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_2D_Evaluate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_3D_Evaluate">
-<code class="sig-name descname">TwophaseNavierStokes_ST_LS_SO_3D_Evaluate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_3D_Evaluate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_3D_Evaluate">
+<span class="sig-name descname"><span class="pre">TwophaseNavierStokes_ST_LS_SO_3D_Evaluate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_3D_Evaluate" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_2D_Evaluate_sd">
-<code class="sig-name descname">TwophaseNavierStokes_ST_LS_SO_2D_Evaluate_sd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_2D_Evaluate_sd" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_2D_Evaluate_sd">
+<span class="sig-name descname"><span class="pre">TwophaseNavierStokes_ST_LS_SO_2D_Evaluate_sd</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_2D_Evaluate_sd" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_3D_Evaluate_sd">
-<code class="sig-name descname">TwophaseNavierStokes_ST_LS_SO_3D_Evaluate_sd</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_3D_Evaluate_sd" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_3D_Evaluate_sd">
+<span class="sig-name descname"><span class="pre">TwophaseNavierStokes_ST_LS_SO_3D_Evaluate_sd</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.TwophaseNavierStokes_ST_LS_SO_3D_Evaluate_sd" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.Coefficients.attachModels">
-<code class="sig-name descname">attachModels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">modelList</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.attachModels" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.Coefficients.attachModels">
+<span class="sig-name descname"><span class="pre">attachModels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">modelList</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.attachModels" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to other models in a loosely coupled split operator formulation (e.g. a transport equation for concentration might get velocity from a flow equation)</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.Coefficients.initializeMesh">
-<code class="sig-name descname">initializeMesh</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mesh</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.initializeMesh" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.Coefficients.initializeMesh">
+<span class="sig-name descname"><span class="pre">initializeMesh</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mesh</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.initializeMesh" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the mesh for any mesh-dependent information.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.Coefficients.initializeElementQuadrature">
-<code class="sig-name descname">initializeElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cq</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.Coefficients.initializeElementQuadrature">
+<span class="sig-name descname"><span class="pre">initializeElementQuadrature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cq</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.initializeElementQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the element quadrature storage</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.Coefficients.initializeElementBoundaryQuadrature">
-<code class="sig-name descname">initializeElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cebq</span></em>, <em class="sig-param"><span class="n">cebq_global</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.initializeElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.Coefficients.initializeElementBoundaryQuadrature">
+<span class="sig-name descname"><span class="pre">initializeElementBoundaryQuadrature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cebq</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cebq_global</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.initializeElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the element boundary quadrature storage</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature">
-<code class="sig-name descname">initializeGlobalExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">cebqe</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature">
+<span class="sig-name descname"><span class="pre">initializeGlobalExteriorElementBoundaryQuadrature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cebqe</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.initializeGlobalExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object access to the exterior element boundary quadrature storage</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.Coefficients.updateToMovingDomain">
-<code class="sig-name descname">updateToMovingDomain</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">c</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.updateToMovingDomain" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.Coefficients.updateToMovingDomain">
+<span class="sig-name descname"><span class="pre">updateToMovingDomain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.updateToMovingDomain" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.Coefficients.evaluate">
-<code class="sig-name descname">evaluate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">c</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.evaluate" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.Coefficients.evaluate">
+<span class="sig-name descname"><span class="pre">evaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.evaluate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Evaluate the coefficients at a given time, t, using the coefficient storage passed in as the dictionary c.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.Coefficients.preStep">
-<code class="sig-name descname">preStep</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">firstStep</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.preStep" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.Coefficients.preStep">
+<span class="sig-name descname"><span class="pre">preStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">firstStep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.preStep" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object an opportunity to modify itself before the time step.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.Coefficients.postStep">
-<code class="sig-name descname">postStep</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">t</span></em>, <em class="sig-param"><span class="n">firstStep</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.postStep" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.Coefficients.postStep">
+<span class="sig-name descname"><span class="pre">postStep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">firstStep</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.Coefficients.postStep" title="Permalink to this definition">¶</a></dt>
 <dd><p>Give the TC object an opportunity to modify itself after the time step.</p>
 </dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="proteus.mprans.RANS3PSed.LevelModel">
-<em class="property">class </em><code class="sig-prename descclassname">proteus.mprans.RANS3PSed.</code><code class="sig-name descname">LevelModel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">uDict</span></em>, <em class="sig-param"><span class="n">phiDict</span></em>, <em class="sig-param"><span class="n">testSpaceDict</span></em>, <em class="sig-param"><span class="n">matType</span></em>, <em class="sig-param"><span class="n">dofBoundaryConditionsDict</span></em>, <em class="sig-param"><span class="n">dofBoundaryConditionsSetterDict</span></em>, <em class="sig-param"><span class="n">coefficients</span></em>, <em class="sig-param"><span class="n">elementQuadrature</span></em>, <em class="sig-param"><span class="n">elementBoundaryQuadrature</span></em>, <em class="sig-param"><span class="n">fluxBoundaryConditionsDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">advectiveFluxBoundaryConditionsSetterDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">diffusiveFluxBoundaryConditionsSetterDictDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stressTraceBoundaryConditionsSetterDictDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">stabilization</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">shockCapturing</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">conservativeFluxDict</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">numericalFluxType</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">TimeIntegrationClass</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">massLumping</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">reactionLumping</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">options</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'RANS3PSed'</span></em>, <em class="sig-param"><span class="n">reuse_trial_and_test_quadrature</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">sd</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="n">movingDomain</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">bdyNullSpace</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.LevelModel">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">proteus.mprans.RANS3PSed.</span></span><span class="sig-name descname"><span class="pre">LevelModel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uDict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phiDict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">testSpaceDict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">matType</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dofBoundaryConditionsDict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dofBoundaryConditionsSetterDict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coefficients</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementQuadrature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementBoundaryQuadrature</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fluxBoundaryConditionsDict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">advectiveFluxBoundaryConditionsSetterDict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diffusiveFluxBoundaryConditionsSetterDictDict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stressTraceBoundaryConditionsSetterDictDict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stabilization</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shockCapturing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conservativeFluxDict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">numericalFluxType</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TimeIntegrationClass</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">massLumping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reactionLumping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'RANS3PSed'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reuse_trial_and_test_quadrature</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">movingDomain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bdyNullSpace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.Transport.html#proteus.Transport.OneLevelTransport" title="proteus.Transport.OneLevelTransport"><code class="xref py py-class docutils literal notranslate"><span class="pre">proteus.Transport.OneLevelTransport</span></code></a></p>
 <p>Allocate storage and initialize some variables.</p>
 <dl class="field-list simple">
@@ -446,63 +452,63 @@ exterior element boundary</p></li>
 build a nonlinear phi</p></li>
 </ul>
 <dl class="py attribute">
-<dt id="proteus.mprans.RANS3PSed.LevelModel.nCalls">
-<code class="sig-name descname">nCalls</code><em class="property"> = 0</em><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.nCalls" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.LevelModel.nCalls">
+<span class="sig-name descname"><span class="pre">nCalls</span></span><em class="property"> <span class="pre">=</span> <span class="pre">0</span></em><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.nCalls" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.LevelModel.getResidual">
-<code class="sig-name descname">getResidual</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">u</span></em>, <em class="sig-param"><span class="n">r</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.getResidual" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.LevelModel.getResidual">
+<span class="sig-name descname"><span class="pre">getResidual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.getResidual" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the element residuals and add in to the global residual</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.LevelModel.getJacobian">
-<code class="sig-name descname">getJacobian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">jacobian</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.getJacobian" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.LevelModel.getJacobian">
+<span class="sig-name descname"><span class="pre">getJacobian</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jacobian</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.getJacobian" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.LevelModel.calculateElementQuadrature">
-<code class="sig-name descname">calculateElementQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domainMoved</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.calculateElementQuadrature" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.LevelModel.calculateElementQuadrature">
+<span class="sig-name descname"><span class="pre">calculateElementQuadrature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domainMoved</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.calculateElementQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the physical location and weights of the quadrature rules
 and the shape information at the quadrature points.</p>
 <p>This function should be called only when the mesh changes.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.LevelModel.calculateElementBoundaryQuadrature">
-<code class="sig-name descname">calculateElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domainMoved</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.calculateElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.LevelModel.calculateElementBoundaryQuadrature">
+<span class="sig-name descname"><span class="pre">calculateElementBoundaryQuadrature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domainMoved</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.calculateElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the physical location and weights of the quadrature rules
 and the shape information at the quadrature points on element boundaries.</p>
 <p>This function should be called only when the mesh changes.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.LevelModel.calculateExteriorElementBoundaryQuadrature">
-<code class="sig-name descname">calculateExteriorElementBoundaryQuadrature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">domainMoved</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.calculateExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.LevelModel.calculateExteriorElementBoundaryQuadrature">
+<span class="sig-name descname"><span class="pre">calculateExteriorElementBoundaryQuadrature</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">domainMoved</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.calculateExteriorElementBoundaryQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Calculate the physical location and weights of the quadrature rules
 and the shape information at the quadrature points on global element boundaries.</p>
 <p>This function should be called only when the mesh changes.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.LevelModel.estimate_mt">
-<code class="sig-name descname">estimate_mt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.estimate_mt" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.LevelModel.estimate_mt">
+<span class="sig-name descname"><span class="pre">estimate_mt</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.estimate_mt" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.LevelModel.calculateSolutionAtQuadrature">
-<code class="sig-name descname">calculateSolutionAtQuadrature</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.calculateSolutionAtQuadrature" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.LevelModel.calculateSolutionAtQuadrature">
+<span class="sig-name descname"><span class="pre">calculateSolutionAtQuadrature</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.calculateSolutionAtQuadrature" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.LevelModel.calculateAuxiliaryQuantitiesAfterStep">
-<code class="sig-name descname">calculateAuxiliaryQuantitiesAfterStep</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.calculateAuxiliaryQuantitiesAfterStep" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.LevelModel.calculateAuxiliaryQuantitiesAfterStep">
+<span class="sig-name descname"><span class="pre">calculateAuxiliaryQuantitiesAfterStep</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.calculateAuxiliaryQuantitiesAfterStep" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="proteus.mprans.RANS3PSed.LevelModel.updateAfterMeshMotion">
-<code class="sig-name descname">updateAfterMeshMotion</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.updateAfterMeshMotion" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="proteus.mprans.RANS3PSed.LevelModel.updateAfterMeshMotion">
+<span class="sig-name descname"><span class="pre">updateAfterMeshMotion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/mprans/RANS3PSed.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.mprans.RANS3PSed.LevelModel.updateAfterMeshMotion" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -514,20 +520,25 @@ and the shape information at the quadrature points on global element boundaries.
            
           </div>
           <footer>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, The Proteus Team
+        &#169; Copyright 2020, The Proteus Team.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -535,7 +546,6 @@ and the shape information at the quadrature points on global element boundaries.
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classproteus_1_1LinearSolvers_1_1BlockedDofOrderType" kind="class" language="Python" prot="public">
+    <compoundname>proteus::LinearSolvers::BlockedDofOrderType</compoundname>
+    <basecompoundref refid="classproteus_1_1LinearSolvers_1_1DofOrderInfo" prot="public" virt="non-virtual">proteus.LinearSolvers.DofOrderInfo</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classproteus_1_1LinearSolvers_1_1BlockedDofOrderType_1abc4b59c7c155f3b6ef511dc5c903095a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.LinearSolvers.BlockedDofOrderType::n_DOF_pressure</definition>
+        <argsstring></argsstring>
+        <name>n_DOF_pressure</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearSolvers.py" line="1359" column="1" bodyfile="LinearSolvers.py" bodystart="1359" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classproteus_1_1LinearSolvers_1_1BlockedDofOrderType_1a7b2042ce6ea1751adc840aec00f559c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearSolvers.BlockedDofOrderType.__init__</definition>
+        <argsstring>(self, n_DOF_pressure, model_info=&apos;no model info set&apos;)</argsstring>
+        <name>__init__</name>
+        <reimplements refid="classproteus_1_1LinearSolvers_1_1DofOrderInfo_1aae380648dceccdc609c83c3d409a63b2">__init__</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classproteus_1_1LinearSolvers_1_1BlockedDofOrderType_1abc4b59c7c155f3b6ef511dc5c903095a" kindref="member">n_DOF_pressure</ref></type>
+          <defname>n_DOF_pressure</defname>
+        </param>
+        <param>
+          <type>model_info</type>
+          <defname>model_info</defname>
+          <defval>&apos;no model info set&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearSolvers.py" line="1355" column="1" bodyfile="LinearSolvers.py" bodystart="1355" bodyend="1362"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1LinearSolvers_1_1BlockedDofOrderType_1a5216522a984e3d5b10cc49cd76268416" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearSolvers.BlockedDofOrderType.create_DOF_lists</definition>
+        <argsstring>(self, ownership_range, num_equations, num_components)</argsstring>
+        <name>create_DOF_lists</name>
+        <reimplements refid="classproteus_1_1LinearSolvers_1_1DofOrderInfo_1aa3f6331a88c43b952d075e5765912fd6">create_DOF_lists</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>ownership_range</type>
+          <defname>ownership_range</defname>
+        </param>
+        <param>
+          <type>num_equations</type>
+          <defname>num_equations</defname>
+        </param>
+        <param>
+          <type>num_components</type>
+          <defname>num_components</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Build blocked velocity and pressure DOF arrays.
+
+Parameters
+----------
+ownership_range: tuple
+    Local ownership range of DOF
+num_equations: int
+    Number of local equations
+num_components: int
+    Number of pressure and velocity components
+
+Returns
+-------
+DOF_output : lst of arrays
+    This function returns a list of arrays with the DOF
+    order.  [velocityDOF, pressureDOF]
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearSolvers.py" line="1363" column="1" bodyfile="LinearSolvers.py" bodystart="1363" bodyend="1392"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Manages the DOF for blocked velocity and pressure ordering.
+
+Parameters
+----------
+n_DOF_pressure : int
+    Number of pressure degrees of freedom.
+
+Notes
+-----
+Blocked degree of freedom ordering occurs when all the pressure
+unknowns appear first, followed by all the u-components of the
+velocity and then all the v-components of the velocity etc.
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>proteus.LinearSolvers.BlockedDofOrderType</label>
+        <link refid="classproteus_1_1LinearSolvers_1_1BlockedDofOrderType"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>proteus.LinearSolvers.DofOrderInfo</label>
+        <link refid="classproteus_1_1LinearSolvers_1_1DofOrderInfo"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>object</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>proteus.LinearSolvers.BlockedDofOrderType</label>
+        <link refid="classproteus_1_1LinearSolvers_1_1BlockedDofOrderType"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>proteus.LinearSolvers.DofOrderInfo</label>
+        <link refid="classproteus_1_1LinearSolvers_1_1DofOrderInfo"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>object</label>
+      </node>
+    </collaborationgraph>
+    <location file="LinearSolvers.py" line="1341" column="1" bodyfile="LinearSolvers.py" bodystart="1341" bodyend="1393"/>
+    <listofallmembers>
+      <member refid="classproteus_1_1LinearSolvers_1_1BlockedDofOrderType_1a7b2042ce6ea1751adc840aec00f559c9" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::BlockedDofOrderType</scope><name>__init__</name></member>
+      <member refid="classproteus_1_1LinearSolvers_1_1BlockedDofOrderType_1a5216522a984e3d5b10cc49cd76268416" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::BlockedDofOrderType</scope><name>create_DOF_lists</name></member>
+      <member refid="classproteus_1_1LinearSolvers_1_1DofOrderInfo_1a9c439076eaebda6739b6e361b30c437a" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::BlockedDofOrderType</scope><name>create_IS</name></member>
+      <member refid="classproteus_1_1LinearSolvers_1_1DofOrderInfo_1a4bcd44b071914a40c76daeaca4e1ef57" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::BlockedDofOrderType</scope><name>dof_order_type</name></member>
+      <member refid="classproteus_1_1LinearSolvers_1_1DofOrderInfo_1aa46e0dd7a687aa558495b9ce75dd1a2d" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::BlockedDofOrderType</scope><name>get_model_info</name></member>
+      <member refid="classproteus_1_1LinearSolvers_1_1BlockedDofOrderType_1abc4b59c7c155f3b6ef511dc5c903095a" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::BlockedDofOrderType</scope><name>n_DOF_pressure</name></member>
+      <member refid="classproteus_1_1LinearSolvers_1_1DofOrderInfo_1ae7c27c082f1623b273a5f8954cdbc295" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::BlockedDofOrderType</scope><name>set_model_info</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
