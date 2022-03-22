@@ -1,83 +1,40 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Shallow Water Flow &mdash; Proteus 1.8.0.dev0 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-
-  
-  
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/tritonBorder.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Free Surface" href="free_surface.html" />
     <link rel="prev" title="Multiphase Navier-Stokes" href="navier_stokes.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html">
-          
-
-          
-            
             <img src="../_static/corps_logo_cross2.svg" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
               <div class="version">
                 1.8.0.dev0
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -85,18 +42,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">General</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../apicapi.html">API docs</a></li>
@@ -198,153 +144,93 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Proteus</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>Shallow Water Flow</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
-            
               <a href="https://github.com/erdc/proteus/blob/masterdocs/source/models/SWFlow.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="shallow-water-flow">
-<span id="swflows"></span><h1>Shallow Water Flow<a class="headerlink" href="#shallow-water-flow" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="description">
-<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h2>
+             
+  <section id="shallow-water-flow">
+<span id="swflows"></span><h1>Shallow Water Flow<a class="headerlink" href="#shallow-water-flow" title="Permalink to this headline"></a></h1>
+<section id="description">
+<h2>Description<a class="headerlink" href="#description" title="Permalink to this headline"></a></h2>
 <p>There are currently 2 different models that describe shallow water flow in Proteus:</p>
 <ul class="simple">
 <li><p>Classical Saint-Venant equations (e.g. Shallow Water equations)</p></li>
 <li><p>Dispersive shallow water model based on the Green-Naghdi equations (e.g. mGN equations)</p></li>
 </ul>
-</div>
-<div class="section" id="shallow-water-equations">
-<h2>Shallow Water Equations<a class="headerlink" href="#shallow-water-equations" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="shallow-water-equations">
+<h2>Shallow Water Equations<a class="headerlink" href="#shallow-water-equations" title="Permalink to this headline"></a></h2>
 <p>The Shallow Water Equations are a set of partial differential equations that form a
 hyperbolic system. They can be used to describe a body of water evolving under
 the action of gravity under the assumption that the deformations of the free surface
 are small compared to the water height.</p>
 <p>The implementation of the SWEs with source documentation is
 available here: <a class="reference internal" href="../api/proteus.mprans.SW2DCV.html#module-proteus.mprans.SW2DCV" title="proteus.mprans.SW2DCV"><code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.mprans.SW2DCV</span></code></a>.</p>
-</div>
-<div class="section" id="modified-green-naghdi-equations">
-<h2>Modified Green-Naghdi equations<a class="headerlink" href="#modified-green-naghdi-equations" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="modified-green-naghdi-equations">
+<h2>Modified Green-Naghdi equations<a class="headerlink" href="#modified-green-naghdi-equations" title="Permalink to this headline"></a></h2>
 <p>The modified Green-Naghdi equations are a set of partial differential equations
 that form a hyperbolic system and are an O(h) approximation to the traditional
 Green-Naghdi equations, where h is the mesh size. The Green-Naghdi equations
 are used to describe dispersive water waves.</p>
 <p>The implementation of the mGN equations with source documentation is
 available here: <a class="reference internal" href="../api/proteus.mprans.GN_SW2DCV.html#module-proteus.mprans.GN_SW2DCV" title="proteus.mprans.GN_SW2DCV"><code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.mprans.GN_SW2DCV</span></code></a>.</p>
-</div>
-<div class="section" id="running-the-tests">
-<h2>Running the tests<a class="headerlink" href="#running-the-tests" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="running-the-tests">
+<h2>Running the tests<a class="headerlink" href="#running-the-tests" title="Permalink to this headline"></a></h2>
 <p>All tests that concern shallow water flows can be found at <code class="xref py py-mod docutils literal notranslate"><span class="pre">proteus.tests.SWFlow</span></code>.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="free_surface.html" class="btn btn-neutral float-right" title="Free Surface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="navier_stokes.html" class="btn btn-neutral float-left" title="Multiphase Navier-Stokes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="free_surface.html" class="btn btn-neutral float-right" title="Free Surface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, The Proteus Team.
-
-    </p>
+    <p>&#169; Copyright 2020, The Proteus Team.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-    
+  </script>  
 
   <style>
     /* Sidebar header (and topbar for mobile) */
