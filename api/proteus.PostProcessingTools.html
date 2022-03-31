@@ -192,10 +192,10 @@ make velocity representation type an enum</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>~VelocityPostProcessingAlgorithmBase.q</strong><strong>[</strong><strong>(</strong><strong>'velocity'</strong><strong>,</strong><strong>ci</strong><strong>)</strong><strong>]</strong> (<em>array type</em>) – Stores the velocity values on element quadrature points.</p></li>
-<li><p><strong>~VelocityPostProcessingAlgorithmBase.ebq</strong><strong>[</strong><strong>(</strong><strong>'velocity'</strong><strong>,</strong><strong>ci</strong><strong>)</strong><strong>]</strong> (<em>array type</em>) – Stores the velocity values on element boundary quadrature points.
+<li><p><strong>q</strong><strong>[</strong><strong>(</strong><strong>'velocity'</strong><strong>,</strong><strong>ci</strong><strong>)</strong><strong>]</strong> (<em>array type</em>) – Stores the velocity values on element quadrature points.</p></li>
+<li><p><strong>ebq</strong><strong>[</strong><strong>(</strong><strong>'velocity'</strong><strong>,</strong><strong>ci</strong><strong>)</strong><strong>]</strong> (<em>array type</em>) – Stores the velocity values on element boundary quadrature points.
 Designed to reference the element number first.</p></li>
-<li><p><strong>~VelocityPostProcessingAlgorithmBase.ebq_global</strong><strong>[</strong><strong>(</strong><strong>'velocity'</strong><strong>,</strong><strong>ci</strong><strong>)</strong><strong>]</strong> (<em>array</em>) – Stores the velocity values on the boundary.  Designed to
+<li><p><strong>ebq_global</strong><strong>[</strong><strong>(</strong><strong>'velocity'</strong><strong>,</strong><strong>ci</strong><strong>)</strong><strong>]</strong> (<em>array</em>) – Stores the velocity values on the boundary.  Designed to
 reference the global edge number first.</p></li>
 </ul>
 </dd>
@@ -417,13 +417,13 @@ for now assumes x shaped like nE x nq x 3</p>
 <dl class="field-list simple">
 <dt class="field-odd">Variables</dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>~VPP_PWL_RT1.globalDOF2globalElementList</strong> (<em>list of lists</em>) – Lists the global element numbers associated with each degree of
+<li><p><strong>globalDOF2globalElementList</strong> (<em>list of lists</em>) – Lists the global element numbers associated with each degree of
 freedom.</p></li>
-<li><p><strong>~VPP_PWL_RT1.globalDOFGlobalElement2StarElement</strong> (<em>list of dicts</em>) – Dictionaries of maps of local element numbers to global element
+<li><p><strong>globalDOFGlobalElement2StarElement</strong> (<em>list of dicts</em>) – Dictionaries of maps of local element numbers to global element
 numbers for each degree of freedom.</p></li>
-<li><p><strong>~VPP_PWL_RT1.dofStarElementsArray</strong> (<em>list of lists</em>) – For every element DOF, this array lists the element’s local
+<li><p><strong>dofStarElementsArray</strong> (<em>list of lists</em>) – For every element DOF, this array lists the element’s local
 mapping number.</p></li>
-<li><p><strong>~VPP_PWL_RT1.dofStarElementsNeighborsArray</strong> (<em>list of lists of lists</em>) – Provides local neighboring elements for each DOF on an element.</p></li>
+<li><p><strong>dofStarElementsNeighborsArray</strong> (<em>list of lists of lists</em>) – Provides local neighboring elements for each DOF on an element.</p></li>
 </ul>
 </dd>
 </dl>
