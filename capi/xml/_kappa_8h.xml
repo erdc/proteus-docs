@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
   <compounddef id="_kappa_8h" kind="file" language="C++">
     <compoundname>Kappa.h</compoundname>
     <includes local="no">cmath</includes>
@@ -11,6 +11,44 @@
     <includes local="yes">xtensor-python/pyarray.hpp</includes>
     <includedby refid="_kappa_8cpp" local="yes">Kappa.cpp</includedby>
     <incdepgraph>
+      <node id="2">
+        <label>cmath</label>
+      </node>
+      <node id="12">
+        <label>xtensor/xio.hpp</label>
+      </node>
+      <node id="10">
+        <label>stdexcept</label>
+      </node>
+      <node id="11">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>CompKernel.h</label>
+        <link refid="_comp_kernel_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>map</label>
+      </node>
+      <node id="7">
+        <label>xtensor-python/pyarray.hpp</label>
+      </node>
+      <node id="8">
+        <label>ArgumentsDict.h</label>
+        <link refid="_arguments_dict_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
       <node id="1">
         <label>Kappa.h</label>
         <link refid="_kappa_8h"/>
@@ -29,43 +67,8 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="2">
-        <label>cmath</label>
-      </node>
-      <node id="12">
-        <label>xtensor/xio.hpp</label>
-      </node>
-      <node id="10">
-        <label>stdexcept</label>
-      </node>
-      <node id="11">
-        <label>string</label>
-      </node>
-      <node id="9">
-        <label>map</label>
-      </node>
-      <node id="7">
-        <label>xtensor-python/pyarray.hpp</label>
-      </node>
-      <node id="5">
-        <label>ModelFactory.h</label>
-        <link refid="_model_factory_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="8">
-        <label>ArgumentsDict.h</label>
-        <link refid="_arguments_dict_8h"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
+      <node id="3">
+        <label>iostream</label>
       </node>
       <node id="6">
         <label>SedClosure.h</label>
@@ -77,13 +80,10 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>iostream</label>
-      </node>
-      <node id="4">
-        <label>CompKernel.h</label>
-        <link refid="_comp_kernel_8h"/>
-        <childnode refid="2" relation="include">
+      <node id="5">
+        <label>ModelFactory.h</label>
+        <link refid="_model_factory_8h"/>
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -143,8 +143,8 @@
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>angFriction,</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>vos_limiter,</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mu_fr_limiter){}</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classproteus_1_1_kappa__base_1a5709ceafc9c563022e6440185b562e4d" kindref="member">calculateResidual</ref>(<ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref>&amp;<sp/>args)=0;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classproteus_1_1_kappa__base_1ab8ca1f31a4d2ca4ae0dae6d0496ab729" kindref="member">calculateJacobian</ref>(<ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref>&amp;<sp/>args)=0;<sp/></highlight><highlight class="comment">//VRANS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classproteus_1_1_kappa__base_1a5709ceafc9c563022e6440185b562e4d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classproteus_1_1_kappa__base_1a5709ceafc9c563022e6440185b562e4d" kindref="member">calculateResidual</ref>(<ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref>&amp;<sp/>args)=0;</highlight></codeline>
+<codeline lineno="38" refid="classproteus_1_1_kappa__base_1ab8ca1f31a4d2ca4ae0dae6d0496ab729" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classproteus_1_1_kappa__base_1ab8ca1f31a4d2ca4ae0dae6d0496ab729" kindref="member">calculateJacobian</ref>(<ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref>&amp;<sp/>args)=0;<sp/></highlight><highlight class="comment">//VRANS</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">CompKernelType,</highlight></codeline>
@@ -1966,6 +1966,6 @@
 <codeline lineno="1857"><highlight class="normal">}</highlight><highlight class="comment">//proteus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="1858"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/home/cekees/proteus/proteus/mprans/Kappa.h"/>
+    <location file="/Users/cekees/proteus/proteus/mprans/Kappa.h"/>
   </compounddef>
 </doxygen>

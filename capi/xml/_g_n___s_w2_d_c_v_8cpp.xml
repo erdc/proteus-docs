@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
   <compounddef id="_g_n___s_w2_d_c_v_8cpp" kind="file" language="C++">
     <compoundname>GN_SW2DCV.cpp</compoundname>
     <includes local="yes">pybind11/pybind11.h</includes>
@@ -11,16 +11,6 @@
       </node>
       <node id="15">
         <label>assert.h</label>
-      </node>
-      <node id="1">
-        <label>GN_SW2DCV.cpp</label>
-        <link refid="_g_n___s_w2_d_c_v_8cpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
       </node>
       <node id="12">
         <label>cmath</label>
@@ -34,17 +24,17 @@
       <node id="8">
         <label>string</label>
       </node>
+      <node id="11">
+        <label>CompKernel.h</label>
+        <link refid="_comp_kernel_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
       <node id="6">
         <label>map</label>
       </node>
       <node id="9">
         <label>xtensor-python/pyarray.hpp</label>
-      </node>
-      <node id="13">
-        <label>ModelFactory.h</label>
-        <link refid="_model_factory_8h"/>
-        <childnode refid="14" relation="include">
-        </childnode>
       </node>
       <node id="5">
         <label>ArgumentsDict.h</label>
@@ -59,6 +49,25 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
+      </node>
+      <node id="2">
+        <label>pybind11/pybind11.h</label>
+      </node>
+      <node id="14">
+        <label>iostream</label>
+      </node>
+      <node id="1">
+        <label>GN_SW2DCV.cpp</label>
+        <link refid="_g_n___s_w2_d_c_v_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>pybind11/stl_bind.h</label>
       </node>
       <node id="4">
         <label>GN_SW2DCV.h</label>
@@ -80,19 +89,10 @@
         <childnode refid="16" relation="include">
         </childnode>
       </node>
-      <node id="2">
-        <label>pybind11/pybind11.h</label>
-      </node>
-      <node id="14">
-        <label>iostream</label>
-      </node>
-      <node id="3">
-        <label>pybind11/stl_bind.h</label>
-      </node>
-      <node id="11">
-        <label>CompKernel.h</label>
-        <link refid="_comp_kernel_8h"/>
-        <childnode refid="12" relation="include">
+      <node id="13">
+        <label>ModelFactory.h</label>
+        <link refid="_model_factory_8h"/>
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -105,7 +105,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.cpp" line="4" column="9" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.cpp" bodystart="4" bodyend="-1"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.cpp" line="4" column="9" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.cpp" bodystart="4" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.cpp" line="20" column="1" bodyfile="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.cpp" bodystart="20" bodyend="33"/>
+        <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.cpp" line="20" column="1" bodyfile="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.cpp" bodystart="20" bodyend="36"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -161,13 +161,16 @@
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;convexLimiting&quot;</highlight><highlight class="normal">,<sp/>&amp;GN_SW2DCV_base::convexLimiting)</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateEdgeBasedCFL&quot;</highlight><highlight class="normal">,<sp/>&amp;GN_SW2DCV_base::calculateEdgeBasedCFL,</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return_value_policy::take_ownership)</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateEV&quot;</highlight><highlight class="normal">,<sp/>&amp;GN_SW2DCV_base::calculateEV)</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateResidual&quot;</highlight><highlight class="normal">,<sp/>&amp;GN_SW2DCV_base::calculateResidual)</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateMassMatrix&quot;</highlight><highlight class="normal">,<sp/>&amp;GN_SW2DCV_base::calculateMassMatrix)</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateLumpedMassMatrix&quot;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;GN_SW2DCV_base::calculateLumpedMassMatrix);</highlight></codeline>
-<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculatePreStep&quot;</highlight><highlight class="normal">,<sp/>&amp;GN_SW2DCV_base::calculatePreStep)</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateEV&quot;</highlight><highlight class="normal">,<sp/>&amp;GN_SW2DCV_base::calculateEV)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateBoundsAndHighOrderRHS&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;GN_SW2DCV_base::calculateBoundsAndHighOrderRHS)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateResidual&quot;</highlight><highlight class="normal">,<sp/>&amp;GN_SW2DCV_base::calculateResidual)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateMassMatrix&quot;</highlight><highlight class="normal">,<sp/>&amp;GN_SW2DCV_base::calculateMassMatrix)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateLumpedMassMatrix&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&amp;GN_SW2DCV_base::calculateLumpedMassMatrix);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/cekees/proteus/proteus/mprans/GN_SW2DCV.cpp"/>
+    <location file="/Users/cekees/proteus/proteus/mprans/GN_SW2DCV.cpp"/>
   </compounddef>
 </doxygen>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
-<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
   <compounddef id="_pres_inc_8h" kind="file" language="C++">
     <compoundname>PresInc.h</compoundname>
     <includes local="no">cmath</includes>
@@ -22,33 +22,17 @@
       <node id="9">
         <label>string</label>
       </node>
+      <node id="4">
+        <label>CompKernel.h</label>
+        <link refid="_comp_kernel_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
       <node id="7">
         <label>map</label>
       </node>
       <node id="10">
         <label>xtensor-python/pyarray.hpp</label>
-      </node>
-      <node id="5">
-        <label>ModelFactory.h</label>
-        <link refid="_model_factory_8h"/>
-        <childnode refid="3" relation="include">
-        </childnode>
-      </node>
-      <node id="1">
-        <label>PresInc.h</label>
-        <link refid="_pres_inc_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="5" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
       </node>
       <node id="6">
         <label>ArgumentsDict.h</label>
@@ -67,23 +51,39 @@
       <node id="3">
         <label>iostream</label>
       </node>
-      <node id="4">
-        <label>CompKernel.h</label>
-        <link refid="_comp_kernel_8h"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
-    </incdepgraph>
-    <invincdepgraph>
       <node id="1">
         <label>PresInc.h</label>
         <link refid="_pres_inc_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
       </node>
+      <node id="5">
+        <label>ModelFactory.h</label>
+        <link refid="_model_factory_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
       <node id="2">
         <label>PresInc.cpp</label>
         <link refid="_pres_inc_8cpp"/>
+      </node>
+      <node id="1">
+        <label>PresInc.h</label>
+        <link refid="_pres_inc_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
       </node>
     </invincdepgraph>
     <innerclass refid="classproteus_1_1cpp_pres_inc__base" prot="public">proteus::cppPresInc_base</innerclass>
@@ -111,8 +111,8 @@
 <codeline lineno="15"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="17" refid="classproteus_1_1cpp_pres_inc__base_1a203d9347b57e58a893bf572525506501" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classproteus_1_1cpp_pres_inc__base_1a203d9347b57e58a893bf572525506501" kindref="member">~cppPresInc_base</ref>(){}</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classproteus_1_1cpp_pres_inc__base_1a89fc7228ab50d4b4cce4a1f47d449732" kindref="member">calculateResidual</ref>(<ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref>&amp;<sp/>args)=0;</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classproteus_1_1cpp_pres_inc__base_1a6bf5e94b6c05cb5a28dd06104fdf571d" kindref="member">calculateJacobian</ref>(<ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref>&amp;<sp/>args)=0;</highlight></codeline>
+<codeline lineno="18" refid="classproteus_1_1cpp_pres_inc__base_1a89fc7228ab50d4b4cce4a1f47d449732" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classproteus_1_1cpp_pres_inc__base_1a89fc7228ab50d4b4cce4a1f47d449732" kindref="member">calculateResidual</ref>(<ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref>&amp;<sp/>args)=0;</highlight></codeline>
+<codeline lineno="19" refid="classproteus_1_1cpp_pres_inc__base_1a6bf5e94b6c05cb5a28dd06104fdf571d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classproteus_1_1cpp_pres_inc__base_1a6bf5e94b6c05cb5a28dd06104fdf571d" kindref="member">calculateJacobian</ref>(<ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref>&amp;<sp/>args)=0;</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/>};</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal">&lt;</highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">CompKernelType,</highlight></codeline>
@@ -1060,6 +1060,6 @@
 <codeline lineno="964"><highlight class="normal">}</highlight><highlight class="comment">//proteus</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="965"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
-    <location file="/home/cekees/proteus/proteus/mprans/PresInc.h"/>
+    <location file="/Users/cekees/proteus/proteus/mprans/PresInc.h"/>
   </compounddef>
 </doxygen>
