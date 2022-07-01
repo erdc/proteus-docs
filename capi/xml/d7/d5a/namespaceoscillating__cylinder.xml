@@ -1,0 +1,976 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d7/d5a/namespaceoscillating__cylinder" kind="namespace" language="Python">
+    <compoundname>oscillating_cylinder</compoundname>
+    <innerclass refid="df/de3/classoscillating__cylinder_1_1AtRest" prot="public">oscillating_cylinder::AtRest</innerclass>
+    <innerclass refid="d4/db1/classoscillating__cylinder_1_1dIn" prot="public">oscillating_cylinder::dIn</innerclass>
+    <innerclass refid="d6/dd4/classoscillating__cylinder_1_1kIn" prot="public">oscillating_cylinder::kIn</innerclass>
+    <innerclass refid="d8/da6/classoscillating__cylinder_1_1LS__IC" prot="public">oscillating_cylinder::LS_IC</innerclass>
+    <innerclass refid="d3/dab/classoscillating__cylinder_1_1P__IC" prot="public">oscillating_cylinder::P_IC</innerclass>
+    <innerclass refid="d6/d35/classoscillating__cylinder_1_1VOF__IC" prot="public">oscillating_cylinder::VOF_IC</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a93b4dc3e3c4b8016137d335be64096d9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <briefdescription>
+<para>Context ################################. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="17" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a20da22eb01512123f7b98903578a6d53" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.PlanarStraightLineGraphDomain()</initializer>
+        <briefdescription>
+<para>Domain &amp; Waves ################################ <mdash/> Domain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="93" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a24c570aa322b07923dfc032ff8bbcf4e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.tank</definition>
+        <argsstring></argsstring>
+        <name>tank</name>
+        <initializer>=  <ref refid="d2/d8a/classproteus_1_1mprans_1_1SpatialTools_1_1Tank2D" kindref="compound">Tank2D</ref>(<ref refid="d7/d5a/namespaceoscillating__cylinder_1a20da22eb01512123f7b98903578a6d53" kindref="member">domain</ref>, opts.tank_dim)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="94" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a8b147a199a0bec987678f269e073530a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.current</definition>
+        <argsstring></argsstring>
+        <name>current</name>
+        <initializer>= wt.SteadyCurrent(<ref refid="d7/d5a/namespaceoscillating__cylinder_1a2356d95c05a2c20f4d70216b39f7c803" kindref="member">U</ref>=<ref refid="de/d5b/Headers_8h_1a64e1fe39afc10b00a4f50198aef8626d" kindref="member">opts.U</ref>,
+                        mwl=opts.mwl,
+                        rampTime=opts.rampTime)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="97" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a270ecbfaeb6ad091538aae4c876df286" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.x_n</definition>
+        <argsstring></argsstring>
+        <name>x_n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="105" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a09559d085315cdc4b0e7ae584b153831" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.left_sponge</definition>
+        <argsstring></argsstring>
+        <name>left_sponge</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="105" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a2466f9e9c4d8f7cc4ec96779458a9680" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.x_p</definition>
+        <argsstring></argsstring>
+        <name>x_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="105" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a12c0a95eb96ca608504d822ab145b6f2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>= opts.radius/opts.refinement_level</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="108" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a3d55918d620ebb48c964ada9d4e6ebaf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.smoothing</definition>
+        <argsstring></argsstring>
+        <name>smoothing</name>
+        <initializer>= opts.ecH*<ref refid="d7/d5a/namespaceoscillating__cylinder_1a12c0a95eb96ca608504d822ab145b6f2" kindref="member">he</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="109" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a4644c5de2eee71e2ed06670504bb03c5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>oscillating_cylinder.dragAlpha</definition>
+        <argsstring></argsstring>
+        <name>dragAlpha</name>
+        <initializer>=  5*(2*<ref refid="d0/df7/createAnalyticGeometry_8cpp_1a43016d873124d39034edb8cd164794db" kindref="member">np.pi</ref>/opts.Tt[1])/1e-6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="111" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a9242102f4e2e0489cef10822d5985ffc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.waves</definition>
+        <argsstring></argsstring>
+        <name>waves</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="114" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1aecc0643a5283468f748814adb112f374" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float oscillating_cylinder.b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <initializer>= 2.0*opts.radius</initializer>
+        <briefdescription>
+<para>Shape Geometry &amp; Characteristics ###############################. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="125" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a9f3115905342c1e248553af90b599184" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float oscillating_cylinder.h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <initializer>= 2.0*opts.radius</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="126" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1af94880192d31b5a5b45d42e406edb8a8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.circle</definition>
+        <argsstring></argsstring>
+        <name>circle</name>
+        <initializer>=  st.Circle(<ref refid="d7/d5a/namespaceoscillating__cylinder_1a20da22eb01512123f7b98903578a6d53" kindref="member">domain</ref>=<ref refid="d7/d5a/namespaceoscillating__cylinder_1a20da22eb01512123f7b98903578a6d53" kindref="member">domain</ref>,
+                   radius=opts.radius,
+                   <ref refid="d7/daa/group__analyticalSolutions_1gae103bacd0ce284b66771dc3d06420616" kindref="member">coords</ref>=(0.5, opts.tank_dim[1]/2),
+                   barycenter=(0.5, opts.tank_dim[1]/2),
+                   nPoints=opts.nPoints)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="129" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a4906c2caf3e3575baf9c4a382cd8ac1a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.circle2D</definition>
+        <argsstring></argsstring>
+        <name>circle2D</name>
+        <initializer>=  bd.RigidBody(shape=<ref refid="d7/d5a/namespaceoscillating__cylinder_1af94880192d31b5a5b45d42e406edb8a8" kindref="member">circle</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="136" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a7fc073c2690933cb443da52f7a35574e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.mass</definition>
+        <argsstring></argsstring>
+        <name>mass</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="138" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a9654b030f8746dd496dd1559eb6f8fac" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple oscillating_cylinder.I</definition>
+        <argsstring></argsstring>
+        <name>I</name>
+        <initializer>=  (3.14*(opts.radius**4)/2.)*opts.mass</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="139" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1afd546526a44bb6b9e1313ddcac6ae9c3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.It</definition>
+        <argsstring></argsstring>
+        <name>It</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="141" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a8f5869326a6eb24c23ac77de41e109ba" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.free_x</definition>
+        <argsstring></argsstring>
+        <name>free_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="142" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a9321f9cf1dc4c4099fe4f8671556d5c5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.free_r</definition>
+        <argsstring></argsstring>
+        <name>free_r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="142" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1aa175cc0d1e426d2b233d8690c1354812" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.scheme</definition>
+        <argsstring></argsstring>
+        <name>scheme</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="143" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a618855111c497ee52fcd0ec56fb26f32" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.InputMotion</definition>
+        <argsstring></argsstring>
+        <name>InputMotion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="144" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a270c884c0863b2ded27e963b054906b6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.At</definition>
+        <argsstring></argsstring>
+        <name>At</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="144" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a655103fbf126aab946d400356ed1487d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.Tt</definition>
+        <argsstring></argsstring>
+        <name>Tt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="144" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a51257009c31bc594af1e6088a94ba851" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.filename</definition>
+        <argsstring></argsstring>
+        <name>filename</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="145" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1aa10bb6ac514dfbba5555aeee603fdb8c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.all_values</definition>
+        <argsstring></argsstring>
+        <name>all_values</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="145" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a201e15ce56b0e6436e5af434ed257b7c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.turbLength1</definition>
+        <argsstring></argsstring>
+        <name>turbLength1</name>
+        <initializer>=  opts.p1_turbLength1*(2*opts.radius)</initializer>
+        <briefdescription>
+<para>Turbulance ################################. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="154" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1af040f1bee5348e1e1a7b3e9ba2057bd3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.turbLength2</definition>
+        <argsstring></argsstring>
+        <name>turbLength2</name>
+        <initializer>=  opts.p2_turbLength2*(2*opts.radius)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="158" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a2f51af94d24b494bf72206dfc2014f36" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.Re</definition>
+        <argsstring></argsstring>
+        <name>Re</name>
+        <initializer>= <ref refid="de/d5b/Headers_8h_1a64e1fe39afc10b00a4f50198aef8626d" kindref="member">opts.U</ref>[0]*(2*opts.radius)/<ref refid="df/d80/VMS_8cpp_1a383b07af68441ce2b4adaaf8d8cc9d90" kindref="member">opts.nu_0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="161" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1aab9598005a454a09f8b2bb6245cfc250" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float oscillating_cylinder.turbI</definition>
+        <argsstring></argsstring>
+        <name>turbI</name>
+        <initializer>=  0.16*( <ref refid="d7/d5a/namespaceoscillating__cylinder_1a2f51af94d24b494bf72206dfc2014f36" kindref="member">Re</ref>**(-1./8.) )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="162" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a15f43ca6c8da852d08197f391e711f68" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>float oscillating_cylinder::kInflow</definition>
+        <argsstring></argsstring>
+        <name>kInflow</name>
+        <initializer>=  ((<ref refid="d7/d5a/namespaceoscillating__cylinder_1aab9598005a454a09f8b2bb6245cfc250" kindref="member">turbI</ref>*<ref refid="de/d5b/Headers_8h_1a64e1fe39afc10b00a4f50198aef8626d" kindref="member">opts.U</ref>[0])**2) * 3./2.</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="163" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a777f04341124b4b8305cd98fa1337978" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple oscillating_cylinder.dissipationInflow1</definition>
+        <argsstring></argsstring>
+        <name>dissipationInflow1</name>
+        <initializer>=  (<ref refid="d7/d5a/namespaceoscillating__cylinder_1a15f43ca6c8da852d08197f391e711f68" kindref="member">kInflow</ref>**0.5) / (<ref refid="d7/d5a/namespaceoscillating__cylinder_1a201e15ce56b0e6436e5af434ed257b7c" kindref="member">turbLength1</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="166" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1ae788bdbe4dd7185881a2706ee3f3a8f6" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>float oscillating_cylinder::dissipationInflow</definition>
+        <argsstring></argsstring>
+        <name>dissipationInflow</name>
+        <initializer>=  <ref refid="d7/d5a/namespaceoscillating__cylinder_1a777f04341124b4b8305cd98fa1337978" kindref="member">dissipationInflow1</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="167" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a4569e57bf50756e10ed5244709a5d60e" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple oscillating_cylinder.dissipationInflow2</definition>
+        <argsstring></argsstring>
+        <name>dissipationInflow2</name>
+        <initializer>=  (<ref refid="d7/d5a/namespaceoscillating__cylinder_1a15f43ca6c8da852d08197f391e711f68" kindref="member">kInflow</ref>**0.5) / ( <ref refid="d7/d5a/namespaceoscillating__cylinder_1af040f1bee5348e1e1a7b3e9ba2057bd3" kindref="member">turbLength2</ref>*(opts.c_mu**0.25) )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="169" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1ab8a74e92bcc80123721d55a6c7f3710a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float oscillating_cylinder.cf</definition>
+        <argsstring></argsstring>
+        <name>cf</name>
+        <initializer>=  0.664*(<ref refid="d7/d5a/namespaceoscillating__cylinder_1a2f51af94d24b494bf72206dfc2014f36" kindref="member">Re</ref>**-0.5)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="176" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a974bf17948249e62a99deb1ab7d24e7e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.Ut</definition>
+        <argsstring></argsstring>
+        <name>Ut</name>
+        <initializer>=  <ref refid="de/d5b/Headers_8h_1a64e1fe39afc10b00a4f50198aef8626d" kindref="member">opts.U</ref>[0]*sqrt(<ref refid="d7/d5a/namespaceoscillating__cylinder_1ab8a74e92bcc80123721d55a6c7f3710a" kindref="member">cf</ref>/2.)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="177" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1ad1893530dea9e6ca24420fd40c9cd7d9" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple oscillating_cylinder.kappaP</definition>
+        <argsstring></argsstring>
+        <name>kappaP</name>
+        <initializer>=  (<ref refid="d7/d5a/namespaceoscillating__cylinder_1a974bf17948249e62a99deb1ab7d24e7e" kindref="member">Ut</ref>**2)/sqrt(opts.c_mu)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="178" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a433c9caa6142c2249758ef4bd2ce3492" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.dissipationP</definition>
+        <argsstring></argsstring>
+        <name>dissipationP</name>
+        <initializer>=  sqrt(<ref refid="d7/d5a/namespaceoscillating__cylinder_1ad1893530dea9e6ca24420fd40c9cd7d9" kindref="member">kappaP</ref>)/((opts.c_mu**0.25)*0.41*<ref refid="d7/d5a/namespaceoscillating__cylinder_1a12c0a95eb96ca608504d822ab145b6f2" kindref="member">he</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="179" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1ab5a65847e5c05ebd77d2b84b28fbe46e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int oscillating_cylinder::ns_closure</definition>
+        <argsstring></argsstring>
+        <name>ns_closure</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="186" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a1e72b2de7fcbf065da44b65e0ce418fe" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.useRANS</definition>
+        <argsstring></argsstring>
+        <name>useRANS</name>
+        <initializer>= opts.useRANS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="188" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1aa72a2377697585983052c12434abf80e" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary oscillating_cylinder.boundaryOrientations</definition>
+        <argsstring></argsstring>
+        <name>boundaryOrientations</name>
+        <initializer>=  {&apos;y-&apos;: np.array([0., -1.,0.]),
+                        &apos;x+&apos;: np.array([+1, 0.,0.]),
+                        &apos;y+&apos;: np.array([0., +1.,0.]),
+                        &apos;x-&apos;: np.array([-1., 0.,0.]),
+                        &apos;sponge&apos;: None,
+                        &apos;<ref refid="d7/d5a/namespaceoscillating__cylinder_1af94880192d31b5a5b45d42e406edb8a8" kindref="member">circle</ref>&apos;: None,
+                        }</initializer>
+        <briefdescription>
+<para>Boundary Conditions ################################. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="197" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1ac6ac2fb4191c7564d419ee100a699f0e" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary oscillating_cylinder.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>=  {&apos;y-&apos;: 1,
+                &apos;x+&apos;: 2,
+                &apos;y+&apos;: 3,
+                &apos;x-&apos;: 4,
+                &apos;sponge&apos;: 5,
+                &apos;<ref refid="d7/d5a/namespaceoscillating__cylinder_1af94880192d31b5a5b45d42e406edb8a8" kindref="member">circle</ref>&apos;:6,
+                }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="204" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1adbdcbd2e464d0f49f1c02a409c29c689" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.kVal</definition>
+        <argsstring></argsstring>
+        <name>kVal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="218" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a773c9c8947e5ba3fd02ec06fc19d831d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.dissipationVal</definition>
+        <argsstring></argsstring>
+        <name>dissipationVal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="219" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a1211aab74a99abbadd7f9272c9bd1dd6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.wave</definition>
+        <argsstring></argsstring>
+        <name>wave</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="223" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a48311931af66388a71fbd33ef4114978" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.vert_axis</definition>
+        <argsstring></argsstring>
+        <name>vert_axis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="225" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a0ab82612b2fd8fd28b9a61a7c78a9f08" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.seaLevel</definition>
+        <argsstring></argsstring>
+        <name>seaLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="229" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="229" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a29bf3031ca5b5a9160a5e14e4e8b8433" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.rhoUp</definition>
+        <argsstring></argsstring>
+        <name>rhoUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="230" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="230" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1ad1d9b6eeea065e7d3f726d18381a822e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.rhoDown</definition>
+        <argsstring></argsstring>
+        <name>rhoDown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="231" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="231" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a409d2e6c8b2b63412856ebd634cc175e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="232" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="232" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a2d06905b0f0c2083deade73077367aef" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.refLevel</definition>
+        <argsstring></argsstring>
+        <name>refLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="233" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="233" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a2356d95c05a2c20f4d70216b39f7c803" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.U</definition>
+        <argsstring></argsstring>
+        <name>U</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="235" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a29300ad54b47b5613d04d9583dc8cfab" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.Uwind</definition>
+        <argsstring></argsstring>
+        <name>Uwind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="236" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a5b9aa4b92e762312d2fc82cfe26ae16f" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary oscillating_cylinder.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;pressure&apos;: <ref refid="d3/dab/classoscillating__cylinder_1_1P__IC" kindref="compound">P_IC</ref>(),
+                     &apos;vel_u&apos;: <ref refid="df/de3/classoscillating__cylinder_1_1AtRest" kindref="compound">AtRest</ref>(),
+                     &apos;vel_v&apos;: <ref refid="df/de3/classoscillating__cylinder_1_1AtRest" kindref="compound">AtRest</ref>(),
+                     &apos;vel_w&apos;: <ref refid="df/de3/classoscillating__cylinder_1_1AtRest" kindref="compound">AtRest</ref>(),
+                     &apos;k&apos;: <ref refid="d6/dd4/classoscillating__cylinder_1_1kIn" kindref="compound">kIn</ref>(),
+                     &apos;dissipation&apos;:<ref refid="d4/db1/classoscillating__cylinder_1_1dIn" kindref="compound">dIn</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="285" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1ad248a97da492129ff93744620a14accd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.dt_output</definition>
+        <argsstring></argsstring>
+        <name>dt_output</name>
+        <initializer>=  opts.Tt[1]/opts.Np</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="324" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a00f0f5d6edc155451fccec827ed1ab0c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  TpFlow.OutputStepping(final_time=Duration,
+                                       dt_init=opts.dt_init,
+                                       # cfl=cfl,
+                                       <ref refid="d7/d5a/namespaceoscillating__cylinder_1ad248a97da492129ff93744620a14accd" kindref="member">dt_output</ref>=<ref refid="d7/d5a/namespaceoscillating__cylinder_1ad248a97da492129ff93744620a14accd" kindref="member">dt_output</ref>,
+                                       nDTout=None,
+                                       dt_fixed=None)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="326" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a8a9501cf5a98565dbf91dd062a71917b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem(ns_model=None,
+                                             ls_model=None,
+                                             nd=domain.nd,
+                                             cfl=opts.cfl,
+                                             <ref refid="d7/d5a/namespaceoscillating__cylinder_1a00f0f5d6edc155451fccec827ed1ab0c" kindref="member">outputStepping</ref>=<ref refid="d7/d5a/namespaceoscillating__cylinder_1a00f0f5d6edc155451fccec827ed1ab0c" kindref="member">outputStepping</ref>,
+                                             structured=False,
+                                             <ref refid="d7/d5a/namespaceoscillating__cylinder_1a12c0a95eb96ca608504d822ab145b6f2" kindref="member">he</ref>=<ref refid="d7/d5a/namespaceoscillating__cylinder_1a12c0a95eb96ca608504d822ab145b6f2" kindref="member">he</ref>,
+                                             nnx=None,
+                                             nny=None,
+                                             <ref refid="d1/d3e/Richards_8h_1a93d413a62c9fd1342f67727ef7f8c6a1" kindref="member">nnz</ref>=None,
+                                             <ref refid="d7/d5a/namespaceoscillating__cylinder_1a20da22eb01512123f7b98903578a6d53" kindref="member">domain</ref>=<ref refid="d7/d5a/namespaceoscillating__cylinder_1a20da22eb01512123f7b98903578a6d53" kindref="member">domain</ref>,
+                                             <ref refid="d7/d5a/namespaceoscillating__cylinder_1a5b9aa4b92e762312d2fc82cfe26ae16f" kindref="member">initialConditions</ref>=<ref refid="d7/d5a/namespaceoscillating__cylinder_1a5b9aa4b92e762312d2fc82cfe26ae16f" kindref="member">initialConditions</ref>,
+                                             boundaryConditions=None, 
+                                             )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="333" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="333" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a1b83d0cc9257ac46c6c7eed9e2565370" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.params</definition>
+        <argsstring></argsstring>
+        <name>params</name>
+        <initializer>=  myTpFlowProblem.Parameters</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="348" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="348" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a65975b1eb48fca43a33fcfc71c8dc855" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.useSuperLu</definition>
+        <argsstring></argsstring>
+        <name>useSuperLu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="350" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1adba90f49aff63d3d3765052f73be3b06" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.densityA</definition>
+        <argsstring></argsstring>
+        <name>densityA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="351" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a83176ff32de0f095e0adf359d4744278" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.densityB</definition>
+        <argsstring></argsstring>
+        <name>densityB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="352" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="352" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1ab96ba5e795dd31de8ddc7d369de4dcf6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.kinematicViscosityA</definition>
+        <argsstring></argsstring>
+        <name>kinematicViscosityA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="353" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="353" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a578ba9a9e966f675aa6cfc650672d82b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.kinematicViscosityB</definition>
+        <argsstring></argsstring>
+        <name>kinematicViscosityB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="354" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="354" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a876d5a9fa99f7984482b3942073fb928" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.surf_tension_coeff</definition>
+        <argsstring></argsstring>
+        <name>surf_tension_coeff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="355" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="355" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a00765c063ddb9bd4ad6c313614550444" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <initializer>=  params.Models</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="358" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="358" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d5a/namespaceoscillating__cylinder_1a826340aed92ad4d4be3011e782dfed33" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>oscillating_cylinder.index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="359" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="359" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d7/d5a/namespaceoscillating__cylinder_1a6774d66b96c02080fa1575dbc3582a32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def oscillating_cylinder.signedDistance</definition>
+        <argsstring>(x)</argsstring>
+        <name>signedDistance</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+<para>Initial Conditions ################################. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="249" column="1" bodyfile="tests/proteus_tutorial/2d/oscillating_cylinder.py" bodystart="249" bodyend="263"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/proteus_tutorial/2d/oscillating_cylinder.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1217 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacetilting__flume" kind="namespace" language="Python">
+    <compoundname>tilting_flume</compoundname>
+    <innerclass refid="classtilting__flume_1_1PHI__IC" prot="public">tilting_flume::PHI_IC</innerclass>
+    <innerclass refid="classtilting__flume_1_1VF__IC" prot="public">tilting_flume::VF_IC</innerclass>
+    <innerclass refid="classtilting__flume_1_1zero" prot="public">tilting_flume::zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacetilting__flume_1a6fdc91ca2cc672956b5240aee17cdf64" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilting_flume.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  Context.Options([
+    (&quot;final_time&quot;,5.0,&quot;Final time for simulation&quot;),
+    (&quot;dt_output&quot;,0.01,&quot;Time interval to output solution&quot;),
+    (&quot;cfl&quot;,0.25,&quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="namespacetilting__flume_1a9d1586c66ae00520c1ed223ef34c466c" kindref="member">waterLevel</ref>&quot;, 0.9,&quot;<ref refid="Headers_8h_1a5554d9ddb970ea46ca620bfa405ba2a3" kindref="member">Height</ref> of water column in m&quot;),
+    (&quot;<ref refid="namespacetilting__flume_1ac43b9652baf3d8eefa20be782b2e5d76" kindref="member">tailwater</ref>&quot;, 0.9,&quot;<ref refid="Headers_8h_1a5554d9ddb970ea46ca620bfa405ba2a3" kindref="member">Height</ref> of water column in m&quot;),
+    (&quot;<ref refid="namespacetilting__flume_1a8d1359e75f57f370dfaa799f48f12c96" kindref="member">g</ref>&quot;,(0,-9.81,0), &quot;Gravity <ref refid="jf_8h_1ad6a1294cda25bf40114e0b9a56cd0445" kindref="member">vector</ref> in m/<ref refid="Headers_8h_1a7cbe4dbecea8b00e5845e24579f6036d" kindref="member">s</ref>^2&quot;),
+    (&quot;<ref refid="namespacetilting__flume_1ad6184699a0052ec396f1e757221f3f5f" kindref="member">he</ref>&quot;,0.1, &quot;element diameter&quot;),
+    # run time options
+    (&quot;dt_fixed&quot;, 0.01, &quot;Fixed time step in <ref refid="Headers_8h_1a7cbe4dbecea8b00e5845e24579f6036d" kindref="member">s</ref>&quot;),
+    (&quot;dt_init&quot;, 0.001 ,&quot;Maximum initial time step in <ref refid="Headers_8h_1a7cbe4dbecea8b00e5845e24579f6036d" kindref="member">s</ref>&quot;),
+    (&quot;flowrate&quot;,0.5,&quot;unit flowrate for 2d (assuming thickness of 1m)&quot;), 
+    (&quot;<ref refid="namespacetilting__flume_1acf01c952867711cde0bfcdfead18eb1d" kindref="member">slope</ref>&quot;,0.01,&quot;<ref refid="namespacetilting__flume_1acf01c952867711cde0bfcdfead18eb1d" kindref="member">slope</ref> of tilting flume&quot;),
+    (&quot;flume_length&quot;,7.,&quot;length of flume downstream of flow constriction in m&quot;),
+    (&quot;flume_height&quot;,.7,&quot;<ref refid="Headers_8h_1a4dbff2664c02385f0a9a62cc755b7b3c" kindref="member">height</ref> of flume in m&quot;)
+    ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="18" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1ad6184699a0052ec396f1e757221f3f5f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilting_flume.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>= opts.he</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="35" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1acf01c952867711cde0bfcdfead18eb1d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilting_flume.slope</definition>
+        <argsstring></argsstring>
+        <name>slope</name>
+        <initializer>= opts.slope</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="36" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a9d1586c66ae00520c1ed223ef34c466c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilting_flume.waterLevel</definition>
+        <argsstring></argsstring>
+        <name>waterLevel</name>
+        <initializer>= opts.waterLevel</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="37" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1ac43b9652baf3d8eefa20be782b2e5d76" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilting_flume.tailwater</definition>
+        <argsstring></argsstring>
+        <name>tailwater</name>
+        <initializer>= opts.tailwater</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="38" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1ae69ae0eafb21ec86699ea32a8b843bf3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilting_flume.qu</definition>
+        <argsstring></argsstring>
+        <name>qu</name>
+        <initializer>= opts.flowrate</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="39" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a137f4937f03b048c6fe722f8d4142413" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tilting_flume.rho_0</definition>
+        <argsstring></argsstring>
+        <name>rho_0</name>
+        <initializer>=  998.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="43" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1acac989f98f633dd9efafe8264508f202" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tilting_flume.nu_0</definition>
+        <argsstring></argsstring>
+        <name>nu_0</name>
+        <initializer>=  1.004e-6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="44" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a24bbeb3d24952cab9146c166245f003f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tilting_flume.rho_1</definition>
+        <argsstring></argsstring>
+        <name>rho_1</name>
+        <initializer>=  1.205</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="46" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a65d501c3c0b874e78fbfeee74fb5650d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tilting_flume.nu_1</definition>
+        <argsstring></argsstring>
+        <name>nu_1</name>
+        <initializer>=  1.500e-5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="47" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1adab344da2d2fea87dbee0444902b3764" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tilting_flume.sigma_01</definition>
+        <argsstring></argsstring>
+        <name>sigma_01</name>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="49" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a8d1359e75f57f370dfaa799f48f12c96" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilting_flume.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>=  opts.g</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="51" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a37e1efd723789b03a092c0d4c0d5c431" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tilting_flume.straight</definition>
+        <argsstring></argsstring>
+        <name>straight</name>
+        <initializer>=  0.28617+0.4572+2.12175</initializer>
+        <briefdescription>
+<para>Upstream basin <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="82" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a3c5112223fb0f0c09a3a7c7493afe218" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tilting_flume.straightpoints</definition>
+        <argsstring></argsstring>
+        <name>straightpoints</name>
+        <initializer>=  40</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="83" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1ae1865fef36f1b23294fd1ca916b08c7d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tilting_flume::spacing</definition>
+        <argsstring></argsstring>
+        <name>spacing</name>
+        <initializer>=  1000*<ref refid="namespacetilting__flume_1a37e1efd723789b03a092c0d4c0d5c431" kindref="member">straight</ref>/<ref refid="namespacetilting__flume_1a3c5112223fb0f0c09a3a7c7493afe218" kindref="member">straightpoints</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="84" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a41134325d0ed223cd8b7f337c7a4a9f3" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>def tilting_flume::vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <initializer>=  [[-(0.28617+0.4572),0]]</initializer>
+        <briefdescription>
+<para>Top Boundary. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="85" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a49adf3231811e75057a42c2ffbc13136" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>list tilting_flume::newx</definition>
+        <argsstring></argsstring>
+        <name>newx</name>
+        <initializer>=  -(0.28617+0.4572)+<ref refid="namespacetilting__flume_1ae1865fef36f1b23294fd1ca916b08c7d" kindref="member">spacing</ref>*(i+1)/1000</initializer>
+        <briefdescription>
+<para>Concave down portion of flow acceleration <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="87" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a7d6de8c4ee051cf0923b8f97c35db493" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int tilting_flume.numvertices</definition>
+        <argsstring></argsstring>
+        <name>numvertices</name>
+        <initializer>=  20</initializer>
+        <briefdescription>
+<para>Concave up portion of flow acceleration <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="91" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a6e6f35eee8de15c70b6d02717f57e4ae" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tilting_flume.LX1</definition>
+        <argsstring></argsstring>
+        <name>LX1</name>
+        <initializer>=  1.400</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="92" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1ac623f0a19c4dfc2d1fd5198a5e32f24d" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list tilting_flume.straightend</definition>
+        <argsstring></argsstring>
+        <name>straightend</name>
+        <initializer>=  <ref refid="namespacetilting__flume_1a41134325d0ed223cd8b7f337c7a4a9f3" kindref="member">vertices</ref>[len(<ref refid="namespacetilting__flume_1a41134325d0ed223cd8b7f337c7a4a9f3" kindref="member">vertices</ref>)-1][0]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="93" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1ae4d057109213476787701e74fc24db24" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tilting_flume.a</definition>
+        <argsstring></argsstring>
+        <name>a</name>
+        <initializer>=  1.1507*(10**-7)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="96" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1aa0155f3dc30202f6fce00615a88f8083" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tilting_flume::newz</definition>
+        <argsstring></argsstring>
+        <name>newz</name>
+        <initializer>=  <ref refid="namespacetilting__flume_1ae4d057109213476787701e74fc24db24" kindref="member">a</ref>*(((<ref refid="namespacetilting__flume_1a49adf3231811e75057a42c2ffbc13136" kindref="member">newx</ref>-<ref refid="namespacetilting__flume_1ac623f0a19c4dfc2d1fd5198a5e32f24d" kindref="member">straightend</ref>)*1000)**3)/1000</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="97" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a5c9a4c8a63f0ad8fda9b3bed601fb582" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list tilting_flume.begindsstraight</definition>
+        <argsstring></argsstring>
+        <name>begindsstraight</name>
+        <initializer>=  <ref refid="namespacetilting__flume_1a41134325d0ed223cd8b7f337c7a4a9f3" kindref="member">vertices</ref>[len(<ref refid="namespacetilting__flume_1a41134325d0ed223cd8b7f337c7a4a9f3" kindref="member">vertices</ref>)-1][0]</initializer>
+        <briefdescription>
+<para>Test section <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="107" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a63a890f1e88c6394f8293fdd5b1b9511" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list tilting_flume.endx</definition>
+        <argsstring></argsstring>
+        <name>endx</name>
+        <initializer>=  <ref refid="namespacetilting__flume_1a5c9a4c8a63f0ad8fda9b3bed601fb582" kindref="member">begindsstraight</ref> + opts.flume_length</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="108" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a267f10bb8a48674db07e52e620c693b4" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list tilting_flume.boundaries</definition>
+        <argsstring></argsstring>
+        <name>boundaries</name>
+        <initializer>= [&apos;left&apos;,&apos;outflow&apos;,&apos;<ref refid="namespacetilting__flume_1a4e52bb9886d699b205c2b8f585a58ec5" kindref="member">bottom</ref>&apos;,&apos;top&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="122" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a28cb9579b0e21cd0d999b934e1744f1c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilting_flume.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>= dict([[key,i+1] for [i,key] in enumerate(<ref refid="namespacetilting__flume_1a267f10bb8a48674db07e52e620c693b4" kindref="member">boundaries</ref>)])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="123" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a19de238ddad227b567e5f5d9d6987c3a" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list tilting_flume.vertexFlags</definition>
+        <argsstring></argsstring>
+        <name>vertexFlags</name>
+        <initializer>= [<ref refid="namespacetilting__flume_1a28cb9579b0e21cd0d999b934e1744f1c" kindref="member">boundaryTags</ref>[&apos;left&apos;]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="124" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1afa841860fa95e5a542daa1fba6d5d425" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list tilting_flume.segments</definition>
+        <argsstring></argsstring>
+        <name>segments</name>
+        <initializer>=  [[0,1]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="132" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a712e66359deb4aca869a3ad8e3b51fb9" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list tilting_flume.segmentFlags</definition>
+        <argsstring></argsstring>
+        <name>segmentFlags</name>
+        <initializer>= [<ref refid="namespacetilting__flume_1a28cb9579b0e21cd0d999b934e1744f1c" kindref="member">boundaryTags</ref>[&apos;<ref refid="namespacetilting__flume_1a4e52bb9886d699b205c2b8f585a58ec5" kindref="member">bottom</ref>&apos;]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="138" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a92bd873f2b840ba6376562529362fdb6" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list tilting_flume.regions</definition>
+        <argsstring></argsstring>
+        <name>regions</name>
+        <initializer>= [[0.5,0.5]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="146" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a723797f0615126b7396a62c0186067b5" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list tilting_flume.regionFlags</definition>
+        <argsstring></argsstring>
+        <name>regionFlags</name>
+        <initializer>= [1]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="147" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="147" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a351d931ec41d4a91267192393e92ede6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilting_flume.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.PlanarStraightLineGraphDomain(<ref refid="namespacetilting__flume_1a41134325d0ed223cd8b7f337c7a4a9f3" kindref="member">vertices</ref>=<ref refid="namespacetilting__flume_1a41134325d0ed223cd8b7f337c7a4a9f3" kindref="member">vertices</ref>,
+                                              <ref refid="namespacetilting__flume_1a19de238ddad227b567e5f5d9d6987c3a" kindref="member">vertexFlags</ref>=<ref refid="namespacetilting__flume_1a19de238ddad227b567e5f5d9d6987c3a" kindref="member">vertexFlags</ref>,
+                                              <ref refid="namespacetilting__flume_1afa841860fa95e5a542daa1fba6d5d425" kindref="member">segments</ref>=<ref refid="namespacetilting__flume_1afa841860fa95e5a542daa1fba6d5d425" kindref="member">segments</ref>,
+                                              <ref refid="namespacetilting__flume_1a712e66359deb4aca869a3ad8e3b51fb9" kindref="member">segmentFlags</ref>=<ref refid="namespacetilting__flume_1a712e66359deb4aca869a3ad8e3b51fb9" kindref="member">segmentFlags</ref>,
+                                              <ref refid="namespacetilting__flume_1a92bd873f2b840ba6376562529362fdb6" kindref="member">regions</ref> = <ref refid="namespacetilting__flume_1a92bd873f2b840ba6376562529362fdb6" kindref="member">regions</ref>,
+                                              <ref refid="namespacetilting__flume_1a723797f0615126b7396a62c0186067b5" kindref="member">regionFlags</ref> = <ref refid="namespacetilting__flume_1a723797f0615126b7396a62c0186067b5" kindref="member">regionFlags</ref>,)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="149" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1aa978b6086367ba01dc4d8c078ac64dd3" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>tilting_flume.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <initializer>=  &quot;VApq30Dena%8.8<ref refid="group__analyticalSolutions_1ga5f01b1fc0e3cb358aa6411861cedc62c" kindref="member">f</ref>&quot; % ((he**2)/2.0,)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="161" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a4e52bb9886d699b205c2b8f585a58ec5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilting_flume.bottom</definition>
+        <argsstring></argsstring>
+        <name>bottom</name>
+        <initializer>= <ref refid="jf_8h_1ac6afabdc09a49a433ee19d8a9486056d" kindref="member">min</ref>(<ref refid="namespacetilting__flume_1a41134325d0ed223cd8b7f337c7a4a9f3" kindref="member">vertices</ref>, key=lambda x: x[1])[1]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="164" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a966b1ba5e5cd9d12f9cf0ff50fe9d15d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilting_flume.topy</definition>
+        <argsstring></argsstring>
+        <name>topy</name>
+        <initializer>= <ref refid="jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(<ref refid="namespacetilting__flume_1a41134325d0ed223cd8b7f337c7a4a9f3" kindref="member">vertices</ref>, key=lambda x: x[1])[1]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="165" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a6655d20cebc7b89cdcda52eecd536046" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilting_flume.u</definition>
+        <argsstring></argsstring>
+        <name>u</name>
+        <initializer>=  <ref refid="namespacetilting__flume_1ae69ae0eafb21ec86699ea32a8b843bf3" kindref="member">qu</ref>*np.sin(theta)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="176" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1aedef477528154a231b665f8ab0bbab7b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilting_flume.v</definition>
+        <argsstring></argsstring>
+        <name>v</name>
+        <initializer>=  <ref refid="namespacetilting__flume_1ae69ae0eafb21ec86699ea32a8b843bf3" kindref="member">qu</ref>*np.cos(theta)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="177" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a2c2fabab1297acb17743a57aea3bbee4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float tilting_flume.epsFact_consrv_heaviside</definition>
+        <argsstring></argsstring>
+        <name>epsFact_consrv_heaviside</name>
+        <initializer>= 3.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="179" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a800ad280a37f6bc2af5618ec4cb3aa8d" prot="public" static="no" mutable="no">
+        <type>def</type>
+        <definition>def tilting_flume.c</definition>
+        <argsstring></argsstring>
+        <name>c</name>
+        <initializer>=  <ref refid="namespacetilting__flume_1a3ba419e01d2789bd91772e87da5bb3d9" kindref="member">tilt</ref>([[0,0]], <ref refid="namespacetilting__flume_1acf01c952867711cde0bfcdfead18eb1d" kindref="member">slope</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="223" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a55c556ec393b11c3586a59d20bf8f513" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilting_flume.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  TpFlow.OutputStepping(opts.final_time,dt_output=opts.dt_output)</initializer>
+        <briefdescription>
+<para>***** Create myTwoPhaseFlowProblem ***** # </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="328" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a6a586c3fdff4004f8e5879ea3226f872" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary tilting_flume.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;pressure&apos;: <ref refid="classtilting__flume_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vel_u&apos;: <ref refid="classtilting__flume_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vel_v&apos;: <ref refid="classtilting__flume_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vof&apos;: <ref refid="classtilting__flume_1_1VF__IC" kindref="compound">VF_IC</ref>(),
+                     &apos;ncls&apos;: <ref refid="classtilting__flume_1_1PHI__IC" kindref="compound">PHI_IC</ref>(),
+                     &apos;rdls&apos;: <ref refid="classtilting__flume_1_1PHI__IC" kindref="compound">PHI_IC</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="329" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="329" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1ab2f0174787826f5f70a72c3c26efcbb3" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary tilting_flume.boundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>boundaryConditions</name>
+        <initializer>=  {
+    # DIRICHLET BCs #                                                                               
+    &apos;<ref refid="namespacetilting__flume_1a3ec4b57750cc36ddc7525d5177556d02" kindref="member">pressure_DBC</ref>&apos;: <ref refid="namespacetilting__flume_1a3ec4b57750cc36ddc7525d5177556d02" kindref="member">pressure_DBC</ref>,
+    &apos;<ref refid="namespacetilting__flume_1a57f749c3b26ed80349ea3c160ed6e169" kindref="member">vel_u_DBC</ref>&apos;: <ref refid="namespacetilting__flume_1a57f749c3b26ed80349ea3c160ed6e169" kindref="member">vel_u_DBC</ref>,
+    &apos;<ref refid="namespacetilting__flume_1a3effc1aa7d42e4c171793108d15ae31b" kindref="member">vel_v_DBC</ref>&apos;: <ref refid="namespacetilting__flume_1a3effc1aa7d42e4c171793108d15ae31b" kindref="member">vel_v_DBC</ref>,
+    &apos;<ref refid="namespacetilting__flume_1a031c726417ea0ca3432a6e9a8e5925c3" kindref="member">vof_DBC</ref>&apos;: <ref refid="namespacetilting__flume_1a031c726417ea0ca3432a6e9a8e5925c3" kindref="member">vof_DBC</ref>,
+    &apos;<ref refid="namespacetilting__flume_1a50de7b3a81d46169e05117553f6cda9f" kindref="member">ncls_DBC</ref>&apos;: <ref refid="namespacetilting__flume_1a50de7b3a81d46169e05117553f6cda9f" kindref="member">ncls_DBC</ref>,
+    &apos;<ref refid="namespacetilting__flume_1a293692a2ceb99ad1390ba790c0d371db" kindref="member">rdls_DBC</ref>&apos;:<ref refid="namespacetilting__flume_1a293692a2ceb99ad1390ba790c0d371db" kindref="member">rdls_DBC</ref>,
+    # ADVECTIVE FLUX BCs #                                                                          
+    &apos;<ref refid="namespacetilting__flume_1a414b9f906084d2140ddccb8e300e06c9" kindref="member">pressure_AFBC</ref>&apos;: <ref refid="namespacetilting__flume_1a414b9f906084d2140ddccb8e300e06c9" kindref="member">pressure_AFBC</ref>,
+    &apos;<ref refid="namespacetilting__flume_1a484773e3fdfb8f8c06efc61303984ea2" kindref="member">vel_u_AFBC</ref>&apos;: <ref refid="namespacetilting__flume_1a484773e3fdfb8f8c06efc61303984ea2" kindref="member">vel_u_AFBC</ref>,
+    &apos;<ref refid="namespacetilting__flume_1ad40f71fd4879185e84cfdabb91a00211" kindref="member">vel_v_AFBC</ref>&apos;: <ref refid="namespacetilting__flume_1ad40f71fd4879185e84cfdabb91a00211" kindref="member">vel_v_AFBC</ref>,
+    &apos;<ref refid="namespacetilting__flume_1a03f2af64f3c7a1dba3fd0cb4fc60f79e" kindref="member">vof_AFBC</ref>&apos;: <ref refid="namespacetilting__flume_1a03f2af64f3c7a1dba3fd0cb4fc60f79e" kindref="member">vof_AFBC</ref>,
+    &apos;<ref refid="namespacetilting__flume_1a4ddca39cfdb8d0953be6fd7efdf7057d" kindref="member">ncls_AFBC</ref>&apos;: <ref refid="namespacetilting__flume_1a4ddca39cfdb8d0953be6fd7efdf7057d" kindref="member">ncls_AFBC</ref>,
+    &apos;<ref refid="namespacetilting__flume_1a3e91ce4700dcc06fa44030bcbf29b06d" kindref="member">rdls_AFBC</ref>&apos;: <ref refid="namespacetilting__flume_1a3e91ce4700dcc06fa44030bcbf29b06d" kindref="member">rdls_AFBC</ref>,
+    # DIFFUSIVE FLUX BCs #                                                                          
+    &apos;vel_u_DFBC&apos;: lambda x, flag: lambda x,t: 0.0,
+    &apos;vel_v_DFBC&apos;: lambda x, flag: lambda x,t: 0.0,
+    &apos;vof_DFBC&apos;: lambda x, flag: None,
+    &apos;ncls_DFBC&apos;: lambda x, flag: None,
+    &apos;rdls_DFBC&apos;: lambda x, flag: None,}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="336" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a043c6119e9c833957223e90c2535622f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilting_flume.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem(ns_model=0,
+                                             ls_model=0,
+                                             nd=2,
+                                             cfl=opts.cfl,
+                                             <ref refid="namespacetilting__flume_1a55c556ec393b11c3586a59d20bf8f513" kindref="member">outputStepping</ref>=<ref refid="namespacetilting__flume_1a55c556ec393b11c3586a59d20bf8f513" kindref="member">outputStepping</ref>,
+                                             <ref refid="namespacetilting__flume_1ad6184699a0052ec396f1e757221f3f5f" kindref="member">he</ref>=<ref refid="namespacetilting__flume_1ad6184699a0052ec396f1e757221f3f5f" kindref="member">he</ref>,
+                                             <ref refid="namespacetilting__flume_1a351d931ec41d4a91267192393e92ede6" kindref="member">domain</ref>=<ref refid="namespacetilting__flume_1a351d931ec41d4a91267192393e92ede6" kindref="member">domain</ref>,
+                                             <ref refid="namespacetilting__flume_1a6a586c3fdff4004f8e5879ea3226f872" kindref="member">initialConditions</ref>=<ref refid="namespacetilting__flume_1a6a586c3fdff4004f8e5879ea3226f872" kindref="member">initialConditions</ref>,
+                                             <ref refid="namespacetilting__flume_1ab2f0174787826f5f70a72c3c26efcbb3" kindref="member">boundaryConditions</ref>=<ref refid="namespacetilting__flume_1ab2f0174787826f5f70a72c3c26efcbb3" kindref="member">boundaryConditions</ref>,
+                                             useSuperlu=False)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="358" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="358" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacetilting__flume_1a07ef1057d5f659bc2e8e6025fd37b136" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tilting_flume.physical_parameters</definition>
+        <argsstring></argsstring>
+        <name>physical_parameters</name>
+        <initializer>=  myTpFlowProblem.physical_parameters</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="368" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="368" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacetilting__flume_1a3ba419e01d2789bd91772e87da5bb3d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.tilt</definition>
+        <argsstring>(vertices, slope)</argsstring>
+        <name>tilt</name>
+        <param>
+          <type><ref refid="namespacetilting__flume_1a41134325d0ed223cd8b7f337c7a4a9f3" kindref="member">vertices</ref></type>
+          <defname>vertices</defname>
+        </param>
+        <param>
+          <type><ref refid="namespacetilting__flume_1acf01c952867711cde0bfcdfead18eb1d" kindref="member">slope</ref></type>
+          <defname>slope</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="58" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="58" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a2388cdca87c3a93f4357a7e47bd9035e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.signedDistance</definition>
+        <argsstring>(X)</argsstring>
+        <name>signedDistance</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="171" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="171" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a6d9342f4696de99b7b6d453e2f4af4c6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.twpflowVelocity_u</definition>
+        <argsstring>(X, t)</argsstring>
+        <name>twpflowVelocity_u</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="180" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="180" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a24a072422cfe598b5c588d07208febe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.twpflowVelocity_u_flux</definition>
+        <argsstring>(X, t)</argsstring>
+        <name>twpflowVelocity_u_flux</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="185" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="185" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a3d2b18312e5095061d8c5e427753cdac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.intwpflowPressure</definition>
+        <argsstring>(X, t)</argsstring>
+        <name>intwpflowPressure</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="190" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="190" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1ae8e71a1db89c5afa0bd70c7c0368ae61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.outtwpflowPressure</definition>
+        <argsstring>(X, t)</argsstring>
+        <name>outtwpflowPressure</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="200" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="200" bodyend="209"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a764a11b7e2127c91871ca6621e4d6b39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.inbcVF</definition>
+        <argsstring>(X, t)</argsstring>
+        <name>inbcVF</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="210" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="210" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a867217d3a6e51491d4b73638d51b0c50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.inbcPhi</definition>
+        <argsstring>(X, t)</argsstring>
+        <name>inbcPhi</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="213" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="213" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1ace179a313022a0e0cfc388a03492c393" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.outbcVF</definition>
+        <argsstring>(X, t)</argsstring>
+        <name>outbcVF</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="216" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="216" bodyend="218"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a6e4e7a7c5faa3ecc71532606ac72efd5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.outbcPhi</definition>
+        <argsstring>(X, t)</argsstring>
+        <name>outbcPhi</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="219" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="219" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a27ff828e3dc6cf1463e795a517ededf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.inflow_</definition>
+        <argsstring>(X)</argsstring>
+        <name>inflow_</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="224" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="224" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a57f749c3b26ed80349ea3c160ed6e169" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.vel_u_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_u_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="254" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="254" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a3effc1aa7d42e4c171793108d15ae31b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.vel_v_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_v_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="261" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="261" bodyend="267"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a4d2d6b763966e7e7e90dd67eb378e88e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.vel_w_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_w_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="268" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="268" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a3ec4b57750cc36ddc7525d5177556d02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.pressure_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="271" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="271" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a031c726417ea0ca3432a6e9a8e5925c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.vof_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vof_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="277" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="277" bodyend="284"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a50de7b3a81d46169e05117553f6cda9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.ncls_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>ncls_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="285" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="285" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a293692a2ceb99ad1390ba790c0d371db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.rdls_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>rdls_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="291" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="291" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a484773e3fdfb8f8c06efc61303984ea2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.vel_u_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_u_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="295" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="295" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1ad40f71fd4879185e84cfdabb91a00211" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.vel_v_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_v_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="297" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="297" bodyend="298"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a914f3d16fb199bd001d1ae91882560fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.vel_w_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_w_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="299" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="299" bodyend="301"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a414b9f906084d2140ddccb8e300e06c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.pressure_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="302" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="302" bodyend="309"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a03f2af64f3c7a1dba3fd0cb4fc60f79e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.vof_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vof_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="310" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="310" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a4ddca39cfdb8d0953be6fd7efdf7057d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.ncls_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>ncls_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="318" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="318" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacetilting__flume_1a3e91ce4700dcc06fa44030bcbf29b06d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def tilting_flume.rdls_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>rdls_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="321" column="1" bodyfile="tests/proteus_tutorial/2d/extras/tilting_flume.py" bodystart="321" bodyend="324"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>tilting-flume
+</verbatim> </para>
+    </detaileddescription>
+    <location file="tests/proteus_tutorial/2d/extras/tilting_flume.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">proteus
-   &#160;<span id="projectnumber">1.7.3.dev0</span>
+   &#160;<span id="projectnumber">1.8.1</span>
    </div>
    <div id="projectbrief">C/C++/Fortran libraries</div>
   </td>
@@ -83,8 +83,10 @@ $(function() {
 <div class="title">SW2DCV.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="_comp_kernel_8h_source.html">CompKernel.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="_arguments_dict_8h_source.html">ArgumentsDict.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_comp_kernel_8h_source.html">CompKernel.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_model_factory_8h_source.html">ModelFactory.h</a>&quot;</code><br />
+<code>#include &quot;xtensor-python/pyarray.hpp&quot;</code><br />
 <code>#include &lt;assert.h&gt;</code><br />
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
@@ -93,14 +95,12 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for SW2DCV.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_s_w2_d_c_v_8h__incl.svg" width="744" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_s_w2_d_c_v_8h__incl.svg" width="1044" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_s_w2_d_c_v_8h__dep__incl.svg" width="114" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_s_w2_d_c_v_8h__dep__incl.svg" width="114" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="_s_w2_d_c_v_8h_source.html">Go to the source code of this file.</a></p>
@@ -119,14 +119,14 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:aa30b36303b632a14d8f23dd32b047922"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_w2_d_c_v_8h.html#aa30b36303b632a14d8f23dd32b047922">GLOBAL_FCT</a>&#160;&#160;&#160;0</td></tr>
-<tr class="separator:aa30b36303b632a14d8f23dd32b047922"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3452ab29367216c56ee2ef46257c22be"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_w2_d_c_v_8h.html#a3452ab29367216c56ee2ef46257c22be">POWER_SMOOTHNESS_INDICATOR</a>&#160;&#160;&#160;2</td></tr>
 <tr class="separator:a3452ab29367216c56ee2ef46257c22be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0efbfaf22559b0d4d372bc67870a96bc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_w2_d_c_v_8h.html#a0efbfaf22559b0d4d372bc67870a96bc">VEL_FIX_POWER</a>&#160;&#160;&#160;2.</td></tr>
 <tr class="separator:a0efbfaf22559b0d4d372bc67870a96bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3b1ffcd39d6fc4308df5f1494e0b028"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_w2_d_c_v_8h.html#ab3b1ffcd39d6fc4308df5f1494e0b028">REESTIMATE_MAX_EDGE_BASED_CFL</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:ab3b1ffcd39d6fc4308df5f1494e0b028"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_w2_d_c_v_8h.html#ab3b1ffcd39d6fc4308df5f1494e0b028">REESTIMATE_MAX_EDGE_BASED_CFL</a>&#160;&#160;&#160;0</td></tr>
 <tr class="separator:ab3b1ffcd39d6fc4308df5f1494e0b028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00f1695fac429cc48edc1b889e15e242"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_s_w2_d_c_v_8h.html#a00f1695fac429cc48edc1b889e15e242">LIMITING_ITERATION</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:a00f1695fac429cc48edc1b889e15e242"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -150,10 +150,10 @@ Functions</h2></td></tr>
 <tr class="separator:aea851b1d02fbb510e83331beade83dbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a475fb9d85bb327fe4849011189f20e62"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproteus.html#a475fb9d85bb327fe4849011189f20e62">proteus::phip</a> (const double &amp;g, const double &amp;h, const double &amp;hL, const double &amp;hR)</td></tr>
 <tr class="separator:a475fb9d85bb327fe4849011189f20e62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafdd121958af52516e1f8564c737cbf3"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproteus.html#aafdd121958af52516e1f8564c737cbf3">proteus::nu1</a> (const double &amp;g, const double &amp;hStar, const double &amp;hL, const double &amp;uL)</td></tr>
-<tr class="separator:aafdd121958af52516e1f8564c737cbf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75eb6ad7fbb7f589b2e8a6b836e0bae2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproteus.html#a75eb6ad7fbb7f589b2e8a6b836e0bae2">proteus::nu3</a> (const double &amp;g, const double &amp;hStar, const double &amp;hR, const double &amp;uR)</td></tr>
-<tr class="separator:a75eb6ad7fbb7f589b2e8a6b836e0bae2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51bc0d78c532a8a341af66a2e2fb5895"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproteus.html#a51bc0d78c532a8a341af66a2e2fb5895">proteus::nu1</a> (const double &amp;g, const double &amp;hStar, const double &amp;hL, const double &amp;uL, const double &amp;one_over_hL)</td></tr>
+<tr class="separator:a51bc0d78c532a8a341af66a2e2fb5895"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbf7b0274d3a40eff8ecced146ce77f7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproteus.html#acbf7b0274d3a40eff8ecced146ce77f7">proteus::nu3</a> (const double &amp;g, const double &amp;hStar, const double &amp;hR, const double &amp;uR, const double &amp;one_over_hR)</td></tr>
+<tr class="separator:acbf7b0274d3a40eff8ecced146ce77f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a24e3549b98c861e0a822612a088a0d82"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproteus.html#a24e3549b98c861e0a822612a088a0d82">proteus::phiDiff</a> (const double &amp;g, const double &amp;h1k, const double &amp;h2k, const double &amp;hL, const double &amp;hR, const double &amp;uL, const double &amp;uR)</td></tr>
 <tr class="separator:a24e3549b98c861e0a822612a088a0d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7667307f5ed3630618f22cc94c48d7af"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproteus.html#a7667307f5ed3630618f22cc94c48d7af">proteus::phiDDiff1</a> (const double &amp;g, const double &amp;h1k, const double &amp;h2k, const double &amp;hL, const double &amp;hR, const double &amp;uL, const double &amp;uR)</td></tr>
@@ -168,19 +168,19 @@ Functions</h2></td></tr>
 <tr class="separator:a59cc84282aef464a74b9ff0639e5042d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="aa30b36303b632a14d8f23dd32b047922"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa30b36303b632a14d8f23dd32b047922">&#9670;&nbsp;</a></span>GLOBAL_FCT</h2>
+<a id="a00f1695fac429cc48edc1b889e15e242"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00f1695fac429cc48edc1b889e15e242">&#9670;&nbsp;</a></span>LIMITING_ITERATION</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define GLOBAL_FCT&#160;&#160;&#160;0</td>
+          <td class="memname">#define LIMITING_ITERATION&#160;&#160;&#160;2</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_s_w2_d_c_v_8h_source.html#l00013">13</a> of file <a class="el" href="_s_w2_d_c_v_8h_source.html">SW2DCV.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_s_w2_d_c_v_8h_source.html#l00017">17</a> of file <a class="el" href="_s_w2_d_c_v_8h_source.html">SW2DCV.h</a>.</p>
 
 </div>
 </div>
@@ -207,7 +207,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define REESTIMATE_MAX_EDGE_BASED_CFL&#160;&#160;&#160;1</td>
+          <td class="memname">#define REESTIMATE_MAX_EDGE_BASED_CFL&#160;&#160;&#160;0</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -235,7 +235,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 17 2020 16:38:57 for proteus by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Fri Jul 1 2022 11:18:13 for proteus by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

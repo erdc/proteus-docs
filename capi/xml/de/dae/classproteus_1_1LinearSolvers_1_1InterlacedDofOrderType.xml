@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="de/dae/classproteus_1_1LinearSolvers_1_1InterlacedDofOrderType" kind="class" language="Python" prot="public">
+    <compoundname>proteus::LinearSolvers::InterlacedDofOrderType</compoundname>
+    <basecompoundref refid="d9/dde/classproteus_1_1LinearSolvers_1_1DofOrderInfo" prot="public" virt="non-virtual">proteus.LinearSolvers.DofOrderInfo</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="de/dae/classproteus_1_1LinearSolvers_1_1InterlacedDofOrderType_1a448a682c81b9093d32b3471f76ecbf29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearSolvers.InterlacedDofOrderType.__init__</definition>
+        <argsstring>(self, model_info=&apos;no model info set&apos;)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>model_info</type>
+          <defname>model_info</defname>
+          <defval>&apos;no model info set&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearSolvers.py" line="1401" column="1" bodyfile="LinearSolvers.py" bodystart="1401" bodyend="1406"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dae/classproteus_1_1LinearSolvers_1_1InterlacedDofOrderType_1aab7432015a56fa86aec00e1264845c99" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearSolvers.InterlacedDofOrderType.create_DOF_lists</definition>
+        <argsstring>(self, ownership_range, num_equations, num_components)</argsstring>
+        <name>create_DOF_lists</name>
+        <reimplements refid="d9/dde/classproteus_1_1LinearSolvers_1_1DofOrderInfo_1aa3f6331a88c43b952d075e5765912fd6">create_DOF_lists</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>ownership_range</type>
+          <defname>ownership_range</defname>
+        </param>
+        <param>
+          <type>num_equations</type>
+          <defname>num_equations</defname>
+        </param>
+        <param>
+          <type>num_components</type>
+          <defname>num_components</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Build interlaced velocity and pressure DOF arrays.
+
+Parameters
+----------
+ownership_range: tuple
+    Local ownership range of DOF
+num_equations: int
+    Number of local equations
+num_components: int
+    Number of pressure and velocity components
+
+Returns
+-------
+DOF_output : lst of arrays
+    This function returns a list of arrays with the DOF
+    order.  [velocityDOF, pressureDOF]
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearSolvers.py" line="1407" column="1" bodyfile="LinearSolvers.py" bodystart="1407" bodyend="1440"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dae/classproteus_1_1LinearSolvers_1_1InterlacedDofOrderType_1ad4df98fec6ece2963c7cf24a9b27e770" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearSolvers.InterlacedDofOrderType.create_vel_DOF_IS</definition>
+        <argsstring>(self, ownership_range, num_equations, num_components)</argsstring>
+        <name>create_vel_DOF_IS</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>ownership_range</type>
+          <defname>ownership_range</defname>
+        </param>
+        <param>
+          <type>num_equations</type>
+          <defname>num_equations</defname>
+        </param>
+        <param>
+          <type>num_components</type>
+          <defname>num_components</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Build interlaced DOF arrays for the components of the velocity.
+
+Parameters
+----------
+ownership_range: tuple
+    Local ownership range of DOF
+num_equations: int
+    Number of local equations
+num_components: int
+    Number of pressure and velocity components
+
+Returns
+-------
+DOF_output : lst of arrays
+    Each element of this list corresponds to a component of
+    the velocity.  E.g. for u, v, w : [vel_u,vel_v,vel_w].
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearSolvers.py" line="1441" column="1" bodyfile="LinearSolvers.py" bodystart="1441" bodyend="1478"/>
+      </memberdef>
+      <memberdef kind="function" id="de/dae/classproteus_1_1LinearSolvers_1_1InterlacedDofOrderType_1a283e56817c673f676e0600134fb620eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearSolvers.InterlacedDofOrderType.create_no_dirichlet_bdy_nodes_is</definition>
+        <argsstring>(self, ownership_range, num_equations, num_components, bdy_nodes)</argsstring>
+        <name>create_no_dirichlet_bdy_nodes_is</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>ownership_range</type>
+          <defname>ownership_range</defname>
+        </param>
+        <param>
+          <type>num_equations</type>
+          <defname>num_equations</defname>
+        </param>
+        <param>
+          <type>num_components</type>
+          <defname>num_components</defname>
+        </param>
+        <param>
+          <type>bdy_nodes</type>
+          <defname>bdy_nodes</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Build block velocity DOF arrays excluding Dirichlet bdy nodes.
+
+Parameters
+----------
+bdy_nodes : lst
+   This is a list of lists with the local dof index for strongly
+   enforced Dirichlet boundary conditions on the velocity
+   components.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearSolvers.py" line="1479" column="1" bodyfile="LinearSolvers.py" bodystart="1479" bodyend="1509"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Manages the DOF for interlaced velocity and pressure ordering.
+
+Notes
+-----
+Interlaced degrees of occur when the degrees of freedom are
+ordered as (p[0], u[0], v[0], p[1], u[1], ..., p[n], u[n], v[n]).
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>proteus.LinearSolvers.DofOrderInfo</label>
+        <link refid="d9/dde/classproteus_1_1LinearSolvers_1_1DofOrderInfo"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>proteus.LinearSolvers.InterlacedDofOrderType</label>
+        <link refid="de/dae/classproteus_1_1LinearSolvers_1_1InterlacedDofOrderType"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>object</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>proteus.LinearSolvers.DofOrderInfo</label>
+        <link refid="d9/dde/classproteus_1_1LinearSolvers_1_1DofOrderInfo"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>proteus.LinearSolvers.InterlacedDofOrderType</label>
+        <link refid="de/dae/classproteus_1_1LinearSolvers_1_1InterlacedDofOrderType"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>object</label>
+      </node>
+    </collaborationgraph>
+    <location file="LinearSolvers.py" line="1393" column="1" bodyfile="LinearSolvers.py" bodystart="1393" bodyend="1510"/>
+    <listofallmembers>
+      <member refid="de/dae/classproteus_1_1LinearSolvers_1_1InterlacedDofOrderType_1a448a682c81b9093d32b3471f76ecbf29" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::InterlacedDofOrderType</scope><name>__init__</name></member>
+      <member refid="d9/dde/classproteus_1_1LinearSolvers_1_1DofOrderInfo_1aae380648dceccdc609c83c3d409a63b2" prot="public" virt="non-virtual" ambiguityscope="proteus::LinearSolvers::DofOrderInfo."><scope>proteus::LinearSolvers::InterlacedDofOrderType</scope><name>__init__</name></member>
+      <member refid="de/dae/classproteus_1_1LinearSolvers_1_1InterlacedDofOrderType_1aab7432015a56fa86aec00e1264845c99" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::InterlacedDofOrderType</scope><name>create_DOF_lists</name></member>
+      <member refid="d9/dde/classproteus_1_1LinearSolvers_1_1DofOrderInfo_1a9c439076eaebda6739b6e361b30c437a" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::InterlacedDofOrderType</scope><name>create_IS</name></member>
+      <member refid="de/dae/classproteus_1_1LinearSolvers_1_1InterlacedDofOrderType_1a283e56817c673f676e0600134fb620eb" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::InterlacedDofOrderType</scope><name>create_no_dirichlet_bdy_nodes_is</name></member>
+      <member refid="de/dae/classproteus_1_1LinearSolvers_1_1InterlacedDofOrderType_1ad4df98fec6ece2963c7cf24a9b27e770" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::InterlacedDofOrderType</scope><name>create_vel_DOF_IS</name></member>
+      <member refid="d9/dde/classproteus_1_1LinearSolvers_1_1DofOrderInfo_1a4bcd44b071914a40c76daeaca4e1ef57" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::InterlacedDofOrderType</scope><name>dof_order_type</name></member>
+      <member refid="d9/dde/classproteus_1_1LinearSolvers_1_1DofOrderInfo_1aa46e0dd7a687aa558495b9ce75dd1a2d" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::InterlacedDofOrderType</scope><name>get_model_info</name></member>
+      <member refid="d9/dde/classproteus_1_1LinearSolvers_1_1DofOrderInfo_1ae7c27c082f1623b273a5f8954cdbc295" prot="public" virt="non-virtual"><scope>proteus::LinearSolvers::InterlacedDofOrderType</scope><name>set_model_info</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

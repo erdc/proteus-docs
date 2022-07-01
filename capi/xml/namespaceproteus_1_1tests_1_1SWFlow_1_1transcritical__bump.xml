@@ -1,0 +1,418 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump" kind="namespace" language="Python">
+    <compoundname>proteus::tests::SWFlow::transcritical_bump</compoundname>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1_1heta__at__t0" prot="public">proteus::tests::SWFlow::transcritical_bump::heta_at_t0</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1_1hw__at__t0" prot="public">proteus::tests::SWFlow::transcritical_bump::hw_at_t0</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1_1water__height__at__t0" prot="public">proteus::tests::SWFlow::transcritical_bump::water_height_at_t0</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1_1x__mom__at__t0" prot="public">proteus::tests::SWFlow::transcritical_bump::x_mom_at_t0</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1_1y__mom__at__t0" prot="public">proteus::tests::SWFlow::transcritical_bump::y_mom_at_t0</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1_1Zero" prot="public">proteus::tests::SWFlow::transcritical_bump::Zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a4e80144a84f86513ad863e78c6c64321" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::transcritical_bump.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  <ref refid="namespaceproteus_1_1Context_1a461242d050aceb1e84d9426074c67004" kindref="member">Context.Options</ref>([
+    (&apos;sw_model&apos;, 0, &quot;sw_model = {0,1} for {SWEs, Disperisve SWEs}}&quot;),
+    (&quot;final_time&quot;, 40.0, &quot;Final time for simulation&quot;),
+    (&quot;dt_output&quot;, 0.1, &quot;Time interval to output solution&quot;),
+    (&quot;cfl&quot;, 0.25, &quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a066798ecffb4e1d1794baaec0fc95acc" kindref="member">refinement</ref>&quot;, 4, &quot;Refinement level&quot;),
+    (&quot;reflecting_BCs&quot;, False, &quot;Use reflecting BCs for all boundaries&quot;),
+    (&quot;structured&quot;, True, &quot;Structured or unstructured mesh&quot;),
+    (&quot;<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a748673ac1307fc50e566c06da2c71020" kindref="member">he</ref>&quot;, 0.1, &quot;<ref refid="structMesh" kindref="compound">Mesh</ref> size for unstructured mesh&quot;)
+])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="20" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a1de7a3a1ff52572f25ab2ab12f6db229" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::transcritical_bump.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <initializer>=  (25.0, 1.0)</initializer>
+        <briefdescription>
+<para>DOMAIN AND MESH #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="34" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a066798ecffb4e1d1794baaec0fc95acc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::transcritical_bump.refinement</definition>
+        <argsstring></argsstring>
+        <name>refinement</name>
+        <initializer>=  opts.refinement</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="35" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a5c04c6f3eb92545dc0130cacb5c33c4b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::transcritical_bump.rectangle</definition>
+        <argsstring></argsstring>
+        <name>rectangle</name>
+        <initializer>=  <ref refid="classproteus_1_1Domain_1_1RectangularDomain" kindref="compound">RectangularDomain</ref>(<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a1de7a3a1ff52572f25ab2ab12f6db229" kindref="member">L</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a1de7a3a1ff52572f25ab2ab12f6db229" kindref="member">L</ref>, x=[0, 0, 0])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="36" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a6de36ec0ad54875ca92c453ab0eb0fb0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::SWFlow::transcritical_bump.nnx0</definition>
+        <argsstring></argsstring>
+        <name>nnx0</name>
+        <initializer>=  6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="39" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1aabca77fbd67c1e54bc508ee815909b83" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>proteus::tests::SWFlow::transcritical_bump.nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <initializer>=  (<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a6de36ec0ad54875ca92c453ab0eb0fb0" kindref="member">nnx0</ref> - 1) * (2**<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a066798ecffb4e1d1794baaec0fc95acc" kindref="member">refinement</ref>) + 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="40" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1ad6672155d45224599565bba617b7990e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>proteus::tests::SWFlow::transcritical_bump.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <initializer>=  old_div((<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1aabca77fbd67c1e54bc508ee815909b83" kindref="member">nnx</ref> - 1), 10) + 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="41" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a748673ac1307fc50e566c06da2c71020" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::transcritical_bump.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  old_div(<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a1de7a3a1ff52572f25ab2ab12f6db229" kindref="member">L</ref>[0], float(<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1aabca77fbd67c1e54bc508ee815909b83" kindref="member">nnx</ref> - 1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="42" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a144ee648f69a8a2a1c86cdc00da52428" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>proteus::tests::SWFlow::transcritical_bump.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <initializer>=  &quot;pAq30Dena%<ref refid="namespaceproteus_1af05ccedae3a5249ffcee18ba28860db4" kindref="member">f</ref>&quot; % (0.5 * he**2,)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="43" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1ac250acb34b383fd6872624a3c542875d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::transcritical_bump.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a5c04c6f3eb92545dc0130cacb5c33c4b" kindref="member">rectangle</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="45" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a86f48a1ec54f5249fb9fa65c251ddc87" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::transcritical_bump.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>=  9.81</initializer>
+        <briefdescription>
+<para>DEFINE INITIAL CONSTANTS AND FUNCTIONS #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="56" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a80195b3690f3705ee30bda2571862b4d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::transcritical_bump.hL</definition>
+        <argsstring></argsstring>
+        <name>hL</name>
+        <initializer>=  0.28205279813802181</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="59" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1abc4cd84b62c9c42976e6167968ffdc69" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::transcritical_bump.q_in</definition>
+        <argsstring></argsstring>
+        <name>q_in</name>
+        <initializer>=  0.18</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="60" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a7898d7d84fd25986d4b582868319b865" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::transcritical_bump.X_coords</definition>
+        <argsstring></argsstring>
+        <name>X_coords</name>
+        <initializer>=  (0.0, <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a1de7a3a1ff52572f25ab2ab12f6db229" kindref="member">L</ref>[0])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="118" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a2cc10e3b99d5a389955691af41b3abd0" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::transcritical_bump.Y_coords</definition>
+        <argsstring></argsstring>
+        <name>Y_coords</name>
+        <initializer>=  (0.0, <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a1de7a3a1ff52572f25ab2ab12f6db229" kindref="member">L</ref>[1])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="119" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a0c8bf4a7b6c334abe5c1b84e2158445f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::transcritical_bump.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  SWFlowProblem.OutputStepping(
+    opts.final_time, dt_output=opts.dt_output)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="142" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1ad6a669a33ce657e57633d2891522e684" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::transcritical_bump.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;water_height&apos;: <ref refid="classproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1_1water__height__at__t0" kindref="compound">water_height_at_t0</ref>(),
+                     &apos;x_mom&apos;: <ref refid="classproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1_1x__mom__at__t0" kindref="compound">x_mom_at_t0</ref>(),
+                     &apos;y_mom&apos;: <ref refid="classproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1_1y__mom__at__t0" kindref="compound">y_mom_at_t0</ref>(),
+                     &apos;h_times_eta&apos;: <ref refid="classproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1_1heta__at__t0" kindref="compound">heta_at_t0</ref>(),
+                     &apos;h_times_w&apos;: <ref refid="classproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1_1hw__at__t0" kindref="compound">hw_at_t0</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="144" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a3e48bf2155adb5aaae1972bf93ca10ee" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::transcritical_bump.boundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>boundaryConditions</name>
+        <initializer>=  {&apos;water_height&apos;: <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a89e53e21cb6eb03c5bc34e56b4d409ba" kindref="member">h_DBC</ref>,
+                      &apos;x_mom&apos;: <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a0bea46c5863ed73015f1a0e645301967" kindref="member">x_mom_DBC</ref>,
+                      &apos;y_mom&apos;: lambda x, flag: lambda x, t: 0.0,
+                      &apos;h_times_eta&apos;: <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1ac6baa9052b5924cc948f0b2c566c3cee" kindref="member">heta_DBC</ref>,
+                      &apos;h_times_w&apos;: <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1aa2aba72c1dd1f0d9f7f37207a7fcbd02" kindref="member">hw_DBC</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="149" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a2b0ead771bfb8ce53074fb670ed0a702" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::transcritical_bump.mySWFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>mySWFlowProblem</name>
+        <initializer>=  SWFlowProblem.SWFlowProblem(sw_model=opts.sw_model,
+                                              cfl=opts.cfl,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a0c8bf4a7b6c334abe5c1b84e2158445f" kindref="member">outputStepping</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a0c8bf4a7b6c334abe5c1b84e2158445f" kindref="member">outputStepping</ref>,
+                                              structured=opts.structured,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a748673ac1307fc50e566c06da2c71020" kindref="member">he</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a748673ac1307fc50e566c06da2c71020" kindref="member">he</ref>,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1aabca77fbd67c1e54bc508ee815909b83" kindref="member">nnx</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1aabca77fbd67c1e54bc508ee815909b83" kindref="member">nnx</ref>,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1ad6672155d45224599565bba617b7990e" kindref="member">nny</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1ad6672155d45224599565bba617b7990e" kindref="member">nny</ref>,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1ac250acb34b383fd6872624a3c542875d" kindref="member">domain</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1ac250acb34b383fd6872624a3c542875d" kindref="member">domain</ref>,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1ad6a669a33ce657e57633d2891522e684" kindref="member">initialConditions</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1ad6a669a33ce657e57633d2891522e684" kindref="member">initialConditions</ref>,
+                                              <ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a3e48bf2155adb5aaae1972bf93ca10ee" kindref="member">boundaryConditions</ref>=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a3e48bf2155adb5aaae1972bf93ca10ee" kindref="member">boundaryConditions</ref>,
+                                              bathymetry=<ref refid="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1aa7e95317fcb3c4b9001d39cb9bc22d84" kindref="member">bathymetry_function</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="155" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1aa7e95317fcb3c4b9001d39cb9bc22d84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.transcritical_bump.bathymetry_function</definition>
+        <argsstring>(X)</argsstring>
+        <name>bathymetry_function</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="62" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="62" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a89e53e21cb6eb03c5bc34e56b4d409ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.transcritical_bump.h_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>h_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="121" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="121" bodyend="124"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1a0bea46c5863ed73015f1a0e645301967" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.transcritical_bump.x_mom_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>x_mom_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="125" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="125" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1ac6baa9052b5924cc948f0b2c566c3cee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.transcritical_bump.heta_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>heta_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="129" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="129" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1SWFlow_1_1transcritical__bump_1aa2aba72c1dd1f0d9f7f37207a7fcbd02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.transcritical_bump.hw_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>hw_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/transcritical_bump.py" line="133" column="1" bodyfile="tests/SWFlow/transcritical_bump.py" bodystart="133" bodyend="141"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/SWFlow/transcritical_bump.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

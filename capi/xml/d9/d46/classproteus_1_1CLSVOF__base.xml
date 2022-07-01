@@ -1,0 +1,258 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d9/d46/classproteus_1_1CLSVOF__base" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>proteus::CLSVOF_base</compoundname>
+    <derivedcompoundref refid="d4/db5/classproteus_1_1CLSVOF" prot="public" virt="non-virtual">proteus::CLSVOF&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;</derivedcompoundref>
+    <includes refid="d1/d35/CLSVOF_8h" local="no">CLSVOF.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d9/d46/classproteus_1_1CLSVOF__base_1aa2f7ef2ec23d7aab2733c79bb641487a" prot="public" static="no" mutable="no">
+        <type>std::valarray&lt; double &gt;</type>
+        <definition>std::valarray&lt;double&gt; proteus::CLSVOF_base::Rpos</definition>
+        <argsstring></argsstring>
+        <name>Rpos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/CLSVOF.h" line="34" column="19" bodyfile="mprans/CLSVOF.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d46/classproteus_1_1CLSVOF__base_1a22341090bea99d976ac1b014def9c48b" prot="public" static="no" mutable="no">
+        <type>std::valarray&lt; double &gt;</type>
+        <definition>std::valarray&lt;double&gt; proteus::CLSVOF_base::Rneg</definition>
+        <argsstring></argsstring>
+        <name>Rneg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/CLSVOF.h" line="34" column="24" bodyfile="mprans/CLSVOF.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d46/classproteus_1_1CLSVOF__base_1a3e66ad994cf25b59d8e60c5a1b5f9d05" prot="public" static="no" mutable="no">
+        <type>std::valarray&lt; double &gt;</type>
+        <definition>std::valarray&lt;double&gt; proteus::CLSVOF_base::FluxCorrectionMatrix</definition>
+        <argsstring></argsstring>
+        <name>FluxCorrectionMatrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/CLSVOF.h" line="34" column="29" bodyfile="mprans/CLSVOF.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d9/d46/classproteus_1_1CLSVOF__base_1a7e0904803c46e559211996954777c1bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual proteus::CLSVOF_base::~CLSVOF_base</definition>
+        <argsstring>()</argsstring>
+        <name>~CLSVOF_base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/CLSVOF.h" line="35" column="13" bodyfile="mprans/CLSVOF.h" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d46/classproteus_1_1CLSVOF__base_1aa1782445dd7ce20d9106c9e723fe59bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void proteus::CLSVOF_base::calculateResidual</definition>
+        <argsstring>(arguments_dict &amp;args)=0</argsstring>
+        <name>calculateResidual</name>
+        <reimplementedby refid="d4/db5/classproteus_1_1CLSVOF_1a445c59d3f22a37ede4f5e2b404dc20d9">calculateResidual</reimplementedby>
+        <param>
+          <type><ref refid="d5/d33/structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/CLSVOF.h" line="36" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d46/classproteus_1_1CLSVOF__base_1a2ecb1aff9e8d15ce06e1a91b594bbf48" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void proteus::CLSVOF_base::calculateJacobian</definition>
+        <argsstring>(arguments_dict &amp;args)=0</argsstring>
+        <name>calculateJacobian</name>
+        <reimplementedby refid="d4/db5/classproteus_1_1CLSVOF_1ac2dba37179e69cf37b14ef844104091f">calculateJacobian</reimplementedby>
+        <param>
+          <type><ref refid="d5/d33/structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/CLSVOF.h" line="37" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d46/classproteus_1_1CLSVOF__base_1a9cc2af50b79d16090e15b922280ebf8d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::tuple&lt; double, double, double, double, double, double, double, double, double, double, double &gt;</type>
+        <definition>virtual std::tuple&lt;double, double, double, double, double, double, double, double, double, double, double&gt; proteus::CLSVOF_base::calculateMetricsAtEOS</definition>
+        <argsstring>(arguments_dict &amp;args)=0</argsstring>
+        <name>calculateMetricsAtEOS</name>
+        <reimplementedby refid="d4/db5/classproteus_1_1CLSVOF_1ac72cda85caf5e9696cf826b004995847">calculateMetricsAtEOS</reimplementedby>
+        <param>
+          <type><ref refid="d5/d33/structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/CLSVOF.h" line="39" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d46/classproteus_1_1CLSVOF__base_1a01752e38aaf45817c8d591a89c28489e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::tuple&lt; double, double, double, double, double &gt;</type>
+        <definition>virtual std::tuple&lt;double, double, double, double, double&gt; proteus::CLSVOF_base::calculateMetricsAtETS</definition>
+        <argsstring>(arguments_dict &amp;args)=0</argsstring>
+        <name>calculateMetricsAtETS</name>
+        <reimplementedby refid="d4/db5/classproteus_1_1CLSVOF_1af409444ef133213fc96d624a89637ab7">calculateMetricsAtETS</reimplementedby>
+        <param>
+          <type><ref refid="d5/d33/structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/CLSVOF.h" line="40" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d46/classproteus_1_1CLSVOF__base_1a9042b1980fd453006e2952f6355383b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void proteus::CLSVOF_base::normalReconstruction</definition>
+        <argsstring>(arguments_dict &amp;args)=0</argsstring>
+        <name>normalReconstruction</name>
+        <reimplementedby refid="d4/db5/classproteus_1_1CLSVOF_1aac8bea9d1cca24eea053764d545ce050">normalReconstruction</reimplementedby>
+        <param>
+          <type><ref refid="d5/d33/structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/CLSVOF.h" line="41" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d46/classproteus_1_1CLSVOF__base_1aee578c56fa83dc77635c941f57ffde60" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void proteus::CLSVOF_base::calculateRhsL2Proj</definition>
+        <argsstring>(arguments_dict &amp;args)=0</argsstring>
+        <name>calculateRhsL2Proj</name>
+        <reimplementedby refid="d4/db5/classproteus_1_1CLSVOF_1a2cc5c97ccb6ae348cd78a5ef55948265">calculateRhsL2Proj</reimplementedby>
+        <param>
+          <type><ref refid="d5/d33/structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/CLSVOF.h" line="42" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d46/classproteus_1_1CLSVOF__base_1a42067ab4205883b32389835260223268" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void proteus::CLSVOF_base::calculateLumpedMassMatrix</definition>
+        <argsstring>(arguments_dict &amp;args)=0</argsstring>
+        <name>calculateLumpedMassMatrix</name>
+        <reimplementedby refid="d4/db5/classproteus_1_1CLSVOF_1a74f72ded8252522b8747a76a1a61e744">calculateLumpedMassMatrix</reimplementedby>
+        <param>
+          <type><ref refid="d5/d33/structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/CLSVOF.h" line="43" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d46/classproteus_1_1CLSVOF__base_1ad171368d1f604ca0a79fad0b97561de6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void proteus::CLSVOF_base::assembleSpinUpSystem</definition>
+        <argsstring>(arguments_dict &amp;args)=0</argsstring>
+        <name>assembleSpinUpSystem</name>
+        <reimplementedby refid="d4/db5/classproteus_1_1CLSVOF_1ab861220f2eb2706bf9bd47d9ee80e54e">assembleSpinUpSystem</reimplementedby>
+        <param>
+          <type><ref refid="d5/d33/structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/CLSVOF.h" line="44" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="d9/d46/classproteus_1_1CLSVOF__base_1a0d80381cacb6c4ad992869b083a53f1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void proteus::CLSVOF_base::FCTStep</definition>
+        <argsstring>(arguments_dict &amp;args)=0</argsstring>
+        <name>FCTStep</name>
+        <reimplementedby refid="d4/db5/classproteus_1_1CLSVOF_1afd52308a28e7c09eb4d3b4dd0615be77">FCTStep</reimplementedby>
+        <param>
+          <type><ref refid="d5/d33/structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/CLSVOF.h" line="45" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>proteus::CLSVOF&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;</label>
+        <link refid="d4/db5/classproteus_1_1CLSVOF"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>proteus::CLSVOF_base</label>
+        <link refid="d9/d46/classproteus_1_1CLSVOF__base"/>
+      </node>
+    </inheritancegraph>
+    <location file="mprans/CLSVOF.h" line="31" column="1" bodyfile="mprans/CLSVOF.h" bodystart="30" bodyend="46"/>
+    <listofallmembers>
+      <member refid="d9/d46/classproteus_1_1CLSVOF__base_1ad171368d1f604ca0a79fad0b97561de6" prot="public" virt="pure-virtual"><scope>proteus::CLSVOF_base</scope><name>assembleSpinUpSystem</name></member>
+      <member refid="d9/d46/classproteus_1_1CLSVOF__base_1a2ecb1aff9e8d15ce06e1a91b594bbf48" prot="public" virt="pure-virtual"><scope>proteus::CLSVOF_base</scope><name>calculateJacobian</name></member>
+      <member refid="d9/d46/classproteus_1_1CLSVOF__base_1a42067ab4205883b32389835260223268" prot="public" virt="pure-virtual"><scope>proteus::CLSVOF_base</scope><name>calculateLumpedMassMatrix</name></member>
+      <member refid="d9/d46/classproteus_1_1CLSVOF__base_1a9cc2af50b79d16090e15b922280ebf8d" prot="public" virt="pure-virtual"><scope>proteus::CLSVOF_base</scope><name>calculateMetricsAtEOS</name></member>
+      <member refid="d9/d46/classproteus_1_1CLSVOF__base_1a01752e38aaf45817c8d591a89c28489e" prot="public" virt="pure-virtual"><scope>proteus::CLSVOF_base</scope><name>calculateMetricsAtETS</name></member>
+      <member refid="d9/d46/classproteus_1_1CLSVOF__base_1aa1782445dd7ce20d9106c9e723fe59bc" prot="public" virt="pure-virtual"><scope>proteus::CLSVOF_base</scope><name>calculateResidual</name></member>
+      <member refid="d9/d46/classproteus_1_1CLSVOF__base_1aee578c56fa83dc77635c941f57ffde60" prot="public" virt="pure-virtual"><scope>proteus::CLSVOF_base</scope><name>calculateRhsL2Proj</name></member>
+      <member refid="d9/d46/classproteus_1_1CLSVOF__base_1a0d80381cacb6c4ad992869b083a53f1b" prot="public" virt="pure-virtual"><scope>proteus::CLSVOF_base</scope><name>FCTStep</name></member>
+      <member refid="d9/d46/classproteus_1_1CLSVOF__base_1a3e66ad994cf25b59d8e60c5a1b5f9d05" prot="public" virt="non-virtual"><scope>proteus::CLSVOF_base</scope><name>FluxCorrectionMatrix</name></member>
+      <member refid="d9/d46/classproteus_1_1CLSVOF__base_1a9042b1980fd453006e2952f6355383b2" prot="public" virt="pure-virtual"><scope>proteus::CLSVOF_base</scope><name>normalReconstruction</name></member>
+      <member refid="d9/d46/classproteus_1_1CLSVOF__base_1a22341090bea99d976ac1b014def9c48b" prot="public" virt="non-virtual"><scope>proteus::CLSVOF_base</scope><name>Rneg</name></member>
+      <member refid="d9/d46/classproteus_1_1CLSVOF__base_1aa2f7ef2ec23d7aab2733c79bb641487a" prot="public" virt="non-virtual"><scope>proteus::CLSVOF_base</scope><name>Rpos</name></member>
+      <member refid="d9/d46/classproteus_1_1CLSVOF__base_1a7e0904803c46e559211996954777c1bf" prot="public" virt="virtual"><scope>proteus::CLSVOF_base</scope><name>~CLSVOF_base</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

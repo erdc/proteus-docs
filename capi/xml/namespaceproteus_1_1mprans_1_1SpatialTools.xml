@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceproteus_1_1mprans_1_1SpatialTools" kind="namespace" language="Python">
+    <compoundname>proteus::mprans::SpatialTools</compoundname>
+    <innerclass refid="classproteus_1_1mprans_1_1SpatialTools_1_1ShapeRANS" prot="public">proteus::mprans::SpatialTools::ShapeRANS</innerclass>
+    <innerclass refid="classproteus_1_1mprans_1_1SpatialTools_1_1Tank2D" prot="public">proteus::mprans::SpatialTools::Tank2D</innerclass>
+    <innerclass refid="classproteus_1_1mprans_1_1SpatialTools_1_1Tank3D" prot="public">proteus::mprans::SpatialTools::Tank3D</innerclass>
+    <innerclass refid="classproteus_1_1mprans_1_1SpatialTools_1_1TankWithObstacles2D" prot="public">proteus::mprans::SpatialTools::TankWithObstacles2D</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceproteus_1_1mprans_1_1SpatialTools_1a63f69c09e44d18b5ccedd4812121b66f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::mprans::SpatialTools.It</definition>
+        <argsstring></argsstring>
+        <name>It</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/SpatialTools.py" line="377" column="1" bodyfile="mprans/SpatialTools.py" bodystart="377" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceproteus_1_1mprans_1_1SpatialTools_1a2945f323205e612aeeb11cf85f77072a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.mprans.SpatialTools._CuboidsetInertiaTensor</definition>
+        <argsstring>(self)</argsstring>
+        <name>_CuboidsetInertiaTensor</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Sets the inertia tensor of the cuboid
+(!) should not be used manually
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/SpatialTools.py" line="371" column="1" bodyfile="mprans/SpatialTools.py" bodystart="371" bodyend="384"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1mprans_1_1SpatialTools_1a24ae5373c43bd98bb34439f9489ea3dd" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.mprans.SpatialTools._RectanglesetInertiaTensor</definition>
+        <argsstring>(self)</argsstring>
+        <name>_RectanglesetInertiaTensor</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Sets the inertia tensor of the rectangle
+(!) should not be used manually
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/SpatialTools.py" line="385" column="1" bodyfile="mprans/SpatialTools.py" bodystart="385" bodyend="400"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1mprans_1_1SpatialTools_1ad56ada8e360e6f68ca816af476b505ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.mprans.SpatialTools.assembleDomain</definition>
+        <argsstring>(domain)</argsstring>
+        <name>assembleDomain</name>
+        <param>
+          <type>domain</type>
+          <defname>domain</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>This function sets up everything needed for the domain, meshing, and
+AuxiliaryVariables calculations (if any).
+It should always be called after defining and manipulating all the shapes
+to be attached to the domain.
+
+Parameters
+----------
+domain: proteus.Domain.D_base
+    Domain class instance that hold all the geometrical informations and
+    boundary conditions of the shape.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/SpatialTools.py" line="2038" column="1" bodyfile="mprans/SpatialTools.py" bodystart="2038" bodyend="2057"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1mprans_1_1SpatialTools_1a12c6733cff345698a09d5896d3f38067" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.mprans.SpatialTools.assembleAuxiliaryVariables</definition>
+        <argsstring>(domain)</argsstring>
+        <name>assembleAuxiliaryVariables</name>
+        <param>
+          <type>domain</type>
+          <defname>domain</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Adds the auxiliary variables to the domain.
+
+Parameters
+----------
+domain: proteus.Domain.D_base
+    Domain class instance that hold all the geometrical informations and
+    boundary conditions of the shape.
+
+Notes
+-----
+Should be called after assembleGeometry
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/SpatialTools.py" line="2058" column="1" bodyfile="mprans/SpatialTools.py" bodystart="2058" bodyend="2169"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1mprans_1_1SpatialTools_1a661539ce10a9a690e6ae2449694077e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.mprans.SpatialTools.get_unit_vector</definition>
+        <argsstring>(vector)</argsstring>
+        <name>get_unit_vector</name>
+        <param>
+          <type><ref refid="jf_8h_1ad6a1294cda25bf40114e0b9a56cd0445" kindref="member">vector</ref></type>
+          <defname>vector</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/SpatialTools.py" line="2170" column="1" bodyfile="mprans/SpatialTools.py" bodystart="2170" bodyend="2172"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>This module adds functionality to proteus.SpatialTools module by enabling
+two-phase flow functionality such as converting shapes to moving rigid bodies,
+or adding wave absorption and generation zones.
+
+
+Example
+-------
+from proteus import Domain
+from proteus.mprans import SpatialTools as st
+import numpy as np
+
+domain = Domain.PlanarStraightLineGraphDomain()
+tank = st.Tank2D(domain. dim=[4., 4.])
+tank.setSponge(left=0.4)
+tank.setAbsorptionZones(left=true)
+shape = st.Rectangle(domain, dim=[0.5, 0.5], coords=[1., 1.])
+shape.setRigidBody()
+shape2.rotate(np.pi/3.)
+shape2.BC.left.setNoSlip()
+
+st.assembleDomain(domain)
+</verbatim> </para>
+    </detaileddescription>
+    <location file="mprans/SpatialTools.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

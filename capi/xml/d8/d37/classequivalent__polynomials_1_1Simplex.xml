@@ -1,0 +1,1333 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d8/d37/classequivalent__polynomials_1_1Simplex" kind="class" language="C++" prot="public">
+    <compoundname>equivalent_polynomials::Simplex</compoundname>
+    <includes refid="de/d9d/equivalent__polynomials_8h" local="no">equivalent_polynomials.h</includes>
+    <templateparamlist>
+      <param>
+        <type>int</type>
+        <declname>nSpace</declname>
+        <defname>nSpace</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>nP</declname>
+        <defname>nP</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>nQ</declname>
+        <defname>nQ</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>nEBQ</declname>
+        <defname>nEBQ</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a685b4172b5deca47aa64b27fa4c1bfdf" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::inside_out</definition>
+        <argsstring></argsstring>
+        <name>inside_out</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="164" column="10" bodyfile="equivalent_polynomials.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a228039eb09f7426dc8c951dcd285f97c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::quad_cut</definition>
+        <argsstring></argsstring>
+        <name>quad_cut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="164" column="21" bodyfile="equivalent_polynomials.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a0bf5680ceac97c625b4da70568284d53" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::phi_dof_corrected[nN]</definition>
+        <argsstring>[nN]</argsstring>
+        <name>phi_dof_corrected</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="166" column="12" bodyfile="equivalent_polynomials.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a82ed1c617cbb2853cfa8c0d556fa0c16" prot="public" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::nN</definition>
+        <argsstring></argsstring>
+        <name>nN</name>
+        <initializer>=nSpace+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="165" column="31" bodyfile="equivalent_polynomials.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a25b856c3adabd6e0f92fe8e3224a0611" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_H_q</definition>
+        <argsstring></argsstring>
+        <name>_H_q</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="168" column="12" bodyfile="equivalent_polynomials.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a682a16ba2e03dda33bf1479d50009647" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_ImH_q</definition>
+        <argsstring></argsstring>
+        <name>_ImH_q</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="168" column="17" bodyfile="equivalent_polynomials.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a0d35f84c9b4564e95bd2392b0e01b7fd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_D_q</definition>
+        <argsstring></argsstring>
+        <name>_D_q</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="168" column="24" bodyfile="equivalent_polynomials.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1af46cef0908a7580e4477c546ea13d64b" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_va_q[nN]</definition>
+        <argsstring>[nN]</argsstring>
+        <name>_va_q</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="168" column="29" bodyfile="equivalent_polynomials.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ac4b4a6fce7a2158747751b8690d53327" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_vb_q[nN]</definition>
+        <argsstring>[nN]</argsstring>
+        <name>_vb_q</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="168" column="35" bodyfile="equivalent_polynomials.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ad79fd82df7a627736893f7a87d968d47" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_va_x[nN]</definition>
+        <argsstring>[nN]</argsstring>
+        <name>_va_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="169" column="7" bodyfile="equivalent_polynomials.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a77da2c4f303055c72a1e1ef83de669fa" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_va_y[nN]</definition>
+        <argsstring>[nN]</argsstring>
+        <name>_va_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="169" column="12" bodyfile="equivalent_polynomials.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a13996d055cb52b5a02e8be0e2486d5cc" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_va_z[nN]</definition>
+        <argsstring>[nN]</argsstring>
+        <name>_va_z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="169" column="17" bodyfile="equivalent_polynomials.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1af7bcc8434710402eb00687b44e050cc9" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_vb_x[nN]</definition>
+        <argsstring>[nN]</argsstring>
+        <name>_vb_x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="169" column="22" bodyfile="equivalent_polynomials.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1acf79b479c6d0e1a38e35ae7d719839fd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_vb_y[nN]</definition>
+        <argsstring>[nN]</argsstring>
+        <name>_vb_y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="169" column="27" bodyfile="equivalent_polynomials.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1afd99c5108f2d60360cbcf2e59bb5bc1f" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_vb_z[nN]</definition>
+        <argsstring>[nN]</argsstring>
+        <name>_vb_z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="169" column="32" bodyfile="equivalent_polynomials.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a54b67b9701e5871516a9bce92fe23378" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::root_node</definition>
+        <argsstring></argsstring>
+        <name>root_node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="170" column="18" bodyfile="equivalent_polynomials.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ab1f28ff2aa01c9def5a5fa3d1844b714" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::permutation[nN]</definition>
+        <argsstring>[nN]</argsstring>
+        <name>permutation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="170" column="28" bodyfile="equivalent_polynomials.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ab4dbb8962b2489511d71946b4e49c957" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::phi[nN]</definition>
+        <argsstring>[nN]</argsstring>
+        <name>phi</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="171" column="12" bodyfile="equivalent_polynomials.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a6c5a4879afed072456a249193427fcf7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::nodes[nN *3]</definition>
+        <argsstring>[nN *3]</argsstring>
+        <name>nodes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="171" column="16" bodyfile="equivalent_polynomials.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ab51888c2ca5fbfda49d95e8dd2f595d0" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_a1[nN]</definition>
+        <argsstring>[nN]</argsstring>
+        <name>_a1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="172" column="12" bodyfile="equivalent_polynomials.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a7dca2b417558725939719e3845ae04f3" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_a2[nN]</definition>
+        <argsstring>[nN]</argsstring>
+        <name>_a2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="172" column="15" bodyfile="equivalent_polynomials.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a2b2df8d6019a960022018e91ba756fff" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_a3[nN]</definition>
+        <argsstring>[nN]</argsstring>
+        <name>_a3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="172" column="18" bodyfile="equivalent_polynomials.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a82eb061badfbeee6a53a92786d2ced2c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_b1[nN]</definition>
+        <argsstring>[nN]</argsstring>
+        <name>_b1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="173" column="7" bodyfile="equivalent_polynomials.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a045647abe8d8b37fa763c93f24bcbddb" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_b2[nN]</definition>
+        <argsstring>[nN]</argsstring>
+        <name>_b2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="173" column="10" bodyfile="equivalent_polynomials.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1adb0451a1c4fb0efa19d2b95ad0520737" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_b3[nN]</definition>
+        <argsstring>[nN]</argsstring>
+        <name>_b3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="173" column="13" bodyfile="equivalent_polynomials.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a208d173f678812e6966056a437164320" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::Jac[nSpace *nSpace]</definition>
+        <argsstring>[nSpace *nSpace]</argsstring>
+        <name>Jac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="174" column="12" bodyfile="equivalent_polynomials.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a63fb686a8ac7d93297ad64490c5ac992" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::inv_Jac[nSpace *nSpace]</definition>
+        <argsstring>[nSpace *nSpace]</argsstring>
+        <name>inv_Jac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="174" column="16" bodyfile="equivalent_polynomials.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a602544e2367738ef1b34dedac5f5f43a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::det_Jac</definition>
+        <argsstring></argsstring>
+        <name>det_Jac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="174" column="24" bodyfile="equivalent_polynomials.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a24f2ec715872889a83e2658e2d8c2551" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::level_set_normal[nSpace]</definition>
+        <argsstring>[nSpace]</argsstring>
+        <name>level_set_normal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="175" column="12" bodyfile="equivalent_polynomials.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a32e87fe29d25acdb2f664270debd569c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::X_0[nSpace]</definition>
+        <argsstring>[nSpace]</argsstring>
+        <name>X_0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="175" column="29" bodyfile="equivalent_polynomials.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a90d640d93983700db96019e9828136e2" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::phys_nodes_cut[(nN-1) *3]</definition>
+        <argsstring>[(nN-1) *3]</argsstring>
+        <name>phys_nodes_cut</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="175" column="33" bodyfile="equivalent_polynomials.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a1db217b32beb3e0cb2aa67a9f59465d3" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::THETA_01</definition>
+        <argsstring></argsstring>
+        <name>THETA_01</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="175" column="48" bodyfile="equivalent_polynomials.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a549085a22e7ad1be633158c46c981fb9" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::THETA_02</definition>
+        <argsstring></argsstring>
+        <name>THETA_02</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="175" column="57" bodyfile="equivalent_polynomials.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a2d6fe731213f233c5e5788f72bbe56bd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::THETA_31</definition>
+        <argsstring></argsstring>
+        <name>THETA_31</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="175" column="66" bodyfile="equivalent_polynomials.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1af7daea3b8025b58b76fef8060d3ef845" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::THETA_32</definition>
+        <argsstring></argsstring>
+        <name>THETA_32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="175" column="75" bodyfile="equivalent_polynomials.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a5d424544178b3b77e004e95ca2798a28" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::phys_nodes_cut_quad_01[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>phys_nodes_cut_quad_01</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="175" column="84" bodyfile="equivalent_polynomials.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a4ae3bb36e5f50715dc7ceb119d438ce4" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::phys_nodes_cut_quad_02[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>phys_nodes_cut_quad_02</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="175" column="106" bodyfile="equivalent_polynomials.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1afbd54d6caa1a0b431f69487927ec7912" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::phys_nodes_cut_quad_31[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>phys_nodes_cut_quad_31</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="175" column="128" bodyfile="equivalent_polynomials.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1abb5d36e2d4f7b9f7c73c7726e002942c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::phys_nodes_cut_quad_32[3]</definition>
+        <argsstring>[3]</argsstring>
+        <name>phys_nodes_cut_quad_32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="175" column="150" bodyfile="equivalent_polynomials.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1aca1491298549b0386c409233bf3f8313" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::Ainv[nDOF *nDOF]</definition>
+        <argsstring>[nDOF *nDOF]</argsstring>
+        <name>Ainv</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="177" column="12" bodyfile="equivalent_polynomials.h" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ac5299cf083594ab07f2dede571f596a8" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::C_H[nDOF]</definition>
+        <argsstring>[nDOF]</argsstring>
+        <name>C_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="178" column="12" bodyfile="equivalent_polynomials.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a07ffc4cd96245349169b707238885779" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::C_ImH[nDOF]</definition>
+        <argsstring>[nDOF]</argsstring>
+        <name>C_ImH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="178" column="16" bodyfile="equivalent_polynomials.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ae3f9a772d815352fbe5fb22ca1877428" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::C_D[nDOF]</definition>
+        <argsstring>[nDOF]</argsstring>
+        <name>C_D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="178" column="22" bodyfile="equivalent_polynomials.h" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a34b8687c7c047e3dfa7fd34878dcaa1c" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_H[nQ]</definition>
+        <argsstring>[nQ]</argsstring>
+        <name>_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="184" column="12" bodyfile="equivalent_polynomials.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a96cb7b1ee3eaf48445ba01ccee6a72cd" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_ImH[nQ]</definition>
+        <argsstring>[nQ]</argsstring>
+        <name>_ImH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="184" column="15" bodyfile="equivalent_polynomials.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ab37b85757d9c568aed82e9fe8b356926" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_D[nQ]</definition>
+        <argsstring>[nQ]</argsstring>
+        <name>_D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="184" column="20" bodyfile="equivalent_polynomials.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a1896598a8fe8bfc0b9351d75fc391165" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_va[nQ *nN]</definition>
+        <argsstring>[nQ *nN]</argsstring>
+        <name>_va</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="184" column="23" bodyfile="equivalent_polynomials.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a3018cdc1cf940fd80ad939dd83a10c79" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_vb[nQ *nN]</definition>
+        <argsstring>[nQ *nN]</argsstring>
+        <name>_vb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="184" column="27" bodyfile="equivalent_polynomials.h" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a88f3695f0ca82863fa6c405866a2ad07" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_H_ebq[nEBQ]</definition>
+        <argsstring>[nEBQ]</argsstring>
+        <name>_H_ebq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="185" column="12" bodyfile="equivalent_polynomials.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a80583357ea503e9e2466b19fefd74f05" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_ImH_ebq[nEBQ]</definition>
+        <argsstring>[nEBQ]</argsstring>
+        <name>_ImH_ebq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="185" column="19" bodyfile="equivalent_polynomials.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a9bcefdb80afc5f08f7f15f33f6de72ba" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_D_ebq[nEBQ]</definition>
+        <argsstring>[nEBQ]</argsstring>
+        <name>_D_ebq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="185" column="28" bodyfile="equivalent_polynomials.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a24fa279b05e820ac2798f9318a783ed5" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_va_ebq[nEBQ *nN]</definition>
+        <argsstring>[nEBQ *nN]</argsstring>
+        <name>_va_ebq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="185" column="35" bodyfile="equivalent_polynomials.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a2a630d7bfd4c7a884fc313c8213526c0" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_vb_ebq[nEBQ *nN]</definition>
+        <argsstring>[nEBQ *nN]</argsstring>
+        <name>_vb_ebq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="185" column="43" bodyfile="equivalent_polynomials.h" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="d8/d37/classequivalent__polynomials_1_1Simplex_1aed2bf1f458aad3c2b133bdb1422396c4" prot="private" static="yes" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::nDOF</definition>
+        <argsstring></argsstring>
+        <name>nDOF</name>
+        <initializer>=((nSpace-1)/2)*(nSpace-2)*(nP+1)*(nP+2)*(nP+3)/6 + (nSpace-1)*(3-nSpace)*(nP+1)*(nP+2)/2 + (2-nSpace)*((3-nSpace)/2)*(nP+1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="176" column="31" bodyfile="equivalent_polynomials.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ab5c7561a05b00026ff31f69d4648a817" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::Simplex</definition>
+        <argsstring>(bool useExact=true)</argsstring>
+        <name>Simplex</name>
+        <param>
+          <type>bool</type>
+          <declname>useExact</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="75" column="5" bodyfile="equivalent_polynomials.h" bodystart="75" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a2a1bd742868899b11493457d62f2cfcf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::calculate</definition>
+        <argsstring>(const double *phi_dof, const double *phi_nodes, const double *xi_r, double ma, double mb, bool isBoundary, bool scale)</argsstring>
+        <name>calculate</name>
+        <param>
+          <type>const double *</type>
+          <declname>phi_dof</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>phi_nodes</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>xi_r</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ma</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mb</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isBoundary</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>scale</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="91" column="16" bodyfile="equivalent_polynomials.h" bodystart="586" bodyend="763"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ab1ea03188fbb61cd46eac316c16c91d3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::calculate</definition>
+        <argsstring>(const double *phi_dof, const double *phi_nodes, const double *xi_r, bool isBoundary)</argsstring>
+        <name>calculate</name>
+        <param>
+          <type>const double *</type>
+          <declname>phi_dof</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>phi_nodes</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>xi_r</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>isBoundary</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="93" column="16" bodyfile="equivalent_polynomials.h" bodystart="93" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a1eb95dcf6a03acee74644eeae2aaeb9a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::set_quad</definition>
+        <argsstring>(unsigned int q)</argsstring>
+        <name>set_quad</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>q</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="98" column="17" bodyfile="equivalent_polynomials.h" bodystart="98" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a848db9311c89f7504e23a0fb5190df2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::set_boundary_quad</definition>
+        <argsstring>(unsigned int ebq)</argsstring>
+        <name>set_boundary_quad</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>ebq</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="122" column="17" bodyfile="equivalent_polynomials.h" bodystart="122" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ae7d99d99678bbce0118ba0873996bea8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double *</type>
+        <definition>double* equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::get_H</definition>
+        <argsstring>()</argsstring>
+        <name>get_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="146" column="19" bodyfile="equivalent_polynomials.h" bodystart="146" bodyend="146"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a513fcc9d548fa46c1416f48e196859e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double *</type>
+        <definition>double* equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::get_ImH</definition>
+        <argsstring>()</argsstring>
+        <name>get_ImH</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="147" column="19" bodyfile="equivalent_polynomials.h" bodystart="147" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ac5a79d2389fa46e851dde95a47f6210e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double *</type>
+        <definition>double* equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::get_D</definition>
+        <argsstring>()</argsstring>
+        <name>get_D</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="148" column="19" bodyfile="equivalent_polynomials.h" bodystart="148" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a184a4115848bc5a1aae4ab1249a15298" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::H</definition>
+        <argsstring>(double eps, double phi)</argsstring>
+        <name>H</name>
+        <param>
+          <type>double</type>
+          <declname>eps</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>phi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="149" column="19" bodyfile="equivalent_polynomials.h" bodystart="149" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ad75999e4840dcf6dd48fd9b547d16fc2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::ImH</definition>
+        <argsstring>(double eps, double phi)</argsstring>
+        <name>ImH</name>
+        <param>
+          <type>double</type>
+          <declname>eps</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>phi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="150" column="19" bodyfile="equivalent_polynomials.h" bodystart="150" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ab82d7858ddac506c7f7d2d79388fa262" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::D</definition>
+        <argsstring>(double eps, double phi)</argsstring>
+        <name>D</name>
+        <param>
+          <type>double</type>
+          <declname>eps</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>phi</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="151" column="19" bodyfile="equivalent_polynomials.h" bodystart="151" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ad3cc0b9dc3fe1c58514b7b2557dd7445" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::VA</definition>
+        <argsstring>(int i)</argsstring>
+        <name>VA</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="152" column="19" bodyfile="equivalent_polynomials.h" bodystart="152" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a0394a2b1928b5199c48cd58f68651236" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::VA_x</definition>
+        <argsstring>(int i)</argsstring>
+        <name>VA_x</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="153" column="19" bodyfile="equivalent_polynomials.h" bodystart="153" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a4e3fab885537e74700f11d746efe1041" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::VA_y</definition>
+        <argsstring>(int i)</argsstring>
+        <name>VA_y</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="154" column="19" bodyfile="equivalent_polynomials.h" bodystart="154" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a15c0d964f80a0e1740ec7625441cee56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::VA_z</definition>
+        <argsstring>(int i)</argsstring>
+        <name>VA_z</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="155" column="19" bodyfile="equivalent_polynomials.h" bodystart="155" bodyend="155"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a2e8b6a6442c54f7b0e7673ffeb8ac0f5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::VB</definition>
+        <argsstring>(int i)</argsstring>
+        <name>VB</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="156" column="19" bodyfile="equivalent_polynomials.h" bodystart="156" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a6b7155a3624b3bfef1cfeb9f9559d5f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::VB_x</definition>
+        <argsstring>(int i)</argsstring>
+        <name>VB_x</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="157" column="19" bodyfile="equivalent_polynomials.h" bodystart="157" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a94469538c20561c26fd0b5bd30314f1f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::VB_y</definition>
+        <argsstring>(int i)</argsstring>
+        <name>VB_y</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="158" column="19" bodyfile="equivalent_polynomials.h" bodystart="158" bodyend="158"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ad32095ea64e43e0961805454aa506906" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::VB_z</definition>
+        <argsstring>(int i)</argsstring>
+        <name>VB_z</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="159" column="19" bodyfile="equivalent_polynomials.h" bodystart="159" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a78d6d94fca62496dbac57b249ca96e56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double *</type>
+        <definition>double* equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::get_normal</definition>
+        <argsstring>()</argsstring>
+        <name>get_normal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="160" column="19" bodyfile="equivalent_polynomials.h" bodystart="160" bodyend="163"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a24e87e8394741aac8e40950cc64ed249" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_calculate_permutation</definition>
+        <argsstring>(const double *phi_dof, const double *phi_nodes)</argsstring>
+        <name>_calculate_permutation</name>
+        <param>
+          <type>const double *</type>
+          <declname>phi_dof</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>phi_nodes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="179" column="16" bodyfile="equivalent_polynomials.h" bodystart="267" bodyend="449"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ae5c5d2e66af663f49761a29705ee2e87" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_calculate_cuts</definition>
+        <argsstring>()</argsstring>
+        <name>_calculate_cuts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="180" column="17" bodyfile="equivalent_polynomials.h" bodystart="452" bodyend="477"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ab3bef5501119f98210251d12f13481ce" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_calculate_cuts_quad</definition>
+        <argsstring>()</argsstring>
+        <name>_calculate_cuts_quad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="181" column="17" bodyfile="equivalent_polynomials.h" bodystart="480" bodyend="501"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a975fb71fdcc9a8a7c25c50227864265c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_calculate_C</definition>
+        <argsstring>()</argsstring>
+        <name>_calculate_C</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="182" column="17" bodyfile="equivalent_polynomials.h" bodystart="199" bodyend="264"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1aea5673b12f53f52cf33e02df583851dd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_correct_phi</definition>
+        <argsstring>(const double *phi_dof, const double *phi_nodes)</argsstring>
+        <name>_correct_phi</name>
+        <param>
+          <type>const double *</type>
+          <declname>phi_dof</declname>
+        </param>
+        <param>
+          <type>const double *</type>
+          <declname>phi_nodes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="183" column="17" bodyfile="equivalent_polynomials.h" bodystart="504" bodyend="537"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1ad0e9ec77a1fc5fc988c1cfe99acd7978" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_calculate_basis_coefficients</definition>
+        <argsstring>(const double ma, const double mb)</argsstring>
+        <name>_calculate_basis_coefficients</name>
+        <param>
+          <type>const double</type>
+          <declname>ma</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>mb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="186" column="17" bodyfile="equivalent_polynomials.h" bodystart="540" bodyend="583"/>
+      </memberdef>
+      <memberdef kind="function" id="d8/d37/classequivalent__polynomials_1_1Simplex_1a1278070f3f878c3cf0fcbfb2f8fd32ef" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void equivalent_polynomials::Simplex&lt; nSpace, nP, nQ, nEBQ &gt;::_calculate_basis</definition>
+        <argsstring>(const double *xi, double *va, double *vb)</argsstring>
+        <name>_calculate_basis</name>
+        <param>
+          <type>const double *</type>
+          <declname>xi</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>va</declname>
+        </param>
+        <param>
+          <type>double *</type>
+          <declname>vb</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="equivalent_polynomials.h" line="187" column="17" bodyfile="equivalent_polynomials.h" bodystart="187" bodyend="195"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="equivalent_polynomials.h" line="73" column="1" bodyfile="equivalent_polynomials.h" bodystart="72" bodyend="196"/>
+    <listofallmembers>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ab51888c2ca5fbfda49d95e8dd2f595d0" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_a1</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a7dca2b417558725939719e3845ae04f3" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_a2</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a2b2df8d6019a960022018e91ba756fff" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_a3</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a82eb061badfbeee6a53a92786d2ced2c" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_b1</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a045647abe8d8b37fa763c93f24bcbddb" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_b2</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1adb0451a1c4fb0efa19d2b95ad0520737" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_b3</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a1278070f3f878c3cf0fcbfb2f8fd32ef" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_calculate_basis</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ad0e9ec77a1fc5fc988c1cfe99acd7978" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_calculate_basis_coefficients</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a975fb71fdcc9a8a7c25c50227864265c" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_calculate_C</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ae5c5d2e66af663f49761a29705ee2e87" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_calculate_cuts</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ab3bef5501119f98210251d12f13481ce" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_calculate_cuts_quad</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a24e87e8394741aac8e40950cc64ed249" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_calculate_permutation</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1aea5673b12f53f52cf33e02df583851dd" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_correct_phi</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ab37b85757d9c568aed82e9fe8b356926" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_D</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a9bcefdb80afc5f08f7f15f33f6de72ba" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_D_ebq</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a0d35f84c9b4564e95bd2392b0e01b7fd" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_D_q</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a34b8687c7c047e3dfa7fd34878dcaa1c" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_H</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a88f3695f0ca82863fa6c405866a2ad07" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_H_ebq</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a25b856c3adabd6e0f92fe8e3224a0611" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_H_q</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a96cb7b1ee3eaf48445ba01ccee6a72cd" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_ImH</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a80583357ea503e9e2466b19fefd74f05" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_ImH_ebq</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a682a16ba2e03dda33bf1479d50009647" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_ImH_q</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a1896598a8fe8bfc0b9351d75fc391165" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_va</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a24fa279b05e820ac2798f9318a783ed5" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_va_ebq</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1af46cef0908a7580e4477c546ea13d64b" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_va_q</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ad79fd82df7a627736893f7a87d968d47" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_va_x</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a77da2c4f303055c72a1e1ef83de669fa" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_va_y</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a13996d055cb52b5a02e8be0e2486d5cc" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_va_z</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a3018cdc1cf940fd80ad939dd83a10c79" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_vb</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a2a630d7bfd4c7a884fc313c8213526c0" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_vb_ebq</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ac4b4a6fce7a2158747751b8690d53327" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_vb_q</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1af7bcc8434710402eb00687b44e050cc9" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_vb_x</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1acf79b479c6d0e1a38e35ae7d719839fd" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_vb_y</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1afd99c5108f2d60360cbcf2e59bb5bc1f" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>_vb_z</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1aca1491298549b0386c409233bf3f8313" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>Ainv</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ae3f9a772d815352fbe5fb22ca1877428" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>C_D</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ac5299cf083594ab07f2dede571f596a8" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>C_H</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a07ffc4cd96245349169b707238885779" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>C_ImH</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a2a1bd742868899b11493457d62f2cfcf" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>calculate</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ab1ea03188fbb61cd46eac316c16c91d3" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>calculate</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ab82d7858ddac506c7f7d2d79388fa262" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>D</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a602544e2367738ef1b34dedac5f5f43a" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>det_Jac</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ac5a79d2389fa46e851dde95a47f6210e" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>get_D</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ae7d99d99678bbce0118ba0873996bea8" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>get_H</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a513fcc9d548fa46c1416f48e196859e0" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>get_ImH</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a78d6d94fca62496dbac57b249ca96e56" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>get_normal</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a184a4115848bc5a1aae4ab1249a15298" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>H</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ad75999e4840dcf6dd48fd9b547d16fc2" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>ImH</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a685b4172b5deca47aa64b27fa4c1bfdf" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>inside_out</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a63fb686a8ac7d93297ad64490c5ac992" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>inv_Jac</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a208d173f678812e6966056a437164320" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>Jac</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a24f2ec715872889a83e2658e2d8c2551" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>level_set_normal</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1aed2bf1f458aad3c2b133bdb1422396c4" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>nDOF</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a82ed1c617cbb2853cfa8c0d556fa0c16" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>nN</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a6c5a4879afed072456a249193427fcf7" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>nodes</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ab1f28ff2aa01c9def5a5fa3d1844b714" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>permutation</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ab4dbb8962b2489511d71946b4e49c957" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>phi</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a0bf5680ceac97c625b4da70568284d53" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>phi_dof_corrected</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a90d640d93983700db96019e9828136e2" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>phys_nodes_cut</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a5d424544178b3b77e004e95ca2798a28" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>phys_nodes_cut_quad_01</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a4ae3bb36e5f50715dc7ceb119d438ce4" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>phys_nodes_cut_quad_02</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1afbd54d6caa1a0b431f69487927ec7912" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>phys_nodes_cut_quad_31</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1abb5d36e2d4f7b9f7c73c7726e002942c" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>phys_nodes_cut_quad_32</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a228039eb09f7426dc8c951dcd285f97c" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>quad_cut</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a54b67b9701e5871516a9bce92fe23378" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>root_node</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a848db9311c89f7504e23a0fb5190df2c" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>set_boundary_quad</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a1eb95dcf6a03acee74644eeae2aaeb9a" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>set_quad</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ab5c7561a05b00026ff31f69d4648a817" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>Simplex</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a1db217b32beb3e0cb2aa67a9f59465d3" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>THETA_01</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a549085a22e7ad1be633158c46c981fb9" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>THETA_02</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a2d6fe731213f233c5e5788f72bbe56bd" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>THETA_31</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1af7daea3b8025b58b76fef8060d3ef845" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>THETA_32</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ad3cc0b9dc3fe1c58514b7b2557dd7445" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>VA</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a0394a2b1928b5199c48cd58f68651236" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>VA_x</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a4e3fab885537e74700f11d746efe1041" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>VA_y</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a15c0d964f80a0e1740ec7625441cee56" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>VA_z</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a2e8b6a6442c54f7b0e7673ffeb8ac0f5" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>VB</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a6b7155a3624b3bfef1cfeb9f9559d5f3" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>VB_x</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a94469538c20561c26fd0b5bd30314f1f" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>VB_y</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1ad32095ea64e43e0961805454aa506906" prot="public" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>VB_z</name></member>
+      <member refid="d8/d37/classequivalent__polynomials_1_1Simplex_1a32e87fe29d25acdb2f664270debd569c" prot="private" virt="non-virtual"><scope>equivalent_polynomials::Simplex</scope><name>X_0</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">proteus
-   &#160;<span id="projectnumber">1.7.3.dev0</span>
+   &#160;<span id="projectnumber">1.8.1</span>
    </div>
    <div id="projectbrief">C/C++/Fortran libraries</div>
   </td>
@@ -85,42 +85,41 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_s_w2_d_c_v_8h.html">SW2DCV.h</a>&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#if defined(__GNUC__) &amp;&amp; !defined(__clang__)</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">namespace </span>workaround</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">inline</span> <span class="keywordtype">void</span> define_allocators()</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        {</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            std::allocator&lt;int&gt; a0;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            std::allocator&lt;double&gt; a1;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        }</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span>py = pybind11;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using</span> <a class="code" href="classproteus_1_1_s_w2_d_c_v__base.html">proteus::SW2DCV_base</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> pybind11::return_value_policy;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="_s_w2_d_c_v_8cpp.html#a41abc3b2257bfdea5fb686074d9c84b1">   22</a></span>&#160;<a class="code" href="_s_w2_d_c_v_8cpp.html#a41abc3b2257bfdea5fb686074d9c84b1">PYBIND11_MODULE</a>(cSW2DCV, m)</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    xt::import_numpy();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    py::class_&lt;SW2DCV_base&gt;(m, <span class="stringliteral">&quot;cSW2DCV_base&quot;</span>)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        .def(<a class="code" href="_fourier_8cpp.html#a2858154e2009b0e6e616f313177762bc">py::init</a>(&amp;<a class="code" href="namespaceproteus.html#a59cc84282aef464a74b9ff0639e5042d">proteus::newSW2DCV</a>))</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        .def(<span class="stringliteral">&quot;FCTStep&quot;</span>                  , &amp;SW2DCV_base::FCTStep                  )</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        .def(<span class="stringliteral">&quot;convexLimiting&quot;</span>           , &amp;SW2DCV_base::convexLimiting           )</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        .def(<span class="stringliteral">&quot;calculateEdgeBasedCFL&quot;</span>    , &amp;SW2DCV_base::calculateEdgeBasedCFL, return_value_policy::take_ownership)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        .def(<span class="stringliteral">&quot;calculateResidual&quot;</span>        , &amp;SW2DCV_base::calculateResidual        )</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        .def(<span class="stringliteral">&quot;calculateMassMatrix&quot;</span>      , &amp;SW2DCV_base::calculateMassMatrix      )</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        .def(<span class="stringliteral">&quot;calculateLumpedMassMatrix&quot;</span>, &amp;SW2DCV_base::calculateLumpedMassMatrix);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>workaround {</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">inline</span> <span class="keywordtype">void</span> define_allocators() {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  std::allocator&lt;int&gt; a0;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  std::allocator&lt;double&gt; a1;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;} <span class="comment">// namespace workaround</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">namespace </span>py = pybind11;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using</span> <a class="code" href="classproteus_1_1_s_w2_d_c_v__base.html">proteus::SW2DCV_base</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">using</span> pybind11::return_value_policy;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="_s_w2_d_c_v_8cpp.html#a41abc3b2257bfdea5fb686074d9c84b1">   20</a></span>&#160;<a class="code" href="_s_w2_d_c_v_8cpp.html#a41abc3b2257bfdea5fb686074d9c84b1">PYBIND11_MODULE</a>(cSW2DCV, m) {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  xt::import_numpy();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  py::class_&lt;SW2DCV_base&gt;(m, <span class="stringliteral">&quot;cSW2DCV_base&quot;</span>)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      .def(<a class="code" href="_fourier_8cpp.html#a2858154e2009b0e6e616f313177762bc">py::init</a>(&amp;<a class="code" href="namespaceproteus.html#a59cc84282aef464a74b9ff0639e5042d">proteus::newSW2DCV</a>))</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      .def(<span class="stringliteral">&quot;convexLimiting&quot;</span>, &amp;SW2DCV_base::convexLimiting)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      .def(<span class="stringliteral">&quot;calculateEdgeBasedCFL&quot;</span>, &amp;SW2DCV_base::calculateEdgeBasedCFL,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;           return_value_policy::take_ownership)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      .def(<span class="stringliteral">&quot;calculateEV&quot;</span>, &amp;SW2DCV_base::calculateEV)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      .def(<span class="stringliteral">&quot;calculateResidual&quot;</span>, &amp;SW2DCV_base::calculateResidual)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      .def(<span class="stringliteral">&quot;calculateMassMatrix&quot;</span>, &amp;SW2DCV_base::calculateMassMatrix)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      .def(<span class="stringliteral">&quot;calculateLumpedMassMatrix&quot;</span>,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;           &amp;SW2DCV_base::calculateLumpedMassMatrix);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassproteus_1_1_s_w2_d_c_v__base_html"><div class="ttname"><a href="classproteus_1_1_s_w2_d_c_v__base.html">proteus::SW2DCV_base</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_w2_d_c_v_8h_source.html#l00127">SW2DCV.h:127</a></div></div>
-<div class="ttc" id="anamespaceproteus_html_a59cc84282aef464a74b9ff0639e5042d"><div class="ttname"><a href="namespaceproteus.html#a59cc84282aef464a74b9ff0639e5042d">proteus::newSW2DCV</a></div><div class="ttdeci">SW2DCV_base * newSW2DCV(int nSpaceIn, int nQuadraturePoints_elementIn, int nDOF_mesh_trial_elementIn, int nDOF_trial_elementIn, int nDOF_test_elementIn, int nQuadraturePoints_elementBoundaryIn, int CompKernelFlag)</div><div class="ttdef"><b>Definition:</b> <a href="_s_w2_d_c_v_8h_source.html#l02097">SW2DCV.h:2097</a></div></div>
+<div class="ttc" id="aclassproteus_1_1_s_w2_d_c_v__base_html"><div class="ttname"><a href="classproteus_1_1_s_w2_d_c_v__base.html">proteus::SW2DCV_base</a></div><div class="ttdef"><b>Definition:</b> <a href="_s_w2_d_c_v_8h_source.html#l00132">SW2DCV.h:132</a></div></div>
+<div class="ttc" id="anamespaceproteus_html_a59cc84282aef464a74b9ff0639e5042d"><div class="ttname"><a href="namespaceproteus.html#a59cc84282aef464a74b9ff0639e5042d">proteus::newSW2DCV</a></div><div class="ttdeci">SW2DCV_base * newSW2DCV(int nSpaceIn, int nQuadraturePoints_elementIn, int nDOF_mesh_trial_elementIn, int nDOF_trial_elementIn, int nDOF_test_elementIn, int nQuadraturePoints_elementBoundaryIn, int CompKernelFlag)</div><div class="ttdef"><b>Definition:</b> <a href="_s_w2_d_c_v_8h_source.html#l02155">SW2DCV.h:2155</a></div></div>
 <div class="ttc" id="a_fourier_8cpp_html_a2858154e2009b0e6e616f313177762bc"><div class="ttname"><a href="_fourier_8cpp.html#a2858154e2009b0e6e616f313177762bc">init</a></div><div class="ttdeci">void init(void)</div></div>
-<div class="ttc" id="a_s_w2_d_c_v_8cpp_html_a41abc3b2257bfdea5fb686074d9c84b1"><div class="ttname"><a href="_s_w2_d_c_v_8cpp.html#a41abc3b2257bfdea5fb686074d9c84b1">PYBIND11_MODULE</a></div><div class="ttdeci">PYBIND11_MODULE(cSW2DCV, m)</div><div class="ttdef"><b>Definition:</b> <a href="_s_w2_d_c_v_8cpp_source.html#l00022">SW2DCV.cpp:22</a></div></div>
+<div class="ttc" id="a_s_w2_d_c_v_8cpp_html_a41abc3b2257bfdea5fb686074d9c84b1"><div class="ttname"><a href="_s_w2_d_c_v_8cpp.html#a41abc3b2257bfdea5fb686074d9c84b1">PYBIND11_MODULE</a></div><div class="ttdeci">PYBIND11_MODULE(cSW2DCV, m)</div><div class="ttdef"><b>Definition:</b> <a href="_s_w2_d_c_v_8cpp_source.html#l00020">SW2DCV.cpp:20</a></div></div>
 <div class="ttc" id="a_s_w2_d_c_v_8h_html"><div class="ttname"><a href="_s_w2_d_c_v_8h.html">SW2DCV.h</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 17 2020 16:38:31 for proteus by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Fri Jul 1 2022 11:17:46 for proteus by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

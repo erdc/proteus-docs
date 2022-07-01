@@ -1,0 +1,724 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d3/ddf/namespaceflat__plate" kind="namespace" language="Python">
+    <compoundname>flat_plate</compoundname>
+    <innerclass refid="de/df8/classflat__plate_1_1AtRest" prot="public">flat_plate::AtRest</innerclass>
+    <innerclass refid="d7/d00/classflat__plate_1_1dIn" prot="public">flat_plate::dIn</innerclass>
+    <innerclass refid="d6/db9/classflat__plate_1_1kIn" prot="public">flat_plate::kIn</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1ace3ea51b9a37ebec311b69e2aca23cdd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>= Context.Options([
+    # Geometry
+    (&apos;Lx&apos;, 4., &apos;Domain length&apos;),
+    (&apos;Ly&apos;, 0.4, &apos;Domain <ref refid="de/d5b/Headers_8h_1a4dbff2664c02385f0a9a62cc755b7b3c" kindref="member">height</ref>&apos;),
+    # Flow
+    (&apos;<ref refid="d3/ddf/namespaceflat__plate_1a4bdc0f0874f70bdb96309723065df42e" kindref="member">U</ref>&apos;, [0.2, 0.0, 0.0], &apos;Set inlet velocity&apos;),
+    (&apos;<ref refid="d3/ddf/namespaceflat__plate_1a5c4bcd49bcc424df30c0d57499132ec8" kindref="member">ramp</ref>&apos;,1.,&quot;ramp time&quot;),
+    (&apos;nu&apos;, 1e-6, &apos;Kinematic viscosity&apos;),
+    (&apos;<ref refid="d3/ddf/namespaceflat__plate_1a3a822e0f510e974d30096cc7c59f9f08" kindref="member">rho</ref>&apos;, 1000., &apos;Density&apos;),
+    (&apos;<ref refid="d3/ddf/namespaceflat__plate_1a74d4de543b092dafdbb102d3a5ddbb6f" kindref="member">g</ref>&apos;,np.array([0,-9.81,0]),&quot;gravitational acceleration&quot;),
+    # Turbulence and parameters
+    (&quot;useRANS&quot;, 1, &quot;Switch ON turbulence models: 0-None, 1-K-Epsilon, 2-K-Omega1998, 3-K-Omega1988&quot;), # ns_closure: 1-classic smagorinsky, 2-dynamic smagorinsky, 3-k-epsilon, 4-k-omega
+    (&quot;sigma_k&quot;, 1.0, &quot;sigma_k coefficient for the turbulence <ref refid="d3/ddf/namespaceflat__plate_1a03df88d5c20b29fb6cefbef946ca3fc3" kindref="member">model</ref>&quot;),
+    (&quot;K&quot;, 0.41, &quot;von Karman coefficient for the turbulence <ref refid="d3/ddf/namespaceflat__plate_1a03df88d5c20b29fb6cefbef946ca3fc3" kindref="member">model</ref>&quot;),
+    (&quot;<ref refid="de/d5b/Headers_8h_1a713b4ebff2afa5e6dd2945d5f83f6307" kindref="member">B</ref>&quot;, 5.57, &quot;Wall coefficient for the turbulence <ref refid="d3/ddf/namespaceflat__plate_1a03df88d5c20b29fb6cefbef946ca3fc3" kindref="member">model</ref>&quot;),
+    (&quot;Cmu&quot;, 0.09, &quot;Cmu coefficient for the turbulence <ref refid="d3/ddf/namespaceflat__plate_1a03df88d5c20b29fb6cefbef946ca3fc3" kindref="member">model</ref>&quot;),
+    # simulation options
+    (&apos;duration&apos;, 10., &apos;Simulation duration&apos;),
+    (&apos;<ref refid="d3/ddf/namespaceflat__plate_1aac84bf3940b8def7b2db161123914615" kindref="member">dt_init</ref>&apos;, 0.001, &apos;Initial timestep&apos;),
+    (&apos;<ref refid="d3/ddf/namespaceflat__plate_1ade2f57dca9174561dcb777a1067624e7" kindref="member">dt_output</ref>&apos;, 0.1, &apos;time output interval&apos;),
+    (&quot;he&quot;, 0.03,&quot;<ref refid="da/d29/structMesh" kindref="compound">Mesh</ref> size&quot;),
+    (&quot;<ref refid="d3/ddf/namespaceflat__plate_1ae0289c53d6c0c91340af39d155958dfa" kindref="member">cfl</ref>&quot;, 0.5 ,&quot;Target <ref refid="d3/ddf/namespaceflat__plate_1ae0289c53d6c0c91340af39d155958dfa" kindref="member">cfl</ref>&quot;)
+    ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="11" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a8cacf38b50cb755d1ce5b6583bf4405d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.PlanarStraightLineGraphDomain()</initializer>
+        <briefdescription>
+<para>domain </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="39" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a792fbc87b666e77f6f88dae9dacb6199" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.tank</definition>
+        <argsstring></argsstring>
+        <name>tank</name>
+        <initializer>=  st.Tank2D(<ref refid="d3/ddf/namespaceflat__plate_1a8cacf38b50cb755d1ce5b6583bf4405d" kindref="member">domain</ref>, dim=[opts.Lx,opts.Ly])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="40" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a5e78cc365b0a8ab1dc3913bed2f63beb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.Re0</definition>
+        <argsstring></argsstring>
+        <name>Re0</name>
+        <initializer>=  <ref refid="de/d5b/Headers_8h_1a64e1fe39afc10b00a4f50198aef8626d" kindref="member">opts.U</ref>[0]*opts.Ly/opts.nu</initializer>
+        <briefdescription>
+<para>turbulence calculations </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Reynodls </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="45" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1ac72f31fbf2fc90be029c9f7113a0e053" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float flat_plate::cf</definition>
+        <argsstring></argsstring>
+        <name>cf</name>
+        <initializer>=  0.045*(<ref refid="d3/ddf/namespaceflat__plate_1a5e78cc365b0a8ab1dc3913bed2f63beb" kindref="member">Re0</ref>**(-1./4.))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="47" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a1a4083be30c4ce9520a0091dd044853b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.Ut</definition>
+        <argsstring></argsstring>
+        <name>Ut</name>
+        <initializer>=  <ref refid="de/d5b/Headers_8h_1a64e1fe39afc10b00a4f50198aef8626d" kindref="member">opts.U</ref>[0]*np.sqrt(<ref refid="d3/ddf/namespaceflat__plate_1ac72f31fbf2fc90be029c9f7113a0e053" kindref="member">cf</ref>/2.)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="48" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1ac4415caffdb993e26b19a60a20e1657d" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple flat_plate::kappaP</definition>
+        <argsstring></argsstring>
+        <name>kappaP</name>
+        <initializer>=  (<ref refid="d3/ddf/namespaceflat__plate_1a1a4083be30c4ce9520a0091dd044853b" kindref="member">Ut</ref>**2)/np.sqrt(opts.Cmu)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="49" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a811544463ea9c61e78e68d4dd677c2eb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.Y_</definition>
+        <argsstring></argsstring>
+        <name>Y_</name>
+        <initializer>=  opts.he</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="50" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a5d58db3faae596218d6715e82c8fb0fe" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.Yplus</definition>
+        <argsstring></argsstring>
+        <name>Yplus</name>
+        <initializer>=  <ref refid="d3/ddf/namespaceflat__plate_1a811544463ea9c61e78e68d4dd677c2eb" kindref="member">Y_</ref>*<ref refid="d3/ddf/namespaceflat__plate_1a1a4083be30c4ce9520a0091dd044853b" kindref="member">Ut</ref>/opts.nu</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="51" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1ac4749b648febe319dc17cc929434ea28" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple flat_plate::dissipationP</definition>
+        <argsstring></argsstring>
+        <name>dissipationP</name>
+        <initializer>=  (<ref refid="d3/ddf/namespaceflat__plate_1a1a4083be30c4ce9520a0091dd044853b" kindref="member">Ut</ref>**3)/(0.41*<ref refid="d3/ddf/namespaceflat__plate_1a811544463ea9c61e78e68d4dd677c2eb" kindref="member">Y_</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="52" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a09a0d8be3893ea1a4ccff876df9b7fbf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.useRANS</definition>
+        <argsstring></argsstring>
+        <name>useRANS</name>
+        <initializer>=  opts.useRANS</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="55" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a03df88d5c20b29fb6cefbef946ca3fc3" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string flat_plate::model</definition>
+        <argsstring></argsstring>
+        <name>model</name>
+        <initializer>=  &apos;<ref refid="de/d5b/Headers_8h_1a917a4d5c96cde47e52523d9e8a9e08c1" kindref="member">ke</ref>&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="60" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1adbfa8fb5d18fe722d62a00f01f6652ae" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple flat_plate::kInflow</definition>
+        <argsstring></argsstring>
+        <name>kInflow</name>
+        <initializer>=  <ref refid="d3/ddf/namespaceflat__plate_1ac4415caffdb993e26b19a60a20e1657d" kindref="member">kappaP</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="68" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1ad873e98ed3b3adc941b4744d303d1cff" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple flat_plate::dissipationInflow</definition>
+        <argsstring></argsstring>
+        <name>dissipationInflow</name>
+        <initializer>=  <ref refid="d3/ddf/namespaceflat__plate_1ac4749b648febe319dc17cc929434ea28" kindref="member">dissipationP</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="69" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1ad81e561860acd9d5aa5bec6928304079" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary flat_plate::boundaryOrientations</definition>
+        <argsstring></argsstring>
+        <name>boundaryOrientations</name>
+        <initializer>=  {&apos;y-&apos;: np.array([0., -1.,0.]),
+                        &apos;x+&apos;: np.array([+1, 0.,0.]),
+                        &apos;y+&apos;: np.array([0., +1.,0.]),
+                        &apos;x-&apos;: np.array([-1., 0.,0.]),
+                           }</initializer>
+        <briefdescription>
+<para>Boundaries. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="74" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a4b1754d7f7d1ea96ac4e19faa8bca09c" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary flat_plate::boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>=  {&apos;y-&apos;: 1,
+                &apos;x+&apos;: 2,
+                &apos;y+&apos;: 3,
+                &apos;x-&apos;: 4,
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="79" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a9da8a4356ad3cacb1edbdcee844c8deb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.kWallTop</definition>
+        <argsstring></argsstring>
+        <name>kWallTop</name>
+        <initializer>=  bc.kWall(<ref refid="de/d5b/Headers_8h_1aa565e3a13199f860447a094f48c9dd6b" kindref="member">Y</ref>=<ref refid="d3/ddf/namespaceflat__plate_1a811544463ea9c61e78e68d4dd677c2eb" kindref="member">Y_</ref>, <ref refid="d3/ddf/namespaceflat__plate_1a5d58db3faae596218d6715e82c8fb0fe" kindref="member">Yplus</ref>=<ref refid="d3/ddf/namespaceflat__plate_1a5d58db3faae596218d6715e82c8fb0fe" kindref="member">Yplus</ref>, nu=opts.nu)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="87" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1ae574c129800f33031d78db571e26f843" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.kWallBottom</definition>
+        <argsstring></argsstring>
+        <name>kWallBottom</name>
+        <initializer>=  bc.kWall(<ref refid="de/d5b/Headers_8h_1aa565e3a13199f860447a094f48c9dd6b" kindref="member">Y</ref>=<ref refid="d3/ddf/namespaceflat__plate_1a811544463ea9c61e78e68d4dd677c2eb" kindref="member">Y_</ref>, <ref refid="d3/ddf/namespaceflat__plate_1a5d58db3faae596218d6715e82c8fb0fe" kindref="member">Yplus</ref>=<ref refid="d3/ddf/namespaceflat__plate_1a5d58db3faae596218d6715e82c8fb0fe" kindref="member">Yplus</ref>, nu=opts.nu)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="88" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1aef6674c5bd6304f373ae0d2638e0ae60" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list flat_plate::kWalls</definition>
+        <argsstring></argsstring>
+        <name>kWalls</name>
+        <initializer>=  [<ref refid="d3/ddf/namespaceflat__plate_1a9da8a4356ad3cacb1edbdcee844c8deb" kindref="member">kWallTop</ref>, <ref refid="d3/ddf/namespaceflat__plate_1ae574c129800f33031d78db571e26f843" kindref="member">kWallBottom</ref>]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="89" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a2bb8ddd67ea59f309f159b5922d8fcbe" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.wallTop</definition>
+        <argsstring></argsstring>
+        <name>wallTop</name>
+        <initializer>=  bc.WallFunctions(turbModel=<ref refid="d3/ddf/namespaceflat__plate_1a03df88d5c20b29fb6cefbef946ca3fc3" kindref="member">model</ref>, kWall=<ref refid="d3/ddf/namespaceflat__plate_1a9da8a4356ad3cacb1edbdcee844c8deb" kindref="member">kWallTop</ref>, <ref refid="de/d5b/Headers_8h_1aa565e3a13199f860447a094f48c9dd6b" kindref="member">Y</ref>=<ref refid="d3/ddf/namespaceflat__plate_1a811544463ea9c61e78e68d4dd677c2eb" kindref="member">Y_</ref>, <ref refid="d3/ddf/namespaceflat__plate_1a5d58db3faae596218d6715e82c8fb0fe" kindref="member">Yplus</ref>=<ref refid="d3/ddf/namespaceflat__plate_1a5d58db3faae596218d6715e82c8fb0fe" kindref="member">Yplus</ref>, U0=<ref refid="de/d5b/Headers_8h_1a64e1fe39afc10b00a4f50198aef8626d" kindref="member">opts.U</ref>, nu=opts.nu, Cmu=opts.Cmu, K=opts.K, <ref refid="de/d5b/Headers_8h_1a713b4ebff2afa5e6dd2945d5f83f6307" kindref="member">B</ref>=<ref refid="de/d5b/Headers_8h_1a713b4ebff2afa5e6dd2945d5f83f6307" kindref="member">opts.B</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="91" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1ae2bafd4c6e4948eb571d25f4b77193dd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.wallBottom</definition>
+        <argsstring></argsstring>
+        <name>wallBottom</name>
+        <initializer>=  bc.WallFunctions(turbModel=<ref refid="d3/ddf/namespaceflat__plate_1a03df88d5c20b29fb6cefbef946ca3fc3" kindref="member">model</ref>, kWall=<ref refid="d3/ddf/namespaceflat__plate_1ae574c129800f33031d78db571e26f843" kindref="member">kWallBottom</ref>, <ref refid="de/d5b/Headers_8h_1aa565e3a13199f860447a094f48c9dd6b" kindref="member">Y</ref>=<ref refid="d3/ddf/namespaceflat__plate_1a811544463ea9c61e78e68d4dd677c2eb" kindref="member">Y_</ref>, <ref refid="d3/ddf/namespaceflat__plate_1a5d58db3faae596218d6715e82c8fb0fe" kindref="member">Yplus</ref>=<ref refid="d3/ddf/namespaceflat__plate_1a5d58db3faae596218d6715e82c8fb0fe" kindref="member">Yplus</ref>, U0=<ref refid="de/d5b/Headers_8h_1a64e1fe39afc10b00a4f50198aef8626d" kindref="member">opts.U</ref>, nu=opts.nu, Cmu=opts.Cmu, K=opts.K, <ref refid="de/d5b/Headers_8h_1a713b4ebff2afa5e6dd2945d5f83f6307" kindref="member">B</ref>=<ref refid="de/d5b/Headers_8h_1a713b4ebff2afa5e6dd2945d5f83f6307" kindref="member">opts.B</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="92" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1aab768993db0ee408e18762ca33b32133" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list flat_plate::walls</definition>
+        <argsstring></argsstring>
+        <name>walls</name>
+        <initializer>=  [<ref refid="d3/ddf/namespaceflat__plate_1a2bb8ddd67ea59f309f159b5922d8fcbe" kindref="member">wallTop</ref>, <ref refid="d3/ddf/namespaceflat__plate_1ae2bafd4c6e4948eb571d25f4b77193dd" kindref="member">wallBottom</ref>]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="93" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a4bdc0f0874f70bdb96309723065df42e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.U</definition>
+        <argsstring></argsstring>
+        <name>U</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="96" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a5c4bcd49bcc424df30c0d57499132ec8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.ramp</definition>
+        <argsstring></argsstring>
+        <name>ramp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="96" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a99049dadfb96e76d0f090e42badcf652" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.kk</definition>
+        <argsstring></argsstring>
+        <name>kk</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="96" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a7e5272a219cf3ca4c4a88d4f2a780b35" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.dd</definition>
+        <argsstring></argsstring>
+        <name>dd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="96" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a7f63f5255edd20f2b4ad00b67901a973" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.b_or</definition>
+        <argsstring></argsstring>
+        <name>b_or</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="96" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a99677eb75935e004af2f35aa29c14a4e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="98" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a74d4de543b092dafdbb102d3a5ddbb6f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="98" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a3a822e0f510e974d30096cc7c59f9f08" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.rho</definition>
+        <argsstring></argsstring>
+        <name>rho</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="98" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a2dc166c04cdd9d7e5db049b4bda23200" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary flat_plate::initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;pressure&apos;:<ref refid="de/df8/classflat__plate_1_1AtRest" kindref="compound">AtRest</ref>(),
+                     &apos;vel_u&apos;: <ref refid="de/df8/classflat__plate_1_1AtRest" kindref="compound">AtRest</ref>(),
+                     &apos;vel_v&apos;: <ref refid="de/df8/classflat__plate_1_1AtRest" kindref="compound">AtRest</ref>(),
+                     &apos;k&apos;:<ref refid="d6/db9/classflat__plate_1_1kIn" kindref="compound">kIn</ref>(),
+                     &apos;dissipation&apos;:<ref refid="d7/d00/classflat__plate_1_1dIn" kindref="compound">dIn</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="126" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1aec1c58c40052cbcafad6c69a7f4e2d9e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="132" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1af8a6cdf3fb07aaadf71a82f436ac68ff" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.final_time</definition>
+        <argsstring></argsstring>
+        <name>final_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="133" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="133" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1ade2f57dca9174561dcb777a1067624e7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.dt_output</definition>
+        <argsstring></argsstring>
+        <name>dt_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="134" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1aac84bf3940b8def7b2db161123914615" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.dt_init</definition>
+        <argsstring></argsstring>
+        <name>dt_init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="135" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1ae0289c53d6c0c91340af39d155958dfa" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.cfl</definition>
+        <argsstring></argsstring>
+        <name>cfl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="138" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a81a801a425f4d2aa19f6dad2b8f5f8df" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.useSuperlu</definition>
+        <argsstring></argsstring>
+        <name>useSuperlu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="139" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1aa253bb8d842609a49b8ba38c36c0f36b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.physics</definition>
+        <argsstring></argsstring>
+        <name>physics</name>
+        <initializer>=  myTpFlowProblem.SystemPhysics</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="143" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a94697e258e42851de1474694941673d5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <initializer>=  myTpFlowProblem.SystemPhysics.modelDict</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="148" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a6b06ffb7e2a5d119852329394577acca" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.params</definition>
+        <argsstring></argsstring>
+        <name>params</name>
+        <initializer>=  myTpFlowProblem.SystemPhysics</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/flat_plate.py" line="156" column="1" bodyfile="tests/proteus_tutorial/2d/flat_plate.py" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a7591d85d9ac25e8e227ec8550567acbc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  TpFlow.OutputStepping(<ref refid="d3/ddf/namespaceflat__plate_1af8a6cdf3fb07aaadf71a82f436ac68ff" kindref="member">final_time</ref>=opts.duration,
+                                       <ref refid="d3/ddf/namespaceflat__plate_1aac84bf3940b8def7b2db161123914615" kindref="member">dt_init</ref>=opts.dt_init,
+                                       <ref refid="d3/ddf/namespaceflat__plate_1ade2f57dca9174561dcb777a1067624e7" kindref="member">dt_output</ref>=opts.dt_output,
+                                       nDTout=None,
+                                       dt_fixed=None)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/flat_plate.py" line="124" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/flat_plate.py" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1af8bb516fdc69900946ac4c72183ae8b6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.densityA</definition>
+        <argsstring></argsstring>
+        <name>densityA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/flat_plate.py" line="149" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/flat_plate.py" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a8eeebc3006042586712aea887b79b88f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.densityB</definition>
+        <argsstring></argsstring>
+        <name>densityB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/flat_plate.py" line="150" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/flat_plate.py" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1aea77bf47353039af13359c0d11d5cd8c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.kinematicViscosityA</definition>
+        <argsstring></argsstring>
+        <name>kinematicViscosityA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/flat_plate.py" line="151" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/flat_plate.py" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a400f825987aa41f4ebaa025600a147b9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.kinematicViscosityB</definition>
+        <argsstring></argsstring>
+        <name>kinematicViscosityB</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/flat_plate.py" line="152" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/flat_plate.py" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1acf327aef2e26d559af81e933eb16d267" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.surf_tension_coeff</definition>
+        <argsstring></argsstring>
+        <name>surf_tension_coeff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/flat_plate.py" line="153" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/flat_plate.py" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1aa00dd5fc48b9833c93950a3508e53506" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.gravity</definition>
+        <argsstring></argsstring>
+        <name>gravity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/flat_plate.py" line="154" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/flat_plate.py" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1a19d0de54056b82954d23fd4fda299374" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/flat_plate.py" line="159" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/flat_plate.py" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/ddf/namespaceflat__plate_1ae9d6cb1c77afda30af28a56d318446fe" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>flat_plate.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <briefdescription>
+<para>Assemble domain. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/flat_plate.py" line="168" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/flat_plate.py" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/proteus_tutorial/2d/flat_plate.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

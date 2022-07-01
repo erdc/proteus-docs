@@ -1,0 +1,308 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="de/d81/namespacesw__dam__break__1d__dgpk__n" kind="namespace" language="Python">
+    <compoundname>sw_dam_break_1d_dgpk_n</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1a7a437bf71fc996242c91e14bb0385b55" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sw_dam_break_1d_dgpk_n.spaceOrder</definition>
+        <argsstring></argsstring>
+        <name>spaceOrder</name>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="10" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1a56136a5730a976665cb1757b7f795859" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sw_dam_break_1d_dgpk_n::runCFL</definition>
+        <argsstring></argsstring>
+        <name>runCFL</name>
+        <initializer>= 0.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="15" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1a8ef39b787d2fc35b0c2e7522aae02579" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sw_dam_break_1d_dgpk_n.timeIntegration</definition>
+        <argsstring></argsstring>
+        <name>timeIntegration</name>
+        <initializer>=  <ref refid="dc/dd9/classproteus_1_1TimeIntegration_1_1SSPRKPIintegration" kindref="compound">SSPRKPIintegration</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="21" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1ad139e386c49ee40f65e607b08010abba" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sw_dam_break_1d_dgpk_n.timeOrder</definition>
+        <argsstring></argsstring>
+        <name>timeOrder</name>
+        <initializer>=  <ref refid="db/dcc/jf_8h_1ac6afabdc09a49a433ee19d8a9486056d" kindref="member">min</ref>(<ref refid="de/d81/namespacesw__dam__break__1d__dgpk__n_1a7a437bf71fc996242c91e14bb0385b55" kindref="member">spaceOrder</ref>+1,3)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="23" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1ad114fdcd52ff89784342e08dfc89862f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sw_dam_break_1d_dgpk_n.nStagesTime</definition>
+        <argsstring></argsstring>
+        <name>nStagesTime</name>
+        <initializer>= <ref refid="de/d81/namespacesw__dam__break__1d__dgpk__n_1ad139e386c49ee40f65e607b08010abba" kindref="member">timeOrder</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="24" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1abfa9d5fc68ddf7dcfcd92dfdb9dfa447" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sw_dam_break_1d_dgpk_n.stepController</definition>
+        <argsstring></argsstring>
+        <name>stepController</name>
+        <initializer>= <ref refid="de/d0a/classproteus_1_1StepControl_1_1Min__dt__RKcontroller" kindref="compound">Min_dt_RKcontroller</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="27" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1aac428bdcec4483e006d143019dc9e311" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sw_dam_break_1d_dgpk_n.nDTout</definition>
+        <argsstring></argsstring>
+        <name>nDTout</name>
+        <initializer>=  100</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="30" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1a83324be4d338c5ffbf63b19ed92bc756" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sw_dam_break_1d_dgpk_n.limiterType</definition>
+        <argsstring></argsstring>
+        <name>limiterType</name>
+        <initializer>=  <ref refid="da/d78/classproteus_1_1TimeIntegration_1_1DGlimiterP1Lagrange1d" kindref="compound">DGlimiterP1Lagrange1d</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="34" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1a250678d4060412d6d593ea69b5a61d11" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary sw_dam_break_1d_dgpk_n::femSpaces</definition>
+        <argsstring></argsstring>
+        <name>femSpaces</name>
+        <initializer>=  {0:<ref refid="d7/d60/classproteus_1_1FemTools_1_1DG__AffineLinearOnSimplexWithNodalBasis" kindref="compound">DG_AffineLinearOnSimplexWithNodalBasis</ref>,
+                 1:<ref refid="d7/d60/classproteus_1_1FemTools_1_1DG__AffineLinearOnSimplexWithNodalBasis" kindref="compound">DG_AffineLinearOnSimplexWithNodalBasis</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="39" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1ab4c6ae8ce248f55f2454634e8c08fd8f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sw_dam_break_1d_dgpk_n.elementQuadrature</definition>
+        <argsstring></argsstring>
+        <name>elementQuadrature</name>
+        <initializer>=  <ref refid="de/d6b/classproteus_1_1Quadrature_1_1SimplexLobattoQuadrature" kindref="compound">SimplexLobattoQuadrature</ref>(nd,1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="47" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1ab5cf37c8772e14d720857b583ea04691" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sw_dam_break_1d_dgpk_n.elementBoundaryQuadrature</definition>
+        <argsstring></argsstring>
+        <name>elementBoundaryQuadrature</name>
+        <initializer>=  <ref refid="de/d6b/classproteus_1_1Quadrature_1_1SimplexLobattoQuadrature" kindref="compound">SimplexLobattoQuadrature</ref>(nd-1,1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="48" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1acf60c2f4ca406428070c234d4b03c7d8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sw_dam_break_1d_dgpk_n.nn</definition>
+        <argsstring></argsstring>
+        <name>nn</name>
+        <initializer>=  31</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="54" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1a9985cc79b369e0276ffd99ab5a18bf38" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sw_dam_break_1d_dgpk_n.nLevels</definition>
+        <argsstring></argsstring>
+        <name>nLevels</name>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="55" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1a077612d1eeceae1f24a6418e521340d3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sw_dam_break_1d_dgpk_n.subgridError</definition>
+        <argsstring></argsstring>
+        <name>subgridError</name>
+        <initializer>=  <ref refid="de/d32/classproteus_1_1SubgridError_1_1ShallowWater__CFL" kindref="compound">ShallowWater_CFL</ref>(coefficients,nd,g)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="58" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1aa2bb1d970610183ac2238d231a9fedc6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sw_dam_break_1d_dgpk_n.numericalFluxType</definition>
+        <argsstring></argsstring>
+        <name>numericalFluxType</name>
+        <initializer>=  <ref refid="dd/dd1/classproteus_1_1NumericalFlux_1_1RusanovNumericalFlux" kindref="compound">RusanovNumericalFlux</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="60" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1a508f105b00bd7d675a7296bde7eeea8c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sw_dam_break_1d_dgpk_n.multilevelNonlinearSolver</definition>
+        <argsstring></argsstring>
+        <name>multilevelNonlinearSolver</name>
+        <initializer>= <ref refid="de/d01/classproteus_1_1NonlinearSolvers_1_1Newton" kindref="compound">Newton</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="63" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1ab5635221b7af4c1e541b4d32b559a3c1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sw_dam_break_1d_dgpk_n.levelNonlinearSolver</definition>
+        <argsstring></argsstring>
+        <name>levelNonlinearSolver</name>
+        <initializer>= <ref refid="de/d01/classproteus_1_1NonlinearSolvers_1_1Newton" kindref="compound">Newton</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="65" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1a385bab069ef34583abe59150833bddfb" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sw_dam_break_1d_dgpk_n.usingSSPRKNewton</definition>
+        <argsstring></argsstring>
+        <name>usingSSPRKNewton</name>
+        <initializer>= True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="67" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1a5dadbf4465d71fc6744574003eba2b92" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sw_dam_break_1d_dgpk_n.tolFac</definition>
+        <argsstring></argsstring>
+        <name>tolFac</name>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="69" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1a4af3045456f3e2c38dc46c30ba339c35" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sw_dam_break_1d_dgpk_n.nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>nl_atol_res</name>
+        <initializer>=  1.0e-8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="71" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="de/d81/namespacesw__dam__break__1d__dgpk__n_1a81f036d0cb01db3369f66ae59cda439c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sw_dam_break_1d_dgpk_n.archiveFlag</definition>
+        <argsstring></argsstring>
+        <name>archiveFlag</name>
+        <initializer>=  <ref refid="d9/d89/classproteus_1_1Archiver_1_1ArchiveFlags_1aba2f02cb57855981369bf67a29bbf639" kindref="member">ArchiveFlags.EVERY_USER_STEP</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="74" column="1" bodyfile="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/shallow_water/dambreak_1d/sw_dam_break_1d_dgpk_n.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

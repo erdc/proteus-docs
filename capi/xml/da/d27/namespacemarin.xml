@@ -1,0 +1,975 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="da/d27/namespacemarin" kind="namespace" language="Python">
+    <compoundname>marin</compoundname>
+    <innerclass refid="d3/da7/classmarin_1_1P" prot="public">marin::P</innerclass>
+    <innerclass refid="dc/d56/classmarin_1_1Phi" prot="public">marin::Phi</innerclass>
+    <innerclass refid="d1/ddb/classmarin_1_1V" prot="public">marin::V</innerclass>
+    <innerclass refid="db/d2c/classmarin_1_1VOF" prot="public">marin::VOF</innerclass>
+    <innerclass refid="d0/db8/classmarin_1_1zero" prot="public">marin::zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="da/d27/namespacemarin_1aa760fab272450aa32237f18773b6b2f6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  Context.Options([
+    (&quot;final_time&quot;,7.5,&quot;Final time for simulation&quot;),
+    (&quot;<ref refid="da/d27/namespacemarin_1a79bd6ac29b0c7c698a92aa08df0cb3b8" kindref="member">dt_output</ref>&quot;,0.1,&quot;Time interval to output solution&quot;),
+    (&quot;gauges&quot;, True, &quot;Collect data for validation&quot;),
+    (&quot;<ref refid="da/d27/namespacemarin_1aff61073d97ec042f9a9867f1714f3f2a" kindref="member">cfl</ref>&quot;,0.2,&quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="da/d27/namespacemarin_1a4468cc7bcfeb239316112890d1b34731" kindref="member">he</ref>&quot;,0.5,&quot;Max mesh element diameter&quot;),
+    (&quot;use_gmsh&quot;,False,&quot;Use gmsh to generate mesh&quot;)
+    ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="20" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a23a8e39254d12d76966ffa8ae70e5487" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.pressure_gauges</definition>
+        <argsstring></argsstring>
+        <name>pressure_gauges</name>
+        <initializer>=  PointGauges(gauges=(((&apos;p&apos;,),
+                                           ((2.389,0.526,0.025), #P1
+                                            (2.389,0.526,0.099), #P3
+                                            (2.414,0.474,0.165), #P5
+                                            (2.487,0.474,0.165))),), #P7
+                                  fileName=&quot;pressure.csv&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="35" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1acc6a2e03c015cb6258bed50daffeb862" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.point_height_gauges</definition>
+        <argsstring></argsstring>
+        <name>point_height_gauges</name>
+        <initializer>=  PointGauges(gauges=(((&apos;<ref refid="de/d5b/Headers_8h_1ace0097aceb19d2d05a51f5d244573c4f" kindref="member">phi</ref>&apos;,),
+                                               ((2.389,0.526,0.025), #P1
+                                                (2.389,0.526,0.099), #P3
+                                                (2.414,0.474,0.165), #P5
+                                                (2.487,0.474,0.165))),), #P7
+                                      fileName=&quot;point_clsvof.csv&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="41" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a1f5eb04219da92d210ca7b591909b301" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.height_gauges</definition>
+        <argsstring></argsstring>
+        <name>height_gauges</name>
+        <initializer>=  LineGauges(gauges=(((&quot;phi&quot;,),
+                                        (((2.724, 0.5, 0.0),
+                                          (2.724, 0.5, 1.0)),
+                                         ((2.228, 0.5, 0.0),
+                                          (2.228, 0.5, 1.0)),
+                                         ((1.732, 0.5, 0.0),
+                                          (1.732, 0.5, 1.0)),
+                                         ((0.582, 0.5, 0.0),
+                                          (0.582, 0.5, 1.0)))),),
+                               fileName=&quot;height.csv&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="47" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a0306323174be918f95986a5e6b6d1731" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list marin.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <initializer>=  [3.22,1.0,1.0]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="61" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a4e80bace681f900e2fee6ffb947c841f" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list marin.box_L</definition>
+        <argsstring></argsstring>
+        <name>box_L</name>
+        <initializer>=  [0.16,0.4,0.16]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="62" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list marin.box_xy</definition>
+        <argsstring></argsstring>
+        <name>box_xy</name>
+        <initializer>=  [2.39,0.3]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="63" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a4468cc7bcfeb239316112890d1b34731" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  opts.he</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="64" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a242d922de3a8840889c15550258d90e5" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list marin.boundaries</definition>
+        <argsstring></argsstring>
+        <name>boundaries</name>
+        <initializer>= [&apos;left&apos;,&apos;right&apos;,&apos;bottom&apos;,&apos;top&apos;,&apos;front&apos;,&apos;back&apos;,&apos;box_left&apos;,&apos;box_right&apos;,&apos;box_top&apos;,&apos;box_front&apos;,&apos;box_back&apos;,]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="65" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>= dict([(key,i+1) for (i,key) in enumerate(<ref refid="da/d27/namespacemarin_1a242d922de3a8840889c15550258d90e5" kindref="member">boundaries</ref>)])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="66" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1ab01f9bdbda1a9869b8155cb983726074" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.bt</definition>
+        <argsstring></argsstring>
+        <name>bt</name>
+        <initializer>=  <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="67" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a6d3bb18bc374c5d747be7a9a2e0a445d" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list marin.holes</definition>
+        <argsstring></argsstring>
+        <name>holes</name>
+        <initializer>=  [[0.5*<ref refid="da/d27/namespacemarin_1a4e80bace681f900e2fee6ffb947c841f" kindref="member">box_L</ref>[0]+<ref refid="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" kindref="member">box_xy</ref>[0],0.5*<ref refid="da/d27/namespacemarin_1a4e80bace681f900e2fee6ffb947c841f" kindref="member">box_L</ref>[1]+<ref refid="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" kindref="member">box_xy</ref>[1],0.5*<ref refid="da/d27/namespacemarin_1a4e80bace681f900e2fee6ffb947c841f" kindref="member">box_L</ref>[2]]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="68" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a5d455f22c5a0d7c63bcd5f9eaae5e345" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list marin::vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <initializer>= [[0.0,0.0,0.0],#0
+          [<ref refid="da/d27/namespacemarin_1a0306323174be918f95986a5e6b6d1731" kindref="member">L</ref>[0],0.0,0.0],#1
+          [<ref refid="da/d27/namespacemarin_1a0306323174be918f95986a5e6b6d1731" kindref="member">L</ref>[0],<ref refid="da/d27/namespacemarin_1a0306323174be918f95986a5e6b6d1731" kindref="member">L</ref>[1],0.0],#2
+          [0.0,<ref refid="da/d27/namespacemarin_1a0306323174be918f95986a5e6b6d1731" kindref="member">L</ref>[1],0.0],#3
+          [0.0,0.0,<ref refid="da/d27/namespacemarin_1a0306323174be918f95986a5e6b6d1731" kindref="member">L</ref>[2]],#4
+          [<ref refid="da/d27/namespacemarin_1a0306323174be918f95986a5e6b6d1731" kindref="member">L</ref>[0],0.0,<ref refid="da/d27/namespacemarin_1a0306323174be918f95986a5e6b6d1731" kindref="member">L</ref>[2]],#5
+          [<ref refid="da/d27/namespacemarin_1a0306323174be918f95986a5e6b6d1731" kindref="member">L</ref>[0],<ref refid="da/d27/namespacemarin_1a0306323174be918f95986a5e6b6d1731" kindref="member">L</ref>[1],<ref refid="da/d27/namespacemarin_1a0306323174be918f95986a5e6b6d1731" kindref="member">L</ref>[2]],#6
+          [0.0,<ref refid="da/d27/namespacemarin_1a0306323174be918f95986a5e6b6d1731" kindref="member">L</ref>[1],<ref refid="da/d27/namespacemarin_1a0306323174be918f95986a5e6b6d1731" kindref="member">L</ref>[2]],#7
+          [<ref refid="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" kindref="member">box_xy</ref>[0],<ref refid="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" kindref="member">box_xy</ref>[1],0.0],#8
+          [<ref refid="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" kindref="member">box_xy</ref>[0]+<ref refid="da/d27/namespacemarin_1a4e80bace681f900e2fee6ffb947c841f" kindref="member">box_L</ref>[0],<ref refid="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" kindref="member">box_xy</ref>[1],0.0],#9
+          [<ref refid="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" kindref="member">box_xy</ref>[0]+<ref refid="da/d27/namespacemarin_1a4e80bace681f900e2fee6ffb947c841f" kindref="member">box_L</ref>[0],<ref refid="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" kindref="member">box_xy</ref>[1]+<ref refid="da/d27/namespacemarin_1a4e80bace681f900e2fee6ffb947c841f" kindref="member">box_L</ref>[1],0.0],#10
+          [<ref refid="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" kindref="member">box_xy</ref>[0],<ref refid="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" kindref="member">box_xy</ref>[1]+<ref refid="da/d27/namespacemarin_1a4e80bace681f900e2fee6ffb947c841f" kindref="member">box_L</ref>[1],0.0],#11
+          [<ref refid="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" kindref="member">box_xy</ref>[0],<ref refid="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" kindref="member">box_xy</ref>[1],<ref refid="da/d27/namespacemarin_1a4e80bace681f900e2fee6ffb947c841f" kindref="member">box_L</ref>[2]],#12
+          [<ref refid="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" kindref="member">box_xy</ref>[0]+<ref refid="da/d27/namespacemarin_1a4e80bace681f900e2fee6ffb947c841f" kindref="member">box_L</ref>[0],<ref refid="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" kindref="member">box_xy</ref>[1],<ref refid="da/d27/namespacemarin_1a4e80bace681f900e2fee6ffb947c841f" kindref="member">box_L</ref>[2]],#13
+          [<ref refid="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" kindref="member">box_xy</ref>[0]+<ref refid="da/d27/namespacemarin_1a4e80bace681f900e2fee6ffb947c841f" kindref="member">box_L</ref>[0],<ref refid="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" kindref="member">box_xy</ref>[1]+<ref refid="da/d27/namespacemarin_1a4e80bace681f900e2fee6ffb947c841f" kindref="member">box_L</ref>[1],<ref refid="da/d27/namespacemarin_1a4e80bace681f900e2fee6ffb947c841f" kindref="member">box_L</ref>[2]],#14
+          [<ref refid="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" kindref="member">box_xy</ref>[0],<ref refid="da/d27/namespacemarin_1a3fbb42209ae4681a260ce78371ed5ede" kindref="member">box_xy</ref>[1]+<ref refid="da/d27/namespacemarin_1a4e80bace681f900e2fee6ffb947c841f" kindref="member">box_L</ref>[1],<ref refid="da/d27/namespacemarin_1a4e80bace681f900e2fee6ffb947c841f" kindref="member">box_L</ref>[2]]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="69" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1ac2754e89e218066104fec916d867f805" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list marin::vertexFlags</definition>
+        <argsstring></argsstring>
+        <name>vertexFlags</name>
+        <initializer>= [<ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;left&apos;],
+             <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;right&apos;],
+             <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;right&apos;],
+             <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;left&apos;],
+             <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;left&apos;],
+             <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;right&apos;],
+             <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;right&apos;],
+             <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;left&apos;],
+             <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;box_left&apos;],
+             <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;box_left&apos;],
+             <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;box_left&apos;],
+             <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;box_left&apos;],
+             <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;box_left&apos;],
+             <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;box_left&apos;],
+             <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;box_left&apos;],
+             <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;box_left&apos;]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="85" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1adf7d3ed90d809d6b4bb38f7d65455400" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list marin::facets</definition>
+        <argsstring></argsstring>
+        <name>facets</name>
+        <initializer>= [[[0,1,2,3],[8,9,10,11]],
+        [[0,1,5,4]],
+        [[1,2,6,5]],
+        [[2,3,7,6]],
+        [[3,0,4,7]],
+        [[4,5,6,7]],
+        [[8,9,13,12]],
+        [[9,10,14,13]],
+        [[10,11,15,14]],
+        [[11,8,12,15]],
+        [[12,13,14,15]]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="101" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a4fff43395b6c8ddf841ca514b6e045e0" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list marin::facetFlags</definition>
+        <argsstring></argsstring>
+        <name>facetFlags</name>
+        <initializer>= [<ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+            <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;front&apos;],
+            <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;right&apos;],
+            <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;back&apos;],
+            <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;left&apos;],
+            <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;top&apos;],
+            <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;box_front&apos;],
+            <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;box_right&apos;],
+            <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;box_back&apos;],
+            <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;box_left&apos;],
+            <ref refid="da/d27/namespacemarin_1a2bc050dc3f31c866a28675efe9a4213e" kindref="member">boundaryTags</ref>[&apos;box_top&apos;]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="112" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a8372ae7708c5756a86c0ef38e1fc8394" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list marin::volumes</definition>
+        <argsstring></argsstring>
+        <name>volumes</name>
+        <initializer>= [[[fi for fi in range(len(<ref refid="da/d27/namespacemarin_1a4fff43395b6c8ddf841ca514b6e045e0" kindref="member">facetFlags</ref>))]]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="123" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a5b18c10409f3b2b4aa2cacd126896b05" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool marin.tank_only</definition>
+        <argsstring></argsstring>
+        <name>tank_only</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="124" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1aded83543ab5bd3feb350f196866d9db3" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list marin.regions</definition>
+        <argsstring></argsstring>
+        <name>regions</name>
+        <initializer>= [[0.5*<ref refid="da/d27/namespacemarin_1a0306323174be918f95986a5e6b6d1731" kindref="member">L</ref>[0],0.5*<ref refid="da/d27/namespacemarin_1a0306323174be918f95986a5e6b6d1731" kindref="member">L</ref>[1],0.5*<ref refid="da/d27/namespacemarin_1a0306323174be918f95986a5e6b6d1731" kindref="member">L</ref>[2]]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="155" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a33ed50c5c28811fe11b47cde624cbdde" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list marin.regionFlags</definition>
+        <argsstring></argsstring>
+        <name>regionFlags</name>
+        <initializer>= [0]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="156" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1abe14756c91f36f4a15edb30a1ef93175" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.PiecewiseLinearComplexDomain(<ref refid="da/d27/namespacemarin_1a5d455f22c5a0d7c63bcd5f9eaae5e345" kindref="member">vertices</ref>=<ref refid="da/d27/namespacemarin_1a5d455f22c5a0d7c63bcd5f9eaae5e345" kindref="member">vertices</ref>,
+                                             <ref refid="da/d27/namespacemarin_1ac2754e89e218066104fec916d867f805" kindref="member">vertexFlags</ref>=<ref refid="da/d27/namespacemarin_1ac2754e89e218066104fec916d867f805" kindref="member">vertexFlags</ref>,
+                                             <ref refid="da/d27/namespacemarin_1adf7d3ed90d809d6b4bb38f7d65455400" kindref="member">facets</ref>=<ref refid="da/d27/namespacemarin_1adf7d3ed90d809d6b4bb38f7d65455400" kindref="member">facets</ref>,
+                                             <ref refid="da/d27/namespacemarin_1a4fff43395b6c8ddf841ca514b6e045e0" kindref="member">facetFlags</ref>=<ref refid="da/d27/namespacemarin_1a4fff43395b6c8ddf841ca514b6e045e0" kindref="member">facetFlags</ref>,
+                                             <ref refid="da/d27/namespacemarin_1aded83543ab5bd3feb350f196866d9db3" kindref="member">regions</ref> = <ref refid="da/d27/namespacemarin_1aded83543ab5bd3feb350f196866d9db3" kindref="member">regions</ref>,
+                                             <ref refid="da/d27/namespacemarin_1a33ed50c5c28811fe11b47cde624cbdde" kindref="member">regionFlags</ref> = <ref refid="da/d27/namespacemarin_1a33ed50c5c28811fe11b47cde624cbdde" kindref="member">regionFlags</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="157" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a6c3e5000e09718653e2ba1c2ace4bf2f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.holes_ind</definition>
+        <argsstring></argsstring>
+        <name>holes_ind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="164" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1aafb6a65da2c80cd16be9b9484be8f733" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.triangleFlag</definition>
+        <argsstring></argsstring>
+        <name>triangleFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="169" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a92ecaf32870cf941af2d72ae873e59a2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="170" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a64c70b8ed05e2185aab5747cbbc5d3c8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.comm</definition>
+        <argsstring></argsstring>
+        <name>comm</name>
+        <initializer>=  Comm.get()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="175" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1afd802e4304cfb354aaa9c3197fb964cd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.he_max</definition>
+        <argsstring></argsstring>
+        <name>he_max</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="177" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1afb9917fa473572ec8eb1eeeab80fa920" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>marin.gmsh_cmd</definition>
+        <argsstring></argsstring>
+        <name>gmsh_cmd</name>
+        <initializer>=  &quot;gmsh {0:<ref refid="de/d5b/Headers_8h_1a7cbe4dbecea8b00e5845e24579f6036d" kindref="member">s</ref>} -<ref refid="de/d5b/Headers_8h_1abb6e996fea4e5f276fdcec0c7d809274" kindref="member">v</ref> 10 -3 -o {1:<ref refid="de/d5b/Headers_8h_1a7cbe4dbecea8b00e5845e24579f6036d" kindref="member">s</ref>} -format msh2&quot;.format(domain.geofile+&quot;.geo&quot;, domain.geofile+&quot;.msh&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="179" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1ad6385e4bd1caad3f8c2f219d18fce1f1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.shell</definition>
+        <argsstring></argsstring>
+        <name>shell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="180" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a0da12c0b45008ee27bbe9780a0ea1e01" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.nd</definition>
+        <argsstring></argsstring>
+        <name>nd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="181" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a9549df4050af6e926d6d3aaffb744637" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.genMesh</definition>
+        <argsstring></argsstring>
+        <name>genMesh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="182" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a1a9cd5f1b3ae730a9f0bc617cc4e6a22" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float marin.waterLine_x</definition>
+        <argsstring></argsstring>
+        <name>waterLine_x</name>
+        <initializer>=  1.20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="191" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1af740c031c9d1e11417fa2574996f2e95" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float marin.waterLine_z</definition>
+        <argsstring></argsstring>
+        <name>waterLine_z</name>
+        <initializer>=  0.55</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="192" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1ae5e5e4daf40d969de8f6bed50ae1aa9b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float marin.rho_1</definition>
+        <argsstring></argsstring>
+        <name>rho_1</name>
+        <initializer>=  1.205</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="209" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a9df4a46f19e7489e54c5f8c90a09fbd4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float marin.rho_0</definition>
+        <argsstring></argsstring>
+        <name>rho_0</name>
+        <initializer>=  998.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="210" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a60e5081782c8ce1f935ef03171909eb2" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list marin.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>=  [0., 0., -9.81]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="211" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1ac9d437d300d9a2d1b007ff727c16fd38" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>marin.boundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>boundaryConditions</name>
+        <initializer>=  {
+    # DIRICHLET BCs #
+    &apos;<ref refid="da/d27/namespacemarin_1a48b8f04ae10add54a6267e78de3e4ca4" kindref="member">pressure_DBC</ref>&apos;: <ref refid="da/d27/namespacemarin_1a48b8f04ae10add54a6267e78de3e4ca4" kindref="member">pressure_DBC</ref>,
+    &apos;<ref refid="da/d27/namespacemarin_1ae4dd246644d09d69e40ab2140a6a1a2d" kindref="member">vel_u_DBC</ref>&apos;: <ref refid="da/d27/namespacemarin_1ae4dd246644d09d69e40ab2140a6a1a2d" kindref="member">vel_u_DBC</ref>,
+    &apos;<ref refid="da/d27/namespacemarin_1ae5e1d0185b0e6c49e43e3428372b2011" kindref="member">vel_v_DBC</ref>&apos;: <ref refid="da/d27/namespacemarin_1ae5e1d0185b0e6c49e43e3428372b2011" kindref="member">vel_v_DBC</ref>,
+    &apos;<ref refid="da/d27/namespacemarin_1afbe9b6807195074294412d63b82016b3" kindref="member">vel_w_DBC</ref>&apos;: <ref refid="da/d27/namespacemarin_1afbe9b6807195074294412d63b82016b3" kindref="member">vel_w_DBC</ref>,
+    &apos;<ref refid="da/d27/namespacemarin_1abb4720e82f64a70b00f941f5171b679e" kindref="member">vof_DBC</ref>&apos;:  <ref refid="da/d27/namespacemarin_1abb4720e82f64a70b00f941f5171b679e" kindref="member">vof_DBC</ref>,
+    &apos;ncls_DBC&apos;: <ref refid="da/d27/namespacemarin_1a35198bcfff4099ecb316b32385308d3d" kindref="member">phi_DBC</ref>,
+    # ADVECTIVE FLUX BCs #
+    &apos;<ref refid="da/d27/namespacemarin_1a4e82b20bd510c04582a625df73afc868" kindref="member">pressure_AFBC</ref>&apos;: <ref refid="da/d27/namespacemarin_1a4e82b20bd510c04582a625df73afc868" kindref="member">pressure_AFBC</ref>,
+    &apos;<ref refid="da/d27/namespacemarin_1aec649b2ddaf0d9460474ddae37c23792" kindref="member">vel_u_AFBC</ref>&apos;: <ref refid="da/d27/namespacemarin_1aec649b2ddaf0d9460474ddae37c23792" kindref="member">vel_u_AFBC</ref>,
+    &apos;<ref refid="da/d27/namespacemarin_1aaf9ec03f463f8321e1e36aaeb1d775e2" kindref="member">vel_v_AFBC</ref>&apos;: <ref refid="da/d27/namespacemarin_1aaf9ec03f463f8321e1e36aaeb1d775e2" kindref="member">vel_v_AFBC</ref>,
+    &apos;<ref refid="da/d27/namespacemarin_1a08e40ab5491fca91def0632337f256b6" kindref="member">vel_w_AFBC</ref>&apos;: <ref refid="da/d27/namespacemarin_1a08e40ab5491fca91def0632337f256b6" kindref="member">vel_w_AFBC</ref>,
+    &apos;<ref refid="da/d27/namespacemarin_1a1fe9a3b00fcb0476928748c809dee14a" kindref="member">vof_AFBC</ref>&apos;: <ref refid="da/d27/namespacemarin_1a1fe9a3b00fcb0476928748c809dee14a" kindref="member">vof_AFBC</ref>,
+    # DIFFUSIVE FLUX BCs #
+    &apos;vel_u_DFBC&apos;: lambda x, flag: lambda x,t: 0.,
+    &apos;vel_v_DFBC&apos;: lambda x, flag: lambda x,t: 0.,
+    &apos;vel_w_DFBC&apos;: lambda x, flag: lambda x,t: 0.,
+    &apos;vof_DFBC&apos;: lambda x, flag: None}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="325" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="325" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a51a9d12609f9ef7bea76607674dc531d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem()</initializer>
+        <briefdescription>
+<para>***** Create myTwoPhaseFlowProblem ***** # </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="349" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a8773532578ab3593f3004e475a0d5f83" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.final_time</definition>
+        <argsstring></argsstring>
+        <name>final_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="350" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1a79bd6ac29b0c7c698a92aa08df0cb3b8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.dt_output</definition>
+        <argsstring></argsstring>
+        <name>dt_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="351" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="351" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1aff61073d97ec042f9a9867f1714f3f2a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.cfl</definition>
+        <argsstring></argsstring>
+        <name>cfl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="355" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="355" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1ab0ded04201ed079eb0323384563da8ab" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.useSuperlu</definition>
+        <argsstring></argsstring>
+        <name>useSuperlu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="356" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="356" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1aaad7011796846f7b26bbf264bbcd10e8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <initializer>=  myTpFlowProblem.SystemPhysics.modelDict</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="361" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="361" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1ae69c5f1963325fa90de926fad77ef65a" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary marin.auxVariables</definition>
+        <argsstring></argsstring>
+        <name>auxVariables</name>
+        <initializer>= {&apos;vof&apos;: [<ref refid="da/d27/namespacemarin_1acc6a2e03c015cb6258bed50daffeb862" kindref="member">point_height_gauges</ref>, <ref refid="da/d27/namespacemarin_1a1f5eb04219da92d210ca7b591909b301" kindref="member">height_gauges</ref>],
+              &apos;pressure&apos;: [<ref refid="da/d27/namespacemarin_1a23a8e39254d12d76966ffa8ae70e5487" kindref="member">pressure_gauges</ref>]}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="372" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/d27/namespacemarin_1aa782b67034801e443e7087da646ee51d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>marin.gravity</definition>
+        <argsstring></argsstring>
+        <name>gravity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="379" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="379" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="da/d27/namespacemarin_1a4417cb6ff9a456bee285754b8f660c52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def marin.signedDistance</definition>
+        <argsstring>(x)</argsstring>
+        <name>signedDistance</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="194" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="194" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d27/namespacemarin_1ae4dd246644d09d69e40ab2140a6a1a2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def marin.vel_u_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_u_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="243" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="243" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d27/namespacemarin_1ae5e1d0185b0e6c49e43e3428372b2011" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def marin.vel_v_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_v_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="251" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="251" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d27/namespacemarin_1afbe9b6807195074294412d63b82016b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def marin.vel_w_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_w_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="259" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="259" bodyend="266"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d27/namespacemarin_1a48b8f04ae10add54a6267e78de3e4ca4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def marin.pressure_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="267" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="267" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d27/namespacemarin_1abb4720e82f64a70b00f941f5171b679e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def marin.vof_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vof_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="271" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="271" bodyend="274"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d27/namespacemarin_1a35198bcfff4099ecb316b32385308d3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def marin.phi_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>phi_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="275" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="275" bodyend="278"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d27/namespacemarin_1aec649b2ddaf0d9460474ddae37c23792" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def marin.vel_u_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_u_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="279" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="279" bodyend="290"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d27/namespacemarin_1aaf9ec03f463f8321e1e36aaeb1d775e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def marin.vel_v_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_v_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="291" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="291" bodyend="302"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d27/namespacemarin_1a08e40ab5491fca91def0632337f256b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def marin.vel_w_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_w_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="303" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="303" bodyend="314"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d27/namespacemarin_1a4e82b20bd510c04582a625df73afc868" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def marin.pressure_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="315" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="315" bodyend="318"/>
+      </memberdef>
+      <memberdef kind="function" id="da/d27/namespacemarin_1a1fe9a3b00fcb0476928748c809dee14a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def marin.vof_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vof_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/marin.py" line="319" column="1" bodyfile="tests/proteus_tutorial/3d/marin.py" bodystart="319" bodyend="324"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Multiphase Flow Test
+</verbatim> </para>
+    </detaileddescription>
+    <location file="tests/proteus_tutorial/3d/marin.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

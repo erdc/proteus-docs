@@ -1,0 +1,777 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d0/de5/namespacedtmb" kind="namespace" language="Python">
+    <compoundname>dtmb</compoundname>
+    <innerclass refid="d2/d1a/classdtmb_1_1P" prot="public">dtmb::P</innerclass>
+    <innerclass refid="d0/da6/classdtmb_1_1Phi" prot="public">dtmb::Phi</innerclass>
+    <innerclass refid="da/ddc/classdtmb_1_1V" prot="public">dtmb::V</innerclass>
+    <innerclass refid="d5/da4/classdtmb_1_1VOF" prot="public">dtmb::VOF</innerclass>
+    <innerclass refid="da/d9a/classdtmb_1_1zero" prot="public">dtmb::zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a205647538aad33588255e61e7925406b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dtmb.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  Context.Options([
+    (&quot;speed&quot;,1.0,&quot;Vessel speed [m/<ref refid="de/d5b/Headers_8h_1a7cbe4dbecea8b00e5845e24579f6036d" kindref="member">s</ref>]&quot;),
+    (&quot;final_time&quot;,100,&quot;Final time for simulation&quot;),
+    (&quot;dt_output&quot;,0.5,&quot;Time interval to output solution&quot;),
+    (&quot;cfl&quot;,0.9,&quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="d0/de5/namespacedtmb_1a31ab0d3d9d5c23bc2c688ca06bfcdb67" kindref="member">he</ref>&quot;,0.3,&quot;Max mesh element diameter&quot;),
+    (&quot;skip_gmsh&quot;,False,&quot;Assume mesh has already been generated&quot;),
+    ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="20" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a40d63f0d2638f0bc89d885405f3c4b66" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list dtmb.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <initializer>=  [10, 4, 2]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="28" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a502449eb4c5edf0c44379c47257953d3" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list dtmb.x0</definition>
+        <argsstring></argsstring>
+        <name>x0</name>
+        <initializer>=  [-2, -2, -1]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="29" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a31ab0d3d9d5c23bc2c688ca06bfcdb67" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dtmb.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  opts.he</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="30" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a0eb58ce5a87e489f2dfcdf91bfb9864e" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dtmb.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>= {&apos;left&apos;:3,&apos;right&apos;:4,&apos;bottom&apos;:2,&apos;top&apos;:1,&apos;front&apos;:5,&apos;back&apos;:6,&apos;hull&apos;:7}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="31" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a192ea936b39074b3dbdc9f08412220fc" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary dtmb.bt</definition>
+        <argsstring></argsstring>
+        <name>bt</name>
+        <initializer>=  <ref refid="d0/de5/namespacedtmb_1a0eb58ce5a87e489f2dfcdf91bfb9864e" kindref="member">boundaryTags</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="32" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1acb26663d8f41f1047884d0295b8d92e8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dtmb.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.PiecewiseLinearComplexDomain()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="33" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1af19019886e5710bf4a1399d4783a6218" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dtmb.polyfile</definition>
+        <argsstring></argsstring>
+        <name>polyfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="36" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a2ac4a6b75cc2ca9a5d82c81c643bf4a6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dtmb.geofile</definition>
+        <argsstring></argsstring>
+        <name>geofile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="37" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a7f6aee42b85315ec0a52eed2a3320087" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dtmb.comm</definition>
+        <argsstring></argsstring>
+        <name>comm</name>
+        <initializer>=  Comm.get()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="39" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a357c88a43c8b953af1e36e56bc9231e8" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>dtmb.gmsh_cmd</definition>
+        <argsstring></argsstring>
+        <name>gmsh_cmd</name>
+        <initializer>=  &quot;gmsh {0:<ref refid="de/d5b/Headers_8h_1a7cbe4dbecea8b00e5845e24579f6036d" kindref="member">s</ref>} -<ref refid="de/d5b/Headers_8h_1abb6e996fea4e5f276fdcec0c7d809274" kindref="member">v</ref> 10 -3 -o {1:<ref refid="de/d5b/Headers_8h_1a7cbe4dbecea8b00e5845e24579f6036d" kindref="member">s</ref>} -format msh2 -clmax {2:e}&quot;.format(domain.geofile+&quot;.geo&quot;, domain.geofile+&quot;.msh&quot;,he)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="43" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a64015a4f73c0f20fedf9da60a81ed514" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dtmb.shell</definition>
+        <argsstring></argsstring>
+        <name>shell</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="44" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a1182bc1cda3aa17d281ff1a089fb7d85" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dtmb.nd</definition>
+        <argsstring></argsstring>
+        <name>nd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="45" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a76e52b727c924d0d53aa636476b0b33e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dtmb.genMesh</definition>
+        <argsstring></argsstring>
+        <name>genMesh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="52" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a11408b5a0c1d975b432b9c8bfb28acf2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float dtmb.waterLine_x</definition>
+        <argsstring></argsstring>
+        <name>waterLine_x</name>
+        <initializer>=  1000.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="62" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a6f4fede239f8670b8ed2fb8c4d49b5c7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float dtmb.waterLine_z</definition>
+        <argsstring></argsstring>
+        <name>waterLine_z</name>
+        <initializer>=  0.25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="63" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1ab0ff94aa19d8eca8347a4fae7da42532" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dtmb.pp</definition>
+        <argsstring></argsstring>
+        <name>pp</name>
+        <initializer>=  PP()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="80" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a41c8910284ead966e6cbf1cf9c1b2267" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dtmb.rho_1</definition>
+        <argsstring></argsstring>
+        <name>rho_1</name>
+        <initializer>=  pp.densityB</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="81" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a35d005233f51ad072c4a5f6d9cc68d2c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dtmb.rho_0</definition>
+        <argsstring></argsstring>
+        <name>rho_0</name>
+        <initializer>=  pp.densityA</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="82" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a035aa0d898b1709e9b1318a85f249800" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list dtmb.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>=  [0., 0., -9.81]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="83" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a8277ccbd4f7ac495fe902354973b7c49" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary dtmb.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;pressure&apos;: <ref refid="d2/d1a/classdtmb_1_1P" kindref="compound">P</ref>(<ref refid="d0/de5/namespacedtmb_1a6f4fede239f8670b8ed2fb8c4d49b5c7" kindref="member">waterLine_z</ref>),
+                     &apos;vel_u&apos;: <ref refid="da/d9a/classdtmb_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vel_v&apos;: <ref refid="da/d9a/classdtmb_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vel_w&apos;: <ref refid="da/d9a/classdtmb_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vof&apos;: <ref refid="d5/da4/classdtmb_1_1VOF" kindref="compound">VOF</ref>(),
+                     &apos;rdls&apos;: <ref refid="d0/da6/classdtmb_1_1Phi" kindref="compound">Phi</ref>(),
+                     &apos;ncls&apos;: <ref refid="d0/da6/classdtmb_1_1Phi" kindref="compound">Phi</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="107" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a3f86d720806e70af8fa4ebee656e8226" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dtmb.non_slip_BCs</definition>
+        <argsstring></argsstring>
+        <name>non_slip_BCs</name>
+        <initializer>= True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="119" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a588f7591f154d97d95434b9d1fb71319" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dtmb.openTop</definition>
+        <argsstring></argsstring>
+        <name>openTop</name>
+        <initializer>= True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="120" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a391b3b655c775e346d511f471c59e157" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float dtmb.model_scale</definition>
+        <argsstring></argsstring>
+        <name>model_scale</name>
+        <initializer>= 24.830</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="121" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1aa0b29c4e1db49f9f825abb7458e25b01" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dtmb.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  TpFlow.OutputStepping(opts.final_time,dt_output=opts.dt_output)</initializer>
+        <briefdescription>
+<para>***** Create myTwoPhaseFlowProblem ***** # </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="204" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1acde51e74f09d02d54cdaa7e09b446230" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary dtmb.boundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>boundaryConditions</name>
+        <initializer>=  {
+    # DIRICHLET BCs #
+    &apos;<ref refid="d0/de5/namespacedtmb_1a04ae9c4042c6a25907ec57171e6638c2" kindref="member">pressure_DBC</ref>&apos;: <ref refid="d0/de5/namespacedtmb_1a04ae9c4042c6a25907ec57171e6638c2" kindref="member">pressure_DBC</ref>,
+    &apos;<ref refid="d0/de5/namespacedtmb_1a5a9e46b2c1d96cf147f317632a22397e" kindref="member">vel_u_DBC</ref>&apos;: <ref refid="d0/de5/namespacedtmb_1a5a9e46b2c1d96cf147f317632a22397e" kindref="member">vel_u_DBC</ref>,
+    &apos;<ref refid="d0/de5/namespacedtmb_1af0ed8ac5a8665b6584e6af1906c1a9c3" kindref="member">vel_v_DBC</ref>&apos;: <ref refid="d0/de5/namespacedtmb_1af0ed8ac5a8665b6584e6af1906c1a9c3" kindref="member">vel_v_DBC</ref>,
+    &apos;<ref refid="d0/de5/namespacedtmb_1a5292fcc184eba8fd7a35d977057bd2fa" kindref="member">vel_w_DBC</ref>&apos;: <ref refid="d0/de5/namespacedtmb_1a5292fcc184eba8fd7a35d977057bd2fa" kindref="member">vel_w_DBC</ref>,
+    &apos;<ref refid="d0/de5/namespacedtmb_1a7490b06c21e9ae17249c4cd1ca6fa1ce" kindref="member">vof_DBC</ref>&apos;:  <ref refid="d0/de5/namespacedtmb_1a7490b06c21e9ae17249c4cd1ca6fa1ce" kindref="member">vof_DBC</ref>,
+    &apos;ncls_DBC&apos;: <ref refid="d0/de5/namespacedtmb_1ad4b8e3547f72fe676d70d5ef508e71ee" kindref="member">phi_DBC</ref>,
+    # ADVECTIVE FLUX BCs #
+    &apos;<ref refid="d0/de5/namespacedtmb_1a9ac9259bfd3db5630cfad94b8fe7ca27" kindref="member">pressure_AFBC</ref>&apos;: <ref refid="d0/de5/namespacedtmb_1a9ac9259bfd3db5630cfad94b8fe7ca27" kindref="member">pressure_AFBC</ref>,
+    &apos;<ref refid="d0/de5/namespacedtmb_1a154eaa7c778e2f463226df440093ce8b" kindref="member">vel_u_AFBC</ref>&apos;: <ref refid="d0/de5/namespacedtmb_1a154eaa7c778e2f463226df440093ce8b" kindref="member">vel_u_AFBC</ref>,
+    &apos;<ref refid="d0/de5/namespacedtmb_1abfd75f1b840908d80f6107d45bc6afd6" kindref="member">vel_v_AFBC</ref>&apos;: <ref refid="d0/de5/namespacedtmb_1abfd75f1b840908d80f6107d45bc6afd6" kindref="member">vel_v_AFBC</ref>,
+    &apos;<ref refid="d0/de5/namespacedtmb_1a8c13a565e60bfe47e192eae950ad53b7" kindref="member">vel_w_AFBC</ref>&apos;: <ref refid="d0/de5/namespacedtmb_1a8c13a565e60bfe47e192eae950ad53b7" kindref="member">vel_w_AFBC</ref>,
+    &apos;<ref refid="d0/de5/namespacedtmb_1a5c4e73336f696973105ebf832bf493ed" kindref="member">vof_AFBC</ref>&apos;: <ref refid="d0/de5/namespacedtmb_1a5c4e73336f696973105ebf832bf493ed" kindref="member">vof_AFBC</ref>,
+    # DIFFUSIVE FLUX BCs #
+    &apos;<ref refid="d0/de5/namespacedtmb_1af86aabb322dd130646dd34dddf08e8e0" kindref="member">vel_u_DFBC</ref>&apos;: <ref refid="d0/de5/namespacedtmb_1af86aabb322dd130646dd34dddf08e8e0" kindref="member">vel_u_DFBC</ref>,
+    &apos;<ref refid="d0/de5/namespacedtmb_1a44bc1e78468ffd12ba9b21679c3590d7" kindref="member">vel_v_DFBC</ref>&apos;: <ref refid="d0/de5/namespacedtmb_1a44bc1e78468ffd12ba9b21679c3590d7" kindref="member">vel_v_DFBC</ref>,
+    &apos;<ref refid="d0/de5/namespacedtmb_1a671059f4df2a4baaceaba5ad1698095e" kindref="member">vel_w_DFBC</ref>&apos;: <ref refid="d0/de5/namespacedtmb_1a671059f4df2a4baaceaba5ad1698095e" kindref="member">vel_w_DFBC</ref>,
+    &apos;vof_DFBC&apos;: lambda x, flag: None}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="206" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="206" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a00bcb7968eadc7dc4cced4e185a00145" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dtmb.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem(ns_model=0,
+                                             ls_model=0,
+                                             <ref refid="d0/de5/namespacedtmb_1a1182bc1cda3aa17d281ff1a089fb7d85" kindref="member">nd</ref>=3,
+                                             cfl=opts.cfl,
+                                             <ref refid="d0/de5/namespacedtmb_1aa0b29c4e1db49f9f825abb7458e25b01" kindref="member">outputStepping</ref>=<ref refid="d0/de5/namespacedtmb_1aa0b29c4e1db49f9f825abb7458e25b01" kindref="member">outputStepping</ref>,
+                                             <ref refid="d0/de5/namespacedtmb_1a31ab0d3d9d5c23bc2c688ca06bfcdb67" kindref="member">he</ref>=<ref refid="d0/de5/namespacedtmb_1a31ab0d3d9d5c23bc2c688ca06bfcdb67" kindref="member">he</ref>,
+                                             <ref refid="d0/de5/namespacedtmb_1acb26663d8f41f1047884d0295b8d92e8" kindref="member">domain</ref>=<ref refid="d0/de5/namespacedtmb_1acb26663d8f41f1047884d0295b8d92e8" kindref="member">domain</ref>,
+                                             <ref refid="d0/de5/namespacedtmb_1a8277ccbd4f7ac495fe902354973b7c49" kindref="member">initialConditions</ref>=<ref refid="d0/de5/namespacedtmb_1a8277ccbd4f7ac495fe902354973b7c49" kindref="member">initialConditions</ref>,
+                                             <ref refid="d0/de5/namespacedtmb_1acde51e74f09d02d54cdaa7e09b446230" kindref="member">boundaryConditions</ref>=<ref refid="d0/de5/namespacedtmb_1acde51e74f09d02d54cdaa7e09b446230" kindref="member">boundaryConditions</ref>,
+                                             useSuperlu=False)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="226" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d0/de5/namespacedtmb_1a4adaf4cf19737dc775225bd575860c7e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dtmb.gravity</definition>
+        <argsstring></argsstring>
+        <name>gravity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="236" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="236" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d0/de5/namespacedtmb_1a26f0a6dfd15de77447a86bd127c3f1e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def dtmb.signedDistance</definition>
+        <argsstring>(x)</argsstring>
+        <name>signedDistance</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="65" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="65" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/namespacedtmb_1aa29a4f8e877ddb3dae78aabe1b24fb19" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def dtmb.velRamp</definition>
+        <argsstring>(t)</argsstring>
+        <name>velRamp</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="122" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="122" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/namespacedtmb_1a5a9e46b2c1d96cf147f317632a22397e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def dtmb.vel_u_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_u_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="126" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="126" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/namespacedtmb_1af0ed8ac5a8665b6584e6af1906c1a9c3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def dtmb.vel_v_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_v_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="134" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="134" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/namespacedtmb_1a5292fcc184eba8fd7a35d977057bd2fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def dtmb.vel_w_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_w_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="142" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="142" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/namespacedtmb_1a04ae9c4042c6a25907ec57171e6638c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def dtmb.pressure_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="150" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="150" bodyend="153"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/namespacedtmb_1a7490b06c21e9ae17249c4cd1ca6fa1ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def dtmb.vof_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vof_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="154" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="154" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/namespacedtmb_1ad4b8e3547f72fe676d70d5ef508e71ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def dtmb.phi_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>phi_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="158" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="158" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/namespacedtmb_1a154eaa7c778e2f463226df440093ce8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def dtmb.vel_u_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_u_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="164" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="164" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/namespacedtmb_1abfd75f1b840908d80f6107d45bc6afd6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def dtmb.vel_v_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_v_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="168" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="168" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/namespacedtmb_1a8c13a565e60bfe47e192eae950ad53b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def dtmb.vel_w_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_w_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="172" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="172" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/namespacedtmb_1a9ac9259bfd3db5630cfad94b8fe7ca27" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def dtmb.pressure_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="176" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="176" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/namespacedtmb_1a5c4e73336f696973105ebf832bf493ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def dtmb.vof_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vof_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="182" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="182" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/namespacedtmb_1af86aabb322dd130646dd34dddf08e8e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def dtmb.vel_u_DFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_u_DFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="189" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="189" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/namespacedtmb_1a44bc1e78468ffd12ba9b21679c3590d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def dtmb.vel_v_DFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_v_DFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="193" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="193" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="d0/de5/namespacedtmb_1a671059f4df2a4baaceaba5ad1698095e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def dtmb.vel_w_DFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_w_DFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/dtmb.py" line="197" column="1" bodyfile="tests/proteus_tutorial/3d/dtmb.py" bodystart="197" bodyend="200"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Multiphase Flow Test
+</verbatim> </para>
+    </detaileddescription>
+    <location file="tests/proteus_tutorial/3d/dtmb.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,451 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d9/dc2/namespacesector__gate" kind="namespace" language="Python">
+    <compoundname>sector_gate</compoundname>
+    <innerclass refid="d0/dd5/classsector__gate_1_1PHI__IC" prot="public">sector_gate::PHI_IC</innerclass>
+    <innerclass refid="d4/dac/classsector__gate_1_1VF__IC" prot="public">sector_gate::VF_IC</innerclass>
+    <innerclass refid="df/da9/classsector__gate_1_1zero" prot="public">sector_gate::zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1af1495e30526b65f19f651bffe263c917" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sector_gate.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  Context.Options([
+    (&apos;ns_model&apos;,1,&quot;ns_model={0,1} for {rans2p,rans3p}&quot;),
+    (&quot;final_time&quot;,7.5,&quot;Final time for simulation&quot;),
+    (&quot;dt_output&quot;,0.1,&quot;Time interval to output solution&quot;),
+    (&quot;gauges&quot;, True, &quot;Collect data for validation&quot;),
+    (&quot;cfl&quot;,0.2,&quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="d9/dc2/namespacesector__gate_1ae014eeaff0a25a44d35be2fd0a137bf7" kindref="member">he</ref>&quot;,0.5,&quot;Max mesh element diameter&quot;),
+    (&quot;ARTIFICIAL_VISCOSITY&quot;,3,&quot;artificial viscosity&quot;)
+    ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="20" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1a8d1d5f1eafd08ec281932f489dab743d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int sector_gate.waterLevel</definition>
+        <argsstring></argsstring>
+        <name>waterLevel</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="30" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1a3c631e88e62d12d08ca1d5dd0789ff3f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float sector_gate.pro_wl</definition>
+        <argsstring></argsstring>
+        <name>pro_wl</name>
+        <initializer>= 0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="31" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1ac0d1b5866556c20d160983a5f6551663" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sector_gate.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>= np.array([0.,0.,-9.81])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="32" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1ae014eeaff0a25a44d35be2fd0a137bf7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sector_gate.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>= opts.he</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="33" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1af0cc0d3f62042511e29f454433539fe6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sector_gate.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.PiecewiseLinearComplexDomain()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="42" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1aeb0f033ac86865c805f09b1a61421e1b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sector_gate.domain2</definition>
+        <argsstring></argsstring>
+        <name>domain2</name>
+        <initializer>=  Domain.PiecewiseLinearComplexDomain()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="43" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1a80ff7b22c495271bf1bbfc89ae58dc55" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sector_gate.SG</definition>
+        <argsstring></argsstring>
+        <name>SG</name>
+        <initializer>= st.ShapeSTL(<ref refid="d9/dc2/namespacesector__gate_1aeb0f033ac86865c805f09b1a61421e1b" kindref="member">domain2</ref>,&apos;SG_full_2.stl&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="45" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1a433a16827f0207ed225c5b48d6c7d26d" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list sector_gate.boundaries</definition>
+        <argsstring></argsstring>
+        <name>boundaries</name>
+        <initializer>= [&apos;gate&apos;,&apos;left&apos;,&apos;right&apos;,&apos;bottom&apos;,&apos;top&apos;,&apos;front&apos;,&apos;back&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="48" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1a05c6859c4706f417df34eafa3f95c43c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sector_gate.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>= dict([(key,i+1) for (i,key) in enumerate(<ref refid="d9/dc2/namespacesector__gate_1a433a16827f0207ed225c5b48d6c7d26d" kindref="member">boundaries</ref>)])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="49" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1aac9e09b7de6938d2416ee619df0405d8" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary sector_gate.boundaryOrientations</definition>
+        <argsstring></argsstring>
+        <name>boundaryOrientations</name>
+        <initializer>=  {&apos;gate&apos;: np.array([-1., 0.,0.]),
+                        &apos;left&apos;: np.array([-1., 0.,0.]),
+                        &apos;right&apos;: np.array([+1., 0.,0.]),
+                        &apos;bottom&apos;: np.array([0., 0.,-1.]),
+                        &apos;top&apos;: np.array([0., 0.,+1.]),
+                        &apos;front&apos;: np.array([0.,+1.,0.]),
+                        &apos;back&apos;: np.array([0.,-1., 0.]),
+                           }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="51" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1a1ab91bf2efe1e26a3c60d978ccf8d33c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sector_gate.facetFlags</definition>
+        <argsstring></argsstring>
+        <name>facetFlags</name>
+        <initializer>= SG.facetFlags.tolist()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="61" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1aa1be3058720f4d1bf8c55cb4cbf4fc74" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sector_gate.vertexFlags</definition>
+        <argsstring></argsstring>
+        <name>vertexFlags</name>
+        <initializer>= SG.vertexFlags.tolist()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="62" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1a188e41a24127b380588ecfb4794ce482" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sector_gate.facets</definition>
+        <argsstring></argsstring>
+        <name>facets</name>
+        <initializer>= SG.facets.tolist()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="63" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1af76e53c30d5700e37159664c69e6f8e1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sector_gate.vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <initializer>= SG.vertices.tolist()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="64" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1a817ca744d7b320e68558c1d7beb37a61" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list sector_gate.regions</definition>
+        <argsstring></argsstring>
+        <name>regions</name>
+        <initializer>= [[0.5,0.5,0.5]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="108" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1a5df6a29b140181527b14af3a0c3cee1f" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list sector_gate.regionFlags</definition>
+        <argsstring></argsstring>
+        <name>regionFlags</name>
+        <initializer>= [1]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="109" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1ad88cd131140d98860ad4b5d263503468" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list sector_gate.holes</definition>
+        <argsstring></argsstring>
+        <name>holes</name>
+        <initializer>= [[18.0,0.0,1.5]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="110" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1a2bb63ff3b471c73c8f1ed6c1beabc419" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list sector_gate.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <initializer>= [<ref refid="db/dcc/jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(SG.vertices[:,0]),<ref refid="db/dcc/jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(SG.vertices[:,1]),<ref refid="db/dcc/jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(SG.vertices[:,2])]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="111" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1a559b384df28caef810af32bec33255a1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sector_gate.tank</definition>
+        <argsstring></argsstring>
+        <name>tank</name>
+        <initializer>=  st.CustomShape(<ref refid="d9/dc2/namespacesector__gate_1af0cc0d3f62042511e29f454433539fe6" kindref="member">domain</ref>,
+                      <ref refid="d9/dc2/namespacesector__gate_1af76e53c30d5700e37159664c69e6f8e1" kindref="member">vertices</ref>=<ref refid="d9/dc2/namespacesector__gate_1af76e53c30d5700e37159664c69e6f8e1" kindref="member">vertices</ref>,
+                      <ref refid="d9/dc2/namespacesector__gate_1aa1be3058720f4d1bf8c55cb4cbf4fc74" kindref="member">vertexFlags</ref>=<ref refid="d9/dc2/namespacesector__gate_1aa1be3058720f4d1bf8c55cb4cbf4fc74" kindref="member">vertexFlags</ref>,
+                      <ref refid="d9/dc2/namespacesector__gate_1a188e41a24127b380588ecfb4794ce482" kindref="member">facets</ref>=<ref refid="d9/dc2/namespacesector__gate_1a188e41a24127b380588ecfb4794ce482" kindref="member">facets</ref>,
+                      <ref refid="d9/dc2/namespacesector__gate_1a1ab91bf2efe1e26a3c60d978ccf8d33c" kindref="member">facetFlags</ref>=<ref refid="d9/dc2/namespacesector__gate_1a1ab91bf2efe1e26a3c60d978ccf8d33c" kindref="member">facetFlags</ref>,
+                      <ref refid="d9/dc2/namespacesector__gate_1a817ca744d7b320e68558c1d7beb37a61" kindref="member">regions</ref> = <ref refid="d9/dc2/namespacesector__gate_1a817ca744d7b320e68558c1d7beb37a61" kindref="member">regions</ref>,
+                      <ref refid="d9/dc2/namespacesector__gate_1a5df6a29b140181527b14af3a0c3cee1f" kindref="member">regionFlags</ref> = <ref refid="d9/dc2/namespacesector__gate_1a5df6a29b140181527b14af3a0c3cee1f" kindref="member">regionFlags</ref>,
+                      <ref refid="d9/dc2/namespacesector__gate_1ad88cd131140d98860ad4b5d263503468" kindref="member">holes</ref>=<ref refid="d9/dc2/namespacesector__gate_1ad88cd131140d98860ad4b5d263503468" kindref="member">holes</ref>,
+                      <ref refid="d9/dc2/namespacesector__gate_1a05c6859c4706f417df34eafa3f95c43c" kindref="member">boundaryTags</ref>=<ref refid="d9/dc2/namespacesector__gate_1a05c6859c4706f417df34eafa3f95c43c" kindref="member">boundaryTags</ref>,
+                      <ref refid="d9/dc2/namespacesector__gate_1aac9e09b7de6938d2416ee619df0405d8" kindref="member">boundaryOrientations</ref>=<ref refid="d9/dc2/namespacesector__gate_1aac9e09b7de6938d2416ee619df0405d8" kindref="member">boundaryOrientations</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="112" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1a7365714024acee7e7e3289224bfc8b66" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sector_gate.wave</definition>
+        <argsstring></argsstring>
+        <name>wave</name>
+        <initializer>= wt.MonochromaticWaves(period=2.0,waveHeight=1.0,mwl=<ref refid="d9/dc2/namespacesector__gate_1a8d1d5f1eafd08ec281932f489dab743d" kindref="member">waterLevel</ref>,depth=<ref refid="d9/dc2/namespacesector__gate_1a8d1d5f1eafd08ec281932f489dab743d" kindref="member">waterLevel</ref>,<ref refid="d9/dc2/namespacesector__gate_1ac0d1b5866556c20d160983a5f6551663" kindref="member">g</ref>=<ref refid="d9/dc2/namespacesector__gate_1ac0d1b5866556c20d160983a5f6551663" kindref="member">g</ref>,waveDir=np.array([1.0,0.,0.]))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="131" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1a13fbb45a76ad324e58d89d01c6c9ed77" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sector_gate.smoothing</definition>
+        <argsstring></argsstring>
+        <name>smoothing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="132" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1ac52b92549a0133203c93b92eeacc0027" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sector_gate.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="139" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1ad081d22b3a2f17badbfe1fcc8a9decc8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sector_gate.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  TpFlow.OutputStepping(opts.final_time,dt_output=opts.dt_output)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="174" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1a02681a7aff6a39375112aec0a6ac35d2" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary sector_gate.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;pressure&apos;: <ref refid="df/da9/classsector__gate_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;pressure_increment&apos;: <ref refid="df/da9/classsector__gate_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vel_u&apos;: <ref refid="df/da9/classsector__gate_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vel_v&apos;: <ref refid="df/da9/classsector__gate_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vel_w&apos;: <ref refid="df/da9/classsector__gate_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vof&apos;: <ref refid="d4/dac/classsector__gate_1_1VF__IC" kindref="compound">VF_IC</ref>(),
+                     &apos;ncls&apos;: <ref refid="d0/dd5/classsector__gate_1_1PHI__IC" kindref="compound">PHI_IC</ref>(),
+                     &apos;rdls&apos;: <ref refid="d0/dd5/classsector__gate_1_1PHI__IC" kindref="compound">PHI_IC</ref>(),}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="175" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1ae0d66fa4c667e320043595a6f22f4cf2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sector_gate.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem(ns_model=0,
+                                             ls_model=0,
+                                             nd=3,
+                                             cfl=opts.cfl,
+                                             <ref refid="d9/dc2/namespacesector__gate_1ad081d22b3a2f17badbfe1fcc8a9decc8" kindref="member">outputStepping</ref>=<ref refid="d9/dc2/namespacesector__gate_1ad081d22b3a2f17badbfe1fcc8a9decc8" kindref="member">outputStepping</ref>,
+                                             <ref refid="d9/dc2/namespacesector__gate_1ae014eeaff0a25a44d35be2fd0a137bf7" kindref="member">he</ref>=<ref refid="d9/dc2/namespacesector__gate_1ae014eeaff0a25a44d35be2fd0a137bf7" kindref="member">he</ref>,
+                                             <ref refid="d9/dc2/namespacesector__gate_1af0cc0d3f62042511e29f454433539fe6" kindref="member">domain</ref>=<ref refid="d9/dc2/namespacesector__gate_1af0cc0d3f62042511e29f454433539fe6" kindref="member">domain</ref>,
+                                             <ref refid="d9/dc2/namespacesector__gate_1a02681a7aff6a39375112aec0a6ac35d2" kindref="member">initialConditions</ref>=<ref refid="d9/dc2/namespacesector__gate_1a02681a7aff6a39375112aec0a6ac35d2" kindref="member">initialConditions</ref>,
+                                             useSuperlu=False)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="184" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/dc2/namespacesector__gate_1a66cc2d08b2857dfbd427deef2642b7bd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>sector_gate.gravity</definition>
+        <argsstring></argsstring>
+        <name>gravity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="193" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d9/dc2/namespacesector__gate_1ac5ac3d1a73964252d8326eb6c5003117" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def sector_gate.signedDistance</definition>
+        <argsstring>(x)</argsstring>
+        <name>signedDistance</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="151" column="1" bodyfile="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" bodystart="151" bodyend="162"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Multiphase Flow Test
+</verbatim> </para>
+    </detaileddescription>
+    <location file="tests/proteus_tutorial/3d/sector_gate/sector_gate.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1993 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib" kind="namespace" language="Python">
+    <compoundname>proteus::tests::periodic::ductib</compoundname>
+    <innerclass refid="d4/d98/classproteus_1_1tests_1_1periodic_1_1ductib_1_1pRot" prot="public">proteus::tests::periodic::ductib::pRot</innerclass>
+    <innerclass refid="d9/d87/classproteus_1_1tests_1_1periodic_1_1ductib_1_1uRot" prot="public">proteus::tests::periodic::ductib::uRot</innerclass>
+    <innerclass refid="d2/dc5/classproteus_1_1tests_1_1periodic_1_1ductib_1_1vRot" prot="public">proteus::tests::periodic::ductib::vRot</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a9838021bcf7bb1a169bf59f3dffeb9f7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  <ref refid="d0/d93/namespaceproteus_1_1Context_1a461242d050aceb1e84d9426074c67004" kindref="member">Context.Options</ref>([
+    (&quot;nd&quot;, 2, &quot;Number of space dimensions&quot;),
+    (&quot;grid&quot;, True, &quot;Use a regular grid&quot;),
+    (&quot;triangles&quot;, True, &quot;Use triangular or tetrahedral elements&quot;),
+    (&quot;spaceOrder&quot;, 1, &quot;Use (bi-)linear or (bi-)quadratic spaces&quot;),
+    (&quot;useTaylorHood&quot;, False, &quot;Use Taylor-Hood element&quot;),
+    (&quot;<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a2f8e2ece3478a9a6cb23bffd15793261" kindref="member">timeOrder</ref>&quot;, 1, &quot;Use bdf1 or bdf2&quot;),
+    (&quot;periodic&quot;, False, &quot;Use periodic boundary conditions&quot;),
+    (&quot;weak&quot;, True, &quot;Use weak boundary conditions&quot;),
+    (&quot;coord&quot;, False, &quot;Use coordinates for setting boundary conditions&quot;),
+    (&quot;Re&quot;, 1.0, &quot;Reynolds <ref refid="de/d5b/Headers_8h_1a75dde92eec1297f87deda0fe215773cf" kindref="member">number</ref> for non-periodic problem&quot;),
+    (&quot;<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a205383ea39ebc479840363fd82a4723d" kindref="member">nnx</ref>&quot;, 21, &quot;Number of grid nodes in x-direction&quot;),
+    (&quot;pc_type&quot;, &apos;LU&apos;, &quot;Specify preconditioner type&quot;),
+    (&quot;A_block_AMG&quot;, False, &quot;Specify whether a block-AMG should be used to solve A-block&quot;)])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="19" column="1" bodyfile="tests/periodic/ductib.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a021b62e0453894d57bcfcea28609640f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.p</definition>
+        <argsstring></argsstring>
+        <name>p</name>
+        <initializer>=  <ref refid="dc/dfd/classproteus_1_1defaults_1_1Physics__base" kindref="compound">Physics_base</ref>(<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a78779823f359abaf963dfa534a25fdfc" kindref="member">nd</ref> = opts.nd,
+                 <ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a82ee02675a8312669801845d04e1432a" kindref="member">name</ref>=&quot;ductib_physics&quot;)</initializer>
+        <briefdescription>
+<para>Physics#. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="37" column="1" bodyfile="tests/periodic/ductib.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1adb61bab09c466b39401bb9fe5e06c677" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::periodic::ductib.extra</definition>
+        <argsstring></argsstring>
+        <name>extra</name>
+        <initializer>= 0.25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="40" column="1" bodyfile="tests/periodic/ductib.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ad537e2ef5e954ee4c57dea1062948485" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="41" column="1" bodyfile="tests/periodic/ductib.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a0ab4dd344c205fde3cf1f3e7ff817769" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.x0</definition>
+        <argsstring></argsstring>
+        <name>x0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="42" column="1" bodyfile="tests/periodic/ductib.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a60d65abd7121a2832a6c0f14b6c2bbcd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="46" column="1" bodyfile="tests/periodic/ductib.py" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ae69e32fe34f746f19020bc2e219510f4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>=  p.domain.boundaryTags</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="47" column="1" bodyfile="tests/periodic/ductib.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1abbcff52c26761712226a15106e80fef6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::periodic::ductib.nu</definition>
+        <argsstring></argsstring>
+        <name>nu</name>
+        <initializer>=  1.004e-6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="56" column="1" bodyfile="tests/periodic/ductib.py" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a3d7a1d17169511ea61172deeb554fa8b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>proteus::tests::periodic::ductib.rho</definition>
+        <argsstring></argsstring>
+        <name>rho</name>
+        <initializer>=  998.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="57" column="1" bodyfile="tests/periodic/ductib.py" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a8ac3eb780b94d9be82fee5b58fb0c6a2" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::periodic::ductib::h</definition>
+        <argsstring></argsstring>
+        <name>h</name>
+        <initializer>=  <ref refid="de/d5b/Headers_8h_1a499d78bdc2c754c7a4cf8d39ed245e9f" kindref="member">p.L</ref>[2] - 2*<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1adb61bab09c466b39401bb9fe5e06c677" kindref="member">extra</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="60" column="1" bodyfile="tests/periodic/ductib.py" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a9df00d4fd1172d8432912882ffb34b65" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::periodic::ductib::umax</definition>
+        <argsstring></argsstring>
+        <name>umax</name>
+        <initializer>=  opts.Re*<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1abbcff52c26761712226a15106e80fef6" kindref="member">nu</ref>/<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a8ac3eb780b94d9be82fee5b58fb0c6a2" kindref="member">h</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="61" column="1" bodyfile="tests/periodic/ductib.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a22e8f663066aa0e7320b84abee4ad090" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="65" column="1" bodyfile="tests/periodic/ductib.py" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a2fabf9b66578166560859ef37652b17c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::periodic::ductib.mu</definition>
+        <argsstring></argsstring>
+        <name>mu</name>
+        <initializer>=  <ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1abbcff52c26761712226a15106e80fef6" kindref="member">nu</ref>*<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a3d7a1d17169511ea61172deeb554fa8b" kindref="member">rho</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="66" column="1" bodyfile="tests/periodic/ductib.py" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1abf8205fe936a37bc5fdc02c44f051ed6" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::periodic::ductib.G</definition>
+        <argsstring></argsstring>
+        <name>G</name>
+        <initializer>=  (<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a9df00d4fd1172d8432912882ffb34b65" kindref="member">umax</ref>*8.0*<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a2fabf9b66578166560859ef37652b17c" kindref="member">mu</ref>)/(<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a8ac3eb780b94d9be82fee5b58fb0c6a2" kindref="member">h</ref>**2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="67" column="1" bodyfile="tests/periodic/ductib.py" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a88cfbf998255b93f619517d043dd72ad" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::periodic::ductib::gravity</definition>
+        <argsstring></argsstring>
+        <name>gravity</name>
+        <initializer>=  [<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1abf8205fe936a37bc5fdc02c44f051ed6" kindref="member">G</ref>/<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a3d7a1d17169511ea61172deeb554fa8b" kindref="member">rho</ref>, 0., 0.]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="70" column="1" bodyfile="tests/periodic/ductib.py" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1aee54c2b6d10faed7d688b64c487c7e32" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.LevelModelType</definition>
+        <argsstring></argsstring>
+        <name>LevelModelType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="74" column="1" bodyfile="tests/periodic/ductib.py" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ab799eee5cf62bdefd8f26149fc3e733a" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string proteus::tests::periodic::ductib::nullSpace</definition>
+        <argsstring></argsstring>
+        <name>nullSpace</name>
+        <initializer>= &quot;NavierStokesConstantPressure&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="77" column="1" bodyfile="tests/periodic/ductib.py" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1afd42fae74c11c5d73480b0fabc49c5aa" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::periodic::ductib.bTop</definition>
+        <argsstring></argsstring>
+        <name>bTop</name>
+        <initializer>=  <ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a8ac3eb780b94d9be82fee5b58fb0c6a2" kindref="member">h</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="81" column="1" bodyfile="tests/periodic/ductib.py" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a12cf629dc612d6148054f3b30f215e57" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::periodic::ductib.bBottom</definition>
+        <argsstring></argsstring>
+        <name>bBottom</name>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="82" column="1" bodyfile="tests/periodic/ductib.py" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1af01d87547de546911b671e1c3cd0adda" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.periodicDirichletConditions</definition>
+        <argsstring></argsstring>
+        <name>periodicDirichletConditions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="120" column="1" bodyfile="tests/periodic/ductib.py" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a75bfeb254a5eb1fb6ba8bfe854055856" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.pSol2</definition>
+        <argsstring></argsstring>
+        <name>pSol2</name>
+        <initializer>=  <ref refid="dd/d47/classproteus_1_1AnalyticalSolutions_1_1PlanePoiseuilleFlow__p" kindref="compound">AnalyticalSolutions.PlanePoiseuilleFlow_p</ref>(plateSeperation=<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a8ac3eb780b94d9be82fee5b58fb0c6a2" kindref="member">h</ref>,
+                                                 <ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a2fabf9b66578166560859ef37652b17c" kindref="member">mu</ref> = <ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a2fabf9b66578166560859ef37652b17c" kindref="member">mu</ref>,
+                                                 grad_p = -<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1abf8205fe936a37bc5fdc02c44f051ed6" kindref="member">G</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="125" column="1" bodyfile="tests/periodic/ductib.py" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1adac6aca6c5e6aa231bceeec2bab50920" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.uSol2</definition>
+        <argsstring></argsstring>
+        <name>uSol2</name>
+        <initializer>=  <ref refid="df/d92/classproteus_1_1AnalyticalSolutions_1_1PlanePoiseuilleFlow__u" kindref="compound">AnalyticalSolutions.PlanePoiseuilleFlow_u</ref>(plateSeperation=<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a8ac3eb780b94d9be82fee5b58fb0c6a2" kindref="member">h</ref>,
+                                                 <ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a2fabf9b66578166560859ef37652b17c" kindref="member">mu</ref> = <ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a2fabf9b66578166560859ef37652b17c" kindref="member">mu</ref>,
+                                                 grad_p = -<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1abf8205fe936a37bc5fdc02c44f051ed6" kindref="member">G</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="128" column="1" bodyfile="tests/periodic/ductib.py" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a6db1c25552628df248499e2a6e94ca61" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.vSol2</definition>
+        <argsstring></argsstring>
+        <name>vSol2</name>
+        <initializer>=  <ref refid="d9/df6/classproteus_1_1AnalyticalSolutions_1_1PlanePoiseuilleFlow__v" kindref="compound">AnalyticalSolutions.PlanePoiseuilleFlow_v</ref>(plateSeperation=<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a8ac3eb780b94d9be82fee5b58fb0c6a2" kindref="member">h</ref>,
+                                                 <ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a2fabf9b66578166560859ef37652b17c" kindref="member">mu</ref> = <ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a2fabf9b66578166560859ef37652b17c" kindref="member">mu</ref>,
+                                                 grad_p = -<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1abf8205fe936a37bc5fdc02c44f051ed6" kindref="member">G</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="131" column="1" bodyfile="tests/periodic/ductib.py" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a4a9481bd4e6ef8db42c51ae21885bf88" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.pSol</definition>
+        <argsstring></argsstring>
+        <name>pSol</name>
+        <initializer>=  <ref refid="d4/d98/classproteus_1_1tests_1_1periodic_1_1ductib_1_1pRot" kindref="compound">pRot</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="171" column="1" bodyfile="tests/periodic/ductib.py" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a7d28739f9b6c72e92f3158133d9eb463" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.uSol</definition>
+        <argsstring></argsstring>
+        <name>uSol</name>
+        <initializer>=  <ref refid="d9/d87/classproteus_1_1tests_1_1periodic_1_1ductib_1_1uRot" kindref="compound">uRot</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="172" column="1" bodyfile="tests/periodic/ductib.py" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a9a3efaccdcaf1693960e32a051fc4760" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.vSol</definition>
+        <argsstring></argsstring>
+        <name>vSol</name>
+        <initializer>=  <ref refid="d2/dc5/classproteus_1_1tests_1_1periodic_1_1ductib_1_1vRot" kindref="compound">vRot</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="173" column="1" bodyfile="tests/periodic/ductib.py" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1aecd24fbca11e57e51944a463d3f18a8c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.analyticalSolution</definition>
+        <argsstring></argsstring>
+        <name>analyticalSolution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="176" column="1" bodyfile="tests/periodic/ductib.py" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a72bb7cc7fc9db85659fa67d8a24242e3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  p.analyticalSolution</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="180" column="1" bodyfile="tests/periodic/ductib.py" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1adbdf16bb98706d43f652999646c30dfb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.coefficients</definition>
+        <argsstring></argsstring>
+        <name>coefficients</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="182" column="1" bodyfile="tests/periodic/ductib.py" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a0f8b8a88df911321427a3131c58321cd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.epsFact</definition>
+        <argsstring></argsstring>
+        <name>epsFact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="182" column="1" bodyfile="tests/periodic/ductib.py" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a39965262a3989b20973778279b5f17c3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.sigma</definition>
+        <argsstring></argsstring>
+        <name>sigma</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="183" column="1" bodyfile="tests/periodic/ductib.py" bodystart="183" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1afb0099423ddf5370a809199d4bc90e07" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.rho_0</definition>
+        <argsstring></argsstring>
+        <name>rho_0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="184" column="1" bodyfile="tests/periodic/ductib.py" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a340a7ef7b1f81767bb3ac15f7b2e06d0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.nu_0</definition>
+        <argsstring></argsstring>
+        <name>nu_0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="184" column="1" bodyfile="tests/periodic/ductib.py" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a802abeaa425a0051cc46c3ac28d4716e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.rho_1</definition>
+        <argsstring></argsstring>
+        <name>rho_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="185" column="1" bodyfile="tests/periodic/ductib.py" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1abb89b8bfc5b0511daedea775b4592605" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.nu_1</definition>
+        <argsstring></argsstring>
+        <name>nu_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="185" column="1" bodyfile="tests/periodic/ductib.py" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a88926ff8bd44e822ff4ea2610f506362" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="186" column="1" bodyfile="tests/periodic/ductib.py" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a78779823f359abaf963dfa534a25fdfc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.nd</definition>
+        <argsstring></argsstring>
+        <name>nd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="187" column="1" bodyfile="tests/periodic/ductib.py" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a8fe306e1a72c08b42e7998cac0d71f57" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.ME_model</definition>
+        <argsstring></argsstring>
+        <name>ME_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="188" column="1" bodyfile="tests/periodic/ductib.py" bodystart="188" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1aba68af151beeee74943b9eb50b8f9012" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.VF_model</definition>
+        <argsstring></argsstring>
+        <name>VF_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="189" column="1" bodyfile="tests/periodic/ductib.py" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a1a3f4cdf8d1cfe0bc0e3d8f9040bd100" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.LS_model</definition>
+        <argsstring></argsstring>
+        <name>LS_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="190" column="1" bodyfile="tests/periodic/ductib.py" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a78a99d093ed12455e07386110e303606" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.Closure_0_model</definition>
+        <argsstring></argsstring>
+        <name>Closure_0_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="191" column="1" bodyfile="tests/periodic/ductib.py" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a0fbe7e38c33295d8c0f8648318cd44c4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.Closure_1_model</definition>
+        <argsstring></argsstring>
+        <name>Closure_1_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="192" column="1" bodyfile="tests/periodic/ductib.py" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1affdafc091e061cec59de8289f7c86cc1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.epsFact_density</definition>
+        <argsstring></argsstring>
+        <name>epsFact_density</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="193" column="1" bodyfile="tests/periodic/ductib.py" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a4c98b1ad8b564b6a5721c9fc8fe5cc8c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.stokes</definition>
+        <argsstring></argsstring>
+        <name>stokes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="194" column="1" bodyfile="tests/periodic/ductib.py" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a571a54611a3414dc5222fa870723e602" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.useVF</definition>
+        <argsstring></argsstring>
+        <name>useVF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="195" column="1" bodyfile="tests/periodic/ductib.py" bodystart="195" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a4bbd24925ee61e854d8a40a4d83a66e9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.useRBLES</definition>
+        <argsstring></argsstring>
+        <name>useRBLES</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="196" column="1" bodyfile="tests/periodic/ductib.py" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a3810f72f0e14f77b8146d12fbe905648" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.useMetrics</definition>
+        <argsstring></argsstring>
+        <name>useMetrics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="197" column="1" bodyfile="tests/periodic/ductib.py" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1aef40cff08352efeb579908657d68381c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.eb_adjoint_sigma</definition>
+        <argsstring></argsstring>
+        <name>eb_adjoint_sigma</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="198" column="1" bodyfile="tests/periodic/ductib.py" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a1ed6210aa0b10776a2b9dc91e825d59a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.eb_penalty_constant</definition>
+        <argsstring></argsstring>
+        <name>eb_penalty_constant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="199" column="1" bodyfile="tests/periodic/ductib.py" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a1c303721f037e039ef2c47e9454518b2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.forceStrongDirichlet</definition>
+        <argsstring></argsstring>
+        <name>forceStrongDirichlet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="200" column="1" bodyfile="tests/periodic/ductib.py" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ad2ad102f5004b6be532a2dcf89297337" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.turbulenceClosureModel</definition>
+        <argsstring></argsstring>
+        <name>turbulenceClosureModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="201" column="1" bodyfile="tests/periodic/ductib.py" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a8ca9cb7fc82775da24cd0db58573cb7c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.NONCONSERVATIVE_FORM</definition>
+        <argsstring></argsstring>
+        <name>NONCONSERVATIVE_FORM</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="202" column="1" bodyfile="tests/periodic/ductib.py" bodystart="202" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1abbdf61ba2a81d4ba4a10e65bad2e1403" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.MOMENTUM_SGE</definition>
+        <argsstring></argsstring>
+        <name>MOMENTUM_SGE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="203" column="1" bodyfile="tests/periodic/ductib.py" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a1654409be73d9d6f8a864f759a1e39c9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.PRESSURE_SGE</definition>
+        <argsstring></argsstring>
+        <name>PRESSURE_SGE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="204" column="1" bodyfile="tests/periodic/ductib.py" bodystart="204" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1aeef4f893da64b3df9e07dc04ec6af623" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.VELOCITY_SGE</definition>
+        <argsstring></argsstring>
+        <name>VELOCITY_SGE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="205" column="1" bodyfile="tests/periodic/ductib.py" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a5f92d0ad7f8fe53325da667f02ebd22b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.particle_sdfList</definition>
+        <argsstring></argsstring>
+        <name>particle_sdfList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="207" column="1" bodyfile="tests/periodic/ductib.py" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a71914978efbb651cdcaf0249c31ed5f2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.particle_velocityList</definition>
+        <argsstring></argsstring>
+        <name>particle_velocityList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="208" column="1" bodyfile="tests/periodic/ductib.py" bodystart="208" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a1394d0cb875137b341249e09be0a17da" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.nParticles</definition>
+        <argsstring></argsstring>
+        <name>nParticles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="209" column="1" bodyfile="tests/periodic/ductib.py" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ac4139b98033708f1a428e4583487017f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.particle_epsFact</definition>
+        <argsstring></argsstring>
+        <name>particle_epsFact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="210" column="1" bodyfile="tests/periodic/ductib.py" bodystart="210" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a47c92d652d320522479c149ce2dbe82f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.particle_alpha</definition>
+        <argsstring></argsstring>
+        <name>particle_alpha</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="211" column="1" bodyfile="tests/periodic/ductib.py" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ad1cdbfec431383d4a04226b1162a9db1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.particle_beta</definition>
+        <argsstring></argsstring>
+        <name>particle_beta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="212" column="1" bodyfile="tests/periodic/ductib.py" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1aaa0bb319164e8bfb74890794c0199984" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.particle_penalty_constant</definition>
+        <argsstring></argsstring>
+        <name>particle_penalty_constant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="213" column="1" bodyfile="tests/periodic/ductib.py" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a28fc874a98aee2f5130c7ff760c06c59" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.use_ball_as_particle</definition>
+        <argsstring></argsstring>
+        <name>use_ball_as_particle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="214" column="1" bodyfile="tests/periodic/ductib.py" bodystart="214" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a27c875e2c0fb253f2724daa49fc256c7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.useExact</definition>
+        <argsstring></argsstring>
+        <name>useExact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="215" column="1" bodyfile="tests/periodic/ductib.py" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a30ba76a7828251b9f81a936a17962cd5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::periodic::ductib.nsave</definition>
+        <argsstring></argsstring>
+        <name>nsave</name>
+        <initializer>= 25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="218" column="1" bodyfile="tests/periodic/ductib.py" bodystart="218" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a923c49b27f45eae7dcde70e4daf50114" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::periodic::ductib.dt_init</definition>
+        <argsstring></argsstring>
+        <name>dt_init</name>
+        <initializer>=  1.0e-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="219" column="1" bodyfile="tests/periodic/ductib.py" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ab8527c4675de891522cfc9eb8701a399" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::periodic::ductib.DT</definition>
+        <argsstring></argsstring>
+        <name>DT</name>
+        <initializer>=  (<ref refid="de/d5b/Headers_8h_1a38fec5c94a02f67ba7bf45025dd3ac80" kindref="member">p.T</ref>-<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a923c49b27f45eae7dcde70e4daf50114" kindref="member">dt_init</ref>)/float(<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a30ba76a7828251b9f81a936a17962cd5" kindref="member">nsave</ref>-1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="220" column="1" bodyfile="tests/periodic/ductib.py" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a45f497dd9ce6a88c4597f0976510a270" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.tnList</definition>
+        <argsstring></argsstring>
+        <name>tnList</name>
+        <initializer>=  p.tnList</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="221" column="1" bodyfile="tests/periodic/ductib.py" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a0be549f9b2a0f985c3dd4a6b63c470ea" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.dirichletConditions</definition>
+        <argsstring></argsstring>
+        <name>dirichletConditions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="263" column="1" bodyfile="tests/periodic/ductib.py" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ad2f043735899abc1aa46dec71f400e93" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.advectiveFluxBoundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>advectiveFluxBoundaryConditions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="294" column="1" bodyfile="tests/periodic/ductib.py" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a3b8ee2509c44c1f5b4441b98e64647b5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.diffusiveFluxBoundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>diffusiveFluxBoundaryConditions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="307" column="1" bodyfile="tests/periodic/ductib.py" bodystart="307" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ae8a5a58f772d5da42cc32ce46675fc60" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.n</definition>
+        <argsstring></argsstring>
+        <name>n</name>
+        <initializer>=  <ref refid="d7/dc9/classproteus_1_1defaults_1_1Numerics__base" kindref="compound">Numerics_base</ref>()</initializer>
+        <briefdescription>
+<para>Numerics#. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="485" column="1" bodyfile="tests/periodic/ductib.py" bodystart="485" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a7d47bc6d1ef404820489137da964ad99" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.runCFL</definition>
+        <argsstring></argsstring>
+        <name>runCFL</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="488" column="1" bodyfile="tests/periodic/ductib.py" bodystart="488" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a4e51b403fb7040fd10ddd0b36377e6e2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.timeIntegration</definition>
+        <argsstring></argsstring>
+        <name>timeIntegration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="490" column="1" bodyfile="tests/periodic/ductib.py" bodystart="490" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a2f8e2ece3478a9a6cb23bffd15793261" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.timeOrder</definition>
+        <argsstring></argsstring>
+        <name>timeOrder</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="491" column="1" bodyfile="tests/periodic/ductib.py" bodystart="491" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1aa86278013a84a8dbe88b0a512c8afc12" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.stepController</definition>
+        <argsstring></argsstring>
+        <name>stepController</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="498" column="1" bodyfile="tests/periodic/ductib.py" bodystart="498" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a6b8a3594e7e10500a5d999c81a81f806" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.systemStepExact</definition>
+        <argsstring></argsstring>
+        <name>systemStepExact</name>
+        <initializer>= n.systemStepExact</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="499" column="1" bodyfile="tests/periodic/ductib.py" bodystart="499" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1aadd18c376e8d301f9b3441cd9e9ec138" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.femSpaces</definition>
+        <argsstring></argsstring>
+        <name>femSpaces</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="504" column="1" bodyfile="tests/periodic/ductib.py" bodystart="504" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ab856b35b93cfff19b324e4f78518da4b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.elementQuadrature</definition>
+        <argsstring></argsstring>
+        <name>elementQuadrature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="509" column="1" bodyfile="tests/periodic/ductib.py" bodystart="509" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a59a3db7bcbdee89f5728acc734c8846b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.elementBoundaryQuadrature</definition>
+        <argsstring></argsstring>
+        <name>elementBoundaryQuadrature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="510" column="1" bodyfile="tests/periodic/ductib.py" bodystart="510" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a47c62f915d871be4a2fd87e3693a0446" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.hex</definition>
+        <argsstring></argsstring>
+        <name>hex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="525" column="1" bodyfile="tests/periodic/ductib.py" bodystart="525" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a08e6d9d57018b517f8be508f36a73bb2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.quad</definition>
+        <argsstring></argsstring>
+        <name>quad</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="528" column="1" bodyfile="tests/periodic/ductib.py" bodystart="528" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a205383ea39ebc479840363fd82a4723d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="561" column="1" bodyfile="tests/periodic/ductib.py" bodystart="561" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a2a708622960c6bcdf49c4713494d9e95" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="562" column="1" bodyfile="tests/periodic/ductib.py" bodystart="562" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ae7ce45b12e42b4faf6e8fae0ca152130" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.nnz</definition>
+        <argsstring></argsstring>
+        <name>nnz</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="564" column="1" bodyfile="tests/periodic/ductib.py" bodystart="564" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1af76cf94d8bdf731ddaf64f516977406b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  <ref refid="de/d5b/Headers_8h_1a499d78bdc2c754c7a4cf8d39ed245e9f" kindref="member">p.L</ref>[0]/float(n.nnx-1)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="566" column="1" bodyfile="tests/periodic/ductib.py" bodystart="566" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ae990061742b0a9458084b529c2025ba8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="568" column="1" bodyfile="tests/periodic/ductib.py" bodystart="568" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a86628cf19cb8695c44f38bcb5676e670" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.triangleFlag</definition>
+        <argsstring></argsstring>
+        <name>triangleFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="570" column="1" bodyfile="tests/periodic/ductib.py" bodystart="570" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a5b2cdcfd52a2e2aa3f1f173d31c57ed3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.numericalFluxType</definition>
+        <argsstring></argsstring>
+        <name>numericalFluxType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="573" column="1" bodyfile="tests/periodic/ductib.py" bodystart="573" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1af09d54332375bb60a7d0e6db42b7c25f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.parallelPeriodic</definition>
+        <argsstring></argsstring>
+        <name>parallelPeriodic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="577" column="1" bodyfile="tests/periodic/ductib.py" bodystart="577" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a37a2148c20dd07037c87c08d17aa1843" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.subgridError</definition>
+        <argsstring></argsstring>
+        <name>subgridError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="579" column="1" bodyfile="tests/periodic/ductib.py" bodystart="579" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1afc2124b7e002456ba8120de767299d7c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.lag</definition>
+        <argsstring></argsstring>
+        <name>lag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="581" column="1" bodyfile="tests/periodic/ductib.py" bodystart="581" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a0991c98d86a108799c8262f5588caaa0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.hFactor</definition>
+        <argsstring></argsstring>
+        <name>hFactor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="582" column="1" bodyfile="tests/periodic/ductib.py" bodystart="582" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a7e2a0f40040238dfb52756322f74050f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>shockCapturing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="584" column="1" bodyfile="tests/periodic/ductib.py" bodystart="584" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a9822780757d249b41c36a57fbf66d013" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>shockCapturingFactor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="586" column="1" bodyfile="tests/periodic/ductib.py" bodystart="586" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1adb5414011ef67afd597e13da9da163d3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.multilevelNonlinearSolver</definition>
+        <argsstring></argsstring>
+        <name>multilevelNonlinearSolver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="589" column="1" bodyfile="tests/periodic/ductib.py" bodystart="589" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1aa926282cdef5d2fa585d079e44aa56be" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.levelNonlinearSolver</definition>
+        <argsstring></argsstring>
+        <name>levelNonlinearSolver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="591" column="1" bodyfile="tests/periodic/ductib.py" bodystart="591" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a80026185f3d40bc7f87206b456c07124" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.fullNewtonFlag</definition>
+        <argsstring></argsstring>
+        <name>fullNewtonFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="593" column="1" bodyfile="tests/periodic/ductib.py" bodystart="593" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a0cbdc9714397e37807c3811b9b4f9949" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.maxNonlinearIts</definition>
+        <argsstring></argsstring>
+        <name>maxNonlinearIts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="594" column="1" bodyfile="tests/periodic/ductib.py" bodystart="594" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ab58bb40dbdf7f6ba77a4632d22740f4e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.maxLineSearches</definition>
+        <argsstring></argsstring>
+        <name>maxLineSearches</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="595" column="1" bodyfile="tests/periodic/ductib.py" bodystart="595" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a8ec1c117c21f363d0523e8b85d66cc79" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.tolFac</definition>
+        <argsstring></argsstring>
+        <name>tolFac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="597" column="1" bodyfile="tests/periodic/ductib.py" bodystart="597" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a6e438d3696cbea6d8b2f3fc429442445" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>nl_atol_res</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="599" column="1" bodyfile="tests/periodic/ductib.py" bodystart="599" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1adc3d476fa2056881fc1f185df920c312" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.matrix</definition>
+        <argsstring></argsstring>
+        <name>matrix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="601" column="1" bodyfile="tests/periodic/ductib.py" bodystart="601" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1afd4c6b1bece1cb84fd01bd9d0c702c74" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.multilevelLinearSolver</definition>
+        <argsstring></argsstring>
+        <name>multilevelLinearSolver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="603" column="1" bodyfile="tests/periodic/ductib.py" bodystart="603" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ae57e5d1832f2bcd28bfcd2813df98386" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.levelLinearSolver</definition>
+        <argsstring></argsstring>
+        <name>levelLinearSolver</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="604" column="1" bodyfile="tests/periodic/ductib.py" bodystart="604" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a37ac49358a6bb9ddf8091cf1cc444ce7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.linearSmoother</definition>
+        <argsstring></argsstring>
+        <name>linearSmoother</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="609" column="1" bodyfile="tests/periodic/ductib.py" bodystart="609" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a2ef55b5f4bc8c334c15b4bfdb244326d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.linearSmootherOptions</definition>
+        <argsstring></argsstring>
+        <name>linearSmootherOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="613" column="1" bodyfile="tests/periodic/ductib.py" bodystart="613" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a7a79c2bdad945f24f4e4de4a47144838" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.linear_solver_options_prefix</definition>
+        <argsstring></argsstring>
+        <name>linear_solver_options_prefix</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="627" column="1" bodyfile="tests/periodic/ductib.py" bodystart="627" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a5e082d5e6735f9e6cd7f6c377fa07d32" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.linTolFac</definition>
+        <argsstring></argsstring>
+        <name>linTolFac</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="629" column="1" bodyfile="tests/periodic/ductib.py" bodystart="629" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a2daecc1abdbab3a11a5f5cb44b4b5f90" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.l_atol_res</definition>
+        <argsstring></argsstring>
+        <name>l_atol_res</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="630" column="1" bodyfile="tests/periodic/ductib.py" bodystart="630" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a883d63551ce502b749e0ded9689eca15" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.conservativeFlux</definition>
+        <argsstring></argsstring>
+        <name>conservativeFlux</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="632" column="1" bodyfile="tests/periodic/ductib.py" bodystart="632" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ad5a58320c0862b80657ae1d30db3ad66" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.parallelPartitioningType</definition>
+        <argsstring></argsstring>
+        <name>parallelPartitioningType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="635" column="1" bodyfile="tests/periodic/ductib.py" bodystart="635" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a6e16492b755faec048cb4dde02afd0ea" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::periodic::ductib.nLayersOfOverlapForParallel</definition>
+        <argsstring></argsstring>
+        <name>nLayersOfOverlapForParallel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="638" column="1" bodyfile="tests/periodic/ductib.py" bodystart="638" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1aa874fa7446eff31223c1aea4176beb00" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::periodic::ductib.pnList</definition>
+        <argsstring></argsstring>
+        <name>pnList</name>
+        <initializer>= [(<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a021b62e0453894d57bcfcea28609640f" kindref="member">p</ref>,<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ae8a5a58f772d5da42cc32ce46675fc60" kindref="member">n</ref>)]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="646" column="1" bodyfile="tests/periodic/ductib.py" bodystart="646" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a51003cce0f79f0aa976dcdcc53058634" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string proteus::tests::periodic::ductib::mesh_name</definition>
+        <argsstring></argsstring>
+        <name>mesh_name</name>
+        <initializer>=  &quot;pg&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="648" column="1" bodyfile="tests/periodic/ductib.py" bodystart="648" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1abb3c0164c8fe92baeee2404fc23b7dc0" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string proteus::tests::periodic::ductib::space_name</definition>
+        <argsstring></argsstring>
+        <name>space_name</name>
+        <initializer>= &quot;p{0}&quot;.format(opts.spaceOrder)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="655" column="1" bodyfile="tests/periodic/ductib.py" bodystart="655" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a82ee02675a8312669801845d04e1432a" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string proteus::tests::periodic::ductib.name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <initializer>=  &quot;ductib{0}t{1}{2}d{3}<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1af76cf94d8bdf731ddaf64f516977406b" kindref="member">he</ref>{4}&quot;.format(<ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1abb3c0164c8fe92baeee2404fc23b7dc0" kindref="member">space_name</ref>,
+                                        opts.timeOrder,
+                                        opts.nd,
+                                        <ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a51003cce0f79f0aa976dcdcc53058634" kindref="member">mesh_name</ref>,
+                                        <ref refid="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1af76cf94d8bdf731ddaf64f516977406b" kindref="member">he</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="662" column="1" bodyfile="tests/periodic/ductib.py" bodystart="662" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a54216435affb2e3be2f20ba958f62500" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.periodic.ductib.sdf</definition>
+        <argsstring>(t, x)</argsstring>
+        <name>sdf</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="83" column="1" bodyfile="tests/periodic/ductib.py" bodystart="83" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ad94349bc91bfcb66e4b5839da1bf8037" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.periodic.ductib.vel</definition>
+        <argsstring>(t, x)</argsstring>
+        <name>vel</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="90" column="1" bodyfile="tests/periodic/ductib.py" bodystart="90" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a848c444b9c9acda2b2f407c77ea5f29b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::ductib::getPDBC</definition>
+        <argsstring>(x, tag)</argsstring>
+        <name>getPDBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>tag</type>
+          <defname>tag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="103" column="1" bodyfile="tests/periodic/ductib.py" bodystart="103" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ad757335d3949fedb6bde60893a489640" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::ductib::onLeft</definition>
+        <argsstring>(x)</argsstring>
+        <name>onLeft</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="225" column="1" bodyfile="tests/periodic/ductib.py" bodystart="225" bodyend="226"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a0f03e6ef38e6ceeef6240227ec65ed86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::ductib::onRight</definition>
+        <argsstring>(x)</argsstring>
+        <name>onRight</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="227" column="1" bodyfile="tests/periodic/ductib.py" bodystart="227" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a80bca1b3013d7fe7cb482598b3384e37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.periodic.ductib.onFront</definition>
+        <argsstring>(x)</argsstring>
+        <name>onFront</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="229" column="1" bodyfile="tests/periodic/ductib.py" bodystart="229" bodyend="230"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a80514d13f87606e3f95cd9f7b287c03f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.periodic.ductib.onBack</definition>
+        <argsstring>(x)</argsstring>
+        <name>onBack</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="231" column="1" bodyfile="tests/periodic/ductib.py" bodystart="231" bodyend="232"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ac51545e2bc2085adc8abb457c07e2954" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::ductib::onBottom</definition>
+        <argsstring>(x)</argsstring>
+        <name>onBottom</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="233" column="1" bodyfile="tests/periodic/ductib.py" bodystart="233" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a1ed694d477ee961c998968b8815beaa3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::ductib::onTop</definition>
+        <argsstring>(x)</argsstring>
+        <name>onTop</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="235" column="1" bodyfile="tests/periodic/ductib.py" bodystart="235" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ae9bd0866d52883fa7d17dfe9cfeafa1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::ductib::getDBC_pressure_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDBC_pressure_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="248" column="1" bodyfile="tests/periodic/ductib.py" bodystart="248" bodyend="250"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1af0159b16e049fe4fa5889f139373d5ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::ductib::getDBC_u_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDBC_u_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="251" column="1" bodyfile="tests/periodic/ductib.py" bodystart="251" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a4f8479939c4622cfaea9b140830e3d71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::ductib::getDBC_v_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDBC_v_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="255" column="1" bodyfile="tests/periodic/ductib.py" bodystart="255" bodyend="258"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1abc97b74a0b1de89c11262a5c81c6e20d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::ductib::getDBC_w_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDBC_w_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="259" column="1" bodyfile="tests/periodic/ductib.py" bodystart="259" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a956b9b92d310e67b6f04887c7e05e033" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::ductib::getAFBC_p_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getAFBC_p_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="270" column="1" bodyfile="tests/periodic/ductib.py" bodystart="270" bodyend="275"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ae90f06aec3031028a2d7aaa0bd662bbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::ductib::getAFBC_u_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getAFBC_u_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="276" column="1" bodyfile="tests/periodic/ductib.py" bodystart="276" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1abd1356138e697706ade7dd4cf661bc77" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::ductib::getAFBC_v_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getAFBC_v_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="282" column="1" bodyfile="tests/periodic/ductib.py" bodystart="282" bodyend="287"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a878c3f341f57533dbd5856aeee5a9a3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::ductib::getAFBC_w_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getAFBC_w_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="288" column="1" bodyfile="tests/periodic/ductib.py" bodystart="288" bodyend="293"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1ae59c0724c26d4d7b4059720621440f97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus::tests::periodic::ductib::getDFBC_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDFBC_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="301" column="1" bodyfile="tests/periodic/ductib.py" bodystart="301" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1a910aa07141ba00eb8cc209fc6fee512f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.periodic.ductib.getDFBC_u_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDFBC_u_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="375" column="1" bodyfile="tests/periodic/ductib.py" bodystart="375" bodyend="381"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d67/namespaceproteus_1_1tests_1_1periodic_1_1ductib_1aca2c06aff5e7f8860febbd8d01b58be8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.periodic.ductib.getDFBC_vw_duct</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDFBC_vw_duct</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/periodic/ductib.py" line="382" column="1" bodyfile="tests/periodic/ductib.py" bodystart="382" bodyend="386"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/periodic/ductib.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

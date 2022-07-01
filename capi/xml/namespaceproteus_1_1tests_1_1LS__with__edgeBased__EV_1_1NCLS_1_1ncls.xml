@@ -1,0 +1,452 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls" kind="namespace" language="Python">
+    <compoundname>proteus::tests::LS_with_edgeBased_EV::NCLS::ncls</compoundname>
+    <innerclass refid="classproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1_1MyCoefficients" prot="public">proteus::tests::LS_with_edgeBased_EV::NCLS::ncls::MyCoefficients</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a5c922eb146f2acd5070ce79af3a0e98b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.ct</definition>
+        <argsstring></argsstring>
+        <name>ct</name>
+        <initializer>= <ref refid="namespaceproteus_1_1Context_1a461242d050aceb1e84d9426074c67004" kindref="member">Context.Options</ref>([
+    # General parameters #
+    (&quot;problem&quot;,0,&quot;0: 1<ref refid="jf_8h_1a4ae508a8d305b460df210d2a0c2a5574" kindref="member">D</ref> advection with PBCs. 1: 2<ref refid="jf_8h_1a4ae508a8d305b460df210d2a0c2a5574" kindref="member">D</ref> rotation of disk&quot;),
+    (&quot;level_set_function&quot;,1,&quot;0: distance function, 1: saturated distance function&quot;),
+    (&quot;<ref refid="Headers_8h_1a38fec5c94a02f67ba7bf45025dd3ac80" kindref="member">T</ref>&quot;,0.1,&quot;Final time&quot;),
+    (&quot;nDTout&quot;,1,&quot;Number of time steps to archive&quot;),
+    (&quot;refinement&quot;,0,&quot;Level of refinement&quot;),
+    (&quot;<ref refid="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1aa7dc57277100b885d7a50fffceae6ed1" kindref="member">unstructured</ref>&quot;,False,&quot;Use <ref refid="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1aa7dc57277100b885d7a50fffceae6ed1" kindref="member">unstructured</ref> mesh. Set to false for periodic BCs&quot;),
+    # Choice of numerical method #
+    (&quot;STABILIZATION_TYPE&quot;,1,&quot;0: SUPG, 1: EV, 2: smoothness based indicator&quot;),
+    (&quot;SATURATED_LEVEL_SET&quot;,True,&quot;Saturate the distance function or not?&quot;),
+    (&quot;ENTROPY_TYPE&quot;,2,&quot;1: parabolic, 2: logarithmic&quot;),
+    (&quot;COUPEZ&quot;,True,&quot;Flag to turn on/off the penalization term in Coupez approach&quot;), 
+    (&quot;DO_REDISTANCING&quot;,True,&quot;Solve Eikonal type equation after transport?&quot;),    
+    # Numerical parameters #
+    (&quot;pure_redistancing&quot;,False,&quot;To <ref refid="namespaceproteus_1ae16afa4435ba85bac15d9bd0481a907b" kindref="member">test</ref> pure redistancing; i.e., no advection&quot;),
+    (&quot;<ref refid="NCLS3P_8h_1ac3a8009eac7340083df50a7d681f77bc" kindref="member">cE</ref>&quot;,1.0,&quot;Entropy viscosity constant&quot;),
+    (&quot;cfl&quot;,0.5,&quot;Target cfl&quot;),
+    (&quot;SSPOrder&quot;,2,&quot;SSP method of order 1, 2 or 3&quot;)
+],mutable=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="11" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a76ef94c6c110a4dc8aff42b9589b74e9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.epsCoupez</definition>
+        <argsstring></argsstring>
+        <name>epsCoupez</name>
+        <initializer>= 3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="36" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a9d595fb4baf286d2c52a7f9e9ea1b187" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.redist_tolerance</definition>
+        <argsstring></argsstring>
+        <name>redist_tolerance</name>
+        <initializer>= 0.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="37" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1ac56e6453891547d62021901f32aa2d89" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.epsFactRedistance</definition>
+        <argsstring></argsstring>
+        <name>epsFactRedistance</name>
+        <initializer>= 0.33</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="38" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1ae6c31d9e7a23630bdf2746d1960c9896" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.lambda_coupez</definition>
+        <argsstring></argsstring>
+        <name>lambda_coupez</name>
+        <initializer>=  0.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="39" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a92a041bd10d77d5b5581fee4e7f02ac7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.epsFactHeaviside</definition>
+        <argsstring></argsstring>
+        <name>epsFactHeaviside</name>
+        <initializer>= 1.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="40" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a0cb6312f333c717365361c4efd0009c9" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.shockCapturingFactor_ncls</definition>
+        <argsstring></argsstring>
+        <name>shockCapturingFactor_ncls</name>
+        <initializer>= 0.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="50" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a8c7a974e3deed96f40d4c45f2679b050" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.lag_shockCapturing_ncls</definition>
+        <argsstring></argsstring>
+        <name>lag_shockCapturing_ncls</name>
+        <initializer>= True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="51" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1afa3511b815bfd2e651c357e2e5ba0f77" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.nd</definition>
+        <argsstring></argsstring>
+        <name>nd</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="54" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1ae7fc81161df58045a115c98845ec2414" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.parallel</definition>
+        <argsstring></argsstring>
+        <name>parallel</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="57" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1acad97a7292344605f060de25691f8bf4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.linearSmoother</definition>
+        <argsstring></argsstring>
+        <name>linearSmoother</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="58" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a8ae3f967c72d5a8537af3651248a4b61" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.checkMass</definition>
+        <argsstring></argsstring>
+        <name>checkMass</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="59" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a8036f621d8dbdf1e16b15e951f7b4a0f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.pDegree_ncls</definition>
+        <argsstring></argsstring>
+        <name>pDegree_ncls</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="62" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a6a7db70c0bd01d65b8048f16fedc0666" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.useBernstein</definition>
+        <argsstring></argsstring>
+        <name>useBernstein</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="63" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a0a43fb846afc1d9b6d6e7117d83bec52" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.useHex</definition>
+        <argsstring></argsstring>
+        <name>useHex</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="64" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1ab659edb291dab5f928ba8d7d2102d21c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.ncls_quad_order</definition>
+        <argsstring></argsstring>
+        <name>ncls_quad_order</name>
+        <initializer>=  2*<ref refid="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a8036f621d8dbdf1e16b15e951f7b4a0f" kindref="member">pDegree_ncls</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="67" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a8dd63b5497eef6b92087b8fc1e4ec183" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.partitioningType</definition>
+        <argsstring></argsstring>
+        <name>partitioningType</name>
+        <initializer>=  MeshTools.MeshParallelPartitioningTypes.node</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="71" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1af2043d94db3cdfad2e2cc82d7d2bed9e" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.nn</definition>
+        <argsstring></argsstring>
+        <name>nn</name>
+        <initializer>= (2**ct.refinement)*10+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="74" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a5b91204109a637b9a6eeb4510ad26d63" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <initializer>= 0 else <ref refid="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a9fdacd19252b40118cc7c61f987e2c62" kindref="member">nnx</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="75" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1ad443cdf1f7910b054cf2c7e70903f9c3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.nnz</definition>
+        <argsstring></argsstring>
+        <name>nnz</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="76" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a94926916af88a5c5dbaa5d0c8a4391a7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>= old_div(1.0,(<ref refid="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a9fdacd19252b40118cc7c61f987e2c62" kindref="member">nnx</ref>-1.0))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="77" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1aa7dc57277100b885d7a50fffceae6ed1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.unstructured</definition>
+        <argsstring></argsstring>
+        <name>unstructured</name>
+        <initializer>= ct.unstructured</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="79" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a76ce20455d03a13198665017622c7027" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.box</definition>
+        <argsstring></argsstring>
+        <name>box</name>
+        <initializer>= <ref refid="classproteus_1_1Domain_1_1RectangularDomain" kindref="compound">Domain.RectangularDomain</ref>(<ref refid="Headers_8h_1a499d78bdc2c754c7a4cf8d39ed245e9f" kindref="member">L</ref>=(1.0,0.1 if ct.problem==0 else 1.0),
+                             x=(0.0,0.0),
+                             name=&quot;box&quot;);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="80" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1abfbfd886b08dcad489b8aa121c84256b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>= <ref refid="classproteus_1_1Domain_1_1PlanarStraightLineGraphDomain" kindref="compound">Domain.PlanarStraightLineGraphDomain</ref>(fileprefix=&quot;box&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="85" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1ab7158bc287378a0b4e2b27958aa8ad80" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="86" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a220da58a4e1debd2e38470dc15e68b56" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.bt</definition>
+        <argsstring></argsstring>
+        <name>bt</name>
+        <initializer>=  domain.boundaryTags</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="87" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a0ff1c8a2e99aae1bf3b96938c983cd64" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <initializer>= &quot;pAq30Dena%8.8<ref refid="namespaceproteus_1af05ccedae3a5249ffcee18ba28860db4" kindref="member">f</ref>&quot;  % (0.5*he**2,)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="88" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a9fdacd19252b40118cc7c61f987e2c62" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="93" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1a2a2cddddddc4b8adceb4ce77f1d872f9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.triangleFlag</definition>
+        <argsstring></argsstring>
+        <name>triangleFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="96" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1LS__with__edgeBased__EV_1_1NCLS_1_1ncls_1ae2c81db679087b7f6f0916a0bbb19626" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string proteus::tests::LS_with_edgeBased_EV::NCLS::ncls.soname</definition>
+        <argsstring></argsstring>
+        <name>soname</name>
+        <initializer>= &quot;ncls_level_&quot;+repr(ct.refinement)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="98" column="1" bodyfile="tests/LS_with_edgeBased_EV/NCLS/ncls.py" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/LS_with_edgeBased_EV/NCLS/ncls.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

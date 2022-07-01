@@ -1,0 +1,363 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacemd__flow__ncp1__n" kind="namespace" language="Python">
+    <compoundname>md_flow_ncp1_n</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1a11ad65f3525dd3962b84d129eca7bb80" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool md_flow_ncp1_n.parallel</definition>
+        <argsstring></argsstring>
+        <name>parallel</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="5" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1ac4a3d81bf4cdaec1c561e88bcd40666b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_flow_ncp1_n.timeIntegration</definition>
+        <argsstring></argsstring>
+        <name>timeIntegration</name>
+        <initializer>=  NoIntegration</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="6" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1a03489fa2a9145114774cf78290136f6f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int md_flow_ncp1_n.nDTout</definition>
+        <argsstring></argsstring>
+        <name>nDTout</name>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="7" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1a8916c17717d4161444f907ce3bfd6b49" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary md_flow_ncp1_n.femSpaces</definition>
+        <argsstring></argsstring>
+        <name>femSpaces</name>
+        <initializer>=  {0:<ref refid="classproteus_1_1FemTools_1_1NC__AffineLinearOnSimplexWithNodalBasis" kindref="compound">NC_AffineLinearOnSimplexWithNodalBasis</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="9" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1aae27f75836908b7f8ff9805de89b896a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_flow_ncp1_n.elementQuadrature</definition>
+        <argsstring></argsstring>
+        <name>elementQuadrature</name>
+        <initializer>=  <ref refid="classproteus_1_1Quadrature_1_1SimplexGaussQuadrature" kindref="compound">SimplexGaussQuadrature</ref>(nd,gw_quad_order)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="11" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1a21b4a77ea2abceee5612804d58b77e67" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_flow_ncp1_n.elementBoundaryQuadrature</definition>
+        <argsstring></argsstring>
+        <name>elementBoundaryQuadrature</name>
+        <initializer>=  <ref refid="classproteus_1_1Quadrature_1_1SimplexGaussQuadrature" kindref="compound">SimplexGaussQuadrature</ref>(nd-1,gw_quad_order)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="12" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1a1118f2870b600143facd006f7a90efbc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_flow_ncp1_n.subgridError</definition>
+        <argsstring></argsstring>
+        <name>subgridError</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="14" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1a98e0c71c3ef4e51cbb3801cf0f4ce318" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_flow_ncp1_n.shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>shockCapturing</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="16" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1ac58ba162bebff61438712021bfb2de65" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_flow_ncp1_n.multilevelNonlinearSolver</definition>
+        <argsstring></argsstring>
+        <name>multilevelNonlinearSolver</name>
+        <initializer>=  <ref refid="classproteus_1_1NonlinearSolvers_1_1Newton" kindref="compound">Newton</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="18" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1a991b302e2d38237ae820546a738e77cc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_flow_ncp1_n.levelNonlinearSolver</definition>
+        <argsstring></argsstring>
+        <name>levelNonlinearSolver</name>
+        <initializer>=  <ref refid="classproteus_1_1NonlinearSolvers_1_1Newton" kindref="compound">Newton</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="19" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1aefa7bace1efaa76861e1cf6316147cab" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int md_flow_ncp1_n.maxNonlinearIts</definition>
+        <argsstring></argsstring>
+        <name>maxNonlinearIts</name>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="20" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1ab72409246ac3a67e614c3e9b01b330b1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool md_flow_ncp1_n.fullNewtonFlag</definition>
+        <argsstring></argsstring>
+        <name>fullNewtonFlag</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="22" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1a37bf69bc0617b4fc329cf3f19f786230" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float md_flow_ncp1_n.tolFac</definition>
+        <argsstring></argsstring>
+        <name>tolFac</name>
+        <initializer>=  1.0e-8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="24" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1a44a80d645a35ced929ce3062f63d9609" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float md_flow_ncp1_n.nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>nl_atol_res</name>
+        <initializer>=  1.0e-8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="26" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1ab2663272a7592cfcc3b46185f545fe8f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_flow_ncp1_n.matrix</definition>
+        <argsstring></argsstring>
+        <name>matrix</name>
+        <initializer>=  SparseMatrix</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="28" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1a46792f00c6e2abd719b413a86c108ad7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_flow_ncp1_n.multilevelLinearSolver</definition>
+        <argsstring></argsstring>
+        <name>multilevelLinearSolver</name>
+        <initializer>=  <ref refid="classproteus_1_1LinearSolvers_1_1KSP__petsc4py" kindref="compound">KSP_petsc4py</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="31" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1af8e5144514a7aec7692de3c0c633cd01" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_flow_ncp1_n.levelLinearSolver</definition>
+        <argsstring></argsstring>
+        <name>levelLinearSolver</name>
+        <initializer>=  <ref refid="classproteus_1_1LinearSolvers_1_1KSP__petsc4py" kindref="compound">KSP_petsc4py</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="36" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1a4c77478190402b78470ebdc6a26209bc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_flow_ncp1_n.numericalFluxType</definition>
+        <argsstring></argsstring>
+        <name>numericalFluxType</name>
+        <initializer>=  <ref refid="classproteus_1_1NumericalFlux_1_1Advection__DiagonalUpwind__Diffusion__SIPG__exterior" kindref="compound">Advection_DiagonalUpwind_Diffusion_SIPG_exterior</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="37" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1ad80726d4be0044b3c158f355ec3e2eee" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string md_flow_ncp1_n.linear_solver_options_prefix</definition>
+        <argsstring></argsstring>
+        <name>linear_solver_options_prefix</name>
+        <initializer>=  &apos;flow_&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="39" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1ab663da9129e589cb10e9e74ef17fd2bf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>md_flow_ncp1_n.linearSmoother</definition>
+        <argsstring></argsstring>
+        <name>linearSmoother</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="40" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1a5c1b15042adc4a96ce21333335c600bc" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string md_flow_ncp1_n.linearSolverConvergenceTest</definition>
+        <argsstring></argsstring>
+        <name>linearSolverConvergenceTest</name>
+        <initializer>=  &apos;<ref refid="Headers_8h_1a51d5468d74b4eccfb8e26ea458562120" kindref="member">r</ref>&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="44" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1a3f3ee309be86bcbd2ce0ee58e27996de" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float md_flow_ncp1_n.linTolFac</definition>
+        <argsstring></argsstring>
+        <name>linTolFac</name>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="48" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1a921e6380842e6793b2288304d740a88f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float md_flow_ncp1_n.l_atol_res</definition>
+        <argsstring></argsstring>
+        <name>l_atol_res</name>
+        <initializer>=  1.0e-10</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="49" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1ae9de42c4d141cea42b87cb80d389115c" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string md_flow_ncp1_n.cfluxtag</definition>
+        <argsstring></argsstring>
+        <name>cfluxtag</name>
+        <initializer>=  &apos;p1-nc&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="51" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemd__flow__ncp1__n_1ae0677c1bbcda7fbbd7754b60c5155d6d" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary md_flow_ncp1_n.conservativeFlux</definition>
+        <argsstring></argsstring>
+        <name>conservativeFlux</name>
+        <initializer>=   {0:<ref refid="namespacemd__flow__ncp1__n_1ae9de42c4d141cea42b87cb80d389115c" kindref="member">cfluxtag</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="52" column="1" bodyfile="tests/MiscibleDisplacement/md_flow_ncp1_n.py" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/MiscibleDisplacement/md_flow_ncp1_n.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

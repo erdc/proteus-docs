@@ -1,0 +1,987 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses" kind="namespace" language="Python">
+    <compoundname>proteus::tests::TwoPhaseFlow::moses</compoundname>
+    <innerclass refid="classproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1_1clsvof__init__cond" prot="public">proteus::tests::TwoPhaseFlow::moses::clsvof_init_cond</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1_1zero" prot="public">proteus::tests::TwoPhaseFlow::moses::zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1ae536bd93684af57b785dfebd7edc5d41" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  <ref refid="namespaceproteus_1_1Context_1a461242d050aceb1e84d9426074c67004" kindref="member">Context.Options</ref>([
+    (&apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a228279b6b48ac305ec225eecb63b240c" kindref="member">ns_model</ref>&apos;,1,&quot;ns_model = {rans2p,rans3p}&quot;),
+    (&quot;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1adddf5526b8722bd436683d6e78829469" kindref="member">final_time</ref>&quot;,5.0,&quot;Final time for simulation&quot;),
+    (&quot;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a9f34fa14a2f79114eece57b0756513b3" kindref="member">dt_output</ref>&quot;,0.1,&quot;Time interval to output solution&quot;),
+    (&quot;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1abb7f726d33f11e74b7bfc31be217f889" kindref="member">cfl</ref>&quot;,0.2,&quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a38b9332df3de4de26b171f604f59a20e" kindref="member">he</ref>&quot;, 0.5, &quot;Maximum mesh element diameter&quot;),
+    (&quot;ARTIFICIAL_VISCOSITY&quot;,3,&quot;artificial viscosity&quot;)
+    ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="15" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a05fe1be2b85908e43c6f0543d0b8d6a9" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::moses.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <initializer>=  [3.22,1.0,1.0]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="34" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::moses.box_L</definition>
+        <argsstring></argsstring>
+        <name>box_L</name>
+        <initializer>=  [0.161,0.403,0.35]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="35" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::moses.box1_xy</definition>
+        <argsstring></argsstring>
+        <name>box1_xy</name>
+        <initializer>=  [0.6635,0.2985]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="36" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::moses.box2_xy</definition>
+        <argsstring></argsstring>
+        <name>box2_xy</name>
+        <initializer>=  [2.3955,0.2985]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="37" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a38b9332df3de4de26b171f604f59a20e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  opts.he</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="38" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aa65c1a3605b6e814471c6cda55439099" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::moses.boundaries</definition>
+        <argsstring></argsstring>
+        <name>boundaries</name>
+        <initializer>= [&apos;left&apos;,&apos;right&apos;,&apos;bottom&apos;,&apos;top&apos;,&apos;front&apos;,&apos;back&apos;,&apos;box1_left&apos;,&apos;box1_right&apos;,&apos;box1_top&apos;,&apos;box1_front&apos;,&apos;box1_back&apos;,&apos;box2_left&apos;,&apos;box2_right&apos;,&apos;box2_top&apos;,&apos;box2_front&apos;,&apos;box2_back&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="39" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>= dict([(key,i+1) for (i,key) in enumerate(<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aa65c1a3605b6e814471c6cda55439099" kindref="member">boundaries</ref>)])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="40" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a10a3f6ed780dfd381f5446fba2a396b1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.bt</definition>
+        <argsstring></argsstring>
+        <name>bt</name>
+        <initializer>=  <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="41" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1fbe359954e56c81e1a7cc2af996e369" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::moses.holes</definition>
+        <argsstring></argsstring>
+        <name>holes</name>
+        <initializer>=  [[0.5*<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[0]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" kindref="member">box1_xy</ref>[0],0.5*<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[1]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" kindref="member">box1_xy</ref>[1],0.5*<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[2]],
+         [0.5*<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[0]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" kindref="member">box2_xy</ref>[0],0.5*<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[1]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" kindref="member">box2_xy</ref>[1],0.5*<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[2]]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="42" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a61019d2a0e75eb4522ff530437676ec7" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::moses.vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <initializer>= [[0.0,0.0,0.0],#0
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a05fe1be2b85908e43c6f0543d0b8d6a9" kindref="member">L</ref>[0],0.0,0.0],#1
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a05fe1be2b85908e43c6f0543d0b8d6a9" kindref="member">L</ref>[0],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a05fe1be2b85908e43c6f0543d0b8d6a9" kindref="member">L</ref>[1],0.0],#2
+          [0.0,<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a05fe1be2b85908e43c6f0543d0b8d6a9" kindref="member">L</ref>[1],0.0],#3
+          [0.0,0.0,<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a05fe1be2b85908e43c6f0543d0b8d6a9" kindref="member">L</ref>[2]],#4
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a05fe1be2b85908e43c6f0543d0b8d6a9" kindref="member">L</ref>[0],0.0,<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a05fe1be2b85908e43c6f0543d0b8d6a9" kindref="member">L</ref>[2]],#5
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a05fe1be2b85908e43c6f0543d0b8d6a9" kindref="member">L</ref>[0],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a05fe1be2b85908e43c6f0543d0b8d6a9" kindref="member">L</ref>[1],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a05fe1be2b85908e43c6f0543d0b8d6a9" kindref="member">L</ref>[2]],#6
+          [0.0,<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a05fe1be2b85908e43c6f0543d0b8d6a9" kindref="member">L</ref>[1],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a05fe1be2b85908e43c6f0543d0b8d6a9" kindref="member">L</ref>[2]],#7
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" kindref="member">box1_xy</ref>[0],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" kindref="member">box1_xy</ref>[1],0.0],#8
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" kindref="member">box1_xy</ref>[0]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[0],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" kindref="member">box1_xy</ref>[1],0.0],#9
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" kindref="member">box1_xy</ref>[0]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[0],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" kindref="member">box1_xy</ref>[1]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[1],0.0],#10
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" kindref="member">box1_xy</ref>[0],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" kindref="member">box1_xy</ref>[1]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[1],0.0],#11
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" kindref="member">box1_xy</ref>[0],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" kindref="member">box1_xy</ref>[1],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[2]],#12
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" kindref="member">box1_xy</ref>[0]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[0],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" kindref="member">box1_xy</ref>[1],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[2]],#13
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" kindref="member">box1_xy</ref>[0]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[0],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" kindref="member">box1_xy</ref>[1]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[1],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[2]],#14
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" kindref="member">box1_xy</ref>[0],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6f1f813ac2f67da6b96009936e04ec2e" kindref="member">box1_xy</ref>[1]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[1],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[2]],#15
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" kindref="member">box2_xy</ref>[0],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" kindref="member">box2_xy</ref>[1],0.0],#16
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" kindref="member">box2_xy</ref>[0]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[0],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" kindref="member">box2_xy</ref>[1],0.0],#17
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" kindref="member">box2_xy</ref>[0]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[0],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" kindref="member">box2_xy</ref>[1]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[1],0.0],#18
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" kindref="member">box2_xy</ref>[0],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" kindref="member">box2_xy</ref>[1]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[1],0.0],#19
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" kindref="member">box2_xy</ref>[0],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" kindref="member">box2_xy</ref>[1],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[2]],#20
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" kindref="member">box2_xy</ref>[0]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[0],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" kindref="member">box2_xy</ref>[1],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[2]],#21
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" kindref="member">box2_xy</ref>[0]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[0],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" kindref="member">box2_xy</ref>[1]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[1],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[2]],#22
+          [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" kindref="member">box2_xy</ref>[0],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a548f2ac4eae56dcd8848e0b63c2e2272" kindref="member">box2_xy</ref>[1]+<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[1],<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a221873529c348de6feade07127061b09" kindref="member">box_L</ref>[2]]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="44" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a38fd7d8e71b5a36d21bfb02b41833925" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::moses.vertexFlags</definition>
+        <argsstring></argsstring>
+        <name>vertexFlags</name>
+        <initializer>= [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;right&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;right&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;right&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;right&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box1_left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box1_left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box1_left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box1_left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box1_left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box1_left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box1_left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box1_left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box2_left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box2_left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box2_left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box2_left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box2_left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box2_left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box2_left&apos;],
+             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box2_left&apos;]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="68" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a8a62f79a68577ede866ba9b4c5f47d1c" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::moses.facets</definition>
+        <argsstring></argsstring>
+        <name>facets</name>
+        <initializer>= [[[0,1,2,3],[8,9,10,11],[16,17,18,19]], # bottom face
+        [[0,1,5,4]], # front face
+        [[1,2,6,5]], # Right
+        [[2,3,7,6]], # back
+        [[3,0,4,7]], # left
+        [[4,5,6,7]], # Top
+        [[8,9,13,12]], # front box 1
+        [[9,10,14,13]], # right box 1
+        [[10,11,15,14]], # back box 1
+        [[11,8,12,15]],  # left box 1
+        [[12,13,14,15]], # top box 1
+        [[16,17,21,20]], #front box 2
+        [[17,18,22,21]], #right box 2
+        [[18,19,23,22]], #back box 2
+        [[19,16,20,23]], #left box 2
+        [[20,21,22,23]]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="92" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aaa8640fe5f6a4e09f45033519b24ce95" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::moses.facetFlags</definition>
+        <argsstring></argsstring>
+        <name>facetFlags</name>
+        <initializer>= [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+            <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;front&apos;],
+            <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;right&apos;],
+            <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;back&apos;],
+            <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;left&apos;],
+            <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;top&apos;],
+            <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box1_front&apos;],
+            <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box1_right&apos;],
+            <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box1_back&apos;],
+            <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box1_left&apos;],
+            <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box1_top&apos;],
+            <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box2_front&apos;],
+            <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box2_right&apos;],
+            <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box2_back&apos;],
+            <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box2_left&apos;],
+            <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1be9d56d660e87dbfd6a5e831c85ec15" kindref="member">boundaryTags</ref>[&apos;box2_top&apos;]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="108" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a14defc8c25da3418e57b1e4a8a6dbe55" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::moses.regions</definition>
+        <argsstring></argsstring>
+        <name>regions</name>
+        <initializer>= [[0.5*<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a05fe1be2b85908e43c6f0543d0b8d6a9" kindref="member">L</ref>[0],0.5*<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a05fe1be2b85908e43c6f0543d0b8d6a9" kindref="member">L</ref>[1],0.5*<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a05fe1be2b85908e43c6f0543d0b8d6a9" kindref="member">L</ref>[2]]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="124" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a2095f93c23ac6291e73e261c71767bbc" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::moses.regionFlags</definition>
+        <argsstring></argsstring>
+        <name>regionFlags</name>
+        <initializer>= [0]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="125" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6a788eb01b55dca0c3a0b5e7a157126c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  <ref refid="classproteus_1_1Domain_1_1PiecewiseLinearComplexDomain" kindref="compound">Domain.PiecewiseLinearComplexDomain</ref>(<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a61019d2a0e75eb4522ff530437676ec7" kindref="member">vertices</ref>=<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a61019d2a0e75eb4522ff530437676ec7" kindref="member">vertices</ref>,
+                                             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a38fd7d8e71b5a36d21bfb02b41833925" kindref="member">vertexFlags</ref>=<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a38fd7d8e71b5a36d21bfb02b41833925" kindref="member">vertexFlags</ref>,
+                                             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a8a62f79a68577ede866ba9b4c5f47d1c" kindref="member">facets</ref>=<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a8a62f79a68577ede866ba9b4c5f47d1c" kindref="member">facets</ref>,
+                                             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aaa8640fe5f6a4e09f45033519b24ce95" kindref="member">facetFlags</ref>=<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aaa8640fe5f6a4e09f45033519b24ce95" kindref="member">facetFlags</ref>,
+                                             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a14defc8c25da3418e57b1e4a8a6dbe55" kindref="member">regions</ref> = <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a14defc8c25da3418e57b1e4a8a6dbe55" kindref="member">regions</ref>,
+                                             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a2095f93c23ac6291e73e261c71767bbc" kindref="member">regionFlags</ref> = <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a2095f93c23ac6291e73e261c71767bbc" kindref="member">regionFlags</ref>,
+                                             <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1fbe359954e56c81e1a7cc2af996e369" kindref="member">holes</ref>=<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a1fbe359954e56c81e1a7cc2af996e369" kindref="member">holes</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="127" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a69e3740a23e27ae2d730265326d5fb3f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.polyfile</definition>
+        <argsstring></argsstring>
+        <name>polyfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="137" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="137" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aa2e8ff6a1eb8e2325bdf49443c0d3e01" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="139" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1ab56fe0e4fd0f5eff1055298a93949b8d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.triangleFlag</definition>
+        <argsstring></argsstring>
+        <name>triangleFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="140" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a9ec2e1f5dfe68551d9c7b2d8126918ea" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.genMesh</definition>
+        <argsstring></argsstring>
+        <name>genMesh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="142" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a819514e9a9701f181c1ea94759f4b5d9" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.forceTerms</definition>
+        <argsstring></argsstring>
+        <name>forceTerms</name>
+        <initializer>=  {0:<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a42da65fcfb7ad7d600167ee767451e0e" kindref="member">forcex</ref>,
+              1:<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a7c6a92dd61dc23e32a546e7178866659" kindref="member">forcey</ref>,
+              2:<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a2d7278a38fc1b6cbbb67ee9b71908afa" kindref="member">forcez</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="266" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aec46399a016f145853dae13149cb696c" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.boundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>boundaryConditions</name>
+        <initializer>=  {
+    # DIRICHLET BCs #
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aa0056abe4babbece0ade85b02b28fb70" kindref="member">pressure_DBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aa0056abe4babbece0ade85b02b28fb70" kindref="member">pressure_DBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a5bc7fce4206ea9da0bb6d76eb69dd3b3" kindref="member">pressure_increment_DBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a5bc7fce4206ea9da0bb6d76eb69dd3b3" kindref="member">pressure_increment_DBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a7c1882dfa5ecf0038a666e2491069b79" kindref="member">vel_u_DBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a7c1882dfa5ecf0038a666e2491069b79" kindref="member">vel_u_DBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a4d7e0fbd6c158e857261f2132f279fe4" kindref="member">vel_v_DBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a4d7e0fbd6c158e857261f2132f279fe4" kindref="member">vel_v_DBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a0ca903e2f7456ad369d94f6536b696f9" kindref="member">vel_w_DBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a0ca903e2f7456ad369d94f6536b696f9" kindref="member">vel_w_DBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aba899d14c02df3cb640bec1279b8cfb5" kindref="member">clsvof_DBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aba899d14c02df3cb640bec1279b8cfb5" kindref="member">clsvof_DBC</ref>,
+    # ADVECTIVE FLUX BCs #
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aa53d9a7384cd814610be6d5670c49224" kindref="member">pressure_AFBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aa53d9a7384cd814610be6d5670c49224" kindref="member">pressure_AFBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6ce543d6773cb0e53b4b17f98f427a0b" kindref="member">pressure_increment_AFBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6ce543d6773cb0e53b4b17f98f427a0b" kindref="member">pressure_increment_AFBC</ref>,
+    &apos;vel_u_AFBC&apos;: lambda x, flag: None,
+    &apos;vel_v_AFBC&apos;: lambda x, flag: None,
+    &apos;vel_w_AFBC&apos;: lambda x, flag: None,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1ad7c99af183da2c411ba202fd63a296e5" kindref="member">clsvof_AFBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1ad7c99af183da2c411ba202fd63a296e5" kindref="member">clsvof_AFBC</ref>,
+    # DIFFUSIVE FLUX BCs #
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a93a24ded655bc474aeb8f680efdcc285" kindref="member">pressure_increment_DFBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a93a24ded655bc474aeb8f680efdcc285" kindref="member">pressure_increment_DFBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a0989eda49461b64bfc6165be02b32447" kindref="member">vel_u_DFBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a0989eda49461b64bfc6165be02b32447" kindref="member">vel_u_DFBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a205e5a64e8ec29c6310b11bce92c6c4c" kindref="member">vel_v_DFBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a205e5a64e8ec29c6310b11bce92c6c4c" kindref="member">vel_v_DFBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aa19a719e84be3120ca75c17cb40d2350" kindref="member">vel_w_DFBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aa19a719e84be3120ca75c17cb40d2350" kindref="member">vel_w_DFBC</ref>,
+    &apos;clsvof_DFBC&apos;: lambda x, flag: None}</initializer>
+        <briefdescription>
+<para>***** Create myTwoPhaseFlowProblem ***** # </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="273" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a132af9892ffcd0a8d5933d9e8cec3a72" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="295" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1adddf5526b8722bd436683d6e78829469" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.final_time</definition>
+        <argsstring></argsstring>
+        <name>final_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="298" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a9f34fa14a2f79114eece57b0756513b3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.dt_output</definition>
+        <argsstring></argsstring>
+        <name>dt_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="299" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a809dfbff87050ddba740450e43aba848" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.systemStepExact</definition>
+        <argsstring></argsstring>
+        <name>systemStepExact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="300" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1ab545497f7d3717ad447f0fe26488ae3b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.flowModel</definition>
+        <argsstring></argsstring>
+        <name>flowModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="303" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a228279b6b48ac305ec225eecb63b240c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.ns_model</definition>
+        <argsstring></argsstring>
+        <name>ns_model</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="303" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a3ba008ed30c628e702a7b9959fc59ff8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.interfaceModel</definition>
+        <argsstring></argsstring>
+        <name>interfaceModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="303" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="303" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1abb7f726d33f11e74b7bfc31be217f889" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.cfl</definition>
+        <argsstring></argsstring>
+        <name>cfl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="304" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="304" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a744884198c741b4da4a4c306e8a63336" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.useSuperlu</definition>
+        <argsstring></argsstring>
+        <name>useSuperlu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="305" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="305" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aaa5d030085f4e152eca41d5ccb6d8a6f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.useBoundaryConditionsModule</definition>
+        <argsstring></argsstring>
+        <name>useBoundaryConditionsModule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="316" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="316" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1af005a0d2cef5debf62cd62021ea09eec" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.gravity</definition>
+        <argsstring></argsstring>
+        <name>gravity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="318" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a5e2700d60fd668b0b24b45c45622caa2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <initializer>=  myTpFlowProblem.SystemPhysics.modelDict</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="320" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a34fae1a1e52cfefa02bfcdded6954add" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.useVF</definition>
+        <argsstring></argsstring>
+        <name>useVF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="324" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aef443c19c64552baa4f28708297fd464" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.eb_penalty_constant</definition>
+        <argsstring></argsstring>
+        <name>eb_penalty_constant</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="325" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="325" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a76c48d5734ebbf7686d3da6129d17eae" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::moses.shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>shockCapturingFactor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="326" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a7c1882dfa5ecf0038a666e2491069b79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.moses.vel_u_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_u_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="164" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="164" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a4d7e0fbd6c158e857261f2132f279fe4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.moses.vel_v_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_v_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="170" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="170" bodyend="175"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a0ca903e2f7456ad369d94f6536b696f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.moses.vel_w_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_w_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="176" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="176" bodyend="183"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a0989eda49461b64bfc6165be02b32447" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.moses.vel_u_DFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_u_DFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="184" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="184" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a205e5a64e8ec29c6310b11bce92c6c4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.moses.vel_v_DFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_v_DFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="188" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="188" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aa19a719e84be3120ca75c17cb40d2350" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.moses.vel_w_DFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_w_DFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="192" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="192" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a5bc7fce4206ea9da0bb6d76eb69dd3b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.moses.pressure_increment_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_increment_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+<para>PRESSURE INCREMENT #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="199" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="199" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a6ce543d6773cb0e53b4b17f98f427a0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.moses.pressure_increment_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_increment_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="203" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="203" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a93a24ded655bc474aeb8f680efdcc285" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.moses.pressure_increment_DFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_increment_DFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="207" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="207" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aa0056abe4babbece0ade85b02b28fb70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.moses.pressure_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+<para>PRESSURE #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="214" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="214" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aa53d9a7384cd814610be6d5670c49224" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.moses.pressure_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="218" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="218" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1aba899d14c02df3cb640bec1279b8cfb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.moses.clsvof_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>clsvof_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+<para><ref refid="namespaceproteus_1_1tests_1_1CLSVOF" kindref="compound">CLSVOF</ref> #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="225" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="225" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1ad7c99af183da2c411ba202fd63a296e5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.moses.clsvof_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>clsvof_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="229" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="229" bodyend="234"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a42da65fcfb7ad7d600167ee767451e0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.moses.forcex</definition>
+        <argsstring>(X, t)</argsstring>
+        <name>forcex</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+<para>FORCE FIELD #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="238" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="238" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a7c6a92dd61dc23e32a546e7178866659" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.moses.forcey</definition>
+        <argsstring>(X, t)</argsstring>
+        <name>forcey</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="260" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="260" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1moses_1a2d7278a38fc1b6cbbb67ee9b71908afa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.moses.forcez</definition>
+        <argsstring>(X, t)</argsstring>
+        <name>forcez</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/moses.py" line="263" column="1" bodyfile="tests/TwoPhaseFlow/moses.py" bodystart="263" bodyend="265"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Rising bubble test
+</verbatim> </para>
+    </detaileddescription>
+    <location file="tests/TwoPhaseFlow/moses.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

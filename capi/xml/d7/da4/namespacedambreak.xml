@@ -1,0 +1,319 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d7/da4/namespacedambreak" kind="namespace" language="Python">
+    <compoundname>dambreak</compoundname>
+    <innerclass refid="df/dc4/classdambreak_1_1PHI__IC" prot="public">dambreak::PHI_IC</innerclass>
+    <innerclass refid="dc/d92/classdambreak_1_1VF__IC" prot="public">dambreak::VF_IC</innerclass>
+    <innerclass refid="d2/de1/classdambreak_1_1zero" prot="public">dambreak::zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1a214aa8539d8bd5e4ef8a22b83bdb7b67" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  Context.Options([
+    (&quot;final_time&quot;,2.0,&quot;Final time for simulation&quot;),
+    (&quot;<ref refid="d7/da4/namespacedambreak_1a38f7ec2175c9553407eeaa393f15cdc5" kindref="member">dt_output</ref>&quot;,0.01,&quot;Time interval to output solution&quot;),
+    (&quot;<ref refid="d7/da4/namespacedambreak_1a0ec8f12372f605846b2d7078ce2e8182" kindref="member">cfl</ref>&quot;,0.9,&quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="d7/da4/namespacedambreak_1a0a8db7cb920eb67bfc7f70eb203ed336" kindref="member">he</ref>&quot;,0.08,&quot;<ref refid="d7/da4/namespacedambreak_1a0a8db7cb920eb67bfc7f70eb203ed336" kindref="member">he</ref> relative to Length of <ref refid="d7/da4/namespacedambreak_1a2f97c260980904e7d41faf437c4eba61" kindref="member">domain</ref> in x&quot;),
+    (&quot;x_tank&quot;,3.22,&quot;extent of <ref refid="d7/da4/namespacedambreak_1a2f97c260980904e7d41faf437c4eba61" kindref="member">domain</ref> in x&quot;),
+    (&quot;y_tank&quot;,1.8,&quot;extent of <ref refid="d7/da4/namespacedambreak_1a2f97c260980904e7d41faf437c4eba61" kindref="member">domain</ref> in y&quot;)
+    ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/dambreak.py" line="15" column="1" bodyfile="tests/proteus_tutorial/2d/dambreak.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1aadd7ee112f36b143e3dd2aa329aa01c5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float dambreak::waterLine_y</definition>
+        <argsstring></argsstring>
+        <name>waterLine_y</name>
+        <initializer>=  0.6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/dambreak.py" line="25" column="1" bodyfile="tests/proteus_tutorial/2d/dambreak.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1ae99e04c415e0c809401172a3924c6d10" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float dambreak::waterLine_x</definition>
+        <argsstring></argsstring>
+        <name>waterLine_x</name>
+        <initializer>=  1.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/dambreak.py" line="26" column="1" bodyfile="tests/proteus_tutorial/2d/dambreak.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1a8e989ccf0f75d0a5536f5cc44012e8b5" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple dambreak::tank_dim</definition>
+        <argsstring></argsstring>
+        <name>tank_dim</name>
+        <initializer>=  (opts.x_tank,opts.y_tank)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/dambreak.py" line="32" column="1" bodyfile="tests/proteus_tutorial/2d/dambreak.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1af4a9a7163a014fccd40d9cc3d1383f73" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool dambreak::structured</definition>
+        <argsstring></argsstring>
+        <name>structured</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/dambreak.py" line="34" column="1" bodyfile="tests/proteus_tutorial/2d/dambreak.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1a2f97c260980904e7d41faf437c4eba61" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.RectangularDomain(<ref refid="d7/da4/namespacedambreak_1a8e989ccf0f75d0a5536f5cc44012e8b5" kindref="member">tank_dim</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/dambreak.py" line="36" column="1" bodyfile="tests/proteus_tutorial/2d/dambreak.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1ac9b3148cc45d455394a2a3ab684aafc8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak.tank</definition>
+        <argsstring></argsstring>
+        <name>tank</name>
+        <initializer>=  <ref refid="d2/d8a/classproteus_1_1mprans_1_1SpatialTools_1_1Tank2D" kindref="compound">Tank2D</ref>(<ref refid="d7/da4/namespacedambreak_1a2f97c260980904e7d41faf437c4eba61" kindref="member">domain</ref>, <ref refid="d7/da4/namespacedambreak_1a8e989ccf0f75d0a5536f5cc44012e8b5" kindref="member">tank_dim</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/dambreak.py" line="41" column="1" bodyfile="tests/proteus_tutorial/2d/dambreak.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1a88369a6f45bb1dfb07b00176e0f1c187" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dambreak::nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <initializer>=  int(<ref refid="d7/da4/namespacedambreak_1a8e989ccf0f75d0a5536f5cc44012e8b5" kindref="member">tank_dim</ref>[1]/opts.he)+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/dambreak.py" line="86" column="1" bodyfile="tests/proteus_tutorial/2d/dambreak.py" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1ac160d675c5a938f13e54166b098da3b9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int dambreak::nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <initializer>=  int(<ref refid="d7/da4/namespacedambreak_1a8e989ccf0f75d0a5536f5cc44012e8b5" kindref="member">tank_dim</ref>[0]/opts.he)+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/dambreak.py" line="87" column="1" bodyfile="tests/proteus_tutorial/2d/dambreak.py" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1a0a8db7cb920eb67bfc7f70eb203ed336" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/dambreak.py" line="89" column="1" bodyfile="tests/proteus_tutorial/2d/dambreak.py" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1a0632377e58e7f20b7a8812b7b3db869d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/dambreak.py" line="91" column="1" bodyfile="tests/proteus_tutorial/2d/dambreak.py" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1a79ec63241abb08b142e3d0bb935e39c3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem()</initializer>
+        <briefdescription>
+<para>***** Create myTwoPhaseFlowProblem ***** # </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/dambreak.py" line="97" column="1" bodyfile="tests/proteus_tutorial/2d/dambreak.py" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1a8ed45d74a2305d6566222f64bc5c591d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak.final_time</definition>
+        <argsstring></argsstring>
+        <name>final_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/dambreak.py" line="98" column="1" bodyfile="tests/proteus_tutorial/2d/dambreak.py" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1a38f7ec2175c9553407eeaa393f15cdc5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak.dt_output</definition>
+        <argsstring></argsstring>
+        <name>dt_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/dambreak.py" line="99" column="1" bodyfile="tests/proteus_tutorial/2d/dambreak.py" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1a5e30b58ba8975ae1668eb6ea2c7088a3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak.dt_init</definition>
+        <argsstring></argsstring>
+        <name>dt_init</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/dambreak.py" line="100" column="1" bodyfile="tests/proteus_tutorial/2d/dambreak.py" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1a0ec8f12372f605846b2d7078ce2e8182" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak.cfl</definition>
+        <argsstring></argsstring>
+        <name>cfl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/dambreak.py" line="103" column="1" bodyfile="tests/proteus_tutorial/2d/dambreak.py" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1abe04025e0929174f9e1007cc620d62a9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak.useSuperlu</definition>
+        <argsstring></argsstring>
+        <name>useSuperlu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/dambreak.py" line="104" column="1" bodyfile="tests/proteus_tutorial/2d/dambreak.py" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1ad26476902d998c6334988eeb9f4cfeb0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak.m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <initializer>=  myTpFlowProblem.SystemPhysics.modelDict</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/dambreak.py" line="108" column="1" bodyfile="tests/proteus_tutorial/2d/dambreak.py" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1a488dfa8799510c085370634d450d432d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  TpFlow.OutputStepping(opts.final_time,<ref refid="d7/da4/namespacedambreak_1a38f7ec2175c9553407eeaa393f15cdc5" kindref="member">dt_output</ref>=opts.dt_output,<ref refid="d7/da4/namespacedambreak_1a5e30b58ba8975ae1668eb6ea2c7088a3" kindref="member">dt_init</ref>=0.0001)</initializer>
+        <briefdescription>
+<para>***** Create myTwoPhaseFlowProblem ***** # </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/dambreak.py" line="96" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/dambreak.py" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1aaf3aa62db29930f2ee2a77335bf76753" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary dambreak::initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;pressure&apos;: <ref refid="d2/de1/classdambreak_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;pressure_increment&apos;: <ref refid="d2/de1/classdambreak_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vel_u&apos;: <ref refid="d2/de1/classdambreak_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vel_v&apos;: <ref refid="d2/de1/classdambreak_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vof&apos;:  <ref refid="dc/d92/classdambreak_1_1VF__IC" kindref="compound">VF_IC</ref>(),
+                     &apos;ncls&apos;: <ref refid="df/dc4/classdambreak_1_1PHI__IC" kindref="compound">PHI_IC</ref>(),
+                     &apos;rdls&apos;: <ref refid="df/dc4/classdambreak_1_1PHI__IC" kindref="compound">PHI_IC</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/dambreak.py" line="97" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/dambreak.py" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/da4/namespacedambreak_1a094f1a4f4dc67872ac07d8a363555757" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>dambreak.conservativeFlux</definition>
+        <argsstring></argsstring>
+        <name>conservativeFlux</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/adaptivity/dambreak/dambreak.py" line="126" column="1" bodyfile="tests/proteus_tutorial/adaptivity/dambreak/dambreak.py" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>dambreak 2-D
+</verbatim> </para>
+    </detaileddescription>
+    <location file="tests/proteus_tutorial/2d/dambreak.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

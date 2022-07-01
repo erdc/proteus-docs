@@ -1,0 +1,589 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow" kind="namespace" language="Python">
+    <compoundname>proteus::tests::SWFlow::obstacle_flow</compoundname>
+    <innerclass refid="d6/d41/classproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1_1heta__at__t0" prot="public">proteus::tests::SWFlow::obstacle_flow::heta_at_t0</innerclass>
+    <innerclass refid="dc/d24/classproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1_1hw__at__t0" prot="public">proteus::tests::SWFlow::obstacle_flow::hw_at_t0</innerclass>
+    <innerclass refid="d0/d62/classproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1_1water__height__at__t0" prot="public">proteus::tests::SWFlow::obstacle_flow::water_height_at_t0</innerclass>
+    <innerclass refid="d0/d94/classproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1_1x__mom__at__t0" prot="public">proteus::tests::SWFlow::obstacle_flow::x_mom_at_t0</innerclass>
+    <innerclass refid="d1/d26/classproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1_1y__mom__at__t0" prot="public">proteus::tests::SWFlow::obstacle_flow::y_mom_at_t0</innerclass>
+    <innerclass refid="d4/df8/classproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1_1Zero" prot="public">proteus::tests::SWFlow::obstacle_flow::Zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1ab20304d518a51587f82839a3479696da" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::obstacle_flow.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  <ref refid="d0/d93/namespaceproteus_1_1Context_1a461242d050aceb1e84d9426074c67004" kindref="member">Context.Options</ref>([
+    (&apos;sw_model&apos;, 0, &quot;sw_model = {0,1} for {SWEs, Disperisve SWEs}}&quot;),
+    (&quot;final_time&quot;, 10.0, &quot;Final time for simulation&quot;),
+    (&quot;dt_output&quot;, 0.1, &quot;Time interval to output solution&quot;),
+    (&quot;cfl&quot;, 0.25, &quot;Desired CFL restriction&quot;),
+    (&quot;refinement&quot;, 4, &quot;Refinement level&quot;),
+    (&quot;reflecting_BCs&quot;, False, &quot;Use reflecting BCs for all boundaries&quot;),
+    (&quot;structured&quot;, False, &quot;Structured or unstructured mesh&quot;),
+    (&quot;he&quot;, 0.5, &quot;<ref refid="da/d29/structMesh" kindref="compound">Mesh</ref> size for unstructured mesh&quot;),
+    (&quot;mannings&quot;, 0.02, &quot;Mannings roughness coefficient&quot;)
+])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="24" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a6884f6d110748fe00fed1a00e13069d4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::obstacle_flow.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  <ref refid="dd/d26/classproteus_1_1Domain_1_1PlanarStraightLineGraphDomain" kindref="compound">Domain.PlanarStraightLineGraphDomain</ref>()</initializer>
+        <briefdescription>
+<para>DOMAIN AND MESH #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="39" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a09fbbaceed5fef0e4b107160519f4ee2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::obstacle_flow.length</definition>
+        <argsstring></argsstring>
+        <name>length</name>
+        <initializer>=  40.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="42" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a5164a0ba700a7a36eb75ebdebd5cc56f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::obstacle_flow.width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <initializer>=  10.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="43" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a893a99c0d18790f85166bf6113791d89" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::SWFlow::obstacle_flow.my_vertices</definition>
+        <argsstring></argsstring>
+        <name>my_vertices</name>
+        <initializer>=  [[0.0, 0.0], [<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a09fbbaceed5fef0e4b107160519f4ee2" kindref="member">length</ref>, 0.0], [<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a09fbbaceed5fef0e4b107160519f4ee2" kindref="member">length</ref>, <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a5164a0ba700a7a36eb75ebdebd5cc56f" kindref="member">width</ref>], [0.0, <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a5164a0ba700a7a36eb75ebdebd5cc56f" kindref="member">width</ref>]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="46" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a465a367ff383fbe1dd278257c9d0d118" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::SWFlow::obstacle_flow.my_segments</definition>
+        <argsstring></argsstring>
+        <name>my_segments</name>
+        <initializer>=  [[0, 1], [1, 2], [2, 3], [3, 0]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="47" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a91a16f0a6f9e36b15d6b4c7b63d86a4d" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::obstacle_flow.bt</definition>
+        <argsstring></argsstring>
+        <name>bt</name>
+        <initializer>=  {&apos;inflow&apos;: 1, &apos;reflecting&apos;: 99}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="50" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a89016cd63e1506d1881a6bf839113660" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::SWFlow::obstacle_flow.my_vertexFlags</definition>
+        <argsstring></argsstring>
+        <name>my_vertexFlags</name>
+        <initializer>=  [<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a91a16f0a6f9e36b15d6b4c7b63d86a4d" kindref="member">bt</ref>[&apos;inflow&apos;], <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a91a16f0a6f9e36b15d6b4c7b63d86a4d" kindref="member">bt</ref>[&apos;reflecting&apos;], <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a91a16f0a6f9e36b15d6b4c7b63d86a4d" kindref="member">bt</ref>[&apos;reflecting&apos;], <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a91a16f0a6f9e36b15d6b4c7b63d86a4d" kindref="member">bt</ref>[&apos;inflow&apos;]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="51" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a41bb9b46b1dfdb7044335a8b1fd79814" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::SWFlow::obstacle_flow.my_segmentFlags</definition>
+        <argsstring></argsstring>
+        <name>my_segmentFlags</name>
+        <initializer>=  [<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a91a16f0a6f9e36b15d6b4c7b63d86a4d" kindref="member">bt</ref>[&apos;reflecting&apos;], <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a91a16f0a6f9e36b15d6b4c7b63d86a4d" kindref="member">bt</ref>[&apos;reflecting&apos;], <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a91a16f0a6f9e36b15d6b4c7b63d86a4d" kindref="member">bt</ref>[&apos;reflecting&apos;], <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a91a16f0a6f9e36b15d6b4c7b63d86a4d" kindref="member">bt</ref>[&apos;inflow&apos;]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="52" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a9d4ac2ca201c34c711431040e8766d97" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::obstacle_flow.my_customShape</definition>
+        <argsstring></argsstring>
+        <name>my_customShape</name>
+        <initializer>=  st.CustomShape(<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a6884f6d110748fe00fed1a00e13069d4" kindref="member">domain</ref>, boundaryTags=<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a91a16f0a6f9e36b15d6b4c7b63d86a4d" kindref="member">bt</ref>,
+                           vertices=<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a893a99c0d18790f85166bf6113791d89" kindref="member">my_vertices</ref>, vertexFlags=<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a89016cd63e1506d1881a6bf839113660" kindref="member">my_vertexFlags</ref>,
+                           segments=<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a465a367ff383fbe1dd278257c9d0d118" kindref="member">my_segments</ref>, segmentFlags=<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a41bb9b46b1dfdb7044335a8b1fd79814" kindref="member">my_segmentFlags</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="54" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a19ba1dd388be6f3639ff0e5d5fa82c59" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::obstacle_flow.center_x</definition>
+        <argsstring></argsstring>
+        <name>center_x</name>
+        <initializer>=  10.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="60" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1ac4866cda3d68aee79dc88362b0122cb1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::obstacle_flow.center_y</definition>
+        <argsstring></argsstring>
+        <name>center_y</name>
+        <initializer>=  5.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="61" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a116a037d003f132005ead48f8c99944b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::obstacle_flow.my_circle</definition>
+        <argsstring></argsstring>
+        <name>my_circle</name>
+        <initializer>=  st.Circle(<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a6884f6d110748fe00fed1a00e13069d4" kindref="member">domain</ref>=<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a6884f6d110748fe00fed1a00e13069d4" kindref="member">domain</ref>,
+                      radius=1.,
+                      barycenter=[<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a19ba1dd388be6f3639ff0e5d5fa82c59" kindref="member">center_x</ref>, <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1ac4866cda3d68aee79dc88362b0122cb1" kindref="member">center_y</ref>],
+                      <ref refid="d7/daa/group__analyticalSolutions_1gae103bacd0ce284b66771dc3d06420616" kindref="member">coords</ref>=[<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a19ba1dd388be6f3639ff0e5d5fa82c59" kindref="member">center_x</ref>, <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1ac4866cda3d68aee79dc88362b0122cb1" kindref="member">center_y</ref>],
+                      nPoints=20,
+                      boundaryTag={&apos;reflecting&apos;: 99-2})</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="62" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a192649a3e5e6fc300103b095e9c1b7cd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::obstacle_flow.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="74" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a9e0904aa68586ba05fc32c5ea0545d66" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::obstacle_flow.nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="75" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a11a7104b1af5c829ee79e3eb07363409" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::obstacle_flow.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="76" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a269a63420d0eea181c92db99955c0b06" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::obstacle_flow.saved_mesh</definition>
+        <argsstring></argsstring>
+        <name>saved_mesh</name>
+        <initializer>= os.path.join(os.path.dirname(os.path.abspath(__file__)), &quot;for_testMeshes&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="81" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a11a5fb07987971733a96ab678751b200" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::obstacle_flow.polyfile</definition>
+        <argsstring></argsstring>
+        <name>polyfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="85" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a4280c9ca003406956addd87d76f2f164" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::obstacle_flow.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>=  9.81</initializer>
+        <briefdescription>
+<para>DEFINE INITIAL CONSTANTS AND FUNCTIONS #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="90" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a684185bfb7c35bf5baa665ed8b1a7458" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::obstacle_flow.h_initial</definition>
+        <argsstring></argsstring>
+        <name>h_initial</name>
+        <initializer>=  0.75</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="93" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1ac58205bc2c8847a999701e080f1980de" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::obstacle_flow.h_inflow</definition>
+        <argsstring></argsstring>
+        <name>h_inflow</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="94" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1ad6bfdc020437520b041af3c809eb0ac7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::obstacle_flow.q_inflow</definition>
+        <argsstring></argsstring>
+        <name>q_inflow</name>
+        <initializer>=  <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1ac58205bc2c8847a999701e080f1980de" kindref="member">h_inflow</ref> * 1.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="95" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1afd3730237a03b3fd4967e84b18f551f0" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::obstacle_flow.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <initializer>=  (<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a09fbbaceed5fef0e4b107160519f4ee2" kindref="member">length</ref>, <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a5164a0ba700a7a36eb75ebdebd5cc56f" kindref="member">width</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="150" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a2716632eb7035a15c8bf0865f9d6eb49" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::obstacle_flow.X_coords</definition>
+        <argsstring></argsstring>
+        <name>X_coords</name>
+        <initializer>=  (0.0, <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1afd3730237a03b3fd4967e84b18f551f0" kindref="member">L</ref>[0])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="151" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1aa910401a1cb5ca0ae7da4877b7363f20" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::obstacle_flow.Y_coords</definition>
+        <argsstring></argsstring>
+        <name>Y_coords</name>
+        <initializer>=  (0.0, <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1afd3730237a03b3fd4967e84b18f551f0" kindref="member">L</ref>[1])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="152" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a0babe04133200befe8710e6f627203c7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::obstacle_flow.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  SWFlowProblem.OutputStepping(
+    opts.final_time, dt_output=opts.dt_output)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="179" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1afe75ef95e58bcaff5039efba8b0720bb" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::obstacle_flow.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;water_height&apos;: <ref refid="d0/d62/classproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1_1water__height__at__t0" kindref="compound">water_height_at_t0</ref>(),
+                     &apos;x_mom&apos;: <ref refid="d0/d94/classproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1_1x__mom__at__t0" kindref="compound">x_mom_at_t0</ref>(),
+                     &apos;y_mom&apos;: <ref refid="d1/d26/classproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1_1y__mom__at__t0" kindref="compound">y_mom_at_t0</ref>(),
+                     &apos;h_times_eta&apos;: <ref refid="d6/d41/classproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1_1heta__at__t0" kindref="compound">heta_at_t0</ref>(),
+                     &apos;h_times_w&apos;: <ref refid="dc/d24/classproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1_1hw__at__t0" kindref="compound">hw_at_t0</ref>(),
+                     &apos;h_times_beta&apos;:<ref refid="d4/df8/classproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1_1Zero" kindref="compound">Zero</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="181" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a64df52d819646ec7981b7cd0662e413c" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::obstacle_flow.boundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>boundaryConditions</name>
+        <initializer>=  {&apos;water_height&apos;: <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a09bef6314b6f5ef9458915fe75d833b9" kindref="member">h_DBC</ref>,
+                      &apos;x_mom&apos;: <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a9013f349fdbf90e8edd554131e4731ed" kindref="member">x_mom_DBC</ref>,
+                      &apos;y_mom&apos;: <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1abde4f1b5d6c247bd20fbd01d7d35d8f8" kindref="member">y_mom_DBC</ref>,
+                      &apos;h_times_eta&apos;: <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a2877ed9be58600c29de7391ca508db0d" kindref="member">heta_DBC</ref>,
+                      &apos;h_times_w&apos;: <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a3b23b9f5b68b6b6e979abfea15f7cf1a" kindref="member">hw_DBC</ref>,
+                      &apos;h_times_beta&apos;:<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a9013f349fdbf90e8edd554131e4731ed" kindref="member">x_mom_DBC</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="187" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a04b62975777fac0771dafcd3f1616141" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::obstacle_flow.mySWFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>mySWFlowProblem</name>
+        <initializer>=  SWFlowProblem.SWFlowProblem(sw_model=opts.sw_model,
+                                              cfl=opts.cfl,
+                                              <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a0babe04133200befe8710e6f627203c7" kindref="member">outputStepping</ref>=<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a0babe04133200befe8710e6f627203c7" kindref="member">outputStepping</ref>,
+                                              structured=opts.structured,
+                                              he=opts.he,
+                                              <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a9e0904aa68586ba05fc32c5ea0545d66" kindref="member">nnx</ref>=<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a9e0904aa68586ba05fc32c5ea0545d66" kindref="member">nnx</ref>,
+                                              <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a11a7104b1af5c829ee79e3eb07363409" kindref="member">nny</ref>=<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a11a7104b1af5c829ee79e3eb07363409" kindref="member">nny</ref>,
+                                              <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a6884f6d110748fe00fed1a00e13069d4" kindref="member">domain</ref>=<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a6884f6d110748fe00fed1a00e13069d4" kindref="member">domain</ref>,
+                                              <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1afe75ef95e58bcaff5039efba8b0720bb" kindref="member">initialConditions</ref>=<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1afe75ef95e58bcaff5039efba8b0720bb" kindref="member">initialConditions</ref>,
+                                              <ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a64df52d819646ec7981b7cd0662e413c" kindref="member">boundaryConditions</ref>=<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a64df52d819646ec7981b7cd0662e413c" kindref="member">boundaryConditions</ref>,
+                                              reflectingBCs=opts.reflecting_BCs,
+                                              bathymetry=<ref refid="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a7d8b2af48bd42c39c1f23d77b8e4e745" kindref="member">bathymetry_function</ref>,
+                                              genMesh=False)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="200" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a7d8b2af48bd42c39c1f23d77b8e4e745" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.obstacle_flow.bathymetry_function</definition>
+        <argsstring>(X)</argsstring>
+        <name>bathymetry_function</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="97" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="97" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a09bef6314b6f5ef9458915fe75d833b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.obstacle_flow.h_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>h_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="154" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="154" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a9013f349fdbf90e8edd554131e4731ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.obstacle_flow.x_mom_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>x_mom_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="158" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="158" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1abde4f1b5d6c247bd20fbd01d7d35d8f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.obstacle_flow.y_mom_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>y_mom_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="162" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="162" bodyend="165"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a2877ed9be58600c29de7391ca508db0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.obstacle_flow.heta_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>heta_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="166" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="166" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d1d/namespaceproteus_1_1tests_1_1SWFlow_1_1obstacle__flow_1a3b23b9f5b68b6b6e979abfea15f7cf1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.obstacle_flow.hw_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>hw_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/obstacle_flow.py" line="170" column="1" bodyfile="tests/SWFlow/obstacle_flow.py" bodystart="170" bodyend="178"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/SWFlow/obstacle_flow.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

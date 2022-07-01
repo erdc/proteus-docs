@@ -22,14 +22,40 @@
       <node id="5">
         <label>cmath</label>
       </node>
+      <node id="15">
+        <label>xtensor/xio.hpp</label>
+      </node>
+      <node id="12">
+        <label>stdexcept</label>
+      </node>
+      <node id="13">
+        <label>string</label>
+      </node>
       <node id="8">
         <label>CompKernel.h</label>
         <link refid="_comp_kernel_8h"/>
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="10">
+      <node id="11">
+        <label>map</label>
+      </node>
+      <node id="14">
         <label>xtensor-python/pyarray.hpp</label>
+      </node>
+      <node id="10">
+        <label>ArgumentsDict.h</label>
+        <link refid="_arguments_dict_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>pybind11/pybind11.h</label>
@@ -51,6 +77,8 @@
         <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -125,7 +153,7 @@
 <codeline lineno="22"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>xt::import_numpy();</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>py::class_&lt;cppVOS3P_base&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;VOS3P&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>py::class_&lt;cppVOS3P_base&gt;(m,<sp/></highlight><highlight class="stringliteral">&quot;cppVOS3P_base&quot;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(<ref refid="_fourier_8cpp_1a2858154e2009b0e6e616f313177762bc" kindref="member">py::init</ref>(&amp;<ref refid="namespaceproteus_1a69cf5aef6d7e8c9a8c0affe3b2c25dea" kindref="member">proteus::newVOS3P</ref>))</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateResidual&quot;</highlight><highlight class="normal">,<sp/>&amp;cppVOS3P_base::calculateResidual)</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>.def(</highlight><highlight class="stringliteral">&quot;calculateJacobian&quot;</highlight><highlight class="normal">,<sp/>&amp;cppVOS3P_base::calculateJacobian)</highlight></codeline>

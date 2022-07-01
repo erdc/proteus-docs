@@ -3,7 +3,7 @@
   <compounddef id="_py_embedded_functions_8h" kind="file" language="C++">
     <compoundname>PyEmbeddedFunctions.h</compoundname>
     <includes local="yes">Python.h</includes>
-    <includedby refid="c_mesh_adapt_p_u_m_i_8cpp" local="yes">cMeshAdaptPUMI.cpp</includedby>
+    <includedby refid="_mesh_adapt_p_u_m_i_8h" local="yes">MeshAdaptPUMI.h</includedby>
     <includedby refid="_r_a_n_s2_p_8h" local="yes">RANS2P.h</includedby>
     <includedby refid="_r_a_n_s2_p2_d_8h" local="yes">RANS2P2D.h</includedby>
     <incdepgraph>
@@ -18,45 +18,93 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="6">
+      <node id="14">
         <label>RANS2P2D.cpp</label>
         <link refid="_r_a_n_s2_p2_d_8cpp"/>
+      </node>
+      <node id="5">
+        <label>ErrorResidualMethod.cpp</label>
+        <link refid="_error_residual_method_8cpp"/>
       </node>
       <node id="1">
         <label>PyEmbeddedFunctions.h</label>
         <link refid="_py_embedded_functions_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="3" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="5" relation="include">
+        <childnode refid="13" relation="include">
         </childnode>
       </node>
-      <node id="4">
+      <node id="12">
         <label>RANS2P.cpp</label>
         <link refid="_r_a_n_s2_p_8cpp"/>
       </node>
-      <node id="3">
-        <label>RANS2P.h</label>
-        <link refid="_r_a_n_s2_p_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
+      <node id="8">
+        <label>ParallelMeshConverter.cpp</label>
+        <link refid="_parallel_mesh_converter_8cpp"/>
+      </node>
+      <node id="4">
+        <label>createAnalyticGeometry.cpp</label>
+        <link refid="create_analytic_geometry_8cpp"/>
       </node>
       <node id="2">
+        <label>MeshAdaptPUMI.h</label>
+        <link refid="_mesh_adapt_p_u_m_i_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>MeshConverter.cpp</label>
+        <link refid="_mesh_converter_8cpp"/>
+      </node>
+      <node id="11">
+        <label>RANS2P.h</label>
+        <link refid="_r_a_n_s2_p_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>MeshFields.cpp</label>
+        <link refid="_mesh_fields_8cpp"/>
+      </node>
+      <node id="10">
+        <label>VMS.cpp</label>
+        <link refid="_v_m_s_8cpp"/>
+      </node>
+      <node id="3">
         <label>cMeshAdaptPUMI.cpp</label>
         <link refid="c_mesh_adapt_p_u_m_i_8cpp"/>
       </node>
-      <node id="5">
+      <node id="13">
         <label>RANS2P2D.h</label>
         <link refid="_r_a_n_s2_p2_d_8h"/>
-        <childnode refid="6" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
+      </node>
+      <node id="9">
+        <label>SizeField.cpp</label>
+        <link refid="_size_field_8cpp"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="func">
-      <memberdef kind="function" id="_py_embedded_functions_8h_1a3ddeb1b85023f01e48ff330ed82632b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="_py_embedded_functions_8h_1a136df0e82f08ecab6d108f031b13d59d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
-        <definition>int logEvent</definition>
+        <definition>static int logEvent</definition>
         <argsstring>(char *logString, int logLevel)</argsstring>
         <name>logEvent</name>
         <param>
@@ -73,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/cekees/proteus/proteus/PyEmbeddedFunctions.h" line="7" column="5" bodyfile="/Users/cekees/proteus/proteus/PyEmbeddedFunctions.h" bodystart="7" bodyend="55"/>
+        <location file="/Users/cekees/proteus/proteus/PyEmbeddedFunctions.h" line="7" column="12" bodyfile="/Users/cekees/proteus/proteus/PyEmbeddedFunctions.h" bodystart="7" bodyend="55"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -87,7 +135,7 @@
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Python.h&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//This<sp/>function<sp/>accepts<sp/>a<sp/>string<sp/>which<sp/>gets<sp/>passed<sp/>to<sp/>the<sp/>logEvent<sp/>Python<sp/>function<sp/>in<sp/>Profiling</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7" refid="_py_embedded_functions_8h_1a3ddeb1b85023f01e48ff330ed82632b4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_py_embedded_functions_8h_1a3ddeb1b85023f01e48ff330ed82632b4" kindref="member">logEvent</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>logString,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>logLevel)</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>logEvent(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>logString,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>logLevel)</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//logString<sp/>is<sp/>the<sp/>desired<sp/>string:<sp/>usually<sp/>set<sp/>with<sp/>sprintf()<sp/>to<sp/>combine<sp/>characters<sp/>with<sp/>numbers</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//logLevel<sp/>means<sp/>the<sp/>same<sp/>as<sp/>with<sp/>the<sp/>python<sp/>function</highlight><highlight class="normal"></highlight></codeline>

@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">proteus
-   &#160;<span id="projectnumber">1.7.3.dev0</span>
+   &#160;<span id="projectnumber">1.8.1</span>
    </div>
    <div id="projectbrief">C/C++/Fortran libraries</div>
   </td>
@@ -92,8 +92,7 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for mesh.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="mesh_8cpp__incl.svg" width="818" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="mesh_8cpp__incl.svg" width="818" height="187"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="mesh_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -128,6 +127,10 @@ Macros</h2></td></tr>
 <tr class="separator:gaeba813e2207db2b208be1bd5715a6f8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9b1a55a88d7b2238b2248a84f9ed5271"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mesh.html#ga9b1a55a88d7b2238b2248a84f9ed5271">regularRectangularToTriangularMeshNodes</a> (const int &amp;nx, const int &amp;ny, const double &amp;Lx, const double &amp;Ly, <a class="el" href="struct_mesh.html">Mesh</a> &amp;mesh)</td></tr>
 <tr class="separator:ga9b1a55a88d7b2238b2248a84f9ed5271"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f9312106efbbbda848683cf54aadde1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mesh_8cpp.html#a0f9312106efbbbda848683cf54aadde1">reorientNodes_tet</a> (double *nodeArray, int *nodes)</td></tr>
+<tr class="separator:a0f9312106efbbbda848683cf54aadde1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafa093be2bd4ccf49daf249b41d2e2c95"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mesh.html#gafa093be2bd4ccf49daf249b41d2e2c95">reorientTetrahedralMesh</a> (<a class="el" href="struct_mesh.html">Mesh</a> &amp;mesh)</td></tr>
+<tr class="separator:gafa093be2bd4ccf49daf249b41d2e2c95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga867bc8cc7de1299c306dcb28bf401aa2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mesh.html#ga867bc8cc7de1299c306dcb28bf401aa2">regularHexahedralToTetrahedralMeshElements</a> (const int &amp;nx, const int &amp;ny, const int &amp;nz, <a class="el" href="struct_mesh.html">Mesh</a> &amp;mesh)</td></tr>
 <tr class="separator:ga867bc8cc7de1299c306dcb28bf401aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga02ba112acd0bc3cff45d7c317ba9d635"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__mesh.html#ga02ba112acd0bc3cff45d7c317ba9d635">regularHexahedralToTetrahedralElementBoundaryMaterials</a> (const double &amp;Lx, const double &amp;Ly, const double &amp;Lz, <a class="el" href="struct_mesh.html">Mesh</a> &amp;mesh)</td></tr>
@@ -375,7 +378,7 @@ Macros</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mesh_8cpp_source.html#l03431">3431</a> of file <a class="el" href="mesh_8cpp_source.html">mesh.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mesh_8cpp_source.html#l03484">3484</a> of file <a class="el" href="mesh_8cpp_source.html">mesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -405,7 +408,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mesh_8cpp_source.html#l05760">5760</a> of file <a class="el" href="mesh_8cpp_source.html">mesh.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mesh_8cpp_source.html#l05813">5813</a> of file <a class="el" href="mesh_8cpp_source.html">mesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -485,7 +488,45 @@ Macros</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mesh_8cpp_source.html#l03576">3576</a> of file <a class="el" href="mesh_8cpp_source.html">mesh.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mesh_8cpp_source.html#l03629">3629</a> of file <a class="el" href="mesh_8cpp_source.html">mesh.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0f9312106efbbbda848683cf54aadde1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f9312106efbbbda848683cf54aadde1">&#9670;&nbsp;</a></span>reorientNodes_tet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void reorientNodes_tet </td>
+          <td>(</td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>nodeArray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>nodes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="mesh_8cpp_source.html#l00197">197</a> of file <a class="el" href="mesh_8cpp_source.html">mesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -541,7 +582,7 @@ Macros</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mesh_8cpp_source.html#l03452">3452</a> of file <a class="el" href="mesh_8cpp_source.html">mesh.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mesh_8cpp_source.html#l03505">3505</a> of file <a class="el" href="mesh_8cpp_source.html">mesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -591,7 +632,7 @@ Macros</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="mesh_8cpp_source.html#l03440">3440</a> of file <a class="el" href="mesh_8cpp_source.html">mesh.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="mesh_8cpp_source.html#l03493">3493</a> of file <a class="el" href="mesh_8cpp_source.html">mesh.cpp</a>.</p>
 
 </div>
 </div>
@@ -695,7 +736,7 @@ Macros</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 17 2020 16:38:56 for proteus by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Fri Jul 1 2022 11:18:13 for proteus by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

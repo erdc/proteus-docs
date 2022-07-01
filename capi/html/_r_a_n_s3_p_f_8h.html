@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">proteus
-   &#160;<span id="projectnumber">1.7.3.dev0</span>
+   &#160;<span id="projectnumber">1.8.1</span>
    </div>
    <div id="projectbrief">C/C++/Fortran libraries</div>
   </td>
@@ -78,8 +78,7 @@ $(function() {
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">RANS3PF.h File Reference</div>  </div>
 </div><!--header-->
@@ -94,11 +93,17 @@ $(function() {
 <code>#include &quot;<a class="el" href="_model_factory_8h_source.html">ModelFactory.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="_sed_closure_8h_source.html">SedClosure.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="equivalent__polynomials_8h_source.html">equivalent_polynomials.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="_arguments_dict_8h_source.html">ArgumentsDict.h</a>&quot;</code><br />
+<code>#include &quot;xtensor-python/pyarray.hpp&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for RANS3PF.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="_r_a_n_s3_p_f_8h__incl.svg" width="1190" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="_r_a_n_s3_p_f_8h__incl.svg" width="1482" height="202"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="_r_a_n_s3_p_f_8h__dep__incl.svg" width="118" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="_r_a_n_s3_p_f_8h_source.html">Go to the source code of this file.</a></p>
@@ -138,15 +143,6 @@ Functions</h2></td></tr>
 <tr class="separator:aab6210bc48cf84d943671eaa1d4035ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11262ed5248e45135a49999b901acae9"><td class="memItemLeft" align="right" valign="top">cppRANS3PF_base *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproteus.html#a11262ed5248e45135a49999b901acae9">proteus::newRANS3PF</a> (int nSpaceIn, int nQuadraturePoints_elementIn, int nDOF_mesh_trial_elementIn, int nDOF_trial_elementIn, int nDOF_test_elementIn, int nQuadraturePoints_elementBoundaryIn, int CompKernelFlag, double aDarcy, double betaForch, double grain, double packFraction, double packMargin, double maxFraction, double frFraction, double sigmaC, double C3e, double C4e, double eR, double fContact, double mContact, double nContact, double angFriction, double vos_limiter, double mu_fr_limiter)</td></tr>
 <tr class="separator:a11262ed5248e45135a49999b901acae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:aaef02b6e1d46c51958a20651954c60b0"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_r_a_n_s3_p_f_8h.html#aaef02b6e1d46c51958a20651954c60b0">DM</a> =0.0</td></tr>
-<tr class="separator:aaef02b6e1d46c51958a20651954c60b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4c90b58f2b5c70d46004521b792f727"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_r_a_n_s3_p_f_8h.html#af4c90b58f2b5c70d46004521b792f727">DM2</a> =0.0</td></tr>
-<tr class="separator:af4c90b58f2b5c70d46004521b792f727"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c858c7944d8ca1cbd20d6eeb52a1ae3"><td class="memItemLeft" align="right" valign="top">const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_r_a_n_s3_p_f_8h.html#a5c858c7944d8ca1cbd20d6eeb52a1ae3">DM3</a> =1.0</td></tr>
-<tr class="separator:a5c858c7944d8ca1cbd20d6eeb52a1ae3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="afeec1e6185553c73ac312c4a970b1e2d"></a>
@@ -161,7 +157,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00036">36</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00039">39</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
 
 </div>
 </div>
@@ -177,7 +173,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00034">34</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00037">37</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
 
 </div>
 </div>
@@ -193,7 +189,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00031">31</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00034">34</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
 
 </div>
 </div>
@@ -209,7 +205,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00033">33</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00036">36</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
 
 </div>
 </div>
@@ -225,7 +221,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00032">32</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00035">35</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
 
 </div>
 </div>
@@ -241,7 +237,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00042">42</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00045">45</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
 
 </div>
 </div>
@@ -257,7 +253,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00035">35</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00038">38</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
 
 </div>
 </div>
@@ -278,63 +274,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00013">13</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="aaef02b6e1d46c51958a20651954c60b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaef02b6e1d46c51958a20651954c60b0">&#9670;&nbsp;</a></span>DM</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const double DM =0.0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00038">38</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
-
-</div>
-</div>
-<a id="af4c90b58f2b5c70d46004521b792f727"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4c90b58f2b5c70d46004521b792f727">&#9670;&nbsp;</a></span>DM2</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const double DM2 =0.0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00039">39</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
-
-</div>
-</div>
-<a id="a5c858c7944d8ca1cbd20d6eeb52a1ae3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5c858c7944d8ca1cbd20d6eeb52a1ae3">&#9670;&nbsp;</a></span>DM3</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">const double DM3 =1.0</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00040">40</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_r_a_n_s3_p_f_8h_source.html#l00016">16</a> of file <a class="el" href="_r_a_n_s3_p_f_8h_source.html">RANS3PF.h</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 17 2020 16:38:57 for proteus by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Fri Jul 1 2022 11:18:13 for proteus by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

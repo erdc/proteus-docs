@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor" kind="class" language="Python" prot="public">
+    <compoundname>proteus::PostProcessingTools::AggregateVelocityPostProcessor</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a41c6bbe316fb7528e26778916dd4f13a" prot="public" static="yes" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus.PostProcessingTools.AggregateVelocityPostProcessor::vpp_types</definition>
+        <argsstring></argsstring>
+        <name>vpp_types</name>
+        <initializer>=  {&apos;p1-nc&apos;:<ref refid="df/d15/classproteus_1_1PostProcessingTools_1_1VPP__P1nc__RT0" kindref="compound">VPP_P1nc_RT0</ref>,    #P^1 non-conforming potential, RT_0 velocity repres. (e.g., Chou Tang 02)
+                 &apos;pwc&apos;:<ref refid="da/d93/classproteus_1_1PostProcessingTools_1_1VPP__PWC__RT0" kindref="compound">VPP_PWC_RT0</ref>,       #Larson Niklasson (global) piecewise constant correction, RT_0 velocity repres.
+                 &apos;pwl&apos;:<ref refid="d3/d48/classproteus_1_1PostProcessingTools_1_1VPP__PWL__RT0" kindref="compound">VPP_PWL_RT0</ref>,       #Larson Niklasson (local) piecewise linear correction, RT_0 velocity repres.
+                 &apos;pwl-bdm&apos;:<ref refid="d6/d89/classproteus_1_1PostProcessingTools_1_1VPP__PWL__BDM" kindref="compound">VPP_PWL_BDM</ref>,   #Larson Niklasson (local) piecewise linear correction, Brezzi Douglas Marini linear velocity repres.
+                 &apos;pwl-bdm2&apos;:<ref refid="d9/d3c/classproteus_1_1PostProcessingTools_1_1VPP__PWL__BDM2" kindref="compound">VPP_PWL_BDM2</ref>,        # Initial changes to adding BDM2 projection capabilities
+                 &apos;pwl-opt&apos;:<ref refid="d7/df7/classproteus_1_1PostProcessingTools_1_1VPP__PWL__RT0__OPT" kindref="compound">VPP_PWL_RT0_OPT</ref>,      #Larson Niklasson (local) piecewise linear correction, RT_0 velocity repres. optimized code
+                 &apos;pwl-bdm-opt&apos;:<ref refid="d4/d61/classproteus_1_1PostProcessingTools_1_1VPP__PWL__BDM__OPT" kindref="compound">VPP_PWL_BDM_OPT</ref>,  #Larson Niklasson (local) piecewise linear correction, Brezzi Douglas Marini linear velocity repres. optimized code
+                 &apos;sun-rt0&apos;:<ref refid="db/d45/classproteus_1_1PostProcessingTools_1_1VPP__SUN__RT0" kindref="compound">VPP_SUN_RT0</ref>,          #Sun and Wheeler global correction, RT_0 velocity repres.
+                 &apos;sun-gs-rt0&apos;:<ref refid="d0/ddf/classproteus_1_1PostProcessingTools_1_1VPP__SUN__GS__RT0" kindref="compound">VPP_SUN_GS_RT0</ref>,    #Sun and Wheeler local Gauss-Seidel, RT_0 velocity repres.
+                 &apos;point-eval&apos;:<ref refid="da/dd6/classproteus_1_1PostProcessingTools_1_1VPP__POINT__EVAL" kindref="compound">VPP_POINT_EVAL</ref>,    #direct pointwise evaluation of fluxes
+                 &apos;dg-point-eval&apos;:<ref refid="da/dd6/classproteus_1_1PostProcessingTools_1_1VPP__POINT__EVAL" kindref="compound">VPP_POINT_EVAL</ref>, #pointwise evaluation for dg
+                 &apos;point-eval-gwvd&apos;:<ref refid="d5/dcf/classproteus_1_1PostProcessingTools_1_1VPP__POINT__EVAL__GWVD" kindref="compound">VPP_POINT_EVAL_GWVD</ref>, #pointwise evaluation for dg using LDG method vel_DoFs, add in tjp
+                 &apos;dg&apos;:<ref refid="df/dd9/classproteus_1_1PostProcessingTools_1_1VPP__DG__RT0" kindref="compound">VPP_DG_RT0</ref>,            #dg scheme, RT_0 local velocity repres
+                 &apos;dg-bdm&apos;:<ref refid="dd/d86/classproteus_1_1PostProcessingTools_1_1VPP__DG__BDM" kindref="compound">VPP_DG_BDM</ref>,        #dg scheme,  Brezzi Douglas Marini linear velocity repres
+                 &apos;pwl-ib-fix-0&apos;:<ref refid="dc/daf/classproteus_1_1PostProcessingTools_1_1VPP__LOW__K__IB__PWL__RT0" kindref="compound">VPP_LOW_K_IB_PWL_RT0</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PostProcessingTools.py" line="3555" column="1" bodyfile="PostProcessingTools.py" bodystart="3555" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a01b1891d9d6298cf0d3798b13e3e5a3d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.PostProcessingTools.AggregateVelocityPostProcessor::postProcessingTypes</definition>
+        <argsstring></argsstring>
+        <name>postProcessingTypes</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PostProcessingTools.py" line="3571" column="1" bodyfile="PostProcessingTools.py" bodystart="3571" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a4afcca8bedc9b1233f701abf8f57a6c2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.PostProcessingTools.AggregateVelocityPostProcessor::vpp_algorithms</definition>
+        <argsstring></argsstring>
+        <name>vpp_algorithms</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PostProcessingTools.py" line="3572" column="1" bodyfile="PostProcessingTools.py" bodystart="3572" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a5002b222b89b804ac679c260921d04b4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.PostProcessingTools.AggregateVelocityPostProcessor::vt</definition>
+        <argsstring></argsstring>
+        <name>vt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PostProcessingTools.py" line="3573" column="1" bodyfile="PostProcessingTools.py" bodystart="3573" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a12eb6e6352719260cb168ccc1d695422" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.PostProcessingTools.AggregateVelocityPostProcessor::vpp_components</definition>
+        <argsstring></argsstring>
+        <name>vpp_components</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PostProcessingTools.py" line="3574" column="1" bodyfile="PostProcessingTools.py" bodystart="3574" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a03eaf4903a30b9c0652d0ee66e24d870" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.PostProcessingTools.AggregateVelocityPostProcessor.__init__</definition>
+        <argsstring>(self, postProcessingTypes=None, transport=None)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a01b1891d9d6298cf0d3798b13e3e5a3d" kindref="member">postProcessingTypes</ref></type>
+          <defname>postProcessingTypes</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>transport</type>
+          <defname>transport</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PostProcessingTools.py" line="3570" column="1" bodyfile="PostProcessingTools.py" bodystart="3570" bodyend="3586"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a3be77dd797b775ff1698c551fb3cd80c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.PostProcessingTools.AggregateVelocityPostProcessor.postprocess</definition>
+        <argsstring>(self, verbose=0)</argsstring>
+        <name>postprocess</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>verbose</type>
+          <defname>verbose</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>main functionality
+generate post-processed velocity field for attached
+VectorTransport object and store them in local dictionaries</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PostProcessingTools.py" line="3587" column="1" bodyfile="PostProcessingTools.py" bodystart="3587" bodyend="3597"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a597e74b0f95871b09454ada0558ec55e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.PostProcessingTools.AggregateVelocityPostProcessor.evaluateElementVelocityField</definition>
+        <argsstring>(self, x, ci)</argsstring>
+        <name>evaluateElementVelocityField</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>ci</type>
+          <defname>ci</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>evaluate velocity field assuming velocity_dofs already calculated
+for now assumes x shaped like nE x nq x 3
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PostProcessingTools.py" line="3598" column="1" bodyfile="PostProcessingTools.py" bodystart="3598" bodyend="3606"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a5a9175d1b61307f64b1f26a8d34850e3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.PostProcessingTools.AggregateVelocityPostProcessor.archiveVelocityValues</definition>
+        <argsstring>(self, archive, t, tCount, initialPhase=False, meshChanged=False)</argsstring>
+        <name>archiveVelocityValues</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>archive</type>
+          <defname>archive</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>tCount</type>
+          <defname>tCount</defname>
+        </param>
+        <param>
+          <type>initialPhase</type>
+          <defname>initialPhase</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>meshChanged</type>
+          <defname>meshChanged</defname>
+          <defval>False</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>write out post processed velocity values as a finite element space
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="PostProcessingTools.py" line="3607" column="1" bodyfile="PostProcessingTools.py" bodystart="3607" bodyend="3615"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>collect different velocity postprocessing algorithms for a (possibly) multicomponent system
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>proteus.PostProcessingTools.AggregateVelocityPostProcessor</label>
+        <link refid="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>object</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>proteus.PostProcessingTools.AggregateVelocityPostProcessor</label>
+        <link refid="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>object</label>
+      </node>
+    </collaborationgraph>
+    <location file="PostProcessingTools.py" line="3551" column="1" bodyfile="PostProcessingTools.py" bodystart="3551" bodyend="3621"/>
+    <listofallmembers>
+      <member refid="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a03eaf4903a30b9c0652d0ee66e24d870" prot="public" virt="non-virtual"><scope>proteus::PostProcessingTools::AggregateVelocityPostProcessor</scope><name>__init__</name></member>
+      <member refid="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a5a9175d1b61307f64b1f26a8d34850e3" prot="public" virt="non-virtual"><scope>proteus::PostProcessingTools::AggregateVelocityPostProcessor</scope><name>archiveVelocityValues</name></member>
+      <member refid="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a597e74b0f95871b09454ada0558ec55e" prot="public" virt="non-virtual"><scope>proteus::PostProcessingTools::AggregateVelocityPostProcessor</scope><name>evaluateElementVelocityField</name></member>
+      <member refid="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a3be77dd797b775ff1698c551fb3cd80c" prot="public" virt="non-virtual"><scope>proteus::PostProcessingTools::AggregateVelocityPostProcessor</scope><name>postprocess</name></member>
+      <member refid="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a01b1891d9d6298cf0d3798b13e3e5a3d" prot="public" virt="non-virtual"><scope>proteus::PostProcessingTools::AggregateVelocityPostProcessor</scope><name>postProcessingTypes</name></member>
+      <member refid="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a4afcca8bedc9b1233f701abf8f57a6c2" prot="public" virt="non-virtual"><scope>proteus::PostProcessingTools::AggregateVelocityPostProcessor</scope><name>vpp_algorithms</name></member>
+      <member refid="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a12eb6e6352719260cb168ccc1d695422" prot="public" virt="non-virtual"><scope>proteus::PostProcessingTools::AggregateVelocityPostProcessor</scope><name>vpp_components</name></member>
+      <member refid="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a41c6bbe316fb7528e26778916dd4f13a" prot="public" virt="non-virtual"><scope>proteus::PostProcessingTools::AggregateVelocityPostProcessor</scope><name>vpp_types</name></member>
+      <member refid="d7/d07/classproteus_1_1PostProcessingTools_1_1AggregateVelocityPostProcessor_1a5002b222b89b804ac679c260921d04b4" prot="public" virt="non-virtual"><scope>proteus::PostProcessingTools::AggregateVelocityPostProcessor</scope><name>vt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

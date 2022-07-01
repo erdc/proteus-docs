@@ -1,0 +1,1886 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder" kind="namespace" language="Python">
+    <compoundname>proteus::tests::cylinder2D::ibm_rans2p::cylinder</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a2dc3cbba2a14013d661d73d97246f44d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.ct</definition>
+        <argsstring></argsstring>
+        <name>ct</name>
+        <initializer>=  <ref refid="d0/d93/namespaceproteus_1_1Context_1a461242d050aceb1e84d9426074c67004" kindref="member">Context.Options</ref>([
+    (&quot;T&quot;, 4.0, &quot;Time interval [0, <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a2a0941e7e03329a54eee885114a452dd" kindref="member">T</ref>]&quot;),
+    (&quot;<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a36a37566a44d2867871b306d0d195264" kindref="member">he</ref>&quot;,0.12, &quot;maximum size of edges&quot;),
+    (&quot;onlySaveFinalSolution&quot;,False,&quot;Only save the final solution&quot;),
+    (&quot;<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ad85656341d60f20ab0453743f3648e75" kindref="member">parallel</ref>&quot;,False,&quot;Use <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ad85656341d60f20ab0453743f3648e75" kindref="member">parallel</ref> or not&quot;),
+    (&quot;<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1af76fe57577a0db1f745cc1dc06843c85" kindref="member">dt_fixed</ref>&quot;,0.005,&quot;fixed time step&quot;),
+    ##################################
+    (&quot;<ref refid="d5/d16/classproteus_1_1NumericalFlux_1_1StrongDirichlet" kindref="compound">StrongDirichlet</ref>&quot;,     False,&quot;weak or strong&quot;),
+    (&quot;use_sbm&quot;,             0,&quot;use sbm instead of imb&quot;),
+    (&quot;<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a7e0d37241b216c822c75c57017d03ed1" kindref="member">spaceOrder</ref>&quot;,          1,&quot;FE space for velocity&quot;),
+    (&quot;timeOrder&quot;,           2,&quot;1=be or 2=vbdf&quot;),#both works, but 2 gives better cd-cl
+    (&quot;use_supg&quot;,            1.,&quot;Use supg or not&quot;),
+    (&quot;nonconservative&quot;,     1.,&quot;0=conservative&quot;),
+    (&quot;forceStrongDirichlet&quot;,False,&quot;strong or weak&quot;),
+    ##################################
+    (&quot;<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a99a104ede17ecbc20f096058317a17ab" kindref="member">use_ball_as_particle</ref>&quot;,1,&quot;1 or 0 == use ball or particle&quot;),
+    (&quot;isHotStart&quot;,False,&quot;Use hotStart or not&quot;),
+    (&quot;use_regions&quot;,False,&quot;Use refinement <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a381bdf72a89959fc8b73e0dee234663c" kindref="member">regions</ref>&quot;),
+], mutable=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="10" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a96f3eab0f326655cba865718a31a8d0f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.use_supg</definition>
+        <argsstring></argsstring>
+        <name>use_supg</name>
+        <initializer>=  ct.use_supg</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="34" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1aa8811b31b0ca047b747e7b919ff1b696" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.USE_SBM</definition>
+        <argsstring></argsstring>
+        <name>USE_SBM</name>
+        <initializer>= ct.use_sbm</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="38" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a61b92728fbb9be1e197481da241a859e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder.sedimentDynamics</definition>
+        <argsstring></argsstring>
+        <name>sedimentDynamics</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="43" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ab045764d4b7e9b06d9943b4702e0d263" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder.genMesh</definition>
+        <argsstring></argsstring>
+        <name>genMesh</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="44" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ade492d8d1c13f97269ffc6f7bd461b45" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder.movingDomain</definition>
+        <argsstring></argsstring>
+        <name>movingDomain</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="45" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a56a41107f5e5e78bebeafd9d677db180" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder.applyRedistancing</definition>
+        <argsstring></argsstring>
+        <name>applyRedistancing</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="46" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1acc31ef720d10acd3efdc8b04187cbd51" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder.useOldPETSc</definition>
+        <argsstring></argsstring>
+        <name>useOldPETSc</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="47" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ac66cb8d82727616bf7a4f332d4fa103d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder::useSuperlu</definition>
+        <argsstring></argsstring>
+        <name>useSuperlu</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="48" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ad85656341d60f20ab0453743f3648e75" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.parallel</definition>
+        <argsstring></argsstring>
+        <name>parallel</name>
+        <initializer>=  ct.parallel</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="51" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a1b91fb061f19db1e5bcd51cceb32cb33" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder::usePETSc</definition>
+        <argsstring></argsstring>
+        <name>usePETSc</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="53" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ade3ca00491d7fbac7df4174d3f5d7f80" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.parallelPartitioningType</definition>
+        <argsstring></argsstring>
+        <name>parallelPartitioningType</name>
+        <initializer>=  MeshParallelPartitioningTypes.node</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="57" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a38b1706c87a93ce8a44d077a377bb864" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::cylinder2D::ibm_rans2p::cylinder::nLayersOfOverlapForParallel</definition>
+        <argsstring></argsstring>
+        <name>nLayersOfOverlapForParallel</name>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="58" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a5a7ca9c66ed67823fed569847a2eb407" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string proteus::tests::cylinder2D::ibm_rans2p::cylinder::timeDiscretization</definition>
+        <argsstring></argsstring>
+        <name>timeDiscretization</name>
+        <initializer>=  &apos;vbdf&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="61" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a7e0d37241b216c822c75c57017d03ed1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.spaceOrder</definition>
+        <argsstring></argsstring>
+        <name>spaceOrder</name>
+        <initializer>=  ct.spaceOrder</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="65" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a051e8df86f895f8f5be8bc776657ca4f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::cylinder2D::ibm_rans2p::cylinder.pspaceOrder</definition>
+        <argsstring></argsstring>
+        <name>pspaceOrder</name>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="66" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1afbcc7b3ad5e2933fae69820a45f6585f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder.useHex</definition>
+        <argsstring></argsstring>
+        <name>useHex</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="67" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1aeea13c18097379b3fdf238e5904f116e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.useRBLES</definition>
+        <argsstring></argsstring>
+        <name>useRBLES</name>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="68" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a928d3b4775becffeba10b1ee0534040d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.useMetrics</definition>
+        <argsstring></argsstring>
+        <name>useMetrics</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="69" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a36b9697e9aa2bf96296c18e3a883566f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder.applyCorrection</definition>
+        <argsstring></argsstring>
+        <name>applyCorrection</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="70" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ad10f2a55f4691a0bdafd978d359e38dd" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.useVF</definition>
+        <argsstring></argsstring>
+        <name>useVF</name>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="71" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1af849e0c7b032f5e08aa9eafbe5c252da" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder.useOnlyVF</definition>
+        <argsstring></argsstring>
+        <name>useOnlyVF</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="72" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1af3540cb7ccd417758c8e4c7ec802cede" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::cylinder2D::ibm_rans2p::cylinder.useRANS</definition>
+        <argsstring></argsstring>
+        <name>useRANS</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="73" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a7ef9244f0c4d2a7e718c3ca614fe038e" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder.openTop</definition>
+        <argsstring></argsstring>
+        <name>openTop</name>
+        <initializer>= True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="76" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ab96b0e9855f627e837b33770cf74d951" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.fl_H</definition>
+        <argsstring></argsstring>
+        <name>fl_H</name>
+        <initializer>=  0.41</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="77" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae7096534c345b84c41100489f805c7aa" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.weak_bc_penalty_constant</definition>
+        <argsstring></argsstring>
+        <name>weak_bc_penalty_constant</name>
+        <initializer>=  100.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="92" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a53543ff174fbbdba60c7d2f17083a44a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::cylinder2D::ibm_rans2p::cylinder.nLevels</definition>
+        <argsstring></argsstring>
+        <name>nLevels</name>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="93" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a10a3092da2c9ff13a1a298a5050de2cc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::cylinder2D::ibm_rans2p::cylinder.nd</definition>
+        <argsstring></argsstring>
+        <name>nd</name>
+        <initializer>=  2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="102" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1aa90eb2c97da55b20c07e590e31f1fc79" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder::hFactor</definition>
+        <argsstring></argsstring>
+        <name>hFactor</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="105" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a8320342a83b13162fe5d951673cad246" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.basis</definition>
+        <argsstring></argsstring>
+        <name>basis</name>
+        <initializer>=  <ref refid="d9/d40/classproteus_1_1FemTools_1_1C0__AffineLinearOnCubeWithNodalBasis" kindref="compound">C0_AffineLinearOnCubeWithNodalBasis</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="107" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a87e1b552760885f75a084053200489d4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.elementQuadrature</definition>
+        <argsstring></argsstring>
+        <name>elementQuadrature</name>
+        <initializer>=  <ref refid="dc/d26/classproteus_1_1Quadrature_1_1CubeGaussQuadrature" kindref="compound">CubeGaussQuadrature</ref>(<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a10a3092da2c9ff13a1a298a5050de2cc" kindref="member">nd</ref>, 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="108" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ad456d873a3facc856b1e87dfff2a9c9c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.elementBoundaryQuadrature</definition>
+        <argsstring></argsstring>
+        <name>elementBoundaryQuadrature</name>
+        <initializer>=  <ref refid="dc/d26/classproteus_1_1Quadrature_1_1CubeGaussQuadrature" kindref="compound">CubeGaussQuadrature</ref>(<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a10a3092da2c9ff13a1a298a5050de2cc" kindref="member">nd</ref> - 1, 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="109" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a94f2766820b5ce5ed1d89645775f1c1a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.pbasis</definition>
+        <argsstring></argsstring>
+        <name>pbasis</name>
+        <initializer>=  <ref refid="d9/d40/classproteus_1_1FemTools_1_1C0__AffineLinearOnCubeWithNodalBasis" kindref="compound">C0_AffineLinearOnCubeWithNodalBasis</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="127" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a5e05a899593b1584327efa2dd901d4b0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.pressure_pointGauges</definition>
+        <argsstring></argsstring>
+        <name>pressure_pointGauges</name>
+        <initializer>=  PointGauges(gauges  = (((&apos;p&apos;,), ((0.15, 0.2, 0.0),(0.25, 0.2, 0.0),),),),
+                                   fileName=&apos;front_back_pressure_sample_all.csv&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="145" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae889b1a8d6a44f52a74aa98078b4188b" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::cylinder2D::ibm_rans2p::cylinder.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <initializer>=  (2.2, 0.41)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="156" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a36a37566a44d2867871b306d0d195264" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  ct.he</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="157" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a90d72dc3fc07a0a5d66d42188e7ce614" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder.structured</definition>
+        <argsstring></argsstring>
+        <name>structured</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="159" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a8062695b409c35c4c39d5bc4af044505" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <initializer>=  ceil(<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae889b1a8d6a44f52a74aa98078b4188b" kindref="member">L</ref>[0]/ct.he)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="162" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae5e55fa3cfe9d99a4f1a53314b5e3bec" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <initializer>=  ceil(<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae889b1a8d6a44f52a74aa98078b4188b" kindref="member">L</ref>[1]/ct.he)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="163" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ad925cd08f3b8ed5aab5524f35500ad91" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder.hex</definition>
+        <argsstring></argsstring>
+        <name>hex</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="164" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ac473091c57bf18b5208af4ebb0844141" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  <ref refid="de/d03/classproteus_1_1Domain_1_1RectangularDomain" kindref="compound">Domain.RectangularDomain</ref>(<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae889b1a8d6a44f52a74aa98078b4188b" kindref="member">L</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="165" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1aac1152872d03384d0dd01f78c5b6bee3" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::cylinder2D::ibm_rans2p::cylinder.boundaries</definition>
+        <argsstring></argsstring>
+        <name>boundaries</name>
+        <initializer>=  [&apos;bottom&apos;, &apos;right&apos;, &apos;top&apos;, &apos;left&apos;, &apos;front&apos;, &apos;back&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="167" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a788312aa96dd75f09cc48b71eecc80a9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>=  dict([(key, i + 1) for (i, key) in enumerate(<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1aac1152872d03384d0dd01f78c5b6bee3" kindref="member">boundaries</ref>)])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="168" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a2eb6cb8b7424db11ef816a66afb993cb" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::cylinder2D::ibm_rans2p::cylinder::vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <initializer>=  [[0.0, 0.0],  #0
+                        [<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae889b1a8d6a44f52a74aa98078b4188b" kindref="member">L</ref>[0], 0.0],  #1
+                        [<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae889b1a8d6a44f52a74aa98078b4188b" kindref="member">L</ref>[0], <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae889b1a8d6a44f52a74aa98078b4188b" kindref="member">L</ref>[1]],  #2
+                        [0.0, <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae889b1a8d6a44f52a74aa98078b4188b" kindref="member">L</ref>[1]],  #3
+                        [0.2-0.16,<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae889b1a8d6a44f52a74aa98078b4188b" kindref="member">L</ref>[1]*0.2],
+                        [0.2-0.16,<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae889b1a8d6a44f52a74aa98078b4188b" kindref="member">L</ref>[1]*0.8],
+                        [0.2+0.3,<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae889b1a8d6a44f52a74aa98078b4188b" kindref="member">L</ref>[1]*0.8],
+                        [0.2+0.3,<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae889b1a8d6a44f52a74aa98078b4188b" kindref="member">L</ref>[1]*0.2],
+                        # the following are set for refining the mesh
+                        [0.2-0.06,0.2-0.06],
+                        [0.2-0.06,0.2+0.06],
+                        [0.2+0.06,0.2+0.06],
+                        [0.2+0.06,0.2-0.06]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="174" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a2517896c3d260de9fb3bd89f3bb7349e" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::cylinder2D::ibm_rans2p::cylinder::vertexFlags</definition>
+        <argsstring></argsstring>
+        <name>vertexFlags</name>
+        <initializer>=  [<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a788312aa96dd75f09cc48b71eecc80a9" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+                           <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a788312aa96dd75f09cc48b71eecc80a9" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+                           <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a788312aa96dd75f09cc48b71eecc80a9" kindref="member">boundaryTags</ref>[&apos;top&apos;],
+                           <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a788312aa96dd75f09cc48b71eecc80a9" kindref="member">boundaryTags</ref>[&apos;top&apos;],
+                           # the interior <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a2eb6cb8b7424db11ef816a66afb993cb" kindref="member">vertices</ref> should be flaged to 0
+                           0, 0, 0, 0,
+                           0, 0, 0, 0 ]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="190" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a48118606d0d09cee1063d673c4f2ed83" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::cylinder2D::ibm_rans2p::cylinder::segments</definition>
+        <argsstring></argsstring>
+        <name>segments</name>
+        <initializer>=  [[0, 1],
+                        [1, 2],
+                        [2, 3],
+                        [3, 0],
+                        #Interior segments
+                        [4, 5],
+                        [5, 6],
+                        [6, 7],
+                        [7,4],
+                        [8,9],
+                        [9,10],
+                        [10,11],
+                        [11,8]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="198" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a8a6cf2cbdcae0029e3f86b58d5cc9dd0" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::cylinder2D::ibm_rans2p::cylinder::segmentFlags</definition>
+        <argsstring></argsstring>
+        <name>segmentFlags</name>
+        <initializer>=  [<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a788312aa96dd75f09cc48b71eecc80a9" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+                            <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a788312aa96dd75f09cc48b71eecc80a9" kindref="member">boundaryTags</ref>[&apos;right&apos;],
+                            <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a788312aa96dd75f09cc48b71eecc80a9" kindref="member">boundaryTags</ref>[&apos;top&apos;],
+                            <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a788312aa96dd75f09cc48b71eecc80a9" kindref="member">boundaryTags</ref>[&apos;left&apos;],
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0,
+                            0]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="211" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a381bdf72a89959fc8b73e0dee234663c" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::cylinder2D::ibm_rans2p::cylinder::regions</definition>
+        <argsstring></argsstring>
+        <name>regions</name>
+        <initializer>=  [[0.95*<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae889b1a8d6a44f52a74aa98078b4188b" kindref="member">L</ref>[0], 0.2],[0.2-0.15,0.2],[0.2,0.2]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="224" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a6e647782810ec9b3b994a25618bd1557" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::cylinder2D::ibm_rans2p::cylinder::regionFlags</definition>
+        <argsstring></argsstring>
+        <name>regionFlags</name>
+        <initializer>=  [1,2,3]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="225" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="225" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ac6536580c4b6a5d3b3f4dd51ffb2a06b" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::cylinder2D::ibm_rans2p::cylinder::regionConstraints</definition>
+        <argsstring></argsstring>
+        <name>regionConstraints</name>
+        <initializer>= [0.5*<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a36a37566a44d2867871b306d0d195264" kindref="member">he</ref>**2,0.5*(old_div(<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a36a37566a44d2867871b306d0d195264" kindref="member">he</ref>,2.0))**2,0.5*(old_div(<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a36a37566a44d2867871b306d0d195264" kindref="member">he</ref>,6.0))**2]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="226" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a915695a46419f445ae794bfc92c1c260" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.polyfile</definition>
+        <argsstring></argsstring>
+        <name>polyfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="282" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1acb8e72023d3814fe75474e4cb12c1d82" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string proteus::tests::cylinder2D::ibm_rans2p::cylinder.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <initializer>=  &quot;VApq30Dena&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="286" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="286" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a2a0941e7e03329a54eee885114a452dd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <initializer>= ct.T</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="292" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1af76fe57577a0db1f745cc1dc06843c85" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.dt_fixed</definition>
+        <argsstring></argsstring>
+        <name>dt_fixed</name>
+        <initializer>=  ct.dt_fixed</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="293" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a6d0482c529b109893601a84c104621f4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.dt_init</definition>
+        <argsstring></argsstring>
+        <name>dt_init</name>
+        <initializer>=  ct.dt_fixed</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="294" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1aa7a9a85bbd6320f8b7428a151a8d7d3c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.runCFL</definition>
+        <argsstring></argsstring>
+        <name>runCFL</name>
+        <initializer>= 0.33</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="297" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a7dba368d61f3842124ba071ec309c617" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.nDTout</definition>
+        <argsstring></argsstring>
+        <name>nDTout</name>
+        <initializer>=  int(round(<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a2a0941e7e03329a54eee885114a452dd" kindref="member">T</ref>/<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1af76fe57577a0db1f745cc1dc06843c85" kindref="member">dt_fixed</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="298" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1aee38703161166a466ff2dbc8b0e05c03" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::cylinder2D::ibm_rans2p::cylinder::tnList</definition>
+        <argsstring></argsstring>
+        <name>tnList</name>
+        <initializer>=  [0.0,<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a6d0482c529b109893601a84c104621f4" kindref="member">dt_init</ref>]+[i*<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1af76fe57577a0db1f745cc1dc06843c85" kindref="member">dt_fixed</ref> for i in range(1,<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a7dba368d61f3842124ba071ec309c617" kindref="member">nDTout</ref>+1)]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="300" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a4a342c9c88ac164d35fdea80b0754b81" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.ns_forceStrongDirichlet</definition>
+        <argsstring></argsstring>
+        <name>ns_forceStrongDirichlet</name>
+        <initializer>=  ct.StrongDirichlet</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="309" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="309" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a0ea42fc5cab00f83049947af9fab435b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder.ns_sed_forceStrongDirichlet</definition>
+        <argsstring></argsstring>
+        <name>ns_sed_forceStrongDirichlet</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="315" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="315" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a447e775de01a5bd01e8096979e199d1b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder::ns_shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>ns_shockCapturingFactor</name>
+        <initializer>=  0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="317" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="317" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a286e81992dd4880e3be4a13ce5e92f02" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder::ns_lag_shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>ns_lag_shockCapturing</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="318" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="318" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a9745a19a9d6fbbc32db37f3b9e1b25a9" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder::ns_lag_subgridError</definition>
+        <argsstring></argsstring>
+        <name>ns_lag_subgridError</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="319" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a668d4be95769802f2674421ac5197cb4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder::ls_shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>ls_shockCapturingFactor</name>
+        <initializer>=  0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="320" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a47e85342d886fd1368e36c31cfd75104" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder::ls_lag_shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>ls_lag_shockCapturing</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="321" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="321" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a026146d8d9dd5865831aa1f65a8e7613" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder::ls_sc_uref</definition>
+        <argsstring></argsstring>
+        <name>ls_sc_uref</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="322" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="322" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ad6a619837a4ad8730b9e9c9b39289b0c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder::ls_sc_beta</definition>
+        <argsstring></argsstring>
+        <name>ls_sc_beta</name>
+        <initializer>=  1.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="323" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="323" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a79b85669a22f3e2586f34d2e4e7362eb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder::vof_shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>vof_shockCapturingFactor</name>
+        <initializer>=  0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="324" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="324" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ab7b3addd34b16dd9bea91d353fe5dde8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder::vof_lag_shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>vof_lag_shockCapturing</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="325" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="325" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a571d4f68c35e6af9e9d7e3e5cedc0b16" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder::vof_sc_uref</definition>
+        <argsstring></argsstring>
+        <name>vof_sc_uref</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="326" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a63b4fc77dc3ccecc1f9d9e8a14818c25" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder::vof_sc_beta</definition>
+        <argsstring></argsstring>
+        <name>vof_sc_beta</name>
+        <initializer>=  1.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="327" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="327" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a8e39e21ba476c3ff4b9ee4beaaab21c4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder::rd_shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>rd_shockCapturingFactor</name>
+        <initializer>=  0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="328" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a513496f8e5c9787819479b8287594337" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder::rd_lag_shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>rd_lag_shockCapturing</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="329" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="329" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1aad1986132550886f8f737572644cbd7e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder::epsFact_density</definition>
+        <argsstring></argsstring>
+        <name>epsFact_density</name>
+        <initializer>=  1.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="330" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a6293294243294958a138ba6e5d9a2035" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.epsFact_viscosity</definition>
+        <argsstring></argsstring>
+        <name>epsFact_viscosity</name>
+        <initializer>=  <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1aad1986132550886f8f737572644cbd7e" kindref="member">epsFact_density</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="331" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="331" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a88f09421e9a2b64129c8656fe97417a5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder::epsFact_redistance</definition>
+        <argsstring></argsstring>
+        <name>epsFact_redistance</name>
+        <initializer>=  0.33</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="332" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="332" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a885842694a440651cf9be4ae88645616" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder::epsFact_consrv_diffusion</definition>
+        <argsstring></argsstring>
+        <name>epsFact_consrv_diffusion</name>
+        <initializer>=  10.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="333" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="333" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1aba6cedbc82c9d194c11ee5a3b1933ae0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder::redist_Newton</definition>
+        <argsstring></argsstring>
+        <name>redist_Newton</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="334" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="334" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a418450ba137c81b458d185bfb6803784" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder::kappa_shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>kappa_shockCapturingFactor</name>
+        <initializer>=  0.25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="335" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="335" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1af47032e791054a988bf20d3365100145" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder::kappa_lag_shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>kappa_lag_shockCapturing</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="336" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ac750a0a29a9b5174b5cf79284dafdab6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder::kappa_sc_uref</definition>
+        <argsstring></argsstring>
+        <name>kappa_sc_uref</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="337" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a113328062b57f98636b313920cb4e304" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder::kappa_sc_beta</definition>
+        <argsstring></argsstring>
+        <name>kappa_sc_beta</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="338" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="338" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a8c8c17f632a44808bd515d44fe1e991e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder::dissipation_shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>dissipation_shockCapturingFactor</name>
+        <initializer>=  0.25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="339" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="339" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae53d54d7c6afb1fa79b86f9218b6b783" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder::dissipation_lag_shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>dissipation_lag_shockCapturing</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="340" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="340" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a9f10d2eb2a80ccd560c5aa6713c837fb" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder::dissipation_sc_uref</definition>
+        <argsstring></argsstring>
+        <name>dissipation_sc_uref</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="341" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae1ca3752dde9b217fe47a13727e9ef43" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder::dissipation_sc_beta</definition>
+        <argsstring></argsstring>
+        <name>dissipation_sc_beta</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="342" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="342" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a1538c9e977ffd90cb9df1e6f92382c49" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.ns_sed_shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>ns_sed_shockCapturingFactor</name>
+        <initializer>=  0.9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="347" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a0135e13c09e42b11dec21828b6b96065" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder.ns_sed_lag_shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>ns_sed_lag_shockCapturing</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="348" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="348" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a2a731ed227d8fb21c24e562224aa4a44" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder.ns_sed_lag_subgridError</definition>
+        <argsstring></argsstring>
+        <name>ns_sed_lag_subgridError</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="349" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="349" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1afc88e045cf475c40548816485f477ff9" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.vos_shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>vos_shockCapturingFactor</name>
+        <initializer>=  0.9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="358" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="358" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a1af4b67c0c3bc29f683574ac52162169" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::cylinder2D::ibm_rans2p::cylinder.vos_lag_shockCapturing</definition>
+        <argsstring></argsstring>
+        <name>vos_lag_shockCapturing</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="359" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="359" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae567a51158aa762c1b71ef0fad33f90c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.vos_sc_uref</definition>
+        <argsstring></argsstring>
+        <name>vos_sc_uref</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="360" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="360" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1acbb5e4d0a032ffd946c932e4f1779f7b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.vos_sc_beta</definition>
+        <argsstring></argsstring>
+        <name>vos_sc_beta</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="361" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="361" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a99076e15715ef534cc1b46080b911a47" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.ns_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>ns_nl_atol_res</name>
+        <initializer>=  <ref refid="db/dcc/jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a36a37566a44d2867871b306d0d195264" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="379" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="379" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ab858a3072105be433fe1e34bd73dfaac" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.ns_sed_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>ns_sed_nl_atol_res</name>
+        <initializer>=  <ref refid="db/dcc/jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a36a37566a44d2867871b306d0d195264" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="380" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="380" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1afc3e8216066a0bca38075e23036bf6f4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.vof_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>vof_nl_atol_res</name>
+        <initializer>=  <ref refid="db/dcc/jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a36a37566a44d2867871b306d0d195264" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="381" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="381" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a74599eb6af6b8f676677032088d17415" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.vos_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>vos_nl_atol_res</name>
+        <initializer>=  <ref refid="db/dcc/jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a36a37566a44d2867871b306d0d195264" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="382" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="382" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ab73c60927f23c99e53b9f39abe23adc7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.ls_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>ls_nl_atol_res</name>
+        <initializer>=  <ref refid="db/dcc/jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a36a37566a44d2867871b306d0d195264" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="383" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="383" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a6214300a7cb594f680ff899f547acd4d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.rd_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>rd_nl_atol_res</name>
+        <initializer>=  <ref refid="db/dcc/jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.05 * <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a36a37566a44d2867871b306d0d195264" kindref="member">he</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="384" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="384" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1af76a751cca60eea880245ed604088649" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.mcorr_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>mcorr_nl_atol_res</name>
+        <initializer>=  <ref refid="db/dcc/jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a36a37566a44d2867871b306d0d195264" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="385" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ad7f6d40fd593ac5b28e8bed357f70dce" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.kappa_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>kappa_nl_atol_res</name>
+        <initializer>=  <ref refid="db/dcc/jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a36a37566a44d2867871b306d0d195264" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="386" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="386" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a1593592845ebefb0ca991f16a507bf79" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.dissipation_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>dissipation_nl_atol_res</name>
+        <initializer>=  <ref refid="db/dcc/jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a36a37566a44d2867871b306d0d195264" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="387" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="387" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a4b43eb8a66ea7f0c51c158c7c6c6ff84" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.phi_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>phi_nl_atol_res</name>
+        <initializer>=  <ref refid="db/dcc/jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a36a37566a44d2867871b306d0d195264" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="388" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="388" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a601a90ad80ab2dd69faf6f28bd6ba9a3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.pressure_nl_atol_res</definition>
+        <argsstring></argsstring>
+        <name>pressure_nl_atol_res</name>
+        <initializer>=  <ref refid="db/dcc/jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-10, 0.01 * <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a36a37566a44d2867871b306d0d195264" kindref="member">he</ref> ** 2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="389" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="389" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a5ba3af469b90654859b255929d7e4003" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::cylinder2D::ibm_rans2p::cylinder::ns_closure</definition>
+        <argsstring></argsstring>
+        <name>ns_closure</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="394" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="394" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a6421e0d2d7b631b6d1a2ba4832c32f72" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::cylinder2D::ibm_rans2p::cylinder.ns_sed_closure</definition>
+        <argsstring></argsstring>
+        <name>ns_sed_closure</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="395" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="395" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae255d031761b4fed293248ffdd6481ea" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.rho_0</definition>
+        <argsstring></argsstring>
+        <name>rho_0</name>
+        <initializer>=  1.0e0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="403" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ade40e9de52ff3365dc77c3b7c9a75593" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.nu_0</definition>
+        <argsstring></argsstring>
+        <name>nu_0</name>
+        <initializer>=  1.0e-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="404" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="404" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a47c6ac47bba3594c4a589cf2df0ac7d3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.rho_1</definition>
+        <argsstring></argsstring>
+        <name>rho_1</name>
+        <initializer>=  <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae255d031761b4fed293248ffdd6481ea" kindref="member">rho_0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="407" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="407" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a6d75db5cb93df7daa35a5bc6cbc9c012" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.nu_1</definition>
+        <argsstring></argsstring>
+        <name>nu_1</name>
+        <initializer>=  <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ade40e9de52ff3365dc77c3b7c9a75593" kindref="member">nu_0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="408" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="408" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a92d6ef2229fc62f17d5f96d41c6f0fdf" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.rho_s</definition>
+        <argsstring></argsstring>
+        <name>rho_s</name>
+        <initializer>=  <ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae255d031761b4fed293248ffdd6481ea" kindref="member">rho_0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="412" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="412" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a26fef2f61430995d5712c430d5d9efa6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.nu_s</definition>
+        <argsstring></argsstring>
+        <name>nu_s</name>
+        <initializer>=  10000.0*<ref refid="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ade40e9de52ff3365dc77c3b7c9a75593" kindref="member">nu_0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="413" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a72395e0518ca4ff49fbb371bf0a67056" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.dragAlpha</definition>
+        <argsstring></argsstring>
+        <name>dragAlpha</name>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="414" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="414" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a4a814771194d60a32a7ea3aea5b01a02" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.sigma_01</definition>
+        <argsstring></argsstring>
+        <name>sigma_01</name>
+        <initializer>=  0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="417" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="417" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a82e9174445c40730b35f4a1a39906cd1" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::cylinder2D::ibm_rans2p::cylinder.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>=  [0.0, 0.0]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="420" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="420" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a40d2a5e8050cf8d12dbb75acee44441c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.waterLine_x</definition>
+        <argsstring></argsstring>
+        <name>waterLine_x</name>
+        <initializer>=  0.75</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="423" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="423" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a0049fa803ade1730d21ccd8d7022384f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.waterLine_z</definition>
+        <argsstring></argsstring>
+        <name>waterLine_z</name>
+        <initializer>=  1.6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="424" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="424" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a202d28480da04e0e35a762cace3b2b5a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::cylinder2D::ibm_rans2p::cylinder.U</definition>
+        <argsstring></argsstring>
+        <name>U</name>
+        <initializer>=  1.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="428" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="428" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a99a104ede17ecbc20f096058317a17ab" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.use_ball_as_particle</definition>
+        <argsstring></argsstring>
+        <name>use_ball_as_particle</name>
+        <initializer>=  ct.use_ball_as_particle</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="455" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="455" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a96e7a54c292cf99ecb6baacf3cdc0b91" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::cylinder2D::ibm_rans2p::cylinder.nParticles</definition>
+        <argsstring></argsstring>
+        <name>nParticles</name>
+        <initializer>=  1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="456" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="456" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a72ffb7df76e1e3de1ee174dff73d8787" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.ball_center</definition>
+        <argsstring></argsstring>
+        <name>ball_center</name>
+        <initializer>=  np.array([[0.2,0.2,0.0],])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="457" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="457" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a01bb6dde4c1b2eb39e01fc9c1608304d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.ball_radius</definition>
+        <argsstring></argsstring>
+        <name>ball_radius</name>
+        <initializer>=  np.array([0.05,])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="458" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="458" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a9df3734189a855c0694d1cd8d4e02148" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.ball_velocity</definition>
+        <argsstring></argsstring>
+        <name>ball_velocity</name>
+        <initializer>=  np.array([[0.0,0.0,0.0],])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="459" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="459" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a7891d0e339d220a726e12539076561b8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::cylinder2D::ibm_rans2p::cylinder.ball_angular_velocity</definition>
+        <argsstring></argsstring>
+        <name>ball_angular_velocity</name>
+        <initializer>=  np.array([[0.0,0.0,0.0],])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="460" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="460" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a0d198830feb9ad630a7c9d234f5f7b1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.cylinder2D.ibm_rans2p.cylinder.velRamp</definition>
+        <argsstring>(t)</argsstring>
+        <name>velRamp</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="429" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="429" bodyend="438"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1a56a4a2a2e79b9c1502a425e268cfaef9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.cylinder2D.ibm_rans2p.cylinder.signedDistance</definition>
+        <argsstring>(x)</argsstring>
+        <name>signedDistance</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="439" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="439" bodyend="441"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1af80ac590aaa76b791538b7f7632dd139" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.cylinder2D.ibm_rans2p.cylinder.particle_sdf</definition>
+        <argsstring>(t, x)</argsstring>
+        <name>particle_sdf</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="442" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="442" bodyend="448"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/df7/namespaceproteus_1_1tests_1_1cylinder2D_1_1ibm__rans2p_1_1cylinder_1ae39f82811f468c49ef8cbce7cd7ac8ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.cylinder2D.ibm_rans2p.cylinder.particle_vel</definition>
+        <argsstring>(t, x)</argsstring>
+        <name>particle_vel</name>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="449" column="1" bodyfile="tests/cylinder2D/ibm_rans2p/cylinder.py" bodystart="449" bodyend="454"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/cylinder2D/ibm_rans2p/cylinder.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

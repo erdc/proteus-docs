@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacela__gauss__2d__p" kind="namespace" language="Python">
+    <compoundname>la_gauss_2d_p</compoundname>
+    <innerclass refid="classla__gauss__2d__p_1_1ConstantVelocityGaussian2D" prot="public">la_gauss_2d_p::ConstantVelocityGaussian2D</innerclass>
+    <innerclass refid="classla__gauss__2d__p_1_1RotatingGaussian2D" prot="public">la_gauss_2d_p::RotatingGaussian2D</innerclass>
+    <innerclass refid="classla__gauss__2d__p_1_1UnitSquareRotation" prot="public">la_gauss_2d_p::UnitSquareRotation</innerclass>
+      <sectiondef kind="user-defined">
+      <memberdef kind="variable" id="group__test_1ga208867cbb4b2aef19ca22b1a62b76f35" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int la_gauss_2d_p.nd</definition>
+        <argsstring></argsstring>
+        <name>nd</name>
+        <initializer>=  2</initializer>
+        <briefdescription>
+<para>Conservative linear advection of a cone in a rotating velocity field. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><formula id="152">\begin{eqnarray*} \phi_t + \nabla \cdot (\vec u \phi) &amp;=&amp; 0 \\ \Omega &amp;=&amp; [0,1] \times [0,1] \\ u^{x} &amp;=&amp; 2\pi(y-1/2)\\ u^{y} &amp;=&amp; 2\pi(1/2-x)\\ \phi^{ex}(x,y,t) &amp;=&amp; \exp\left(-\frac{\|\vec x - \vec x_c\|^2}{2\sigma^2}\right) \end{eqnarray*}</formula></para>
+<para>where <formula id="153">$\bar{x} = x - x_c$</formula>, <formula id="154">$\bar{y} = y - y_c$</formula>, and <formula id="155">$ x_c = \sin(2\pi t)/4 + 1/2$</formula>, <formula id="156">$\; y_c = \cos(2\pi t)/4 + 1/2 $</formula></para>
+<para><image type="html" name="save_la_gauss_2d_exact.jpg">exact solution, T=0.75</image>
+ <image type="latex" name="save_la_gauss_2d_exact.eps">exact solution</image>
+ <image type="html" name="save_la_gauss_2d_dgp2_soln.jpg">RKDG P^2 solution, Cr=0.15, L^2 error= 8.3e-4</image>
+ <image type="latex" name="save_la_gauss_2d_dgp2_soln.eps">RKDG $P^2$ solution, Cr=0.15, $L^2$ error= 8.3e-4</image>
+ </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/dg/la_gauss_2d_p.py" line="38" column="1" bodyfile="tests/dg/la_gauss_2d_p.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__test_1gaba1c23d38cb4b0dd75e812399bff2ba0" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string la_gauss_2d_p.name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <initializer>=  &apos;la_gauss_2d_np1&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/dg/la_gauss_2d_p.py" line="40" column="1" bodyfile="tests/dg/la_gauss_2d_p.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__test_1ga649084f1ba0c703d86e93cbfd3bb41c9" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary la_gauss_2d_p.analyticalSolution</definition>
+        <argsstring></argsstring>
+        <name>analyticalSolution</name>
+        <initializer>=  {0:<ref refid="classla__gauss__2d__p_1_1RotatingGaussian2D" kindref="compound">RotatingGaussian2D</ref>(1.0/16.0)}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/dg/la_gauss_2d_p.py" line="66" column="1" bodyfile="tests/dg/la_gauss_2d_p.py" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__test_1gaa2985b6edefc6a307f001b904aab04e3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>la_gauss_2d_p.coefficients</definition>
+        <argsstring></argsstring>
+        <name>coefficients</name>
+        <initializer>=  <ref refid="classla__gauss__2d__p_1_1UnitSquareRotation" kindref="compound">UnitSquareRotation</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/dg/la_gauss_2d_p.py" line="90" column="1" bodyfile="tests/dg/la_gauss_2d_p.py" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__test_1ga722222c9106d6b1a9873849b67904d1c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>la_gauss_2d_p.variableNames</definition>
+        <argsstring></argsstring>
+        <name>variableNames</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/dg/la_gauss_2d_p.py" line="92" column="1" bodyfile="tests/dg/la_gauss_2d_p.py" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__test_1ga976662573952e574e1ce76970f5eab52" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary la_gauss_2d_p.dirichletConditions</definition>
+        <argsstring></argsstring>
+        <name>dirichletConditions</name>
+        <initializer>=  {0:<ref refid="group__test_1ga5c3bcd50afc02d1d34dd111d50561307" kindref="member">getDBC</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/dg/la_gauss_2d_p.py" line="101" column="1" bodyfile="tests/dg/la_gauss_2d_p.py" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__test_1ga4a989714836e0088df17a7b0d21c6c29" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary la_gauss_2d_p.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {0:<ref refid="group__test_1ga649084f1ba0c703d86e93cbfd3bb41c9" kindref="member">analyticalSolution</ref>[0]}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/dg/la_gauss_2d_p.py" line="103" column="1" bodyfile="tests/dg/la_gauss_2d_p.py" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__test_1ga270494a2ece52547dac29460253fe5f3" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary la_gauss_2d_p.advectiveFluxBoundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>advectiveFluxBoundaryConditions</name>
+        <initializer>=   {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/dg/la_gauss_2d_p.py" line="106" column="1" bodyfile="tests/dg/la_gauss_2d_p.py" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__test_1gaefe954252c90e82bc3280ccebc7c10e1" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary la_gauss_2d_p.diffusiveFluxBoundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>diffusiveFluxBoundaryConditions</name>
+        <initializer>=  {0:{}}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/dg/la_gauss_2d_p.py" line="108" column="1" bodyfile="tests/dg/la_gauss_2d_p.py" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="group__test_1ga6b2a7a13437b3edf0c21d11146f29fd9" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float la_gauss_2d_p.T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <initializer>=  1.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/dg/la_gauss_2d_p.py" line="111" column="1" bodyfile="tests/dg/la_gauss_2d_p.py" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="function" id="group__test_1ga5c3bcd50afc02d1d34dd111d50561307" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def la_gauss_2d_p.getDBC</definition>
+        <argsstring>(x, tag)</argsstring>
+        <name>getDBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>tag</type>
+          <defname>tag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/dg/la_gauss_2d_p.py" line="96" column="1" bodyfile="tests/dg/la_gauss_2d_p.py" bodystart="96" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/dg/la_gauss_2d_p.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

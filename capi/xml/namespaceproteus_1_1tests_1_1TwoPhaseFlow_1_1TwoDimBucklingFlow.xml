@@ -1,0 +1,952 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow" kind="namespace" language="Python">
+    <compoundname>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow</compoundname>
+    <innerclass refid="classproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1_1clsvof__init__cond" prot="public">proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow::clsvof_init_cond</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1_1zero" prot="public">proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow::zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ae1b1d5cc7a36ab1591c6ad468dca237c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  <ref refid="namespaceproteus_1_1Context_1a461242d050aceb1e84d9426074c67004" kindref="member">Context.Options</ref>([
+    (&apos;ns_model&apos;,1,&quot;ns_model = {rans2p,rans3p}&quot;),
+    (&quot;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ace3e780192954ace6f9cc3a7862daa3c" kindref="member">final_time</ref>&quot;,3.0,&quot;Final time for simulation&quot;),
+    (&quot;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a53a62b507f83e0f7703be0ee59a93abe" kindref="member">dt_output</ref>&quot;,0.1,&quot;Time interval to output solution&quot;),
+    (&quot;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1afc176db5c08c0c995e5dbd9257dabf4a" kindref="member">cfl</ref>&quot;,0.2,&quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ac4009ddd9296a6774b74af0cf64294e0" kindref="member">refinement</ref>&quot;,16,&quot;level of <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ac4009ddd9296a6774b74af0cf64294e0" kindref="member">refinement</ref>&quot;),
+    (&quot;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1af677331da0023412c81febd74a6a48cc" kindref="member">he</ref>&quot;,1E-2,&quot;he value&quot;),
+    (&quot;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a985939240fc66e9d19578f81a6ce2e80" kindref="member">ARTIFICIAL_VISCOSITY</ref>&quot;,3,&quot;artificial viscosity&quot;)
+    ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="16" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a7fa74849ecff8ffdc30e5397e432286d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.useHex</definition>
+        <argsstring></argsstring>
+        <name>useHex</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="36" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a55b8c294f4221c6f3d77436818a22c06" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.structured</definition>
+        <argsstring></argsstring>
+        <name>structured</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="37" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a1d71474266f1bb3f83f03ebc88938530" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.nd</definition>
+        <argsstring></argsstring>
+        <name>nd</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="38" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1af677331da0023412c81febd74a6a48cc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>tuple proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow::he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>= opts.he</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="39" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ac4009ddd9296a6774b74af0cf64294e0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.refinement</definition>
+        <argsstring></argsstring>
+        <name>refinement</name>
+        <initializer>= opts.refinement</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="40" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a5ab76936b3cb040d015b2aa9ceb48eba" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <initializer>= (1.0,1.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="41" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1aac9663b8aa09575c0d29c4e6dc99c6ee" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.boundaries</definition>
+        <argsstring></argsstring>
+        <name>boundaries</name>
+        <initializer>=  [&apos;bottom&apos;, &apos;right&apos;, &apos;top&apos;, &apos;left&apos;, &apos;front&apos;, &apos;back&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="45" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1aa0deeea2e0d3ae5cc567062a2b9bc097" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>=  dict([(key, i + 1) for (i, key) in enumerate(<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1aac9663b8aa09575c0d29c4e6dc99c6ee" kindref="member">boundaries</ref>)])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="46" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a0244586394b3d2d8b8b5dd88e7e4f7cb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <initializer>=  4 * <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ac4009ddd9296a6774b74af0cf64294e0" kindref="member">refinement</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="48" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a58c63154e4db9fbd4530577108ac3fbc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <initializer>=  <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a0244586394b3d2d8b8b5dd88e7e4f7cb" kindref="member">nnx</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="49" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a2832e2797f696fe36d91fca7271f2913" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.nnz</definition>
+        <argsstring></argsstring>
+        <name>nnz</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="50" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a3e38137c12e4b2b3340a02ead8525565" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.triangleFlag</definition>
+        <argsstring></argsstring>
+        <name>triangleFlag</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="51" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a7f6b41ac470691b912bdedb6b988ff84" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  <ref refid="classproteus_1_1Domain_1_1RectangularDomain" kindref="compound">Domain.RectangularDomain</ref>(<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a5ab76936b3cb040d015b2aa9ceb48eba" kindref="member">L</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="52" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a0bd988ed2111d6c3484c48a2ef33e605" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <initializer>=  [[0.0, 0.0],  #0
+                    [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a5ab76936b3cb040d015b2aa9ceb48eba" kindref="member">L</ref>[0], 0.0],  #1
+                    [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a5ab76936b3cb040d015b2aa9ceb48eba" kindref="member">L</ref>[0], <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a5ab76936b3cb040d015b2aa9ceb48eba" kindref="member">L</ref>[1]],  #2
+                    [0.0, <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a5ab76936b3cb040d015b2aa9ceb48eba" kindref="member">L</ref>[1]]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="58" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a81a315ba58bc9afd5bbe7b7fe5c056b1" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.vertexFlags</definition>
+        <argsstring></argsstring>
+        <name>vertexFlags</name>
+        <initializer>=  [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1aa0deeea2e0d3ae5cc567062a2b9bc097" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+                       <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1aa0deeea2e0d3ae5cc567062a2b9bc097" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+                       <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1aa0deeea2e0d3ae5cc567062a2b9bc097" kindref="member">boundaryTags</ref>[&apos;top&apos;],
+                       <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1aa0deeea2e0d3ae5cc567062a2b9bc097" kindref="member">boundaryTags</ref>[&apos;top&apos;]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="62" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ab2a44591276d6f15e03a0a7d9b17d639" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.segments</definition>
+        <argsstring></argsstring>
+        <name>segments</name>
+        <initializer>=  [[0, 1],
+                    [1, 2],
+                    [2, 3],
+                    [3, 0]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="66" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ac6b9259b44f7ea301aa0d8f037cbe6e7" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.segmentFlags</definition>
+        <argsstring></argsstring>
+        <name>segmentFlags</name>
+        <initializer>=  [<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1aa0deeea2e0d3ae5cc567062a2b9bc097" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+                        <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1aa0deeea2e0d3ae5cc567062a2b9bc097" kindref="member">boundaryTags</ref>[&apos;right&apos;],
+                        <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1aa0deeea2e0d3ae5cc567062a2b9bc097" kindref="member">boundaryTags</ref>[&apos;top&apos;],
+                        <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1aa0deeea2e0d3ae5cc567062a2b9bc097" kindref="member">boundaryTags</ref>[&apos;left&apos;]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="70" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ae6c8653e404fd277d80fdff627f17912" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.regions</definition>
+        <argsstring></argsstring>
+        <name>regions</name>
+        <initializer>=  [[1.2, 0.6]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="74" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a30bf29525dd996192912f4fb6e9b4193" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.regionFlags</definition>
+        <argsstring></argsstring>
+        <name>regionFlags</name>
+        <initializer>=  [1]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="75" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1abe66d367292fa71315756d62cda3cc15" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.polyfile</definition>
+        <argsstring></argsstring>
+        <name>polyfile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="84" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="84" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1af693a696948a836721170b919a948792" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="87" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="87" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ab61933872a8937abcd6d7d4b36e7536c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.genMesh</definition>
+        <argsstring></argsstring>
+        <name>genMesh</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="90" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a2fa0f667cd6590cf0dd0dde6aa8364b7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.vel_u_DFBC</definition>
+        <argsstring></argsstring>
+        <name>vel_u_DFBC</name>
+        <initializer>=  lambda x,flag: lambda x,t: 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="175" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1abbd7f3e9fd6827f1e9fc1ce09c28c0f0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.vel_v_DFBC</definition>
+        <argsstring></argsstring>
+        <name>vel_v_DFBC</name>
+        <initializer>=  lambda x,flag: lambda x,t: 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="176" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ab9f2698dec5cd24474556210d68fa25a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.clsvof_DFBC</definition>
+        <argsstring></argsstring>
+        <name>clsvof_DFBC</name>
+        <initializer>=  lambda x,flag: None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="194" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a680580c1fe64449f316208214f1a0468" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.boundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>boundaryConditions</name>
+        <initializer>=  {
+    # DIRICHLET BCs #
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1afd91aff7785fcfbfc19b957a939a14ee" kindref="member">pressure_DBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1afd91aff7785fcfbfc19b957a939a14ee" kindref="member">pressure_DBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a26f2e4a42aa91836e2a58117e14dd8dd" kindref="member">pressure_increment_DBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a26f2e4a42aa91836e2a58117e14dd8dd" kindref="member">pressure_increment_DBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a114afec15da71d49bd3f442a1d916cea" kindref="member">vel_u_DBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a114afec15da71d49bd3f442a1d916cea" kindref="member">vel_u_DBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ad9c8481040a3bace6d9d322084144610" kindref="member">vel_v_DBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ad9c8481040a3bace6d9d322084144610" kindref="member">vel_v_DBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a603309ab999d67ebb3474cfccb202b84" kindref="member">clsvof_DBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a603309ab999d67ebb3474cfccb202b84" kindref="member">clsvof_DBC</ref>,
+    # ADVECTIVE FLUX BCs #
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a1a23b3b198f75e1099ce66136d607652" kindref="member">pressure_AFBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a1a23b3b198f75e1099ce66136d607652" kindref="member">pressure_AFBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1aaa46dc68a1da08325a86ef116c1d011a" kindref="member">pressure_increment_AFBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1aaa46dc68a1da08325a86ef116c1d011a" kindref="member">pressure_increment_AFBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ac7ff6b56bfa0df640b3cf3279566781f" kindref="member">vel_u_AFBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ac7ff6b56bfa0df640b3cf3279566781f" kindref="member">vel_u_AFBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a3971e90777cc9ce489cdc3b4e72e1473" kindref="member">vel_v_AFBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a3971e90777cc9ce489cdc3b4e72e1473" kindref="member">vel_v_AFBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a9de0d6b47c6a2790855d2f8d038352ec" kindref="member">clsvof_AFBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a9de0d6b47c6a2790855d2f8d038352ec" kindref="member">clsvof_AFBC</ref>,
+    # DIFFUSIVE FLUX BCs #
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ab1787b8cb9a840d0dff34ccbb013aa06" kindref="member">pressure_increment_DFBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ab1787b8cb9a840d0dff34ccbb013aa06" kindref="member">pressure_increment_DFBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a2fa0f667cd6590cf0dd0dde6aa8364b7" kindref="member">vel_u_DFBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a2fa0f667cd6590cf0dd0dde6aa8364b7" kindref="member">vel_u_DFBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1abbd7f3e9fd6827f1e9fc1ce09c28c0f0" kindref="member">vel_v_DFBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1abbd7f3e9fd6827f1e9fc1ce09c28c0f0" kindref="member">vel_v_DFBC</ref>,
+    &apos;<ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ab9f2698dec5cd24474556210d68fa25a" kindref="member">clsvof_DFBC</ref>&apos;: <ref refid="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ab9f2698dec5cd24474556210d68fa25a" kindref="member">clsvof_DFBC</ref>}</initializer>
+        <briefdescription>
+<para>***** Create myTwoPhaseFlowProblem ***** # </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="199" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="199" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a9fbd45b1ad55d335bf76bf885157739a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="217" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ace3e780192954ace6f9cc3a7862daa3c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.final_time</definition>
+        <argsstring></argsstring>
+        <name>final_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="221" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a53a62b507f83e0f7703be0ee59a93abe" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.dt_output</definition>
+        <argsstring></argsstring>
+        <name>dt_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="222" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a0d512578094037e7460a06d960da25c2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.flowModel</definition>
+        <argsstring></argsstring>
+        <name>flowModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="224" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a5c28a4519b36b429b601393c6f3ffac0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.interfaceModel</definition>
+        <argsstring></argsstring>
+        <name>interfaceModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="224" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1afc176db5c08c0c995e5dbd9257dabf4a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.cfl</definition>
+        <argsstring></argsstring>
+        <name>cfl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="226" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a484077bc9e66ef921d23a5374bcfaf67" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.useSuperlu</definition>
+        <argsstring></argsstring>
+        <name>useSuperlu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="227" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="227" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a64952d7d9431a9d59d1cd53daa442e56" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.rho_0</definition>
+        <argsstring></argsstring>
+        <name>rho_0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="238" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="238" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a66df134defebdb4d7451e53af2682e5d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.nu_0</definition>
+        <argsstring></argsstring>
+        <name>nu_0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="239" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="239" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ae44feb1f23a3da0a120f608ddc012777" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.rho_1</definition>
+        <argsstring></argsstring>
+        <name>rho_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="240" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="240" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1abd5a29f4a429f892e947c5208ed9d957" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.nu_1</definition>
+        <argsstring></argsstring>
+        <name>nu_1</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="241" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="241" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1afd3175951767a26d2a27fc78045f1a8d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.surf_tension_coeff</definition>
+        <argsstring></argsstring>
+        <name>surf_tension_coeff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="242" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="242" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ad8ce1be987b585b34a9d63caeeb8285d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.gravity</definition>
+        <argsstring></argsstring>
+        <name>gravity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="243" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="243" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a60926e1be1765132bcecad5d4f755614" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.useBoundaryConditionsModule</definition>
+        <argsstring></argsstring>
+        <name>useBoundaryConditionsModule</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="245" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ae47212028691796128f8c21aa0be4656" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <initializer>=  myTpFlowProblem.SystemPhysics.modelDict</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="246" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="246" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1aa5c8c5bbf6fb5dff567664c078babe04" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.disc_ICs</definition>
+        <argsstring></argsstring>
+        <name>disc_ICs</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="247" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1aa91682700e1ac8b2b765004558a358b0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.useVF</definition>
+        <argsstring></argsstring>
+        <name>useVF</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="248" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="248" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a1332dc7b58b20e51724f028da7a0c411" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.forceStrongDirichlet</definition>
+        <argsstring></argsstring>
+        <name>forceStrongDirichlet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="249" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="249" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a985939240fc66e9d19578f81a6ce2e80" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.ARTIFICIAL_VISCOSITY</definition>
+        <argsstring></argsstring>
+        <name>ARTIFICIAL_VISCOSITY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="251" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="251" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a4ad483de580cb5acdd5270d007a07cd9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.epsFact_density</definition>
+        <argsstring></argsstring>
+        <name>epsFact_density</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="252" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="252" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a4c865eadd81e2fa2d2a8926158018bb9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.shockCapturingFactor</definition>
+        <argsstring></argsstring>
+        <name>shockCapturingFactor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="253" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1aa0c1944c96aa3232dddf70f237980431" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::TwoPhaseFlow::TwoDimBucklingFlow.systemStepExact</definition>
+        <argsstring></argsstring>
+        <name>systemStepExact</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="255" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1afd91aff7785fcfbfc19b957a939a14ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.TwoDimBucklingFlow.pressure_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="126" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="126" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a26f2e4a42aa91836e2a58117e14dd8dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.TwoDimBucklingFlow.pressure_increment_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_increment_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="130" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="130" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a114afec15da71d49bd3f442a1d916cea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.TwoDimBucklingFlow.vel_u_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_u_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="134" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="134" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ad9c8481040a3bace6d9d322084144610" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.TwoDimBucklingFlow.vel_v_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_v_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="140" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="140" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a1a23b3b198f75e1099ce66136d607652" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.TwoDimBucklingFlow.pressure_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="148" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="148" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1aaa46dc68a1da08325a86ef116c1d011a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.TwoDimBucklingFlow.pressure_increment_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_increment_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="152" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="152" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ac7ff6b56bfa0df640b3cf3279566781f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.TwoDimBucklingFlow.vel_u_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_u_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="160" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="160" bodyend="163"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a3971e90777cc9ce489cdc3b4e72e1473" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.TwoDimBucklingFlow.vel_v_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>vel_v_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="164" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="164" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1ab1787b8cb9a840d0dff34ccbb013aa06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.TwoDimBucklingFlow.pressure_increment_DFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>pressure_increment_DFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="169" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="169" bodyend="174"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a603309ab999d67ebb3474cfccb202b84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.TwoDimBucklingFlow.clsvof_DBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>clsvof_DBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+<para>LEVEL SET #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="181" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="181" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1TwoPhaseFlow_1_1TwoDimBucklingFlow_1a9de0d6b47c6a2790855d2f8d038352ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.TwoPhaseFlow.TwoDimBucklingFlow.clsvof_AFBC</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>clsvof_AFBC</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="188" column="1" bodyfile="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" bodystart="188" bodyend="193"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Multiphase Flow Test
+</verbatim> </para>
+    </detaileddescription>
+    <location file="tests/TwoPhaseFlow/TwoDimBucklingFlow.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

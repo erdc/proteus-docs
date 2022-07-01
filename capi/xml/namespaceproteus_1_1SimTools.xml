@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceproteus_1_1SimTools" kind="namespace" language="Python">
+    <compoundname>proteus::SimTools</compoundname>
+    <innerclass refid="classproteus_1_1SimTools_1_1SimulationProcessor" prot="public">proteus::SimTools::SimulationProcessor</innerclass>
+    <innerclass refid="classproteus_1_1SimTools_1_1zeroFunction" prot="public">proteus::SimTools::zeroFunction</innerclass>
+    <innerclass refid="classproteus_1_1SimTools_1_1zeroVectorFunction" prot="public">proteus::SimTools::zeroVectorFunction</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceproteus_1_1SimTools_1a05efd3a9736d4698e012f9a028b93f16" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::SimTools.comm</definition>
+        <argsstring></argsstring>
+        <name>comm</name>
+        <initializer>=  <ref refid="namespaceproteus_1_1Comm_1a5418683ec1d3557fbf7d01f3845ad915" kindref="member">Comm.get</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="21" column="1" bodyfile="SimTools.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceproteus_1_1SimTools_1a04c1123b8f845b49b270a40ad393d071" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.projectToFinestLevel</definition>
+        <argsstring>(mlTransport, level, tsim=0.0, verbose=0)</argsstring>
+        <name>projectToFinestLevel</name>
+        <param>
+          <type>mlTransport</type>
+          <defname>mlTransport</defname>
+        </param>
+        <param>
+          <type>level</type>
+          <defname>level</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>verbose</type>
+          <defname>verbose</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>use multilevel transport prolongation to get fine grid information
+starting at level.
+
+returns quadrature dictionary of projected values on fine grid</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1869" column="1" bodyfile="SimTools.py" bodystart="1869" bodyend="1941"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1SimTools_1ae2a36b5d53791a2eb2511b3d98677c69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.generateParentInfo</definition>
+        <argsstring>(mlMesh)</argsstring>
+        <name>generateParentInfo</name>
+        <param>
+          <type>mlMesh</type>
+          <defname>mlMesh</defname>
+        </param>
+        <briefdescription>
+<para>try computing solution values directly on fine grid using coarse grid for nonconforming approximations </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>get array P[l,e] = e_c, where element e_c is the parent of element e
+    P[0,:] = -1
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1946" column="1" bodyfile="SimTools.py" bodystart="1946" bodyend="1961"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1SimTools_1af27454ef9904253346db029948465966" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.getIntegrationPointsOnCoarseGrid</definition>
+        <argsstring>(xf, lf, P, lc)</argsstring>
+        <name>getIntegrationPointsOnCoarseGrid</name>
+        <param>
+          <type>xf</type>
+          <defname>xf</defname>
+        </param>
+        <param>
+          <type>lf</type>
+          <defname>lf</defname>
+        </param>
+        <param>
+          <type>P</type>
+          <defname>P</defname>
+        </param>
+        <param>
+          <type>lc</type>
+          <defname>lc</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>given array of points N^f_e x n_q x 3 on level lf
+generate dictionary on coarse
+grid that&apos;s N^c_e x n_q^c(e_c) x 3 and holds the integration points
+assigned to the correct coarse grid element. If using uniform refinement
+should have the same number of integration points per coarse grid element
+but the number depends on the level of refinement eg  n_q^4(lf-lc).
+In general the number won&apos;t be the same for nonuniform refinement
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1962" column="1" bodyfile="SimTools.py" bodystart="1962" bodyend="2003"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1SimTools_1ad6ef9bfb801c629da4ea9e797bf57683" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.projectVelocityToFinestLevelNC</definition>
+        <argsstring>(mlTransport, level, ci=0, tsim=0.0, verbose=0)</argsstring>
+        <name>projectVelocityToFinestLevelNC</name>
+        <param>
+          <type>mlTransport</type>
+          <defname>mlTransport</defname>
+        </param>
+        <param>
+          <type>level</type>
+          <defname>level</defname>
+        </param>
+        <param>
+          <type>ci</type>
+          <defname>ci</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>verbose</type>
+          <defname>verbose</defname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>use brute force evaluation to get coarse grid quantities on fine grid
+starting at level.
+
+returns quadrature dictionary of projected values on fine grid
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="2004" column="1" bodyfile="SimTools.py" bodystart="2004" bodyend="2141"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Collect higher level tools for running simulation, processing results, etc
+
+.. inheritance-diagram:: proteus.SimTools
+   :parts: 1
+</verbatim> </para>
+    </detaileddescription>
+    <location file="SimTools.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

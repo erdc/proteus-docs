@@ -1,0 +1,1093 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespacemoored__body" kind="namespace" language="Python">
+    <compoundname>moored_body</compoundname>
+    <innerclass refid="classmoored__body_1_1P__IC" prot="public">moored_body::P_IC</innerclass>
+    <innerclass refid="classmoored__body_1_1PHI__IC" prot="public">moored_body::PHI_IC</innerclass>
+    <innerclass refid="classmoored__body_1_1U__IC" prot="public">moored_body::U_IC</innerclass>
+    <innerclass refid="classmoored__body_1_1V__IC" prot="public">moored_body::V_IC</innerclass>
+    <innerclass refid="classmoored__body_1_1VF__IC" prot="public">moored_body::VF_IC</innerclass>
+    <innerclass refid="classmoored__body_1_1W__IC" prot="public">moored_body::W_IC</innerclass>
+    <innerclass refid="classmoored__body_1_1zero" prot="public">moored_body::zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacemoored__body_1a1c548de92904467514d281b2aa4e9b3e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  Context.Options([
+    (&quot;final_time&quot;,10.0,&quot;Final time for simulation&quot;),
+    (&quot;<ref refid="namespacemoored__body_1a966d490f6ad72a485c399a39397fa697" kindref="member">dt_output</ref>&quot;,0.1,&quot;Time interval to output solution&quot;),
+    (&quot;<ref refid="namespacemoored__body_1aceec3e600acaed5421560bee5e17f5cc" kindref="member">cfl</ref>&quot;,0.5,&quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="namespacemoored__body_1a6b5077af3be763b5c0d23c2e732b6e74" kindref="member">he</ref>&quot;,0.05,&quot;<ref refid="namespacemoored__body_1a6b5077af3be763b5c0d23c2e732b6e74" kindref="member">he</ref> relative to Length of <ref refid="namespacemoored__body_1af54c7e61a67c3c4e4db22325e52269e3" kindref="member">domain</ref> in x&quot;),
+    ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="12" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1aae730b78e4443c24e473aa57580b6174" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <initializer>=  opts.final_time</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="21" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a32593db765633804ba550b01be27d07d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>moored_body.dt_init</definition>
+        <argsstring></argsstring>
+        <name>dt_init</name>
+        <initializer>=  0.001</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="23" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1aceec3e600acaed5421560bee5e17f5cc" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>moored_body.cfl</definition>
+        <argsstring></argsstring>
+        <name>cfl</name>
+        <initializer>=  0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="25" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a6b5077af3be763b5c0d23c2e732b6e74" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float moored_body.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  0.05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="27" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a3b0e872a8f0e0db36f2db30b4217df2e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float moored_body.sampleRate</definition>
+        <argsstring></argsstring>
+        <name>sampleRate</name>
+        <initializer>=  0.05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="29" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1adcca16444e27539c6e558ec45a7ef97c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>moored_body.movingDomain</definition>
+        <argsstring></argsstring>
+        <name>movingDomain</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="31" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a8a6a9fbffe5a6e518bd7fd947da7c925" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool moored_body.addedMass</definition>
+        <argsstring></argsstring>
+        <name>addedMass</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="33" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a9503ec20aca70ca2184c8205f8eb22ac" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float moored_body.rho_0</definition>
+        <argsstring></argsstring>
+        <name>rho_0</name>
+        <initializer>=  998.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="37" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1acce692f90c6a057309042f5dd2f666f3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float moored_body.nu_0</definition>
+        <argsstring></argsstring>
+        <name>nu_0</name>
+        <initializer>=  1.004e-6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="39" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a31b47b4723056d49dcf08d8427f825b3" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float moored_body.rho_1</definition>
+        <argsstring></argsstring>
+        <name>rho_1</name>
+        <initializer>=  1.205</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="41" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a2d6423956fa63c446e73e8e6c0d4210f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float moored_body.nu_1</definition>
+        <argsstring></argsstring>
+        <name>nu_1</name>
+        <initializer>=  1.5e-5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="43" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a7e27de4bba3b654ed013cac7f7938524" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>=  np.array([0., -9.81, 0.])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="45" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a84ccc8efc4ed223a5da4a71037c7ec49" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool moored_body.fixed</definition>
+        <argsstring></argsstring>
+        <name>fixed</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="48" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a56d3bac08751959dffe6a01f66d4c7b9" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float moored_body.water_level</definition>
+        <argsstring></argsstring>
+        <name>water_level</name>
+        <initializer>=  0.515</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="51" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1ad440d473bcb09694493d5d68cf09f893" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float moored_body.wave_period</definition>
+        <argsstring></argsstring>
+        <name>wave_period</name>
+        <initializer>=  0.87</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="52" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1aa10e206fba02c2558cfd82a7541cd5d2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float moored_body.wave_height</definition>
+        <argsstring></argsstring>
+        <name>wave_height</name>
+        <initializer>=  0.05</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="53" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1ab9eb8b69bf915e8e4904788ffae1ce44" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.wave_direction</definition>
+        <argsstring></argsstring>
+        <name>wave_direction</name>
+        <initializer>=  np.array([1., 0., 0.])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="54" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1afda175782f24a5cf5ae2a1bdb71ebaae" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string moored_body.wave_type</definition>
+        <argsstring></argsstring>
+        <name>wave_type</name>
+        <initializer>=  &apos;Fenton&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="55" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a5ca152a989cfa1cbe0fa78258ffc1324" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int moored_body.Nf</definition>
+        <argsstring></argsstring>
+        <name>Nf</name>
+        <initializer>=  8</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="57" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a515dfb24f6a05f4d61a6d153f4a9b197" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.wave</definition>
+        <argsstring></argsstring>
+        <name>wave</name>
+        <initializer>=  wt.MonochromaticWaves(period=<ref refid="namespacemoored__body_1ad440d473bcb09694493d5d68cf09f893" kindref="member">wave_period</ref>,
+                             waveHeight=<ref refid="namespacemoored__body_1aa10e206fba02c2558cfd82a7541cd5d2" kindref="member">wave_height</ref>,
+                             mwl=<ref refid="namespacemoored__body_1a56d3bac08751959dffe6a01f66d4c7b9" kindref="member">water_level</ref>,
+                             depth=<ref refid="namespacemoored__body_1a56d3bac08751959dffe6a01f66d4c7b9" kindref="member">water_level</ref>,
+                             <ref refid="namespacemoored__body_1a7e27de4bba3b654ed013cac7f7938524" kindref="member">g</ref>=<ref refid="namespacemoored__body_1a7e27de4bba3b654ed013cac7f7938524" kindref="member">g</ref>,
+                             waveDir=<ref refid="namespacemoored__body_1ab9eb8b69bf915e8e4904788ffae1ce44" kindref="member">wave_direction</ref>,
+                             waveType=<ref refid="namespacemoored__body_1afda175782f24a5cf5ae2a1bdb71ebaae" kindref="member">wave_type</ref>,
+                             <ref refid="namespacemoored__body_1a5ca152a989cfa1cbe0fa78258ffc1324" kindref="member">Nf</ref>=8)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="58" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a6fea0689914d559297f717399ce1085b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.wavelength</definition>
+        <argsstring></argsstring>
+        <name>wavelength</name>
+        <initializer>=  wave.wavelength</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="66" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1af54c7e61a67c3c4e4db22325e52269e3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.PlanarStraightLineGraphDomain()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="78" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a31b72638f4e78fe18f08c7fff4d266ba" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.tank</definition>
+        <argsstring></argsstring>
+        <name>tank</name>
+        <initializer>=  st.Tank2D(<ref refid="namespacemoored__body_1af54c7e61a67c3c4e4db22325e52269e3" kindref="member">domain</ref>, dim=(2*<ref refid="namespacemoored__body_1a6fea0689914d559297f717399ce1085b" kindref="member">wavelength</ref>, 2*<ref refid="namespacemoored__body_1a56d3bac08751959dffe6a01f66d4c7b9" kindref="member">water_level</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="83" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a46c49d2b1973cda039a7af2e16fc25db" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.x_n</definition>
+        <argsstring></argsstring>
+        <name>x_n</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="88" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1ae7d1fc6d53d6f3f0e2e30d1f76895e84" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.x_p</definition>
+        <argsstring></argsstring>
+        <name>x_p</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="88" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a0c77271160070390dd57ffacb6d7eb89" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.caisson</definition>
+        <argsstring></argsstring>
+        <name>caisson</name>
+        <initializer>=  st.Rectangle(<ref refid="namespacemoored__body_1af54c7e61a67c3c4e4db22325e52269e3" kindref="member">domain</ref>, dim=(0.5, 0.2), <ref refid="group__analyticalSolutions_1gae103bacd0ce284b66771dc3d06420616" kindref="member">coords</ref>=(0., 0.))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="91" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a410a371f659c8fd3945ec169fb07be24" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.holes_ind</definition>
+        <argsstring></argsstring>
+        <name>holes_ind</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="97" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1af3bfbf4e052bd2f884f3656010290604" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.system</definition>
+        <argsstring></argsstring>
+        <name>system</name>
+        <initializer>=  fsi.ProtChSystem()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="112" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1acbc7b5f5b60c14e4f7a81839c7c3c661" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.chsystem</definition>
+        <argsstring></argsstring>
+        <name>chsystem</name>
+        <initializer>=  system.getChronoObject()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="114" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a516c9b763de3e2a460e26228c70bc1c1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.solver</definition>
+        <argsstring></argsstring>
+        <name>solver</name>
+        <initializer>=  pychrono.ChSolverMINRES()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="124" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1af30f69f50ea512d81d9705a4320ff0fd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.body</definition>
+        <argsstring></argsstring>
+        <name>body</name>
+        <initializer>=  fsi.ProtChBody(<ref refid="namespacemoored__body_1af3bfbf4e052bd2f884f3656010290604" kindref="member">system</ref>=<ref refid="namespacemoored__body_1af3bfbf4e052bd2f884f3656010290604" kindref="member">system</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="135" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="135" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a88b9caaf558b0395e309f88f6cdcf075" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.chbody</definition>
+        <argsstring></argsstring>
+        <name>chbody</name>
+        <initializer>=  body.getChronoObject()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="141" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="141" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a0e5de1d7d9df6a94bdc61a362091662e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.free_x</definition>
+        <argsstring></argsstring>
+        <name>free_x</name>
+        <initializer>=  np.array([1., 1., 0.])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="144" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1afd949ccc736011d4b1a7fd74563bb97e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.free_r</definition>
+        <argsstring></argsstring>
+        <name>free_r</name>
+        <initializer>=  np.array([0., 0., 1.])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="145" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a2371b2249fae376b1d59a0066699166b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.all_values</definition>
+        <argsstring></argsstring>
+        <name>all_values</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="157" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1ac300ba5289c7a478d788b268f81c3f7f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float moored_body.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <initializer>=  1.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="164" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a4a8075f52415d15c103dd34afb89c654" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float moored_body.w</definition>
+        <argsstring></argsstring>
+        <name>w</name>
+        <initializer>=  0.0778</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="166" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1ad981eae29c44fd172cdb307994633b6b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float moored_body.d</definition>
+        <argsstring></argsstring>
+        <name>d</name>
+        <initializer>=  2.5e-3</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="168" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a1eb089992c4bba7f47f8b2b2cc8c07ea" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple moored_body.A0</definition>
+        <argsstring></argsstring>
+        <name>A0</name>
+        <initializer>=  (<ref refid="createAnalyticGeometry_8cpp_1a43016d873124d39034edb8cd164794db" kindref="member">np.pi</ref>*<ref refid="namespacemoored__body_1ad981eae29c44fd172cdb307994633b6b" kindref="member">d</ref>**2/4)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="170" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1acda74ea8c2ef9bca1e5506e5816a35da" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float moored_body.dens</definition>
+        <argsstring></argsstring>
+        <name>dens</name>
+        <initializer>=  <ref refid="namespacemoored__body_1a4a8075f52415d15c103dd34afb89c654" kindref="member">w</ref>/<ref refid="namespacemoored__body_1a1eb089992c4bba7f47f8b2b2cc8c07ea" kindref="member">A0</ref>+<ref refid="namespacemoored__body_1a9503ec20aca70ca2184c8205f8eb22ac" kindref="member">rho_0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="172" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a4215b67d41225417730c26d9f8fbeba8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int moored_body.nb_elems</definition>
+        <argsstring></argsstring>
+        <name>nb_elems</name>
+        <initializer>=  20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="174" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a7c1cf3975b6df8309d432ad50169a8b7" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple moored_body.E</definition>
+        <argsstring></argsstring>
+        <name>E</name>
+        <initializer>=  (753.6e6)/50**3/<ref refid="namespacemoored__body_1a1eb089992c4bba7f47f8b2b2cc8c07ea" kindref="member">A0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="176" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a47857a00bf7d4621624e9c87638a7c98" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.fairlead_center</definition>
+        <argsstring></argsstring>
+        <name>fairlead_center</name>
+        <initializer>=  np.array([caisson.barycenter[0], <ref refid="namespacemoored__body_1a56d3bac08751959dffe6a01f66d4c7b9" kindref="member">water_level</ref>-0.045, 0.])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="180" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="180" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a8f4744d80db803b33524fac180372f38" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.fairlead1</definition>
+        <argsstring></argsstring>
+        <name>fairlead1</name>
+        <initializer>=  <ref refid="namespacemoored__body_1a47857a00bf7d4621624e9c87638a7c98" kindref="member">fairlead_center</ref>+np.array([-caisson.dim[0]/2., 0., 0.])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="181" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1ac2f67b651aeb13c3221f6109e050ab83" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.fairlead2</definition>
+        <argsstring></argsstring>
+        <name>fairlead2</name>
+        <initializer>=  <ref refid="namespacemoored__body_1a47857a00bf7d4621624e9c87638a7c98" kindref="member">fairlead_center</ref>+np.array([caisson.dim[0]/2., 0., 0.])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="182" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="182" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1ad454553a7454c3fac41dc07161b74577" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.anchor1</definition>
+        <argsstring></argsstring>
+        <name>anchor1</name>
+        <initializer>=  np.array([<ref refid="namespacemoored__body_1a8f4744d80db803b33524fac180372f38" kindref="member">fairlead1</ref>[0]-1., 0., 0.])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="184" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="184" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a68cd6c1ba8a48f4fcc38d21d9b851715" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.anchor2</definition>
+        <argsstring></argsstring>
+        <name>anchor2</name>
+        <initializer>=  np.array([<ref refid="namespacemoored__body_1ac2f67b651aeb13c3221f6109e050ab83" kindref="member">fairlead2</ref>[0]+1., 0., 0.])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="185" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="185" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a83263023a505cef20774411ae8119b0c" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple moored_body.EA</definition>
+        <argsstring></argsstring>
+        <name>EA</name>
+        <initializer>=  <ref refid="namespacemoored__body_1a7c1cf3975b6df8309d432ad50169a8b7" kindref="member">E</ref>*<ref refid="namespacemoored__body_1a1eb089992c4bba7f47f8b2b2cc8c07ea" kindref="member">A0</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="190" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a4841aed673b1a841817e8facc5b18ba9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.cat1</definition>
+        <argsstring></argsstring>
+        <name>cat1</name>
+        <initializer>=  MooringLine(<ref refid="namespacemoored__body_1ac300ba5289c7a478d788b268f81c3f7f" kindref="member">L</ref>=<ref refid="namespacemoored__body_1ac300ba5289c7a478d788b268f81c3f7f" kindref="member">L</ref>,
+                   <ref refid="namespacemoored__body_1a4a8075f52415d15c103dd34afb89c654" kindref="member">w</ref>=<ref refid="namespacemoored__body_1a4a8075f52415d15c103dd34afb89c654" kindref="member">w</ref>*9.81,
+                   <ref refid="namespacemoored__body_1a83263023a505cef20774411ae8119b0c" kindref="member">EA</ref>=<ref refid="namespacemoored__body_1a83263023a505cef20774411ae8119b0c" kindref="member">EA</ref>,
+                   anchor=<ref refid="namespacemoored__body_1ad454553a7454c3fac41dc07161b74577" kindref="member">anchor1</ref>,
+                   fairlead=<ref refid="namespacemoored__body_1a8f4744d80db803b33524fac180372f38" kindref="member">fairlead1</ref>,
+                   <ref refid="namespacemoored__body_1ac8d806a1b4cced0f913b7c9b973cbe8e" kindref="member">nd</ref>=2,
+                   floor=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="191" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1ac0a4ee7792259dd126b0057f4649fcc3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.cat2</definition>
+        <argsstring></argsstring>
+        <name>cat2</name>
+        <initializer>=  MooringLine(<ref refid="namespacemoored__body_1ac300ba5289c7a478d788b268f81c3f7f" kindref="member">L</ref>=<ref refid="namespacemoored__body_1ac300ba5289c7a478d788b268f81c3f7f" kindref="member">L</ref>,
+                   <ref refid="namespacemoored__body_1a4a8075f52415d15c103dd34afb89c654" kindref="member">w</ref>=<ref refid="namespacemoored__body_1a4a8075f52415d15c103dd34afb89c654" kindref="member">w</ref>*9.81,
+                   <ref refid="namespacemoored__body_1a83263023a505cef20774411ae8119b0c" kindref="member">EA</ref>=<ref refid="namespacemoored__body_1a83263023a505cef20774411ae8119b0c" kindref="member">EA</ref>,
+                   anchor=<ref refid="namespacemoored__body_1a68cd6c1ba8a48f4fcc38d21d9b851715" kindref="member">anchor2</ref>,
+                   fairlead=<ref refid="namespacemoored__body_1ac2f67b651aeb13c3221f6109e050ab83" kindref="member">fairlead2</ref>,
+                   <ref refid="namespacemoored__body_1ac8d806a1b4cced0f913b7c9b973cbe8e" kindref="member">nd</ref>=2,
+                   floor=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="198" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="198" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a0154cab2a5c4bf3c81dd9a9e1eb8ac54" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.body2</definition>
+        <argsstring></argsstring>
+        <name>body2</name>
+        <initializer>=  fsi.ProtChBody(<ref refid="namespacemoored__body_1af3bfbf4e052bd2f884f3656010290604" kindref="member">system</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="211" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a67c503c16c24ae52a232a4d216138c5d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.barycenter0</definition>
+        <argsstring></argsstring>
+        <name>barycenter0</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="212" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="212" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1ae8df7f4cdffbd84a94cc4f2f987b3074" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.mesh</definition>
+        <argsstring></argsstring>
+        <name>mesh</name>
+        <initializer>=  fsi.ProtChMesh(<ref refid="namespacemoored__body_1af3bfbf4e052bd2f884f3656010290604" kindref="member">system</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="219" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1aba5370a70ab67478ff4d6651e36d2bd7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.m1</definition>
+        <argsstring></argsstring>
+        <name>m1</name>
+        <initializer>=  fsi.ProtChMoorings(<ref refid="namespacemoored__body_1af3bfbf4e052bd2f884f3656010290604" kindref="member">system</ref>=<ref refid="namespacemoored__body_1af3bfbf4e052bd2f884f3656010290604" kindref="member">system</ref>,
+                        <ref refid="namespacemoored__body_1ae8df7f4cdffbd84a94cc4f2f987b3074" kindref="member">mesh</ref>=<ref refid="namespacemoored__body_1ae8df7f4cdffbd84a94cc4f2f987b3074" kindref="member">mesh</ref>,
+                        length=np.array([<ref refid="namespacemoored__body_1ac300ba5289c7a478d788b268f81c3f7f" kindref="member">L</ref>]),
+                        <ref refid="namespacemoored__body_1a4215b67d41225417730c26d9f8fbeba8" kindref="member">nb_elems</ref>=np.array([<ref refid="namespacemoored__body_1a4215b67d41225417730c26d9f8fbeba8" kindref="member">nb_elems</ref>]),
+                        <ref refid="namespacemoored__body_1ad981eae29c44fd172cdb307994633b6b" kindref="member">d</ref>=np.array([<ref refid="namespacemoored__body_1ad981eae29c44fd172cdb307994633b6b" kindref="member">d</ref>]),
+                        rho=np.array([<ref refid="namespacemoored__body_1acda74ea8c2ef9bca1e5506e5816a35da" kindref="member">dens</ref>]),
+                        <ref refid="namespacemoored__body_1a7c1cf3975b6df8309d432ad50169a8b7" kindref="member">E</ref>=np.array([<ref refid="namespacemoored__body_1a7c1cf3975b6df8309d432ad50169a8b7" kindref="member">E</ref>]))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="224" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1ab0bcdbb5ed1912074c48f654bc8decea" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.tangential</definition>
+        <argsstring></argsstring>
+        <name>tangential</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="245" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1ad832c0849d58a4ad99b042a0be490994" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.normal</definition>
+        <argsstring></argsstring>
+        <name>normal</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="245" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1ab60a01ba17f87deaadcb8997be61987b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.segment_nb</definition>
+        <argsstring></argsstring>
+        <name>segment_nb</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="245" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a2d7bf21772f0f3c12cc821d84882c125" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.m2</definition>
+        <argsstring></argsstring>
+        <name>m2</name>
+        <initializer>=  fsi.ProtChMoorings(<ref refid="namespacemoored__body_1af3bfbf4e052bd2f884f3656010290604" kindref="member">system</ref>=<ref refid="namespacemoored__body_1af3bfbf4e052bd2f884f3656010290604" kindref="member">system</ref>,
+                        <ref refid="namespacemoored__body_1ae8df7f4cdffbd84a94cc4f2f987b3074" kindref="member">mesh</ref>=<ref refid="namespacemoored__body_1ae8df7f4cdffbd84a94cc4f2f987b3074" kindref="member">mesh</ref>,
+                        length=np.array([<ref refid="namespacemoored__body_1ac300ba5289c7a478d788b268f81c3f7f" kindref="member">L</ref>]),
+                        <ref refid="namespacemoored__body_1a4215b67d41225417730c26d9f8fbeba8" kindref="member">nb_elems</ref>=np.array([<ref refid="namespacemoored__body_1a4215b67d41225417730c26d9f8fbeba8" kindref="member">nb_elems</ref>]),
+                        <ref refid="namespacemoored__body_1ad981eae29c44fd172cdb307994633b6b" kindref="member">d</ref>=np.array([<ref refid="namespacemoored__body_1ad981eae29c44fd172cdb307994633b6b" kindref="member">d</ref>]),
+                        rho=np.array([<ref refid="namespacemoored__body_1acda74ea8c2ef9bca1e5506e5816a35da" kindref="member">dens</ref>]),
+                        <ref refid="namespacemoored__body_1a7c1cf3975b6df8309d432ad50169a8b7" kindref="member">E</ref>=np.array([<ref refid="namespacemoored__body_1a7c1cf3975b6df8309d432ad50169a8b7" kindref="member">E</ref>]))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="256" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a60afd9ad342ed56bc961213f30aec9c2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.seabed</definition>
+        <argsstring></argsstring>
+        <name>seabed</name>
+        <initializer>=  pychrono.ChBodyEasyBox(100., 0.2, 1., 1000, True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="290" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1add1e1f9be4949eed3c489cf5f5bff5b4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.material</definition>
+        <argsstring></argsstring>
+        <name>material</name>
+        <initializer>=  pychrono.ChMaterialSurfaceSMC()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="301" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="301" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a16d3976ded72b259731e80564f26f244" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float moored_body::smoothing</definition>
+        <argsstring></argsstring>
+        <name>smoothing</name>
+        <initializer>=  <ref refid="namespacemoored__body_1a6b5077af3be763b5c0d23c2e732b6e74" kindref="member">he</ref>*1.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="346" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="346" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a895e70e2aa600aa9654705c6ca2a2b41" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>moored_body.dragAlpha</definition>
+        <argsstring></argsstring>
+        <name>dragAlpha</name>
+        <initializer>=  5*2*<ref refid="createAnalyticGeometry_8cpp_1a43016d873124d39034edb8cd164794db" kindref="member">np.pi</ref>/<ref refid="namespacemoored__body_1ad440d473bcb09694493d5d68cf09f893" kindref="member">wave_period</ref>/(1.004e-6)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="347" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="347" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a665975ca0f59a9f87e4ed6d7090be22f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.vert_axis</definition>
+        <argsstring></argsstring>
+        <name>vert_axis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="350" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="350" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a71c52cdb96f5620ec71a444eddcf1b32" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.waves</definition>
+        <argsstring></argsstring>
+        <name>waves</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="352" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="352" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1ac8d806a1b4cced0f913b7c9b973cbe8e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.nd</definition>
+        <argsstring></argsstring>
+        <name>nd</name>
+        <initializer>=  domain.nd</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="370" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="370" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1aaf94a78f1c18cddfa02ac53b4e096d07" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string moored_body.mesh_fileprefix</definition>
+        <argsstring></argsstring>
+        <name>mesh_fileprefix</name>
+        <initializer>=  &apos;<ref refid="namespacemoored__body_1ae8df7f4cdffbd84a94cc4f2f987b3074" kindref="member">mesh</ref>&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="410" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="410" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a639296fdc79d0f345322034c13c3f7fc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="425" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a218c793c6f18fa7d4bf45fcf3f19b00f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.final_time</definition>
+        <argsstring></argsstring>
+        <name>final_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="427" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="427" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a966d490f6ad72a485c399a39397fa697" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.dt_output</definition>
+        <argsstring></argsstring>
+        <name>dt_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="428" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="428" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a010d07ba261195ae89f424e6ed0de599" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.useSuperlu</definition>
+        <argsstring></argsstring>
+        <name>useSuperlu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="434" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="434" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a121863787a891e2081d2d85076de60f2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.params</definition>
+        <argsstring></argsstring>
+        <name>params</name>
+        <initializer>=  myTpFlowProblem.SystemPhysics</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="439" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="439" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a3824b06b3ba832a443bd63534d0d02d0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <initializer>=  myTpFlowProblem.SystemPhysics.modelDict</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="455" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="455" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a90db5548dac3c56333dc983e09b3c052" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>moored_body.max_flag</definition>
+        <argsstring></argsstring>
+        <name>max_flag</name>
+        <initializer>=  0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="477" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="477" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacemoored__body_1a400bb13d1bf56abd87c83817da159782" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>moored_body.flags_rigidbody</definition>
+        <argsstring></argsstring>
+        <name>flags_rigidbody</name>
+        <initializer>=  np.zeros(<ref refid="namespacemoored__body_1a90db5548dac3c56333dc983e09b3c052" kindref="member">max_flag</ref>+1, dtype=&apos;int32&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/moored_body.py" line="481" column="1" bodyfile="tests/proteus_tutorial/2d/moored_body.py" bodystart="481" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/proteus_tutorial/2d/moored_body.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

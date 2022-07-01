@@ -1,0 +1,375 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d7/df1/namespacevos" kind="namespace" language="Python">
+    <compoundname>vos</compoundname>
+    <innerclass refid="d6/dad/classvos_1_1MyCoefficients" prot="public">vos::MyCoefficients</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d7/df1/namespacevos_1aa37d81217e48705ea2174da0fbdb6a87" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>vos.ct</definition>
+        <argsstring></argsstring>
+        <name>ct</name>
+        <initializer>= Context.Options([
+    # General parameters #
+    (&quot;problem&quot;,0,&quot;0: 1<ref refid="db/dcc/jf_8h_1a4ae508a8d305b460df210d2a0c2a5574" kindref="member">D</ref> advection, 1: implosion with circle, 2: implosion with ring&quot;),
+    (&quot;<ref refid="d7/df1/namespacevos_1a840fbbceaa2433d878ef008413068d14" kindref="member">T</ref>&quot;,0.2,&quot;Final time&quot;),
+    (&quot;<ref refid="d7/df1/namespacevos_1a4553cecd0cc83114f164c82e7dd71387" kindref="member">nDTout</ref>&quot;,10,&quot;Number of time steps to archive&quot;),
+    (&quot;refinement&quot;,3,&quot;Level of refinement&quot;),
+    # Choice of numerical method #
+    (&quot;STABILIZATION_TYPE&quot;,2,&quot;0: SUPG, 1: EV, 2: smoothness based indicator&quot;),
+    (&quot;LUMPED_MASS_MATRIX&quot;,True,&quot;Flag to lumped the mass <ref refid="db/dcc/jf_8h_1a54fcb3c713c2cbe6a3b6d926c160cda9" kindref="member">matrix</ref>&quot;),
+    # Numerical parameters #
+    (&quot;cfl&quot;,0.1,&quot;Target cfl&quot;),
+    (&quot;SSPOrder&quot;,1,&quot;SSP method of order 1, 2 or 3&quot;)
+],mutable=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="11" column="1" bodyfile="tests/VOS/vos.py" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1a840fbbceaa2433d878ef008413068d14" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>vos.T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="26" column="1" bodyfile="tests/VOS/vos.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1a4553cecd0cc83114f164c82e7dd71387" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>vos.nDTout</definition>
+        <argsstring></argsstring>
+        <name>nDTout</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="27" column="1" bodyfile="tests/VOS/vos.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1acd00c508faf5ed9d2cbf4aa57a02ea79" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float vos.shockCapturingFactor_vos</definition>
+        <argsstring></argsstring>
+        <name>shockCapturingFactor_vos</name>
+        <initializer>= 0.2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="36" column="1" bodyfile="tests/VOS/vos.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1a2040577b205f2cc0ba99699f4ddc1d7c" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool vos.lag_shockCapturing_vos</definition>
+        <argsstring></argsstring>
+        <name>lag_shockCapturing_vos</name>
+        <initializer>= True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="37" column="1" bodyfile="tests/VOS/vos.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1ab82b2d04423f58dbdd9ce1fb4fe702df" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vos.nd</definition>
+        <argsstring></argsstring>
+        <name>nd</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="40" column="1" bodyfile="tests/VOS/vos.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1a30d8cea4cf61862a2a1c5dbda561cfec" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool vos.parallel</definition>
+        <argsstring></argsstring>
+        <name>parallel</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="43" column="1" bodyfile="tests/VOS/vos.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1ab63e5dc0a512fec9173b485fa23050a7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>vos.linearSmoother</definition>
+        <argsstring></argsstring>
+        <name>linearSmoother</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="44" column="1" bodyfile="tests/VOS/vos.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1a5a47cf5a7dfd63cf100980258f8e166b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool vos.checkMass</definition>
+        <argsstring></argsstring>
+        <name>checkMass</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="45" column="1" bodyfile="tests/VOS/vos.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1a145cdad6c2edf021aeb17469ac51932a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vos.pDegree_vos</definition>
+        <argsstring></argsstring>
+        <name>pDegree_vos</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="48" column="1" bodyfile="tests/VOS/vos.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1aebc7f92b6f7550acf5ab6d5167cef18a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool vos.useBernstein</definition>
+        <argsstring></argsstring>
+        <name>useBernstein</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="49" column="1" bodyfile="tests/VOS/vos.py" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1a59ae887ebab04c5c57b3ee7878a13f2d" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool vos.useHex</definition>
+        <argsstring></argsstring>
+        <name>useHex</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="50" column="1" bodyfile="tests/VOS/vos.py" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1a8bbae70442ceb33b377bece73a91d098" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vos.vos_quad_order</definition>
+        <argsstring></argsstring>
+        <name>vos_quad_order</name>
+        <initializer>=  2*<ref refid="d7/df1/namespacevos_1a145cdad6c2edf021aeb17469ac51932a" kindref="member">pDegree_vos</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="53" column="1" bodyfile="tests/VOS/vos.py" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1ade16b5ec73924e181dcde5b4d2c4bfaa" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>vos.partitioningType</definition>
+        <argsstring></argsstring>
+        <name>partitioningType</name>
+        <initializer>=  MeshTools.MeshParallelPartitioningTypes.node</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="57" column="1" bodyfile="tests/VOS/vos.py" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1a05c3794d8e1d38cec1044df3df62ef81" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple vos.nn</definition>
+        <argsstring></argsstring>
+        <name>nn</name>
+        <initializer>= (2**ct.refinement)*10+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="60" column="1" bodyfile="tests/VOS/vos.py" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1a5985e164f51ad18e571860d30fbd2e9e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>vos.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <initializer>= nnx</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="61" column="1" bodyfile="tests/VOS/vos.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1a85fd7e97179644ad5ce61a1f403345d0" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int vos.nnz</definition>
+        <argsstring></argsstring>
+        <name>nnz</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="64" column="1" bodyfile="tests/VOS/vos.py" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1aec7e3399567b9096d28d0071fda68264" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>vos.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>= old_div(1.0,(nnx-1.0))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="65" column="1" bodyfile="tests/VOS/vos.py" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1a0841102655940c21d91c5b3acdfd2582" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool vos.unstructured</definition>
+        <argsstring></argsstring>
+        <name>unstructured</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="67" column="1" bodyfile="tests/VOS/vos.py" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1a61989d0108165f3255323e6fc58613c6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>vos.box</definition>
+        <argsstring></argsstring>
+        <name>box</name>
+        <initializer>= Domain.RectangularDomain(<ref refid="de/d5b/Headers_8h_1a499d78bdc2c754c7a4cf8d39ed245e9f" kindref="member">L</ref>=(1.0,0.1 if ct.problem==0 else 1.0),
+                             x=(0.0,0.0),
+                             name=&quot;box&quot;);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="68" column="1" bodyfile="tests/VOS/vos.py" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1a54faa3a94cfe5403d503ef1e9f5d062d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>vos.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>= Domain.PlanarStraightLineGraphDomain(fileprefix=&quot;box&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="73" column="1" bodyfile="tests/VOS/vos.py" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1a38d70f556d1e4bde040247035b5375e8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>vos.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="74" column="1" bodyfile="tests/VOS/vos.py" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1af927978cb73518dcbcdd64cb5173809e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>vos.bt</definition>
+        <argsstring></argsstring>
+        <name>bt</name>
+        <initializer>=  domain.boundaryTags</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="75" column="1" bodyfile="tests/VOS/vos.py" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1aa2d46af527602c0e8f240c70cdaa2d47" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string vos.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <initializer>= &quot;pAq30Dena%8.8<ref refid="d7/daa/group__analyticalSolutions_1ga5f01b1fc0e3cb358aa6411861cedc62c" kindref="member">f</ref>&quot;  % (0.5*he**2,)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="76" column="1" bodyfile="tests/VOS/vos.py" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/df1/namespacevos_1a74e80ee7b2d67521200d0d8d1764dea2" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string vos.soname</definition>
+        <argsstring></argsstring>
+        <name>soname</name>
+        <initializer>= &quot;vos_level_&quot;+repr(ct.refinement)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/VOS/vos.py" line="79" column="1" bodyfile="tests/VOS/vos.py" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/VOS/vos.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

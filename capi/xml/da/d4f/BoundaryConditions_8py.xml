@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="da/d4f/BoundaryConditions_8py" kind="file" language="Python">
+    <compoundname>BoundaryConditions.py</compoundname>
+    <innerclass refid="d1/dac/classproteus_1_1BoundaryConditions_1_1BC__Base" prot="public">proteus::BoundaryConditions::BC_Base</innerclass>
+    <innerclass refid="d8/de4/classproteus_1_1BoundaryConditions_1_1BoundaryCondition" prot="public">proteus::BoundaryConditions::BoundaryCondition</innerclass>
+    <innernamespace refid="d2/ddf/namespaceproteus_1_1BoundaryConditions">proteus::BoundaryConditions</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="d2/ddf/namespaceproteus_1_1BoundaryConditions" refkind="compound"><highlight class="comment">#!python</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">#<sp/>distutils:<sp/>language<sp/>=<sp/>c++</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">#<sp/>cython:<sp/>profile=True,<sp/>binding=True,<sp/>embedsignature=True</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">#<sp/>cython:<sp/>wraparound=False</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">#<sp/>cython:<sp/>boundscheck=False</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">#<sp/>cython:<sp/>initializedcheck=False</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>cython</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>numpy<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>np</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="11"><highlight class="stringliteral">Module<sp/>for<sp/>creating<sp/>boundary<sp/>conditions.<sp/>Imported<sp/>in<sp/>SpatialTools.py</highlight></codeline>
+<codeline lineno="12"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="13"><highlight class="stringliteral">..<sp/>inheritance-diagram::<sp/>proteus.BoundaryConditions</highlight></codeline>
+<codeline lineno="14"><highlight class="stringliteral"><sp/><sp/><sp/>:parts:<sp/>1</highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral">&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">__all__<sp/>=<sp/>[</highlight><highlight class="stringliteral">&apos;BC_Base&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;BoundaryCondition&apos;</highlight><highlight class="normal">]</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="d1/dac/classproteus_1_1BoundaryConditions_1_1BC__Base" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d1/dac/classproteus_1_1BoundaryConditions_1_1BC__Base" kindref="compound">BC_Base</ref>:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Generic<sp/>class<sp/>regrouping<sp/>boundary<sp/>conditions</highlight></codeline>
+<codeline lineno="23"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="d1/dac/classproteus_1_1BoundaryConditions_1_1BC__Base_1ab26cc3219cd4e79d1ec390c88cb1c2c7" kindref="member">__init__</ref>(self,<sp/>shape=None,<sp/>name=None,<sp/>b_or=None,<sp/>b_i=0,<sp/>nd=None):</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="d1/dac/classproteus_1_1BoundaryConditions_1_1BC__Base_1a5d898231069fe1af838e6278da841b44" kindref="member">Shape</ref><sp/>=<sp/>shape</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="d1/dac/classproteus_1_1BoundaryConditions_1_1BC__Base_1a702daee86d19ce696e356a3ad15580a0" kindref="member">name</ref><sp/>=<sp/>name</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="d1/dac/classproteus_1_1BoundaryConditions_1_1BC__Base_1af60fb2f72fb242cdf3508499adc81498" kindref="member">BC_type</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&apos;None&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>shape<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="d1/dac/classproteus_1_1BoundaryConditions_1_1BC__Base_1a4c1b257eadc5b1399ecb8492b38c1dc3" kindref="member">nd</ref><sp/>=<sp/>self.<ref refid="d1/dac/classproteus_1_1BoundaryConditions_1_1BC__Base_1a5d898231069fe1af838e6278da841b44" kindref="member">Shape</ref>.Domain.nd</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">elif</highlight><highlight class="normal"><sp/>nd<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="d1/dac/classproteus_1_1BoundaryConditions_1_1BC__Base_1a4c1b257eadc5b1399ecb8492b38c1dc3" kindref="member">nd</ref><sp/>=<sp/>nd</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">assert</highlight><highlight class="normal"><sp/>nd<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;Shape<sp/>or<sp/>nd<sp/>must<sp/>be<sp/>passed<sp/>to<sp/>BC&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>b_or<sp/></highlight><highlight class="keywordflow">is</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">not</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="d1/dac/classproteus_1_1BoundaryConditions_1_1BC__Base_1a5d23730cdadf78ec51c3eddc60df0092" kindref="member">_b_or</ref><sp/>=<sp/>b_or[b_i]<sp/><sp/></highlight><highlight class="comment">#<sp/>array<sp/>of<sp/>orientation<sp/>of<sp/>all<sp/>boundaries<sp/>of<sp/>shape</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="d1/dac/classproteus_1_1BoundaryConditions_1_1BC__Base_1a5d23730cdadf78ec51c3eddc60df0092" kindref="member">_b_or</ref><sp/>=<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>@staticmethod</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>def<sp/>newGlobalBC(name,<sp/>default_value):</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>Makes<sp/>a<sp/>new<sp/>BoundaryCondition<sp/>class<sp/>instance<sp/>attached<sp/>to<sp/>BC_Base.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>This<sp/>creates<sp/>a<sp/>new<sp/>class<sp/>attributed<sp/>that<sp/>will<sp/>be<sp/>added<sp/>to<sp/>all<sp/>BC_Base</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>class<sp/>instances.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>Parameters</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>----------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>name:<sp/>string</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/><sp/><sp/><sp/><sp/>setattr(BC_Base,<sp/>name,<sp/>default_value)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="d1/dac/classproteus_1_1BoundaryConditions_1_1BC__Base_1adf8d930b59a37b28cebf05b1c9ab8e16" kindref="member">getContext</ref>(self,<sp/>context=None):</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="54"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Gets<sp/>context<sp/>from<sp/>proteus.Context<sp/>or</highlight></codeline>
+<codeline lineno="55"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="56"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Parameters</highlight></codeline>
+<codeline lineno="57"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>----------</highlight></codeline>
+<codeline lineno="58"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>context:<sp/>class,<sp/>optional</highlight></codeline>
+<codeline lineno="59"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>set<sp/>to<sp/>None,<sp/>the<sp/>context<sp/>will<sp/>be<sp/>created<sp/>from<sp/>proteus.Context</highlight></codeline>
+<codeline lineno="60"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>context:</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>proteus<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Context</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="d1/dac/classproteus_1_1BoundaryConditions_1_1BC__Base_1afca78534691e90f6ffda4ba12b1c828b" kindref="member">ct</ref><sp/>=<sp/>Context.get()</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="d1/dac/classproteus_1_1BoundaryConditions_1_1BC__Base_1afca78534691e90f6ffda4ba12b1c828b" kindref="member">ct</ref><sp/>=<sp/>context</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="d8/de4/classproteus_1_1BoundaryConditions_1_1BoundaryCondition" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d8/de4/classproteus_1_1BoundaryConditions_1_1BoundaryCondition" kindref="compound">BoundaryCondition</ref>:</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="70"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Boundary<sp/>condition<sp/>class</highlight></codeline>
+<codeline lineno="71"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="72"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Attributes</highlight></codeline>
+<codeline lineno="73"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>----------</highlight></codeline>
+<codeline lineno="74"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>uOfXT:<sp/>func<sp/>or<sp/>None</highlight></codeline>
+<codeline lineno="75"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>boundary<sp/>condition<sp/>function<sp/>of<sp/>x<sp/>(array_like)<sp/>and<sp/>t<sp/>(float)<sp/>or<sp/>None<sp/>for</highlight></codeline>
+<codeline lineno="76"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>no<sp/>boundary<sp/>condition</highlight></codeline>
+<codeline lineno="77"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="d8/de4/classproteus_1_1BoundaryConditions_1_1BoundaryCondition_1a84f346c11d13abf19e424b4fe5302f1b" kindref="member">__init__</ref>(self):</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="d8/de4/classproteus_1_1BoundaryConditions_1_1BoundaryCondition_1ac4eb4407988da030d61defefffb91fd1" kindref="member">uOfXT</ref><sp/>=<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="d8/de4/classproteus_1_1BoundaryConditions_1_1BoundaryCondition_1ac3c9ee1de2c5884ae132db3b42c046ca" kindref="member">init_cython</ref>(self):</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>self.<ref refid="d8/de4/classproteus_1_1BoundaryConditions_1_1BoundaryCondition_1ac4eb4407988da030d61defefffb91fd1" kindref="member">uOfXT</ref></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="d8/de4/classproteus_1_1BoundaryConditions_1_1BoundaryCondition_1a89014a680db7ca83501a6c04f57203e8" kindref="member">resetBC</ref>(self):</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="d8/de4/classproteus_1_1BoundaryConditions_1_1BoundaryCondition_1ac4eb4407988da030d61defefffb91fd1" kindref="member">uOfXT</ref><sp/>=<sp/></highlight><highlight class="keywordtype">None</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="d8/de4/classproteus_1_1BoundaryConditions_1_1BoundaryCondition_1abc4ceade27e917441736be6730737827" kindref="member">setConstantBC</ref>(self,<sp/>value):</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="89"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>function<sp/>returning<sp/>constant<sp/>BC</highlight></codeline>
+<codeline lineno="90"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="91"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Parameters</highlight></codeline>
+<codeline lineno="92"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>----------</highlight></codeline>
+<codeline lineno="93"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value<sp/>:<sp/>float</highlight></codeline>
+<codeline lineno="94"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Constant<sp/>value</highlight></codeline>
+<codeline lineno="95"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="96"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="d8/de4/classproteus_1_1BoundaryConditions_1_1BoundaryCondition_1ac4eb4407988da030d61defefffb91fd1" kindref="member">uOfXT</ref><sp/>=<sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>x,<sp/>t,<sp/>n=np.zeros(3,):<sp/>value</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="d8/de4/classproteus_1_1BoundaryConditions_1_1BoundaryCondition_1a702161a9d39c08d3f236b2d69922d9c5" kindref="member">setLinearBC</ref>(self,<sp/>a0,<sp/>a):</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="102"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>function<sp/>returning<sp/>value=a0+ax*x+ay*y+az*z</highlight></codeline>
+<codeline lineno="103"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="104"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Parameters</highlight></codeline>
+<codeline lineno="105"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>----------</highlight></codeline>
+<codeline lineno="106"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a0<sp/>:<sp/>float</highlight></codeline>
+<codeline lineno="107"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>constant</highlight></codeline>
+<codeline lineno="108"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>a:<sp/>numpy.ndarray</highlight></codeline>
+<codeline lineno="109"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ax,ay,az</highlight></codeline>
+<codeline lineno="110"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="111"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="d8/de4/classproteus_1_1BoundaryConditions_1_1BoundaryCondition_1ac4eb4407988da030d61defefffb91fd1" kindref="member">uOfXT</ref><sp/>=<sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>x,<sp/>t,<sp/>n=np.zeros(3,):<sp/>a0+<ref refid="de/d5b/Headers_8h_1a4236a05d5d04839f0af91439cb8820b8" kindref="member">sum</ref>(a[:]*x[:])</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="d8/de4/classproteus_1_1BoundaryConditions_1_1BoundaryCondition_1aafcdb5dfe2062e2f78b54b825bb3dc15" kindref="member">setLinearRamp</ref>(self,t1,value):</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;&quot;&quot;</highlight></codeline>
+<codeline lineno="117"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>function<sp/>setting<sp/>a<sp/>linear<sp/>ramp<sp/>from<sp/>t=0<sp/>to<sp/>t=t1</highlight></codeline>
+<codeline lineno="118"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="119"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Parameters</highlight></codeline>
+<codeline lineno="120"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-----------</highlight></codeline>
+<codeline lineno="121"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>t1:<sp/>float</highlight></codeline>
+<codeline lineno="122"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Ramp<sp/>end<sp/>time</highlight></codeline>
+<codeline lineno="123"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value:<sp/>float</highlight></codeline>
+<codeline lineno="124"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Variable<sp/>value</highlight></codeline>
+<codeline lineno="125"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;&quot;&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>self.<ref refid="d8/de4/classproteus_1_1BoundaryConditions_1_1BoundaryCondition_1ac4eb4407988da030d61defefffb91fd1" kindref="member">uOfXT</ref><sp/>=<sp/></highlight><highlight class="keyword">lambda</highlight><highlight class="normal"><sp/>x,<sp/>t,<sp/>n=np.zeros(3,):<sp/><ref refid="db/dcc/jf_8h_1ac6afabdc09a49a433ee19d8a9486056d" kindref="member">min</ref>(<sp/>t/t1,<sp/>1)*value</highlight></codeline>
+    </programlisting>
+    <location file="BoundaryConditions.py"/>
+  </compounddef>
+</doxygen>

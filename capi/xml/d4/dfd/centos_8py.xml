@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d4/dfd/centos_8py" kind="file" language="Python">
+    <compoundname>centos.py</compoundname>
+    <innernamespace refid="d2/d3a/namespaceproteus_1_1config_1_1centos">proteus::config::centos</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="d2/d3a/namespaceproteus_1_1config_1_1centos" refkind="compound"><highlight class="keyword">from</highlight><highlight class="normal"><sp/>__future__<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>absolute_import</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>os</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>.default<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">PROTEUS_MPI_INCLUDE_DIR=</highlight><highlight class="stringliteral">&apos;/apps/openmpi/3.0.0/gcc/8.2.0/include&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">PROTEUS_MPI_LIB_DIR<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;/apps/openmpi/3.0.0/gcc/8.2.0/lib&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">PROTEUS_MPI_INCLUDE_DIRS<sp/>=<sp/>[PROTEUS_MPI_INCLUDE_DIR]</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">PROTEUS_MPI_LIB_DIRS<sp/>=<sp/>[PROTEUS_MPI_LIB_DIR]</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">PROTEUS_MPI_LIBS<sp/>=[]</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">PROTEUS_LAPACK_LIB_DIR<sp/>=<sp/>PROTEUS_LIB_DIR</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">PROTEUS_SCOREC_INCLUDE_DIR,<sp/>PROTEUS_SCOREC_LIB_DIR<sp/>=<sp/><ref refid="d8/d9a/namespaceproteus_1_1config_1_1default_1a60ddcbf9f4bb8b25d600103b943fde50" kindref="member">get_flags</ref>(</highlight><highlight class="stringliteral">&apos;scorec&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">PROTEUS_PARMETIS_INCLUDE_DIR,<sp/>PROTEUS_PARMETIS_LIB_DIR<sp/>=<sp/><ref refid="d8/d9a/namespaceproteus_1_1config_1_1default_1a60ddcbf9f4bb8b25d600103b943fde50" kindref="member">get_flags</ref>(</highlight><highlight class="stringliteral">&apos;parmetis&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">PROTEUS_ZOLTAN_INCLUDE_DIR,<sp/>PROTEUS_ZOLTAN_LIB_DIR<sp/>=<sp/><ref refid="d8/d9a/namespaceproteus_1_1config_1_1default_1a60ddcbf9f4bb8b25d600103b943fde50" kindref="member">get_flags</ref>(</highlight><highlight class="stringliteral">&apos;zoltan&apos;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">PROTEUS_SCOREC_INCLUDE_DIRS<sp/>=<sp/>[PROTEUS_SCOREC_INCLUDE_DIR,<sp/>PROTEUS_PETSC_INCLUDE_DIR,<sp/>PROTEUS_ZOLTAN_INCLUDE_DIR,<sp/>PROTEUS_PARMETIS_INCLUDE_DIR,<sp/>PROTEUS_MPI_INCLUDE_DIR,<sp/>PROTEUS_LAPACK_INCLUDE_DIR,<sp/>PROTEUS_BLAS_INCLUDE_DIR]</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">PROTEUS_SCOREC_LIB_DIRS<sp/>=<sp/><sp/><sp/><sp/><sp/>[PROTEUS_SCOREC_LIB_DIR,<sp/><sp/><sp/><sp/><sp/>PROTEUS_PETSC_LIB_DIR,<sp/><sp/><sp/><sp/><sp/>PROTEUS_ZOLTAN_LIB_DIR,<sp/><sp/><sp/><sp/><sp/>PROTEUS_PARMETIS_LIB_DIR,<sp/><sp/><sp/><sp/><sp/>PROTEUS_MPI_LIB_DIR,<sp/><sp/><sp/><sp/><sp/>PROTEUS_LAPACK_LIB_DIR,<sp/><sp/><sp/><sp/><sp/>PROTEUS_BLAS_LIB_DIR]</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">PROTEUS_SCOREC_LIBS<sp/>=<sp/>[</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;spr&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;ma&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;parma&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;apf_zoltan&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;mds&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;apf&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;mth&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;gmi&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;pcu&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;lion&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;parmetis&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;metis&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;sam&apos;</highlight><highlight class="normal">]+PROTEUS_PETSC_LIBS+PROTEUS_MPI_LIBS</highlight></codeline>
+    </programlisting>
+    <location file="config/centos.py"/>
+  </compounddef>
+</doxygen>

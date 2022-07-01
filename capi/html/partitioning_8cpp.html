@@ -29,7 +29,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">proteus
-   &#160;<span id="projectnumber">1.7.3.dev0</span>
+   &#160;<span id="projectnumber">1.8.1</span>
    </div>
    <div id="projectbrief">C/C++/Fortran libraries</div>
   </td>
@@ -86,8 +86,7 @@ $(function() {
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for partitioning.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="partitioning_8cpp__incl.svg" width="834" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
-</div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="partitioning_8cpp__incl.svg" width="834" height="262"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="partitioning_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -101,6 +100,8 @@ Namespaces</h2></td></tr>
 Macros</h2></td></tr>
 <tr class="memitem:a4e76a9ce86d91fa75775a7ae3f8d3aa5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="partitioning_8cpp.html#a4e76a9ce86d91fa75775a7ae3f8d3aa5">RANK</a>&#160;&#160;&#160;1</td></tr>
 <tr class="separator:a4e76a9ce86d91fa75775a7ae3f8d3aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e76a9ce86d91fa75775a7ae3f8d3aa5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="partitioning_8cpp.html#a4e76a9ce86d91fa75775a7ae3f8d3aa5">RANK</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a4e76a9ce86d91fa75775a7ae3f8d3aa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -110,6 +111,8 @@ Functions</h2></td></tr>
 <tr class="separator:ad76a320dedee422e8e0064e7dd9d0912"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84bde2e556d60a8bd93bede8bbdfd053"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproteus.html#a84bde2e556d60a8bd93bede8bbdfd053">proteus::partitionNodesFromTetgenFiles</a> (const MPI_Comm &amp;PROTEUS_COMM_WORLD, const char *filebase, int indexBase, <a class="el" href="struct_mesh.html">Mesh</a> &amp;newMesh, int nNodes_overlap)</td></tr>
 <tr class="separator:a84bde2e556d60a8bd93bede8bbdfd053"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f658c0988941cfae4d401e59bbe7816"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproteus.html#a9f658c0988941cfae4d401e59bbe7816">proteus::partitionNodesFromTriangleFiles</a> (const MPI_Comm &amp;PROTEUS_COMM_WORLD, const char *filebase, int indexBase, <a class="el" href="struct_mesh.html">Mesh</a> &amp;newMesh, int nNodes_overlap)</td></tr>
+<tr class="separator:a9f658c0988941cfae4d401e59bbe7816"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac704dbcca07e0565d2a9b74ae01c6e4e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproteus.html#ac704dbcca07e0565d2a9b74ae01c6e4e">proteus::partitionElements</a> (const MPI_Comm &amp;PROTEUS_COMM_WORLD, <a class="el" href="struct_mesh.html">Mesh</a> &amp;mesh, int nElements_overlap)</td></tr>
 <tr class="separator:ac704dbcca07e0565d2a9b74ae01c6e4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d697516d1d1a1f9828c3a6f9077a857"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceproteus.html#a7d697516d1d1a1f9828c3a6f9077a857">proteus::buildQuadraticSubdomain2GlobalMappings_1d</a> (const MPI_Comm &amp;PROTEUS_COMM_WORLD, <a class="el" href="struct_mesh.html">Mesh</a> &amp;mesh, const int *elementOffsets_subdomain_owned, const int *nodeOffsets_subdomain_owned, const int *elementNumbering_subdomain2global, const int *nodeNumbering_subdomain2global, int &amp;nDOF_all_processes, int &amp;nDOF_subdomain, int &amp;max_dof_neighbors, int *offsets_subdomain_owned, int *subdomain_l2g, int *subdomain2global, double *lagrangeNodesArray)</td></tr>
@@ -125,7 +128,21 @@ Functions</h2></td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a4e76a9ce86d91fa75775a7ae3f8d3aa5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e76a9ce86d91fa75775a7ae3f8d3aa5">&#9670;&nbsp;</a></span>RANK</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e76a9ce86d91fa75775a7ae3f8d3aa5">&#9670;&nbsp;</a></span>RANK <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RANK&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4e76a9ce86d91fa75775a7ae3f8d3aa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e76a9ce86d91fa75775a7ae3f8d3aa5">&#9670;&nbsp;</a></span>RANK <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -141,7 +158,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 17 2020 16:38:56 for proteus by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
+Generated on Fri Jul 1 2022 11:18:13 for proteus by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
 </small></address>
 </body>
 </html>

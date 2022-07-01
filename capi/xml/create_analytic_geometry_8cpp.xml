@@ -63,11 +63,17 @@
       <node id="14">
         <label>map</label>
       </node>
-      <node id="28">
+      <node id="30">
         <label>lionPrint.h</label>
       </node>
       <node id="13">
         <label>fstream</label>
+      </node>
+      <node id="27">
+        <label>PyEmbeddedFunctions.h</label>
+        <link refid="_py_embedded_functions_8h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
       </node>
       <node id="7">
         <label>PCU.h</label>
@@ -85,10 +91,13 @@
         </childnode>
         <childnode refid="17" relation="include">
         </childnode>
-        <childnode refid="27" relation="include">
+        <childnode refid="29" relation="include">
         </childnode>
-        <childnode refid="28" relation="include">
+        <childnode refid="30" relation="include">
         </childnode>
+      </node>
+      <node id="28">
+        <label>Python.h</label>
       </node>
       <node id="20">
         <label>vector</label>
@@ -136,6 +145,8 @@
         </childnode>
         <childnode refid="26" relation="include">
         </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
       </node>
       <node id="15">
         <label>math.h</label>
@@ -158,7 +169,7 @@
       <node id="21">
         <label>algorithm</label>
       </node>
-      <node id="27">
+      <node id="29">
         <label>ma.h</label>
       </node>
     </incdepgraph>
@@ -1922,7 +1933,7 @@
 <codeline lineno="643"><highlight class="normal"><sp/><sp/><ref refid="class_mesh_adapt_p_u_m_i_drvr_1a59341bdac50cbf6195f4c10747a120a0" kindref="member">gradeMesh</ref>(1.5);</highlight></codeline>
 <codeline lineno="644"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="645"><highlight class="normal"></highlight></codeline>
-<codeline lineno="646"><highlight class="normal"><sp/><sp/>ma::Input*<sp/>in<sp/>=<sp/>ma::configure(m,size_iso);</highlight></codeline>
+<codeline lineno="646"><highlight class="normal"><sp/><sp/>ma::Input*<sp/>in<sp/>=<sp/>ma::makeAdvanced(ma::configure(m,size_iso));</highlight></codeline>
 <codeline lineno="647"><highlight class="normal"><sp/><sp/>in-&gt;maximumIterations<sp/>=<sp/>10;</highlight></codeline>
 <codeline lineno="648"><highlight class="normal"><sp/><sp/>in-&gt;shouldSnap<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="649"><highlight class="normal"><sp/><sp/>in-&gt;shouldTransferParametric<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
@@ -1949,7 +1960,7 @@
 <codeline lineno="670"><highlight class="normal"></highlight></codeline>
 <codeline lineno="671"><highlight class="normal"><sp/><sp/><ref refid="class_mesh_adapt_p_u_m_i_drvr_1a59341bdac50cbf6195f4c10747a120a0" kindref="member">gradeMesh</ref>(1.5);</highlight></codeline>
 <codeline lineno="672"><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="673"><highlight class="normal"><sp/><sp/>in<sp/>=<sp/>ma::configure(m,size_iso);</highlight></codeline>
+<codeline lineno="673"><highlight class="normal"><sp/><sp/>in<sp/>=<sp/>ma::makeAdvanced(ma::configure(m,size_iso));</highlight></codeline>
 <codeline lineno="674"><highlight class="normal"><sp/><sp/>in-&gt;maximumIterations<sp/>=<sp/>10;</highlight></codeline>
 <codeline lineno="675"><highlight class="normal"><sp/><sp/>in-&gt;shouldSnap<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="676"><highlight class="normal"><sp/><sp/>in-&gt;shouldTransferParametric<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>

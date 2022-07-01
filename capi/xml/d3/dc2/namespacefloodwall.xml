@@ -1,0 +1,549 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d3/dc2/namespacefloodwall" kind="namespace" language="Python">
+    <compoundname>floodwall</compoundname>
+    <innerclass refid="d3/d2d/classfloodwall_1_1PHI__IC" prot="public">floodwall::PHI_IC</innerclass>
+    <innerclass refid="db/deb/classfloodwall_1_1VF__IC" prot="public">floodwall::VF_IC</innerclass>
+    <innerclass refid="d4/da8/classfloodwall_1_1zero" prot="public">floodwall::zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a6a6862da0675b6b95293c46a7bdeb1e0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floodwall.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  Context.Options([
+    (&apos;ns_model&apos;,1,&quot;ns_model={0,1} for {rans2p,rans3p}&quot;),
+    (&quot;<ref refid="d3/dc2/namespacefloodwall_1af48abd2dccb28f028ee5785ff4a0a1f3" kindref="member">final_time</ref>&quot;,10.0,&quot;Final time for simulation&quot;),
+    (&quot;<ref refid="d3/dc2/namespacefloodwall_1a2e542203a05420c74defe0f9dec17987" kindref="member">dt_output</ref>&quot;,0.1,&quot;Time interval to output solution&quot;),
+    (&quot;gauges&quot;, True, &quot;Collect data for validation&quot;),
+    (&quot;<ref refid="d3/dc2/namespacefloodwall_1a0a1c417a8ac7b682f5c9fdd140a316fb" kindref="member">cfl</ref>&quot;,0.9,&quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="d3/dc2/namespacefloodwall_1af37cc87fd86788d9a8c776dd9770bae6" kindref="member">he</ref>&quot;,0.08,&quot;Max mesh element diameter&quot;)
+    ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="15" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a5d1d28b02b045703918a59b25c71417f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floodwall::waterLevel</definition>
+        <argsstring></argsstring>
+        <name>waterLevel</name>
+        <initializer>= 0.9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="24" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a3bf959f147f4a9fa7805d6dc98078c84" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floodwall::pro_wl</definition>
+        <argsstring></argsstring>
+        <name>pro_wl</name>
+        <initializer>= 0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="25" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1af47421de6b107a53b66c8ae1db5245f5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floodwall.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>= np.array([0.,-9.81,0.0])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="26" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1af37cc87fd86788d9a8c776dd9770bae6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floodwall.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>= opts.he</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="27" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a66e56f9f774620b422dd2d65f92fe695" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floodwall.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.PlanarStraightLineGraphDomain()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="35" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1aabea347b113ffd2116c084c5f73808b4" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list floodwall::boundaries</definition>
+        <argsstring></argsstring>
+        <name>boundaries</name>
+        <initializer>= [&apos;gate&apos;,&apos;left&apos;,&apos;right&apos;,&apos;bottom&apos;,&apos;top&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="37" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floodwall.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>= dict([(key,i+1) for (i,key) in enumerate(<ref refid="d3/dc2/namespacefloodwall_1aabea347b113ffd2116c084c5f73808b4" kindref="member">boundaries</ref>)])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="38" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a52924ef8b4559aa8ad6464b8ed104a23" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary floodwall::boundaryOrientations</definition>
+        <argsstring></argsstring>
+        <name>boundaryOrientations</name>
+        <initializer>=  {&apos;gate&apos;: np.array([0, 1.,0.]),
+                        &apos;left&apos;: np.array([-1., 0.,0.]),
+                        &apos;right&apos;: np.array([+1., 0.,0.]),
+                        &apos;top&apos;: np.array([0.,+1.,0.]),
+                        &apos;bottom&apos;: np.array([0.,-1., 0.]),
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="40" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1aee83a7dd55640fdf005218a8248efa2a" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list floodwall::vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <initializer>= [[0.0,0.0],#0
+          [2.0,0.0],#1
+          [2.1,1.0],#2
+          [2.15,1.0],#3
+#          [2.75,0.0],#4
+#          [3.5,0.0],#5
+          [2.75 - 0.75*(2.75-2.15)/(1.0-0.0),0.75],#4
+#          [3.5,0.75],#5
+#          [3.5,1.5],#6
+          [3.,0.75],#5
+          [3.,1.5],#6
+          [0.0,1.5],#7
+]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="46" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a04324da23277940b317dd5b65c1fea47" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list floodwall::vertexFlags</definition>
+        <argsstring></argsstring>
+        <name>vertexFlags</name>
+        <initializer>= [<ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+             <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;gate&apos;],
+             <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;gate&apos;],
+             <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;gate&apos;],
+             <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;gate&apos;],
+             <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+             <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;top&apos;],
+             <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;top&apos;],
+             ]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="60" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1aa67a310ee735b81ac8b716162959502e" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list floodwall::segments</definition>
+        <argsstring></argsstring>
+        <name>segments</name>
+        <initializer>= [[0,1],
+          [1,2],
+          [2,3],
+          [3,4],
+          [4,5],
+          [5,6],
+          [6,7],
+          [7,0]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="70" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a62e6c416ed568286e9150e9db60390b8" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list floodwall::segmentFlags</definition>
+        <argsstring></argsstring>
+        <name>segmentFlags</name>
+        <initializer>= [<ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+              <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;gate&apos;],
+              <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;gate&apos;],
+              <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;gate&apos;],
+              <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+              <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;right&apos;],
+              <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;top&apos;],
+              <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;left&apos;]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="81" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1ab35b7c0fbf66d164c2c13e1327249847" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list floodwall::regions</definition>
+        <argsstring></argsstring>
+        <name>regions</name>
+        <initializer>= [[0.1,0.1]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="90" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1ac0ded76b8ed57b599969c0d76b73a205" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list floodwall::regionFlags</definition>
+        <argsstring></argsstring>
+        <name>regionFlags</name>
+        <initializer>= [1]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="91" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a44cbd3d6955220d754bec8df2ccc0a24" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floodwall.tank</definition>
+        <argsstring></argsstring>
+        <name>tank</name>
+        <initializer>=  st.CustomShape(<ref refid="d3/dc2/namespacefloodwall_1a66e56f9f774620b422dd2d65f92fe695" kindref="member">domain</ref>,
+                      <ref refid="d3/dc2/namespacefloodwall_1aee83a7dd55640fdf005218a8248efa2a" kindref="member">vertices</ref>=<ref refid="d3/dc2/namespacefloodwall_1aee83a7dd55640fdf005218a8248efa2a" kindref="member">vertices</ref>,
+                      <ref refid="d3/dc2/namespacefloodwall_1a04324da23277940b317dd5b65c1fea47" kindref="member">vertexFlags</ref>=<ref refid="d3/dc2/namespacefloodwall_1a04324da23277940b317dd5b65c1fea47" kindref="member">vertexFlags</ref>,
+                      <ref refid="d3/dc2/namespacefloodwall_1aa67a310ee735b81ac8b716162959502e" kindref="member">segments</ref>=<ref refid="d3/dc2/namespacefloodwall_1aa67a310ee735b81ac8b716162959502e" kindref="member">segments</ref>,
+                      <ref refid="d3/dc2/namespacefloodwall_1a62e6c416ed568286e9150e9db60390b8" kindref="member">segmentFlags</ref>=<ref refid="d3/dc2/namespacefloodwall_1a62e6c416ed568286e9150e9db60390b8" kindref="member">segmentFlags</ref>,
+                      <ref refid="d3/dc2/namespacefloodwall_1ab35b7c0fbf66d164c2c13e1327249847" kindref="member">regions</ref> = <ref refid="d3/dc2/namespacefloodwall_1ab35b7c0fbf66d164c2c13e1327249847" kindref="member">regions</ref>,
+                      <ref refid="d3/dc2/namespacefloodwall_1ac0ded76b8ed57b599969c0d76b73a205" kindref="member">regionFlags</ref> = <ref refid="d3/dc2/namespacefloodwall_1ac0ded76b8ed57b599969c0d76b73a205" kindref="member">regionFlags</ref>,
+                      <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>=<ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>,
+                      <ref refid="d3/dc2/namespacefloodwall_1a52924ef8b4559aa8ad6464b8ed104a23" kindref="member">boundaryOrientations</ref>=<ref refid="d3/dc2/namespacefloodwall_1a52924ef8b4559aa8ad6464b8ed104a23" kindref="member">boundaryOrientations</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="93" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a90750017985c21f5c27ab262f15a6266" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floodwall.wave</definition>
+        <argsstring></argsstring>
+        <name>wave</name>
+        <initializer>= wt.MonochromaticWaves(period=2.5,
+                           waveHeight=<ref refid="d3/dc2/namespacefloodwall_1a5d1d28b02b045703918a59b25c71417f" kindref="member">waterLevel</ref>/3.0,
+                           mwl=<ref refid="d3/dc2/namespacefloodwall_1a5d1d28b02b045703918a59b25c71417f" kindref="member">waterLevel</ref>,
+                           depth=<ref refid="d3/dc2/namespacefloodwall_1a5d1d28b02b045703918a59b25c71417f" kindref="member">waterLevel</ref>,
+                           <ref refid="d3/dc2/namespacefloodwall_1af47421de6b107a53b66c8ae1db5245f5" kindref="member">g</ref>=<ref refid="d3/dc2/namespacefloodwall_1af47421de6b107a53b66c8ae1db5245f5" kindref="member">g</ref>,
+                           waveDir=np.array([1.,0.,0.]))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="107" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1aa12462f8298501e49c9d03079e3e25bc" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floodwall.smoothing</definition>
+        <argsstring></argsstring>
+        <name>smoothing</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="113" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a65e4e7d5ab334ab8b15d4a1e1fcd1cec" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string floodwall::triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <initializer>=  &quot;VApq30Dena%8.8<ref refid="d7/daa/group__analyticalSolutions_1ga5f01b1fc0e3cb358aa6411861cedc62c" kindref="member">f</ref>&quot; % ((opts.he**2)/2.0,)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="123" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a886ad2b72e39ecc1651cb6d8b58e1111" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floodwall.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="158" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1af48abd2dccb28f028ee5785ff4a0a1f3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floodwall.final_time</definition>
+        <argsstring></argsstring>
+        <name>final_time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="159" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a2e542203a05420c74defe0f9dec17987" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floodwall.dt_output</definition>
+        <argsstring></argsstring>
+        <name>dt_output</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="160" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a0a1c417a8ac7b682f5c9fdd140a316fb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floodwall.cfl</definition>
+        <argsstring></argsstring>
+        <name>cfl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="163" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1ae8d245d939602ffbc7bbbf0a17e73f05" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floodwall.useSuperlu</definition>
+        <argsstring></argsstring>
+        <name>useSuperlu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="164" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a66f91c0e45c2b1f227377113efba5b04" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floodwall.m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <initializer>=  myTpFlowProblem.SystemPhysics.modelDict</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="168" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a49d75423b72121b2191b6357dbf566d4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floodwall.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  TpFlow.OutputStepping(opts.final_time,<ref refid="d3/dc2/namespacefloodwall_1a2e542203a05420c74defe0f9dec17987" kindref="member">dt_output</ref>=opts.dt_output)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/floodwall.py" line="158" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/floodwall.py" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a8f1207c76fa2f4a1ec97574f6d7a7962" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary floodwall::initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;pressure&apos;: <ref refid="d4/da8/classfloodwall_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;pressure_increment&apos;: <ref refid="d4/da8/classfloodwall_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vel_u&apos;: <ref refid="d4/da8/classfloodwall_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vel_v&apos;: <ref refid="d4/da8/classfloodwall_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vel_w&apos;: <ref refid="d4/da8/classfloodwall_1_1zero" kindref="compound">zero</ref>(),
+                     &apos;vof&apos;: <ref refid="db/deb/classfloodwall_1_1VF__IC" kindref="compound">VF_IC</ref>(),
+                     &apos;ncls&apos;: <ref refid="d3/d2d/classfloodwall_1_1PHI__IC" kindref="compound">PHI_IC</ref>(),
+                     &apos;rdls&apos;: <ref refid="d3/d2d/classfloodwall_1_1PHI__IC" kindref="compound">PHI_IC</ref>(),}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/notebooks/floodwall.py" line="159" column="1" bodyfile="tests/proteus_tutorial/2d/notebooks/floodwall.py" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a899426d3dc98ed65b4c011688c133e9b" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float floodwall.leeward_wl</definition>
+        <argsstring></argsstring>
+        <name>leeward_wl</name>
+        <initializer>= 0.25</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/floodwall.py" line="32" column="1" bodyfile="tests/proteus_tutorial/3d/floodwall.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a0b0d165e4a05622403b8d6280928979a" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list floodwall.facets</definition>
+        <argsstring></argsstring>
+        <name>facets</name>
+        <initializer>= [[[0,1,2,3,4,5,6,7]],
+        [[8,9,10,11,12,13,14,15]],
+        [[0,7,15,8]],
+        [[13,14,6,5]],
+        [[6,7,15,14]],
+        [[0,1,9,8]],
+        [[1,2,10,9]],
+        [[2,3,11,10]],
+        [[3,4,12,11]],
+        [[4,5,13,12]]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/floodwall.py" line="92" column="1" bodyfile="tests/proteus_tutorial/3d/floodwall.py" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1ab3313d77a5d29b52359ddd03c0be2d61" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list floodwall.facetFlags</definition>
+        <argsstring></argsstring>
+        <name>facetFlags</name>
+        <initializer>= [<ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;front&apos;],
+            <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;back&apos;],
+            <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;left&apos;],
+            <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;right&apos;],
+            <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;top&apos;],
+            <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;bottom&apos;],
+            <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;gate&apos;],
+            <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;gate&apos;],
+            <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;gate&apos;],
+            <ref refid="d3/dc2/namespacefloodwall_1a39f64e049658c7a13c51f4a339072b0f" kindref="member">boundaryTags</ref>[&apos;bottom&apos;]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/floodwall.py" line="105" column="1" bodyfile="tests/proteus_tutorial/3d/floodwall.py" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/dc2/namespacefloodwall_1a900343c4b7659e69cf2556a5151cb602" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>floodwall.gravity</definition>
+        <argsstring></argsstring>
+        <name>gravity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/3d/floodwall.py" line="222" column="1" bodyfile="tests/proteus_tutorial/3d/floodwall.py" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="d3/dc2/namespacefloodwall_1a9b92c2f5d8bd2d5b7681226b380afddb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def floodwall::signedDistance</definition>
+        <argsstring>(x)</argsstring>
+        <name>signedDistance</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/floodwall.py" line="133" column="1" bodyfile="tests/proteus_tutorial/2d/floodwall.py" bodystart="133" bodyend="146"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Multiphase Flow Test
+</verbatim> </para>
+    </detaileddescription>
+    <location file="tests/proteus_tutorial/2d/floodwall.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

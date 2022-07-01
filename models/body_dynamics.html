@@ -1,78 +1,39 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Multi-Body Solid Dynamics &mdash; Proteus 1.7.5 documentation</title>
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
-
-  
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multi-Body Solid Dynamics &mdash; Proteus 1.8.1 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/tritonBorder.ico"/>
-  
-  
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="prev" title="Free Surface" href="free_surface.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../index.html">
-          
-
-          
-            
             <img src="../_static/corps_logo_cross2.svg" class="logo" alt="Logo"/>
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                1.7.5
+                1.8.1
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -80,23 +41,12 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">General</span></p>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">General</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../apicapi.html">API docs</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Tools</span></p>
+<p class="caption" role="heading"><span class="caption-text">Tools</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../tools/spatial_tools.html">SpatialTools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tools/spatial_tools.html#usage">Usage</a><ul>
@@ -149,7 +99,7 @@
 </ul>
 </li>
 </ul>
-<p class="caption"><span class="caption-text">Models</span></p>
+<p class="caption" role="heading"><span class="caption-text">Models</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="navier_stokes.html">Multiphase Navier-Stokes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="navier_stokes.html#description">Description</a></li>
@@ -185,83 +135,43 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#postprocessing-tools">Postprocessing Tools</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#id3">ProtChBody</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id4">ProtChMoorings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">ProtChBody</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">ProtChMoorings</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
 
-            
-          
         </div>
         
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">Proteus</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
       <li>Multi-Body Solid Dynamics</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-            
-            
               <a href="https://github.com/erdc/proteus/blob/masterdocs/source/models/body_dynamics.rst" class="fa fa-github"> Edit on GitHub</a>
-            
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="multi-body-solid-dynamics">
-<span id="body-dynamics"></span><h1>Multi-Body Solid Dynamics<a class="headerlink" href="#multi-body-solid-dynamics" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="implementation">
-<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline">¶</a></h2>
+             
+  <section id="multi-body-solid-dynamics">
+<span id="body-dynamics"></span><h1>Multi-Body Solid Dynamics<a class="headerlink" href="#multi-body-solid-dynamics" title="Permalink to this headline"></a></h1>
+<section id="implementation">
+<h2>Implementation<a class="headerlink" href="#implementation" title="Permalink to this headline"></a></h2>
 <p>The module described in this page can be imported as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">proteus.mbd</span> <span class="kn">import</span> <span class="n">CouplingFSI</span> <span class="k">as</span> <span class="n">fsi</span>
 </pre></div>
@@ -270,11 +180,11 @@
 <p>The bodies and cables classes described below can interact with proteus models
 such as Navier-Stokes to retrieve forces and moments, moving (ALE) mesh for
 moving the domain with the structure, and added-mass model.</p>
-</div>
-<div class="section" id="classes">
-<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="protchsystem">
-<h3>ProtChSystem<a class="headerlink" href="#protchsystem" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h2>
+<section id="protchsystem">
+<h3>ProtChSystem<a class="headerlink" href="#protchsystem" title="Permalink to this headline"></a></h3>
 <p>The <cite>ProtChSystem</cite> class has a pointer to a Chrono <cite>ChSystem</cite>, and holds the
 general options for the Chrono simulation, such as time step size, gravity,
 etc. All the physical bodies described must be associated to a <cite>ProtChSystem</cite>
@@ -283,9 +193,10 @@ instance.</p>
 <span class="kn">from</span> <span class="nn">proteus.mbd</span> <span class="kn">import</span> <span class="n">CouplingFSI</span> <span class="k">as</span> <span class="n">fsi</span>
 
 <span class="n">my_system</span> <span class="o">=</span> <span class="n">fsi</span><span class="o">.</span><span class="n">ProtChSystem</span><span class="p">()</span>
-<span class="n">g</span> <span class="o">=</span> <span class="n">pychrono</span><span class="o">.</span><span class="n">ChVectorD</span><span class="p">(</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="o">-</span><span class="mf">9.81</span><span class="p">)</span>
-<span class="n">my_system</span><span class="o">.</span><span class="n">ChSystem</span><span class="o">.</span><span class="n">Set_G_acc</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
+<span class="n">g</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="o">-</span><span class="mf">9.81</span><span class="p">])</span>
+<span class="n">my_system</span><span class="o">.</span><span class="n">setGravitationalAcceleration</span><span class="p">(</span><span class="n">g</span><span class="p">)</span>
 <span class="n">my_system</span><span class="o">.</span><span class="n">setTimeStep</span><span class="p">(</span><span class="mf">0.001</span><span class="p">)</span>  <span class="c1"># the time step for Chrono calculations</span>
+<span class="n">my_chsystem</span> <span class="o">=</span> <span class="n">my_system</span><span class="o">.</span><span class="n">getChronoObject</span><span class="p">()</span>  <span class="c1"># access chrono object</span>
 </pre></div>
 </div>
 <div class="admonition important">
@@ -295,9 +206,9 @@ list of the Navier-Stokes model in order to calculate and retrieve the fluid
 forces from the fluid pressure field provided by Proteus at the boundaries
 of the different bodies.</p>
 </div>
-</div>
-<div class="section" id="protchbody">
-<h3>ProtChBody<a class="headerlink" href="#protchbody" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="protchbody">
+<h3>ProtChBody<a class="headerlink" href="#protchbody" title="Permalink to this headline"></a></h3>
 <p>Class for creating a rigid body. It has a Chrono <cite>ChBody</cite> body variable
 (<cite>ProtChBody.ChBody</cite>) accessible within python with some of the
 functionalities/functions of Chrono <cite>ChBody</cite>. It must be associated to a
@@ -308,6 +219,7 @@ simulation. This can be done with the passing of the <cite>system</cite> argumen
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_body</span> <span class="o">=</span> <span class="n">fsi</span><span class="o">.</span><span class="n">ProtChBody</span><span class="p">(</span><span class="n">system</span><span class="o">=</span><span class="n">my_system</span><span class="p">)</span>
 <span class="n">my_body</span><span class="o">.</span><span class="n">attachShape</span><span class="p">(</span><span class="n">my_shape</span><span class="p">)</span>  <span class="c1"># sets everything automatically</span>
 <span class="n">my_body</span><span class="o">.</span><span class="n">setRecordValues</span><span class="p">(</span><span class="n">all_values</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># record everything</span>
+<span class="n">my_chbody</span> <span class="o">=</span> <span class="n">my_body</span><span class="o">.</span><span class="n">getChronoObject</span><span class="p">()</span>  <span class="c1"># access chrono object</span>
 </pre></div>
 </div>
 <p>When set up properly and running with a Proteus Navier-Stokes simulation, the
@@ -316,20 +228,22 @@ will be moved accordingly, as well as its boundaries (supposing that a moving
 mesh or immersed boundaries are used).</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>The <cite>ProtChBody.ChBody</cite>  variable is actually using a derived class from the
+<p>The <cite>ProtChBody.ChBody</cite>  variable accessible with
+<cite>ProtChBody.getChronoObject()</cite> is actually using a derived class from the
 base Chrono <cite>ChBody</cite> in order to add the possibility of using an added-mass
 matrix (see <cite>ChBodyAddedMass</cite> in proteus.mbd.ChRigidBody.h).</p>
 </div>
-</div>
-<div class="section" id="protchmesh">
-<h3>ProtChMesh<a class="headerlink" href="#protchmesh" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="protchmesh">
+<h3>ProtChMesh<a class="headerlink" href="#protchmesh" title="Permalink to this headline"></a></h3>
 <p>This class creates a <cite>ChMesh</cite> that is needed to create moorings.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_mesh</span> <span class="o">=</span> <span class="n">fsi</span><span class="o">.</span><span class="n">ProtChMesh</span><span class="p">(</span><span class="n">system</span><span class="o">=</span><span class="n">my_system</span><span class="p">)</span>
+<span class="n">my_chmesh</span> <span class="o">=</span> <span class="n">my_mesh</span><span class="o">.</span><span class="n">getChronoObject</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="protchmoorings">
-<h3>ProtChMoorings<a class="headerlink" href="#protchmoorings" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="protchmoorings">
+<h3>ProtChMoorings<a class="headerlink" href="#protchmoorings" title="Permalink to this headline"></a></h3>
 <p>This class is for easily creating cables. The following properties must be
 known in order to instantiate a <cite>ProtChMoorings</cite>: <cite>ProtChSystem</cite> instance,
 <cite>Mesh</cite> instance, <cite>length</cite> for the length of the cable/segment, <cite>nb_elems</cite> for
@@ -366,9 +280,9 @@ cable is desired, such as a catenary shape.</p>
 and <cite>E</cite> parameters is that a cable can be multi-segmented (different
 sections of the same cable having different material properties).</p>
 </div>
-</div>
-<div class="section" id="protchaddedmass">
-<h3>ProtChAddedMass<a class="headerlink" href="#protchaddedmass" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="protchaddedmass">
+<h3>ProtChAddedMass<a class="headerlink" href="#protchaddedmass" title="Permalink to this headline"></a></h3>
 <p>A class to deal with the added mass model from proteus.mprans.AddedMass. This
 class should not be instantiated manually and will be automatically
 instantiating as a variable of <cite>ProtChSystem</cite> (accessible as
@@ -380,18 +294,18 @@ rigid bodies.</p>
 <cite>auxiliaryVariables</cite> to have any effect
 (<cite>auxiliaryVariables.append(my_system.ProtChAddedMass</cite>)</p>
 </div>
-</div>
-</div>
-<div class="section" id="postprocessing-tools">
-<h2>Postprocessing Tools<a class="headerlink" href="#postprocessing-tools" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="id3">
-<h3>ProtChBody<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+</section>
+</section>
+<section id="postprocessing-tools">
+<h2>Postprocessing Tools<a class="headerlink" href="#postprocessing-tools" title="Permalink to this headline"></a></h2>
+<section id="id2">
+<h3>ProtChBody<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
 <p>The data related to mooring cables is saved in an csv file, usually
 <code class="docutils literal notranslate"><span class="pre">[my_body.name].csv</span></code>. Additionally, if the added mass model was used, the
 values of the added mass matrix are available in <code class="docutils literal notranslate"><span class="pre">[my_body.name]_Aij_.csv</span></code></p>
-</div>
-<div class="section" id="id4">
-<h3>ProtChMoorings<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id3">
+<h3>ProtChMoorings<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h3>
 <p>The data related to mooring cables is saved in an hdf5 file, usually
 <code class="docutils literal notranslate"><span class="pre">[my_mooring.name].h5</span></code>, which can be read directly with h5py. Another way to
 read and visualise the data is to use the associated <code class="docutils literal notranslate"><span class="pre">[my_mooring.name].xmf</span></code>.
@@ -404,62 +318,38 @@ file name):
 <p>where <code class="docutils literal notranslate"><span class="pre">{PROTEUS_DIR}</span></code> is the root directory of the Proteus installation. This
 will create <code class="docutils literal notranslate"><span class="pre">[my_mooring.name]_complete.xmf</span></code> which can be opened in Paraview
 to navigate the time steps that have been recorded.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="free_surface.html" class="btn btn-neutral float-left" title="Free Surface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="free_surface.html" class="btn btn-neutral float-left" title="Free Surface" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        
-        &copy; Copyright 2020, The Proteus Team
-
-    </p>
+    <p>&#169; Copyright 2020, The Proteus Team.</p>
   </div>
-    
-    
-    
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
-
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-    
+  </script>  
 
   <style>
     /* Sidebar header (and topbar for mobile) */

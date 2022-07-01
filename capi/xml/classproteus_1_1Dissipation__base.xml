@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classproteus_1_1Dissipation__base" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>proteus::Dissipation_base</compoundname>
+    <derivedcompoundref refid="classproteus_1_1Dissipation" prot="public" virt="non-virtual">proteus::Dissipation&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;</derivedcompoundref>
+    <includes refid="Dissipation_8h" local="no">Dissipation.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classproteus_1_1Dissipation__base_1ae622ea9535ce14e24f455b2b87ce59ef" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual proteus::Dissipation_base::~Dissipation_base</definition>
+        <argsstring>()</argsstring>
+        <name>~Dissipation_base</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/Dissipation.h" line="19" column="13" bodyfile="mprans/Dissipation.h" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1Dissipation__base_1a368ba2bb288eeab2070512f3def92594" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void proteus::Dissipation_base::setSedClosure</definition>
+        <argsstring>(double aDarcy, double betaForch, double grain, double packFraction, double packMargin, double maxFraction, double frFraction, double sigmaC, double C3e, double C4e, double eR, double fContact, double mContact, double nContact, double angFriction, double vos_limiter, double mu_fr_limiter)</argsstring>
+        <name>setSedClosure</name>
+        <reimplementedby refid="classproteus_1_1Dissipation_1ab5aa7b0173decff6d96143e137e7f8fa">setSedClosure</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>aDarcy</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>betaForch</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>grain</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>packFraction</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>packMargin</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>maxFraction</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>frFraction</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>sigmaC</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>C3e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>C4e</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>eR</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>fContact</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mContact</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>nContact</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>angFriction</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>vos_limiter</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>mu_fr_limiter</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/Dissipation.h" line="20" column="19" bodyfile="mprans/Dissipation.h" bodystart="20" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1Dissipation__base_1a1602dddd35e06949f76de89cb86396a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void proteus::Dissipation_base::calculateResidual</definition>
+        <argsstring>(arguments_dict &amp;args)=0</argsstring>
+        <name>calculateResidual</name>
+        <reimplementedby refid="classproteus_1_1Dissipation_1ac7db0ffb3e7217ef75568ef2adc0b9fd">calculateResidual</reimplementedby>
+        <param>
+          <type><ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/Dissipation.h" line="37" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1Dissipation__base_1a9c52f581d4870ddc417d32b3decc319a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void proteus::Dissipation_base::calculateJacobian</definition>
+        <argsstring>(arguments_dict &amp;args)=0</argsstring>
+        <name>calculateJacobian</name>
+        <reimplementedby refid="classproteus_1_1Dissipation_1aa3c416df44a2a48f7e2409f21f4581fc">calculateJacobian</reimplementedby>
+        <param>
+          <type><ref refid="structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/Dissipation.h" line="38" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>proteus::Dissipation&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;</label>
+        <link refid="classproteus_1_1Dissipation"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>proteus::Dissipation_base</label>
+        <link refid="classproteus_1_1Dissipation__base"/>
+      </node>
+    </inheritancegraph>
+    <location file="mprans/Dissipation.h" line="16" column="1" bodyfile="mprans/Dissipation.h" bodystart="15" bodyend="39"/>
+    <listofallmembers>
+      <member refid="classproteus_1_1Dissipation__base_1a9c52f581d4870ddc417d32b3decc319a" prot="public" virt="pure-virtual"><scope>proteus::Dissipation_base</scope><name>calculateJacobian</name></member>
+      <member refid="classproteus_1_1Dissipation__base_1a1602dddd35e06949f76de89cb86396a6" prot="public" virt="pure-virtual"><scope>proteus::Dissipation_base</scope><name>calculateResidual</name></member>
+      <member refid="classproteus_1_1Dissipation__base_1a368ba2bb288eeab2070512f3def92594" prot="public" virt="virtual"><scope>proteus::Dissipation_base</scope><name>setSedClosure</name></member>
+      <member refid="classproteus_1_1Dissipation__base_1ae622ea9535ce14e24f455b2b87ce59ef" prot="public" virt="virtual"><scope>proteus::Dissipation_base</scope><name>~Dissipation_base</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceproteus_1_1Gauges" kind="namespace" language="Python">
+    <compoundname>proteus::Gauges</compoundname>
+    <innerclass refid="classproteus_1_1Gauges_1_1Gauges" prot="public">proteus::Gauges::Gauges</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceproteus_1_1Gauges_1ae28dca1527da903048fb9ca7312859f0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.Gauges.PointGauges</definition>
+        <argsstring>(gauges, activeTime=None, sampleRate=0, fileName=&apos;point_gauges.csv&apos;)</argsstring>
+        <name>PointGauges</name>
+        <param>
+          <type>gauges</type>
+          <defname>gauges</defname>
+        </param>
+        <param>
+          <type>activeTime</type>
+          <defname>activeTime</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>sampleRate</type>
+          <defname>sampleRate</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>fileName</type>
+          <defname>fileName</defname>
+          <defval>&apos;point_gauges.csv&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Create a set of point gauges that will automatically be serialized
+as CSV data to the requested file.
+
+:param gauges: An iterable of &quot;gauges&quot;.  Each gauge is specified
+               by a 2-tuple, with the first element in the tuple a
+               set of fields to be monitored, and the second
+               element a tuple of the 3-space representations of
+               the gauge locations.
+
+See the Gauges class for an explanation of the other parameters.
+
+Example::
+
+  p = PointGauges(gauges=(((&apos;u&apos;, &apos;v&apos;), ((0.5, 0.5, 0), (1, 0.5, 0))),
+                         ((&apos;p&apos;,), ((0.5, 0.5, 0),))),
+                  activeTime=(0, 2.5),
+                  sampleRate=0.2,
+                  fileName=&apos;combined_gauge_0_0.5_sample_all.csv&apos;)
+
+This creates a PointGauges object that will monitor the u and v
+fields at the locations [0.5, 0.5, 0] and [1, 0.5, 0], and the p
+field at [0.5, 0.5, 0] at simulation time between = 0 and 2.5 with
+samples taken no more frequently than every 0.2 seconds.  Results
+will be saved to: combined_gauge_0_0.5_sample_all.csv.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Gauges.py" line="30" column="1" bodyfile="Gauges.py" bodystart="30" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1Gauges_1aed9cfb9eaba6ba90d691991f9e07dbc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.Gauges.LineGauges</definition>
+        <argsstring>(gauges, activeTime=None, sampleRate=0, fileName=&apos;line_gauges.csv&apos;)</argsstring>
+        <name>LineGauges</name>
+        <param>
+          <type>gauges</type>
+          <defname>gauges</defname>
+        </param>
+        <param>
+          <type>activeTime</type>
+          <defname>activeTime</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>sampleRate</type>
+          <defname>sampleRate</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>fileName</type>
+          <defname>fileName</defname>
+          <defval>&apos;line_gauges.csv&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Create a set of line gauges that will automatically be serialized
+as CSV data to the requested file.  The line gauges will gather
+data at every element on the mesh between the two endpoints on
+each line.
+
+:param gauges: An iterable of &quot;gauges&quot;.  Each gauge is specified
+               by a 2-tuple, with the first element in the tuple a
+               set of fields to be monitored, and the second
+               element a list of pairs of endpoints of the gauges
+               in 3-space representation.
+
+See the Gauges class for an explanation of the other parameters.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Gauges.py" line="79" column="1" bodyfile="Gauges.py" bodystart="79" bodyend="106"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1Gauges_1a41f5db9e2bf400700d81fca5339a9728" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.Gauges.LineIntegralGauges</definition>
+        <argsstring>(gauges, activeTime=None, sampleRate=0, fileName=&apos;line_integral_gauges.csv&apos;)</argsstring>
+        <name>LineIntegralGauges</name>
+        <param>
+          <type>gauges</type>
+          <defname>gauges</defname>
+        </param>
+        <param>
+          <type>activeTime</type>
+          <defname>activeTime</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>sampleRate</type>
+          <defname>sampleRate</defname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>fileName</type>
+          <defname>fileName</defname>
+          <defval>&apos;line_integral_gauges.csv&apos;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Create a set of line integral gauges that will automatically be
+serialized as CSV data to the requested file.
+
+:param gauges: An iterable of &quot;gauges&quot;.  Each gauge is specified
+               by a 2-tuple, with the first element in the tuple a
+               set of fields to be monitored, and the second
+               element a list of pairs of endpoints of the gauges
+               in 3-space representation.
+
+See the Gauges class for an explanation of the other parameters.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Gauges.py" line="107" column="1" bodyfile="Gauges.py" bodystart="107" bodyend="133"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Auxiliary variable classes for storing solutions at points and
+along lines to mimic gauges in lab and field experiments.
+
+.. inheritance-diagram:: proteus.Gauges
+   :parts: 1</verbatim> </para>
+    </detaileddescription>
+    <location file="Gauges.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

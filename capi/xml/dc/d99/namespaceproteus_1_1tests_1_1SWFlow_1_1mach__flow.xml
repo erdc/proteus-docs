@@ -1,0 +1,486 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow" kind="namespace" language="Python">
+    <compoundname>proteus::tests::SWFlow::mach_flow</compoundname>
+    <innerclass refid="da/def/classproteus_1_1tests_1_1SWFlow_1_1mach__flow_1_1heta__at__t0" prot="public">proteus::tests::SWFlow::mach_flow::heta_at_t0</innerclass>
+    <innerclass refid="d9/dee/classproteus_1_1tests_1_1SWFlow_1_1mach__flow_1_1hw__at__t0" prot="public">proteus::tests::SWFlow::mach_flow::hw_at_t0</innerclass>
+    <innerclass refid="d8/d2a/classproteus_1_1tests_1_1SWFlow_1_1mach__flow_1_1water__height__at__t0" prot="public">proteus::tests::SWFlow::mach_flow::water_height_at_t0</innerclass>
+    <innerclass refid="d7/d96/classproteus_1_1tests_1_1SWFlow_1_1mach__flow_1_1x__mom__at__t0" prot="public">proteus::tests::SWFlow::mach_flow::x_mom_at_t0</innerclass>
+    <innerclass refid="d5/d4b/classproteus_1_1tests_1_1SWFlow_1_1mach__flow_1_1y__mom__at__t0" prot="public">proteus::tests::SWFlow::mach_flow::y_mom_at_t0</innerclass>
+    <innerclass refid="d4/d6a/classproteus_1_1tests_1_1SWFlow_1_1mach__flow_1_1Zero" prot="public">proteus::tests::SWFlow::mach_flow::Zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a598e629f6056c8b934b8fd1d63cd5f1b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::mach_flow.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  <ref refid="d0/d93/namespaceproteus_1_1Context_1a461242d050aceb1e84d9426074c67004" kindref="member">Context.Options</ref>([
+    (&apos;sw_model&apos;, 0, &quot;sw_model = {0,1} for {SWEs, Disperisve SWEs}}&quot;),
+    (&quot;final_time&quot;, 5.0, &quot;Final time for simulation&quot;),
+    (&quot;dt_output&quot;, 0.1, &quot;Time interval to output solution&quot;),
+    (&quot;cfl&quot;, 0.25, &quot;Desired CFL restriction&quot;),
+    (&quot;refinement&quot;, 4, &quot;Refinement level&quot;),
+    (&quot;reflecting_BCs&quot;, False, &quot;Use reflecting BCs&quot;),
+    (&quot;structured&quot;, False, &quot;Structured or unstructured mesh&quot;),
+    (&quot;he&quot;, 0.3, &quot;<ref refid="da/d29/structMesh" kindref="compound">Mesh</ref> size for unstructured mesh&quot;),
+    (&quot;mannings&quot;, 0.0, &quot;Mannings roughness coefficient&quot;)
+])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="21" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a1d1928f5c442bdea7f61ee6a13b871c9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::mach_flow.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  <ref refid="dd/d26/classproteus_1_1Domain_1_1PlanarStraightLineGraphDomain" kindref="compound">Domain.PlanarStraightLineGraphDomain</ref>()</initializer>
+        <briefdescription>
+<para>DOMAIN AND MESH #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="36" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1acab1a6310fe08df0a1ada7a79c16351f" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::SWFlow::mach_flow.my_vertices</definition>
+        <argsstring></argsstring>
+        <name>my_vertices</name>
+        <initializer>=  [[0.0,0.0],[3.0,0.0],[10.0,3.2],[10.0,10.0],[0.0,10.0]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="38" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a65cc864494f663089673f79bddc0c15b" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::SWFlow::mach_flow.my_segments</definition>
+        <argsstring></argsstring>
+        <name>my_segments</name>
+        <initializer>=  [[0,1],[1,2],[2,3],[3,4],[4,0]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="39" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a048f4f66221515c5f0dbda5a15572921" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::mach_flow.bt</definition>
+        <argsstring></argsstring>
+        <name>bt</name>
+        <initializer>=  {&apos;inflow&apos;: 1, &apos;reflecting&apos;: 99}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="42" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a1e26c9a582a617ae8241b0093070549b" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::SWFlow::mach_flow.my_vertexFlags</definition>
+        <argsstring></argsstring>
+        <name>my_vertexFlags</name>
+        <initializer>=  [<ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a048f4f66221515c5f0dbda5a15572921" kindref="member">bt</ref>[&apos;inflow&apos;], <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a048f4f66221515c5f0dbda5a15572921" kindref="member">bt</ref>[&apos;reflecting&apos;], <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a048f4f66221515c5f0dbda5a15572921" kindref="member">bt</ref>[&apos;reflecting&apos;], <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a048f4f66221515c5f0dbda5a15572921" kindref="member">bt</ref>[&apos;reflecting&apos;],
+                  <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a048f4f66221515c5f0dbda5a15572921" kindref="member">bt</ref>[&apos;reflecting&apos;]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="43" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a1ea99d5dae01c3a5357facbe0a7a82ce" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list proteus::tests::SWFlow::mach_flow.my_segmentFlags</definition>
+        <argsstring></argsstring>
+        <name>my_segmentFlags</name>
+        <initializer>=  [<ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a048f4f66221515c5f0dbda5a15572921" kindref="member">bt</ref>[&apos;reflecting&apos;], <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a048f4f66221515c5f0dbda5a15572921" kindref="member">bt</ref>[&apos;reflecting&apos;], <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a048f4f66221515c5f0dbda5a15572921" kindref="member">bt</ref>[&apos;reflecting&apos;], <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a048f4f66221515c5f0dbda5a15572921" kindref="member">bt</ref>[&apos;reflecting&apos;],
+                  <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a048f4f66221515c5f0dbda5a15572921" kindref="member">bt</ref>[&apos;inflow&apos;]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="45" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1aaffcd6854c45b04ad7061f9ac5ec8342" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::mach_flow.my_customShape</definition>
+        <argsstring></argsstring>
+        <name>my_customShape</name>
+        <initializer>=  st.CustomShape(<ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a1d1928f5c442bdea7f61ee6a13b871c9" kindref="member">domain</ref>, boundaryTags=<ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a048f4f66221515c5f0dbda5a15572921" kindref="member">bt</ref>,
+                           vertices=<ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1acab1a6310fe08df0a1ada7a79c16351f" kindref="member">my_vertices</ref>, vertexFlags=<ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a1e26c9a582a617ae8241b0093070549b" kindref="member">my_vertexFlags</ref>,
+                           segments=<ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a65cc864494f663089673f79bddc0c15b" kindref="member">my_segments</ref>, segmentFlags=<ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a1ea99d5dae01c3a5357facbe0a7a82ce" kindref="member">my_segmentFlags</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="47" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1ab378070d2e49ab1eb381fbcc6b61c036" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::mach_flow.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="52" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a9355adeaa1a3aed43ef3111c1a0e1862" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::mach_flow.nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="53" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a629391b159eca4e5372ff7606fe4dc9d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::mach_flow.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="54" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a0f44a57200676ccbbdb944775bdc8dd2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::mach_flow.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>=  9.81</initializer>
+        <briefdescription>
+<para>DEFINE INITIAL CONSTANTS AND FUNCTIONS #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="59" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a9852b277c4068565a35a71ceb7e27bf4" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::mach_flow.h_initial</definition>
+        <argsstring></argsstring>
+        <name>h_initial</name>
+        <initializer>=  0.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="62" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1ac489242754bc4c0d6d94fa903f0ed6b7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::mach_flow.h_inflow</definition>
+        <argsstring></argsstring>
+        <name>h_inflow</name>
+        <initializer>=  3.0 / 2.0 * <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a9852b277c4068565a35a71ceb7e27bf4" kindref="member">h_initial</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="63" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a9ff0834d7fe62b5269b6fb10ab3a31d2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::mach_flow.q_inflow</definition>
+        <argsstring></argsstring>
+        <name>q_inflow</name>
+        <initializer>=  <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1ac489242754bc4c0d6d94fa903f0ed6b7" kindref="member">h_inflow</ref> * 2.0 / 3.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="64" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1aa00e313049f7f05328e8ad93d482c778" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::mach_flow.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <initializer>=  (10.0, 10.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="119" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a62d35c2e6ca728f14b1241ab3448a664" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::mach_flow.X_coords</definition>
+        <argsstring></argsstring>
+        <name>X_coords</name>
+        <initializer>=  (0.0, <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1aa00e313049f7f05328e8ad93d482c778" kindref="member">L</ref>[0])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="120" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1ac150d2573334e4d970adcb5ab3e96b42" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::mach_flow.Y_coords</definition>
+        <argsstring></argsstring>
+        <name>Y_coords</name>
+        <initializer>=  (0.0, <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1aa00e313049f7f05328e8ad93d482c778" kindref="member">L</ref>[1])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="121" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a709e00f5809d7efef839e255ad67a3bb" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::mach_flow.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  SWFlowProblem.OutputStepping(
+    opts.final_time, dt_output=opts.dt_output)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="148" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1aaba31eb7bd3bb6567773bb9495f893bb" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::mach_flow.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;water_height&apos;: <ref refid="d8/d2a/classproteus_1_1tests_1_1SWFlow_1_1mach__flow_1_1water__height__at__t0" kindref="compound">water_height_at_t0</ref>(),
+                     &apos;x_mom&apos;: <ref refid="d7/d96/classproteus_1_1tests_1_1SWFlow_1_1mach__flow_1_1x__mom__at__t0" kindref="compound">x_mom_at_t0</ref>(),
+                     &apos;y_mom&apos;: <ref refid="d5/d4b/classproteus_1_1tests_1_1SWFlow_1_1mach__flow_1_1y__mom__at__t0" kindref="compound">y_mom_at_t0</ref>(),
+                     &apos;h_times_eta&apos;: <ref refid="da/def/classproteus_1_1tests_1_1SWFlow_1_1mach__flow_1_1heta__at__t0" kindref="compound">heta_at_t0</ref>(),
+                     &apos;h_times_w&apos;: <ref refid="d9/dee/classproteus_1_1tests_1_1SWFlow_1_1mach__flow_1_1hw__at__t0" kindref="compound">hw_at_t0</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="150" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a0fca3928827b1573672d9819cb1afb18" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::mach_flow.boundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>boundaryConditions</name>
+        <initializer>=  {&apos;water_height&apos;: <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a847f7a1a1cf94e25c9acf6dced3f8de3" kindref="member">h_DBC</ref>,
+                      &apos;x_mom&apos;: <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1abda403e3fbcd5a11bc82378675063cbc" kindref="member">x_mom_DBC</ref>,
+                      &apos;y_mom&apos;: <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1acee5554ac31ada00ede2e943dded70d3" kindref="member">y_mom_DBC</ref>,
+                      &apos;h_times_eta&apos;: <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a01288e3b8274d6733f86a183b01eac35" kindref="member">heta_DBC</ref>,
+                      &apos;h_times_w&apos;: <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a380bf87a35d39eec72a0521107fe1d81" kindref="member">hw_DBC</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="155" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a894d608428f3f8df9b8b9a4653e658c8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::mach_flow.mySWFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>mySWFlowProblem</name>
+        <initializer>=  SWFlowProblem.SWFlowProblem(sw_model=opts.sw_model,
+                                              cfl=opts.cfl,
+                                              <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a709e00f5809d7efef839e255ad67a3bb" kindref="member">outputStepping</ref>=<ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a709e00f5809d7efef839e255ad67a3bb" kindref="member">outputStepping</ref>,
+                                              structured=opts.structured,
+                                              he=opts.he,
+                                              <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a9355adeaa1a3aed43ef3111c1a0e1862" kindref="member">nnx</ref>=<ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a9355adeaa1a3aed43ef3111c1a0e1862" kindref="member">nnx</ref>,
+                                              <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a629391b159eca4e5372ff7606fe4dc9d" kindref="member">nny</ref>=<ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a629391b159eca4e5372ff7606fe4dc9d" kindref="member">nny</ref>,
+                                              <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a1d1928f5c442bdea7f61ee6a13b871c9" kindref="member">domain</ref>=<ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a1d1928f5c442bdea7f61ee6a13b871c9" kindref="member">domain</ref>,
+                                              <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1aaba31eb7bd3bb6567773bb9495f893bb" kindref="member">initialConditions</ref>=<ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1aaba31eb7bd3bb6567773bb9495f893bb" kindref="member">initialConditions</ref>,
+                                              <ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a0fca3928827b1573672d9819cb1afb18" kindref="member">boundaryConditions</ref>=<ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a0fca3928827b1573672d9819cb1afb18" kindref="member">boundaryConditions</ref>,
+                                              reflectingBCs=opts.reflecting_BCs,
+                                              bathymetry=<ref refid="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a3c4e5ed6bacf49ab04299e40afa30fcb" kindref="member">bathymetry_function</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="161" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a3c4e5ed6bacf49ab04299e40afa30fcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.mach_flow.bathymetry_function</definition>
+        <argsstring>(X)</argsstring>
+        <name>bathymetry_function</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="66" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="66" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a847f7a1a1cf94e25c9acf6dced3f8de3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.mach_flow.h_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>h_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="123" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="123" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1abda403e3fbcd5a11bc82378675063cbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.mach_flow.x_mom_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>x_mom_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="127" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="127" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1acee5554ac31ada00ede2e943dded70d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.mach_flow.y_mom_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>y_mom_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="131" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="131" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a01288e3b8274d6733f86a183b01eac35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.mach_flow.heta_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>heta_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="135" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="135" bodyend="138"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d99/namespaceproteus_1_1tests_1_1SWFlow_1_1mach__flow_1a380bf87a35d39eec72a0521107fe1d81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.mach_flow.hw_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>hw_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/mach_flow.py" line="139" column="1" bodyfile="tests/SWFlow/mach_flow.py" bodystart="139" bodyend="147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/SWFlow/mach_flow.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

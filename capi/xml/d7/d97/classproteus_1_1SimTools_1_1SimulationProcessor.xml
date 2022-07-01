@@ -1,0 +1,1469 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor" kind="class" language="Python" prot="public">
+    <compoundname>proteus::SimTools::SimulationProcessor</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a1c93868ce3d894d2e0ce9034ed2d6317" prot="public" static="yes" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus.SimTools.SimulationProcessor::defaultFlags</definition>
+        <argsstring></argsstring>
+        <name>defaultFlags</name>
+        <initializer>=  {&apos;simulationName&apos;:None,       #label for simulation
+                    &apos;simulationNameProc&apos;:None,   #label for simulation and processor id
+                    &apos;dataFile&apos;:&apos;results.dat&apos;,    #file for holding results
+                    &apos;dataDir&apos; :&apos;.&apos;,              #where file is located
+                    &apos;appendResults&apos;:False,       #append to existing data files?
+                    &apos;echo&apos;:False,                #<ref refid="db/dcc/jf_8h_1a665602667543592b4547008b72a9631b" kindref="member">print</ref> to screen
+                    &apos;echoRelativeErrors&apos;:False,  #<ref refid="db/dcc/jf_8h_1a665602667543592b4547008b72a9631b" kindref="member">print</ref> to screen also relative errors
+                    &apos;components&apos;:[0],            #list of components to monitor
+                    &apos;errorQuantities&apos;:[None],    #quantities in which to estimate error
+                    &apos;errorNorms&apos;:[None],         #norms to use for error calc
+                    &apos;errorTimes&apos;:[None],         #time levels at which to estimate error (All,Last, ...),
+                    &apos;errorTypes&apos;:[None],         #types of error to calculate (<ref refid="de/d5b/Headers_8h_1a81073496b3df485c6b59c5823819310b" kindref="member">u</ref>-u_h,mass, etc)
+                    &apos;plotQuantities&apos;:[None],     #quantities to plot
+                    &apos;plotTimes&apos;:[None],          #time levels to plot (All,Last,tList ...
+                    &apos;plotOptions&apos;:{&apos;ensight&apos;:{&apos;on&apos;:False},
+                                   &apos;gnuplot&apos;:{&apos;on&apos;:False},
+                                   &apos;matlab&apos;:{&apos;on&apos;:False},
+                                   &apos;vtk&apos;:{&apos;on&apos;:False}},         #options controlling way to plot
+                    &apos;storeQuantities&apos;:[None],    #quantities to write to disk
+                    &apos;storeTimes&apos;:[None]}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="48" column="1" bodyfile="SimTools.py" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a44dc7ae0c97e700eec2adf41c4e348bd" prot="public" static="yes" mutable="no">
+        <type>float</type>
+        <definition>float proteus.SimTools.SimulationProcessor::notSetVal</definition>
+        <argsstring></argsstring>
+        <name>notSetVal</name>
+        <initializer>=  -12345.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="68" column="1" bodyfile="SimTools.py" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a95690a7917d85a7d62439f0f90c17827" prot="public" static="yes" mutable="no">
+        <type>list</type>
+        <definition>list proteus.SimTools.SimulationProcessor::ErrorQuantities</definition>
+        <argsstring></argsstring>
+        <name>ErrorQuantities</name>
+        <initializer>=  [&apos;m&apos;,&apos;<ref refid="de/d5b/Headers_8h_1a81073496b3df485c6b59c5823819310b" kindref="member">u</ref>&apos;,&apos;grad(<ref refid="de/d5b/Headers_8h_1a81073496b3df485c6b59c5823819310b" kindref="member">u</ref>)&apos;,&apos;velocity&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="70" column="1" bodyfile="SimTools.py" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a8b1cb243118982d1f050c8a9fc3e109d" prot="public" static="yes" mutable="no">
+        <type>list</type>
+        <definition>list proteus.SimTools.SimulationProcessor::ErrorNorms</definition>
+        <argsstring></argsstring>
+        <name>ErrorNorms</name>
+        <initializer>=  [&apos;L1&apos;,&apos;L2&apos;,&apos;LI&apos;,&apos;TV&apos;,&apos;H1&apos;,&apos;H1semi&apos;,&apos;W11&apos;,&apos;W11semi&apos;,
+                       &apos;L1_L1&apos;,&apos;L1_LI&apos;,&apos;L2_L2&apos;,&apos;L2_LI&apos;,&apos;TV_L1&apos;,&apos;TV_LI&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="72" column="1" bodyfile="SimTools.py" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ac1a2e43c14988d0525eb022dd8d2e128" prot="public" static="yes" mutable="no">
+        <type>list</type>
+        <definition>list proteus.SimTools.SimulationProcessor::ErrorTimes</definition>
+        <argsstring></argsstring>
+        <name>ErrorTimes</name>
+        <initializer>=  [&apos;All&apos;,&apos;Last&apos;,&apos;tList&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="75" column="1" bodyfile="SimTools.py" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1aad275c623bb122f5df395a67f2c2f9b0" prot="public" static="yes" mutable="no">
+        <type>list</type>
+        <definition>list proteus.SimTools.SimulationProcessor::ErrorTypes</definition>
+        <argsstring></argsstring>
+        <name>ErrorTypes</name>
+        <initializer>=  [&apos;globalMassBalance&apos;,&apos;globalHeavisideMassBalance&apos;,
+                       &apos;localMassBalance&apos;,
+                       &apos;numericalSolution&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="77" column="1" bodyfile="SimTools.py" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a2420733c7443f30d7c525eb4f95e5676" prot="public" static="yes" mutable="no">
+        <type>list</type>
+        <definition>list proteus.SimTools.SimulationProcessor::PlotTimes</definition>
+        <argsstring></argsstring>
+        <name>PlotTimes</name>
+        <initializer>=  [&apos;All&apos;,&apos;Last&apos;,&apos;Init&apos;,&apos;tList&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="81" column="1" bodyfile="SimTools.py" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ad549087eca3dc29ea60412467bd00cb1" prot="public" static="yes" mutable="no">
+        <type>list</type>
+        <definition>list proteus.SimTools.SimulationProcessor::PlotQuantities</definition>
+        <argsstring></argsstring>
+        <name>PlotQuantities</name>
+        <initializer>=  [&apos;<ref refid="de/d5b/Headers_8h_1a81073496b3df485c6b59c5823819310b" kindref="member">u</ref>&apos;,&apos;u_exact&apos;,&apos;velocity&apos;,&apos;velocity_exact&apos;,&quot;q:(&apos;%<ref refid="de/d5b/Headers_8h_1a7cbe4dbecea8b00e5845e24579f6036d" kindref="member">s</ref>&apos;,%d)&quot;,&quot;q:(&apos;%<ref refid="de/d5b/Headers_8h_1a7cbe4dbecea8b00e5845e24579f6036d" kindref="member">s</ref>&apos;,%d,%d)&quot;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="83" column="1" bodyfile="SimTools.py" bodystart="83" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a392514b2e7139c1f5a46ec8345f526cc" prot="public" static="yes" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus.SimTools.SimulationProcessor::PlotOptions</definition>
+        <argsstring></argsstring>
+        <name>PlotOptions</name>
+        <initializer>=  {&apos;ensight&apos;:{&apos;on&apos;:False},
+                       &apos;gnuplot&apos;:{&apos;on&apos;:False,&apos;setGnuplotGridSize&apos;:True},
+                       &apos;matlab&apos;:{&apos;on&apos;:False,&apos;usePDEtoolbox&apos;:False},
+                       &apos;vtk&apos;:{&apos;on&apos;:False,&apos;<ref refid="db/dcc/jf_8h_1a32eb30766e35fbe01fb8bb99869efe99" kindref="member">pause</ref>&apos;:False,&apos;hardcopy&apos;:False}}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="85" column="1" bodyfile="SimTools.py" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a9f2d4f3ad89253ef5a79eee551948589" prot="public" static="yes" mutable="no">
+        <type>list</type>
+        <definition>list proteus.SimTools.SimulationProcessor::StoreTimes</definition>
+        <argsstring></argsstring>
+        <name>StoreTimes</name>
+        <initializer>=  [&apos;All&apos;,&apos;Last&apos;,&apos;Init&apos;,&apos;tList&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="90" column="1" bodyfile="SimTools.py" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a546a8cbff088e7985826527bb524f1e5" prot="public" static="yes" mutable="no">
+        <type>list</type>
+        <definition>list proteus.SimTools.SimulationProcessor::StoreQuantities</definition>
+        <argsstring></argsstring>
+        <name>StoreQuantities</name>
+        <initializer>=  [&apos;<ref refid="de/d5b/Headers_8h_1a81073496b3df485c6b59c5823819310b" kindref="member">u</ref>&apos;,&apos;u_dof&apos;,&apos;<ref refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1af7a6bc13d0cecc5e51ce4c5dddd11a69" kindref="member">errorData</ref>&apos;,&apos;<ref refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a141ded12e4288ba512e6843e6522d30d" kindref="member">simulationData</ref>&apos;,&apos;mesh&apos;,&quot;q:(&apos;%<ref refid="de/d5b/Headers_8h_1a7cbe4dbecea8b00e5845e24579f6036d" kindref="member">s</ref>&apos;,%d)&quot;,&apos;multilevelModel&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="92" column="1" bodyfile="SimTools.py" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ab711a05e6cb88ca0cebb5bdfed5c7e1f" prot="public" static="yes" mutable="no">
+        <type>list</type>
+        <definition>list proteus.SimTools.SimulationProcessor::SolutionDataStorageData</definition>
+        <argsstring></argsstring>
+        <name>SolutionDataStorageData</name>
+        <initializer>=  [&apos;nSpace_global&apos;,&apos;name&apos;,&apos;dof&apos;,&apos;dofMap.l2g&apos;,&apos;dim_dof&apos;,
+                               &apos;isVector&apos;,
+                               &apos;CGDOFMap.lagrangesNodesArray&apos;,&apos;CGDOFMap.l2g&apos;]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="95" column="1" bodyfile="SimTools.py" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a2df09e5565e3be5f11e9d3e6041e1c01" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::analyticalSolution</definition>
+        <argsstring></argsstring>
+        <name>analyticalSolution</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="103" column="1" bodyfile="SimTools.py" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ae5ea969cd22b88ab253dfa49c9ef0428" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::timeValues</definition>
+        <argsstring></argsstring>
+        <name>timeValues</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="106" column="1" bodyfile="SimTools.py" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a7335c78715657e4b8df441df2bd60ea8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::plotOffSet</definition>
+        <argsstring></argsstring>
+        <name>plotOffSet</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="107" column="1" bodyfile="SimTools.py" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a2318f05bc6ac1cc1b3bdbe6bc8fee21c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::stepPlotCalled</definition>
+        <argsstring></argsstring>
+        <name>stepPlotCalled</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="108" column="1" bodyfile="SimTools.py" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ab84b03bce65b5c9e12415b82d5e25f2b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::plotWindowStart</definition>
+        <argsstring></argsstring>
+        <name>plotWindowStart</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="111" column="1" bodyfile="SimTools.py" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ab81a576f51876a275cdc3f9a513a15a5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::nLevels</definition>
+        <argsstring></argsstring>
+        <name>nLevels</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="112" column="1" bodyfile="SimTools.py" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ae3382c287d7f38440257f36172b1563f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="113" column="1" bodyfile="SimTools.py" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ae8cec4058354998d6d200945cf34b770" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::nodalQuadratureInfo</definition>
+        <argsstring></argsstring>
+        <name>nodalQuadratureInfo</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="117" column="1" bodyfile="SimTools.py" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ab6751e275beb7780865715859cba428e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::pFile</definition>
+        <argsstring></argsstring>
+        <name>pFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="119" column="1" bodyfile="SimTools.py" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a5a58d5b09dc8352048e6bab4718d008b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::nFile</definition>
+        <argsstring></argsstring>
+        <name>nFile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="119" column="1" bodyfile="SimTools.py" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1af7a6bc13d0cecc5e51ce4c5dddd11a69" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::errorData</definition>
+        <argsstring></argsstring>
+        <name>errorData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="128" column="1" bodyfile="SimTools.py" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ac91380f57fe7660cf6dccf0c4c1e9676" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::conservationResidual</definition>
+        <argsstring></argsstring>
+        <name>conservationResidual</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="145" column="1" bodyfile="SimTools.py" bodystart="145" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a67845138fbb4c5f71bd5b46df24fb285" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::elementResidual</definition>
+        <argsstring></argsstring>
+        <name>elementResidual</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="146" column="1" bodyfile="SimTools.py" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a141ded12e4288ba512e6843e6522d30d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::simulationData</definition>
+        <argsstring></argsstring>
+        <name>simulationData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="170" column="1" bodyfile="SimTools.py" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a3f9ea0a23c0cc96bf7fdaa1d0e110371" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::solutionData</definition>
+        <argsstring></argsstring>
+        <name>solutionData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="179" column="1" bodyfile="SimTools.py" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a18e711d8ac6bc45da151cb38eb3214ff" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::storeHeavyData</definition>
+        <argsstring></argsstring>
+        <name>storeHeavyData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="192" column="1" bodyfile="SimTools.py" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a2bf2b2ce61c6d67891635746afe305f1" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::dataStorage</definition>
+        <argsstring></argsstring>
+        <name>dataStorage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="193" column="1" bodyfile="SimTools.py" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a3e909baedee818e278727d88e6669e55" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::ensightTimeSeries</definition>
+        <argsstring></argsstring>
+        <name>ensightTimeSeries</name>
+        <briefdescription>
+<para>set options for various output types ... </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="320" column="1" bodyfile="SimTools.py" bodystart="320" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1aa1a2f8373ebcc2d69ac86956eebbccbe" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::plottingQuadratureValuesForEnsight</definition>
+        <argsstring></argsstring>
+        <name>plottingQuadratureValuesForEnsight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="326" column="1" bodyfile="SimTools.py" bodystart="326" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1add94a8454ea2dfd456b97f53c98b93e4" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.SimTools.SimulationProcessor::ex</definition>
+        <argsstring></argsstring>
+        <name>ex</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="697" column="1" bodyfile="SimTools.py" bodystart="697" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a3b6bc32fae54e7aea4222a4496edcea8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.__init__</definition>
+        <argsstring>(self, flags=None, nLevels=1, pFile=None, nFile=None, analyticalSolution={})</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ae3382c287d7f38440257f36172b1563f" kindref="member">flags</ref></type>
+          <defname>flags</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type><ref refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ab81a576f51876a275cdc3f9a513a15a5" kindref="member">nLevels</ref></type>
+          <defname>nLevels</defname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type><ref refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ab6751e275beb7780865715859cba428e" kindref="member">pFile</ref></type>
+          <defname>pFile</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type><ref refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a5a58d5b09dc8352048e6bab4718d008b" kindref="member">nFile</ref></type>
+          <defname>nFile</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type><ref refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a2df09e5565e3be5f11e9d3e6041e1c01" kindref="member">analyticalSolution</ref></type>
+          <defname>analyticalSolution</defname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>save flags for what to compute, how to compute it,
+and labels for storing things, etc
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="98" column="1" bodyfile="SimTools.py" bodystart="98" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a20cd01f2e5a27fe65642afe3abd4fd35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.preprocess</definition>
+        <argsstring>(self, mlvt, tsim)</argsstring>
+        <name>preprocess</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="225" column="1" bodyfile="SimTools.py" bodystart="225" bodyend="459"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a9ebd0304bdf4a728c002df0757f3fb7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.processTimeLevel</definition>
+        <argsstring>(self, mlvt, tsim=None, plotOffSet=None)</argsstring>
+        <name>processTimeLevel</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type><ref refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a7335c78715657e4b8df441df2bd60ea8" kindref="member">plotOffSet</ref></type>
+          <defname>plotOffSet</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>calculate desired quantities after each macro time step
+
+Parameters
+----------
+
+mlvt : multilevel vector transport that holds the quantities to measure
+tsim : simulation time</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="462" column="1" bodyfile="SimTools.py" bodystart="462" bodyend="488"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a55c6d3517d67f64af4cb7e83af545bf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.postprocess</definition>
+        <argsstring>(self, mlvt, tsim)</argsstring>
+        <name>postprocess</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>calculate desired quantities after simulation ends
+
+Parameters
+----------
+
+  mlvt : multilevel vector transport that holds the quantities to measure
+  tsim : simulation time</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="489" column="1" bodyfile="SimTools.py" bodystart="489" bodyend="641"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a8f6b8a86e42a6230b8d4d7907248a6e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.saveToDisk</definition>
+        <argsstring>(self)</argsstring>
+        <name>saveToDisk</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>TO DO
+save error to disk
+make sure can append if necessary?
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="642" column="1" bodyfile="SimTools.py" bodystart="642" bodyend="662"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1af65605f8951c022e862b7ceda58f4893" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.stepProcessError</definition>
+        <argsstring>(self, mlvt, tsim)</argsstring>
+        <name>stepProcessError</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>calculate desired error quantities for a single step
+
+Parameters
+----------
+
+  mlvt : multilevel vector transport that holds the quantities to measure
+  tsim : simulation time</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="665" column="1" bodyfile="SimTools.py" bodystart="665" bodyend="1281"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ae479fefc7a3afae836d25aba8a0d28dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.getScalarElementStorageKeys</definition>
+        <argsstring>(self, mlvt, tsim)</argsstring>
+        <name>getScalarElementStorageKeys</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>simple utility to pull out keys for things in element quadrature dictionary that
+need to be stored
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1284" column="1" bodyfile="SimTools.py" bodystart="1284" bodyend="1297"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ab471fdaa040a370cfae5c1315eea28f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.getVectorElementStorageKeys</definition>
+        <argsstring>(self, mlvt, tsim)</argsstring>
+        <name>getVectorElementStorageKeys</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>simple utility to pull out keys for things in element quadrature dictionary that
+need to be stored
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1298" column="1" bodyfile="SimTools.py" bodystart="1298" bodyend="1311"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a7a6eacfd23a9fad600ab7b74dc9c2e24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.getTensorElementStorageKeys</definition>
+        <argsstring>(self, mlvt, tsim)</argsstring>
+        <name>getTensorElementStorageKeys</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>simple utility to pull out keys for things in element quadrature dictionary that
+need to be stored
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1312" column="1" bodyfile="SimTools.py" bodystart="1312" bodyend="1325"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1aeaa3e26399dc247ce51701f0beb6a7be" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.getScalarElementBoundaryStorageKeys</definition>
+        <argsstring>(self, mlvt, tsim)</argsstring>
+        <name>getScalarElementBoundaryStorageKeys</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>simple utility to pull out keys for things in element  boundary quadrature dictionary that
+need to be stored
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1326" column="1" bodyfile="SimTools.py" bodystart="1326" bodyend="1339"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a6a097239ecd88801a97e2baca92f85ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.getVectorElementBoundaryStorageKeys</definition>
+        <argsstring>(self, mlvt, tsim)</argsstring>
+        <name>getVectorElementBoundaryStorageKeys</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>simple utility to pull out keys for things in element  boundary quadrature dictionary that
+need to be stored
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1340" column="1" bodyfile="SimTools.py" bodystart="1340" bodyend="1353"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a55ef7a07a4a86136de1157042b307760" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.getTensorElementBoundaryStorageKeys</definition>
+        <argsstring>(self, mlvt, tsim)</argsstring>
+        <name>getTensorElementBoundaryStorageKeys</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>simple utility to pull out keys for things in element  boundary quadrature dictionary that
+need to be stored
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1354" column="1" bodyfile="SimTools.py" bodystart="1354" bodyend="1367"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a83d9de6fb1964bb61d8a830b33a7cfc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.getScalarExteriorElementBoundaryStorageKeys</definition>
+        <argsstring>(self, mlvt, tsim)</argsstring>
+        <name>getScalarExteriorElementBoundaryStorageKeys</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>simple utility to pull out keys for things in exterior element boundary  quadrature dictionary that
+need to be stored
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1368" column="1" bodyfile="SimTools.py" bodystart="1368" bodyend="1381"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ad7813354234ee3398746debf0ef1aa61" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.getVectorExteriorElementBoundaryStorageKeys</definition>
+        <argsstring>(self, mlvt, tsim)</argsstring>
+        <name>getVectorExteriorElementBoundaryStorageKeys</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>simple utility to pull out keys for things in exterior element boundary quadrature dictionary that
+need to be stored
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1382" column="1" bodyfile="SimTools.py" bodystart="1382" bodyend="1395"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ae94ef7a21709924394eb99a1eae2aec1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.getTensorExteriorElementBoundaryStorageKeys</definition>
+        <argsstring>(self, mlvt, tsim)</argsstring>
+        <name>getTensorExteriorElementBoundaryStorageKeys</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>simple utility to pull out keys for things in exterior element  boundary quadrature dictionary that
+need to be stored
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1396" column="1" bodyfile="SimTools.py" bodystart="1396" bodyend="1409"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a70b6fedede45a264da43d209a0f64c11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.stepPlotElementQuantitiesEnsight</definition>
+        <argsstring>(self, mlvt, tsim)</argsstring>
+        <name>stepPlotElementQuantitiesEnsight</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>sort through desired quantities in quadrature dictionaries like m, dm, to plot
+  p    --- problem definition
+  n    --- numerics definition
+  mlvt --- multilevel vector transport that holds the quantities to measure
+  tsim --- simulation time
+assumes this is the correct time to plot
+and plotOffSet is set correctly
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1410" column="1" bodyfile="SimTools.py" bodystart="1410" bodyend="1450"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a4b03f7e426e1abeaa9adefdbf059554a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.stepStoreQuantities</definition>
+        <argsstring>(self, mlvt, tsim)</argsstring>
+        <name>stepStoreQuantities</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>shelve quantities for a given time instance, if self.storeHeavyData == True
+soon to be deprecated and will use Archiver tools instead
+
+
+Quadrature dictionary quantities are shelved in a dictionary
+whose key is the corresponding quadrature dictionary name.
+
+The stored dictionary has fields &apos;x&apos; &apos;t&apos; and &apos;vals&apos; which hold
+the quadrature points (assumed static for now) as well as
+lists of the desired quantities at the requested time
+levels. The quantities to be stored are specified in
+flags[&apos;storeQuantities&apos;] in the format
+
+&quot;q:(%s,%d)&quot;,ebq:(%s,%d) etc e.g., &quot;q:(&apos;u&apos;,0)&quot; will store component 0 solution values from q
+
+dataStorage[&apos;q&apos;][&apos;x&apos;]= [[0.,0.,0.],[...],...] element quadrature points for 1st time called
+dataStorage[&apos;q&apos;][&apos;t&apos;]= [0.0,0.1,...,1.0]
+dataStorage[&apos;q&apos;][&apos;vals&apos;] = [subset of q at t=0.0, subset of q at t=0.1, ...]
+
+if multilevelModel is set, stores basically everything
+
+Input
+  p    --- problem definition
+  n    --- numerics definition
+  mlvt --- multilevel vector transport that holds the quantities to measure
+  tsim --- simulation time
+assumes this is the correct time to store
+
+TODO: add option for storage directory
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1451" column="1" bodyfile="SimTools.py" bodystart="1451" bodyend="1539"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ac90b16823b046f98ab272476b16387ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.computeNodalQuadratureInfo</definition>
+        <argsstring>(self, mlvt, t)</argsstring>
+        <name>computeNodalQuadratureInfo</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>if need values of quantities at mesh nodes and don&apos;t have them already, use this
+only compute values on finest mesh for now
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1541" column="1" bodyfile="SimTools.py" bodystart="1541" bodyend="1592"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a9ec42b7abb18a6f656e1905dbe4e7f52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.stepPlotEnsight</definition>
+        <argsstring>(self, mlvt, tsim)</argsstring>
+        <name>stepPlotEnsight</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>plot solution and solution &apos;velocity&apos; for ensight/paraview
+  p    --- problem definition
+  n    --- numerics definition
+  mlvt --- multilevel vector transport that holds the quantities to measure
+  tsim --- simulation time
+assumes this is the correct time to plot
+and plotOffSet is set correctly
+
+assumes that initial case,sos, geo files set somewhere else
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1594" column="1" bodyfile="SimTools.py" bodystart="1594" bodyend="1641"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1aad693c16f9f37f720f79098e1d062b35" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.writeEnsightMeshForElementQuantities</definition>
+        <argsstring>(self, filename, mlvt, tsim=0.0)</argsstring>
+        <name>writeEnsightMeshForElementQuantities</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>filename</type>
+          <defname>filename</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1643" column="1" bodyfile="SimTools.py" bodystart="1643" bodyend="1660"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1aa72f5cfb6b7c09cc65dbe3603620ee87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.writeEnsightMeshForElementBoundaryQuantities</definition>
+        <argsstring>(self, filename, mlvt, tsim=0.0)</argsstring>
+        <name>writeEnsightMeshForElementBoundaryQuantities</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>filename</type>
+          <defname>filename</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1661" column="1" bodyfile="SimTools.py" bodystart="1661" bodyend="1678"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a471bc6f0bee98fc1262fad01368a25b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.writeScalarElementFunctionHeaderEnsight</definition>
+        <argsstring>(self, ckey, filename, append=False, firstVariable=True, case_filename=None)</argsstring>
+        <name>writeScalarElementFunctionHeaderEnsight</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>ckey</type>
+          <defname>ckey</defname>
+        </param>
+        <param>
+          <type>filename</type>
+          <defname>filename</defname>
+        </param>
+        <param>
+          <type>append</type>
+          <defname>append</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>firstVariable</type>
+          <defname>firstVariable</defname>
+          <defval>True</defval>
+        </param>
+        <param>
+          <type>case_filename</type>
+          <defname>case_filename</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1679" column="1" bodyfile="SimTools.py" bodystart="1679" bodyend="1690"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a95ea1380ad54937d1d5f43df2f423eb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.writeVectorElementFunctionHeaderEnsight</definition>
+        <argsstring>(self, ckey, filename, append=False, firstVariable=True, case_filename=None)</argsstring>
+        <name>writeVectorElementFunctionHeaderEnsight</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>ckey</type>
+          <defname>ckey</defname>
+        </param>
+        <param>
+          <type>filename</type>
+          <defname>filename</defname>
+        </param>
+        <param>
+          <type>append</type>
+          <defname>append</defname>
+          <defval>False</defval>
+        </param>
+        <param>
+          <type>firstVariable</type>
+          <defname>firstVariable</defname>
+          <defval>True</defval>
+        </param>
+        <param>
+          <type>case_filename</type>
+          <defname>case_filename</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1691" column="1" bodyfile="SimTools.py" bodystart="1691" bodyend="1703"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1aa5a2426a72acc18d7ab103f14b746fee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.plotScalarElementQuantityEnsight</definition>
+        <argsstring>(self, ckey, mlvt, tsim)</argsstring>
+        <name>plotScalarElementQuantityEnsight</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>ckey</type>
+          <defname>ckey</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Ensight plotting routine to look at scalar quantity stored in element quad dictionary q
+  ckey --- what should be plotted
+  p    --- problem definition
+  n    --- numerics definition
+  mlvt --- multilevel vector transport that holds the quantities to measure
+  tsim --- simulation time
+assumes this is the correct time to plot
+and plotOffSet is set correctly
+
+assumes that initial case,sos, geo files set somewhere else</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1704" column="1" bodyfile="SimTools.py" bodystart="1704" bodyend="1738"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a83cf45d918947b63ea7227d984959eb5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.plotVectorElementQuantityEnsight</definition>
+        <argsstring>(self, ckey, mlvt, tsim, scaleOutput=None)</argsstring>
+        <name>plotVectorElementQuantityEnsight</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>ckey</type>
+          <defname>ckey</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <param>
+          <type>scaleOutput</type>
+          <defname>scaleOutput</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Ensight plotting routine to look at vector quantity stored in element quad dictionary q
+  ckey --- what should be plotted
+  p    --- problem definition
+  n    --- numerics definition
+  mlvt --- multilevel vector transport that holds the quantities to measure
+  tsim --- simulation time
+assumes this is the correct time to plot
+and plotOffSet is set correctly
+
+assumes that initial case,sos, geo files set somewhere else
+TODO : check format for 3d
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1739" column="1" bodyfile="SimTools.py" bodystart="1739" bodyend="1780"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1aa011591ff775df238e9ffc09feb4daa6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.plotScalarGlobalElementBoundaryQuantityEnsight</definition>
+        <argsstring>(self, ckey, mlvt, tsim)</argsstring>
+        <name>plotScalarGlobalElementBoundaryQuantityEnsight</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>ckey</type>
+          <defname>ckey</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Ensight plotting routine to look at scalar quantity stored in element quad dictionary ebq_global
+  ckey --- what should be plotted
+  p    --- problem definition
+  n    --- numerics definition
+  mlvt --- multilevel vector transport that holds the quantities to measure
+  tsim --- simulation time
+assumes this is the correct time to plot
+and plotOffSet is set correctly
+
+assumes that initial case,sos, geo files set somewhere else</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1781" column="1" bodyfile="SimTools.py" bodystart="1781" bodyend="1817"/>
+      </memberdef>
+      <memberdef kind="function" id="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a280e135cda2f903903adea9b3bf08a14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.SimTools.SimulationProcessor.plotVectorGlobalElementBoundaryQuantityEnsight</definition>
+        <argsstring>(self, ckey, mlvt, tsim, scaleOutput=None)</argsstring>
+        <name>plotVectorGlobalElementBoundaryQuantityEnsight</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type>ckey</type>
+          <defname>ckey</defname>
+        </param>
+        <param>
+          <type>mlvt</type>
+          <defname>mlvt</defname>
+        </param>
+        <param>
+          <type>tsim</type>
+          <defname>tsim</defname>
+        </param>
+        <param>
+          <type>scaleOutput</type>
+          <defname>scaleOutput</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Ensight plotting routine to look at vector quantity stored in element quad dictionary ebq_global
+  ckey --- what should be plotted
+  p    --- problem definition
+  n    --- numerics definition
+  mlvt --- multilevel vector transport that holds the quantities to measure
+  tsim --- simulation time
+assumes this is the correct time to plot
+and plotOffSet is set correctly
+
+assumes that initial case,sos, geo files set somewhere else
+TODO : check format for 3d
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="SimTools.py" line="1818" column="1" bodyfile="SimTools.py" bodystart="1818" bodyend="1864"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Collect some functionality for doing something with simulation results like
+calculating error, saving it to disk, etc.
+
+TO DO
+
+be able to append data to file correctly</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>proteus.SimTools.SimulationProcessor</label>
+        <link refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>object</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>proteus.SimTools.SimulationProcessor</label>
+        <link refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>object</label>
+      </node>
+    </collaborationgraph>
+    <location file="SimTools.py" line="37" column="1" bodyfile="SimTools.py" bodystart="37" bodyend="1869"/>
+    <listofallmembers>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a3b6bc32fae54e7aea4222a4496edcea8" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>__init__</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a2df09e5565e3be5f11e9d3e6041e1c01" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>analyticalSolution</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ac90b16823b046f98ab272476b16387ec" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>computeNodalQuadratureInfo</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ac91380f57fe7660cf6dccf0c4c1e9676" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>conservationResidual</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a2bf2b2ce61c6d67891635746afe305f1" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>dataStorage</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a1c93868ce3d894d2e0ce9034ed2d6317" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>defaultFlags</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a67845138fbb4c5f71bd5b46df24fb285" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>elementResidual</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a3e909baedee818e278727d88e6669e55" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>ensightTimeSeries</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1af7a6bc13d0cecc5e51ce4c5dddd11a69" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>errorData</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a8b1cb243118982d1f050c8a9fc3e109d" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>ErrorNorms</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a95690a7917d85a7d62439f0f90c17827" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>ErrorQuantities</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ac1a2e43c14988d0525eb022dd8d2e128" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>ErrorTimes</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1aad275c623bb122f5df395a67f2c2f9b0" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>ErrorTypes</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1add94a8454ea2dfd456b97f53c98b93e4" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>ex</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ae3382c287d7f38440257f36172b1563f" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>flags</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1aeaa3e26399dc247ce51701f0beb6a7be" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>getScalarElementBoundaryStorageKeys</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ae479fefc7a3afae836d25aba8a0d28dc" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>getScalarElementStorageKeys</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a83d9de6fb1964bb61d8a830b33a7cfc7" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>getScalarExteriorElementBoundaryStorageKeys</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a55ef7a07a4a86136de1157042b307760" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>getTensorElementBoundaryStorageKeys</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a7a6eacfd23a9fad600ab7b74dc9c2e24" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>getTensorElementStorageKeys</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ae94ef7a21709924394eb99a1eae2aec1" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>getTensorExteriorElementBoundaryStorageKeys</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a6a097239ecd88801a97e2baca92f85ed" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>getVectorElementBoundaryStorageKeys</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ab471fdaa040a370cfae5c1315eea28f4" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>getVectorElementStorageKeys</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ad7813354234ee3398746debf0ef1aa61" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>getVectorExteriorElementBoundaryStorageKeys</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a5a58d5b09dc8352048e6bab4718d008b" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>nFile</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ab81a576f51876a275cdc3f9a513a15a5" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>nLevels</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ae8cec4058354998d6d200945cf34b770" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>nodalQuadratureInfo</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a44dc7ae0c97e700eec2adf41c4e348bd" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>notSetVal</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ab6751e275beb7780865715859cba428e" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>pFile</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a7335c78715657e4b8df441df2bd60ea8" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>plotOffSet</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a392514b2e7139c1f5a46ec8345f526cc" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>PlotOptions</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ad549087eca3dc29ea60412467bd00cb1" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>PlotQuantities</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1aa5a2426a72acc18d7ab103f14b746fee" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>plotScalarElementQuantityEnsight</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1aa011591ff775df238e9ffc09feb4daa6" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>plotScalarGlobalElementBoundaryQuantityEnsight</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a2420733c7443f30d7c525eb4f95e5676" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>PlotTimes</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1aa1a2f8373ebcc2d69ac86956eebbccbe" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>plottingQuadratureValuesForEnsight</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a83cf45d918947b63ea7227d984959eb5" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>plotVectorElementQuantityEnsight</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a280e135cda2f903903adea9b3bf08a14" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>plotVectorGlobalElementBoundaryQuantityEnsight</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ab84b03bce65b5c9e12415b82d5e25f2b" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>plotWindowStart</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a55c6d3517d67f64af4cb7e83af545bf1" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>postprocess</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a20cd01f2e5a27fe65642afe3abd4fd35" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>preprocess</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a9ebd0304bdf4a728c002df0757f3fb7c" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>processTimeLevel</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a8f6b8a86e42a6230b8d4d7907248a6e9" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>saveToDisk</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a141ded12e4288ba512e6843e6522d30d" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>simulationData</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a3f9ea0a23c0cc96bf7fdaa1d0e110371" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>solutionData</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ab711a05e6cb88ca0cebb5bdfed5c7e1f" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>SolutionDataStorageData</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a2318f05bc6ac1cc1b3bdbe6bc8fee21c" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>stepPlotCalled</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a70b6fedede45a264da43d209a0f64c11" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>stepPlotElementQuantitiesEnsight</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a9ec42b7abb18a6f656e1905dbe4e7f52" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>stepPlotEnsight</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1af65605f8951c022e862b7ceda58f4893" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>stepProcessError</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a4b03f7e426e1abeaa9adefdbf059554a" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>stepStoreQuantities</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a18e711d8ac6bc45da151cb38eb3214ff" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>storeHeavyData</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a546a8cbff088e7985826527bb524f1e5" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>StoreQuantities</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a9f2d4f3ad89253ef5a79eee551948589" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>StoreTimes</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1ae5ea969cd22b88ab253dfa49c9ef0428" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>timeValues</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1aa72f5cfb6b7c09cc65dbe3603620ee87" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>writeEnsightMeshForElementBoundaryQuantities</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1aad693c16f9f37f720f79098e1d062b35" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>writeEnsightMeshForElementQuantities</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a471bc6f0bee98fc1262fad01368a25b3" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>writeScalarElementFunctionHeaderEnsight</name></member>
+      <member refid="d7/d97/classproteus_1_1SimTools_1_1SimulationProcessor_1a95ea1380ad54937d1d5f43df2f423eb8" prot="public" virt="non-virtual"><scope>proteus::SimTools::SimulationProcessor</scope><name>writeVectorElementFunctionHeaderEnsight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

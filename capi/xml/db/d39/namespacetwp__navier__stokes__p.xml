@@ -1,0 +1,550 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="db/d39/namespacetwp__navier__stokes__p" kind="namespace" language="Python">
+    <compoundname>twp_navier_stokes_p</compoundname>
+    <innerclass refid="d6/d5c/classtwp__navier__stokes__p_1_1AtRest" prot="public">twp_navier_stokes_p::AtRest</innerclass>
+    <innerclass refid="d0/d04/classtwp__navier__stokes__p_1_1Constant" prot="public">twp_navier_stokes_p::Constant</innerclass>
+    <innerclass refid="d8/de8/classtwp__navier__stokes__p_1_1CouetteProfile" prot="public">twp_navier_stokes_p::CouetteProfile</innerclass>
+    <innerclass refid="d6/dc0/classtwp__navier__stokes__p_1_1PerturbedSurface__p" prot="public">twp_navier_stokes_p::PerturbedSurface_p</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1a2c477022e2e77b29da2150d32acc22a3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>twp_navier_stokes_p.ct</definition>
+        <argsstring></argsstring>
+        <name>ct</name>
+        <initializer>=  Context.get()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="9" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1af077db94d6ef4c673bdca4f501d93434" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>twp_navier_stokes_p.LevelModelType</definition>
+        <argsstring></argsstring>
+        <name>LevelModelType</name>
+        <initializer>=  RANS2P.LevelModel</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="11" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1a3a60dbdf98ab8010e9d31c87fd33cf56" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>int twp_navier_stokes_p::LS_model</definition>
+        <argsstring></argsstring>
+        <name>LS_model</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="13" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1a72debc3b537a246ea8e306e47190232d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>twp_navier_stokes_p.dragAlphaTypes</definition>
+        <argsstring></argsstring>
+        <name>dragAlphaTypes</name>
+        <initializer>=  numpy.array([0.0,
+                              0.0,
+                              0.0,
+                              0.0])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="17" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1a0bb4af8422e4fae6eceb268ede23b4f0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>twp_navier_stokes_p.dragBetaTypes</definition>
+        <argsstring></argsstring>
+        <name>dragBetaTypes</name>
+        <initializer>=  numpy.array([0.0,0.0,0.0,0.0])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="21" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1adf5073cb0539f41eb12931944c8d7c12" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>twp_navier_stokes_p.coefficients</definition>
+        <argsstring></argsstring>
+        <name>coefficients</name>
+        <initializer>=  RANS2P.Coefficients(epsFact=epsFact_viscosity,
+                                   sigma=0.0,
+                                   <ref refid="df/d80/VMS_8cpp_1ae5f5d9edb66645eab31a7c8389493ce7" kindref="member">rho_0</ref> = <ref refid="df/d80/VMS_8cpp_1ae5f5d9edb66645eab31a7c8389493ce7" kindref="member">rho_0</ref>,
+                                   <ref refid="df/d80/VMS_8cpp_1a383b07af68441ce2b4adaaf8d8cc9d90" kindref="member">nu_0</ref> = <ref refid="df/d80/VMS_8cpp_1a383b07af68441ce2b4adaaf8d8cc9d90" kindref="member">nu_0</ref>,
+                                   <ref refid="df/d80/VMS_8cpp_1a751e53c9d8dfaf696b11b86e0c1b42e9" kindref="member">rho_1</ref> = <ref refid="df/d80/VMS_8cpp_1a751e53c9d8dfaf696b11b86e0c1b42e9" kindref="member">rho_1</ref>,
+                                   <ref refid="df/d80/VMS_8cpp_1ae5896ebfee35f22242123e4ae82c81d9" kindref="member">nu_1</ref> = <ref refid="df/d80/VMS_8cpp_1ae5896ebfee35f22242123e4ae82c81d9" kindref="member">nu_1</ref>,
+                                   g=g,
+                                   <ref refid="db/d39/namespacetwp__navier__stokes__p_1ad57b12a92b3ac2d8863ce1cffc28ae6b" kindref="member">nd</ref>=<ref refid="db/d39/namespacetwp__navier__stokes__p_1ad57b12a92b3ac2d8863ce1cffc28ae6b" kindref="member">nd</ref>,
+                                   VF_model=1,
+                                   <ref refid="db/d39/namespacetwp__navier__stokes__p_1a3a60dbdf98ab8010e9d31c87fd33cf56" kindref="member">LS_model</ref>=<ref refid="db/d39/namespacetwp__navier__stokes__p_1a3a60dbdf98ab8010e9d31c87fd33cf56" kindref="member">LS_model</ref>,
+                                   epsFact_density=epsFact_density,
+                                   stokes=False,
+                                   useVF=useVF,
+				   useRBLES=useRBLES,
+				   useMetrics=useMetrics,
+                                   eb_adjoint_sigma=1.0,
+                                   <ref refid="db/d39/namespacetwp__navier__stokes__p_1a72debc3b537a246ea8e306e47190232d" kindref="member">dragAlphaTypes</ref>=<ref refid="db/d39/namespacetwp__navier__stokes__p_1a72debc3b537a246ea8e306e47190232d" kindref="member">dragAlphaTypes</ref>,
+                                   <ref refid="db/d39/namespacetwp__navier__stokes__p_1a0bb4af8422e4fae6eceb268ede23b4f0" kindref="member">dragBetaTypes</ref>=<ref refid="db/d39/namespacetwp__navier__stokes__p_1a72debc3b537a246ea8e306e47190232d" kindref="member">dragAlphaTypes</ref>,
+                                   forceStrongDirichlet=ns_forceStrongDirichlet,
+                                   turbulenceClosureModel=ns_closure)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="23" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1ab76a41800484182c1750d7df6a2d6f15" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float twp_navier_stokes_p.Uinf</definition>
+        <argsstring></argsstring>
+        <name>Uinf</name>
+        <initializer>=  0.002</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="44" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1a5ee55fe8dd27cce6408978e93cfdf85f" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary twp_navier_stokes_p::dirichletConditions</definition>
+        <argsstring></argsstring>
+        <name>dirichletConditions</name>
+        <initializer>=  {0:<ref refid="db/d39/namespacetwp__navier__stokes__p_1ad7e653df2fec81f27986a39b64c1295e" kindref="member">getDBC_p</ref>,
+                       1:<ref refid="db/d39/namespacetwp__navier__stokes__p_1a907e036959a9cc1b4ef3c976e7eeecc8" kindref="member">getDBC_u</ref>,
+                       2:<ref refid="db/d39/namespacetwp__navier__stokes__p_1ad1ed9b3394b9eeb2cced922e1f1a28aa" kindref="member">getDBC_v</ref>,
+                       3:<ref refid="db/d39/namespacetwp__navier__stokes__p_1a49c92399a9aa01199ed0cd0b6f2933cb" kindref="member">getDBC_w</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="62" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1ab1aa53f7d5b5f59618561802c1e56320" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary twp_navier_stokes_p::advectiveFluxBoundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>advectiveFluxBoundaryConditions</name>
+        <initializer>=   {0:<ref refid="db/d39/namespacetwp__navier__stokes__p_1a690fa9fa14c5cd8229b78b290f66d5ac" kindref="member">getAFBC_p</ref>,
+                                    1:<ref refid="db/d39/namespacetwp__navier__stokes__p_1afb91d9f8484d3735522d1190c0111819" kindref="member">getAFBC_u</ref>,
+                                    2:<ref refid="db/d39/namespacetwp__navier__stokes__p_1ac4d4dc3b807a7271cdc391495afa08ff" kindref="member">getAFBC_v</ref>,
+                                    3:<ref refid="db/d39/namespacetwp__navier__stokes__p_1a6a2020c565db1c2a55b1e79955f5bd01" kindref="member">getAFBC_w</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="104" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1ae6ddb02b2010c828f655decb34c99b1f" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary twp_navier_stokes_p::diffusiveFluxBoundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>diffusiveFluxBoundaryConditions</name>
+        <initializer>=  {0:{},
+                                   1:{1:<ref refid="db/d39/namespacetwp__navier__stokes__p_1a93b935361ffe0b6ecc11ba410f43fe39" kindref="member">getDFBC_u</ref>},
+                                   2:{2:<ref refid="db/d39/namespacetwp__navier__stokes__p_1aaf36f55b046c1ade0f5f29ad46c85c0d" kindref="member">getDFBC_v</ref>},
+                                   3:{3:<ref refid="db/d39/namespacetwp__navier__stokes__p_1a7853fb087363112fe9903a2e657e0de0" kindref="member">getDFBC_w</ref>}}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="109" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1af0205327b2362c0911405383ad67a530" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary twp_navier_stokes_p::initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {0:<ref refid="d6/d5c/classtwp__navier__stokes__p_1_1AtRest" kindref="compound">AtRest</ref>(),#0:<ref refid="d6/dc0/classtwp__navier__stokes__p_1_1PerturbedSurface__p" kindref="compound">PerturbedSurface_p</ref>(waterLine_z),
+                     1:<ref refid="d6/d5c/classtwp__navier__stokes__p_1_1AtRest" kindref="compound">AtRest</ref>(),
+                     2:<ref refid="d6/d5c/classtwp__navier__stokes__p_1_1AtRest" kindref="compound">AtRest</ref>(),
+                     3:<ref refid="d6/d5c/classtwp__navier__stokes__p_1_1AtRest" kindref="compound">AtRest</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="140" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1a7c4f8fbdbb0e3147030f562e62c2348c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>twp_navier_stokes_p.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  ct.domain</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/gauge_compare/dambreak_Colagrossi_2D_rd/twp_navier_stokes_p.py" line="7" column="1" bodyfile="tests/MeshAdaptPUMI/gauge_compare/dambreak_Colagrossi_2D_rd/twp_navier_stokes_p.py" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1ad57b12a92b3ac2d8863ce1cffc28ae6b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>twp_navier_stokes_p.nd</definition>
+        <argsstring></argsstring>
+        <name>nd</name>
+        <initializer>=  domain.nd</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/gauge_compare/dambreak_Colagrossi_2D_rd/twp_navier_stokes_p.py" line="8" column="1" bodyfile="tests/MeshAdaptPUMI/gauge_compare/dambreak_Colagrossi_2D_rd/twp_navier_stokes_p.py" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1a4f0df4f2f7d9b066ce57b35932f60bc6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>twp_navier_stokes_p.mesh</definition>
+        <argsstring></argsstring>
+        <name>mesh</name>
+        <initializer>=  domain.MeshOptions</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/gauge_compare/dambreak_Colagrossi_2D_rd/twp_navier_stokes_p.py" line="9" column="1" bodyfile="tests/MeshAdaptPUMI/gauge_compare/dambreak_Colagrossi_2D_rd/twp_navier_stokes_p.py" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1ae316c22a8eb7dc0639da34b843cee1c8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>twp_navier_stokes_p.genMesh</definition>
+        <argsstring></argsstring>
+        <name>genMesh</name>
+        <initializer>=  mesh.genMesh</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/gauge_compare/dambreak_Colagrossi_2D_rd/twp_navier_stokes_p.py" line="11" column="1" bodyfile="tests/MeshAdaptPUMI/gauge_compare/dambreak_Colagrossi_2D_rd/twp_navier_stokes_p.py" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1a39102a4f7526134855ba4797c79db5d5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>twp_navier_stokes_p.movingDomain</definition>
+        <argsstring></argsstring>
+        <name>movingDomain</name>
+        <initializer>=  ct.movingDomain</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/gauge_compare/dambreak_Colagrossi_2D_rd/twp_navier_stokes_p.py" line="12" column="1" bodyfile="tests/MeshAdaptPUMI/gauge_compare/dambreak_Colagrossi_2D_rd/twp_navier_stokes_p.py" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1ac792efed188883f9af0e5f26a29aaa66" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>twp_navier_stokes_p.T</definition>
+        <argsstring></argsstring>
+        <name>T</name>
+        <initializer>=  ct.T</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/gauge_compare/dambreak_Colagrossi_2D_rd/twp_navier_stokes_p.py" line="13" column="1" bodyfile="tests/MeshAdaptPUMI/gauge_compare/dambreak_Colagrossi_2D_rd/twp_navier_stokes_p.py" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1a8f5767b919cc6de468dec49374ecf168" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int twp_navier_stokes_p::Closure_0_model</definition>
+        <argsstring></argsstring>
+        <name>Closure_0_model</name>
+        <initializer>=  5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/gauge_compare/dambreak_Colagrossi_2D_rd/twp_navier_stokes_p.py" line="21" column="1" bodyfile="tests/MeshAdaptPUMI/gauge_compare/dambreak_Colagrossi_2D_rd/twp_navier_stokes_p.py" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d39/namespacetwp__navier__stokes__p_1ac0d9548133b8521d2a5fa4e55f37f22e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int twp_navier_stokes_p::Closure_1_model</definition>
+        <argsstring></argsstring>
+        <name>Closure_1_model</name>
+        <initializer>=  6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/gauge_compare/dambreak_Colagrossi_2D_rd/twp_navier_stokes_p.py" line="22" column="1" bodyfile="tests/MeshAdaptPUMI/gauge_compare/dambreak_Colagrossi_2D_rd/twp_navier_stokes_p.py" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="db/d39/namespacetwp__navier__stokes__p_1ad7e653df2fec81f27986a39b64c1295e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def twp_navier_stokes_p.getDBC_p</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDBC_p</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="46" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d39/namespacetwp__navier__stokes__p_1a907e036959a9cc1b4ef3c976e7eeecc8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def twp_navier_stokes_p.getDBC_u</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDBC_u</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="50" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d39/namespacetwp__navier__stokes__p_1ad1ed9b3394b9eeb2cced922e1f1a28aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def twp_navier_stokes_p.getDBC_v</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDBC_v</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="54" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d39/namespacetwp__navier__stokes__p_1a49c92399a9aa01199ed0cd0b6f2933cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def twp_navier_stokes_p.getDBC_w</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDBC_w</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="58" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="58" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d39/namespacetwp__navier__stokes__p_1a690fa9fa14c5cd8229b78b290f66d5ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def twp_navier_stokes_p.getAFBC_p</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getAFBC_p</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="67" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="67" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d39/namespacetwp__navier__stokes__p_1afb91d9f8484d3735522d1190c0111819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def twp_navier_stokes_p.getAFBC_u</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getAFBC_u</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="75" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d39/namespacetwp__navier__stokes__p_1ac4d4dc3b807a7271cdc391495afa08ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def twp_navier_stokes_p.getAFBC_v</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getAFBC_v</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="79" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="79" bodyend="84"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d39/namespacetwp__navier__stokes__p_1a6a2020c565db1c2a55b1e79955f5bd01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def twp_navier_stokes_p.getAFBC_w</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getAFBC_w</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="85" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="85" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d39/namespacetwp__navier__stokes__p_1a93b935361ffe0b6ecc11ba410f43fe39" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def twp_navier_stokes_p.getDFBC_u</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDFBC_u</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="89" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="89" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d39/namespacetwp__navier__stokes__p_1aaf36f55b046c1ade0f5f29ad46c85c0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def twp_navier_stokes_p.getDFBC_v</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDFBC_v</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="93" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="93" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d39/namespacetwp__navier__stokes__p_1a7853fb087363112fe9903a2e657e0de0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def twp_navier_stokes_p.getDFBC_w</definition>
+        <argsstring>(x, flag)</argsstring>
+        <name>getDFBC_w</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="97" column="1" bodyfile="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" bodystart="97" bodyend="103"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/MeshAdaptPUMI/case_run/twp_navier_stokes_p.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

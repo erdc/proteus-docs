@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d3/d08/classproteus_1_1FemTools_1_1FluxBoundaryConditions" kind="class" language="Python" prot="public">
+    <compoundname>proteus::FemTools::FluxBoundaryConditions</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">object</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="d3/d08/classproteus_1_1FemTools_1_1FluxBoundaryConditions_1a7ad4df692f49e036de5b4891cd68f685" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.FemTools.FluxBoundaryConditions::advectiveFluxBoundaryConditionsDict</definition>
+        <argsstring></argsstring>
+        <name>advectiveFluxBoundaryConditionsDict</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FemTools.py" line="7114" column="1" bodyfile="FemTools.py" bodystart="7114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d08/classproteus_1_1FemTools_1_1FluxBoundaryConditions_1a64317d0a2d82ed7c8722c8ed94d8e208" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.FemTools.FluxBoundaryConditions::stressFluxBoundaryConditionsDict</definition>
+        <argsstring></argsstring>
+        <name>stressFluxBoundaryConditionsDict</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FemTools.py" line="7115" column="1" bodyfile="FemTools.py" bodystart="7115" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d3/d08/classproteus_1_1FemTools_1_1FluxBoundaryConditions_1abc57ad69afbb474c747fed88588f6fca" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.FemTools.FluxBoundaryConditions::diffusiveFluxBoundaryConditionsDictDict</definition>
+        <argsstring></argsstring>
+        <name>diffusiveFluxBoundaryConditionsDictDict</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FemTools.py" line="7116" column="1" bodyfile="FemTools.py" bodystart="7116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="d3/d08/classproteus_1_1FemTools_1_1FluxBoundaryConditions_1a68ebc0c17198a016f964eb930b97dc2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.FemTools.FluxBoundaryConditions.__init__</definition>
+        <argsstring>(self, mesh, nElementBoundaryQuadraturePoints_elementBoundary, x, getAdvectiveFluxBoundaryConditions=None, getDiffusiveFluxBoundaryConditions={}, getStressFluxBoundaryConditions=None)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="da/dd2/namespaceproteus_1_1FemTools_1a76493b7d61582a6a106047bfc4d95836" kindref="member">mesh</ref></type>
+          <defname>mesh</defname>
+        </param>
+        <param>
+          <type>nElementBoundaryQuadraturePoints_elementBoundary</type>
+          <defname>nElementBoundaryQuadraturePoints_elementBoundary</defname>
+        </param>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>getAdvectiveFluxBoundaryConditions</type>
+          <defname>getAdvectiveFluxBoundaryConditions</defname>
+          <defval>None</defval>
+        </param>
+        <param>
+          <type>getDiffusiveFluxBoundaryConditions</type>
+          <defname>getDiffusiveFluxBoundaryConditions</defname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>getStressFluxBoundaryConditions</type>
+          <defname>getStressFluxBoundaryConditions</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="FemTools.py" line="7113" column="1" bodyfile="FemTools.py" bodystart="7113" bodyend="7147"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Generating class for the fluxBoundaryConditions dictionaries.
+
+This class manages the generation of the advective, stress and
+diffusive fluxBoundaryCondition dictionaries.  These dictionaries
+store lists of functions that describe the flux conditions along
+the finite element boundaries.
+
+Attributes
+----------
+advectiveFluxBoundaryConditionsDict : :obj:`dict`
+    Stores advective flux boundary conditions functions.
+stressFluxBoundaryConditionsDict : :obj:`dict`
+    Stores stress flux boundary conditions functions.
+diffusiveFluxBoundaryConditionsDictDict : :obj:`dict`
+    Stores diffusive flux boundary conditions functions.
+
+Notes
+-----
+The boundary condition dictionaries all use the key convention
+(ebNE,k) where ebNE is the global edge number and k is the local
+quadrature point number.
+</verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>proteus.FemTools.FluxBoundaryConditions</label>
+        <link refid="d3/d08/classproteus_1_1FemTools_1_1FluxBoundaryConditions"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>object</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>proteus.FemTools.FluxBoundaryConditions</label>
+        <link refid="d3/d08/classproteus_1_1FemTools_1_1FluxBoundaryConditions"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>object</label>
+      </node>
+    </collaborationgraph>
+    <location file="FemTools.py" line="7090" column="1" bodyfile="FemTools.py" bodystart="7090" bodyend="7148"/>
+    <listofallmembers>
+      <member refid="d3/d08/classproteus_1_1FemTools_1_1FluxBoundaryConditions_1a68ebc0c17198a016f964eb930b97dc2a" prot="public" virt="non-virtual"><scope>proteus::FemTools::FluxBoundaryConditions</scope><name>__init__</name></member>
+      <member refid="d3/d08/classproteus_1_1FemTools_1_1FluxBoundaryConditions_1a7ad4df692f49e036de5b4891cd68f685" prot="public" virt="non-virtual"><scope>proteus::FemTools::FluxBoundaryConditions</scope><name>advectiveFluxBoundaryConditionsDict</name></member>
+      <member refid="d3/d08/classproteus_1_1FemTools_1_1FluxBoundaryConditions_1abc57ad69afbb474c747fed88588f6fca" prot="public" virt="non-virtual"><scope>proteus::FemTools::FluxBoundaryConditions</scope><name>diffusiveFluxBoundaryConditionsDictDict</name></member>
+      <member refid="d3/d08/classproteus_1_1FemTools_1_1FluxBoundaryConditions_1a64317d0a2d82ed7c8722c8ed94d8e208" prot="public" virt="non-virtual"><scope>proteus::FemTools::FluxBoundaryConditions</scope><name>stressFluxBoundaryConditionsDict</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

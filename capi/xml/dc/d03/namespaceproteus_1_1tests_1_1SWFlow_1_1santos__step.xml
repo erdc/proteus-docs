@@ -1,0 +1,482 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step" kind="namespace" language="Python">
+    <compoundname>proteus::tests::SWFlow::santos_step</compoundname>
+    <innerclass refid="d3/d00/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1heta__at__t0" prot="public">proteus::tests::SWFlow::santos_step::heta_at_t0</innerclass>
+    <innerclass refid="d4/df3/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1hw__at__t0" prot="public">proteus::tests::SWFlow::santos_step::hw_at_t0</innerclass>
+    <innerclass refid="d9/d16/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1water__height__at__t0" prot="public">proteus::tests::SWFlow::santos_step::water_height_at_t0</innerclass>
+    <innerclass refid="d4/d08/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1water__height__at__tfinal" prot="public">proteus::tests::SWFlow::santos_step::water_height_at_tfinal</innerclass>
+    <innerclass refid="d5/dd5/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1x__mom__at__t0" prot="public">proteus::tests::SWFlow::santos_step::x_mom_at_t0</innerclass>
+    <innerclass refid="d7/d0f/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1y__mom__at__t0" prot="public">proteus::tests::SWFlow::santos_step::y_mom_at_t0</innerclass>
+    <innerclass refid="dd/dbe/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1Zero" prot="public">proteus::tests::SWFlow::santos_step::Zero</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a310f8007b8329b1ebbc9de391828593b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::santos_step.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>=  <ref refid="d0/d93/namespaceproteus_1_1Context_1a461242d050aceb1e84d9426074c67004" kindref="member">Context.Options</ref>([
+    (&apos;sw_model&apos;, 1, &quot;sw_model = {0,1} for {SWEs, Disperisve SWEs}}&quot;),
+    (&quot;final_time&quot;, 10.0, &quot;Final time for simulation&quot;),
+    (&quot;dt_output&quot;, 0.1, &quot;Time interval to output solution&quot;),
+    (&quot;cfl&quot;, 0.25, &quot;Desired CFL restriction&quot;),
+    (&quot;<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1aef04a93666cc7781f1d34b72e5dde2c3" kindref="member">refinement</ref>&quot;, 4, &quot;Refinement level&quot;),
+    (&quot;reflecting_BCs&quot;, False, &quot;Use reflecting BCs for all boundaries&quot;),
+    (&quot;structured&quot;, True, &quot;Structured or unstructured mesh&quot;),
+    (&quot;<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a27197249e9f55d1e6ce5ea37ac705bcd" kindref="member">he</ref>&quot;, 0.1, &quot;<ref refid="da/d29/structMesh" kindref="compound">Mesh</ref> size for unstructured mesh&quot;)
+])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="22" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a71d4f983aff66c956ec92dd13fe3933e" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::santos_step.L</definition>
+        <argsstring></argsstring>
+        <name>L</name>
+        <initializer>=  (30.0, 2.0)</initializer>
+        <briefdescription>
+<para>DOMAIN AND MESH #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="36" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1aef04a93666cc7781f1d34b72e5dde2c3" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::santos_step.refinement</definition>
+        <argsstring></argsstring>
+        <name>refinement</name>
+        <initializer>=  opts.refinement</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="37" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a01483d9748694285726338e3c4c8dc25" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::santos_step.rectangle</definition>
+        <argsstring></argsstring>
+        <name>rectangle</name>
+        <initializer>=  <ref refid="de/d03/classproteus_1_1Domain_1_1RectangularDomain" kindref="compound">RectangularDomain</ref>(<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a71d4f983aff66c956ec92dd13fe3933e" kindref="member">L</ref>=<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a71d4f983aff66c956ec92dd13fe3933e" kindref="member">L</ref>, x=[-15, 0, 0])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="38" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1abb4ca4733ba5a8c774ad05cd80395769" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::SWFlow::santos_step.nnx0</definition>
+        <argsstring></argsstring>
+        <name>nnx0</name>
+        <initializer>=  6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="41" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1acce778d5e47884552f8967b5f97b31ce" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>proteus::tests::SWFlow::santos_step.nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <initializer>=  (<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1abb4ca4733ba5a8c774ad05cd80395769" kindref="member">nnx0</ref> - 1) * (2**<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1aef04a93666cc7781f1d34b72e5dde2c3" kindref="member">refinement</ref>) + 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="42" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a388daf210156be4282ff1922b9ee95ed" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>proteus::tests::SWFlow::santos_step.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <initializer>=  old_div((<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1acce778d5e47884552f8967b5f97b31ce" kindref="member">nnx</ref> - 1), 10) + 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="43" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a27197249e9f55d1e6ce5ea37ac705bcd" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::santos_step.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>=  old_div(<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a71d4f983aff66c956ec92dd13fe3933e" kindref="member">L</ref>[0], float(<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1acce778d5e47884552f8967b5f97b31ce" kindref="member">nnx</ref> - 1))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="44" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a330bff4e1563dcbf8d827124d6bb0235" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>proteus::tests::SWFlow::santos_step.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <initializer>=  &quot;pAq30Dena%<ref refid="d8/dd9/namespaceproteus_1af05ccedae3a5249ffcee18ba28860db4" kindref="member">f</ref>&quot; % (0.5 * he**2,)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="45" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1ae14ec8a707d988c2a8fc4230a21c0ecf" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::santos_step.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  <ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a01483d9748694285726338e3c4c8dc25" kindref="member">rectangle</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="47" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1aca8c8abbffcfa2e5599365bb2e419efc" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::santos_step.g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <initializer>=  9.81</initializer>
+        <briefdescription>
+<para>SOLITARY WAVE FUCTION AND BATH #. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="58" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1af9ea054306fb46c1f6e946b27eea63e0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::santos_step.h0</definition>
+        <argsstring></argsstring>
+        <name>h0</name>
+        <initializer>=  0.20</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="61" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1ab612c12b2028058e63a24809645c4ace" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::santos_step.alpha</definition>
+        <argsstring></argsstring>
+        <name>alpha</name>
+        <initializer>=  0.0365</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="62" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a6408f606a510770533badc189d239ab0" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::SWFlow::santos_step.xs</definition>
+        <argsstring></argsstring>
+        <name>xs</name>
+        <initializer>=  -3.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="63" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1ad1dab4cc320c1c3eeae3ac184dc2332d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::santos_step.r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <initializer>=  np.sqrt(old_div(3. * <ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1ab612c12b2028058e63a24809645c4ace" kindref="member">alpha</ref>, (4. * <ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1af9ea054306fb46c1f6e946b27eea63e0" kindref="member">h0</ref>**2 * (<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1af9ea054306fb46c1f6e946b27eea63e0" kindref="member">h0</ref> + <ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1ab612c12b2028058e63a24809645c4ace" kindref="member">alpha</ref>))))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="64" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1ad5ed94eb65d59a7cb42928d8e2c6ddd9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::santos_step.c</definition>
+        <argsstring></argsstring>
+        <name>c</name>
+        <initializer>=  np.sqrt(<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1aca8c8abbffcfa2e5599365bb2e419efc" kindref="member">g</ref> * (<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1af9ea054306fb46c1f6e946b27eea63e0" kindref="member">h0</ref> + <ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1ab612c12b2028058e63a24809645c4ace" kindref="member">alpha</ref>))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="65" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1aa60a959ed5ceb1915660ebb2941951d9" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::santos_step.X_coords</definition>
+        <argsstring></argsstring>
+        <name>X_coords</name>
+        <initializer>=  (-15.0, 15.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="139" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1af5742e617e3883ad8e655e4a6dbc7527" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple proteus::tests::SWFlow::santos_step.Y_coords</definition>
+        <argsstring></argsstring>
+        <name>Y_coords</name>
+        <initializer>=  (0.0, 2.0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="140" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="140" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a9af995e1103c968cc46dc076746756a0" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::santos_step.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  SWFlowProblem.OutputStepping(
+    opts.final_time, dt_output=opts.dt_output)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="156" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a01d698d1f3778bf11a7639fc6a475afd" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::santos_step.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;water_height&apos;: <ref refid="d9/d16/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1water__height__at__t0" kindref="compound">water_height_at_t0</ref>(),
+                     &apos;x_mom&apos;: <ref refid="d5/dd5/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1x__mom__at__t0" kindref="compound">x_mom_at_t0</ref>(),
+                     &apos;y_mom&apos;: <ref refid="d7/d0f/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1y__mom__at__t0" kindref="compound">y_mom_at_t0</ref>(),
+                     &apos;h_times_eta&apos;: <ref refid="d3/d00/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1heta__at__t0" kindref="compound">heta_at_t0</ref>(),
+                     &apos;h_times_w&apos;: <ref refid="d4/df3/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1hw__at__t0" kindref="compound">hw_at_t0</ref>(),
+                     &apos;h_times_beta&apos;: <ref refid="dd/dbe/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1Zero" kindref="compound">Zero</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="158" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a512ca7b05136a1ed81be43544e1192ae" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::santos_step.boundaryConditions</definition>
+        <argsstring></argsstring>
+        <name>boundaryConditions</name>
+        <initializer>=  {&apos;water_height&apos;: lambda x, flag: None,
+                      &apos;x_mom&apos;: <ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1ab38b141d42d3fec382b84dd4fd411aa0" kindref="member">x_mom_DBC</ref>,
+                      &apos;y_mom&apos;: <ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1aedae7dcf5293ce2264c2424f103d35ba" kindref="member">y_mom_DBC</ref>,
+                      &apos;h_times_eta&apos;: lambda x, flag: None,
+                      &apos;h_times_w&apos;: lambda x, flag: None,
+                      &apos;h_times_beta&apos;: <ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a1a1c328248154d79fcf8598b7445a16a" kindref="member">hbeta_DBC</ref>}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="164" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a445bc804c80b47c283f67999ae0edb67" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary proteus::tests::SWFlow::santos_step.analytical_Solution</definition>
+        <argsstring></argsstring>
+        <name>analytical_Solution</name>
+        <initializer>=  {&apos;h_exact&apos;: <ref refid="d4/d08/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1water__height__at__tfinal" kindref="compound">water_height_at_tfinal</ref>(),
+                       &apos;hu_exact&apos;: <ref refid="dd/dbe/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1Zero" kindref="compound">Zero</ref>(),
+                       &apos;hv_exact&apos;: <ref refid="dd/dbe/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1Zero" kindref="compound">Zero</ref>(),
+                       &apos;heta_exact&apos;: <ref refid="dd/dbe/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1Zero" kindref="compound">Zero</ref>(),
+                       &apos;hw_exact&apos;: <ref refid="dd/dbe/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1Zero" kindref="compound">Zero</ref>(),
+                       &apos;hbeta_exact&apos;: <ref refid="dd/dbe/classproteus_1_1tests_1_1SWFlow_1_1santos__step_1_1Zero" kindref="compound">Zero</ref>()}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="170" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1aa68bc14aefc2942eff61bbfc80162505" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::SWFlow::santos_step.mySWFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>mySWFlowProblem</name>
+        <initializer>=  SWFlowProblem.SWFlowProblem(sw_model=opts.sw_model,
+                                              cfl=opts.cfl,
+                                              <ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a9af995e1103c968cc46dc076746756a0" kindref="member">outputStepping</ref>=<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a9af995e1103c968cc46dc076746756a0" kindref="member">outputStepping</ref>,
+                                              structured=opts.structured,
+                                              <ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a27197249e9f55d1e6ce5ea37ac705bcd" kindref="member">he</ref>=<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a27197249e9f55d1e6ce5ea37ac705bcd" kindref="member">he</ref>,
+                                              <ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1acce778d5e47884552f8967b5f97b31ce" kindref="member">nnx</ref>=<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1acce778d5e47884552f8967b5f97b31ce" kindref="member">nnx</ref>,
+                                              <ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a388daf210156be4282ff1922b9ee95ed" kindref="member">nny</ref>=<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a388daf210156be4282ff1922b9ee95ed" kindref="member">nny</ref>,
+                                              <ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1ae14ec8a707d988c2a8fc4230a21c0ecf" kindref="member">domain</ref>=<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1ae14ec8a707d988c2a8fc4230a21c0ecf" kindref="member">domain</ref>,
+                                              <ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a01d698d1f3778bf11a7639fc6a475afd" kindref="member">initialConditions</ref>=<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a01d698d1f3778bf11a7639fc6a475afd" kindref="member">initialConditions</ref>,
+                                              <ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a512ca7b05136a1ed81be43544e1192ae" kindref="member">boundaryConditions</ref>=<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a512ca7b05136a1ed81be43544e1192ae" kindref="member">boundaryConditions</ref>,
+                                              bathymetry=<ref refid="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a3c25889f5d3377de2357a58a32d95041" kindref="member">bathymetry_function</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="177" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="177" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1aeea912fff2cf66db74d331b3a0687d38" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.santos_step.solitary_wave</definition>
+        <argsstring>(x, t)</argsstring>
+        <name>solitary_wave</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>t</type>
+          <defname>t</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="67" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="67" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a3c25889f5d3377de2357a58a32d95041" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.santos_step.bathymetry_function</definition>
+        <argsstring>(X)</argsstring>
+        <name>bathymetry_function</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="71" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="71" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1ab38b141d42d3fec382b84dd4fd411aa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.santos_step.x_mom_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>x_mom_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="142" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="142" bodyend="144"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1aedae7dcf5293ce2264c2424f103d35ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.santos_step.y_mom_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>y_mom_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="145" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="145" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="function" id="dc/d03/namespaceproteus_1_1tests_1_1SWFlow_1_1santos__step_1a1a1c328248154d79fcf8598b7445a16a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.SWFlow.santos_step.hbeta_DBC</definition>
+        <argsstring>(X, flag)</argsstring>
+        <name>hbeta_DBC</name>
+        <param>
+          <type>X</type>
+          <defname>X</defname>
+        </param>
+        <param>
+          <type>flag</type>
+          <defname>flag</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/SWFlow/santos_step.py" line="148" column="1" bodyfile="tests/SWFlow/santos_step.py" bodystart="148" bodyend="155"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/SWFlow/santos_step.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

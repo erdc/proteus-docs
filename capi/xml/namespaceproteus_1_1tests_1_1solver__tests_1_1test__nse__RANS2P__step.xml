@@ -1,0 +1,444 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step" kind="namespace" language="Python">
+    <compoundname>proteus::tests::solver_tests::test_nse_RANS2P_step</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1a121c5bce5cf39e96c5402acb2deee897" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::solver_tests::test_nse_RANS2P_step.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <initializer>= iproteus.opts</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="28" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1aa1cd0484192587a0b186546bbeab997b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::solver_tests::test_nse_RANS2P_step.import_modules</definition>
+        <argsstring></argsstring>
+        <name>import_modules</name>
+        <initializer>=  os.path.join(os.path.dirname(__file__),&apos;import_modules&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="29" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1acf2fa8addb4ba1c3bd78661430af3600" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.load_simulation</definition>
+        <argsstring>(context_options_str=None)</argsstring>
+        <name>load_simulation</name>
+        <param>
+          <type>context_options_str</type>
+          <defname>context_options_str</defname>
+          <defval>None</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Loads a two-phase step problem with settings
+
+Parameters
+----------
+settings:
+
+Returns:
+--------</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="30" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="30" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1a9ac384efdd0eea61b8d1bafdfe36312c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.initialize_petsc_options</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_petsc_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initializes schur complement petsc options. </verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="73" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="73" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1a0bc54bade2622f87e54697843f019217" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.initialize_schur_ksp_obj</definition>
+        <argsstring>(matrix_A, schur_approx)</argsstring>
+        <name>initialize_schur_ksp_obj</name>
+        <param>
+          <type>matrix_A</type>
+          <defname>matrix_A</defname>
+        </param>
+        <param>
+          <type>schur_approx</type>
+          <defname>schur_approx</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates a right-hand-side and solution PETSc4Py vector for
+testing ksp solves.
+
+Parameters
+----------
+matrix_A: :class:`PETSc.Mat`
+    Global matrix object.
+schur_approx: :class:`LS.SchurPrecon`
+
+Returns
+-------
+ksp_obj: :class:`PETSc.KSP`
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="124" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="124" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1abc40f359776611921e111779b0f678e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.runTest</definition>
+        <argsstring>(ns, name)</argsstring>
+        <name>runTest</name>
+        <param>
+          <type><ref refid="Headers_8h_1a8d89c1c01f11c291e3bf8dfeb781946d" kindref="member">ns</ref></type>
+          <defname>ns</defname>
+        </param>
+        <param>
+          <type>name</type>
+          <defname>name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="152" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="152" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1ac608a13f0bdb4c79e917f9556f531e7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.test_step_slip_FullRun</definition>
+        <argsstring>()</argsstring>
+        <name>test_step_slip_FullRun</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Runs two-dimensional step problem with the settings:
+    * Strongly enforced Free-slip BC.
+    * Pressure Projection Stablization.
+    * he = 0.05
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="158" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="158" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1a49cc61145c9c2fd0df30f7403cfe7fa4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.test_step_noslip_FullRun</definition>
+        <argsstring>()</argsstring>
+        <name>test_step_noslip_FullRun</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Runs two-dimensional step problem with the settings:
+    * Strongly enforced no-slip BC.
+    * Pressure Projection Stablization.
+    * he = 0.05
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="178" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="178" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1a521eaf5f79a56f4e03dddd1c76bb9da1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.test_Schur_Sp_solve</definition>
+        <argsstring>()</argsstring>
+        <name>test_Schur_Sp_solve</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Tests a KSP solve using the Sp Schur complement approximation.
+   For this test, the global matrix does not have a null space.</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="198" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="198" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1aaf360220ff4372f92c3e30b7e650cc06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.create_petsc_vecs</definition>
+        <argsstring>(matrix_A)</argsstring>
+        <name>create_petsc_vecs</name>
+        <param>
+          <type>matrix_A</type>
+          <defname>matrix_A</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates a right-hand-side and solution PETSc vector for
+testing ksp solves.
+
+Parameters
+----------
+matrix_A: :class:`PETSc.Mat`
+    Global matrix object
+
+Returns
+-------
+vec_lst: tuple
+    This is a list of :class:`pypyPETSc.Vec` where the first is
+    a vector of ones (usually to act as a RHS-vector) while the
+    second vector is a vector of zeros (usually to act as a
+    storage vector for the solution).
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="217" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="217" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1a5ef11cc3f340bbd8e84500d1d20bf496" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.initialize_asm_ksp_obj</definition>
+        <argsstring>(matrix_A)</argsstring>
+        <name>initialize_asm_ksp_obj</name>
+        <param>
+          <type>matrix_A</type>
+          <defname>matrix_A</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates a right-hand-side and solution PETSc vector for
+testing ksp solves.
+
+Parameters
+----------
+matrix_A: :class:`PETSc.Mat`
+    Global matrix object.
+
+Returns
+-------
+ksp_obj: :class:`PETSc.KSP`
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="241" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="241" bodyend="260"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1af1bd8bd1a5efd88242a37d1cc6d96978" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.build_amg_index_sets</definition>
+        <argsstring>(L_sizes)</argsstring>
+        <name>build_amg_index_sets</name>
+        <param>
+          <type>L_sizes</type>
+          <defname>L_sizes</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Create PETSc index sets for the velocity components of a saddle
+point matrix
+
+Parameters
+----------
+L_sizes :
+    Sizes of original saddle-point system
+
+Returns:
+--------
+Index_Sets : lst
+    List of velocity index sets
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="261" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="261" bodyend="303"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1a09bde131ccb559d79424efbf5ea7e073" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.clear_petsc_options</definition>
+        <argsstring>()</argsstring>
+        <name>clear_petsc_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="304" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="304" bodyend="306"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1a685687f86e37ccc6e4029a4c9d4bff24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.initialize_velocity_block_petsc_options</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_velocity_block_petsc_options</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="307" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="307" bodyend="317"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1a37019f1a1f5a8491b24a361afdea519e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.initialize_velocity_block_petsc_options_2</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_velocity_block_petsc_options_2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="318" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="318" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1a1188b1654e8b66638c5ca118100fc80a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.initialize_velocity_block_petsc_options_3</definition>
+        <argsstring>()</argsstring>
+        <name>initialize_velocity_block_petsc_options_3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="326" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="326" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1af78718b60291facc9ae2c8b8adf9ee45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.load_matrix_step_slip</definition>
+        <argsstring>()</argsstring>
+        <name>load_matrix_step_slip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Loads a medium sized backwards facing step matrix for studying
+different AMG preconditioners.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="337" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="337" bodyend="344"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1ac1a3a3a31ac914aeeaf856bb42848f69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.load_matrix_step_noslip</definition>
+        <argsstring>()</argsstring>
+        <name>load_matrix_step_noslip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Loads a medium sized backwards facing step matrix for studying
+different AMG preconditioners.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="345" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="345" bodyend="352"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1a5547dbe661ab85c7f293675bc55901dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.test_amg_iteration_matrix_noslip</definition>
+        <argsstring>()</argsstring>
+        <name>test_amg_iteration_matrix_noslip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="353" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="353" bodyend="398"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1a1ff36754eb9f3ee955b6c011e8a71236" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.test_amg_iteration_matrix_slip</definition>
+        <argsstring>()</argsstring>
+        <name>test_amg_iteration_matrix_slip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="399" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="399" bodyend="423"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1a3986bb5f6db5d9b64b83e6dbf2829d5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.test_amg_basic</definition>
+        <argsstring>()</argsstring>
+        <name>test_amg_basic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="424" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="424" bodyend="439"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1a0dbfcdb6715bbc51b7f8f88678d93069" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.test_amg_iteration_performance</definition>
+        <argsstring>()</argsstring>
+        <name>test_amg_iteration_performance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="440" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="440" bodyend="454"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1abf2c93295fc612486f930ea753d3f441" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.test_amg_step_problem_noslip</definition>
+        <argsstring>()</argsstring>
+        <name>test_amg_step_problem_noslip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="455" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="455" bodyend="468"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__nse__RANS2P__step_1a70bdcecca225a99e330b9d85a85e236a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_nse_RANS2P_step.test_amg_step_problem_slip</definition>
+        <argsstring>()</argsstring>
+        <name>test_amg_step_problem_slip</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="469" column="1" bodyfile="tests/solver_tests/test_nse_RANS2P_step.py" bodystart="469" bodyend="482"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Test modules for Driven Cavity Stokes preconditioners. </verbatim> </para>
+    </detaileddescription>
+    <location file="tests/solver_tests/test_nse_RANS2P_step.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

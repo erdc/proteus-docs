@@ -1,0 +1,531 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="db/d75/classproteus_1_1NCLS" kind="class" language="C++" prot="public">
+    <compoundname>proteus::NCLS</compoundname>
+    <basecompoundref refid="d0/d4c/classproteus_1_1NCLS__base" prot="public" virt="non-virtual">proteus::NCLS_base</basecompoundref>
+    <includes refid="d2/d23/NCLS_8h" local="no">NCLS.h</includes>
+    <templateparamlist>
+      <param>
+        <type>class CompKernelType</type>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>nSpace</declname>
+        <defname>nSpace</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>nQuadraturePoints_element</declname>
+        <defname>nQuadraturePoints_element</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>nDOF_mesh_trial_element</declname>
+        <defname>nDOF_mesh_trial_element</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>nDOF_trial_element</declname>
+        <defname>nDOF_trial_element</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>nDOF_test_element</declname>
+        <defname>nDOF_test_element</defname>
+      </param>
+      <param>
+        <type>int</type>
+        <declname>nQuadraturePoints_elementBoundary</declname>
+        <defname>nQuadraturePoints_elementBoundary</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="db/d75/classproteus_1_1NCLS_1aafc2a68c2a1af6521238b15b63273676" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::nDOF_test_X_trial_element</definition>
+        <argsstring></argsstring>
+        <name>nDOF_test_X_trial_element</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/NCLS.h" line="70" column="17" bodyfile="mprans/NCLS.h" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="db/d75/classproteus_1_1NCLS_1aa7746ecb73111a3e8bfeed438130ed03" prot="public" static="no" mutable="no">
+        <type>CompKernelType</type>
+        <definition>CompKernelType proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::ck</definition>
+        <argsstring></argsstring>
+        <name>ck</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/NCLS.h" line="71" column="22" bodyfile="mprans/NCLS.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="db/d75/classproteus_1_1NCLS_1a90b37e9e18e7059f0069f62b4c8c91e0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::NCLS</definition>
+        <argsstring>()</argsstring>
+        <name>NCLS</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/NCLS.h" line="72" column="5" bodyfile="mprans/NCLS.h" bodystart="72" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d75/classproteus_1_1NCLS_1a0c771de2823ff0be8be37f17e0c3f00f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::evaluateCoefficients</definition>
+        <argsstring>(const double v[nSpace], const double &amp;u, const double grad_u[nSpace], double &amp;m, double &amp;dm, double &amp;H, double dH[nSpace])</argsstring>
+        <name>evaluateCoefficients</name>
+        <param>
+          <type>const double</type>
+          <declname>v</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>grad_u</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dm</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>H</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>dH</declname>
+          <array>[nSpace]</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/NCLS.h" line="77" column="19" bodyfile="mprans/NCLS.h" bodystart="77" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d75/classproteus_1_1NCLS_1a8f490b564e74b966fbf20e695b79ccf7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::calculateCFL</definition>
+        <argsstring>(const double &amp;elementDiameter, const double df[nSpace], double &amp;cfl)</argsstring>
+        <name>calculateCFL</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>elementDiameter</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>df</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>cfl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/NCLS.h" line="96" column="14" bodyfile="mprans/NCLS.h" bodystart="96" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d75/classproteus_1_1NCLS_1ab46cf1d86fa48ef2e83cbd3792ba8530" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::calculateSubgridError_tau</definition>
+        <argsstring>(const double &amp;elementDiameter, const double &amp;dmt, const double dH[nSpace], double &amp;cfl, double &amp;tau)</argsstring>
+        <name>calculateSubgridError_tau</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>elementDiameter</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>dmt</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>dH</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>cfl</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>tau</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/NCLS.h" line="110" column="14" bodyfile="mprans/NCLS.h" bodystart="110" bodyend="125"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d75/classproteus_1_1NCLS_1ac733c4f4600d652c815cf79adc837db2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::calculateSubgridError_tau</definition>
+        <argsstring>(const double &amp;Ct_sge, const double G[nSpace *nSpace], const double &amp;A0, const double Ai[nSpace], double &amp;tau_v, double &amp;cfl)</argsstring>
+        <name>calculateSubgridError_tau</name>
+        <param>
+          <type>const double &amp;</type>
+          <declname>Ct_sge</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>G</declname>
+          <array>[nSpace *nSpace]</array>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>A0</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>Ai</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>tau_v</declname>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>cfl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/NCLS.h" line="129" column="14" bodyfile="mprans/NCLS.h" bodystart="129" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d75/classproteus_1_1NCLS_1a909e761f68248f02d20fad3635f7114a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::exteriorNumericalFlux</definition>
+        <argsstring>(const double n[nSpace], const double &amp;bc_u, const double &amp;u, const double velocity[nSpace], const double velocity_movingDomain[nSpace], double &amp;flux)</argsstring>
+        <name>exteriorNumericalFlux</name>
+        <param>
+          <type>const double</type>
+          <declname>n</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>bc_u</declname>
+        </param>
+        <param>
+          <type>const double &amp;</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>velocity</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>velocity_movingDomain</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>flux</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/NCLS.h" line="144" column="12" bodyfile="mprans/NCLS.h" bodystart="144" bodyend="166"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d75/classproteus_1_1NCLS_1a9cfc9ea790426b087884c61f6688472c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::exteriorNumericalFluxDerivative</definition>
+        <argsstring>(const double n[nSpace], const double velocity[nSpace], const double velocity_movingDomain[nSpace], double &amp;dflux)</argsstring>
+        <name>exteriorNumericalFluxDerivative</name>
+        <param>
+          <type>const double</type>
+          <declname>n</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>velocity</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>velocity_movingDomain</declname>
+          <array>[nSpace]</array>
+        </param>
+        <param>
+          <type>double &amp;</type>
+          <declname>dflux</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/NCLS.h" line="169" column="14" bodyfile="mprans/NCLS.h" bodystart="169" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d75/classproteus_1_1NCLS_1a8ce14daa6421b5afdbb77f84a6c93944" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::sign</definition>
+        <argsstring>(const double phi, const double eps)</argsstring>
+        <name>sign</name>
+        <param>
+          <type>const double</type>
+          <declname>phi</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>eps</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/NCLS.h" line="192" column="16" bodyfile="mprans/NCLS.h" bodystart="192" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d75/classproteus_1_1NCLS_1a67893c835b7c89ef2b3aa595feb4568c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::calculateResidual</definition>
+        <argsstring>(arguments_dict &amp;args)</argsstring>
+        <name>calculateResidual</name>
+        <reimplements refid="d0/d4c/classproteus_1_1NCLS__base_1a47c37350ff8e539dd5c1c3d8a1d69915">calculateResidual</reimplements>
+        <param>
+          <type><ref refid="d5/d33/structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/NCLS.h" line="210" column="12" bodyfile="mprans/NCLS.h" bodystart="210" bodyend="688"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d75/classproteus_1_1NCLS_1a2db22ca20e992f941fbf74ad08b87176" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::calculateJacobian</definition>
+        <argsstring>(arguments_dict &amp;args)</argsstring>
+        <name>calculateJacobian</name>
+        <reimplements refid="d0/d4c/classproteus_1_1NCLS__base_1adaed63ad907cb71548ce4aff3570b9d7">calculateJacobian</reimplements>
+        <param>
+          <type><ref refid="d5/d33/structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/NCLS.h" line="690" column="12" bodyfile="mprans/NCLS.h" bodystart="690" bodyend="1108"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d75/classproteus_1_1NCLS_1aeecb466a0005cc7375ea43be5ff3b114" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::calculateWaterline</definition>
+        <argsstring>(arguments_dict &amp;args)</argsstring>
+        <name>calculateWaterline</name>
+        <reimplements refid="d0/d4c/classproteus_1_1NCLS__base_1ab1ba6fbc0816a5d28cc958d68d2ba633">calculateWaterline</reimplements>
+        <param>
+          <type><ref refid="d5/d33/structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/NCLS.h" line="1110" column="12" bodyfile="mprans/NCLS.h" bodystart="1110" bodyend="1236"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d75/classproteus_1_1NCLS_1a8c95da5db65446432ed520304d31f681" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::calculateRedistancingResidual</definition>
+        <argsstring>(arguments_dict &amp;args)</argsstring>
+        <name>calculateRedistancingResidual</name>
+        <reimplements refid="d0/d4c/classproteus_1_1NCLS__base_1a76d58157759b4954811c7e5e41fe4e86">calculateRedistancingResidual</reimplements>
+        <param>
+          <type><ref refid="d5/d33/structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/NCLS.h" line="1238" column="14" bodyfile="mprans/NCLS.h" bodystart="1238" bodyend="1468"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d75/classproteus_1_1NCLS_1ace30ab955319e84f2cb4a0a36556216a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>double</type>
+        <definition>double proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::calculateRhsSmoothing</definition>
+        <argsstring>(arguments_dict &amp;args)</argsstring>
+        <name>calculateRhsSmoothing</name>
+        <reimplements refid="d0/d4c/classproteus_1_1NCLS__base_1ac639506e04f7db3f0318ce8b0ddd476a">calculateRhsSmoothing</reimplements>
+        <param>
+          <type><ref refid="d5/d33/structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/NCLS.h" line="1470" column="14" bodyfile="mprans/NCLS.h" bodystart="1470" bodyend="1540"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d75/classproteus_1_1NCLS_1a9e5aa08bcaa4ce660b26b491c4594633" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::calculateResidual_entropy_viscosity</definition>
+        <argsstring>(arguments_dict &amp;args)</argsstring>
+        <name>calculateResidual_entropy_viscosity</name>
+        <reimplements refid="d0/d4c/classproteus_1_1NCLS__base_1ac1fac1bb0f2f5ca9aec6dcca31f81b89">calculateResidual_entropy_viscosity</reimplements>
+        <param>
+          <type><ref refid="d5/d33/structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/NCLS.h" line="1542" column="12" bodyfile="mprans/NCLS.h" bodystart="1542" bodyend="2219"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d75/classproteus_1_1NCLS_1ac1d8eb7c69c8229d5f6d737bb319bb97" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::calculateMassMatrix</definition>
+        <argsstring>(arguments_dict &amp;args)</argsstring>
+        <name>calculateMassMatrix</name>
+        <reimplements refid="d0/d4c/classproteus_1_1NCLS__base_1a31c838a9e9849df7e6a3b8c2a2500bcb">calculateMassMatrix</reimplements>
+        <param>
+          <type><ref refid="d5/d33/structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/NCLS.h" line="2221" column="12" bodyfile="mprans/NCLS.h" bodystart="2221" bodyend="2461"/>
+      </memberdef>
+      <memberdef kind="function" id="db/d75/classproteus_1_1NCLS_1afb0241b44872683ee957bda1f75fe491" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::calculateSmoothingMatrix</definition>
+        <argsstring>(arguments_dict &amp;args)</argsstring>
+        <name>calculateSmoothingMatrix</name>
+        <reimplements refid="d0/d4c/classproteus_1_1NCLS__base_1afad62304ec889469046ddc3f8b039c22">calculateSmoothingMatrix</reimplements>
+        <param>
+          <type><ref refid="d5/d33/structproteus_1_1arguments__dict" kindref="compound">arguments_dict</ref> &amp;</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="mprans/NCLS.h" line="2463" column="12" bodyfile="mprans/NCLS.h" bodystart="2463" bodyend="2695"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>proteus::NCLS_base</label>
+        <link refid="d0/d4c/classproteus_1_1NCLS__base"/>
+      </node>
+      <node id="1">
+        <label>proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;</label>
+        <link refid="db/d75/classproteus_1_1NCLS"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>proteus::NCLS_base</label>
+        <link refid="d0/d4c/classproteus_1_1NCLS__base"/>
+      </node>
+      <node id="1">
+        <label>proteus::NCLS&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;</label>
+        <link refid="db/d75/classproteus_1_1NCLS"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="mprans/NCLS.h" line="68" column="1" bodyfile="mprans/NCLS.h" bodystart="67" bodyend="2696"/>
+    <listofallmembers>
+      <member refid="d0/d4c/classproteus_1_1NCLS__base_1aeac93269bfc861c6e39532a9734ffd03" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>alpha_denominator_neg</name></member>
+      <member refid="d0/d4c/classproteus_1_1NCLS__base_1a2d430c28276ee69d3c576a6efda255ef" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>alpha_denominator_pos</name></member>
+      <member refid="d0/d4c/classproteus_1_1NCLS__base_1a273dd80f09876a39c55c4bcbecde93cd" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>alpha_numerator_neg</name></member>
+      <member refid="d0/d4c/classproteus_1_1NCLS__base_1a78113bf49ba3371961af724ad5a4d245" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>alpha_numerator_pos</name></member>
+      <member refid="db/d75/classproteus_1_1NCLS_1a8f490b564e74b966fbf20e695b79ccf7" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>calculateCFL</name></member>
+      <member refid="db/d75/classproteus_1_1NCLS_1a2db22ca20e992f941fbf74ad08b87176" prot="public" virt="virtual"><scope>proteus::NCLS</scope><name>calculateJacobian</name></member>
+      <member refid="db/d75/classproteus_1_1NCLS_1ac1d8eb7c69c8229d5f6d737bb319bb97" prot="public" virt="virtual"><scope>proteus::NCLS</scope><name>calculateMassMatrix</name></member>
+      <member refid="db/d75/classproteus_1_1NCLS_1a8c95da5db65446432ed520304d31f681" prot="public" virt="virtual"><scope>proteus::NCLS</scope><name>calculateRedistancingResidual</name></member>
+      <member refid="db/d75/classproteus_1_1NCLS_1a67893c835b7c89ef2b3aa595feb4568c" prot="public" virt="virtual"><scope>proteus::NCLS</scope><name>calculateResidual</name></member>
+      <member refid="db/d75/classproteus_1_1NCLS_1a9e5aa08bcaa4ce660b26b491c4594633" prot="public" virt="virtual"><scope>proteus::NCLS</scope><name>calculateResidual_entropy_viscosity</name></member>
+      <member refid="db/d75/classproteus_1_1NCLS_1ace30ab955319e84f2cb4a0a36556216a" prot="public" virt="virtual"><scope>proteus::NCLS</scope><name>calculateRhsSmoothing</name></member>
+      <member refid="db/d75/classproteus_1_1NCLS_1afb0241b44872683ee957bda1f75fe491" prot="public" virt="virtual"><scope>proteus::NCLS</scope><name>calculateSmoothingMatrix</name></member>
+      <member refid="db/d75/classproteus_1_1NCLS_1ab46cf1d86fa48ef2e83cbd3792ba8530" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>calculateSubgridError_tau</name></member>
+      <member refid="db/d75/classproteus_1_1NCLS_1ac733c4f4600d652c815cf79adc837db2" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>calculateSubgridError_tau</name></member>
+      <member refid="db/d75/classproteus_1_1NCLS_1aeecb466a0005cc7375ea43be5ff3b114" prot="public" virt="virtual"><scope>proteus::NCLS</scope><name>calculateWaterline</name></member>
+      <member refid="db/d75/classproteus_1_1NCLS_1aa7746ecb73111a3e8bfeed438130ed03" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>ck</name></member>
+      <member refid="d0/d4c/classproteus_1_1NCLS__base_1abcf20cc3c0edb1bf86145d2e79815346" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>eta</name></member>
+      <member refid="d0/d4c/classproteus_1_1NCLS__base_1aa42a07d1a56cebbccd77ce5f75ca3569" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>etaMax</name></member>
+      <member refid="d0/d4c/classproteus_1_1NCLS__base_1a3852833719f04c41e04d19f607e50de5" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>etaMin</name></member>
+      <member refid="db/d75/classproteus_1_1NCLS_1a0c771de2823ff0be8be37f17e0c3f00f" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>evaluateCoefficients</name></member>
+      <member refid="db/d75/classproteus_1_1NCLS_1a909e761f68248f02d20fad3635f7114a" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>exteriorNumericalFlux</name></member>
+      <member refid="db/d75/classproteus_1_1NCLS_1a9cfc9ea790426b087884c61f6688472c" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>exteriorNumericalFluxDerivative</name></member>
+      <member refid="d0/d4c/classproteus_1_1NCLS__base_1a9f9e13396f8bcdbaab0f925832c33215" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>global_entropy_residual</name></member>
+      <member refid="d0/d4c/classproteus_1_1NCLS__base_1a89c587e4c9f30c91559fcbee78fd65ec" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>gx</name></member>
+      <member refid="d0/d4c/classproteus_1_1NCLS__base_1ae979d30f8105183d238ed37596ed4b87" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>gy</name></member>
+      <member refid="d0/d4c/classproteus_1_1NCLS__base_1a6a2d2806524f02e46e050d35fc38bc32" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>gz</name></member>
+      <member refid="d0/d4c/classproteus_1_1NCLS__base_1ac7850226058b4d6175e4ffad83b989d2" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>L2_norm_per_node</name></member>
+      <member refid="db/d75/classproteus_1_1NCLS_1a90b37e9e18e7059f0069f62b4c8c91e0" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>NCLS</name></member>
+      <member refid="db/d75/classproteus_1_1NCLS_1aafc2a68c2a1af6521238b15b63273676" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>nDOF_test_X_trial_element</name></member>
+      <member refid="d0/d4c/classproteus_1_1NCLS__base_1a10986ac06dbcff1a3a1db199db47e022" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>psi</name></member>
+      <member refid="db/d75/classproteus_1_1NCLS_1a8ce14daa6421b5afdbb77f84a6c93944" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>sign</name></member>
+      <member refid="d0/d4c/classproteus_1_1NCLS__base_1acfd3fc97ce3cb79d2a359c2d1106dd5a" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>TransportMatrix</name></member>
+      <member refid="d0/d4c/classproteus_1_1NCLS__base_1aa744273b89154c1e5260ca809e412ae1" prot="public" virt="non-virtual"><scope>proteus::NCLS</scope><name>TransposeTransportMatrix</name></member>
+      <member refid="d0/d4c/classproteus_1_1NCLS__base_1a0ad333e589ec122955d5376dda8a021c" prot="public" virt="virtual"><scope>proteus::NCLS</scope><name>~NCLS_base</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

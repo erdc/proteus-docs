@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classproteus_1_1LinearAlgebraTools_1_1MatrixInvShell" kind="class" language="Python" prot="public">
+    <compoundname>proteus::LinearAlgebraTools::MatrixInvShell</compoundname>
+    <basecompoundref refid="classproteus_1_1LinearAlgebraTools_1_1InvOperatorShell" prot="public" virt="non-virtual">proteus.LinearAlgebraTools.InvOperatorShell</basecompoundref>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classproteus_1_1LinearAlgebraTools_1_1MatrixInvShell_1a62ffe357953d2fb051b0f8180f5327e2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.LinearAlgebraTools.MatrixInvShell::A</definition>
+        <argsstring></argsstring>
+        <name>A</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="1181" column="1" bodyfile="LinearAlgebraTools.py" bodystart="1181" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classproteus_1_1LinearAlgebraTools_1_1MatrixInvShell_1ac25c4d49765f364b333b246f5d7161ce" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus.LinearAlgebraTools.MatrixInvShell::ksp</definition>
+        <argsstring></argsstring>
+        <name>ksp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="1182" column="1" bodyfile="LinearAlgebraTools.py" bodystart="1182" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classproteus_1_1LinearAlgebraTools_1_1MatrixInvShell_1ad2b11e92c7ee354ff345ae91888e570d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.MatrixInvShell.__init__</definition>
+        <argsstring>(self, A)</argsstring>
+        <name>__init__</name>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classproteus_1_1LinearAlgebraTools_1_1MatrixInvShell_1a62ffe357953d2fb051b0f8180f5327e2" kindref="member">A</ref></type>
+          <defname>A</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Initializes operators and solvers for inverse operator.
+
+Parameters
+----------
+A : PETSc matrix
+    This is the matrix object used to construct the inverse.
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="1173" column="1" bodyfile="LinearAlgebraTools.py" bodystart="1173" bodyend="1188"/>
+      </memberdef>
+      <memberdef kind="function" id="classproteus_1_1LinearAlgebraTools_1_1MatrixInvShell_1abb0164360c3f2c53971f5a6d02852813" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.LinearAlgebraTools.MatrixInvShell.apply</definition>
+        <argsstring>(self, A, x, y)</argsstring>
+        <name>apply</name>
+        <reimplements refid="classproteus_1_1LinearAlgebraTools_1_1InvOperatorShell_1ad442294be082ef71b674d7be98e3a8ec">apply</reimplements>
+        <param>
+          <type>self</type>
+          <defname>self</defname>
+        </param>
+        <param>
+          <type><ref refid="classproteus_1_1LinearAlgebraTools_1_1MatrixInvShell_1a62ffe357953d2fb051b0f8180f5327e2" kindref="member">A</ref></type>
+          <defname>A</defname>
+        </param>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <param>
+          <type>y</type>
+          <defname>y</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Apply the inverse pressure mass matrix.
+
+Parameters
+----------
+A : matrix
+    Dummy place holder for PETSc compatibility
+x : vector
+
+Returns
+-------
+y : vector
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="LinearAlgebraTools.py" line="1189" column="1" bodyfile="LinearAlgebraTools.py" bodystart="1189" bodyend="1203"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>A PETSc shell class for a inverse operator. </verbatim> </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>proteus.LinearAlgebraTools.InvOperatorShell</label>
+        <link refid="classproteus_1_1LinearAlgebraTools_1_1InvOperatorShell"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>proteus.LinearAlgebraTools.MatrixInvShell</label>
+        <link refid="classproteus_1_1LinearAlgebraTools_1_1MatrixInvShell"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>object</label>
+      </node>
+      <node id="3">
+        <label>proteus.LinearAlgebraTools.OperatorShell</label>
+        <link refid="classproteus_1_1LinearAlgebraTools_1_1OperatorShell"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>proteus.LinearAlgebraTools.InvOperatorShell</label>
+        <link refid="classproteus_1_1LinearAlgebraTools_1_1InvOperatorShell"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>proteus.LinearAlgebraTools.MatrixInvShell</label>
+        <link refid="classproteus_1_1LinearAlgebraTools_1_1MatrixInvShell"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>object</label>
+      </node>
+      <node id="3">
+        <label>proteus.LinearAlgebraTools.OperatorShell</label>
+        <link refid="classproteus_1_1LinearAlgebraTools_1_1OperatorShell"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="LinearAlgebraTools.py" line="1171" column="1" bodyfile="LinearAlgebraTools.py" bodystart="1171" bodyend="1204"/>
+    <listofallmembers>
+      <member refid="classproteus_1_1LinearAlgebraTools_1_1MatrixInvShell_1ad2b11e92c7ee354ff345ae91888e570d" prot="public" virt="non-virtual"><scope>proteus::LinearAlgebraTools::MatrixInvShell</scope><name>__init__</name></member>
+      <member refid="classproteus_1_1LinearAlgebraTools_1_1InvOperatorShell_1aed70a091d8124289705ec6c82c900431" prot="public" virt="non-virtual" ambiguityscope="proteus::LinearAlgebraTools::InvOperatorShell."><scope>proteus::LinearAlgebraTools::MatrixInvShell</scope><name>__init__</name></member>
+      <member refid="classproteus_1_1LinearAlgebraTools_1_1MatrixInvShell_1a62ffe357953d2fb051b0f8180f5327e2" prot="public" virt="non-virtual"><scope>proteus::LinearAlgebraTools::MatrixInvShell</scope><name>A</name></member>
+      <member refid="classproteus_1_1LinearAlgebraTools_1_1MatrixInvShell_1abb0164360c3f2c53971f5a6d02852813" prot="public" virt="non-virtual"><scope>proteus::LinearAlgebraTools::MatrixInvShell</scope><name>apply</name></member>
+      <member refid="classproteus_1_1LinearAlgebraTools_1_1InvOperatorShell_1aeab0296c8530fe8b58e72d040888f3a3" prot="public" virt="non-virtual"><scope>proteus::LinearAlgebraTools::MatrixInvShell</scope><name>const_null_space</name></member>
+      <member refid="classproteus_1_1LinearAlgebraTools_1_1OperatorShell_1a7cf83fae21237e8ed721599ff1531489" prot="public" virt="non-virtual"><scope>proteus::LinearAlgebraTools::MatrixInvShell</scope><name>create</name></member>
+      <member refid="classproteus_1_1LinearAlgebraTools_1_1InvOperatorShell_1abb1afc5243b85ca1430a06de4f2c7ebf" prot="public" virt="non-virtual"><scope>proteus::LinearAlgebraTools::MatrixInvShell</scope><name>create_petsc_ksp_obj</name></member>
+      <member refid="classproteus_1_1LinearAlgebraTools_1_1InvOperatorShell_1a980b2f751cf9af1926a220198430a918" prot="public" virt="non-virtual"><scope>proteus::LinearAlgebraTools::MatrixInvShell</scope><name>dof_indices</name></member>
+      <member refid="classproteus_1_1LinearAlgebraTools_1_1InvOperatorShell_1aaddd791dfc3978090f24ad1fc8c0bea0" prot="public" virt="non-virtual"><scope>proteus::LinearAlgebraTools::MatrixInvShell</scope><name>getSize</name></member>
+      <member refid="classproteus_1_1LinearAlgebraTools_1_1InvOperatorShell_1a6fcd238adc516145cce0bc283c3a2fbf" prot="public" virt="non-virtual"><scope>proteus::LinearAlgebraTools::MatrixInvShell</scope><name>global_known_dof_indices</name></member>
+      <member refid="classproteus_1_1LinearAlgebraTools_1_1InvOperatorShell_1a3f9ad1ce7e83a77c29a035298545dfc4" prot="public" virt="non-virtual"><scope>proteus::LinearAlgebraTools::MatrixInvShell</scope><name>global_unknown_dof_indices</name></member>
+      <member refid="classproteus_1_1LinearAlgebraTools_1_1InvOperatorShell_1aef731323fd96d9fbc4d3bb012c6a3117" prot="public" virt="non-virtual"><scope>proteus::LinearAlgebraTools::MatrixInvShell</scope><name>known_dof_indices</name></member>
+      <member refid="classproteus_1_1LinearAlgebraTools_1_1InvOperatorShell_1aa43875d02ca6dcf62d8fd4b6c8b04cb2" prot="public" virt="non-virtual"><scope>proteus::LinearAlgebraTools::MatrixInvShell</scope><name>known_dof_is</name></member>
+      <member refid="classproteus_1_1LinearAlgebraTools_1_1MatrixInvShell_1ac25c4d49765f364b333b246f5d7161ce" prot="public" virt="non-virtual"><scope>proteus::LinearAlgebraTools::MatrixInvShell</scope><name>ksp</name></member>
+      <member refid="classproteus_1_1LinearAlgebraTools_1_1InvOperatorShell_1a1e46fc20c96880f361149a02cd43a212" prot="public" virt="non-virtual"><scope>proteus::LinearAlgebraTools::MatrixInvShell</scope><name>rnorm0</name></member>
+      <member refid="classproteus_1_1LinearAlgebraTools_1_1InvOperatorShell_1ad5ae441c6c3f313f93e3e6b686f1713b" prot="public" virt="non-virtual"><scope>proteus::LinearAlgebraTools::MatrixInvShell</scope><name>strong_dirichlet_DOF</name></member>
+      <member refid="classproteus_1_1LinearAlgebraTools_1_1InvOperatorShell_1ad21c8c05483c4c92b24a10a1d62d7c4d" prot="public" virt="non-virtual"><scope>proteus::LinearAlgebraTools::MatrixInvShell</scope><name>unknown_dof_indices</name></member>
+      <member refid="classproteus_1_1LinearAlgebraTools_1_1InvOperatorShell_1a8d45501e5967d8b72cafbaf299d85492" prot="public" virt="non-virtual"><scope>proteus::LinearAlgebraTools::MatrixInvShell</scope><name>unknown_dof_is</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

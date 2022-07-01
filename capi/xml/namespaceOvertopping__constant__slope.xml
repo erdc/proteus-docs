@@ -1,0 +1,848 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceOvertopping__constant__slope" kind="namespace" language="Python">
+    <compoundname>Overtopping_constant_slope</compoundname>
+    <innerclass refid="classOvertopping__constant__slope_1_1AtRest" prot="public">Overtopping_constant_slope::AtRest</innerclass>
+    <innerclass refid="classOvertopping__constant__slope_1_1LS__IC" prot="public">Overtopping_constant_slope::LS_IC</innerclass>
+    <innerclass refid="classOvertopping__constant__slope_1_1P__IC" prot="public">Overtopping_constant_slope::P_IC</innerclass>
+    <innerclass refid="classOvertopping__constant__slope_1_1VOF__IC" prot="public">Overtopping_constant_slope::VOF_IC</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a02c8343877bf7aa15bdb61a1682f9777" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.opts</definition>
+        <argsstring></argsstring>
+        <name>opts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="16" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1aab007943236ebc95f0eb737c09c00add" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>=  Domain.PlanarStraightLineGraphDomain()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="75" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a6dab21dda527a0b7b6b531da8cf35ecc" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Overtopping_constant_slope.phi</definition>
+        <argsstring></argsstring>
+        <name>phi</name>
+        <initializer>=  2*<ref refid="createAnalyticGeometry_8cpp_1a43016d873124d39034edb8cd164794db" kindref="member">np.pi</ref>*np.random.rand(opts.N)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="80" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a0443007b74f01904d76c6f9ba01981d5" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Overtopping_constant_slope.Tend</definition>
+        <argsstring></argsstring>
+        <name>Tend</name>
+        <initializer>= opts.Ntotalwaves*opts.Tp/1.1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="81" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a90118489c12a9fbf408fa8f8661db376" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.wave</definition>
+        <argsstring></argsstring>
+        <name>wave</name>
+        <initializer>=  wt.RandomWavesFast(Tstart=opts.Tstart,
+                         <ref refid="namespaceOvertopping__constant__slope_1a0443007b74f01904d76c6f9ba01981d5" kindref="member">Tend</ref>=<ref refid="namespaceOvertopping__constant__slope_1a0443007b74f01904d76c6f9ba01981d5" kindref="member">Tend</ref>,
+                         x0=opts.x0,
+                         Tp=opts.Tp,
+                         Hs=opts.Hs,
+                         mwl=opts.mwl,
+                         depth=opts.depth,
+                         waveDir=opts.waveDir,
+                         g=opts.g,
+                         N=opts.N,
+                         bandFactor=opts.bandFactor,
+                         spectName=opts.spectName,
+                         spectral_params=opts.spectral_params,
+                         <ref refid="namespaceOvertopping__constant__slope_1a6dab21dda527a0b7b6b531da8cf35ecc" kindref="member">phi</ref>=<ref refid="namespaceOvertopping__constant__slope_1a6dab21dda527a0b7b6b531da8cf35ecc" kindref="member">phi</ref>,
+                         Lgen=opts.Lgen,
+                         Nwaves=opts.Nwaves,
+                         Nfreq=opts.Nfreq,
+                         checkAcc=True,
+                         fast=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="82" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.wave_length</definition>
+        <argsstring></argsstring>
+        <name>wave_length</name>
+        <initializer>= wave.wavelength</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="104" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a0c86a7a3efb4a9f3be10b5c3c662ae2d" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple Overtopping_constant_slope.tank_dim</definition>
+        <argsstring></argsstring>
+        <name>tank_dim</name>
+        <initializer>=  (3*<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>+opts.structureCrestLevel*opts.structure_slope+opts.deposit_width,opts.structureCrestLevel+0.2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="108" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a251ed39d74a289b11431a4508a9a5874" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>tuple Overtopping_constant_slope.tank_sponge</definition>
+        <argsstring></argsstring>
+        <name>tank_sponge</name>
+        <initializer>=  (<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>, 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="112" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1af0a19f6599e271331d67f9ec94c96678" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary Overtopping_constant_slope.boundaryOrientations</definition>
+        <argsstring></argsstring>
+        <name>boundaryOrientations</name>
+        <initializer>=  {&apos;y-&apos;: np.array([0., -1.,0.]),
+                        &apos;x+&apos;: np.array([+1., 0.,0.]),
+                        &apos;y+&apos;: np.array([0., +1.,0.]),
+                        &apos;x-&apos;: np.array([-1., 0.,0.]),
+                        &apos;sponge&apos;: None,
+                        &apos;porousLayer&apos;: None,
+                       }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="114" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1aba8dd9d69419588609d244e33e24f6b8" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary Overtopping_constant_slope.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <initializer>=  {&apos;y-&apos; : 1,
+                &apos;x+&apos; : 2,
+                &apos;y+&apos; : 3,
+                &apos;x-&apos; : 4,
+                &apos;sponge&apos; : 5,
+               }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="122" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1acab3198149c8922536b57a284b1f6160" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list Overtopping_constant_slope.vertices</definition>
+        <argsstring></argsstring>
+        <name>vertices</name>
+        <initializer>= [[0.0,0.0], #0
+            [<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>,0],#1
+            [<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>,-opts.tank_depth],#2
+            [3*<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>+2*opts.tube+opts.structureCrestLevel*opts.structure_slope+1,-opts.tank_depth], #3
+            [3*<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>+2*opts.tube+opts.structureCrestLevel*opts.structure_slope+1,0.0], #4 after that abs zone
+            [3*<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>+2*opts.tube+opts.structureCrestLevel*opts.structure_slope+1+opts.Lback,0.0], #5
+            [3*<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>+2*opts.tube+opts.structureCrestLevel*opts.structure_slope+1+opts.Lback,opts.tank_height], #6
+            [3*<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>+2*opts.tube+opts.structureCrestLevel*opts.structure_slope+1,opts.tank_height],#7 abs zone upper boundary
+            [<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>,opts.tank_height], #8
+            [0.0,opts.tank_height], #9
+            [-<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>,opts.tank_height], #10
+            [-<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>,0.], #11
+            ]</initializer>
+        <briefdescription>
+<para>TANK OUTLINE GEOMETRY ########################### <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="131" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a3bbd7f6b81217d9e9d69463ef4e62653" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.vertexFlags</definition>
+        <argsstring></argsstring>
+        <name>vertexFlags</name>
+        <initializer>= np.array([1, #0 
+                        1, #1 
+                        1, #2
+                        1, #3
+                        1, #4
+                        2, #5
+                        3, #6
+                        3, #7 upper boundary abs zone
+                        4, #8
+                        4, #9
+                        4, #10
+                        4, #11
+                        ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="146" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="146" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1aee1c9e21ff068d90690054e3ef297bbe" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list Overtopping_constant_slope.segments</definition>
+        <argsstring></argsstring>
+        <name>segments</name>
+        <initializer>= [[0,1],
+          [1,2],
+          [2,3],
+          [3,4],
+          [4,5],
+          [5,6],
+          [6,7],
+          [7,8],
+          [8,9],
+          [9,10],
+          [10,11],
+          [11,0],
+          [1,8],
+          [4,7],
+              ]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="160" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a032dec7ccc6dcf75cf7b8430c66414d7" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.segmentFlags</definition>
+        <argsstring></argsstring>
+        <name>segmentFlags</name>
+        <initializer>= np.array([ 1, #[0,1] 
+                        1,#4, #[1,2] 
+                        1, #[2,3]
+                        2, #[3,4]
+                        1, #[4,5]
+                        2, #[5,6]
+                        3, #[6,7]
+                        3, #[7,8]
+                        3, #[8,9]
+                        3, #[9,10]
+                        4, #[10,11]
+                        1, #[11,0]
+                        5, #[1,8]
+                        5, #[4,7]
+                      ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="176" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1aa36f12731f6b49c5302952579e414aca" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list Overtopping_constant_slope.regions</definition>
+        <argsstring></argsstring>
+        <name>regions</name>
+        <initializer>= [[5,0.3],[-0.5*<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>,0.3],[3*<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>+0.2+1+opts.structureCrestLevel*opts.structure_slope+2,0.4]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="193" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="193" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a3e4b7253e55372fdaca889706a73326b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.regionFlags</definition>
+        <argsstring></argsstring>
+        <name>regionFlags</name>
+        <initializer>= np.array([1,2,3])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="194" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="194" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a07da7262185aab8ac9763375c338cd14" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.tank</definition>
+        <argsstring></argsstring>
+        <name>tank</name>
+        <initializer>=  st.CustomShape(<ref refid="namespaceOvertopping__constant__slope_1aab007943236ebc95f0eb737c09c00add" kindref="member">domain</ref>, <ref refid="namespaceOvertopping__constant__slope_1acab3198149c8922536b57a284b1f6160" kindref="member">vertices</ref>=<ref refid="namespaceOvertopping__constant__slope_1acab3198149c8922536b57a284b1f6160" kindref="member">vertices</ref>, <ref refid="namespaceOvertopping__constant__slope_1a3bbd7f6b81217d9e9d69463ef4e62653" kindref="member">vertexFlags</ref>=<ref refid="namespaceOvertopping__constant__slope_1a3bbd7f6b81217d9e9d69463ef4e62653" kindref="member">vertexFlags</ref>,
+                      <ref refid="namespaceOvertopping__constant__slope_1aee1c9e21ff068d90690054e3ef297bbe" kindref="member">segments</ref>=<ref refid="namespaceOvertopping__constant__slope_1aee1c9e21ff068d90690054e3ef297bbe" kindref="member">segments</ref>, <ref refid="namespaceOvertopping__constant__slope_1a032dec7ccc6dcf75cf7b8430c66414d7" kindref="member">segmentFlags</ref>=<ref refid="namespaceOvertopping__constant__slope_1a032dec7ccc6dcf75cf7b8430c66414d7" kindref="member">segmentFlags</ref>,
+                      <ref refid="namespaceOvertopping__constant__slope_1aa36f12731f6b49c5302952579e414aca" kindref="member">regions</ref>=<ref refid="namespaceOvertopping__constant__slope_1aa36f12731f6b49c5302952579e414aca" kindref="member">regions</ref>, <ref refid="namespaceOvertopping__constant__slope_1a3e4b7253e55372fdaca889706a73326b" kindref="member">regionFlags</ref>=<ref refid="namespaceOvertopping__constant__slope_1a3e4b7253e55372fdaca889706a73326b" kindref="member">regionFlags</ref>,
+                      <ref refid="namespaceOvertopping__constant__slope_1aba8dd9d69419588609d244e33e24f6b8" kindref="member">boundaryTags</ref>=<ref refid="namespaceOvertopping__constant__slope_1aba8dd9d69419588609d244e33e24f6b8" kindref="member">boundaryTags</ref>, <ref refid="namespaceOvertopping__constant__slope_1af0a19f6599e271331d67f9ec94c96678" kindref="member">boundaryOrientations</ref>=<ref refid="namespaceOvertopping__constant__slope_1af0a19f6599e271331d67f9ec94c96678" kindref="member">boundaryOrientations</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="196" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="196" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1af1eb9b6b64c7fc8314b9d21447b42947" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary Overtopping_constant_slope.obs_boundaryOrientations</definition>
+        <argsstring></argsstring>
+        <name>obs_boundaryOrientations</name>
+        <initializer>=  {&apos;<ref refid="namespaceOvertopping__constant__slope_1ae278c57a8051632f6a6ff81622d3003b" kindref="member">obstacle</ref>&apos;: None}</initializer>
+        <briefdescription>
+<para>OBSTACLE DEFINITION ##############################. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="203" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1ad66d1f1282ab5f317f990a3038dd37dd" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary Overtopping_constant_slope.obs_boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>obs_boundaryTags</name>
+        <initializer>=  {&apos;<ref refid="namespaceOvertopping__constant__slope_1ae278c57a8051632f6a6ff81622d3003b" kindref="member">obstacle</ref>&apos; : 1,}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="205" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a887ba42198388c97e8d6a881d7434363" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list Overtopping_constant_slope.obs_vertices</definition>
+        <argsstring></argsstring>
+        <name>obs_vertices</name>
+        <initializer>= [
+            [<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>+opts.tube,0],#0
+            [<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>+opts.tube,-opts.obs_depth],#1
+            [3*<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>+opts.tube+opts.structureCrestLevel*opts.structure_slope+1,-opts.obs_depth],#2
+            [3*<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>+opts.tube+opts.structureCrestLevel*opts.structure_slope+1,0.],#3
+            [3*<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>+opts.tube+opts.structureCrestLevel*opts.structure_slope,0.],#4
+            [3*<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>+opts.tube+opts.structureCrestLevel*opts.structure_slope,opts.structureCrestLevel],#5
+            [3*<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>+opts.tube,0],#6
+            ]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="207" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1ad7fe6615ab532b12258530883ab0102d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.obs_vertexFlags</definition>
+        <argsstring></argsstring>
+        <name>obs_vertexFlags</name>
+        <initializer>= np.array([1, #11 
+                        1, #12
+                        1, #13
+                        1, #14
+                        1, #15
+                        1, #16
+                        1, #17
+                        ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="217" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a2b0a0615da42b9cb6096c04d9759f4c3" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list Overtopping_constant_slope.obs_segments</definition>
+        <argsstring></argsstring>
+        <name>obs_segments</name>
+        <initializer>= [[0,1],
+              [1,2],
+              [2,3],
+              [3,4],
+              [4,5],
+              [5,6],
+              [6,0],
+              ]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="226" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="226" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a21bea53693fdf7a70322f2bc6a833728" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.obs_segmentFlags</definition>
+        <argsstring></argsstring>
+        <name>obs_segmentFlags</name>
+        <initializer>= np.array([ 1, #[11,12] 
+                            1, #[12,13] 
+                            1, #[13,14]
+                            1, #[14,15]
+                            1, #[15,16]
+                            1, #[16,17]
+                            1, #[17,11]
+                            ])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="235" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="235" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a4a03420e1e1309a6c4327bfbea21699f" prot="public" static="no" mutable="no">
+        <type>list</type>
+        <definition>list Overtopping_constant_slope.obs_regions</definition>
+        <argsstring></argsstring>
+        <name>obs_regions</name>
+        <initializer>= [[2*<ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>, -0.2]]</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="244" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="244" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1abea41163fddc1ccd8cefc23aebf2bb8e" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.obs_regionFlags</definition>
+        <argsstring></argsstring>
+        <name>obs_regionFlags</name>
+        <initializer>= np.array([1])</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="245" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="245" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1ae278c57a8051632f6a6ff81622d3003b" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.obstacle</definition>
+        <argsstring></argsstring>
+        <name>obstacle</name>
+        <initializer>=  st.CustomShape(<ref refid="namespaceOvertopping__constant__slope_1aab007943236ebc95f0eb737c09c00add" kindref="member">domain</ref>, <ref refid="namespaceOvertopping__constant__slope_1acab3198149c8922536b57a284b1f6160" kindref="member">vertices</ref>=<ref refid="namespaceOvertopping__constant__slope_1a887ba42198388c97e8d6a881d7434363" kindref="member">obs_vertices</ref>, <ref refid="namespaceOvertopping__constant__slope_1a3bbd7f6b81217d9e9d69463ef4e62653" kindref="member">vertexFlags</ref>=<ref refid="namespaceOvertopping__constant__slope_1ad7fe6615ab532b12258530883ab0102d" kindref="member">obs_vertexFlags</ref>,
+                      <ref refid="namespaceOvertopping__constant__slope_1aee1c9e21ff068d90690054e3ef297bbe" kindref="member">segments</ref>=<ref refid="namespaceOvertopping__constant__slope_1a2b0a0615da42b9cb6096c04d9759f4c3" kindref="member">obs_segments</ref>, <ref refid="namespaceOvertopping__constant__slope_1a032dec7ccc6dcf75cf7b8430c66414d7" kindref="member">segmentFlags</ref>=<ref refid="namespaceOvertopping__constant__slope_1a21bea53693fdf7a70322f2bc6a833728" kindref="member">obs_segmentFlags</ref>,
+                      <ref refid="namespaceOvertopping__constant__slope_1aa36f12731f6b49c5302952579e414aca" kindref="member">regions</ref>=<ref refid="namespaceOvertopping__constant__slope_1a4a03420e1e1309a6c4327bfbea21699f" kindref="member">obs_regions</ref>, <ref refid="namespaceOvertopping__constant__slope_1a3e4b7253e55372fdaca889706a73326b" kindref="member">regionFlags</ref>=<ref refid="namespaceOvertopping__constant__slope_1abea41163fddc1ccd8cefc23aebf2bb8e" kindref="member">obs_regionFlags</ref>,
+                      <ref refid="namespaceOvertopping__constant__slope_1aba8dd9d69419588609d244e33e24f6b8" kindref="member">boundaryTags</ref>=<ref refid="namespaceOvertopping__constant__slope_1ad66d1f1282ab5f317f990a3038dd37dd" kindref="member">obs_boundaryTags</ref>, 
+                      <ref refid="namespaceOvertopping__constant__slope_1af0a19f6599e271331d67f9ec94c96678" kindref="member">boundaryOrientations</ref>=<ref refid="namespaceOvertopping__constant__slope_1af1eb9b6b64c7fc8314b9d21447b42947" kindref="member">obs_boundaryOrientations</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="247" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="247" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1aeb653efdf52a5a375fb1793ebec6067d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>= <ref refid="namespaceOvertopping__constant__slope_1aebd9fa95a51a151b7ef896c0edf56317" kindref="member">wave_length</ref>/opts.refinement_level</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="257" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a9765485965dd7dbecb9e50f87c21a4d8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.ecH</definition>
+        <argsstring></argsstring>
+        <name>ecH</name>
+        <initializer>= opts.ecH</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="258" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="258" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a0c374dd71b034834ecd2ca0436048dac" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>int Overtopping_constant_slope::smoothing</definition>
+        <argsstring></argsstring>
+        <name>smoothing</name>
+        <initializer>= <ref refid="namespaceOvertopping__constant__slope_1a9765485965dd7dbecb9e50f87c21a4d8" kindref="member">ecH</ref>*<ref refid="namespaceOvertopping__constant__slope_1aeb653efdf52a5a375fb1793ebec6067d" kindref="member">he</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="259" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1af272e231a21e783919829565e5aab478" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.vert_axis</definition>
+        <argsstring></argsstring>
+        <name>vert_axis</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="266" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="266" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a2c02ab1805531e9d6eb6788dde43d7ac" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>Overtopping_constant_slope.dragAlpha</definition>
+        <argsstring></argsstring>
+        <name>dragAlpha</name>
+        <initializer>=  5*(2*<ref refid="createAnalyticGeometry_8cpp_1a43016d873124d39034edb8cd164794db" kindref="member">np.pi</ref>/opts.Tp)/1e-6</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="274" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="274" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a5127f084f2318b1cb181d1bc16f14542" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Overtopping_constant_slope.left</definition>
+        <argsstring></argsstring>
+        <name>left</name>
+        <initializer>=  True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="275" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="275" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a9b192b819d2bbc5fce2740c2b661a339" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.flags</definition>
+        <argsstring></argsstring>
+        <name>flags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="278" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="278" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a0ffe27f9860081229db53b7ff00002e5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.epsFact_solid</definition>
+        <argsstring></argsstring>
+        <name>epsFact_solid</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="279" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a2ed550204b6216b29ddab8fd74161714" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.center</definition>
+        <argsstring></argsstring>
+        <name>center</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="280" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="280" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a2cd0ee0ad50632bc7ecc24030bd4f400" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.orientation</definition>
+        <argsstring></argsstring>
+        <name>orientation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="281" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="281" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a26701faa08624a3e6c48fc5972513d96" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.waves</definition>
+        <argsstring></argsstring>
+        <name>waves</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="282" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a51b0489419cde04f7ef3d654ae5d6dfa" prot="public" static="no" mutable="no">
+        <type>dictionary</type>
+        <definition>dictionary Overtopping_constant_slope.initialConditions</definition>
+        <argsstring></argsstring>
+        <name>initialConditions</name>
+        <initializer>=  {&apos;pressure&apos;: <ref refid="classOvertopping__constant__slope_1_1P__IC" kindref="compound">P_IC</ref>(),
+                     &apos;vel_u&apos;: <ref refid="classOvertopping__constant__slope_1_1AtRest" kindref="compound">AtRest</ref>(),
+                     &apos;vel_v&apos;: <ref refid="classOvertopping__constant__slope_1_1AtRest" kindref="compound">AtRest</ref>(),
+                     &apos;vel_w&apos;: <ref refid="classOvertopping__constant__slope_1_1AtRest" kindref="compound">AtRest</ref>(),
+                     &apos;vof&apos;: <ref refid="classOvertopping__constant__slope_1_1VOF__IC" kindref="compound">VOF_IC</ref>(),
+                     &apos;ncls&apos;: <ref refid="classOvertopping__constant__slope_1_1LS__IC" kindref="compound">LS_IC</ref>(),
+                     &apos;rdls&apos;: <ref refid="classOvertopping__constant__slope_1_1LS__IC" kindref="compound">LS_IC</ref>(),}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="319" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="319" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a1c8e24496864721c047a50188fed8db6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Overtopping_constant_slope.Duration</definition>
+        <argsstring></argsstring>
+        <name>Duration</name>
+        <initializer>=  <ref refid="namespaceOvertopping__constant__slope_1a0443007b74f01904d76c6f9ba01981d5" kindref="member">Tend</ref>/opts.fract</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="330" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="330" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1ac588f6138cb2bcb2c12c5e8e608f6958" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.dt_output</definition>
+        <argsstring></argsstring>
+        <name>dt_output</name>
+        <initializer>=  opts.Tp/opts.Np</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="331" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="331" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1adc57cfb384f0c49c123b0b4d7fa2e15d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.outputStepping</definition>
+        <argsstring></argsstring>
+        <name>outputStepping</name>
+        <initializer>=  TpFlow.OutputStepping(final_time=<ref refid="namespaceOvertopping__constant__slope_1a1c8e24496864721c047a50188fed8db6" kindref="member">Duration</ref>,
+                                       dt_init=opts.dt_init,
+                                       <ref refid="namespaceOvertopping__constant__slope_1ac588f6138cb2bcb2c12c5e8e608f6958" kindref="member">dt_output</ref>=<ref refid="namespaceOvertopping__constant__slope_1ac588f6138cb2bcb2c12c5e8e608f6958" kindref="member">dt_output</ref>,
+                                       nDTout=None,
+                                       dt_fixed=None)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="333" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="333" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a7d9ea2c10cc4af0b3f1c91259e6b7ab2" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.myTpFlowProblem</definition>
+        <argsstring></argsstring>
+        <name>myTpFlowProblem</name>
+        <initializer>=  TpFlow.TwoPhaseFlowProblem(ns_model=0,
+                                             ls_model=0,
+                                             nd=domain.nd,
+                                             cfl=opts.cfl,
+                                             <ref refid="namespaceOvertopping__constant__slope_1adc57cfb384f0c49c123b0b4d7fa2e15d" kindref="member">outputStepping</ref>=<ref refid="namespaceOvertopping__constant__slope_1adc57cfb384f0c49c123b0b4d7fa2e15d" kindref="member">outputStepping</ref>,
+                                             <ref refid="namespaceOvertopping__constant__slope_1aeb653efdf52a5a375fb1793ebec6067d" kindref="member">he</ref>=<ref refid="namespaceOvertopping__constant__slope_1aeb653efdf52a5a375fb1793ebec6067d" kindref="member">he</ref>,
+                                             <ref refid="namespaceOvertopping__constant__slope_1aab007943236ebc95f0eb737c09c00add" kindref="member">domain</ref>=<ref refid="namespaceOvertopping__constant__slope_1aab007943236ebc95f0eb737c09c00add" kindref="member">domain</ref>,
+                                             <ref refid="namespaceOvertopping__constant__slope_1a51b0489419cde04f7ef3d654ae5d6dfa" kindref="member">initialConditions</ref>=<ref refid="namespaceOvertopping__constant__slope_1a51b0489419cde04f7ef3d654ae5d6dfa" kindref="member">initialConditions</ref>,
+                                             )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="341" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="341" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a9061735a0ace01e5f55ccbbc76b80104" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.params</definition>
+        <argsstring></argsstring>
+        <name>params</name>
+        <initializer>=  myTpFlowProblem.Parameters</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="353" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="353" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a1e41bc9bd545ff64b7d09af09847f4f5" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.useSuperLu</definition>
+        <argsstring></argsstring>
+        <name>useSuperLu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="355" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="355" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a3fb8c0b369ba1bf0a10a731a39cabde6" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.surf_tension_coeff</definition>
+        <argsstring></argsstring>
+        <name>surf_tension_coeff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="356" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="356" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a86d1f68abedcea981abb5328a10b4e37" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <initializer>=  params.Models</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="359" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="359" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1aecea30e61debf982b4d4ec60288fe489" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.index</definition>
+        <argsstring></argsstring>
+        <name>index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="360" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="360" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a14cf5f961ee11f2e94ded7a4ec530a92" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.maxLineSearches</definition>
+        <argsstring></argsstring>
+        <name>maxLineSearches</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="365" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="365" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespaceOvertopping__constant__slope_1a0b34fc067101923481fab6a86e751152" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>Overtopping_constant_slope.maxNonlinearIts</definition>
+        <argsstring></argsstring>
+        <name>maxNonlinearIts</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="366" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceOvertopping__constant__slope_1ad02d00b811de458cd923c9147670c70c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def Overtopping_constant_slope.signedDistance</definition>
+        <argsstring>(x)</argsstring>
+        <name>signedDistance</name>
+        <param>
+          <type>x</type>
+          <defname>x</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="296" column="1" bodyfile="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" bodystart="296" bodyend="298"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/proteus_tutorial/2d/extras/waveOvertopping/Overtopping_constant_slope.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

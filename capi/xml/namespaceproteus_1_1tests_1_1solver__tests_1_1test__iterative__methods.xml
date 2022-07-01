@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__iterative__methods" kind="namespace" language="Python">
+    <compoundname>proteus::tests::solver_tests::test_iterative_methods</compoundname>
+    <innerclass refid="classproteus_1_1tests_1_1solver__tests_1_1test__iterative__methods_1_1TestIterativeMethods" prot="public">proteus::tests::solver_tests::test_iterative_methods::TestIterativeMethods</innerclass>
+    <innerclass refid="classproteus_1_1tests_1_1solver__tests_1_1test__iterative__methods_1_1TestSmoothingAlgorithms" prot="public">proteus::tests::solver_tests::test_iterative_methods::TestSmoothingAlgorithms</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__iterative__methods_1ab7101b17ed159e72cdfcef4a2fa266df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_iterative_methods.create_petsc_vecs</definition>
+        <argsstring>(matrix_A)</argsstring>
+        <name>create_petsc_vecs</name>
+        <param>
+          <type>matrix_A</type>
+          <defname>matrix_A</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates a right-hand-side and solution PETSc4Py vector for
+testing ksp solves.
+
+Parameters
+----------
+matrix_A: :class:`PETSc.Mat`
+    Global matrix object
+
+Returns
+-------
+vec_lst: tuple
+    This is a list of :class:`pypyPETSc.Vec` where the first is
+    a vector of ones (usually to act as a RHS-vector) while the
+    second vector is a vector of zeros (usually to act as a
+    storage vector for the solution).
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_iterative_methods.py" line="28" column="1" bodyfile="tests/solver_tests/test_iterative_methods.py" bodystart="28" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__iterative__methods_1acd3606c396d63768c1f3e3384ca98c0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_iterative_methods.initialize_asm_ksp_obj</definition>
+        <argsstring>(matrix_A)</argsstring>
+        <name>initialize_asm_ksp_obj</name>
+        <param>
+          <type>matrix_A</type>
+          <defname>matrix_A</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Creates a right-hand-side and solution PETSc4Py vector for
+testing ksp solves.
+
+Parameters
+----------
+matrix_A: :class:`PETSc.Mat`
+    Global matrix object.
+
+Returns
+-------
+ksp_obj: :class:`PETSc.KSP`
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_iterative_methods.py" line="53" column="1" bodyfile="tests/solver_tests/test_iterative_methods.py" bodystart="53" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__iterative__methods_1af174ba2e58ba89a0562bcbca28db9302" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_iterative_methods.build_amg_index_sets</definition>
+        <argsstring>(L_sizes)</argsstring>
+        <name>build_amg_index_sets</name>
+        <param>
+          <type>L_sizes</type>
+          <defname>L_sizes</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Create PETSc index sets for the velocity components of a saddle
+point matrix
+
+Parameters
+----------
+L_sizes : 
+    Sizes of original saddle-point system
+
+Returns:
+--------
+Index_Sets : lst
+    List of velocity index sets
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_iterative_methods.py" line="74" column="1" bodyfile="tests/solver_tests/test_iterative_methods.py" bodystart="74" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceproteus_1_1tests_1_1solver__tests_1_1test__iterative__methods_1a8d4201cd68e6fdf63ee4796c44ec526b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def proteus.tests.solver_tests.test_iterative_methods.load_matrix</definition>
+        <argsstring>(mat_file_name)</argsstring>
+        <name>load_matrix</name>
+        <param>
+          <type>mat_file_name</type>
+          <defname>mat_file_name</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>Load a matrix </verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/solver_tests/test_iterative_methods.py" line="119" column="1" bodyfile="tests/solver_tests/test_iterative_methods.py" bodystart="119" bodyend="126"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><verbatim>Test module for solver shell operator.</verbatim> </para>
+    </detaileddescription>
+    <location file="tests/solver_tests/test_iterative_methods.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>

@@ -2,6 +2,38 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.20" xml:lang="en-US">
   <compounddef id="proteus__lapack_8h" kind="file" language="C++">
     <compoundname>proteus_lapack.h</compoundname>
+    <includedby refid="_r_a_n_s2_p_8h" local="yes">RANS2P.h</includedby>
+    <includedby refid="_r_a_n_s2_p2_d_8h" local="yes">RANS2P2D.h</includedby>
+    <invincdepgraph>
+      <node id="5">
+        <label>RANS2P2D.cpp</label>
+        <link refid="_r_a_n_s2_p2_d_8cpp"/>
+      </node>
+      <node id="3">
+        <label>RANS2P.cpp</label>
+        <link refid="_r_a_n_s2_p_8cpp"/>
+      </node>
+      <node id="2">
+        <label>RANS2P.h</label>
+        <link refid="_r_a_n_s2_p_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>proteus_lapack.h</label>
+        <link refid="proteus__lapack_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>RANS2P2D.h</label>
+        <link refid="_r_a_n_s2_p2_d_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
       <sectiondef kind="define">
       <memberdef kind="define" id="proteus__lapack_8h_1a1632a08853bf62fb9c229b8738f6470d" prot="public" static="no">
         <name>__CLPK_integer</name>

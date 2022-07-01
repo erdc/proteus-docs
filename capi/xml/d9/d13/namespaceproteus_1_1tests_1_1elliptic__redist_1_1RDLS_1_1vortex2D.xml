@@ -1,0 +1,539 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D" kind="namespace" language="Python">
+    <compoundname>proteus::tests::elliptic_redist::RDLS::vortex2D</compoundname>
+    <innerclass refid="d0/d68/classproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1_1MyCoefficients" prot="public">proteus::tests::elliptic_redist::RDLS::vortex2D::MyCoefficients</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a90cd01cd4682774e7b45a1d204d8a4af" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.ct</definition>
+        <argsstring></argsstring>
+        <name>ct</name>
+        <initializer>= <ref refid="d0/d93/namespaceproteus_1_1Context_1a461242d050aceb1e84d9426074c67004" kindref="member">Context.Options</ref>([
+    # General parameters #
+    (&quot;T&quot;,0.01,&quot;Final time&quot;),
+    (&quot;nDTout&quot;,1,&quot;Number of time steps to archive&quot;),
+    (&quot;refinement&quot;,1,&quot;Level of refinement&quot;),
+    (&quot;<ref refid="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a48f6889fabcc066bad9ea96b77971924" kindref="member">unstructured</ref>&quot;,False,&quot;Use <ref refid="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a48f6889fabcc066bad9ea96b77971924" kindref="member">unstructured</ref> mesh. Set to false for periodic BCs&quot;),
+    # parameters for elliptic re-distancing
+    (&quot;useExact&quot;,False,&quot;Use exact integration of Heaviside and Diract functions&quot;),
+    (&quot;ELLIPTIC_REDISTANCING&quot;,0, &quot;Type of elliptic re-distancing&quot;),
+    (&quot;wd&quot;,10.0,&quot;Weak Dirichlet Weight&quot;),
+],mutable=True)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="8" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1ae1ddf6252936bb5d698e651724178de7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::elliptic_redist::RDLS::vortex2D.runCFL</definition>
+        <argsstring></argsstring>
+        <name>runCFL</name>
+        <initializer>= 0.33</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="25" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1ac63ccc3cb378cf7d9b246672307221df" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.useExact</definition>
+        <argsstring></argsstring>
+        <name>useExact</name>
+        <initializer>=  ct.useExact</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="26" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1ab076c6438fd498069bf57d4dcbae6959" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.weakDirichletFactor</definition>
+        <argsstring></argsstring>
+        <name>weakDirichletFactor</name>
+        <initializer>= ct.wd</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="27" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a6351e2904765289f8170f44058392932" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::elliptic_redist::RDLS::vortex2D.nd</definition>
+        <argsstring></argsstring>
+        <name>nd</name>
+        <initializer>= 2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="29" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1ad0a9d579d2c7e4f96b90984162e1b901" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::elliptic_redist::RDLS::vortex2D.parallel</definition>
+        <argsstring></argsstring>
+        <name>parallel</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="32" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1add15db9a5ab64100d42fd6d69b994c44" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.linearSmoother</definition>
+        <argsstring></argsstring>
+        <name>linearSmoother</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="33" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a8d79a250f66a724d84014935a568cfe8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::elliptic_redist::RDLS::vortex2D.checkMass</definition>
+        <argsstring></argsstring>
+        <name>checkMass</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="34" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1acab259e125c681d77ffb1f34693500f4" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::elliptic_redist::RDLS::vortex2D.pDegree_ls</definition>
+        <argsstring></argsstring>
+        <name>pDegree_ls</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="37" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1af9cb9f047974891d443d337e29bcb5dc" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::elliptic_redist::RDLS::vortex2D.useBernstein</definition>
+        <argsstring></argsstring>
+        <name>useBernstein</name>
+        <initializer>= True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="38" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1aef842ab4e33c9caee400c14b7b3bbf35" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::elliptic_redist::RDLS::vortex2D.useHex</definition>
+        <argsstring></argsstring>
+        <name>useHex</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="39" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a9d245d74ffb4ba711483d344055d67c6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::elliptic_redist::RDLS::vortex2D.vortex_quad_order</definition>
+        <argsstring></argsstring>
+        <name>vortex_quad_order</name>
+        <initializer>=  2*<ref refid="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1acab259e125c681d77ffb1f34693500f4" kindref="member">pDegree_ls</ref>+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="44" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a281ea4ec3c0404ab8b3d55153b60e24f" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.partitioningType</definition>
+        <argsstring></argsstring>
+        <name>partitioningType</name>
+        <initializer>=  MeshTools.MeshParallelPartitioningTypes.node</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="47" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a8e7304231c5e2498578b01d90ac56729" prot="public" static="no" mutable="no">
+        <type>tuple</type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.nn</definition>
+        <argsstring></argsstring>
+        <name>nn</name>
+        <initializer>= (2**ct.refinement)*10+1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="50" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1ab7a38f9f1ff5fc2dbdf00f888bfbb60d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.nnz</definition>
+        <argsstring></argsstring>
+        <name>nnz</name>
+        <initializer>= 1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="51" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1affb20f84de159c6ed331d0f520dcbbca" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.he</definition>
+        <argsstring></argsstring>
+        <name>he</name>
+        <initializer>= old_div(1.0,(<ref refid="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1ac07dc8780e82e58a5924f4d97c1aebd9" kindref="member">nnx</ref>-1.0))</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="52" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a48f6889fabcc066bad9ea96b77971924" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.unstructured</definition>
+        <argsstring></argsstring>
+        <name>unstructured</name>
+        <initializer>= ct.unstructured</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="54" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a954c1887b9f62c915c40895ea880f800" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.box</definition>
+        <argsstring></argsstring>
+        <name>box</name>
+        <initializer>= <ref refid="de/d03/classproteus_1_1Domain_1_1RectangularDomain" kindref="compound">Domain.RectangularDomain</ref>(<ref refid="de/d5b/Headers_8h_1a499d78bdc2c754c7a4cf8d39ed245e9f" kindref="member">L</ref>=(1.0,1.0),
+                             x=(0.0,0.0),
+                             name=&quot;box&quot;);</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="55" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1aa1ceb1f5f9baa76e29a8be9ef3bb3832" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.domain</definition>
+        <argsstring></argsstring>
+        <name>domain</name>
+        <initializer>= <ref refid="dd/d26/classproteus_1_1Domain_1_1PlanarStraightLineGraphDomain" kindref="compound">Domain.PlanarStraightLineGraphDomain</ref>(fileprefix=&quot;box&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="60" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1adc080395a24561cb5de7058a868175e8" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.boundaryTags</definition>
+        <argsstring></argsstring>
+        <name>boundaryTags</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="61" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1ac04941f35a6857e8da2577460b322d59" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.bt</definition>
+        <argsstring></argsstring>
+        <name>bt</name>
+        <initializer>=  domain.boundaryTags</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="62" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1acece3508a1a28d3e7ff7aebfbd8af88d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.triangleOptions</definition>
+        <argsstring></argsstring>
+        <name>triangleOptions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="63" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1ac07dc8780e82e58a5924f4d97c1aebd9" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.nnx</definition>
+        <argsstring></argsstring>
+        <name>nnx</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="68" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1abbf42c999a7b42bcb07877527ae2504a" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.nny</definition>
+        <argsstring></argsstring>
+        <name>nny</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="69" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1aef43e89b98410de79c476b357f56c16d" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.triangleFlag</definition>
+        <argsstring></argsstring>
+        <name>triangleFlag</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="71" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a8451106b3dd360358cad72286e4a25f7" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::elliptic_redist::RDLS::vortex2D.epsFactHeaviside</definition>
+        <argsstring></argsstring>
+        <name>epsFactHeaviside</name>
+        <initializer>= 1.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="73" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a8e308f1cf33ee24d351dd4b54eef0f34" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::elliptic_redist::RDLS::vortex2D.epsFactRedistance</definition>
+        <argsstring></argsstring>
+        <name>epsFactRedistance</name>
+        <initializer>= 0.33</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="74" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a448f6b470598fb68931f016bc2397c9e" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::elliptic_redist::RDLS::vortex2D.useMetrics</definition>
+        <argsstring></argsstring>
+        <name>useMetrics</name>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="76" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a5e8acc8296288e88050e79a224da7914" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::elliptic_redist::RDLS::vortex2D::shockCapturingFactor_ls</definition>
+        <argsstring></argsstring>
+        <name>shockCapturingFactor_ls</name>
+        <initializer>= 0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="78" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a137fed969b897d8a91eb6756560452f6" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float proteus::tests::elliptic_redist::RDLS::vortex2D::shockCapturingFactor_rd</definition>
+        <argsstring></argsstring>
+        <name>shockCapturingFactor_rd</name>
+        <initializer>= 0.5</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="79" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a42b14f690651ac1837f02aca04eb4dea" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::elliptic_redist::RDLS::vortex2D::lag_shockCapturing_ls</definition>
+        <argsstring></argsstring>
+        <name>lag_shockCapturing_ls</name>
+        <initializer>= True</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="80" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a5939ef1ae9d69fd9124a296279f99a22" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool proteus::tests::elliptic_redist::RDLS::vortex2D::lag_shockCapturing_rd</definition>
+        <argsstring></argsstring>
+        <name>lag_shockCapturing_rd</name>
+        <initializer>= False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="81" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1adec4e1403a54cee51f08cef82b327dbe" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.atolRedistance</definition>
+        <argsstring></argsstring>
+        <name>atolRedistance</name>
+        <initializer>=  <ref refid="db/dcc/jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-12,0.1*<ref refid="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1affb20f84de159c6ed331d0f520dcbbca" kindref="member">he</ref>)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="91" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a4dc62cc0dfbda5952e51ef03294f2849" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>proteus::tests::elliptic_redist::RDLS::vortex2D.atolLevelSet</definition>
+        <argsstring></argsstring>
+        <name>atolLevelSet</name>
+        <initializer>=  <ref refid="db/dcc/jf_8h_1affe776513b24d84b39af8ab0930fef7f" kindref="member">max</ref>(1.0e-12,0.001*<ref refid="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1affb20f84de159c6ed331d0f520dcbbca" kindref="member">he</ref>**2)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="92" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1af69bba25a3676fa192359767bb10182f" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string proteus::tests::elliptic_redist::RDLS::vortex2D.linearSolverConvergenceTest</definition>
+        <argsstring></argsstring>
+        <name>linearSolverConvergenceTest</name>
+        <initializer>=  &apos;<ref refid="de/d5b/Headers_8h_1a51d5468d74b4eccfb8e26ea458562120" kindref="member">r</ref>-true&apos;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="94" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a104d8e738d68f0d2cc97dd4312c60f69" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int proteus::tests::elliptic_redist::RDLS::vortex2D.fmmFlag</definition>
+        <argsstring></argsstring>
+        <name>fmmFlag</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="95" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1a1ebc93e903cde6d01db75a9033c0ea33" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string proteus::tests::elliptic_redist::RDLS::vortex2D.soname</definition>
+        <argsstring></argsstring>
+        <name>soname</name>
+        <initializer>= &quot;vortex_c0p&quot;+repr(<ref refid="d9/d13/namespaceproteus_1_1tests_1_1elliptic__redist_1_1RDLS_1_1vortex2D_1acab259e125c681d77ffb1f34693500f4" kindref="member">pDegree_ls</ref>)+&quot;_level_&quot;+repr(ct.refinement)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="97" column="1" bodyfile="tests/elliptic_redist/RDLS/vortex2D.py" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="tests/elliptic_redist/RDLS/vortex2D.py" line="1" column="1"/>
+  </compounddef>
+</doxygen>
