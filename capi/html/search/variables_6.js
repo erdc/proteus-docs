@@ -18,11 +18,12 @@ var searchData=
   ['gfu_15',['gfu',['../classproteus_1_1_r_d_l_s.html#a53fdf6cfe80d5743baaaafc408c2e83f',1,'proteus::RDLS']]],
   ['gij_16',['gij',['../struct_inputs.html#a7184dc5c353fd5f37d2667996236f05e',1,'Inputs']]],
   ['global_5fentropy_5fresidual_17',['global_entropy_residual',['../classproteus_1_1_n_c_l_s__base.html#a9f9e13396f8bcdbaab0f925832c33215',1,'proteus::NCLS_base::global_entropy_residual'],['../classproteus_1_1_t_a_d_r__base.html#af6f77a9a7fa49cace99309dca4f7fb28',1,'proteus::TADR_base::global_entropy_residual'],['../classproteus_1_1_v_o_f__base.html#a898494c6ae5c679ccb49265b2907bf7d',1,'proteus::VOF_base::global_entropy_residual'],['../classproteus_1_1cpp_v_o_f3_p__base.html#aff2b5547d9a28943581b1dbba3456a6e',1,'proteus::cppVOF3P_base::global_entropy_residual'],['../classproteus_1_1cpp_v_o_s3_p__base.html#ab8da03261eb87d6e3b02470da281f146',1,'proteus::cppVOS3P_base::global_entropy_residual'],['../class_n_c_l_s__base.html#a9f9e13396f8bcdbaab0f925832c33215',1,'NCLS_base::global_entropy_residual'],['../class_t_a_d_r__base.html#af6f77a9a7fa49cace99309dca4f7fb28',1,'TADR_base::global_entropy_residual'],['../class_v_o_f__base.html#a898494c6ae5c679ccb49265b2907bf7d',1,'VOF_base::global_entropy_residual'],['../classcpp_v_o_s3_p__base.html#ab8da03261eb87d6e3b02470da281f146',1,'cppVOS3P_base::global_entropy_residual']]],
-  ['grad_5fpres_18',['grad_pres',['../struct_inputs.html#accc73b5d9c5aadd888db4d9608490c82',1,'Inputs']]],
-  ['grad_5fvel_19',['grad_vel',['../struct_inputs.html#a9f44b03bd09de7d589f6ebadfb126177',1,'Inputs']]],
-  ['gradingfactor_20',['gradingFactor',['../class_mesh_adapt_p_u_m_i_drvr.html#a2f88d2f12514c80986566d79c9af97cb',1,'MeshAdaptPUMIDrvr']]],
-  ['grain_5f_21',['grain_',['../classproteus_1_1cpp_hsu_sed_stress.html#a51aab86ff789ec3c042baa1dcdade474',1,'proteus::cppHsuSedStress']]],
-  ['gx_22',['gx',['../classproteus_1_1_n_c_l_s__base.html#a89c587e4c9f30c91559fcbee78fd65ec',1,'proteus::NCLS_base::gx'],['../class_n_c_l_s__base.html#a89c587e4c9f30c91559fcbee78fd65ec',1,'NCLS_base::gx']]],
-  ['gy_23',['gy',['../classproteus_1_1_n_c_l_s__base.html#ae979d30f8105183d238ed37596ed4b87',1,'proteus::NCLS_base::gy'],['../class_n_c_l_s__base.html#ae979d30f8105183d238ed37596ed4b87',1,'NCLS_base::gy']]],
-  ['gz_24',['gz',['../classproteus_1_1_n_c_l_s__base.html#a6a2d2806524f02e46e050d35fc38bc32',1,'proteus::NCLS_base::gz'],['../class_n_c_l_s__base.html#a6a2d2806524f02e46e050d35fc38bc32',1,'NCLS_base::gz']]]
+  ['global_5fentropy_5fresidual_5fmember_18',['global_entropy_residual_member',['../classproteus_1_1richards_1_1_richards.html#af7977415cb77b0d070d5bf7ee87d27d8',1,'proteus::richards::Richards']]],
+  ['grad_5fpres_19',['grad_pres',['../struct_inputs.html#accc73b5d9c5aadd888db4d9608490c82',1,'Inputs']]],
+  ['grad_5fvel_20',['grad_vel',['../struct_inputs.html#a9f44b03bd09de7d589f6ebadfb126177',1,'Inputs']]],
+  ['gradingfactor_21',['gradingFactor',['../class_mesh_adapt_p_u_m_i_drvr.html#a2f88d2f12514c80986566d79c9af97cb',1,'MeshAdaptPUMIDrvr']]],
+  ['grain_5f_22',['grain_',['../classproteus_1_1cpp_hsu_sed_stress.html#a51aab86ff789ec3c042baa1dcdade474',1,'proteus::cppHsuSedStress']]],
+  ['gx_23',['gx',['../classproteus_1_1_n_c_l_s__base.html#a89c587e4c9f30c91559fcbee78fd65ec',1,'proteus::NCLS_base::gx'],['../class_n_c_l_s__base.html#a89c587e4c9f30c91559fcbee78fd65ec',1,'NCLS_base::gx']]],
+  ['gy_24',['gy',['../classproteus_1_1_n_c_l_s__base.html#ae979d30f8105183d238ed37596ed4b87',1,'proteus::NCLS_base::gy'],['../class_n_c_l_s__base.html#ae979d30f8105183d238ed37596ed4b87',1,'NCLS_base::gy']]],
+  ['gz_25',['gz',['../classproteus_1_1_n_c_l_s__base.html#a6a2d2806524f02e46e050d35fc38bc32',1,'proteus::NCLS_base::gz'],['../class_n_c_l_s__base.html#a6a2d2806524f02e46e050d35fc38bc32',1,'NCLS_base::gz']]]
 ];

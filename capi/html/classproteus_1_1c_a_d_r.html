@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">proteus<span id="projectnumber">&#160;1.9.0</span>
+   <div id="projectname">proteus<span id="projectnumber">&#160;1.9.1</span>
    </div>
    <div id="projectbrief">C/C++/Fortran libraries</div>
   </td>
@@ -115,21 +115,21 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_a_d_r_8h_source.html">/work/cekees/proteus/proteus/ADR.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="_a_d_r_8h_source.html">/home/cekees/proteus-1.9.1-docs/proteus/ADR.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for proteus::cADR&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classproteus_1_1c_a_d_r__inherit__graph.svg" width="307" height="183"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classproteus_1_1c_a_d_r__inherit__graph.svg" width="282" height="176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for proteus::cADR&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classproteus_1_1c_a_d_r__coll__graph.svg" width="1099" height="454"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" loading="lazy" frameborder="0" src="classproteus_1_1c_a_d_r__coll__graph.svg" width="1003" height="719"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:afa0393c4d05eb801b75333341eb0a01f" id="r_afa0393c4d05eb801b75333341eb0a01f"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#afa0393c4d05eb801b75333341eb0a01f">GfType</a> = <a class="el" href="namespaceproteus.html#a0c308272715853e7a4fe11c6efdd25f4">GeneralizedFunctions</a>&lt;nSpace, nDOF_trial_element, 4, nQuadraturePoints_element, nDOF_mesh_trial_element * nQuadraturePoints_elementBoundary&gt;</td></tr>
+<tr class="memitem:af13fd0b0fefff6d98f200dee119e3399" id="r_af13fd0b0fefff6d98f200dee119e3399"><td class="memItemLeft">using&#160;</td><td class="memItemRight"><a class="el" href="#af13fd0b0fefff6d98f200dee119e3399">GfType</a> = <a class="el" href="namespaceproteus.html#a0c308272715853e7a4fe11c6efdd25f4">GeneralizedFunctions</a>&lt;nSpace, nDOF_trial_element, <a class="el" href="#a48e57d4634091f443bf4be03924c6589">nP_fit</a>, nQuadraturePoints_element, nDOF_mesh_trial_element * nQuadraturePoints_elementBoundary&gt;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -143,10 +143,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afbd6855b5dfe06a79e9c99f140140d8e" id="r_afbd6855b5dfe06a79e9c99f140140d8e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afbd6855b5dfe06a79e9c99f140140d8e">exteriorNumericalAdvectiveFlux</a> (const int &amp;isDOFBoundary_u, const int &amp;isFluxBoundary_u, const double n[nSpace], const double &amp;bc_u, const double &amp;bc_flux_u, const double &amp;u, const double velocity[nSpace], double &amp;flux)</td></tr>
 <tr class="memitem:a6aa48efde7035bd33e9d76ac4e5b72bd" id="r_a6aa48efde7035bd33e9d76ac4e5b72bd"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6aa48efde7035bd33e9d76ac4e5b72bd">exteriorNumericalAdvectiveFluxDerivative</a> (const int &amp;isDOFBoundary_u, const int &amp;isFluxBoundary_u, const double n[nSpace], const double velocity[nSpace], double &amp;dflux)</td></tr>
 <tr class="memitem:ac2ddf9723abd4adac8dfec3cb043e85e" id="r_ac2ddf9723abd4adac8dfec3cb043e85e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac2ddf9723abd4adac8dfec3cb043e85e">updateEmbeddedBoundaryTerms</a> (const double embeddedBoundary_penalty, const double dV, double *embeddedBoundary_normal, const double u_s, const double u, const double grad_u[nSpace], const double a, double &amp;r, double &amp;dr, double &amp;ham, double *dham, double *f, double *df, const double D_s)</td></tr>
+<tr class="memitem:a8d2b77a004b7bcd83c775a6148078a2c" id="r_a8d2b77a004b7bcd83c775a6148078a2c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8d2b77a004b7bcd83c775a6148078a2c">updateEmbeddedBoundaryRobinTerms</a> (const double h_coeff, const double u_infinity, const double u, double &amp;r, double &amp;dr, const double D_s)</td></tr>
 <tr class="memitem:a01dccc693e527bec4984f2a92275b032" id="r_a01dccc693e527bec4984f2a92275b032"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a01dccc693e527bec4984f2a92275b032">updateImmersedBoundaryTerms</a> (const double immersedBoundary_penalty, const double dV, double *immersedBoundary_normal, double x, double y, double z, const double u_s, const double u, const double grad_u[nSpace], const double a, double &amp;r, double &amp;dr, double &amp;ham, double *dham, double *f, double *df, const double fluxJump, const double *fluxJumpVector, const double D_f)</td></tr>
-<tr class="memitem:a8c7bd9608361c40ca3b61a122f8ead14" id="r_a8c7bd9608361c40ca3b61a122f8ead14"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8c7bd9608361c40ca3b61a122f8ead14">calculateElementResidual</a> (int icase_f, xt::pyarray&lt; double &gt; &amp;mesh_trial_ref, xt::pyarray&lt; double &gt; &amp;mesh_grad_trial_ref, xt::pyarray&lt; double &gt; &amp;mesh_dof, xt::pyarray&lt; int &gt; &amp;mesh_l2g, xt::pyarray&lt; double &gt; &amp;x_ref, xt::pyarray&lt; double &gt; &amp;dV_ref, xt::pyarray&lt; double &gt; &amp;u_trial_ref, xt::pyarray&lt; double &gt; &amp;u_grad_trial_ref, xt::pyarray&lt; double &gt; &amp;u_test_ref, xt::pyarray&lt; double &gt; &amp;u_grad_test_ref, xt::pyarray&lt; double &gt; &amp;elementDiameter, xt::pyarray&lt; double &gt; &amp;elementBoundaryDiameter, xt::pyarray&lt; double &gt; &amp;nodeDiametersArray, xt::pyarray&lt; double &gt; &amp;cfl, double Ct_sge, double sc_uref, double sc_alpha, double useMetrics, xt::pyarray&lt; double &gt; &amp;mesh_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;mesh_grad_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;dS_ref, xt::pyarray&lt; double &gt; &amp;u_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;u_grad_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;u_test_trace_ref, xt::pyarray&lt; double &gt; &amp;u_grad_test_trace_ref, xt::pyarray&lt; double &gt; &amp;normal_ref, xt::pyarray&lt; double &gt; &amp;boundaryJac_ref, int nElements_global, int nElementBoundaries_owned, xt::pyarray&lt; int &gt; &amp;u_l2g, xt::pyarray&lt; double &gt; &amp;u_dof, xt::pyarray&lt; int &gt; &amp;sd_rowptr, xt::pyarray&lt; int &gt; &amp;sd_colind, xt::pyarray&lt; double &gt; &amp;q_a, xt::pyarray&lt; double &gt; &amp;q_v, xt::pyarray&lt; double &gt; &amp;q_r, int lag_shockCapturingDiffusion, double shockCapturingDiffusion, xt::pyarray&lt; double &gt; &amp;q_numDiff_u, xt::pyarray&lt; double &gt; &amp;q_numDiff_u_last, int offset_u, int stride_u, xt::pyarray&lt; double &gt; &amp;elementResidual_u, int nExteriorElementBoundaries_global, xt::pyarray&lt; int &gt; &amp;exteriorElementBoundariesArray, xt::pyarray&lt; int &gt; &amp;elementBoundariesArray, xt::pyarray&lt; int &gt; &amp;elementBoundaryElementsArray, xt::pyarray&lt; int &gt; &amp;elementBoundaryLocalElementBoundariesArray, xt::pyarray&lt; double &gt; &amp;element_u, int eN, const bool embeddedBoundary, const double embeddedBoundary_penalty, xt::pyarray&lt; double &gt; &amp;embeddedBoundary_normal_q, xt::pyarray&lt; double &gt; &amp;embeddedBoundary_u_q, const bool immersedBoundary, const double immersedBoundary_penalty, xt::pyarray&lt; double &gt; &amp;immersedBoundary_sdf_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_normal_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_u_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_fluxJump_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_fluxJumpVector_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_solutionJump_nodes, double *element_phi_f, bool &amp;element_active, std::valarray&lt; bool &gt; &amp;elementIsActive, double *JA, double *JB, double &amp;L2_error, double &amp;Linfty_error, double mua, double mub, xt::pyarray&lt; double &gt; &amp;q_u_exact_inner, xt::pyarray&lt; double &gt; &amp;q_u_exact_outer, const bool PG)</td></tr>
+<tr class="memitem:a816a57b246fe7a7589d8c9c1b2a6884f" id="r_a816a57b246fe7a7589d8c9c1b2a6884f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a816a57b246fe7a7589d8c9c1b2a6884f">calculateElementResidual</a> (int icase_f, const int demoted_f, xt::pyarray&lt; double &gt; &amp;mesh_trial_ref, xt::pyarray&lt; double &gt; &amp;mesh_grad_trial_ref, xt::pyarray&lt; double &gt; &amp;mesh_dof, xt::pyarray&lt; int &gt; &amp;mesh_l2g, xt::pyarray&lt; double &gt; &amp;x_ref, xt::pyarray&lt; double &gt; &amp;dV_ref, xt::pyarray&lt; double &gt; &amp;u_trial_ref, xt::pyarray&lt; double &gt; &amp;u_grad_trial_ref, xt::pyarray&lt; double &gt; &amp;u_test_ref, xt::pyarray&lt; double &gt; &amp;u_grad_test_ref, xt::pyarray&lt; double &gt; &amp;elementDiameter, xt::pyarray&lt; double &gt; &amp;elementBoundaryDiameter, xt::pyarray&lt; double &gt; &amp;nodeDiametersArray, xt::pyarray&lt; double &gt; &amp;cfl, double Ct_sge, double sc_uref, double sc_alpha, double useMetrics, xt::pyarray&lt; double &gt; &amp;mesh_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;mesh_grad_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;dS_ref, xt::pyarray&lt; double &gt; &amp;u_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;u_grad_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;u_test_trace_ref, xt::pyarray&lt; double &gt; &amp;u_grad_test_trace_ref, xt::pyarray&lt; double &gt; &amp;normal_ref, xt::pyarray&lt; double &gt; &amp;boundaryJac_ref, int nElements_global, int nElementBoundaries_owned, xt::pyarray&lt; int &gt; &amp;u_l2g, xt::pyarray&lt; double &gt; &amp;u_dof, xt::pyarray&lt; int &gt; &amp;sd_rowptr, xt::pyarray&lt; int &gt; &amp;sd_colind, xt::pyarray&lt; double &gt; &amp;q_a, const double *comp_A, const double *comp_B, const double *comp_DA, const double *comp_DB, const double *comp_DFa, xt::pyarray&lt; double &gt; &amp;q_v, xt::pyarray&lt; double &gt; &amp;q_r, int lag_shockCapturingDiffusion, double shockCapturingDiffusion, xt::pyarray&lt; double &gt; &amp;q_numDiff_u, xt::pyarray&lt; double &gt; &amp;q_numDiff_u_last, int offset_u, int stride_u, xt::pyarray&lt; double &gt; &amp;elementResidual_u, int nExteriorElementBoundaries_global, xt::pyarray&lt; int &gt; &amp;exteriorElementBoundariesArray, xt::pyarray&lt; int &gt; &amp;elementBoundariesArray, xt::pyarray&lt; int &gt; &amp;elementBoundaryElementsArray, xt::pyarray&lt; int &gt; &amp;elementBoundaryLocalElementBoundariesArray, xt::pyarray&lt; double &gt; &amp;element_u, int eN, const bool embeddedBoundary, const double embeddedBoundary_penalty, xt::pyarray&lt; double &gt; &amp;embeddedBoundary_normal_q, xt::pyarray&lt; double &gt; &amp;embeddedBoundary_u_q, xt::pyarray&lt; double &gt; &amp;embeddedBoundary_u_inner_q, xt::pyarray&lt; double &gt; &amp;embeddedBoundary_u_outer_q, const bool embeddedBoundary_robin, const double embeddedBoundary_robin_h_inner, const double embeddedBoundary_robin_h_outer, xt::pyarray&lt; double &gt; &amp;embeddedBoundary_robin_uInfinity_inner_q, xt::pyarray&lt; double &gt; &amp;embeddedBoundary_robin_uInfinity_outer_q, xt::pyarray&lt; double &gt; &amp;embeddedBoundary_sdf_q, const bool immersedBoundary, const double immersedBoundary_penalty, xt::pyarray&lt; double &gt; &amp;immersedBoundary_sdf_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_normal_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_u_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_fluxJump_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_fluxJumpVector_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_solutionJump_nodes, double *element_phi_f, bool &amp;element_active, std::valarray&lt; bool &gt; &amp;elementIsActive, double *JA, double *JB, const double fluxLiftJ, double &amp;L2_error, double &amp;Linfty_error, double &amp;H1_error, double mua, double mub, xt::pyarray&lt; double &gt; &amp;q_u_exact_inner, xt::pyarray&lt; double &gt; &amp;q_u_exact_outer, xt::pyarray&lt; double &gt; &amp;q_grad_u_exact_inner, xt::pyarray&lt; double &gt; &amp;q_grad_u_exact_outer, const bool PG)</td></tr>
 <tr class="memitem:ae7de58f6447443d50265f27d43c426a9" id="r_ae7de58f6447443d50265f27d43c426a9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae7de58f6447443d50265f27d43c426a9">calculateResidual</a> (<a class="el" href="structproteus_1_1arguments__dict.html">arguments_dict</a> &amp;args)</td></tr>
-<tr class="memitem:a93039c7b6195ef8fb3b8e17c8fd9ce55" id="r_a93039c7b6195ef8fb3b8e17c8fd9ce55"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a93039c7b6195ef8fb3b8e17c8fd9ce55">calculateElementJacobian</a> (int icase_f, xt::pyarray&lt; double &gt; &amp;mesh_trial_ref, xt::pyarray&lt; double &gt; &amp;mesh_grad_trial_ref, xt::pyarray&lt; double &gt; &amp;mesh_dof, xt::pyarray&lt; int &gt; &amp;mesh_l2g, xt::pyarray&lt; double &gt; &amp;x_ref, xt::pyarray&lt; double &gt; &amp;dV_ref, xt::pyarray&lt; double &gt; &amp;u_trial_ref, xt::pyarray&lt; double &gt; &amp;u_grad_trial_ref, xt::pyarray&lt; double &gt; &amp;u_test_ref, xt::pyarray&lt; double &gt; &amp;u_grad_test_ref, xt::pyarray&lt; double &gt; &amp;elementDiameter, xt::pyarray&lt; double &gt; &amp;elementBoundaryDiameter, xt::pyarray&lt; double &gt; &amp;nodeDiametersArray, xt::pyarray&lt; double &gt; &amp;cfl, double Ct_sge, double sc_uref, double sc_alpha, double useMetrics, xt::pyarray&lt; double &gt; &amp;mesh_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;mesh_grad_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;dS_ref, xt::pyarray&lt; double &gt; &amp;u_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;u_grad_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;u_test_trace_ref, xt::pyarray&lt; double &gt; &amp;u_grad_test_trace_ref, xt::pyarray&lt; double &gt; &amp;normal_ref, xt::pyarray&lt; double &gt; &amp;boundaryJac_ref, int nElements_global, int nElementBoundaries_owned, xt::pyarray&lt; int &gt; &amp;u_l2g, xt::pyarray&lt; double &gt; &amp;u_dof, xt::pyarray&lt; int &gt; &amp;sd_rowptr, xt::pyarray&lt; int &gt; &amp;sd_colind, xt::pyarray&lt; double &gt; &amp;q_a, xt::pyarray&lt; double &gt; &amp;q_v, xt::pyarray&lt; double &gt; &amp;q_r, int lag_shockCapturing, double shockCapturingDiffusion, xt::pyarray&lt; double &gt; &amp;q_numDiff_u, xt::pyarray&lt; double &gt; &amp;q_numDiff_u_last, xt::pyarray&lt; double &gt; &amp;elementJacobian_u_u, xt::pyarray&lt; double &gt; &amp;element_u, int eN, const bool embeddedBoundary, const double embeddedBoundary_penalty, xt::pyarray&lt; double &gt; &amp;embeddedBoundary_normal_q, xt::pyarray&lt; double &gt; &amp;embeddedBoundary_u_q, const bool immersedBoundary, const double immersedBoundary_penalty, xt::pyarray&lt; double &gt; &amp;immersedBoundary_sdf_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_normal_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_u_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_fluxJump_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_fluxJumpVector_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_solutionJump_nodes, double *element_phi_f, double mua, double mub, const bool PG)</td></tr>
+<tr class="memitem:afbc5416ed34ada0c2b2d6b9a284cbb55" id="r_afbc5416ed34ada0c2b2d6b9a284cbb55"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afbc5416ed34ada0c2b2d6b9a284cbb55">calculateElementJacobian</a> (int icase_f, const int demoted_f, xt::pyarray&lt; double &gt; &amp;mesh_trial_ref, xt::pyarray&lt; double &gt; &amp;mesh_grad_trial_ref, xt::pyarray&lt; double &gt; &amp;mesh_dof, xt::pyarray&lt; int &gt; &amp;mesh_l2g, xt::pyarray&lt; double &gt; &amp;x_ref, xt::pyarray&lt; double &gt; &amp;dV_ref, xt::pyarray&lt; double &gt; &amp;u_trial_ref, xt::pyarray&lt; double &gt; &amp;u_grad_trial_ref, xt::pyarray&lt; double &gt; &amp;u_test_ref, xt::pyarray&lt; double &gt; &amp;u_grad_test_ref, xt::pyarray&lt; double &gt; &amp;elementDiameter, xt::pyarray&lt; double &gt; &amp;elementBoundaryDiameter, xt::pyarray&lt; double &gt; &amp;nodeDiametersArray, xt::pyarray&lt; double &gt; &amp;cfl, double Ct_sge, double sc_uref, double sc_alpha, double useMetrics, xt::pyarray&lt; double &gt; &amp;mesh_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;mesh_grad_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;dS_ref, xt::pyarray&lt; double &gt; &amp;u_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;u_grad_trial_trace_ref, xt::pyarray&lt; double &gt; &amp;u_test_trace_ref, xt::pyarray&lt; double &gt; &amp;u_grad_test_trace_ref, xt::pyarray&lt; double &gt; &amp;normal_ref, xt::pyarray&lt; double &gt; &amp;boundaryJac_ref, int nElements_global, int nElementBoundaries_owned, xt::pyarray&lt; int &gt; &amp;u_l2g, xt::pyarray&lt; double &gt; &amp;u_dof, xt::pyarray&lt; int &gt; &amp;sd_rowptr, xt::pyarray&lt; int &gt; &amp;sd_colind, xt::pyarray&lt; double &gt; &amp;q_a, const double *comp_A, const double *comp_B, const double *comp_DA, const double *comp_DB, const double *comp_DFa, xt::pyarray&lt; double &gt; &amp;q_v, xt::pyarray&lt; double &gt; &amp;q_r, int lag_shockCapturing, double shockCapturingDiffusion, xt::pyarray&lt; double &gt; &amp;q_numDiff_u, xt::pyarray&lt; double &gt; &amp;q_numDiff_u_last, xt::pyarray&lt; double &gt; &amp;elementJacobian_u_u, xt::pyarray&lt; double &gt; &amp;element_u, int eN, const bool embeddedBoundary, const double embeddedBoundary_penalty, xt::pyarray&lt; double &gt; &amp;embeddedBoundary_normal_q, xt::pyarray&lt; double &gt; &amp;embeddedBoundary_u_q, xt::pyarray&lt; double &gt; &amp;embeddedBoundary_u_inner_q, xt::pyarray&lt; double &gt; &amp;embeddedBoundary_u_outer_q, const bool embeddedBoundary_robin, const double embeddedBoundary_robin_h_inner, const double embeddedBoundary_robin_h_outer, xt::pyarray&lt; double &gt; &amp;embeddedBoundary_robin_uInfinity_inner_q, xt::pyarray&lt; double &gt; &amp;embeddedBoundary_robin_uInfinity_outer_q, const bool immersedBoundary, const double immersedBoundary_penalty, xt::pyarray&lt; double &gt; &amp;immersedBoundary_sdf_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_normal_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_u_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_fluxJump_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_fluxJumpVector_q, xt::pyarray&lt; double &gt; &amp;immersedBoundary_solutionJump_nodes, double *element_phi_f, double mua, double mub, const bool PG)</td></tr>
 <tr class="memitem:afb8d9a155070ef2cae11087d3a6a0d95" id="r_afb8d9a155070ef2cae11087d3a6a0d95"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#afb8d9a155070ef2cae11087d3a6a0d95">calculateJacobian</a> (<a class="el" href="structproteus_1_1arguments__dict.html">arguments_dict</a> &amp;args)</td></tr>
 <tr class="inherit_header pub_methods_classproteus_1_1c_a_d_r__base"><td colspan="2">Public Member Functions inherited from <a class="el" href="classproteus_1_1c_a_d_r__base.html">proteus::cADR_base</a></td></tr>
 <tr class="memitem:af28aa3d167e8e7f915a79b970450a5cf pub_methods_classproteus_1_1c_a_d_r__base" id="r_af28aa3d167e8e7f915a79b970450a5cf"><td class="memItemLeft">virtual&#160;</td><td class="memItemRight"><a class="el" href="classproteus_1_1c_a_d_r__base.html#af28aa3d167e8e7f915a79b970450a5cf">~cADR_base</a> ()</td></tr>
@@ -160,27 +161,38 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a7b2567bf1b9137fe6651cf4409f5b75f" id="r_a7b2567bf1b9137fe6651cf4409f5b75f"><td class="memItemLeft">std::valarray&lt; bool &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a7b2567bf1b9137fe6651cf4409f5b75f">elementIsActive</a></td></tr>
 <tr class="memitem:a44ccd30cb4b8f19c2cfece20663f9c5c" id="r_a44ccd30cb4b8f19c2cfece20663f9c5c"><td class="memItemLeft">const int&#160;</td><td class="memItemRight"><a class="el" href="#a44ccd30cb4b8f19c2cfece20663f9c5c">nDOF_test_X_trial_element</a></td></tr>
 <tr class="memitem:a3bb76a168b4d52bec8572d0dc741dd1a" id="r_a3bb76a168b4d52bec8572d0dc741dd1a"><td class="memItemLeft">CompKernelType&#160;</td><td class="memItemRight"><a class="el" href="#a3bb76a168b4d52bec8572d0dc741dd1a">ck</a></td></tr>
-<tr class="memitem:afd601fc8eb672d983d6cce8e0e09c25d" id="r_afd601fc8eb672d983d6cce8e0e09c25d"><td class="memItemLeft">std::vector&lt; <a class="el" href="#afa0393c4d05eb801b75333341eb0a01f">GfType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#afd601fc8eb672d983d6cce8e0e09c25d">gf_f_cache</a></td></tr>
-<tr class="memitem:a2782ee7728feda905c84161754eed45c" id="r_a2782ee7728feda905c84161754eed45c"><td class="memItemLeft">std::vector&lt; <a class="el" href="#afa0393c4d05eb801b75333341eb0a01f">GfType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2782ee7728feda905c84161754eed45c">gf_s_cache</a></td></tr>
+<tr class="memitem:afd601fc8eb672d983d6cce8e0e09c25d" id="r_afd601fc8eb672d983d6cce8e0e09c25d"><td class="memItemLeft">std::vector&lt; <a class="el" href="#af13fd0b0fefff6d98f200dee119e3399">GfType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#afd601fc8eb672d983d6cce8e0e09c25d">gf_f_cache</a></td></tr>
+<tr class="memitem:a2782ee7728feda905c84161754eed45c" id="r_a2782ee7728feda905c84161754eed45c"><td class="memItemLeft">std::vector&lt; <a class="el" href="#af13fd0b0fefff6d98f200dee119e3399">GfType</a> &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a2782ee7728feda905c84161754eed45c">gf_s_cache</a></td></tr>
 <tr class="memitem:a0a667c6230dab96dc0abdaf97b94d8a0" id="r_a0a667c6230dab96dc0abdaf97b94d8a0"><td class="memItemLeft">std::vector&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a0a667c6230dab96dc0abdaf97b94d8a0">gf_s_interior_gen</a></td></tr>
 <tr class="memitem:ad3ed1abc73999d637ce157c08958bc74" id="r_ad3ed1abc73999d637ce157c08958bc74"><td class="memItemLeft">std::vector&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ad3ed1abc73999d637ce157c08958bc74">gf_f_interior_gen</a></td></tr>
 <tr class="memitem:a95ed6047a5a925f2119d65dd57f04de7" id="r_a95ed6047a5a925f2119d65dd57f04de7"><td class="memItemLeft">std::vector&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a95ed6047a5a925f2119d65dd57f04de7">gf_f_boundary_gen</a></td></tr>
 <tr class="memitem:a19e8f4f071fc0141de8d2e3ab6086471" id="r_a19e8f4f071fc0141de8d2e3ab6086471"><td class="memItemLeft">std::vector&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a19e8f4f071fc0141de8d2e3ab6086471">gf_s_interior_icase</a></td></tr>
 <tr class="memitem:a98038ab5bc0261cb9060a4b5094bfc9f" id="r_a98038ab5bc0261cb9060a4b5094bfc9f"><td class="memItemLeft">std::vector&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a98038ab5bc0261cb9060a4b5094bfc9f">gf_f_interior_icase</a></td></tr>
 <tr class="memitem:aad41e6e2c15317605ce4213e794f29ef" id="r_aad41e6e2c15317605ce4213e794f29ef"><td class="memItemLeft">std::vector&lt; int &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aad41e6e2c15317605ce4213e794f29ef">gf_f_boundary_icase</a></td></tr>
+<tr class="memitem:a1a363b42f4a4c1e4f1aa2b9d343b91a3" id="r_a1a363b42f4a4c1e4f1aa2b9d343b91a3"><td class="memItemLeft">std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1a363b42f4a4c1e4f1aa2b9d343b91a3">comp_A_cache</a></td></tr>
+<tr class="memitem:a1a294b4e53f63845516073798148ddbc" id="r_a1a294b4e53f63845516073798148ddbc"><td class="memItemLeft">std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a1a294b4e53f63845516073798148ddbc">comp_B_cache</a></td></tr>
+<tr class="memitem:a5590573d83029e713d1cd1e8dfe9d4b7" id="r_a5590573d83029e713d1cd1e8dfe9d4b7"><td class="memItemLeft">std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a5590573d83029e713d1cd1e8dfe9d4b7">comp_DA_cache</a></td></tr>
+<tr class="memitem:a18f5abfb1bf39ee5fff8ea2fd9d8f63f" id="r_a18f5abfb1bf39ee5fff8ea2fd9d8f63f"><td class="memItemLeft">std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a18f5abfb1bf39ee5fff8ea2fd9d8f63f">comp_DB_cache</a></td></tr>
+<tr class="memitem:a455435200719ca793fee845c79eb71e0" id="r_a455435200719ca793fee845c79eb71e0"><td class="memItemLeft">std::vector&lt; char &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a455435200719ca793fee845c79eb71e0">comp_valid</a></td></tr>
+<tr class="memitem:aa8eabbca3e30ccc3674704770c69bf30" id="r_aa8eabbca3e30ccc3674704770c69bf30"><td class="memItemLeft">std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#aa8eabbca3e30ccc3674704770c69bf30">comp_DFm_cache</a></td></tr>
+<tr class="memitem:ab757d3fa9bd53f0f58deb2d4472c8225" id="r_ab757d3fa9bd53f0f58deb2d4472c8225"><td class="memItemLeft">std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#ab757d3fa9bd53f0f58deb2d4472c8225">comp_DFa_cache</a></td></tr>
+<tr class="memitem:a4a49407fc4b10ab136512a695cc795a8" id="r_a4a49407fc4b10ab136512a695cc795a8"><td class="memItemLeft">std::vector&lt; char &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a4a49407fc4b10ab136512a695cc795a8">comp_DF_valid</a></td></tr>
+<tr class="memitem:a831c57fec82d4e0245496d6c0be872a6" id="r_a831c57fec82d4e0245496d6c0be872a6"><td class="memItemLeft">std::vector&lt; double &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a831c57fec82d4e0245496d6c0be872a6">fluxLiftAmp</a></td></tr>
 <tr class="memitem:a73535015dc6b0e7576edf8062dd746a6" id="r_a73535015dc6b0e7576edf8062dd746a6"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a73535015dc6b0e7576edf8062dd746a6">ifemGeometryGeneration</a> = 0</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
-<tr class="memitem:a2456f4a40890c6e3b3109264ce46a327" id="r_a2456f4a40890c6e3b3109264ce46a327"><td class="memItemLeft">static const int&#160;</td><td class="memItemRight"><a class="el" href="#a2456f4a40890c6e3b3109264ce46a327">nP_edge</a> = 4</td></tr>
+<tr class="memitem:a48e57d4634091f443bf4be03924c6589" id="r_a48e57d4634091f443bf4be03924c6589"><td class="memItemLeft">static const int&#160;</td><td class="memItemRight"><a class="el" href="#a48e57d4634091f443bf4be03924c6589">nP_fit</a> = (nDOF_trial_element == 6 &amp;&amp; nQuadraturePoints_element &gt;= 16) ? 4 : 3</td></tr>
+<tr class="memitem:a2456f4a40890c6e3b3109264ce46a327" id="r_a2456f4a40890c6e3b3109264ce46a327"><td class="memItemLeft">static const int&#160;</td><td class="memItemRight"><a class="el" href="#a2456f4a40890c6e3b3109264ce46a327">nP_edge</a> = <a class="el" href="#a48e57d4634091f443bf4be03924c6589">nP_fit</a></td></tr>
+<tr class="memitem:a57a6ffe6252991298e2d1b19b8d8162d" id="r_a57a6ffe6252991298e2d1b19b8d8162d"><td class="memItemLeft">static const int&#160;</td><td class="memItemRight"><a class="el" href="#a57a6ffe6252991298e2d1b19b8d8162d">nCompMon</a> = (<a class="el" href="#a48e57d4634091f443bf4be03924c6589">nP_fit</a> + 1) * (<a class="el" href="#a48e57d4634091f443bf4be03924c6589">nP_fit</a> + 2) / 2</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><div class="compoundTemplParams">template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int nDOF_mesh_trial_element, int nDOF_trial_element, int nDOF_test_element, int nQuadraturePoints_elementBoundary&gt;<br />
 class proteus::cADR&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;</div>
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00038">38</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00040">40</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 </div><a name="doc-typedef-members" id="doc-typedef-members"></a><h2 id="header-doc-typedef-members" class="groupheader">Member Typedef Documentation</h2>
-<a id="afa0393c4d05eb801b75333341eb0a01f" name="afa0393c4d05eb801b75333341eb0a01f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa0393c4d05eb801b75333341eb0a01f">&#9670;&#160;</a></span>GfType</h2>
+<a id="af13fd0b0fefff6d98f200dee119e3399" name="af13fd0b0fefff6d98f200dee119e3399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af13fd0b0fefff6d98f200dee119e3399">&#9670;&#160;</a></span>GfType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,12 +200,12 @@ class proteus::cADR&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_
 template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int nDOF_mesh_trial_element, int nDOF_trial_element, int nDOF_test_element, int nQuadraturePoints_elementBoundary&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::GfType = <a class="el" href="namespaceproteus.html#a0c308272715853e7a4fe11c6efdd25f4">GeneralizedFunctions</a>&lt;nSpace, nDOF_trial_element, 4, nQuadraturePoints_element, nDOF_mesh_trial_element * nQuadraturePoints_elementBoundary&gt;</td>
+          <td class="memname">using <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::GfType = <a class="el" href="namespaceproteus.html#a0c308272715853e7a4fe11c6efdd25f4">GeneralizedFunctions</a>&lt;nSpace, nDOF_trial_element, <a class="el" href="#a48e57d4634091f443bf4be03924c6589">nP_fit</a>, nQuadraturePoints_element, nDOF_mesh_trial_element * nQuadraturePoints_elementBoundary&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00050">50</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00058">58</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -223,13 +235,13 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00070">70</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00102">102</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a93039c7b6195ef8fb3b8e17c8fd9ce55" name="a93039c7b6195ef8fb3b8e17c8fd9ce55"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93039c7b6195ef8fb3b8e17c8fd9ce55">&#9670;&#160;</a></span>calculateElementJacobian()</h2>
+<a id="afbc5416ed34ada0c2b2d6b9a284cbb55" name="afbc5416ed34ada0c2b2d6b9a284cbb55"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbc5416ed34ada0c2b2d6b9a284cbb55">&#9670;&#160;</a></span>calculateElementJacobian()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,6 +255,11 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
           <td class="memname">void <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::calculateElementJacobian </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>icase_f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>demoted_f</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -413,6 +430,31 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">xt::pyarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q_a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *</td>          <td class="paramname"><span class="paramname"><em>comp_A</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *</td>          <td class="paramname"><span class="paramname"><em>comp_B</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *</td>          <td class="paramname"><span class="paramname"><em>comp_DA</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *</td>          <td class="paramname"><span class="paramname"><em>comp_DB</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *</td>          <td class="paramname"><span class="paramname"><em>comp_DFa</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -482,6 +524,41 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">xt::pyarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>embeddedBoundary_u_inner_q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">xt::pyarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>embeddedBoundary_u_outer_q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>embeddedBoundary_robin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>embeddedBoundary_robin_h_inner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>embeddedBoundary_robin_h_outer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">xt::pyarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>embeddedBoundary_robin_uInfinity_inner_q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">xt::pyarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>embeddedBoundary_robin_uInfinity_outer_q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>immersedBoundary</em></span>, </td>
         </tr>
         <tr>
@@ -547,12 +624,12 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l01817">1817</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l02507">2507</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
-<a id="a8c7bd9608361c40ca3b61a122f8ead14" name="a8c7bd9608361c40ca3b61a122f8ead14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c7bd9608361c40ca3b61a122f8ead14">&#9670;&#160;</a></span>calculateElementResidual()</h2>
+<a id="a816a57b246fe7a7589d8c9c1b2a6884f" name="a816a57b246fe7a7589d8c9c1b2a6884f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a816a57b246fe7a7589d8c9c1b2a6884f">&#9670;&#160;</a></span>calculateElementResidual()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -566,6 +643,11 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
           <td class="memname">void <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::calculateElementResidual </td>
           <td>(</td>
           <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>icase_f</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>demoted_f</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -736,6 +818,31 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">xt::pyarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q_a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *</td>          <td class="paramname"><span class="paramname"><em>comp_A</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *</td>          <td class="paramname"><span class="paramname"><em>comp_B</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *</td>          <td class="paramname"><span class="paramname"><em>comp_DA</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *</td>          <td class="paramname"><span class="paramname"><em>comp_DB</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double *</td>          <td class="paramname"><span class="paramname"><em>comp_DFa</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -840,6 +947,46 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">xt::pyarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>embeddedBoundary_u_inner_q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">xt::pyarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>embeddedBoundary_u_outer_q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>embeddedBoundary_robin</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>embeddedBoundary_robin_h_inner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>embeddedBoundary_robin_h_outer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">xt::pyarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>embeddedBoundary_robin_uInfinity_inner_q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">xt::pyarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>embeddedBoundary_robin_uInfinity_outer_q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">xt::pyarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>embeddedBoundary_sdf_q</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>immersedBoundary</em></span>, </td>
         </tr>
         <tr>
@@ -905,12 +1052,22 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>fluxLiftJ</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">double &amp;</td>          <td class="paramname"><span class="paramname"><em>L2_error</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double &amp;</td>          <td class="paramname"><span class="paramname"><em>Linfty_error</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;</td>          <td class="paramname"><span class="paramname"><em>H1_error</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -935,6 +1092,16 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">xt::pyarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q_grad_u_exact_inner</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">xt::pyarray&lt; double &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>q_grad_u_exact_outer</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const bool</td>          <td class="paramname"><span class="paramname"><em>PG</em></span>&#160;)</td>
         </tr>
       </table>
@@ -945,7 +1112,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00394">394</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00432">432</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -976,7 +1143,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
 
 <p>Implements <a class="el" href="classproteus_1_1c_a_d_r__base.html#abc11fbf30b49406dd27dd1a096c17a79">proteus::cADR_base</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l02236">2236</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l03041">3041</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1024,7 +1191,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00199">199</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00240">240</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1055,7 +1222,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
 
 <p>Implements <a class="el" href="classproteus_1_1c_a_d_r__base.html#a2ade9d7bdca597fd49c83011b6f2c64c">proteus::cADR_base</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00924">924</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l01148">1148</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1108,7 +1275,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00185">185</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00226">226</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1156,7 +1323,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00166">166</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00207">207</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1185,7 +1352,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00073">73</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00105">105</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1248,7 +1415,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00218">218</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00259">259</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1296,7 +1463,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00262">262</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00303">303</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1384,7 +1551,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00091">91</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00132">132</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1452,7 +1619,60 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00136">136</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00177">177</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+
+</div>
+</div>
+<a id="a8d2b77a004b7bcd83c775a6148078a2c" name="a8d2b77a004b7bcd83c775a6148078a2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d2b77a004b7bcd83c775a6148078a2c">&#9670;&#160;</a></span>updateEmbeddedBoundaryRobinTerms()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int nDOF_mesh_trial_element, int nDOF_trial_element, int nDOF_test_element, int nQuadraturePoints_elementBoundary&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::updateEmbeddedBoundaryRobinTerms </td>
+          <td>(</td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>h_coeff</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>u_infinity</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>u</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;</td>          <td class="paramname"><span class="paramname"><em>r</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;</td>          <td class="paramname"><span class="paramname"><em>dr</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>D_s</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00376">376</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1545,7 +1765,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00299">299</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00340">340</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1663,7 +1883,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00335">335</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00393">393</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1682,7 +1902,151 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00045">45</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00047">47</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+
+</div>
+</div>
+<a id="a1a363b42f4a4c1e4f1aa2b9d343b91a3" name="a1a363b42f4a4c1e4f1aa2b9d343b91a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a363b42f4a4c1e4f1aa2b9d343b91a3">&#9670;&#160;</a></span>comp_A_cache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int nDOF_mesh_trial_element, int nDOF_trial_element, int nDOF_test_element, int nQuadraturePoints_elementBoundary&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::comp_A_cache</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00083">83</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+
+</div>
+</div>
+<a id="a1a294b4e53f63845516073798148ddbc" name="a1a294b4e53f63845516073798148ddbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a294b4e53f63845516073798148ddbc">&#9670;&#160;</a></span>comp_B_cache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int nDOF_mesh_trial_element, int nDOF_trial_element, int nDOF_test_element, int nQuadraturePoints_elementBoundary&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::comp_B_cache</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00083">83</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+
+</div>
+</div>
+<a id="a5590573d83029e713d1cd1e8dfe9d4b7" name="a5590573d83029e713d1cd1e8dfe9d4b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5590573d83029e713d1cd1e8dfe9d4b7">&#9670;&#160;</a></span>comp_DA_cache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int nDOF_mesh_trial_element, int nDOF_trial_element, int nDOF_test_element, int nQuadraturePoints_elementBoundary&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::comp_DA_cache</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00084">84</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+
+</div>
+</div>
+<a id="a18f5abfb1bf39ee5fff8ea2fd9d8f63f" name="a18f5abfb1bf39ee5fff8ea2fd9d8f63f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18f5abfb1bf39ee5fff8ea2fd9d8f63f">&#9670;&#160;</a></span>comp_DB_cache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int nDOF_mesh_trial_element, int nDOF_trial_element, int nDOF_test_element, int nQuadraturePoints_elementBoundary&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::comp_DB_cache</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00084">84</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+
+</div>
+</div>
+<a id="a4a49407fc4b10ab136512a695cc795a8" name="a4a49407fc4b10ab136512a695cc795a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a49407fc4b10ab136512a695cc795a8">&#9670;&#160;</a></span>comp_DF_valid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int nDOF_mesh_trial_element, int nDOF_trial_element, int nDOF_test_element, int nQuadraturePoints_elementBoundary&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;char&gt; <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::comp_DF_valid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00096">96</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+
+</div>
+</div>
+<a id="ab757d3fa9bd53f0f58deb2d4472c8225" name="ab757d3fa9bd53f0f58deb2d4472c8225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab757d3fa9bd53f0f58deb2d4472c8225">&#9670;&#160;</a></span>comp_DFa_cache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int nDOF_mesh_trial_element, int nDOF_trial_element, int nDOF_test_element, int nQuadraturePoints_elementBoundary&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::comp_DFa_cache</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00095">95</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+
+</div>
+</div>
+<a id="aa8eabbca3e30ccc3674704770c69bf30" name="aa8eabbca3e30ccc3674704770c69bf30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8eabbca3e30ccc3674704770c69bf30">&#9670;&#160;</a></span>comp_DFm_cache</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int nDOF_mesh_trial_element, int nDOF_trial_element, int nDOF_test_element, int nQuadraturePoints_elementBoundary&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::comp_DFm_cache</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00095">95</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+
+</div>
+</div>
+<a id="a455435200719ca793fee845c79eb71e0" name="a455435200719ca793fee845c79eb71e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a455435200719ca793fee845c79eb71e0">&#9670;&#160;</a></span>comp_valid</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int nDOF_mesh_trial_element, int nDOF_trial_element, int nDOF_test_element, int nQuadraturePoints_elementBoundary&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;char&gt; <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::comp_valid</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00085">85</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1700,7 +2064,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00042">42</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00044">44</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1718,7 +2082,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00042">42</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00044">44</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1736,7 +2100,25 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00043">43</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00045">45</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+
+</div>
+</div>
+<a id="a831c57fec82d4e0245496d6c0be872a6" name="a831c57fec82d4e0245496d6c0be872a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a831c57fec82d4e0245496d6c0be872a6">&#9670;&#160;</a></span>fluxLiftAmp</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int nDOF_mesh_trial_element, int nDOF_trial_element, int nDOF_test_element, int nQuadraturePoints_elementBoundary&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::fluxLiftAmp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00100">100</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1754,7 +2136,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00067">67</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00075">75</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1772,7 +2154,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00068">68</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00076">76</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1785,12 +2167,12 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
 template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int nDOF_mesh_trial_element, int nDOF_trial_element, int nDOF_test_element, int nQuadraturePoints_elementBoundary&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="#afa0393c4d05eb801b75333341eb0a01f">GfType</a>&gt; <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::gf_f_cache</td>
+          <td class="memname">std::vector&lt;<a class="el" href="#af13fd0b0fefff6d98f200dee119e3399">GfType</a>&gt; <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::gf_f_cache</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00066">66</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00074">74</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1808,7 +2190,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00067">67</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00075">75</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1826,7 +2208,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00068">68</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00076">76</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1839,12 +2221,12 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
 template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int nDOF_mesh_trial_element, int nDOF_trial_element, int nDOF_test_element, int nQuadraturePoints_elementBoundary&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="#afa0393c4d05eb801b75333341eb0a01f">GfType</a>&gt; <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::gf_s_cache</td>
+          <td class="memname">std::vector&lt;<a class="el" href="#af13fd0b0fefff6d98f200dee119e3399">GfType</a>&gt; <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::gf_s_cache</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00066">66</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00074">74</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1862,7 +2244,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00067">67</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00075">75</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1880,7 +2262,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00068">68</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00076">76</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1898,7 +2280,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00041">41</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00043">43</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1916,7 +2298,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00041">41</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00043">43</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1934,7 +2316,33 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00069">69</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00101">101</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+
+</div>
+</div>
+<a id="a57a6ffe6252991298e2d1b19b8d8162d" name="a57a6ffe6252991298e2d1b19b8d8162d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57a6ffe6252991298e2d1b19b8d8162d">&#9670;&#160;</a></span>nCompMon</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int nDOF_mesh_trial_element, int nDOF_trial_element, int nDOF_test_element, int nQuadraturePoints_elementBoundary&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::nCompMon = (<a class="el" href="#a48e57d4634091f443bf4be03924c6589">nP_fit</a> + 1) * (<a class="el" href="#a48e57d4634091f443bf4be03924c6589">nP_fit</a> + 2) / 2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00082">82</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1952,7 +2360,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00044">44</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00046">46</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>
@@ -1968,7 +2376,7 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const int <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::nP_edge = 4</td>
+          <td class="memname">const int <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::nP_edge = <a class="el" href="#a48e57d4634091f443bf4be03924c6589">nP_fit</a></td>
         </tr>
       </table>
   </td>
@@ -1978,7 +2386,33 @@ template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00054">54</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00062">62</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
+
+</div>
+</div>
+<a id="a48e57d4634091f443bf4be03924c6589" name="a48e57d4634091f443bf4be03924c6589"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48e57d4634091f443bf4be03924c6589">&#9670;&#160;</a></span>nP_fit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class CompKernelType, int nSpace, int nQuadraturePoints_element, int nDOF_mesh_trial_element, int nDOF_trial_element, int nDOF_test_element, int nQuadraturePoints_elementBoundary&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int <a class="el" href="classproteus_1_1c_a_d_r.html">proteus::cADR</a>&lt; CompKernelType, nSpace, nQuadraturePoints_element, nDOF_mesh_trial_element, nDOF_trial_element, nDOF_test_element, nQuadraturePoints_elementBoundary &gt;::nP_fit = (nDOF_trial_element == 6 &amp;&amp; nQuadraturePoints_element &gt;= 16) ? 4 : 3</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="_a_d_r_8h_source.html#l00057">57</a> of file <a class="el" href="_a_d_r_8h_source.html">ADR.h</a>.</p>
 
 </div>
 </div>

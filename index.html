@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Introduction &mdash; Proteus 1.9.0 documentation</title>
+  <title>Introduction &mdash; Proteus 1.9.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
@@ -15,9 +15,10 @@
     <link rel="shortcut icon" href="_static/tritonBorder.ico"/>
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=c4cb232b"></script>
+      <script src="_static/documentation_options.js?v=60b3a732"></script>
       <script src="_static/doctools.js?v=fd6eb6e6"></script>
       <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script>window.MathJax = {"tex": {"macros": {"grad": "\\nabla", "deld": "\\nabla\\cdot", "outer": "\\otimes", "ds": "\\,\\mathrm{d}s", "ten": ["\\mathbf{#1}", 1], "mat": ["\\mathbf{#1}", 1], "pd": ["\\frac{\\partial #1}{\\partial #2}", 2], "od": ["\\frac{\\mathrm{d} #1}{\\mathrm{d} #2}", 2]}}}</script>
       <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
@@ -104,6 +105,12 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Models</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="models/adr.html">Advection-Diffusion-Reaction with Unfitted Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="models/adr.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/adr.html#running-the-test-problems">Running the test problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="models/adr.html#reference">Reference</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="models/navier_stokes.html">Multiphase Navier-Stokes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="models/navier_stokes.html#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="models/navier_stokes.html#two-phase">Two-Phase</a></li>
@@ -234,7 +241,7 @@ the <a class="reference external" href="https://groups.google.com/forum/#!forum/
 <section id="running">
 <span id="running-sec"></span><h1>Running<a class="headerlink" href="#running" title="Link to this heading"></a></h1>
 <p>If you have successfully compiled and tested Proteus then you should be able to do:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>% cd $PROTEUS/tests/ci
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>% cd $PROTEUS/test/ci
 % $PROTEUS_PREFIX/bin/parun poisson_3d_p.py poisson_3d_c0p1_n.py
 </pre></div>
 </div>
@@ -247,7 +254,7 @@ opened with ParaView or Ensight.</p>
 <ul class="simple">
 <li><p>Poisson’s equation</p></li>
 <li><p>The heat equation</p></li>
-<li><p>Linear advection-diffusion-reaction equations</p></li>
+<li><p>Linear advection-diffusion-reaction equations, including problems with interfaces that do not follow the mesh (CutFEM for embedded boundaries, immersed finite elements for immersed interfaces, and the hybrid CutFEM-IFEM method; see <a class="reference internal" href="models/adr.html#adr"><span class="std std-ref">Advection-Diffusion-Reaction with Unfitted Interfaces</span></a>)</p></li>
 <li><p>Singly degenerate nonlinear advection-diffusion-reaction equations (including various forms of Burger’s equation)</p></li>
 <li><p>Doubly degenerate nonlinear advection-diffusion-reaction equations</p></li>
 <li><p>The eikonal (signed distance) equation</p></li>
@@ -330,6 +337,9 @@ elements.</p>
 <section id="references">
 <h1>References<a class="headerlink" href="#references" title="Link to this heading"></a></h1>
 <ul class="simple">
+<li><p>Hybrid CutFEM-IFEM Model for Embedded and Immersed Interfaces with
+Triply-Cut Cells for the 2D Poisson Problem (2026) D. Nathawani and
+C.E. Kees, submitted.</p></li>
 <li><p><a class="reference external" href="https://doi.org/10.1002/fld.4817">An Unstructured Finite Element Model for Incompressible Two-Phase
 Flow Based on a Monolithic Conservative Level Set Method</a>
 (2020) M. Quezada de Luna, J. H. Collins, and C.E. Kees,
@@ -445,6 +455,7 @@ Equation on Unstructured Meshes</a>
 <div class="toctree-wrapper compound" id="sec-models">
 <p class="caption" role="heading"><span class="caption-text">Models</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="models/adr.html">Advection-Diffusion-Reaction with Unfitted Interfaces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="models/navier_stokes.html">Multiphase Navier-Stokes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="models/SWFlow.html">Shallow Water Flow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="models/free_surface.html">Free Surface</a></li>

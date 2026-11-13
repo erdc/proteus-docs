@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Multi-Body Solid Dynamics &mdash; Proteus 1.9.0 documentation</title>
+  <title>Multi-Body Solid Dynamics &mdash; Proteus 1.9.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="../_static/tritonBorder.ico"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=c4cb232b"></script>
+      <script src="../_static/documentation_options.js?v=60b3a732"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
@@ -103,6 +103,12 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Models</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="adr.html">Advection-Diffusion-Reaction with Unfitted Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="adr.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adr.html#running-the-test-problems">Running the test problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="adr.html#reference">Reference</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="navier_stokes.html">Multiphase Navier-Stokes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="navier_stokes.html#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="navier_stokes.html#two-phase">Two-Phase</a></li>
@@ -310,15 +316,16 @@ values of the added mass matrix are available in <code class="docutils literal n
 <p>The data related to mooring cables is saved in an hdf5 file, usually
 <code class="docutils literal notranslate"><span class="pre">[my_mooring.name].h5</span></code>, which can be read directly with h5py. Another way to
 read and visualise the data is to use the associated <code class="docutils literal notranslate"><span class="pre">[my_mooring.name].xmf</span></code>.
-The following script must be first ran (note that there is no extension for the
-file name):
-.. code-block:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="n">PROTEUS_DIR</span><span class="p">}</span><span class="o">/</span><span class="n">scripts</span><span class="o">/</span><span class="n">gatherTimes</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">f</span> <span class="p">[</span><span class="n">my_mooring</span><span class="o">.</span><span class="n">name</span><span class="p">]</span>
+That file only lists the most recent time step, so first run <code class="docutils literal notranslate"><span class="pre">gatherTimes</span></code>
+(installed with Proteus) to collect every time step stored in the <code class="docutils literal notranslate"><span class="pre">.h5</span></code> file:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gatherTimes</span> <span class="p">[</span><span class="n">my_mooring</span><span class="o">.</span><span class="n">name</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>where <code class="docutils literal notranslate"><span class="pre">{PROTEUS_DIR}</span></code> is the root directory of the Proteus installation. This
-will create <code class="docutils literal notranslate"><span class="pre">[my_mooring.name]_complete.xmf</span></code> which can be opened in Paraview
-to navigate the time steps that have been recorded.</p>
+<p>This creates <code class="docutils literal notranslate"><span class="pre">[my_mooring.name]_complete.xmf</span></code>, which can be opened in
+Paraview to navigate the time steps that have been recorded. The argument may
+be given with or without the <code class="docutils literal notranslate"><span class="pre">.xmf</span></code> extension, and <code class="docutils literal notranslate"><span class="pre">-t</span> <span class="pre">N</span></code> keeps only the
+first <code class="docutils literal notranslate"><span class="pre">N</span></code> time steps. Running it on an <code class="docutils literal notranslate"><span class="pre">.xmf</span></code> that already lists every
+stored time step leaves the time steps unchanged.</p>
 </section>
 </section>
 </section>

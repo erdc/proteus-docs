@@ -11,10 +11,13 @@ var searchData=
   ['hesstrialfromref_8',['hessTrialFromRef',['../class_comp_kernel.html#a06c56badd64b633466ce1a5caab6dcd2',1,'CompKernel::hessTrialFromRef()'],['../class_comp_kernel_3_012_00_01_n_d_o_f___m_e_s_h___t_r_i_a_l___e_l_e_m_e_n_t_00_01_n_d_o_f___t_r_9897e810382babb7dcd2837f1e97c974.html#a3e47cfcb69ef02d83aa1422a80ca12d6',1,'CompKernel&lt; 2, NDOF_MESH_TRIAL_ELEMENT, NDOF_TRIAL_ELEMENT, NDOF_TEST_ELEMENT &gt;::hessTrialFromRef()'],['../class_comp_kernel_3_011_00_01_n_d_o_f___m_e_s_h___t_r_i_a_l___e_l_e_m_e_n_t_00_01_n_d_o_f___t_r_0cea9942d01a039cba6bf565800223f1.html#a6732ac812cd01fabc7cbd1e76879cfaf',1,'CompKernel&lt; 1, NDOF_MESH_TRIAL_ELEMENT, NDOF_TRIAL_ELEMENT, NDOF_TEST_ELEMENT &gt;::hessTrialFromRef()']]],
   ['hexahedronvolume_9',['hexahedronVolume',['../mesh_8cpp.html#ada45b0c82e2dd37e79b7e2c101803c1f',1,'mesh.cpp']]],
   ['hjburgersevaluate_10',['HJBurgersEvaluate',['../group__transport_coefficients.html#gacb3412e0558b2699678e3c04f523eafa',1,'HJBurgersEvaluate(const int nPoints, const int nSpace, const double offset, const double *u, const double *gradu, double *m, double *dm, double *H, double *dH):&#160;transportCoefficients.c'],['../group__transport_coefficients.html#gacb3412e0558b2699678e3c04f523eafa',1,'HJBurgersEvaluate(const int nPoints, const int nSpace, const double offset, const double *u, const double *gradu, double *m, double *dm, double *H, double *dH):&#160;transportCoefficients.c']]],
-  ['hstarlfromquadphifromabove_11',['hStarLFromQuadPhiFromAbove',['../namespaceproteus.html#a7330c388dd299f1f57a761407b3f9803',1,'proteus']]],
-  ['hstarrfromquadphifrombelow_12',['hStarRFromQuadPhiFromBelow',['../namespaceproteus.html#aa4fb5dbd416856817199520f28e815b6',1,'proteus']]],
-  ['hx_13',['hx',['../classcpp_rigid_body.html#a2017406e34e55e3145c0fa864e07391d',1,'cppRigidBody']]],
-  ['hxyz_14',['hxyz',['../classcpp_rigid_body.html#a08b8b83523a2539c2794081a7e9cb78a',1,'cppRigidBody']]],
-  ['hy_15',['hy',['../classcpp_rigid_body.html#ab2ad84ac36212ad053d5f27c969965a8',1,'cppRigidBody']]],
-  ['hz_16',['hz',['../classcpp_rigid_body.html#ade1a06d7bb41f0fe8bdd426509a548b5',1,'cppRigidBody']]]
+  ['hm_5finvert_5fanalytic_11',['hm_invert_analytic',['../namespaceproteus_1_1richards_1_1psk.html#afa2ff3289aadf6bccf7b52b7cb837167',1,'proteus::richards::psk']]],
+  ['hm_5finvert_5fnewton_12',['hm_invert_newton',['../namespaceproteus_1_1richards_1_1psk.html#acfc005e5d7483bf3ffb534f80d7b5ab0',1,'proteus::richards::psk']]],
+  ['hm_5fwetting_13',['hm_wetting',['../namespaceproteus_1_1richards_1_1psk.html#abe88f771f2faa16ba3a2c75255391bda',1,'proteus::richards::psk']]],
+  ['hstarlfromquadphifromabove_14',['hStarLFromQuadPhiFromAbove',['../namespaceproteus.html#a7330c388dd299f1f57a761407b3f9803',1,'proteus']]],
+  ['hstarrfromquadphifrombelow_15',['hStarRFromQuadPhiFromBelow',['../namespaceproteus.html#aa4fb5dbd416856817199520f28e815b6',1,'proteus']]],
+  ['hx_16',['hx',['../classcpp_rigid_body.html#a2017406e34e55e3145c0fa864e07391d',1,'cppRigidBody']]],
+  ['hxyz_17',['hxyz',['../classcpp_rigid_body.html#a08b8b83523a2539c2794081a7e9cb78a',1,'cppRigidBody']]],
+  ['hy_18',['hy',['../classcpp_rigid_body.html#ab2ad84ac36212ad053d5f27c969965a8',1,'cppRigidBody']]],
+  ['hz_19',['hz',['../classcpp_rigid_body.html#ade1a06d7bb41f0fe8bdd426509a548b5',1,'cppRigidBody']]]
 ];

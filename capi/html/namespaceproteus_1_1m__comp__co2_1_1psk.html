@@ -30,7 +30,7 @@ MathJax.Hub.Config({
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">proteus<span id="projectnumber">&#160;1.9.0</span>
+   <div id="projectname">proteus<span id="projectnumber">&#160;1.9.1</span>
    </div>
    <div id="projectbrief">C/C++/Fortran libraries</div>
   </td>
@@ -114,7 +114,8 @@ document.addEventListener('DOMContentLoaded', codefold.init);
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a8d6f3d1d99e7e1172d895210cc88e11e" id="r_a8d6f3d1d99e7e1172d895210cc88e11e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8d6f3d1d99e7e1172d895210cc88e11e">vgm_pc_from_Se</a> (const double Se, const double alpha, const double n_vg, double &amp;pc, double &amp;Dpc_DSe, double &amp;D2pc_DSe2)</td></tr>
-<tr class="memitem:aec4a7d56ee016b1695c103d215eaaf1d" id="r_aec4a7d56ee016b1695c103d215eaaf1d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aec4a7d56ee016b1695c103d215eaaf1d">bc_pc_from_Se</a> (const double Se, const double alpha, const double lam, double &amp;pc, double &amp;Dpc_DSe, double &amp;D2pc_DSe2)</td></tr>
+<tr class="memitem:a1d6df830df671d2c56176823100adc61" id="r_a1d6df830df671d2c56176823100adc61"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1d6df830df671d2c56176823100adc61">bc_pc_from_Se</a> (const double Se, const double alpha, const double lam, const double Se_min_pc, double &amp;pc, double &amp;Dpc_DSe, double &amp;D2pc_DSe2)</td></tr>
+<tr class="memitem:a71ca5092eb6d01ef89e572972814ca97" id="r_a71ca5092eb6d01ef89e572972814ca97"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a71ca5092eb6d01ef89e572972814ca97">bc_Se_from_pc</a> (const double pc, const double alpha, const double lam, const double Se_min_pc, double &amp;Se, double &amp;DSe_Dpc)</td></tr>
 <tr class="memitem:aa5eeb910eb9f8ec2ae33d1578968c343" id="r_aa5eeb910eb9f8ec2ae33d1578968c343"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa5eeb910eb9f8ec2ae33d1578968c343">vgm_wetting_from_Se</a> (const double Se, const double, const double n_vg, const double thetaR, const double thetaSR, double &amp;thetaW, double &amp;DthetaW_DSe, double &amp;KWr, double &amp;DKWr_DSe)</td></tr>
 <tr class="memitem:a17742852fa039b96f5aeee7f5e71a855" id="r_a17742852fa039b96f5aeee7f5e71a855"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a17742852fa039b96f5aeee7f5e71a855">vgm_kr_nonwetting_from_Se</a> (const double Se_w, const double, const double n_vg, double &amp;KNr, double &amp;DKNr_DSe, const double Se_trap=1.0)</td></tr>
 <tr class="memitem:a2b23e0d3d3f34f44426a079f44e90fe2" id="r_a2b23e0d3d3f34f44426a079f44e90fe2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2b23e0d3d3f34f44426a079f44e90fe2">bc_wetting_from_Se</a> (const double Se, const double, const double lam, const double thetaR, const double thetaSR, double &amp;thetaW, double &amp;DthetaW_DSe, double &amp;KWr, double &amp;DKWr_DSe)</td></tr>
@@ -168,12 +169,12 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="psk_relations_8h_source.html#l01866">1866</a> of file <a class="el" href="psk_relations_8h_source.html">pskRelations.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psk_relations_8h_source.html#l02024">2024</a> of file <a class="el" href="psk_relations_8h_source.html">pskRelations.h</a>.</p>
 
 </div>
 </div>
-<a id="aec4a7d56ee016b1695c103d215eaaf1d" name="aec4a7d56ee016b1695c103d215eaaf1d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aec4a7d56ee016b1695c103d215eaaf1d">&#9670;&#160;</a></span>bc_pc_from_Se()</h2>
+<a id="a1d6df830df671d2c56176823100adc61" name="a1d6df830df671d2c56176823100adc61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d6df830df671d2c56176823100adc61">&#9670;&#160;</a></span>bc_pc_from_Se()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -199,6 +200,11 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>Se_min_pc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">double &amp;</td>          <td class="paramname"><span class="paramname"><em>pc</em></span>, </td>
         </tr>
         <tr>
@@ -219,7 +225,58 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="psk_relations_8h_source.html#l01631">1631</a> of file <a class="el" href="psk_relations_8h_source.html">pskRelations.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psk_relations_8h_source.html#l01751">1751</a> of file <a class="el" href="psk_relations_8h_source.html">pskRelations.h</a>.</p>
+
+</div>
+</div>
+<a id="a71ca5092eb6d01ef89e572972814ca97" name="a71ca5092eb6d01ef89e572972814ca97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71ca5092eb6d01ef89e572972814ca97">&#9670;&#160;</a></span>bc_Se_from_pc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void proteus::m_comp_co2::psk::bc_Se_from_pc </td>
+          <td>(</td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>pc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>alpha</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>lam</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const double</td>          <td class="paramname"><span class="paramname"><em>Se_min_pc</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;</td>          <td class="paramname"><span class="paramname"><em>Se</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double &amp;</td>          <td class="paramname"><span class="paramname"><em>DSe_Dpc</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="psk_relations_8h_source.html#l01877">1877</a> of file <a class="el" href="psk_relations_8h_source.html">pskRelations.h</a>.</p>
 
 </div>
 </div>
@@ -285,7 +342,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="psk_relations_8h_source.html#l01837">1837</a> of file <a class="el" href="psk_relations_8h_source.html">pskRelations.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psk_relations_8h_source.html#l01995">1995</a> of file <a class="el" href="psk_relations_8h_source.html">pskRelations.h</a>.</p>
 
 </div>
 </div>
@@ -336,7 +393,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="psk_relations_8h_source.html#l01798">1798</a> of file <a class="el" href="psk_relations_8h_source.html">pskRelations.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psk_relations_8h_source.html#l01956">1956</a> of file <a class="el" href="psk_relations_8h_source.html">pskRelations.h</a>.</p>
 
 </div>
 </div>
@@ -387,7 +444,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="psk_relations_8h_source.html#l01524">1524</a> of file <a class="el" href="psk_relations_8h_source.html">pskRelations.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psk_relations_8h_source.html#l01640">1640</a> of file <a class="el" href="psk_relations_8h_source.html">pskRelations.h</a>.</p>
 
 </div>
 </div>
@@ -453,7 +510,7 @@ Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="psk_relations_8h_source.html#l01759">1759</a> of file <a class="el" href="psk_relations_8h_source.html">pskRelations.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="psk_relations_8h_source.html#l01917">1917</a> of file <a class="el" href="psk_relations_8h_source.html">pskRelations.h</a>.</p>
 
 </div>
 </div>

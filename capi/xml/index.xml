@@ -99,7 +99,7 @@
     <member refid="class_b_c_m_1a84da3640e9c5ddc0610852d97494fbec" kind="function"><name>calc</name></member>
   </compound>
   <compound refid="classproteus_1_1c_a_d_r" kind="class"><name>proteus::cADR</name>
-    <member refid="classproteus_1_1c_a_d_r_1afa0393c4d05eb801b75333341eb0a01f" kind="typedef"><name>GfType</name></member>
+    <member refid="classproteus_1_1c_a_d_r_1af13fd0b0fefff6d98f200dee119e3399" kind="typedef"><name>GfType</name></member>
     <member refid="classproteus_1_1c_a_d_r_1a2f5e5191ca7e18f9d3a4f0eba61cbc27" kind="variable"><name>ifem_boundaries</name></member>
     <member refid="classproteus_1_1c_a_d_r_1a503f547baa5728ef59a4709306cade67" kind="variable"><name>ifem_boundary_elements</name></member>
     <member refid="classproteus_1_1c_a_d_r_1ac410bbc601ff706a5179d67414bf8330" kind="variable"><name>cutfem_boundaries</name></member>
@@ -115,8 +115,19 @@
     <member refid="classproteus_1_1c_a_d_r_1a19e8f4f071fc0141de8d2e3ab6086471" kind="variable"><name>gf_s_interior_icase</name></member>
     <member refid="classproteus_1_1c_a_d_r_1a98038ab5bc0261cb9060a4b5094bfc9f" kind="variable"><name>gf_f_interior_icase</name></member>
     <member refid="classproteus_1_1c_a_d_r_1aad41e6e2c15317605ce4213e794f29ef" kind="variable"><name>gf_f_boundary_icase</name></member>
+    <member refid="classproteus_1_1c_a_d_r_1a1a363b42f4a4c1e4f1aa2b9d343b91a3" kind="variable"><name>comp_A_cache</name></member>
+    <member refid="classproteus_1_1c_a_d_r_1a1a294b4e53f63845516073798148ddbc" kind="variable"><name>comp_B_cache</name></member>
+    <member refid="classproteus_1_1c_a_d_r_1a5590573d83029e713d1cd1e8dfe9d4b7" kind="variable"><name>comp_DA_cache</name></member>
+    <member refid="classproteus_1_1c_a_d_r_1a18f5abfb1bf39ee5fff8ea2fd9d8f63f" kind="variable"><name>comp_DB_cache</name></member>
+    <member refid="classproteus_1_1c_a_d_r_1a455435200719ca793fee845c79eb71e0" kind="variable"><name>comp_valid</name></member>
+    <member refid="classproteus_1_1c_a_d_r_1aa8eabbca3e30ccc3674704770c69bf30" kind="variable"><name>comp_DFm_cache</name></member>
+    <member refid="classproteus_1_1c_a_d_r_1ab757d3fa9bd53f0f58deb2d4472c8225" kind="variable"><name>comp_DFa_cache</name></member>
+    <member refid="classproteus_1_1c_a_d_r_1a4a49407fc4b10ab136512a695cc795a8" kind="variable"><name>comp_DF_valid</name></member>
+    <member refid="classproteus_1_1c_a_d_r_1a831c57fec82d4e0245496d6c0be872a6" kind="variable"><name>fluxLiftAmp</name></member>
     <member refid="classproteus_1_1c_a_d_r_1a73535015dc6b0e7576edf8062dd746a6" kind="variable"><name>ifemGeometryGeneration</name></member>
+    <member refid="classproteus_1_1c_a_d_r_1a48e57d4634091f443bf4be03924c6589" kind="variable"><name>nP_fit</name></member>
     <member refid="classproteus_1_1c_a_d_r_1a2456f4a40890c6e3b3109264ce46a327" kind="variable"><name>nP_edge</name></member>
+    <member refid="classproteus_1_1c_a_d_r_1a57a6ffe6252991298e2d1b19b8d8162d" kind="variable"><name>nCompMon</name></member>
     <member refid="classproteus_1_1c_a_d_r_1a93b20e529d57aa2cc0252135bdeb5b68" kind="function"><name>cADR</name></member>
     <member refid="classproteus_1_1c_a_d_r_1a645d0b7675b8a4417ac50521576fffbf" kind="function"><name>ensureIFEMCacheSized</name></member>
     <member refid="classproteus_1_1c_a_d_r_1a07956ab045055611f75a8ca2c28c8fc5" kind="function"><name>exteriorNumericalDiffusiveFlux</name></member>
@@ -127,10 +138,11 @@
     <member refid="classproteus_1_1c_a_d_r_1afbd6855b5dfe06a79e9c99f140140d8e" kind="function"><name>exteriorNumericalAdvectiveFlux</name></member>
     <member refid="classproteus_1_1c_a_d_r_1a6aa48efde7035bd33e9d76ac4e5b72bd" kind="function"><name>exteriorNumericalAdvectiveFluxDerivative</name></member>
     <member refid="classproteus_1_1c_a_d_r_1ac2ddf9723abd4adac8dfec3cb043e85e" kind="function"><name>updateEmbeddedBoundaryTerms</name></member>
+    <member refid="classproteus_1_1c_a_d_r_1a8d2b77a004b7bcd83c775a6148078a2c" kind="function"><name>updateEmbeddedBoundaryRobinTerms</name></member>
     <member refid="classproteus_1_1c_a_d_r_1a01dccc693e527bec4984f2a92275b032" kind="function"><name>updateImmersedBoundaryTerms</name></member>
-    <member refid="classproteus_1_1c_a_d_r_1a8c7bd9608361c40ca3b61a122f8ead14" kind="function"><name>calculateElementResidual</name></member>
+    <member refid="classproteus_1_1c_a_d_r_1a816a57b246fe7a7589d8c9c1b2a6884f" kind="function"><name>calculateElementResidual</name></member>
     <member refid="classproteus_1_1c_a_d_r_1ae7de58f6447443d50265f27d43c426a9" kind="function"><name>calculateResidual</name></member>
-    <member refid="classproteus_1_1c_a_d_r_1a93039c7b6195ef8fb3b8e17c8fd9ce55" kind="function"><name>calculateElementJacobian</name></member>
+    <member refid="classproteus_1_1c_a_d_r_1afbc5416ed34ada0c2b2d6b9a284cbb55" kind="function"><name>calculateElementJacobian</name></member>
     <member refid="classproteus_1_1c_a_d_r_1afb8d9a155070ef2cae11087d3a6a0d95" kind="function"><name>calculateJacobian</name></member>
   </compound>
   <compound refid="classc_a_d_r__base" kind="class"><name>cADR_base</name>
@@ -1772,6 +1784,12 @@
     <member refid="classequivalent__polynomials_1_1_generalized_functions__mix_1ae3bd0a95849046fe296f03fcda1539af" kind="function"><name>VB_x</name></member>
     <member refid="classequivalent__polynomials_1_1_generalized_functions__mix_1a8c9aed3f8d815a14b99bf57cb81cd519" kind="function"><name>VB_y</name></member>
     <member refid="classequivalent__polynomials_1_1_generalized_functions__mix_1a0691da2556485f5858d3355903e3a01b" kind="function"><name>VB_z</name></member>
+    <member refid="classequivalent__polynomials_1_1_generalized_functions__mix_1a0608ee26699ba36490a528ff09207a88" kind="function"><name>PSIA</name></member>
+    <member refid="classequivalent__polynomials_1_1_generalized_functions__mix_1a159057766ca8f627e12b7507965221fb" kind="function"><name>PSIA_x</name></member>
+    <member refid="classequivalent__polynomials_1_1_generalized_functions__mix_1ac41ba7797ad6279d22e38fc6c75a445d" kind="function"><name>PSIA_y</name></member>
+    <member refid="classequivalent__polynomials_1_1_generalized_functions__mix_1ad5c7d17de56f33df005bde17e2f66715" kind="function"><name>PSIB</name></member>
+    <member refid="classequivalent__polynomials_1_1_generalized_functions__mix_1aa6f9fea588c15d814bfb0d379c740a90" kind="function"><name>PSIB_x</name></member>
+    <member refid="classequivalent__polynomials_1_1_generalized_functions__mix_1afa0a66d403b230db46ce7c95d7f49c23" kind="function"><name>PSIB_y</name></member>
   </compound>
   <compound refid="classproteus_1_1_g_n___s_w2_d_c_v" kind="class"><name>proteus::GN_SW2DCV</name>
     <member refid="classproteus_1_1_g_n___s_w2_d_c_v_1a95f449fbd959cfa2f867bc3362169d24" kind="variable"><name>nDOF_test_X_trial_element</name></member>
@@ -1787,6 +1805,8 @@
     <member refid="classproteus_1_1_g_n___s_w2_d_c_v_1ae80465ef921b48c0c41963d2094e3ec1" kind="function"><name>calculateResidual</name></member>
     <member refid="classproteus_1_1_g_n___s_w2_d_c_v_1a9a5a565e825096b40b5af1f181c5754f" kind="function"><name>calculateMassMatrix</name></member>
     <member refid="classproteus_1_1_g_n___s_w2_d_c_v_1abf5713d9fd384884a91b33c26c1e7b90" kind="function"><name>calculateLumpedMassMatrix</name></member>
+    <member refid="classproteus_1_1_g_n___s_w2_d_c_v_1a7f8ba5f98673d9fe75009acbabf74fd1" kind="function"><name>wallCoefficients</name></member>
+    <member refid="classproteus_1_1_g_n___s_w2_d_c_v_1a299bb0c9bc42c3ceda99c1c22ae26e0b" kind="function"><name>phiBar</name></member>
   </compound>
   <compound refid="class_g_n___s_w2_d_c_v__base" kind="class"><name>GN_SW2DCV_base</name>
     <member refid="class_g_n___s_w2_d_c_v__base_1ac6e00955095da826c07d5a65e419776c" kind="function"><name>~GN_SW2DCV_base</name></member>
@@ -1927,9 +1947,11 @@
     <member refid="classproteus_1_1m__comp__co2_1_1_m__comp__co2_1a229b9c4ba1c7308e9a099effc8f1e09f" kind="variable"><name>T_C_member</name></member>
     <member refid="classproteus_1_1m__comp__co2_1_1_m__comp__co2_1a889f5607d5a37d290a7ff7b577d7cd5a" kind="variable"><name>m_NaCl_member</name></member>
     <member refid="classproteus_1_1m__comp__co2_1_1_m__comp__co2_1a011ab301d189da50347b12bcd97200d3" kind="variable"><name>immiscible_member</name></member>
+    <member refid="classproteus_1_1m__comp__co2_1_1_m__comp__co2_1abaf4dd04ae97e361311113f9d3e5e546" kind="variable"><name>Sg_rock_min_member</name></member>
+    <member refid="classproteus_1_1m__comp__co2_1_1_m__comp__co2_1a48a4896e38c62c209e747ff5e75ac840" kind="variable"><name>Sg_rock_max_member</name></member>
     <member refid="classproteus_1_1m__comp__co2_1_1_m__comp__co2_1a8d29d4ec832e688c2105bb6898a35004" kind="function"><name>M_comp_co2</name></member>
     <member refid="classproteus_1_1m__comp__co2_1_1_m__comp__co2_1a6777f919b47b06d84fa53c6f16391087" kind="function"><name>evaluateCoefficients_from_Se</name></member>
-    <member refid="classproteus_1_1m__comp__co2_1_1_m__comp__co2_1a639fef52c6ab334d99e2acf52606ea0f" kind="function"><name>evaluateCoefficients_comp1</name></member>
+    <member refid="classproteus_1_1m__comp__co2_1_1_m__comp__co2_1ae63a1c19d8953a63105c3f23a0528c11" kind="function"><name>evaluateCoefficients_comp1</name></member>
     <member refid="classproteus_1_1m__comp__co2_1_1_m__comp__co2_1a70b320ee3b2ed23426fd067a7ac0797e" kind="function"><name>calculateCFL</name></member>
     <member refid="classproteus_1_1m__comp__co2_1_1_m__comp__co2_1a9258f2bae8e8420a8e693d8b53cb5ad9" kind="function"><name>calculateSubgridError_tau</name></member>
     <member refid="classproteus_1_1m__comp__co2_1_1_m__comp__co2_1a67e000d02decd4f8b70ddf9ce4ce363c" kind="function"><name>calculateSubgridError_tau</name></member>
@@ -2496,6 +2518,13 @@
     <member refid="class_planar_straight_line_graph_domain_1ad6ade6af7f073be5ea77c3829053d400" kind="function"><name>writePoly</name></member>
     <member refid="class_planar_straight_line_graph_domain_1a336dd9b54fd9fcf4f6b67ec104f7c735" kind="function"><name>writeAsymptote</name></member>
   </compound>
+  <compound refid="structequivalent__polynomials_1_1composite_1_1_poly" kind="struct"><name>equivalent_polynomials::composite::Poly</name>
+    <member refid="structequivalent__polynomials_1_1composite_1_1_poly_1a90da3fa153a87b057cdaea1ae2525988" kind="variable"><name>x</name></member>
+    <member refid="structequivalent__polynomials_1_1composite_1_1_poly_1adf865ac19d6f275ed194412b64119e12" kind="variable"><name>y</name></member>
+    <member refid="structequivalent__polynomials_1_1composite_1_1_poly_1ac033a611bf84cd946f7cd82c1d7012d7" kind="variable"><name>n</name></member>
+    <member refid="structequivalent__polynomials_1_1composite_1_1_poly_1a6da944b1778f46af18206fee88713ed9" kind="function"><name>Poly</name></member>
+    <member refid="structequivalent__polynomials_1_1composite_1_1_poly_1a2dbcaa1fc217aefba745084732a2e3c3" kind="function"><name>push</name></member>
+  </compound>
   <compound refid="class_psk_relation" kind="class"><name>PskRelation</name>
     <member refid="class_psk_relation_1ad52b5314994defb4cc76ee7d618125d5" kind="variable"><name>Se</name></member>
     <member refid="class_psk_relation_1a5e6a67004a600bd0c90e569c6e6e2076" kind="variable"><name>dSe_dSw</name></member>
@@ -2767,12 +2796,27 @@
     <member refid="classequivalent__polynomials_1_1_regularized_1a204cc3afd66f0a1cf045e2a8b145be51" kind="function"><name>VB_x</name></member>
     <member refid="classequivalent__polynomials_1_1_regularized_1aa74050657f0dd50c474d97a732828083" kind="function"><name>VB_y</name></member>
     <member refid="classequivalent__polynomials_1_1_regularized_1ac8f232377ddf8090b68bca663f54512a" kind="function"><name>VB_z</name></member>
+    <member refid="classequivalent__polynomials_1_1_regularized_1a31899314cb7a1db17cd9cd1795b2ba57" kind="function"><name>PSIA</name></member>
+    <member refid="classequivalent__polynomials_1_1_regularized_1ae69dadbc3a7064697a0b8bee04c2c202" kind="function"><name>PSIA_x</name></member>
+    <member refid="classequivalent__polynomials_1_1_regularized_1a2577b705d0eb23b97e5437031fe607ab" kind="function"><name>PSIA_y</name></member>
+    <member refid="classequivalent__polynomials_1_1_regularized_1a8d7da8825f640558f3790e7b840cc5b9" kind="function"><name>PSIB</name></member>
+    <member refid="classequivalent__polynomials_1_1_regularized_1adce0ebea58da00b5231d31aa187798f6" kind="function"><name>PSIB_x</name></member>
+    <member refid="classequivalent__polynomials_1_1_regularized_1a5653a10d1372fa3de353f640a72a485b" kind="function"><name>PSIB_y</name></member>
   </compound>
   <compound refid="classproteus_1_1richards_1_1_richards" kind="class"><name>proteus::richards::Richards</name>
     <member refid="classproteus_1_1richards_1_1_richards_1a4c7a476903dfadca2e24a9bf9bfc3203" kind="variable"><name>nDOF_test_X_trial_element</name></member>
     <member refid="classproteus_1_1richards_1_1_richards_1adc1d0bf6dbb2f195bb35600ad594b2aa" kind="variable"><name>ck</name></member>
     <member refid="classproteus_1_1richards_1_1_richards_1acf61add90c8186ad729d165ca3470fb0" kind="variable"><name>rho_dof_member</name></member>
+    <member refid="classproteus_1_1richards_1_1_richards_1ac4a320515815c269daff71d024e5553b" kind="variable"><name>psi_member</name></member>
+    <member refid="classproteus_1_1richards_1_1_richards_1aff3f0c67d4c0eddc365a857ca493dce9" kind="variable"><name>eta_member</name></member>
+    <member refid="classproteus_1_1richards_1_1_richards_1af7977415cb77b0d070d5bf7ee87d27d8" kind="variable"><name>global_entropy_residual_member</name></member>
+    <member refid="classproteus_1_1richards_1_1_richards_1a01e2978973749483120c778d3ced8c19" kind="variable"><name>boundary_integral_member</name></member>
+    <member refid="classproteus_1_1richards_1_1_richards_1a71a8a59dec0ffe8187032556fb7b9860" kind="variable"><name>cflux_member</name></member>
+    <member refid="classproteus_1_1richards_1_1_richards_1a657c3d85421f46228faf818a5fa7062c" kind="variable"><name>Rpos_member</name></member>
+    <member refid="classproteus_1_1richards_1_1_richards_1a6b407bb97a8fbdbb712d9a41b170afe0" kind="variable"><name>Rneg_member</name></member>
     <member refid="classproteus_1_1richards_1_1_richards_1ac320a3d23f400896f1b794f8fa552c73" kind="variable"><name>PSK_TYPE_member</name></member>
+    <member refid="classproteus_1_1richards_1_1_richards_1ad00747a3395fbf251b56cf4c3e03335a" kind="variable"><name>VG_AIR_ENTRY_member</name></member>
+    <member refid="classproteus_1_1richards_1_1_richards_1a7d9ef46579c0bf004b59422472912fdb" kind="function"><name>vgAirEntryScales</name></member>
     <member refid="classproteus_1_1richards_1_1_richards_1a84e8012f7f3c9344be9c964f2ee550f8" kind="function"><name>Richards</name></member>
     <member refid="classproteus_1_1richards_1_1_richards_1a869f6c9d063d13e5eabbdd66e6cb04f0" kind="function"><name>evaluateCoefficients</name></member>
     <member refid="classproteus_1_1richards_1_1_richards_1a4dea09d1d9e2d0f59307ebc44ddf38a2" kind="function"><name>evaluateInverseCoefficients</name></member>
@@ -2784,11 +2828,13 @@
     <member refid="classproteus_1_1richards_1_1_richards_1a0a3d6f1dca5ee3d33aef9be37df34c65" kind="function"><name>exteriorNumericalFlux</name></member>
     <member refid="classproteus_1_1richards_1_1_richards_1ad4e455574a380cfd9d1b21ea198b7132" kind="function"><name>exteriorNumericalFluxJacobian</name></member>
     <member refid="classproteus_1_1richards_1_1_richards_1a8772a07476af72e1dd113e08b6386624" kind="function"><name>exteriorNumericalFlux2</name></member>
-    <member refid="classproteus_1_1richards_1_1_richards_1abace634cf39070e1f6508a769eb7d409" kind="function"><name>exteriorNumericalFluxJacobian2</name></member>
+    <member refid="classproteus_1_1richards_1_1_richards_1a363aec0c3236d8332fb0daa619a0a391" kind="function"><name>exteriorNumericalFluxJacobian2</name></member>
     <member refid="classproteus_1_1richards_1_1_richards_1a1875a92cae05bb9e55bd0bcbd0db9228" kind="function"><name>seepagefluxcalculator</name></member>
     <member refid="classproteus_1_1richards_1_1_richards_1adc0e72f8cec2adb4f8a9dc65eb31574a" kind="function"><name>calculateResidual</name></member>
     <member refid="classproteus_1_1richards_1_1_richards_1afe1ea07c0c505bb85fe70b16343fc3bf" kind="function"><name>calculateJacobian</name></member>
     <member refid="classproteus_1_1richards_1_1_richards_1a93ce6faeac7258ab9f96c7ee35c696a9" kind="function"><name>FCTStep</name></member>
+    <member refid="classproteus_1_1richards_1_1_richards_1af6d4c22d0beb969dbe006e80ad73d518" kind="function"><name>calculateEdgeVelocity</name></member>
+    <member refid="classproteus_1_1richards_1_1_richards_1aef54f35321f6b54b551e37d14bdf4c25" kind="function"><name>ImplicitFCTStep</name></member>
     <member refid="classproteus_1_1richards_1_1_richards_1a4b2d59641ddfcac7f6ff08e858659641" kind="function"><name>kth_FCT_step</name></member>
     <member refid="classproteus_1_1richards_1_1_richards_1a16d6eb066f7c3334ce4299c543ba50ba" kind="function"><name>calculateResidual_entropy_viscosity</name></member>
     <member refid="classproteus_1_1richards_1_1_richards_1a3d2f2e2d155d29cf4c8c79292bcfb145" kind="function"><name>invert</name></member>
@@ -2800,9 +2846,11 @@
     <member refid="classproteus_1_1richards_1_1_richards__base_1a35c1a7fdb773ae55bc5128b83b5c52aa" kind="function"><name>calculateJacobian</name></member>
     <member refid="classproteus_1_1richards_1_1_richards__base_1a829b694b2ac3bc15eeff34d3d723ec65" kind="function"><name>invert</name></member>
     <member refid="classproteus_1_1richards_1_1_richards__base_1a12c3b38fff417c507b7b8abb717e6dfd" kind="function"><name>FCTStep</name></member>
+    <member refid="classproteus_1_1richards_1_1_richards__base_1a75e2f0365a57be57373cbedd3db75d22" kind="function"><name>ImplicitFCTStep</name></member>
     <member refid="classproteus_1_1richards_1_1_richards__base_1a21067e3730a1e9126c30649702815d01" kind="function"><name>kth_FCT_step</name></member>
     <member refid="classproteus_1_1richards_1_1_richards__base_1a398ad6031dacd60c0d9e4cc0470a4df1" kind="function"><name>calculateResidual_entropy_viscosity</name></member>
     <member refid="classproteus_1_1richards_1_1_richards__base_1ad0a77b07426746c5b0b04411ec0835e6" kind="function"><name>calculateMassMatrix</name></member>
+    <member refid="classproteus_1_1richards_1_1_richards__base_1a563bff34c5cf66d6cf05c77195f2d313" kind="function"><name>calculateEdgeVelocity</name></member>
   </compound>
   <compound refid="class_richards__base" kind="class"><name>Richards_base</name>
     <member refid="class_richards__base_1ab02b292c906e43eefe4f690ed058cc5a" kind="function"><name>~Richards_base</name></member>
@@ -2810,9 +2858,11 @@
     <member refid="class_richards__base_1a35c1a7fdb773ae55bc5128b83b5c52aa" kind="function"><name>calculateJacobian</name></member>
     <member refid="class_richards__base_1a829b694b2ac3bc15eeff34d3d723ec65" kind="function"><name>invert</name></member>
     <member refid="class_richards__base_1a12c3b38fff417c507b7b8abb717e6dfd" kind="function"><name>FCTStep</name></member>
+    <member refid="class_richards__base_1a75e2f0365a57be57373cbedd3db75d22" kind="function"><name>ImplicitFCTStep</name></member>
     <member refid="class_richards__base_1a21067e3730a1e9126c30649702815d01" kind="function"><name>kth_FCT_step</name></member>
     <member refid="class_richards__base_1a398ad6031dacd60c0d9e4cc0470a4df1" kind="function"><name>calculateResidual_entropy_viscosity</name></member>
     <member refid="class_richards__base_1ad0a77b07426746c5b0b04411ec0835e6" kind="function"><name>calculateMassMatrix</name></member>
+    <member refid="class_richards__base_1a563bff34c5cf66d6cf05c77195f2d313" kind="function"><name>calculateEdgeVelocity</name></member>
   </compound>
   <compound refid="class_simple_p_s_k" kind="class"><name>SimplePSK</name>
     <member refid="class_simple_p_s_k_1aca2ee22ed2e9953a3b812adeb4bd2b59" kind="function"><name>SimplePSK</name></member>
@@ -2828,6 +2878,7 @@
     <member refid="classequivalent__polynomials_1_1_simplex_1a14d3a890b9260bc609a7c3e06245a4a5" kind="variable"><name>corner</name></member>
     <member refid="classequivalent__polynomials_1_1_simplex_1a4cc367a1aa8efae2aece23c22332decd" kind="variable"><name>split</name></member>
     <member refid="classequivalent__polynomials_1_1_simplex_1adcb0f82a7021156a3599675bb8f7ddc3" kind="variable"><name>flip_the_cell</name></member>
+    <member refid="classequivalent__polynomials_1_1_simplex_1a76d409a59042e872827b52507f81375d" kind="variable"><name>p2_cell_flipped</name></member>
     <member refid="classequivalent__polynomials_1_1_simplex_1a008d4666104968ced3619b9965af43b3" kind="variable"><name>nN</name></member>
     <member refid="classequivalent__polynomials_1_1_simplex_1a4d73277c0062492d9cddf16831dc9f1d" kind="variable"><name>nDOF_phi</name></member>
     <member refid="classequivalent__polynomials_1_1_simplex_1a48294f341a3c5c5b54652c292fb4373a" kind="variable"><name>P2_ifem_case</name></member>
@@ -2858,6 +2909,11 @@
     <member refid="classequivalent__polynomials_1_1_simplex_1ab6f2ad6eea3b4090f72cd52166f7a88e" kind="variable"><name>_b4</name></member>
     <member refid="classequivalent__polynomials_1_1_simplex_1a1427da951e5fecc46ea711b0aeecaab3" kind="variable"><name>_b5</name></member>
     <member refid="classequivalent__polynomials_1_1_simplex_1a695ce16424a26f760e19374db084e945" kind="variable"><name>_b6</name></member>
+    <member refid="classequivalent__polynomials_1_1_simplex_1aaf9e69d8c9b3560e915ff8f28032cdfa" kind="variable"><name>_lift_a</name></member>
+    <member refid="classequivalent__polynomials_1_1_simplex_1a9bb77dad771bfb9188476532f3a4a0f1" kind="variable"><name>_lift_b</name></member>
+    <member refid="classequivalent__polynomials_1_1_simplex_1a45b91ab9947f318e61ef1cd0ea4ea1a4" kind="variable"><name>_psi</name></member>
+    <member refid="classequivalent__polynomials_1_1_simplex_1a9b8055dbbedf0b5ad0b5e1b53faa15b7" kind="variable"><name>_psi_ebq</name></member>
+    <member refid="classequivalent__polynomials_1_1_simplex_1a5397174d05891159b272dcbbe44dba79" kind="variable"><name>_psi_q</name></member>
     <member refid="classequivalent__polynomials_1_1_simplex_1a66dc2bd870003fc9783a8055841263ec" kind="variable"><name>Jac</name></member>
     <member refid="classequivalent__polynomials_1_1_simplex_1a997953dc41540bc7d6f5cf3c82682b50" kind="variable"><name>inv_Jac</name></member>
     <member refid="classequivalent__polynomials_1_1_simplex_1a7364e3bdd8732f319dc084059eb5475e" kind="variable"><name>det_Jac</name></member>
@@ -2919,7 +2975,14 @@
     <member refid="classequivalent__polynomials_1_1_simplex_1a641190b8b3deb5d13baab836e4cd44fd" kind="function"><name>VB_x</name></member>
     <member refid="classequivalent__polynomials_1_1_simplex_1a993691c1df7a0351b2cfd010e6cc4b93" kind="function"><name>VB_y</name></member>
     <member refid="classequivalent__polynomials_1_1_simplex_1aaa0fdbfad8471444d6ae1187739ac0e2" kind="function"><name>VB_z</name></member>
+    <member refid="classequivalent__polynomials_1_1_simplex_1a95b376a1ce5965596d01a92e9dbe7edc" kind="function"><name>PSIA</name></member>
+    <member refid="classequivalent__polynomials_1_1_simplex_1a84f2eb02ebe324f2841ee461358921cc" kind="function"><name>PSIA_x</name></member>
+    <member refid="classequivalent__polynomials_1_1_simplex_1a194355c8edf640791bea50b6536d7aad" kind="function"><name>PSIA_y</name></member>
+    <member refid="classequivalent__polynomials_1_1_simplex_1a9bc64840418e01d855248a83055dcdb9" kind="function"><name>PSIB</name></member>
+    <member refid="classequivalent__polynomials_1_1_simplex_1a3235e0be74bdad952876ba23e2394d33" kind="function"><name>PSIB_x</name></member>
+    <member refid="classequivalent__polynomials_1_1_simplex_1a00b8ee28cb321c0edb1952d960a26d3d" kind="function"><name>PSIB_y</name></member>
     <member refid="classequivalent__polynomials_1_1_simplex_1afa4ddcb145930e48518cf77c8856a711" kind="function"><name>get_normal</name></member>
+    <member refid="classequivalent__polynomials_1_1_simplex_1aef8e4931adf8c9d9fbfa242ef28c363a" kind="function"><name>_calculate_lift</name></member>
     <member refid="classequivalent__polynomials_1_1_simplex_1a77c57acc358cd45c2cb83f9fb572d81e" kind="function"><name>_calculate_permutation</name></member>
     <member refid="classequivalent__polynomials_1_1_simplex_1a9dde1968624557b9e4241bbef276a334" kind="function"><name>_calculate_cuts</name></member>
     <member refid="classequivalent__polynomials_1_1_simplex_1a6f1d70e6e4585b63d00052d304e4071d" kind="function"><name>_calculate_cuts_quad</name></member>
@@ -2996,11 +3059,15 @@
     <member refid="classproteus_1_1_s_w2_d_c_v_1aae453d5286bf27c8a91c0f14ec526c1b" kind="function"><name>maxWaveSpeedSharpInitialGuess</name></member>
     <member refid="classproteus_1_1_s_w2_d_c_v_1ad75334d654320f591240fd36d0ce19b2" kind="function"><name>calculateCFL</name></member>
     <member refid="classproteus_1_1_s_w2_d_c_v_1a136ea8e9f9451326abe2f19066ed97e7" kind="function"><name>convexLimiting</name></member>
+    <member refid="classproteus_1_1_s_w2_d_c_v_1a633ba21981218a68ea9a888922c77017" kind="function"><name>wallRiemann</name></member>
+    <member refid="classproteus_1_1_s_w2_d_c_v_1a92186effee125ed6a7b91ac677e885e9" kind="function"><name>tailwaterFlux</name></member>
+    <member refid="classproteus_1_1_s_w2_d_c_v_1aa86024e3c33645ae83daad7d09c6f9ca" kind="function"><name>muWallTranspose</name></member>
     <member refid="classproteus_1_1_s_w2_d_c_v_1a12ba3b4b7f014d44b0af11b3ff9ca9a4" kind="function"><name>calculateEdgeBasedCFL</name></member>
     <member refid="classproteus_1_1_s_w2_d_c_v_1ae304f6ee66a994fa0c98d89be0e84da5" kind="function"><name>calculateEV</name></member>
     <member refid="classproteus_1_1_s_w2_d_c_v_1abad3f0cca6cce87ea07a6a266314942c" kind="function"><name>calculateResidual</name></member>
     <member refid="classproteus_1_1_s_w2_d_c_v_1a44ac6bc36e377bbe82ff4597185e62e0" kind="function"><name>calculateMassMatrix</name></member>
     <member refid="classproteus_1_1_s_w2_d_c_v_1af80dfbb5d6c7451098b2934c49f78730" kind="function"><name>calculateLumpedMassMatrix</name></member>
+    <member refid="classproteus_1_1_s_w2_d_c_v_1a1133aaec6a49d1daa130c6d3ce2bbb5f" kind="function"><name>phiBar</name></member>
   </compound>
   <compound refid="classproteus_1_1_s_w2_d_c_v__base" kind="class"><name>proteus::SW2DCV_base</name>
     <member refid="classproteus_1_1_s_w2_d_c_v__base_1a6f4bc17ccb4d3cacdbf16c378b83afa4" kind="function"><name>~SW2DCV_base</name></member>
@@ -3045,14 +3112,17 @@
     <member refid="classproteus_1_1_t_a_d_r_1aaf3cc632f7bae026b0cf3f482427ba98" kind="function"><name>invert</name></member>
     <member refid="classproteus_1_1_t_a_d_r_1a5b12cbf55387b004bf1abe8352d5b383" kind="function"><name>calculateJacobian</name></member>
     <member refid="classproteus_1_1_t_a_d_r_1a991580676660f4ad3265e74c0ed1a59b" kind="function"><name>FCTStep</name></member>
+    <member refid="classproteus_1_1_t_a_d_r_1a5702b7cd66ff899466df7986b7a953e5" kind="function"><name>calculateResidual_compatible</name></member>
+    <member refid="classproteus_1_1_t_a_d_r_1a4fd1777778ce9f6e94935d89cae5dca2" kind="function"><name>reconstructFlux_compatible</name></member>
+    <member refid="classproteus_1_1_t_a_d_r_1a2a31ad50f829302e3e5f091cddf5b2f1" kind="function"><name>FCTStep_compatible</name></member>
   </compound>
   <compound refid="classproteus_1_1_t_a_d_r__base" kind="class"><name>proteus::TADR_base</name>
-    <member refid="classproteus_1_1_t_a_d_r__base_1ae5935b52f226436265b2c5db519d2bf4" kind="variable"><name>Rpos</name></member>
-    <member refid="classproteus_1_1_t_a_d_r__base_1a5132734b924e601fbd0d1aca5fefa885" kind="variable"><name>Rneg</name></member>
     <member refid="classproteus_1_1_t_a_d_r__base_1aef79ef548b8b3ec869056a0fe58e9a0d" kind="variable"><name>FluxCorrectionMatrix</name></member>
     <member refid="classproteus_1_1_t_a_d_r__base_1ae69e2cf284b269300335daef071ea1e6" kind="variable"><name>TransportMatrix</name></member>
     <member refid="classproteus_1_1_t_a_d_r__base_1a44cf4c9df3538c67cd9bd25df314f9e6" kind="variable"><name>DiffusionMatrix</name></member>
     <member refid="classproteus_1_1_t_a_d_r__base_1aa80d8718755d6633d3a62ce474cd7fd2" kind="variable"><name>TransposeTransportMatrix</name></member>
+    <member refid="classproteus_1_1_t_a_d_r__base_1ab2f7f314fa2217b066eb71606676ebf4" kind="variable"><name>AdvectionMatrix</name></member>
+    <member refid="classproteus_1_1_t_a_d_r__base_1ae7096684cf5a160ebceb3f65289d5b21" kind="variable"><name>TransposeAdvectionMatrix</name></member>
     <member refid="classproteus_1_1_t_a_d_r__base_1afad4730db2cf6de9e4a653560ce62199" kind="variable"><name>psi</name></member>
     <member refid="classproteus_1_1_t_a_d_r__base_1a39cfe5b0f6ee5dadab9687765b71ee84" kind="variable"><name>eta</name></member>
     <member refid="classproteus_1_1_t_a_d_r__base_1af6f77a9a7fa49cace99309dca4f7fb28" kind="variable"><name>global_entropy_residual</name></member>
@@ -3061,6 +3131,9 @@
     <member refid="classproteus_1_1_t_a_d_r__base_1a14f90ddee07232f5fe7c46f0e7001977" kind="variable"><name>theta_dof_proj</name></member>
     <member refid="classproteus_1_1_t_a_d_r__base_1af09f63629dd17522d668f9e363725bc5" kind="variable"><name>rho_dof_proj</name></member>
     <member refid="classproteus_1_1_t_a_d_r__base_1a91fe187ca5882c2182f4672e93c7a07d" kind="variable"><name>ML_mass_proj</name></member>
+    <member refid="classproteus_1_1_t_a_d_r__base_1af01b735fc679bf29a41bfd9d6b7c0ca9" kind="variable"><name>boundary_integral_fluid</name></member>
+    <member refid="classproteus_1_1_t_a_d_r__base_1ae967cf5ab4ffd9e6fc3c0cef9858cc82" kind="variable"><name>cin_num</name></member>
+    <member refid="classproteus_1_1_t_a_d_r__base_1aa4e7b909dcb983299921a123e1a0835a" kind="variable"><name>cin_den</name></member>
     <member refid="classproteus_1_1_t_a_d_r__base_1aafd72c384fdac382cd924afd47fc63da" kind="variable"><name>maxVel</name></member>
     <member refid="classproteus_1_1_t_a_d_r__base_1a6d92b122cd70ca36be9132d91760a2a0" kind="variable"><name>maxEntRes</name></member>
     <member refid="classproteus_1_1_t_a_d_r__base_1adc41b2ac64010c259955eef715a9fbc5" kind="function"><name>~TADR_base</name></member>
@@ -3068,14 +3141,17 @@
     <member refid="classproteus_1_1_t_a_d_r__base_1aba1d665d824d7af9dd496d8f8384fb47" kind="function"><name>calculateJacobian</name></member>
     <member refid="classproteus_1_1_t_a_d_r__base_1ac2f659141dbb7e838948004320b1337c" kind="function"><name>invert</name></member>
     <member refid="classproteus_1_1_t_a_d_r__base_1aae4f58215a6e967cdc615c33e293bb4b" kind="function"><name>FCTStep</name></member>
+    <member refid="classproteus_1_1_t_a_d_r__base_1ae22a233539085f87dffd2773b18d4b92" kind="function"><name>calculateResidual_compatible</name></member>
+    <member refid="classproteus_1_1_t_a_d_r__base_1ac972f600fe209923b1e3c32c1f74aef9" kind="function"><name>reconstructFlux_compatible</name></member>
+    <member refid="classproteus_1_1_t_a_d_r__base_1a8eb7b0286caf2d25240aeeadb4c07105" kind="function"><name>FCTStep_compatible</name></member>
   </compound>
   <compound refid="class_t_a_d_r__base" kind="class"><name>TADR_base</name>
-    <member refid="class_t_a_d_r__base_1ae5935b52f226436265b2c5db519d2bf4" kind="variable"><name>Rpos</name></member>
-    <member refid="class_t_a_d_r__base_1a5132734b924e601fbd0d1aca5fefa885" kind="variable"><name>Rneg</name></member>
     <member refid="class_t_a_d_r__base_1aef79ef548b8b3ec869056a0fe58e9a0d" kind="variable"><name>FluxCorrectionMatrix</name></member>
     <member refid="class_t_a_d_r__base_1ae69e2cf284b269300335daef071ea1e6" kind="variable"><name>TransportMatrix</name></member>
     <member refid="class_t_a_d_r__base_1a44cf4c9df3538c67cd9bd25df314f9e6" kind="variable"><name>DiffusionMatrix</name></member>
     <member refid="class_t_a_d_r__base_1aa80d8718755d6633d3a62ce474cd7fd2" kind="variable"><name>TransposeTransportMatrix</name></member>
+    <member refid="class_t_a_d_r__base_1ab2f7f314fa2217b066eb71606676ebf4" kind="variable"><name>AdvectionMatrix</name></member>
+    <member refid="class_t_a_d_r__base_1ae7096684cf5a160ebceb3f65289d5b21" kind="variable"><name>TransposeAdvectionMatrix</name></member>
     <member refid="class_t_a_d_r__base_1afad4730db2cf6de9e4a653560ce62199" kind="variable"><name>psi</name></member>
     <member refid="class_t_a_d_r__base_1a39cfe5b0f6ee5dadab9687765b71ee84" kind="variable"><name>eta</name></member>
     <member refid="class_t_a_d_r__base_1af6f77a9a7fa49cace99309dca4f7fb28" kind="variable"><name>global_entropy_residual</name></member>
@@ -3084,6 +3160,9 @@
     <member refid="class_t_a_d_r__base_1a14f90ddee07232f5fe7c46f0e7001977" kind="variable"><name>theta_dof_proj</name></member>
     <member refid="class_t_a_d_r__base_1af09f63629dd17522d668f9e363725bc5" kind="variable"><name>rho_dof_proj</name></member>
     <member refid="class_t_a_d_r__base_1a91fe187ca5882c2182f4672e93c7a07d" kind="variable"><name>ML_mass_proj</name></member>
+    <member refid="class_t_a_d_r__base_1af01b735fc679bf29a41bfd9d6b7c0ca9" kind="variable"><name>boundary_integral_fluid</name></member>
+    <member refid="class_t_a_d_r__base_1ae967cf5ab4ffd9e6fc3c0cef9858cc82" kind="variable"><name>cin_num</name></member>
+    <member refid="class_t_a_d_r__base_1aa4e7b909dcb983299921a123e1a0835a" kind="variable"><name>cin_den</name></member>
     <member refid="class_t_a_d_r__base_1aafd72c384fdac382cd924afd47fc63da" kind="variable"><name>maxVel</name></member>
     <member refid="class_t_a_d_r__base_1a6d92b122cd70ca36be9132d91760a2a0" kind="variable"><name>maxEntRes</name></member>
     <member refid="class_t_a_d_r__base_1adc41b2ac64010c259955eef715a9fbc5" kind="function"><name>~TADR_base</name></member>
@@ -3091,6 +3170,9 @@
     <member refid="class_t_a_d_r__base_1aba1d665d824d7af9dd496d8f8384fb47" kind="function"><name>calculateJacobian</name></member>
     <member refid="class_t_a_d_r__base_1ac2f659141dbb7e838948004320b1337c" kind="function"><name>invert</name></member>
     <member refid="class_t_a_d_r__base_1aae4f58215a6e967cdc615c33e293bb4b" kind="function"><name>FCTStep</name></member>
+    <member refid="class_t_a_d_r__base_1ae22a233539085f87dffd2773b18d4b92" kind="function"><name>calculateResidual_compatible</name></member>
+    <member refid="class_t_a_d_r__base_1ac972f600fe209923b1e3c32c1f74aef9" kind="function"><name>reconstructFlux_compatible</name></member>
+    <member refid="class_t_a_d_r__base_1a8eb7b0286caf2d25240aeeadb4c07105" kind="function"><name>FCTStep_compatible</name></member>
   </compound>
   <compound refid="classproteus_1_1throwing__map" kind="class"><name>proteus::throwing_map</name>
     <member refid="classproteus_1_1throwing__map_1a197dc46c556ac1ff3f329436614546e7" kind="typedef"><name>base_type</name></member>
@@ -3193,7 +3275,7 @@
     <member refid="class_v_o_f__base_1add792ee096b781c973931e45fb6478c7" kind="function"><name>FCTStep</name></member>
     <member refid="class_v_o_f__base_1a30c82283a710c548a17c22085646c738" kind="function"><name>calculateResidualEdgeBased</name></member>
   </compound>
-  <compound refid="namespace_0d260206234004344234225024126175344077314002231244" kind="namespace"><name>@260206234004344234225024126175344077314002231244</name>
+  <compound refid="namespace_0d101052124216136254256101122273260206016220074164" kind="namespace"><name>@101052124216136254256101122273260206016220074164</name>
   </compound>
   <compound refid="namespaceapf" kind="namespace"><name>apf</name>
     <member refid="namespaceapf_1aefae5dcd32388caa61a0c548cd3e68c9" kind="function"><name>constructVerts</name></member>
@@ -3245,6 +3327,7 @@
     <member refid="namespaceequivalent__polynomials_1a1a2f3ced634842434874896d4a73e811" kind="function"><name>_calculate_normal_quad</name></member>
     <member refid="namespaceequivalent__polynomials_1a4435814b30d410a29cb1e7a6e705b8b9" kind="function"><name>_calculate_polynomial_1D</name></member>
     <member refid="namespaceequivalent__polynomials_1a77839235ff8878e552cc272da68900a5" kind="function"><name>calculate_edge_H</name></member>
+    <member refid="namespaceequivalent__polynomials_1a9bfaeb24d2b93eee644713e1825f3018" kind="function"><name>calculate_edge_interval_H</name></member>
     <member refid="namespaceequivalent__polynomials_1a28d0bfde5cbf1aafe9cbcc1b52885873" kind="function"><name>evaluate_edge_poly</name></member>
     <member refid="namespaceequivalent__polynomials_1a0a180ca78159e58074f32352fec78514" kind="function"><name>_calculate_polynomial_2D</name></member>
     <member refid="namespaceequivalent__polynomials_1a9dfb54c74fa05339cf11f3c013974883" kind="function"><name>_calculate_polynomial_3D</name></member>
@@ -3265,6 +3348,20 @@
     <member refid="namespaceequivalent__polynomials_1a274f4f091991dc6f3d9ebd7c9a5a8524" kind="function"><name>inv&lt; 1 &gt;</name></member>
     <member refid="namespaceequivalent__polynomials_1abe89a58d9efc05cd9b627066dac3e367" kind="function"><name>inv&lt; 2 &gt;</name></member>
     <member refid="namespaceequivalent__polynomials_1a6e088125898f0bc1d56b70dcaec8de5b" kind="function"><name>inv&lt; 3 &gt;</name></member>
+  </compound>
+  <compound refid="namespaceequivalent__polynomials_1_1composite" kind="namespace"><name>equivalent_polynomials::composite</name>
+    <member refid="namespaceequivalent__polynomials_1_1composite_1a6cc10397036892461e348bb1393be963" kind="variable"><name>MAX_POLY_VERTS</name></member>
+    <member refid="namespaceequivalent__polynomials_1_1composite_1a5de53dd229f36644e27e0af3e9e2e1b1" kind="function"><name>clip</name></member>
+    <member refid="namespaceequivalent__polynomials_1_1composite_1acd949c10a2a6de3a71f5b7ee3ee39336" kind="function"><name>gl_nodes</name></member>
+    <member refid="namespaceequivalent__polynomials_1_1composite_1a78138dc736973256fe55cb1486f3d930" kind="function"><name>gl_weights</name></member>
+    <member refid="namespaceequivalent__polynomials_1_1composite_1a2fc018b14c9a5daa09a4b30267cb4c83" kind="function"><name>monomials</name></member>
+    <member refid="namespaceequivalent__polynomials_1_1composite_1a42aba0c20cb260e5531db74b705dd88e" kind="function"><name>evaluate</name></member>
+    <member refid="namespaceequivalent__polynomials_1_1composite_1a75b9f12b4371f6afb6f1bc7aa6ac61ca" kind="function"><name>triangle_moments</name></member>
+    <member refid="namespaceequivalent__polynomials_1_1composite_1a6a77a31399686117e79a5637a6e35361" kind="function"><name>polygon_moments</name></member>
+    <member refid="namespaceequivalent__polynomials_1_1composite_1a1a6defca0ef576604ba232cb03903f1b" kind="function"><name>fluid_region_areas</name></member>
+    <member refid="namespaceequivalent__polynomials_1_1composite_1a03b6d29da4099c5817412654061c0e61" kind="function"><name>edge_weights</name></member>
+    <member refid="namespaceequivalent__polynomials_1_1composite_1a8041a7cf609e43901b8360a62566b8e9" kind="function"><name>dirac_weights</name></member>
+    <member refid="namespaceequivalent__polynomials_1_1composite_1a66d7d3d45bad00b0950b518ae812e5fc" kind="function"><name>weights</name></member>
   </compound>
   <compound refid="namespacefea" kind="namespace"><name>fea</name>
   </compound>
@@ -3328,6 +3425,7 @@
   <compound refid="namespacem__comp__co2_1_1flash" kind="namespace"><name>m_comp_co2::flash</name>
     <member refid="namespacem__comp__co2_1_1flash_1a458ccb1e12a75ddf4f7366170148afeb" kind="variable"><name>PA_PER_BAR</name></member>
     <member refid="namespacem__comp__co2_1_1flash_1abd0fffb0688407c1488040f0919f140b" kind="variable"><name>EPS_Z</name></member>
+    <member refid="namespacem__comp__co2_1_1flash_1a4d283bde393c502b1d7c5cf63aecbeb8" kind="variable"><name>Z_MIN</name></member>
     <member refid="namespacem__comp__co2_1_1flash_1a2468431428efaf3c87fea47e80d9722b" kind="variable"><name>RHO_A_IMM</name></member>
     <member refid="namespacem__comp__co2_1_1flash_1a4e8a88fcbe5c6f89386abae7e55d0cb5" kind="variable"><name>RHO_G_IMM</name></member>
     <member refid="namespacem__comp__co2_1_1flash_1af46fd5e69637e28ae2c70fb5e708bc98" kind="function"><name>_V_jet</name></member>
@@ -3360,6 +3458,7 @@
     <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a5244e1d62c2101243057b63bba2b0438" kind="enumvalue"><name>SmoothnessIndicator</name></member>
     <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a1e0aee6ae6868462b39b89feb0525c0c" kind="enumvalue"><name>Kuzmin</name></member>
     <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a6f7f47908e2a9e3ed9862b8aae31b154" kind="enumvalue"><name>ImplicitEV</name></member>
+    <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a923b5fd7dc0ac6f70f77bcc7ec3f5546" kind="enumvalue"><name>Compatible</name></member>
     <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a901d6c7955b386e829ac22a2a7f39da2" kind="enumvalue"><name>Galerkin</name></member>
     <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a8f927b2e2063d49e679713b6b26f53a2" kind="enumvalue"><name>EV_Stab</name></member>
     <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a7d1d2cb7137377b1b69595c11e8f30df" kind="enumvalue"><name>EntropyViscosity</name></member>
@@ -3376,6 +3475,7 @@
     <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a5244e1d62c2101243057b63bba2b0438" kind="enumvalue"><name>SmoothnessIndicator</name></member>
     <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a1e0aee6ae6868462b39b89feb0525c0c" kind="enumvalue"><name>Kuzmin</name></member>
     <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a6f7f47908e2a9e3ed9862b8aae31b154" kind="enumvalue"><name>ImplicitEV</name></member>
+    <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a923b5fd7dc0ac6f70f77bcc7ec3f5546" kind="enumvalue"><name>Compatible</name></member>
     <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a901d6c7955b386e829ac22a2a7f39da2" kind="enumvalue"><name>Galerkin</name></member>
     <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a8f927b2e2063d49e679713b6b26f53a2" kind="enumvalue"><name>EV_Stab</name></member>
     <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a7d1d2cb7137377b1b69595c11e8f30df" kind="enumvalue"><name>EntropyViscosity</name></member>
@@ -3399,6 +3499,7 @@
     <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a5244e1d62c2101243057b63bba2b0438" kind="enumvalue"><name>SmoothnessIndicator</name></member>
     <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a1e0aee6ae6868462b39b89feb0525c0c" kind="enumvalue"><name>Kuzmin</name></member>
     <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a6f7f47908e2a9e3ed9862b8aae31b154" kind="enumvalue"><name>ImplicitEV</name></member>
+    <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a923b5fd7dc0ac6f70f77bcc7ec3f5546" kind="enumvalue"><name>Compatible</name></member>
     <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a901d6c7955b386e829ac22a2a7f39da2" kind="enumvalue"><name>Galerkin</name></member>
     <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a8f927b2e2063d49e679713b6b26f53a2" kind="enumvalue"><name>EV_Stab</name></member>
     <member refid="namespaceproteus_1a25ed6eb07c8d0c08b165a8b23786cc11a7d1d2cb7137377b1b69595c11e8f30df" kind="enumvalue"><name>EntropyViscosity</name></member>
@@ -3524,6 +3625,8 @@
     <member refid="namespaceproteus_1a94cac08291d32757f8e18db090d6b394" kind="function"><name>__cpp_eta_short</name></member>
     <member refid="namespaceproteus_1a5e07508f4e335ae785e3068d2925fea4" kind="function"><name>__cpp_eta_long</name></member>
   </compound>
+  <compound refid="namespaceproteus_1_1_0d125354253307175024252306173025307207141250240032" kind="namespace"><name>proteus::@125354253307175024252306173025307207141250240032</name>
+  </compound>
   <compound refid="namespaceproteus_1_1detail" kind="namespace"><name>proteus::detail</name>
     <member refid="namespaceproteus_1_1detail_1a871525f59cadf9b0e428ca92d380765e" kind="function"><name>print_map</name></member>
     <member refid="namespaceproteus_1_1detail_1ac67772aafdb8b2d80aedb75e7179f501" kind="function"><name>key_error_messagei</name></member>
@@ -3538,7 +3641,8 @@
   </compound>
   <compound refid="namespaceproteus_1_1m__comp__co2_1_1psk" kind="namespace"><name>proteus::m_comp_co2::psk</name>
     <member refid="namespaceproteus_1_1m__comp__co2_1_1psk_1a8d6f3d1d99e7e1172d895210cc88e11e" kind="function"><name>vgm_pc_from_Se</name></member>
-    <member refid="namespaceproteus_1_1m__comp__co2_1_1psk_1aec4a7d56ee016b1695c103d215eaaf1d" kind="function"><name>bc_pc_from_Se</name></member>
+    <member refid="namespaceproteus_1_1m__comp__co2_1_1psk_1a1d6df830df671d2c56176823100adc61" kind="function"><name>bc_pc_from_Se</name></member>
+    <member refid="namespaceproteus_1_1m__comp__co2_1_1psk_1a71ca5092eb6d01ef89e572972814ca97" kind="function"><name>bc_Se_from_pc</name></member>
     <member refid="namespaceproteus_1_1m__comp__co2_1_1psk_1aa5eeb910eb9f8ec2ae33d1578968c343" kind="function"><name>vgm_wetting_from_Se</name></member>
     <member refid="namespaceproteus_1_1m__comp__co2_1_1psk_1a17742852fa039b96f5aeee7f5e71a855" kind="function"><name>vgm_kr_nonwetting_from_Se</name></member>
     <member refid="namespaceproteus_1_1m__comp__co2_1_1psk_1a2b23e0d3d3f34f44426a079f44e90fe2" kind="function"><name>bc_wetting_from_Se</name></member>
@@ -3558,6 +3662,7 @@
     <member refid="namespaceproteus_1_1richards_1_1psk_1a961e8c77edbc7dff02774f2f45ca019aa23dca69dce76105c7e4596b10ce0ef57" kind="enumvalue"><name>mualem</name></member>
     <member refid="namespaceproteus_1_1richards_1_1psk_1a29c1fb08bda2b0a4f5c83387bbfbca03" kind="variable"><name>gardner_alphaPsiCMax</name></member>
     <member refid="namespaceproteus_1_1richards_1_1psk_1a77b50fe56881bb68b9c90b181e85ea0d" kind="variable"><name>gardner_alphaPsiMax</name></member>
+    <member refid="namespaceproteus_1_1richards_1_1psk_1a9e1c39790484b27e3f717e671363ddb1" kind="variable"><name>hm_uMin</name></member>
     <member refid="namespaceproteus_1_1richards_1_1psk_1a6febf9b520d9188bfa25288161e77e31" kind="function"><name>vgm_wetting</name></member>
     <member refid="namespaceproteus_1_1richards_1_1psk_1a091eaae43a2e8751c8d56e12c64a0229" kind="function"><name>vgm_invert_analytic</name></member>
     <member refid="namespaceproteus_1_1richards_1_1psk_1ab79b2fa1dc46fb8a6180f13d775bdfb0" kind="function"><name>vgm_invert_newton</name></member>
@@ -3568,6 +3673,9 @@
     <member refid="namespaceproteus_1_1richards_1_1psk_1adfdbbb230f30b1a918ccb5f7421e9fab" kind="function"><name>gardner_wetting</name></member>
     <member refid="namespaceproteus_1_1richards_1_1psk_1a13b1955ab3c613873c1adae13b3b7dfa" kind="function"><name>gardner_invert_analytic</name></member>
     <member refid="namespaceproteus_1_1richards_1_1psk_1aadddb07483ee3084bca2ee7333998df7" kind="function"><name>gardner_invert_newton</name></member>
+    <member refid="namespaceproteus_1_1richards_1_1psk_1abe88f771f2faa16ba3a2c75255391bda" kind="function"><name>hm_wetting</name></member>
+    <member refid="namespaceproteus_1_1richards_1_1psk_1afa2ff3289aadf6bccf7b52b7cb837167" kind="function"><name>hm_invert_analytic</name></member>
+    <member refid="namespaceproteus_1_1richards_1_1psk_1acfc005e5d7483bf3ffb534f80d7b5ab0" kind="function"><name>hm_invert_newton</name></member>
   </compound>
   <compound refid="namespacestd" kind="namespace"><name>std</name>
   </compound>
@@ -6756,26 +6864,26 @@
     <member refid="group__transport_coefficients_1ga36b852b09ba4126285abda81ca4eb0cc" kind="function"><name>diffusiveWave1DEvaluate</name></member>
     <member refid="group__transport_coefficients_1ga536a0e7c5e62847af14d66c3975eb64c" kind="function"><name>diffusiveWave2DEvaluate</name></member>
   </compound>
-  <compound refid="dir_6a41ba4fcc8fadff7e03ca8e6ec8eb22" kind="dir"><name>cekees</name>
+  <compound refid="dir_1cc05c501d8cac047631784077bc5a41" kind="dir"><name>cekees</name>
   </compound>
-  <compound refid="dir_825f6199e484400661c435337081f1f3" kind="dir"><name>elastoplastic</name>
+  <compound refid="dir_dfffd7de7428449726c38887106401ed" kind="dir"><name>elastoplastic</name>
   </compound>
-  <compound refid="dir_f279a3b29b132581096b80fb6c2fefe8" kind="dir"><name>fenton</name>
+  <compound refid="dir_b5a0693d79bfd89ed988ce8e96995458" kind="dir"><name>fenton</name>
   </compound>
-  <compound refid="dir_38679b314f4ce5cccc9eab63757bd2f2" kind="dir"><name>m_comp_co2</name>
+  <compound refid="dir_43e0a1f539e00dcfa1a6bc4d4fee4fc2" kind="dir"><name>home</name>
   </compound>
-  <compound refid="dir_76264cfb9f065ca04459e9843096d878" kind="dir"><name>mbd</name>
+  <compound refid="dir_5e2d1c02d48022029049f36ee0dc9c8b" kind="dir"><name>m_comp_co2</name>
   </compound>
-  <compound refid="dir_003bada6c2f39cd2c9b1e07fb07e87a8" kind="dir"><name>MeshAdaptPUMI</name>
+  <compound refid="dir_4a15ae6d31b7a3c4dd8b7c991aad5a4b" kind="dir"><name>mbd</name>
   </compound>
-  <compound refid="dir_4023cf0ade609e98ecb331a95cbd1bf2" kind="dir"><name>mprans</name>
+  <compound refid="dir_700a1e7a9add93be4ec5c52cc2f5ef50" kind="dir"><name>MeshAdaptPUMI</name>
   </compound>
-  <compound refid="dir_5e5fa730ff5e11a1582594e87e2d7860" kind="dir"><name>proteus</name>
+  <compound refid="dir_bc48c632eb68dad5a6c46534334e536b" kind="dir"><name>mprans</name>
   </compound>
-  <compound refid="dir_52b99211ce3e1408dd01b9aa565040ce" kind="dir"><name>proteus</name>
+  <compound refid="dir_29fd2e8429a79e49975bb899d513e9ac" kind="dir"><name>proteus</name>
   </compound>
-  <compound refid="dir_5407de208dd5f9328c10b295ecaa3a89" kind="dir"><name>richards</name>
+  <compound refid="dir_1964ec684a6c6c10951fec3b1b85504e" kind="dir"><name>proteus-1.9.1-docs</name>
   </compound>
-  <compound refid="dir_8e37b9d33140d6009518b7a0bb5633b7" kind="dir"><name>work</name>
+  <compound refid="dir_90080921ffc0f47451b46e6a535424c7" kind="dir"><name>richards</name>
   </compound>
 </doxygenindex>

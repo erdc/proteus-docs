@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>proteus.TransportCoefficients module &mdash; Proteus 1.9.0 documentation</title>
+  <title>proteus.TransportCoefficients module &mdash; Proteus 1.9.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
@@ -15,9 +15,10 @@
     <link rel="shortcut icon" href="../_static/tritonBorder.ico"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=c4cb232b"></script>
+      <script src="../_static/documentation_options.js?v=60b3a732"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script>window.MathJax = {"tex": {"macros": {"grad": "\\nabla", "deld": "\\nabla\\cdot", "outer": "\\otimes", "ds": "\\,\\mathrm{d}s", "ten": ["\\mathbf{#1}", 1], "mat": ["\\mathbf{#1}", 1], "pd": ["\\frac{\\partial #1}{\\partial #2}", 2], "od": ["\\frac{\\mathrm{d} #1}{\\mathrm{d} #2}", 2]}}}</script>
       <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -103,6 +104,12 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Models</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../models/adr.html">Advection-Diffusion-Reaction with Unfitted Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/adr.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/adr.html#running-the-test-problems">Running the test problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/adr.html#reference">Reference</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../models/navier_stokes.html">Multiphase Navier-Stokes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#two-phase">Two-Phase</a></li>
@@ -1794,7 +1801,7 @@ and archiving) and a structure defining the sparsity pattern
 of diffusion tensors may also be provided.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="proteus.TransportCoefficients.RedistanceLevelSetWithWeakPenalty.redistanceLevelSetCoefficientsWithWeakPenaltyEvaluate">
-<span class="sig-name descname"><span class="pre">redistanceLevelSetCoefficientsWithWeakPenaltyEvaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Lambda_penalty</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_levelSet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grad_u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dH</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dr</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TransportCoefficients.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.TransportCoefficients.RedistanceLevelSetWithWeakPenalty.redistanceLevelSetCoefficientsWithWeakPenaltyEvaluate" title="Link to this definition"></a></dt>
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">redistanceLevelSetCoefficientsWithWeakPenaltyEvaluate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Lambda_penalty</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_levelSet</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grad_u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">m</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dm</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">H</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dH</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dr</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TransportCoefficients.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.TransportCoefficients.RedistanceLevelSetWithWeakPenalty.redistanceLevelSetCoefficientsWithWeakPenaltyEvaluate" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -1939,13 +1946,13 @@ of diffusion tensors may also be provided.</p>
 \[\deld \bar{\vec v} = 0\]</div>
 <div class="math notranslate nohighlight">
 \[\pd{\bar{\vec v}}{t} + \deld \left(\bar{\vec v} \outer \bar{\vec v}\right)
-        -\nu \deld \ten \bar{D} + \frac{1}{\rho}\grad \bar p
-        - \frac{1}{rho}\deld \ten{R} = 0\]</div>
+        -\nu \deld \ten{\bar{D}} + \frac{1}{\rho}\grad \bar p
+        - \frac{1}{\rho}\deld \ten{R} = 0\]</div>
 <p>Reynolds stress term</p>
 <div class="math notranslate nohighlight">
 \[\ten R = -\rho &lt;\vec v^{'}\outer \vec v^{'}&gt;
 \frac{1}{\rho}\ten{R} = 2 \nu_t \bar{D} - \frac{2}{3}k\ten{I}
-D_{ij}(\vec v) = \frac{1}{2} \left( \pd{v_i}{x_j} + \pd{v_j}{x_i})
+D_{ij}(\vec v) = \frac{1}{2} \left( \pd{v_i}{x_j} + \pd{v_j}{x_i}\right)
 \ten D \bar{\ten D} = D(&lt;\vec v&gt;), \ten D^{'} = \ten D(\vec v^{'})\]</div>
 <p>k-epsilon tranport equations</p>
 <div class="math notranslate nohighlight">
@@ -2013,13 +2020,13 @@ independently and lagged in time</p>
 <div class="math notranslate nohighlight">
 \[\deld \bar{\vec v} = 0
 \pd{\bar{\vec v}}{t} + \deld \left(\bar{\vec v} \outer \bar{\vec v}\right)
-        -\nu \deld \ten \bar{D} + \frac{1}{\rho}\grad \bar p
-        - \frac{1}{rho}\deld \ten{R} = 0\]</div>
+        -\nu \deld \ten{\bar{D}} + \frac{1}{\rho}\grad \bar p
+        - \frac{1}{\rho}\deld \ten{R} = 0\]</div>
 <p>Reynolds stress term</p>
 <div class="math notranslate nohighlight">
 \[\ten R = -\rho &lt;\vec v^{'}\outer \vec v^{'}&gt;
 \frac{1}{\rho}\ten{R} = 2 \nu_t \bar{D} - \frac{2}{3}k\ten{I}
-D_{ij}(\vec v) = \frac{1}{2} \left( \pd{v_i}{x_j} + \pd{v_j}{x_i})
+D_{ij}(\vec v) = \frac{1}{2} \left( \pd{v_i}{x_j} + \pd{v_j}{x_i}\right)
 \ten D \bar{\ten D} = D(&lt;\vec v&gt;), \ten D^{'} = \ten D(\vec v^{'})\]</div>
 <p>k-epsilon tranport equations</p>
 <div class="math notranslate nohighlight">
@@ -2100,13 +2107,13 @@ Chaper 11 but solves for just epsilon assuming k lagged</p>
 <div class="math notranslate nohighlight">
 \[\deld \bar{\vec v} = 0
 \pd{\bar{\vec v}}{t} + \deld \left(\bar{\vec v} \outer \bar{\vec v}\right)
-        -\nu \deld \ten \bar{D} + \frac{1}{\rho}\grad \bar p
-        - \frac{1}{rho}\deld \ten{R} = 0\]</div>
+        -\nu \deld \ten{\bar{D}} + \frac{1}{\rho}\grad \bar p
+        - \frac{1}{\rho}\deld \ten{R} = 0\]</div>
 <p>Reynolds stress term</p>
 <div class="math notranslate nohighlight">
 \[\ten R = -\rho &lt;\vec v^{'}\outer \vec v^{'}&gt;
 \frac{1}{\rho}\ten{R} = 2 \nu_t \bar{D} - \frac{2}{3}k\ten{I}
-D_{ij}(\vec v) = \frac{1}{2} \left( \pd{v_i}{x_j} + \pd{v_j}{x_i})
+D_{ij}(\vec v) = \frac{1}{2} \left( \pd{v_i}{x_j} + \pd{v_j}{x_i}\right)
 \ten D \bar{\ten D} = D(&lt;\vec v&gt;), \ten D^{'} = \ten D(\vec v^{'})\]</div>
 <p>k-epsilon tranport equations</p>
 <div class="math notranslate nohighlight">
@@ -2308,10 +2315,9 @@ of diffusion tensors may also be provided.</p>
 <span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">proteus.TransportCoefficients.</span></span><span class="sig-name descname"><span class="pre">BuckleyLeverettLiuExample</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nd</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/TransportCoefficients.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.TransportCoefficients.BuckleyLeverettLiuExample" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="#proteus.TransportCoefficients.TC_base" title="proteus.TransportCoefficients.TC_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">TC_base</span></code></a></p>
 <p>5 spot example from Liu 93 Siam paper.</p>
-<p>S_t + deld (
-ec a f(S)) = 0</p>
+<p>S_t + deld (vec a f(S)) = 0</p>
 <p>f(S) = S^2 / (0.2 - 0.4 S + 1.2 S^2)</p>
-<p>ec a = (pd{phi}{x},pd{phi}{y})</p>
+<p>vec a = (pd{phi}{x},pd{phi}{y})</p>
 <p>phi = 0.01 log(sqrt{x^2 + y^2})</p>
 <p>However, note that his example is for
 S=0 injecting into S=1 background saturation using his definition of f</p>

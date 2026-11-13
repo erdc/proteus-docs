@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>proteus.richards.Richards module &mdash; Proteus 1.9.0 documentation</title>
+  <title>proteus.richards.Richards module &mdash; Proteus 1.9.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
@@ -15,7 +15,7 @@
     <link rel="shortcut icon" href="../_static/tritonBorder.ico"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=c4cb232b"></script>
+      <script src="../_static/documentation_options.js?v=60b3a732"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/js/theme.js"></script>
@@ -102,6 +102,12 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Models</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../models/adr.html">Advection-Diffusion-Reaction with Unfitted Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/adr.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/adr.html#running-the-test-problems">Running the test problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/adr.html#reference">Reference</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../models/navier_stokes.html">Multiphase Navier-Stokes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#two-phase">Two-Phase</a></li>
@@ -170,12 +176,39 @@
              
   <section id="module-proteus.richards.Richards">
 <span id="proteus-richards-richards-module"></span><h1>proteus.richards.Richards module<a class="headerlink" href="#module-proteus.richards.Richards" title="Link to this heading"></a></h1>
+<dl class="py data">
+<dt class="sig sig-object py" id="proteus.richards.Richards.DIAGNOSTICS">
+<span class="sig-prename descclassname"><span class="pre">proteus.richards.Richards.</span></span><span class="sig-name descname"><span class="pre">DIAGNOSTICS</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'boundary_flux':</span> <span class="pre">'the</span> <span class="pre">exterior-boundary</span> <span class="pre">water-flux</span> <span class="pre">decomposition,</span> <span class="pre">once</span> <span class="pre">per</span> <span class="pre">step</span> <span class="pre">(LevelModel._logBoundaryFluxSplit)',</span> <span class="pre">'edge_flux':</span> <span class="pre">'the</span> <span class="pre">per-edge</span> <span class="pre">water</span> <span class="pre">fluxes</span> <span class="pre">exported</span> <span class="pre">to</span> <span class="pre">a</span> <span class="pre">coupled</span> <span class="pre">transport</span> <span class="pre">model,</span> <span class="pre">once</span> <span class="pre">per</span> <span class="pre">accepted</span> <span class="pre">step</span> <span class="pre">(LevelModel._logEdgeFluxExport),</span> <span class="pre">and</span> <span class="pre">the</span> <span class="pre">nodal</span> <span class="pre">flux</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">rebuilt</span> <span class="pre">edge</span> <span class="pre">velocity',</span> <span class="pre">'fct':</span> <span class="pre">&quot;the</span> <span class="pre">FCT</span> <span class="pre">step's</span> <span class="pre">limiter</span> <span class="pre">statistics</span> <span class="pre">and</span> <span class="pre">the</span> <span class="pre">veto</span> <span class="pre">on</span> <span class="pre">a</span> <span class="pre">large</span> <span class="pre">correction&quot;}</span></span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.DIAGNOSTICS" title="Link to this definition"></a></dt>
+<dd><p>the run-time diagnostics a Richards model can log, each off by default since
+it costs MPI reductions every step or call.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#proteus.richards.Richards.Coefficients" title="proteus.richards.Richards.Coefficients">Coefficients</a>(diagnostics=…)</p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py class">
 <dt class="sig sig-object py" id="proteus.richards.Richards.ThetaScheme">
-<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">proteus.richards.Richards.</span></span><span class="sig-name descname"><span class="pre">ThetaScheme</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transport</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integrateInterpolationPoints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.ThetaScheme" title="Link to this definition"></a></dt>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">proteus.richards.Richards.</span></span><span class="sig-name descname"><span class="pre">ThetaScheme</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">transport</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integrateInterpolationPoints</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.ThetaScheme" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.TimeIntegration.html#proteus.TimeIntegration.BackwardEuler" title="proteus.TimeIntegration.BackwardEuler"><code class="xref py py-class docutils literal notranslate"><span class="pre">BackwardEuler</span></code></a></p>
+<p>Two-level theta method for the Richards LevelModel.</p>
+<p>The storage term is always (m(u^{n+1}) - m(u^n))/dt; the Galerkin flux terms
+are weighted theta*F(u^{n+1}) + (1-theta)*F(u^n). theta = 1 (default) is
+backward Euler and theta = 1/2 is Crank-Nicolson. Set it in the numerics
+file with <code class="docutils literal notranslate"><span class="pre">timeIntegrationTheta</span> <span class="pre">=</span> <span class="pre">0.5</span></code>.</p>
+<p>With STABILIZATION_TYPE=0 the theta weighting applies to the Galerkin
+element integrals (exterior boundary fluxes stay implicit). With the
+edge-based schemes the low-order operator stays backward Euler and theta
+enters only the high-order flux used to build the FCT correction.</p>
 <p>Set flags that indicate that all terms
 are implicit.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="proteus.richards.Richards.ThetaScheme.setFromOptions">
+<span class="sig-name descname"><span class="pre">setFromOptions</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nOptions</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.ThetaScheme.setFromOptions" title="Link to this definition"></a></dt>
+<dd><p>allow classes to set various numerical parameters</p>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="proteus.richards.Richards.ThetaScheme.updateTimeHistory">
 <span class="sig-name descname"><span class="pre">updateTimeHistory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">resetFromDOF</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.ThetaScheme.updateTimeHistory" title="Link to this definition"></a></dt>
@@ -192,7 +225,7 @@ are implicit.</p>
 are implicit.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="proteus.richards.Richards.RKEV.TimeIntegration">
-<span class="sig-name descname"><span class="pre">TimeIntegration</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;module</span> <span class="pre">'proteus.TimeIntegration'</span> <span class="pre">from</span> <span class="pre">'/work/cekees/proteus/proteus/TimeIntegration.py'&gt;</span></span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.RKEV.TimeIntegration" title="Link to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">TimeIntegration</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;module</span> <span class="pre">'proteus.TimeIntegration'</span> <span class="pre">from</span> <span class="pre">'/home/cekees/proteus-1.9.1-docs/proteus/TimeIntegration.py'&gt;</span></span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.RKEV.TimeIntegration" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -254,7 +287,7 @@ mwf not used right now</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="proteus.richards.Richards.Coefficients">
-<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">proteus.richards.Richards.</span></span><span class="sig-name descname"><span class="pre">Coefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ksw_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vgm_n_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vgm_alpha_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetaR_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetaSR_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gravity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">density</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PSK_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'VG'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diagonal_conductivity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">getSeepageFace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">penalty_constant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">penalty_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">density_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">DENSITY_MODEL</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">STABILIZATION_TYPE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Implicit_FCT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ENTROPY_TYPE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LUMPED_MASS_MATRIX</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MONOLITHIC</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VMS</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SC</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FCT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_fct_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uL</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cK</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputQuantDOFs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forceStrongConditions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.Coefficients" title="Link to this definition"></a></dt>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">proteus.richards.Richards.</span></span><span class="sig-name descname"><span class="pre">Coefficients</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ksw_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vgm_n_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vgm_alpha_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetaR_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetaSR_types</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gravity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">density</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">PSK_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'VG'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diagonal_conductivity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">getSeepageFace</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">penalty_constant</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">penalty_power</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">density_model</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">DENSITY_MODEL</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">STABILIZATION_TYPE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'Implicit_FCT'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ENTROPY_TYPE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LUMPED_MASS_MATRIX</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">MONOLITHIC</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VMS</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">SC</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FCT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_fct_iter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FCT_SATURATED_LOW_ORDER</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FCT_TYPE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'semi-implicit'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FCT_PRELIMITER_POWER</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FCT_PRELIMITER_VARIABLE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'pressure'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LSCHEME_L</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">VG_AIR_ENTRY</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FCT_BND_DIFF</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FCT_BND_KRW</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FCT_BND_RESET</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">BC_CONS</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FCT_DU_MAX</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">NONLINEAR_SOLVER</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LSCHEME_RETRY_ITS</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LSCHEME_TRIGGER</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'residual'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">LSCHEME_THETA_MAX</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FCT_PREDICTOR_FALLBACK</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cE</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uL</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cK</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1.0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outputQuantDOFs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">forceStrongConditions</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mms_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diagnostics</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fct_diagnostics_zcut</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">9.5</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.Coefficients" title="Link to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="proteus.TransportCoefficients.html#proteus.TransportCoefficients.TC_base" title="proteus.TransportCoefficients.TC_base"><code class="xref py py-class docutils literal notranslate"><span class="pre">TC_base</span></code></a></p>
 <p>version of Re where element material type id’s used in evals</p>
 <p>Set the number of components (equations) of the
@@ -264,12 +297,12 @@ and archiving) and a structure defining the sparsity pattern
 of diffusion tensors may also be provided.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="proteus.richards.Richards.Coefficients.conservativeHeadRichardsMualemVanGenuchtenHetEvaluateV2">
-<span class="sig-name descname"><span class="pre">conservativeHeadRichardsMualemVanGenuchtenHetEvaluateV2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gravity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetaR</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetaSR</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">KWs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">da</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.Coefficients.conservativeHeadRichardsMualemVanGenuchtenHetEvaluateV2" title="Link to this definition"></a></dt>
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">conservativeHeadRichardsMualemVanGenuchtenHetEvaluateV2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">materialTypes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gravity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetaR</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetaSR</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">KWs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">da</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.Coefficients.conservativeHeadRichardsMualemVanGenuchtenHetEvaluateV2" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="proteus.richards.Richards.Coefficients.conservativeHeadRichardsMualemVanGenuchten_sd_het">
-<span class="sig-name descname"><span class="pre">conservativeHeadRichardsMualemVanGenuchten_sd_het</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">colind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">materialTypes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gravity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetaR</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetaSR</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">KWs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">da</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vol_frac</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linearize_at_zero</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pc_eps</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.Coefficients.conservativeHeadRichardsMualemVanGenuchten_sd_het" title="Link to this definition"></a></dt>
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">conservativeHeadRichardsMualemVanGenuchten_sd_het</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rowptr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">materialTypes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gravity</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">alpha</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetaR</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">thetaSR</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">KWs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dmass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">da</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vol_frac</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">linearize_at_zero</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pc_eps</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.Coefficients.conservativeHeadRichardsMualemVanGenuchten_sd_het" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -375,6 +408,42 @@ build a nonlinear phi</p></li>
 <dd></dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="proteus.richards.Richards.LevelModel.checkFCTParallelLayout">
+<span class="sig-name descname"><span class="pre">checkFCTParallelLayout</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.LevelModel.checkFCTParallelLayout" title="Link to this definition"></a></dt>
+<dd><p>Refuse a partition on which an OWNED DOF misses part of its element star.</p>
+<p>The FCT limiters (both FCT_TYPEs) are nonlinear in the assembled rows (ML, MC, the
+flux matrices, P_i, Q_i), so a row must be complete at every owned DOF. An additive
+residual does not need this, which is why Galerkin and the low order still agree with
+serial on such partitions. Element partitioning with nLayersOfOverlapForParallel = 0
+violates it: a node on the cut is owned by one rank but sees only that rank’s elements
+(Hornung-Messing h = 1/16, 2 ranks: WRR FCT 2.8e-3 vs 6.8e-5 serial). Element
+partitioning with overlap &gt;= 1 and node partitioning both pass.</p>
+<p>Test: ownedElementStarsIncomplete().</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="proteus.richards.Richards.LevelModel.ownedElementStarsIncomplete">
+<span class="sig-name descname"><span class="pre">ownedElementStarsIncomplete</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.LevelModel.ownedElementStarsIncomplete" title="Link to this definition"></a></dt>
+<dd><p>Global number of owned DOFs whose element star is not entirely on their rank (0 in serial).</p>
+<p>The number of local elements containing each owned DOF must equal its global count,
+which is assembled by a reverse-add of the counts over the uniquely owned elements
+(eN &lt; nElements_owned). Rows of element-assembled matrices (ML, MC, …) are complete
+at owned DOFs exactly when this is 0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="proteus.richards.Richards.LevelModel.femL2Norm">
+<span class="sig-name descname"><span class="pre">femL2Norm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lumped</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.LevelModel.femL2Norm" title="Link to this definition"></a></dt>
+<dd><p>Finite element L2 norm of a nodal vector x (free DOFs, local numbering with ghosts).</p>
+<p>||x||_{L2} = sqrt(sum_{i owned} x_i (M_C x)_i), M_C the consistent mass matrix, i.e. the
+L2(Omega) norm of the finite element function with these nodal values (the quantity
+MFEM’s GridFunction::ComputeL2Error(0) evaluates). lumped=True uses M_L instead.
+x must hold current ghost values. The consistent version needs complete rows of M_C
+at owned DOFs (node partitioning, or element partitioning with overlap &gt;= 1); it
+raises otherwise. Used by NonlinearSolvers for unorm = ‘L2’ / ‘L2_lumped’.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="proteus.richards.Richards.LevelModel.ghostScatter">
 <span class="sig-name descname"><span class="pre">ghostScatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">arrays</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.LevelModel.ghostScatter" title="Link to this definition"></a></dt>
 <dd><p>Forward-insert (owner -&gt; ghost copy) each free-DOF array.  No-op in serial.</p>
@@ -390,6 +459,55 @@ always holds the complete value, so an insert scatter repairs every ghost.</p>
 shuttled through u[0].dof (the same idiom as mphase_co2/m_comp_co2).
 Integer arrays round-trip exactly: they only ever carry small whole numbers
 (0/1 flags, material indices).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="proteus.richards.Richards.LevelModel.lschemeOn">
+<span class="sig-name descname"><span class="pre">lschemeOn</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.LevelModel.lschemeOn" title="Link to this definition"></a></dt>
+<dd><p>True when the next residual should assemble the L-scheme matrix instead of the Jacobian.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="proteus.richards.Richards.LevelModel.setLScheme">
+<span class="sig-name descname"><span class="pre">setLScheme</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">on</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.LevelModel.setLScheme" title="Link to this definition"></a></dt>
+<dd><p>Newton’s switch for NONLINEAR_SOLVER=’hybrid’ (takes effect at the next residual).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="proteus.richards.Richards.LevelModel.nonlinearHybridOptions">
+<span class="sig-name descname"><span class="pre">nonlinearHybridOptions</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.LevelModel.nonlinearHybridOptions" title="Link to this definition"></a></dt>
+<dd><p>Options Newton reads for NONLINEAR_SOLVER=’hybrid’, else None.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="proteus.richards.Richards.LevelModel.defectCorrection">
+<span class="sig-name descname"><span class="pre">defectCorrection</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.LevelModel.defectCorrection" title="Link to this definition"></a></dt>
+<dd><p>True when the current Galerkin solve uses the L-scheme matrix (assembled by the edge kernel).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="proteus.richards.Richards.LevelModel.kernelStabilizationType">
+<span class="sig-name descname"><span class="pre">kernelStabilizationType</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.LevelModel.kernelStabilizationType" title="Link to this definition"></a></dt>
+<dd><p>STABILIZATION_TYPE passed to the kernels. The implicit FCT changes it per phase:
+Galerkin for the predictor, the edge-based low order for the flux evaluation, and
+Implicit_FCT (the low order plus the limited correction) for the final solve.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="proteus.richards.Richards.LevelModel.fctPredictorFallback">
+<span class="sig-name descname"><span class="pre">fctPredictorFallback</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.LevelModel.fctPredictorFallback" title="Link to this definition"></a></dt>
+<dd><p>Called by Newton when the implicit FCT’s Galerkin predictor failed. Switches this step’s
+predictor to the low-order operator and returns True, or returns False (no fallback).</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="proteus.richards.Richards.LevelModel.ImplicitFCTStep">
+<span class="sig-name descname"><span class="pre">ImplicitFCTStep</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.LevelModel.ImplicitFCTStep" title="Link to this definition"></a></dt>
+<dd><p>Implicit FCT (JNMA), called by Newton after each converged solve.</p>
+<p>After the Galerkin predictor: evaluate the fluxes at p^H, limit them, store the
+correction in fluxCorrection and ask Newton (fct_resolve) for the final low-order
+solve, M_L (m(p) - m^{n,FCT})/dt + A~(p) u(p) = 0, starting from p^H.
+After the final solve: nothing to do but rearm the predictor.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -417,6 +535,20 @@ Integer arrays round-trip exactly: they only ever carry small whole numbers
 <dt class="sig sig-object py" id="proteus.richards.Richards.LevelModel.getResidual">
 <span class="sig-name descname"><span class="pre">getResidual</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.LevelModel.getResidual" title="Link to this definition"></a></dt>
 <dd><p>Calculate the element residuals and add in to the global residual</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="proteus.richards.Richards.LevelModel.computeEdgeVelocity">
+<span class="sig-name descname"><span class="pre">computeEdgeVelocity</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.LevelModel.computeEdgeVelocity" title="Link to this definition"></a></dt>
+<dd><p>Fill q[(‘velocity_edge’,0)] with the velocity whose nodal fluxes are
+this step’s realized edge fluxes (Richards.h calculateEdgeVelocity),</p>
+<blockquote>
+<div><p>int rho v.grad(w_i) dV = sum_j E_ij,  E_ij = edgeFluxLow_ij + limitedFlux_ij/dt.</p>
+</div></blockquote>
+<p>Call once per step after the Newton solve and FCTStep: limitedFlux is
+only final then, and it stays zero with FCT off.  Needs
+STABILIZATION_TYPE 1 or 2, the only types whose residual fills
+edgeFluxLow and whose FCT correction is limitedFlux.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -469,6 +601,37 @@ and the shape information at the quadrature points on global element boundaries.
 <dt class="sig sig-object py" id="proteus.richards.Richards.LevelModel.calculateAuxiliaryQuantitiesAfterStep">
 <span class="sig-name descname"><span class="pre">calculateAuxiliaryQuantitiesAfterStep</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.LevelModel.calculateAuxiliaryQuantitiesAfterStep" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="proteus.richards.Richards.LevelModel.acceptedMass">
+<span class="sig-name descname"><span class="pre">acceptedMass</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.LevelModel.acceptedMass" title="Link to this definition"></a></dt>
+<dd><p>The mass of the step just accepted: the limited mass when the semi-implicit FCT applied its
+correction (mAccepted); otherwise mLow, which the implicit FCT’s final solve also leaves its
+accepted mass in, and which without FCT is the solution.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="proteus.richards.Richards.LevelModel.exportTransportFluxes">
+<span class="sig-name descname"><span class="pre">exportTransportFluxes</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/richards/Richards.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.richards.Richards.LevelModel.exportTransportFluxes" title="Link to this definition"></a></dt>
+<dd><p>Realized fluid exchanges of the step just accepted, for the compatible transport.</p>
+<p>With E~_ij the row-i edge flux the residual used (low order, plus alpha_ij f_ij / dt
+when the FCT correction was applied) and b_i the boundary integral (into the domain),
+the accepted step satisfies, up to the solver residual r_i,</p>
+<blockquote>
+<div><p>M_L,i (m_i^{n+1} - m_i^n) / dt = sum_j E~_ij + b_i - r_i.</p>
+</div></blockquote>
+<p>E~ is antisymmetric except on faces with a weak Dirichlet condition, whose penalty and
+adjoint terms enter the stiffness matrix unsymmetrically, so the export splits it into
+E_ij = (E~_ij - E~_ji)/2, which the transport uses, and the symmetric remainder, which
+the transport sees as boundary exchange through B_i = M_L,i dm_i/dt - sum_j E_ij.
+Espatial is E without the consistent-mass part of the correction; the transport
+reconstructs its dispersion velocity from it.</p>
+<p>m^n is the old-time mass this step balanced, rho_T(c^n) theta(p^n). The transport adds
+exactly this increment to its carried storage, so the two balances agree. (Taking m^n
+from the previous step’s m^{n+1} instead turns every concentration change into a fluid
+source M_L (rho_T(c^n) - rho_T(c^{n-1})) theta / dt: at a strongly imposed concentration
+node in the first steps of the levee case, dt = 1e-8 d, the flow Newton cannot absorb it.)</p>
+</dd></dl>
 
 </dd></dl>
 

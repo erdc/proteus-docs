@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>proteus.PostProcessingTools module &mdash; Proteus 1.9.0 documentation</title>
+  <title>proteus.PostProcessingTools module &mdash; Proteus 1.9.1 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
@@ -15,9 +15,10 @@
     <link rel="shortcut icon" href="../_static/tritonBorder.ico"/>
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=c4cb232b"></script>
+      <script src="../_static/documentation_options.js?v=60b3a732"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script>window.MathJax = {"tex": {"macros": {"grad": "\\nabla", "deld": "\\nabla\\cdot", "outer": "\\otimes", "ds": "\\,\\mathrm{d}s", "ten": ["\\mathbf{#1}", 1], "mat": ["\\mathbf{#1}", 1], "pd": ["\\frac{\\partial #1}{\\partial #2}", 2], "od": ["\\frac{\\mathrm{d} #1}{\\mathrm{d} #2}", 2]}}}</script>
       <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -103,6 +104,12 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Models</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../models/adr.html">Advection-Diffusion-Reaction with Unfitted Interfaces</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../models/adr.html#description">Description</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/adr.html#running-the-test-problems">Running the test problems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../models/adr.html#reference">Reference</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../models/navier_stokes.html">Multiphase Navier-Stokes</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#description">Description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../models/navier_stokes.html#two-phase">Two-Phase</a></li>
@@ -287,47 +294,47 @@ source terms.</p>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0potentialFromP1nc">
-<span class="sig-name descname"><span class="pre">postProcessRT0potentialFromP1nc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elementBarycenters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aElementQuadWeights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detJ</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uQuadratureWeights_elementBoundary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_elementBoundary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_elementBoundary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0vdofs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0potential</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0potentialFromP1nc" title="Link to this definition"></a></dt>
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">postProcessRT0potentialFromP1nc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">uQuadratureWeights_element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementBarycenters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aElementQuadWeights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detJ</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uQuadratureWeights_elementBoundary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_elementBoundary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_elementBoundary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0vdofs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0potential</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0potentialFromP1nc" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0potentialFromP1nc_sd">
-<span class="sig-name descname"><span class="pre">postProcessRT0potentialFromP1nc_sd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">colind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uQuadratureWeights_element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementBarycenters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aElementQuadWeights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detJ</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uQuadratureWeights_elementBoundary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_elementBoundary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_elementBoundary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0vdofs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0potential</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0potentialFromP1nc_sd" title="Link to this definition"></a></dt>
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">postProcessRT0potentialFromP1nc_sd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rowptr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uQuadratureWeights_element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementBarycenters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">aElementQuadWeights</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detJ</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uQuadratureWeights_elementBoundary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_elementBoundary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_elementBoundary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0vdofs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0potential</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0potentialFromP1nc_sd" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0velocityFromP1nc">
-<span class="sig-name descname"><span class="pre">postProcessRT0velocityFromP1nc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">freeLocal_element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detJ</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sqrt_det_g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementBarycenters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quad_a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quad_f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_dV_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0vdofs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_dV_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0velocityFromP1nc" title="Link to this definition"></a></dt>
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">postProcessRT0velocityFromP1nc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nFreeDOF_element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freeLocal_element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detJ</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sqrt_det_g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementBarycenters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quad_a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quad_f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_dV_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0vdofs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_dV_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0velocityFromP1nc" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0velocityFromP1nc_sd">
-<span class="sig-name descname"><span class="pre">postProcessRT0velocityFromP1nc_sd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">colind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nFreeDOF_element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freeLocal_element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detJ</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sqrt_det_g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementBarycenters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quad_a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quad_f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_dV_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0vdofs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_dV_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0velocityFromP1nc_sd" title="Link to this definition"></a></dt>
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">postProcessRT0velocityFromP1nc_sd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rowptr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nFreeDOF_element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">freeLocal_element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detJ</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sqrt_det_g</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">n</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">elementBarycenters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quad_a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quad_f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_dV_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">f</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0vdofs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">w_dV_m</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.postProcessRT0velocityFromP1nc_sd" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="proteus.PostProcessingTools.VPP_P1nc_RT0.updateRT0velocityWithAveragedPotentialP1nc">
-<span class="sig-name descname"><span class="pre">updateRT0velocityWithAveragedPotentialP1nc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">quad_a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradphi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0vdofs_element</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.updateRT0velocityWithAveragedPotentialP1nc" title="Link to this definition"></a></dt>
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">updateRT0velocityWithAveragedPotentialP1nc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">detJ</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quad_a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradphi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0vdofs_element</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.updateRT0velocityWithAveragedPotentialP1nc" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="proteus.PostProcessingTools.VPP_P1nc_RT0.updateRT0velocityWithAveragedPotentialP1nc_sd">
-<span class="sig-name descname"><span class="pre">updateRT0velocityWithAveragedPotentialP1nc_sd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">colind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detJ</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quad_a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradphi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0vdofs_element</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.updateRT0velocityWithAveragedPotentialP1nc_sd" title="Link to this definition"></a></dt>
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">updateRT0velocityWithAveragedPotentialP1nc_sd</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rowptr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">colind</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">detJ</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">quad_a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gradphi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0vdofs_element</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.updateRT0velocityWithAveragedPotentialP1nc_sd" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="proteus.PostProcessingTools.VPP_P1nc_RT0.getElementRT0velocityValues">
-<span class="sig-name descname"><span class="pre">getElementRT0velocityValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rt0vdofs_element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_element</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.getElementRT0velocityValues" title="Link to this definition"></a></dt>
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">getElementRT0velocityValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0vdofs_element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_element</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.getElementRT0velocityValues" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="proteus.PostProcessingTools.VPP_P1nc_RT0.getElementBoundaryRT0velocityValues">
-<span class="sig-name descname"><span class="pre">getElementBoundaryRT0velocityValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rt0vdofs_element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_elementBoundary</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.getElementBoundaryRT0velocityValues" title="Link to this definition"></a></dt>
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">getElementBoundaryRT0velocityValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_elementBoundary</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0vdofs_element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_elementBoundary</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.getElementBoundaryRT0velocityValues" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="proteus.PostProcessingTools.VPP_P1nc_RT0.getGlobalElementBoundaryRT0velocityValues">
-<span class="sig-name descname"><span class="pre">getGlobalElementBoundaryRT0velocityValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x_elementBoundary_global</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0vdofs_element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_elementBoundary_global</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.getGlobalElementBoundaryRT0velocityValues" title="Link to this definition"></a></dt>
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">getGlobalElementBoundaryRT0velocityValues</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">elementBoundaryElementsArray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">x_elementBoundary_global</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rt0vdofs_element</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v_elementBoundary_global</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_P1nc_RT0.getGlobalElementBoundaryRT0velocityValues" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
@@ -355,13 +362,9 @@ for now assumes x shaped like nE x nq x 3</p>
 velocities This is not the correct postprocessing for optimized NS
 codes</p>
 <p>uses RT_0 representation in terms of local basis</p>
-<p>ec N_i =
-rac{1}{d|E|}(
-ec x - p_i)</p>
 <p>where <span class="math notranslate nohighlight">\(p_i\)</span> is the vertex across from face i, <span class="math notranslate nohighlight">\(|E|\)</span> is the volume of
 the element, and d is the space dimension the degrees of freedom
-are <span class="math notranslate nohighlight">\(V^i = \int_{e_i}
-ec v\dot n_{i}\ds\)</span></p>
+are <span class="math notranslate nohighlight">\(V^i = \int_{e_i}\vec v\dot n_{i}\ds\)</span></p>
 <p>VelocityPostProcessingAlgorithmBase Base Class Constructor</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -481,9 +484,7 @@ This one uses  BDM_1 space which is <span class="math notranslate nohighlight">\
 linear fluxes on each face
 use standard basis</p>
 <div class="math notranslate nohighlight">
-\[\]</div>
-<p>ec N_i = lambda_{i/d}
-ec e_{i%d}</p>
+\[\vec N_i = \lambda_{i/d}\vec e_{i \bmod d}\]</div>
 <p>That is the dofs are locally (say in 2d) <span class="math notranslate nohighlight">\([v^x_0,v^y_0,v^x_1,v^y_1,v^x_2,v^y_2]\)</span></p>
 <p>Have to use BDM projection to get degrees of freedom</p>
 <p>VelocityPostProcessingAlgorithmBase Base Class Constructor</p>
@@ -707,9 +708,7 @@ velocity representation This one uses BDM_1 space which is <span class="math not
 locally with continuous linear fluxes on each face use standard
 basis</p>
 <div class="math notranslate nohighlight">
-\[\]</div>
-<p>ec N_i = lambda_{i%(d+1)}
-ec e_{i/(d+1)}</p>
+\[\vec N_i = \lambda_{i \bmod (d+1)} \vec e_{i/(d+1)}\]</div>
 <p>Have to use BDM projection to get degrees of freedom</p>
 <p>VelocityPostProcessingAlgorithmBase Base Class Constructor</p>
 <dl class="field-list simple">
@@ -759,15 +758,11 @@ for now assumes x shaped like nE x nq x 3</p>
 representation for element velocities</p>
 <p>uses RT_0 representation in terms of local basis</p>
 <div class="math notranslate nohighlight">
-\[\]</div>
-<p>ec N_i =
-rac{1}{d|E|}(
-ec x - p_i)</p>
+\[\vec N_i = \frac{1}{d|E|}(\vec x - p_i)\]</div>
 <p>where <span class="math notranslate nohighlight">\(p_i\)</span> is the vertex across from face <span class="math notranslate nohighlight">\(i\)</span>,
 <span class="math notranslate nohighlight">\(|E|\)</span> is the volume of the element, and <span class="math notranslate nohighlight">\(d\)</span> is the
 space dimension the degrees of freedom are <span class="math notranslate nohighlight">\(V^i =
-\int_{e_i}
-ec v\dot n_{i}\ds\)</span></p>
+\int_{e_i}\vec v\dot n_{i}\ds\)</span></p>
 <p>VelocityPostProcessingAlgorithmBase Base Class Constructor</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -808,14 +803,10 @@ for now assumes x shaped like nE x nq x 3</p>
 representation for element velocities</p>
 <p>uses RT_0 representation in terms of local basis</p>
 <div class="math notranslate nohighlight">
-\[\]</div>
-<p>ec N_i =
-rac{1}{d|E|}(
-ec x - p_i)</p>
+\[\vec N_i = \frac{1}{d|E|}(\vec x - p_i)\]</div>
 <p>where <span class="math notranslate nohighlight">\(p_i\)</span> is the vertex across from face i, <span class="math notranslate nohighlight">\(|E|\)</span> is
 the volume of the element, and d is the space dimension the
-degrees of freedom are <span class="math notranslate nohighlight">\(V^i = \int_{e_i}
-ec v\dot n_{i}\ds\)</span></p>
+degrees of freedom are <span class="math notranslate nohighlight">\(V^i = \int_{e_i}\vec v\dot n_{i}\ds\)</span></p>
 <p>VelocityPostProcessingAlgorithmBase Base Class Constructor</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -856,14 +847,10 @@ for now assumes x shaped like nE x nq x 3</p>
 for element velocities</p>
 <p>uses <span class="math notranslate nohighlight">\(RT_0\)</span> representation in terms of local basis</p>
 <div class="math notranslate nohighlight">
-\[\]</div>
-<p>ec N_i =
-rac{1}{d|E|}(
-ec x - p_i)</p>
+\[\vec N_i = \frac{1}{d|E|}(\vec x - p_i)\]</div>
 <p>where p_i is the vertex across from face i, <span class="math notranslate nohighlight">\(|E|\)</span> is the
 volume of the element, and d is the space dimension the degrees of
-freedom are <span class="math notranslate nohighlight">\(V^i = \int_{e_i}
-ec v\dot n_{i}\ds\)</span></p>
+freedom are <span class="math notranslate nohighlight">\(V^i = \int_{e_i}\vec v\dot n_{i}\ds\)</span></p>
 <p>VelocityPostProcessingAlgorithmBase Base Class Constructor</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -940,9 +927,7 @@ for now assumes x shaped like nE x nq x 3</p>
 <span class="math notranslate nohighlight">\([P^1]^d\)</span> locally with continuous linear fluxes on each face</p>
 <p>use standard basis</p>
 <div class="math notranslate nohighlight">
-\[\]</div>
-<p>ec N_i = lambda_{i%(d+1)}
-ec e_{i/(d+1)}</p>
+\[\vec N_i = \lambda_{i \bmod (d+1)} \vec e_{i/(d+1)}\]</div>
 <p>Have to use BDM projection to get degrees of freedom</p>
 <p>VelocityPostProcessingAlgorithmBase Base Class Constructor</p>
 <dl class="field-list simple">
@@ -1037,7 +1022,7 @@ freedom from the LDG solution are known</p>
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="proteus.PostProcessingTools.VPP_POINT_EVAL_GWVD.getElementLDGvelocityValuesLagrangeRep">
-<span class="sig-name descname"><span class="pre">getElementLDGvelocityValuesLagrangeRep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vdofs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_velocity</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_POINT_EVAL_GWVD.getElementLDGvelocityValuesLagrangeRep" title="Link to this definition"></a></dt>
+<span class="property"><span class="k"><span class="pre">static</span></span><span class="w"> </span></span><span class="sig-name descname"><span class="pre">getElementLDGvelocityValuesLagrangeRep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q_v</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vdofs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_velocity</span></span></em><span class="sig-paren">)</span><a class="reference external" href="https://github.com/erdc/proteus/tree/master/proteus/PostProcessingTools.py"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#proteus.PostProcessingTools.VPP_POINT_EVAL_GWVD.getElementLDGvelocityValuesLagrangeRep" title="Link to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
